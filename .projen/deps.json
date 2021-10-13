@@ -23,6 +23,14 @@
       "type": "build"
     },
     {
+      "name": "aws-sdk",
+      "type": "build"
+    },
+    {
+      "name": "cdk-import",
+      "type": "build"
+    },
+    {
       "name": "eslint",
       "type": "build"
     },

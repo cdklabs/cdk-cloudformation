@@ -1,4 +1,6 @@
 import { AwsCdkConstructLibrary } from 'projen';
+import { generatePackages } from './projenrc/generate-packages';
+
 const project = new AwsCdkConstructLibrary({
   author: 'Elad Ben-Israel',
   authorAddress: 'benisrae@amazon.com',
@@ -6,14 +8,25 @@ const project = new AwsCdkConstructLibrary({
   defaultReleaseBranch: 'main',
   name: 'cdk-cloudformation-types',
   projenrcTs: true,
-  repositoryUrl: 'https://github.com/cdklabs/cdk-cloudformation-types',
-
-  // cdkDependencies: undefined,      /* Which AWS CDK modules (those that start with "@aws-cdk/") does this library require when consumed? */
-  // cdkTestDependencies: undefined,  /* AWS CDK modules required for testing. */
-  // deps: [],                        /* Runtime dependencies of this module. */
-  // description: undefined,          /* The description is just a string that helps people understand the purpose of the package. */
-  // devDeps: [],                     /* Build dependencies for this module. */
-  // packageName: undefined,          /* The "name" in package.json. */
-  // release: undefined,              /* Add release management to this project. */
+  repositoryUrl: 'https://github.com/cdklabs/cdk-cloudformation-types.git',
 });
+
+project.addDevDeps('cdk-import');
+project.addDevDeps('aws-sdk');
+
+const packagesDir = 'packages';
+const scope = '@cdk-cloudformation-types';
+
+project.package.addField('private', true);
+project.package.addField('workspaces', {
+  packages: [`${packagesDir}/${scope}/*`],
+});
+
+project.addExcludeFromCleanup('packages/**');
+
+generatePackages(project, {
+  dir: packagesDir,
+  scope: scope,
+});
+
 project.synth();

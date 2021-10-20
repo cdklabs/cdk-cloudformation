@@ -1,0 +1,17 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "0f1c0683-780b-4cca-8a50-ac08caf13b12"
+  },
+  "Arn": "arn:aws:cloudformation:us-east-1::type/module/bf9c3875bb157d57566fdd0661e23ca05eb62a19/Symphonia-OpenSource-CloudFormationArtifactsBucket-MODULE",
+  "Type": "MODULE",
+  "TypeName": "Symphonia::OpenSource::CloudFormationArtifactsBucket::MODULE",
+  "Description": "Schema for Module Fragment of type Symphonia::OpenSource::CloudFormationArtifactsBucket::MODULE",
+  "Schema": "{\n    \"typeName\": \"Symphonia::OpenSource::CloudFormationArtifactsBucket::MODULE\",\n    \"description\": \"Schema for Module Fragment of type Symphonia::OpenSource::CloudFormationArtifactsBucket::MODULE\",\n    \"properties\": {\n        \"Resources\": {\n            \"properties\": {\n                \"Bucket\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"Type\": {\n                            \"type\": \"string\",\n                            \"const\": \"AWS::S3::Bucket\"\n                        },\n                        \"Properties\": {\n                            \"type\": \"object\"\n                        }\n                    }\n                }\n            },\n            \"type\": \"object\",\n            \"additionalProperties\": false\n        }\n    },\n    \"additionalProperties\": true\n}\n",
+  "DeprecatedStatus": "LIVE",
+  "RequiredActivatedTypes": [],
+  "Visibility": "PUBLIC",
+  "TimeCreated": "2021-08-02T19:46:59.929Z",
+  "PublisherId": "bf9c3875bb157d57566fdd0661e23ca05eb62a19",
+  "LatestPublicVersion": "1.0.0",
+  "IsActivated": false
+}

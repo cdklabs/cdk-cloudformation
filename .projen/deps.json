@@ -27,6 +27,10 @@
       "type": "build"
     },
     {
+      "name": "case",
+      "type": "build"
+    },
+    {
       "name": "cdk-import",
       "type": "build"
     },

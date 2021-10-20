@@ -1,0 +1,19 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "2aaab092-94e8-472b-9cd3-64f6b8e41acb"
+  },
+  "Arn": "arn:aws:cloudformation:us-east-1::type/resource/e1238fdd31aee1839e14fb3fb2dac9db154dae29/Generic-Transcribe-Vocabulary",
+  "Type": "RESOURCE",
+  "TypeName": "Generic::Transcribe::Vocabulary",
+  "Description": "A custom vocabulary that you can use to change the way Amazon Transcribe handles transcription of an audio file.",
+  "Schema": "{\n    \"typeName\": \"Generic::Transcribe::Vocabulary\",\n    \"description\": \"A custom vocabulary that you can use to change the way Amazon Transcribe handles transcription of an audio file.\",\n    \"sourceUrl\": \"https://github.com/iann0036/cfn-types/tree/master/generic-transcribe-vocabulary\",\n    \"properties\": {\n        \"LanguageCode\": {\n            \"description\": \"The language code of the vocabulary entries. For a list of languages and their corresponding language codes, see [What is Amazon Transcribe?](https://docs.aws.amazon.com/transcribe/latest/dg/what-is-transcribe.html).\",\n            \"type\": \"string\"\n        },\n        \"Phrases\": {\n            \"type\": \"array\",\n            \"description\": \"An array of strings that contains the vocabulary entries.\",\n            \"items\": {\n                \"type\": \"string\",\n                \"pattern\": \".+\"\n            }\n        },\n        \"VocabularyFileUri\": {\n            \"description\": \"The S3 location of the text file that contains the definition of the custom vocabulary. The URI must be in the same region as the API endpoint that you are calling.\",\n            \"type\": \"string\",\n            \"pattern\": \"(s3://|http(s*)://).+\"\n        },\n        \"VocabularyName\": {\n            \"description\": \"The name of the vocabulary. The name must be unique within an AWS account. The name is case sensitive.\",\n            \"type\": \"string\",\n            \"pattern\": \"^[0-9a-zA-Z._-]+\",\n            \"minLength\": 1,\n            \"maxLength\": 200\n        }\n    },\n    \"additionalProperties\": false,\n    \"required\": [\n        \"VocabularyName\",\n        \"LanguageCode\"\n    ],\n    \"createOnlyProperties\": [\n        \"/properties/VocabularyName\"\n    ],\n    \"writeOnlyProperties\": [\n        \"/properties/VocabularyFileUri\",\n        \"/properties/Phrases\"\n    ],\n    \"primaryIdentifier\": [\n        \"/properties/VocabularyName\"\n    ],\n    \"handlers\": {\n        \"create\": {\n            \"permissions\": [\n                \"transcribe:CreateVocabulary\",\n                \"transcribe:GetVocabulary\"\n            ]\n        },\n        \"read\": {\n            \"permissions\": [\n                \"transcribe:GetVocabulary\"\n            ]\n        },\n        \"update\": {\n            \"permissions\": [\n                \"transcribe:UpdateVocabulary\",\n                \"transcribe:GetVocabulary\"\n            ]\n        },\n        \"delete\": {\n            \"permissions\": [\n                \"transcribe:DeleteVocabulary\",\n                \"transcribe:GetVocabulary\"\n            ]\n        },\n        \"list\": {\n            \"permissions\": [\n                \"transcribe:ListVocabularies\"\n            ]\n        }\n    }\n}",
+  "ProvisioningType": "FULLY_MUTABLE",
+  "DeprecatedStatus": "LIVE",
+  "RequiredActivatedTypes": [],
+  "Visibility": "PUBLIC",
+  "SourceUrl": "https://github.com/iann0036/cfn-types/tree/master/generic-transcribe-vocabulary",
+  "TimeCreated": "2021-06-21T22:02:09.708Z",
+  "PublisherId": "e1238fdd31aee1839e14fb3fb2dac9db154dae29",
+  "LatestPublicVersion": "1.0.0",
+  "IsActivated": false
+}

@@ -1,0 +1,17 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "b9e52bff-9f9b-4141-bd73-812f117e2c66"
+  },
+  "Arn": "arn:aws:cloudformation:us-east-1::type/module/4686b5f994c8b12636b1af16ce88b8e2d2e75c8c/REGISTRY-TEST-RESOURCE1-MODULE",
+  "Type": "MODULE",
+  "TypeName": "REGISTRY::TEST::RESOURCE1::MODULE",
+  "Description": "Schema for Module Fragment of type REGISTRY::TEST::RESOURCE::MODULE",
+  "Schema": "{\n    \"typeName\": \"REGISTRY::TEST::RESOURCE1::MODULE\",\n    \"description\": \"Schema for Module Fragment of type REGISTRY::TEST::RESOURCE::MODULE\",\n    \"properties\": {\n        \"Parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"BucketName\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"Type\": {\n                            \"type\": \"string\"\n                        },\n                        \"Description\": {\n                            \"type\": \"string\"\n                        }\n                    },\n                    \"required\": [\n                        \"Type\",\n                        \"Description\"\n                    ],\n                    \"description\": \"Name for the bucket\"\n                }\n            }\n        },\n        \"Resources\": {\n            \"properties\": {\n                \"S3Bucket\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"Type\": {\n                            \"type\": \"string\",\n                            \"const\": \"AWS::S3::Bucket\"\n                        },\n                        \"Properties\": {\n                            \"type\": \"object\"\n                        }\n                    }\n                }\n            },\n            \"type\": \"object\",\n            \"additionalProperties\": false\n        }\n    },\n    \"additionalProperties\": true\n}\n",
+  "DeprecatedStatus": "LIVE",
+  "RequiredActivatedTypes": [],
+  "Visibility": "PUBLIC",
+  "TimeCreated": "2021-08-29T00:26:56.430Z",
+  "PublisherId": "4686b5f994c8b12636b1af16ce88b8e2d2e75c8c",
+  "LatestPublicVersion": "1.5.0",
+  "IsActivated": false
+}

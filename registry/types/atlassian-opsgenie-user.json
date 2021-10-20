@@ -1,0 +1,19 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "6105e6df-a4ce-4804-ae01-aca4bfd3ea1b"
+  },
+  "Arn": "arn:aws:cloudformation:us-east-1::type/resource/4fb8713ab4ce2587ce74e0559d7661bb6e01e72b/Atlassian-Opsgenie-User",
+  "Type": "RESOURCE",
+  "TypeName": "Atlassian::Opsgenie::User",
+  "Description": "Opsgenie User",
+  "Schema": "{\n  \"typeName\": \"Atlassian::Opsgenie::User\",\n  \"description\": \"Opsgenie User\",\n  \"sourceUrl\": \"https://github.com/opsgenie/opsgenie-cloudformation-resources\",\n  \"definitions\": {\n  },\n  \"properties\": {\n    \"UserId\": {\n      \"type\": \"string\"\n    },\n    \"OpsgenieApiEndpoint\": {\n      \"type\": \"string\",\n      \"pattern\": \"^https:\\/\\/api(\\\\.eu|\\\\.sandbox|)\\\\.opsgenie\\\\.com$\",\n      \"minLength\": 1\n    },\n    \"OpsgenieApiKey\": {\n      \"type\": \"string\",\n      \"pattern\": \"[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}\"\n    },\n    \"Username\": {\n      \"type\": \"string\",\n      \"pattern\": \"^[a-z0-9._+-]+@[a-z0-9]+\\\\.[a-z]{2,6}$\",\n      \"description\": \"Opsgenie Username the mail address of the user\",\n      \"minLength\": 1\n    },\n    \"FullName\": {\n      \"type\": \"string\",\n      \"pattern\": \"^[a-zA-Z0-9- _.]+$\",\n      \"minLength\": 1,\n      \"description\": \"User full name\"\n    },\n    \"Role\": {\n      \"type\": \"string\",\n      \"minLength\": 1,\n      \"description\": \"User role, default is User\"\n    }\n  },\n  \"required\": [\n    \"OpsgenieApiEndpoint\",\n    \"Username\",\n    \"FullName\",\n    \"Role\",\n    \"OpsgenieApiKey\"\n  ],\n  \"readOnlyProperties\": [\n    \"/properties/UserId\"\n  ],\n  \"createOnlyProperties\": [\n    \"/properties/Username\",\n    \"/properties/FullName\"\n  ],\n  \"primaryIdentifier\": [\n    \"/properties/UserId\"\n  ],\n  \"handlers\": {\n    \"create\": {\n      \"permissions\": [\n        \"\"\n      ]\n    },\n    \"delete\": {\n      \"permissions\": [\n        \"\"\n      ]\n    },\n    \"read\": {\n      \"permissions\": [\n        \"\"\n      ]\n    },\n    \"update\": {\n      \"permissions\": [\n        \"\"\n      ]\n    },\n    \"list\": {\n      \"permissions\": [\n        \"\"\n      ]\n    }\n  },\n  \"additionalProperties\": false\n}\n\n",
+  "ProvisioningType": "FULLY_MUTABLE",
+  "DeprecatedStatus": "LIVE",
+  "RequiredActivatedTypes": [],
+  "Visibility": "PUBLIC",
+  "SourceUrl": "https://github.com/opsgenie/opsgenie-cloudformation-resources",
+  "TimeCreated": "2021-09-06T11:59:57.474Z",
+  "PublisherId": "4fb8713ab4ce2587ce74e0559d7661bb6e01e72b",
+  "LatestPublicVersion": "1.0.1",
+  "IsActivated": false
+}

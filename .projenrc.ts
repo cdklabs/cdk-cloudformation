@@ -12,10 +12,11 @@ const project = new AwsCdkConstructLibrary({
 });
 
 project.addDevDeps('cdk-import');
+project.addDevDeps('case');
 project.addDevDeps('aws-sdk');
 
 const packagesDir = 'packages';
-const scope = '@cdk-cloudformation-types';
+const scope = '@cdk-cloudformation';
 
 project.package.addField('private', true);
 project.package.addField('workspaces', {

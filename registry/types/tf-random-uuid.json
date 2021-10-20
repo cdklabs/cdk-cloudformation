@@ -1,0 +1,20 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "b675479b-29bb-42b9-bd91-6b0ce3c5cecb"
+  },
+  "Arn": "arn:aws:cloudformation:us-east-1::type/resource/e1238fdd31aee1839e14fb3fb2dac9db154dae29/TF-Random-Uuid",
+  "Type": "RESOURCE",
+  "TypeName": "TF::Random::Uuid",
+  "Description": "CloudFormation equivalent of random_uuid",
+  "Schema": "{\n    \"typeName\": \"TF::Random::Uuid\",\n    \"description\": \"CloudFormation equivalent of random_uuid\",\n    \"sourceUrl\": \"https://github.com/iann0036/cfn-tf-custom-types.git\",\n    \"documentationUrl\": \"https://github.com/iann0036/cfn-tf-custom-types/blob/docs/resources/random/TF-Random-Uuid/docs/README.md\",\n    \"definitions\": {\n        \"KeepersDefinition\": {\n            \"type\": \"object\",\n            \"additionalProperties\": false,\n            \"properties\": {\n                \"MapKey\": {\n                    \"type\": \"string\"\n                },\n                \"MapValue\": {\n                    \"type\": \"string\"\n                }\n            },\n            \"required\": [\n                \"MapKey\",\n                \"MapValue\"\n            ]\n        }\n    },\n    \"properties\": {\n        \"tfcfnid\": {\n            \"description\": \"Internal identifier for tracking resource changes. Do not use.\",\n            \"type\": \"string\"\n        },\n        \"Id\": {\n            \"type\": \"string\"\n        },\n        \"Keepers\": {\n            \"type\": \"array\",\n            \"insertionOrder\": true,\n            \"items\": {\n                \"$ref\": \"#/definitions/KeepersDefinition\"\n            }\n        },\n        \"Result\": {\n            \"type\": \"string\"\n        }\n    },\n    \"additionalProperties\": false,\n    \"required\": [],\n    \"readOnlyProperties\": [\n        \"/properties/tfcfnid\",\n        \"/properties/Id\",\n        \"/properties/Result\"\n    ],\n    \"primaryIdentifier\": [\n        \"/properties/tfcfnid\"\n    ],\n    \"handlers\": {\n        \"create\": {\n            \"permissions\": [\n                \"s3:GetObject\",\n                \"s3:DeleteObject\",\n                \"lambda:InvokeFunction\"\n            ]\n        },\n        \"read\": {\n            \"permissions\": [\n                \"s3:GetObject\"\n            ]\n        },\n        \"update\": {\n            \"permissions\": [\n                \"s3:GetObject\",\n                \"s3:DeleteObject\",\n                \"lambda:InvokeFunction\"\n            ]\n        },\n        \"delete\": {\n            \"permissions\": [\n                \"s3:GetObject\",\n                \"s3:DeleteObject\",\n                \"lambda:InvokeFunction\"\n            ]\n        },\n        \"list\": {\n            \"permissions\": [\n                \"s3:GetObject\",\n                \"s3:ListBucket\"\n            ]\n        }\n    }\n}",
+  "ProvisioningType": "FULLY_MUTABLE",
+  "DeprecatedStatus": "LIVE",
+  "RequiredActivatedTypes": [],
+  "Visibility": "PUBLIC",
+  "SourceUrl": "https://github.com/iann0036/cfn-tf-custom-types.git",
+  "DocumentationUrl": "https://github.com/iann0036/cfn-tf-custom-types/blob/docs/resources/random/TF-Random-Uuid/docs/README.md",
+  "TimeCreated": "2021-06-21T22:02:08.347Z",
+  "PublisherId": "e1238fdd31aee1839e14fb3fb2dac9db154dae29",
+  "LatestPublicVersion": "1.0.0",
+  "IsActivated": false
+}

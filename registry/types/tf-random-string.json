@@ -1,0 +1,20 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "dce9ce10-633c-48ad-be0d-0cbec4a66304"
+  },
+  "Arn": "arn:aws:cloudformation:us-east-1::type/resource/e1238fdd31aee1839e14fb3fb2dac9db154dae29/TF-Random-String",
+  "Type": "RESOURCE",
+  "TypeName": "TF::Random::String",
+  "Description": "CloudFormation equivalent of random_string",
+  "Schema": "{\n    \"typeName\": \"TF::Random::String\",\n    \"description\": \"CloudFormation equivalent of random_string\",\n    \"sourceUrl\": \"https://github.com/iann0036/cfn-tf-custom-types.git\",\n    \"documentationUrl\": \"https://github.com/iann0036/cfn-tf-custom-types/blob/docs/resources/random/TF-Random-String/docs/README.md\",\n    \"definitions\": {\n        \"KeepersDefinition\": {\n            \"type\": \"object\",\n            \"additionalProperties\": false,\n            \"properties\": {\n                \"MapKey\": {\n                    \"type\": \"string\"\n                },\n                \"MapValue\": {\n                    \"type\": \"string\"\n                }\n            },\n            \"required\": [\n                \"MapKey\",\n                \"MapValue\"\n            ]\n        }\n    },\n    \"properties\": {\n        \"tfcfnid\": {\n            \"description\": \"Internal identifier for tracking resource changes. Do not use.\",\n            \"type\": \"string\"\n        },\n        \"Id\": {\n            \"type\": \"string\"\n        },\n        \"Keepers\": {\n            \"type\": \"array\",\n            \"insertionOrder\": true,\n            \"items\": {\n                \"$ref\": \"#/definitions/KeepersDefinition\"\n            }\n        },\n        \"Length\": {\n            \"type\": \"number\"\n        },\n        \"Lower\": {\n            \"type\": \"boolean\"\n        },\n        \"MinLower\": {\n            \"type\": \"number\"\n        },\n        \"MinNumeric\": {\n            \"type\": \"number\"\n        },\n        \"MinSpecial\": {\n            \"type\": \"number\"\n        },\n        \"MinUpper\": {\n            \"type\": \"number\"\n        },\n        \"Number\": {\n            \"type\": \"boolean\"\n        },\n        \"OverrideSpecial\": {\n            \"type\": \"string\"\n        },\n        \"Result\": {\n            \"type\": \"string\"\n        },\n        \"Special\": {\n            \"type\": \"boolean\"\n        },\n        \"Upper\": {\n            \"type\": \"boolean\"\n        }\n    },\n    \"additionalProperties\": false,\n    \"required\": [\n        \"Length\"\n    ],\n    \"readOnlyProperties\": [\n        \"/properties/tfcfnid\",\n        \"/properties/Id\",\n        \"/properties/Result\"\n    ],\n    \"primaryIdentifier\": [\n        \"/properties/tfcfnid\"\n    ],\n    \"handlers\": {\n        \"create\": {\n            \"permissions\": [\n                \"s3:GetObject\",\n                \"s3:DeleteObject\",\n                \"lambda:InvokeFunction\"\n            ]\n        },\n        \"read\": {\n            \"permissions\": [\n                \"s3:GetObject\"\n            ]\n        },\n        \"update\": {\n            \"permissions\": [\n                \"s3:GetObject\",\n                \"s3:DeleteObject\",\n                \"lambda:InvokeFunction\"\n            ]\n        },\n        \"delete\": {\n            \"permissions\": [\n                \"s3:GetObject\",\n                \"s3:DeleteObject\",\n                \"lambda:InvokeFunction\"\n            ]\n        },\n        \"list\": {\n            \"permissions\": [\n                \"s3:GetObject\",\n                \"s3:ListBucket\"\n            ]\n        }\n    }\n}",
+  "ProvisioningType": "FULLY_MUTABLE",
+  "DeprecatedStatus": "LIVE",
+  "RequiredActivatedTypes": [],
+  "Visibility": "PUBLIC",
+  "SourceUrl": "https://github.com/iann0036/cfn-tf-custom-types.git",
+  "DocumentationUrl": "https://github.com/iann0036/cfn-tf-custom-types/blob/docs/resources/random/TF-Random-String/docs/README.md",
+  "TimeCreated": "2021-06-21T22:02:06.772Z",
+  "PublisherId": "e1238fdd31aee1839e14fb3fb2dac9db154dae29",
+  "LatestPublicVersion": "1.0.0",
+  "IsActivated": false
+}

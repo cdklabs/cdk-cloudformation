@@ -1,0 +1,19 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "e637ddeb-ea6e-4c3f-931b-ea451120b2e5"
+  },
+  "Arn": "arn:aws:cloudformation:us-east-1::type/resource/7171b96e5d207b947eb72ca9ce05247c246de623/Datadog-Dashboards-Dashboard",
+  "Type": "RESOURCE",
+  "TypeName": "Datadog::Dashboards::Dashboard",
+  "Description": "Datadog Dashboard 2.0.2",
+  "Schema": "{\n  \"typeName\": \"Datadog::Dashboards::Dashboard\",\n  \"description\": \"Datadog Dashboard 2.0.2\",\n  \"typeConfiguration\": {\n    \"properties\": {\n      \"DatadogCredentials\": {\n        \"$ref\": \"#/definitions/DatadogCredentials\"\n      }\n    },\n    \"additionalProperties\": false\n  },\n  \"definitions\": {\n    \"DatadogCredentials\": {\n      \"description\": \"Credentials for the Datadog API\",\n      \"properties\": {\n        \"ApiKey\": {\n          \"description\": \"Datadog API key\",\n          \"type\": \"string\"\n        },\n        \"ApplicationKey\": {\n          \"description\": \"Datadog application key\",\n          \"type\": \"string\"\n        },\n        \"ApiURL\": {\n          \"description\": \"Datadog API URL (defaults to https://api.datadoghq.com) Use https://api.datadoghq.eu for EU accounts.\",\n          \"type\": \"string\"\n        }\n      },\n      \"required\": [\n        \"ApiKey\",\n        \"ApplicationKey\"\n      ],\n      \"type\": \"object\",\n      \"additionalProperties\": false\n    }\n  },\n  \"properties\": {\n    \"Id\": {\n      \"description\": \"ID of the dashboard\",\n      \"type\": \"string\"\n    },\n    \"Url\": {\n      \"description\": \"Url of the dashboard\",\n      \"type\": \"string\"\n    },\n    \"DashboardDefinition\": {\n      \"description\": \"JSON string of the dashboard definition\",\n      \"type\": \"string\"\n    }\n  },\n  \"additionalProperties\": false,\n  \"required\": [\n    \"DashboardDefinition\"\n  ],\n  \"readOnlyProperties\": [\n    \"/properties/Id\",\n    \"/properties/Url\"\n  ],\n  \"primaryIdentifier\": [\n    \"/properties/Id\"\n  ],\n  \"handlers\": {\n    \"create\": {\n      \"permissions\": [\n        \"\"\n      ]\n    },\n    \"read\": {\n      \"permissions\": [\n        \"\"\n      ]\n    },\n    \"update\": {\n      \"permissions\": [\n        \"\"\n      ]\n    },\n    \"delete\": {\n      \"permissions\": [\n        \"\"\n      ]\n    }\n  }\n}\n",
+  "ProvisioningType": "FULLY_MUTABLE",
+  "DeprecatedStatus": "LIVE",
+  "RequiredActivatedTypes": [],
+  "Visibility": "PUBLIC",
+  "TimeCreated": "2021-09-27T09:34:59.836Z",
+  "ConfigurationSchema": "{\n    \"properties\": {\n        \"DatadogCredentials\": {\n            \"$ref\": \"#/definitions/DatadogCredentials\"\n        }\n    },\n    \"additionalProperties\": false,\n    \"definitions\": {\n        \"DatadogCredentials\": {\n            \"description\": \"Credentials for the Datadog API\",\n            \"properties\": {\n                \"ApiKey\": {\n                    \"description\": \"Datadog API key\",\n                    \"type\": \"string\"\n                },\n                \"ApplicationKey\": {\n                    \"description\": \"Datadog application key\",\n                    \"type\": \"string\"\n                },\n                \"ApiURL\": {\n                    \"description\": \"Datadog API URL (defaults to https://api.datadoghq.com) Use https://api.datadoghq.eu for EU accounts.\",\n                    \"type\": \"string\"\n                }\n            },\n            \"required\": [\n                \"ApiKey\",\n                \"ApplicationKey\"\n            ],\n            \"type\": \"object\",\n            \"additionalProperties\": false\n        }\n    },\n    \"typeName\": \"Datadog::Dashboards::Dashboard\"\n}",
+  "PublisherId": "7171b96e5d207b947eb72ca9ce05247c246de623",
+  "LatestPublicVersion": "2.0.2",
+  "IsActivated": false
+}

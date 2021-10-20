@@ -1,7 +1,7 @@
 import { readdirSync, readFileSync } from 'fs';
 import { join } from 'path';
 import type { CloudFormation } from 'aws-sdk';
-import { Project } from 'projen';
+import { TypeScriptProject } from 'projen';
 import { CloudFormationTypeProject } from './type-package';
 
 const REGISTRYDIR = join(__dirname, '..', 'registry', 'types');
@@ -11,7 +11,7 @@ export interface GeneratePackagesOptions {
   readonly scope: string;
 }
 
-export function generatePackages(project: Project, options: GeneratePackagesOptions) {
+export function generatePackages(project: TypeScriptProject, options: GeneratePackagesOptions) {
   console.error('Discoverying all public CloudFormation types...');
 
   const types: CloudFormation.DescribeTypeOutput[] = readdirSync(REGISTRYDIR).map(file => {

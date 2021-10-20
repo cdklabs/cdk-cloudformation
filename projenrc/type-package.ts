@@ -3,7 +3,12 @@ import { join, relative } from 'path';
 import type { CloudFormation } from 'aws-sdk';
 import * as caseutil from 'case';
 import { CfnResourceGenerator } from 'cdk-import/lib/cfn-resource-generator';
-import { Component, JsonFile, Project } from 'projen';
+import { Component, JsonFile, License, Project, TextFile, TypeScriptProject } from 'projen';
+
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const CDK_VERSION = require('@aws-cdk/core/package.json').version;
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const CONSTRUCTS_VERSION = require('constructs/package.json').version;
 
 /**
  * Options for `TypePackage`.
@@ -20,7 +25,7 @@ export class CloudFormationTypeProject extends Component {
   private readonly subproject: Project;
   private readonly type: CloudFormation.DescribeTypeOutput;
 
-  constructor(parent: Project, options: TypePackageOptions) {
+  constructor(parent: TypeScriptProject, options: TypePackageOptions) {
     super(parent);
 
     const typeName = options.type.TypeName!;
@@ -44,6 +49,23 @@ export class CloudFormationTypeProject extends Component {
       outdir: outdir,
     });
 
+    const spdx = 'Apache-2.0';
+
+    new License(this.subproject, { spdx });
+
+    new TextFile(this.subproject, 'README.md', {
+      lines: [
+        `# AWS CDK Constructs for ${typeName}`,
+        '',
+        `> An AWS CDK construct library with types for ${typeName}`,
+        '',
+        '## License',
+        '',
+        'Distributed under the Apache-2.0 License.',
+        '',
+      ],
+    });
+
     new JsonFile(this.subproject, 'package.json', {
       obj: {
         name: `${npmScope}/${typeNameKebab}`,
@@ -54,9 +76,13 @@ export class CloudFormationTypeProject extends Component {
           url: 'https://aws.amazon.com',
           organization: true,
         },
-        scripts: {
-          build: 'jsii',
+        repository: {
+          type: 'git',
+          url: 'https://github.com/cdklabs/cdk-cloudformation-types.git',
+          directory: this.subproject.outdir,
         },
+        main: 'lib/index.js',
+        types: 'lib/index.d.ts',
         jsii: {
           outdir: 'dist',
           targets: {
@@ -82,15 +108,32 @@ export class CloudFormationTypeProject extends Component {
           },
         },
         peerDependencies: {
-          '@aws-cdk/core': '*',
-          'constructs': '*',
+          '@aws-cdk/core': `^${CDK_VERSION}`,
+          'constructs': `^${CONSTRUCTS_VERSION}`,
         },
-        license: 'Apache-2.0',
+        license: spdx,
       },
     });
+
+    const compile = parent.addTask(`compile:${typeNameKebab}`, {
+      description: `compile ${typeNameKebab} with JSII`,
+      cwd: this.subproject.outdir,
+      exec: 'jsii',
+    });
+
+    const pkg = parent.addTask(`package:${typeNameKebab}`, {
+      description: `produce multi-language packaging for ${typeNameKebab}`,
+      cwd: this.subproject.outdir,
+      exec: 'jsii-pacmak -vv',
+    });
+
+    pkg.exec(`rsync -av ${this.subproject.outdir}/dist/ dist/`);
+
+    parent.compileTask.spawn(compile);
+    parent.packageTask?.spawn(pkg);
   }
 
-  public synthesize(): void {
+  public preSynthesize(): void {
     const outdir = this.subproject.outdir;
     const typeInfo = this.type;
     const schemaJson = this.type.Schema;

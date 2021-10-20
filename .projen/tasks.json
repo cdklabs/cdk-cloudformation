@@ -41,6 +41,204 @@
         },
         {
           "spawn": "docgen"
+        },
+        {
+          "spawn": "compile:alexa-ask-skill"
+        },
+        {
+          "spawn": "compile:aqua-enterprise-enforcer"
+        },
+        {
+          "spawn": "compile:aqua-enterprise-kubeenforcer"
+        },
+        {
+          "spawn": "compile:aqua-enterprise-scanner"
+        },
+        {
+          "spawn": "compile:aqua-enterprise-server"
+        },
+        {
+          "spawn": "compile:atlassian-opsgenie-integration"
+        },
+        {
+          "spawn": "compile:atlassian-opsgenie-team"
+        },
+        {
+          "spawn": "compile:atlassian-opsgenie-user"
+        },
+        {
+          "spawn": "compile:awsqs-checkpoint-cloudguardqs-module"
+        },
+        {
+          "spawn": "compile:awsqs-ec2-linuxbastionqs-module"
+        },
+        {
+          "spawn": "compile:awsqs-eks-cluster"
+        },
+        {
+          "spawn": "compile:awsqs-iridium-cloudconnectqs-module"
+        },
+        {
+          "spawn": "compile:awsqs-kubernetes-get"
+        },
+        {
+          "spawn": "compile:awsqs-kubernetes-helm"
+        },
+        {
+          "spawn": "compile:awsqs-kubernetes-resource"
+        },
+        {
+          "spawn": "compile:awsqs-vpc-vpcqs-module"
+        },
+        {
+          "spawn": "compile:datadog-dashboards-dashboard"
+        },
+        {
+          "spawn": "compile:datadog-integrations-aws"
+        },
+        {
+          "spawn": "compile:datadog-monitors-downtime"
+        },
+        {
+          "spawn": "compile:datadog-monitors-monitor"
+        },
+        {
+          "spawn": "compile:datadog-slos-slo"
+        },
+        {
+          "spawn": "compile:fireeye-cloudintegrations-cloudwatch"
+        },
+        {
+          "spawn": "compile:generic-database-schema"
+        },
+        {
+          "spawn": "compile:generic-transcribe-vocabulary"
+        },
+        {
+          "spawn": "compile:gremlin-agent-helm"
+        },
+        {
+          "spawn": "compile:jfrog-artifactory-core-module"
+        },
+        {
+          "spawn": "compile:jfrog-artifactory-ec2instance-module"
+        },
+        {
+          "spawn": "compile:jfrog-artifactory-existingvpc-module"
+        },
+        {
+          "spawn": "compile:jfrog-artifactory-newvpc-module"
+        },
+        {
+          "spawn": "compile:jfrog-linux-bastion-module"
+        },
+        {
+          "spawn": "compile:jfrog-vpc-multiaz-module"
+        },
+        {
+          "spawn": "compile:jfrog-xray-ec2instance-module"
+        },
+        {
+          "spawn": "compile:logzio-autodeploymentlogzio-cloudwatch-module"
+        },
+        {
+          "spawn": "compile:logzio-awscostandusage-cur-module"
+        },
+        {
+          "spawn": "compile:logzio-awssecurityhub-collector-module"
+        },
+        {
+          "spawn": "compile:logzio-kinesisshipper-kinesisshipper-module"
+        },
+        {
+          "spawn": "compile:logzio-myservice-myname-module"
+        },
+        {
+          "spawn": "compile:mongodb-atlas-cluster"
+        },
+        {
+          "spawn": "compile:mongodb-atlas-databaseuser"
+        },
+        {
+          "spawn": "compile:mongodb-atlas-networkpeering"
+        },
+        {
+          "spawn": "compile:mongodb-atlas-project"
+        },
+        {
+          "spawn": "compile:mongodb-atlas-projectipaccesslist"
+        },
+        {
+          "spawn": "compile:registry-test-resource1-module"
+        },
+        {
+          "spawn": "compile:snyk-container-helm"
+        },
+        {
+          "spawn": "compile:splunk-enterprise-quickstart-module"
+        },
+        {
+          "spawn": "compile:spot-elastigroup-group"
+        },
+        {
+          "spawn": "compile:stackery-open-bastion-module"
+        },
+        {
+          "spawn": "compile:stocks-orders-marketorder"
+        },
+        {
+          "spawn": "compile:symphonia-opensource-cloudformationartifactsbucket-module"
+        },
+        {
+          "spawn": "compile:sysdig-helm-agent"
+        },
+        {
+          "spawn": "compile:tf-ad-computer"
+        },
+        {
+          "spawn": "compile:tf-ad-user"
+        },
+        {
+          "spawn": "compile:tf-akamai-dnsrecord"
+        },
+        {
+          "spawn": "compile:tf-aws-keypair"
+        },
+        {
+          "spawn": "compile:tf-aws-s3bucket"
+        },
+        {
+          "spawn": "compile:tf-aws-s3bucketobject"
+        },
+        {
+          "spawn": "compile:tf-azuread-application"
+        },
+        {
+          "spawn": "compile:tf-azuread-user"
+        },
+        {
+          "spawn": "compile:tf-cloudflare-record"
+        },
+        {
+          "spawn": "compile:tf-digitalocean-droplet"
+        },
+        {
+          "spawn": "compile:tf-github-repository"
+        },
+        {
+          "spawn": "compile:tf-google-storagebucket"
+        },
+        {
+          "spawn": "compile:tf-pagerduty-service"
+        },
+        {
+          "spawn": "compile:tf-random-string"
+        },
+        {
+          "spawn": "compile:tf-random-uuid"
+        },
+        {
+          "spawn": "compile:trendmicro-cloudonecontainer-helm"
         }
       ]
     },
@@ -167,6 +365,204 @@
       "steps": [
         {
           "exec": "jsii-pacmak"
+        },
+        {
+          "spawn": "package:alexa-ask-skill"
+        },
+        {
+          "spawn": "package:aqua-enterprise-enforcer"
+        },
+        {
+          "spawn": "package:aqua-enterprise-kubeenforcer"
+        },
+        {
+          "spawn": "package:aqua-enterprise-scanner"
+        },
+        {
+          "spawn": "package:aqua-enterprise-server"
+        },
+        {
+          "spawn": "package:atlassian-opsgenie-integration"
+        },
+        {
+          "spawn": "package:atlassian-opsgenie-team"
+        },
+        {
+          "spawn": "package:atlassian-opsgenie-user"
+        },
+        {
+          "spawn": "package:awsqs-checkpoint-cloudguardqs-module"
+        },
+        {
+          "spawn": "package:awsqs-ec2-linuxbastionqs-module"
+        },
+        {
+          "spawn": "package:awsqs-eks-cluster"
+        },
+        {
+          "spawn": "package:awsqs-iridium-cloudconnectqs-module"
+        },
+        {
+          "spawn": "package:awsqs-kubernetes-get"
+        },
+        {
+          "spawn": "package:awsqs-kubernetes-helm"
+        },
+        {
+          "spawn": "package:awsqs-kubernetes-resource"
+        },
+        {
+          "spawn": "package:awsqs-vpc-vpcqs-module"
+        },
+        {
+          "spawn": "package:datadog-dashboards-dashboard"
+        },
+        {
+          "spawn": "package:datadog-integrations-aws"
+        },
+        {
+          "spawn": "package:datadog-monitors-downtime"
+        },
+        {
+          "spawn": "package:datadog-monitors-monitor"
+        },
+        {
+          "spawn": "package:datadog-slos-slo"
+        },
+        {
+          "spawn": "package:fireeye-cloudintegrations-cloudwatch"
+        },
+        {
+          "spawn": "package:generic-database-schema"
+        },
+        {
+          "spawn": "package:generic-transcribe-vocabulary"
+        },
+        {
+          "spawn": "package:gremlin-agent-helm"
+        },
+        {
+          "spawn": "package:jfrog-artifactory-core-module"
+        },
+        {
+          "spawn": "package:jfrog-artifactory-ec2instance-module"
+        },
+        {
+          "spawn": "package:jfrog-artifactory-existingvpc-module"
+        },
+        {
+          "spawn": "package:jfrog-artifactory-newvpc-module"
+        },
+        {
+          "spawn": "package:jfrog-linux-bastion-module"
+        },
+        {
+          "spawn": "package:jfrog-vpc-multiaz-module"
+        },
+        {
+          "spawn": "package:jfrog-xray-ec2instance-module"
+        },
+        {
+          "spawn": "package:logzio-autodeploymentlogzio-cloudwatch-module"
+        },
+        {
+          "spawn": "package:logzio-awscostandusage-cur-module"
+        },
+        {
+          "spawn": "package:logzio-awssecurityhub-collector-module"
+        },
+        {
+          "spawn": "package:logzio-kinesisshipper-kinesisshipper-module"
+        },
+        {
+          "spawn": "package:logzio-myservice-myname-module"
+        },
+        {
+          "spawn": "package:mongodb-atlas-cluster"
+        },
+        {
+          "spawn": "package:mongodb-atlas-databaseuser"
+        },
+        {
+          "spawn": "package:mongodb-atlas-networkpeering"
+        },
+        {
+          "spawn": "package:mongodb-atlas-project"
+        },
+        {
+          "spawn": "package:mongodb-atlas-projectipaccesslist"
+        },
+        {
+          "spawn": "package:registry-test-resource1-module"
+        },
+        {
+          "spawn": "package:snyk-container-helm"
+        },
+        {
+          "spawn": "package:splunk-enterprise-quickstart-module"
+        },
+        {
+          "spawn": "package:spot-elastigroup-group"
+        },
+        {
+          "spawn": "package:stackery-open-bastion-module"
+        },
+        {
+          "spawn": "package:stocks-orders-marketorder"
+        },
+        {
+          "spawn": "package:symphonia-opensource-cloudformationartifactsbucket-module"
+        },
+        {
+          "spawn": "package:sysdig-helm-agent"
+        },
+        {
+          "spawn": "package:tf-ad-computer"
+        },
+        {
+          "spawn": "package:tf-ad-user"
+        },
+        {
+          "spawn": "package:tf-akamai-dnsrecord"
+        },
+        {
+          "spawn": "package:tf-aws-keypair"
+        },
+        {
+          "spawn": "package:tf-aws-s3bucket"
+        },
+        {
+          "spawn": "package:tf-aws-s3bucketobject"
+        },
+        {
+          "spawn": "package:tf-azuread-application"
+        },
+        {
+          "spawn": "package:tf-azuread-user"
+        },
+        {
+          "spawn": "package:tf-cloudflare-record"
+        },
+        {
+          "spawn": "package:tf-digitalocean-droplet"
+        },
+        {
+          "spawn": "package:tf-github-repository"
+        },
+        {
+          "spawn": "package:tf-google-storagebucket"
+        },
+        {
+          "spawn": "package:tf-pagerduty-service"
+        },
+        {
+          "spawn": "package:tf-random-string"
+        },
+        {
+          "spawn": "package:tf-random-uuid"
+        },
+        {
+          "spawn": "package:trendmicro-cloudonecontainer-helm"
         }
       ]
     },
@@ -221,6 +617,1524 @@
         }
       ]
     },
+    "compile:alexa-ask-skill": {
+      "name": "compile:alexa-ask-skill",
+      "description": "compile alexa-ask-skill with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/alexa-ask-skill"
+    },
+    "package:alexa-ask-skill": {
+      "name": "package:alexa-ask-skill",
+      "description": "produce multi-language packaging for alexa-ask-skill",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/alexa-ask-skill/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/alexa-ask-skill"
+    },
+    "compile:aqua-enterprise-enforcer": {
+      "name": "compile:aqua-enterprise-enforcer",
+      "description": "compile aqua-enterprise-enforcer with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-enforcer"
+    },
+    "package:aqua-enterprise-enforcer": {
+      "name": "package:aqua-enterprise-enforcer",
+      "description": "produce multi-language packaging for aqua-enterprise-enforcer",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-enforcer/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-enforcer"
+    },
+    "compile:aqua-enterprise-kubeenforcer": {
+      "name": "compile:aqua-enterprise-kubeenforcer",
+      "description": "compile aqua-enterprise-kubeenforcer with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-kubeenforcer"
+    },
+    "package:aqua-enterprise-kubeenforcer": {
+      "name": "package:aqua-enterprise-kubeenforcer",
+      "description": "produce multi-language packaging for aqua-enterprise-kubeenforcer",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-kubeenforcer/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-kubeenforcer"
+    },
+    "compile:aqua-enterprise-scanner": {
+      "name": "compile:aqua-enterprise-scanner",
+      "description": "compile aqua-enterprise-scanner with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-scanner"
+    },
+    "package:aqua-enterprise-scanner": {
+      "name": "package:aqua-enterprise-scanner",
+      "description": "produce multi-language packaging for aqua-enterprise-scanner",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-scanner/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-scanner"
+    },
+    "compile:aqua-enterprise-server": {
+      "name": "compile:aqua-enterprise-server",
+      "description": "compile aqua-enterprise-server with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-server"
+    },
+    "package:aqua-enterprise-server": {
+      "name": "package:aqua-enterprise-server",
+      "description": "produce multi-language packaging for aqua-enterprise-server",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-server/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-server"
+    },
+    "compile:atlassian-opsgenie-integration": {
+      "name": "compile:atlassian-opsgenie-integration",
+      "description": "compile atlassian-opsgenie-integration with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/atlassian-opsgenie-integration"
+    },
+    "package:atlassian-opsgenie-integration": {
+      "name": "package:atlassian-opsgenie-integration",
+      "description": "produce multi-language packaging for atlassian-opsgenie-integration",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/atlassian-opsgenie-integration/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/atlassian-opsgenie-integration"
+    },
+    "compile:atlassian-opsgenie-team": {
+      "name": "compile:atlassian-opsgenie-team",
+      "description": "compile atlassian-opsgenie-team with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/atlassian-opsgenie-team"
+    },
+    "package:atlassian-opsgenie-team": {
+      "name": "package:atlassian-opsgenie-team",
+      "description": "produce multi-language packaging for atlassian-opsgenie-team",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/atlassian-opsgenie-team/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/atlassian-opsgenie-team"
+    },
+    "compile:atlassian-opsgenie-user": {
+      "name": "compile:atlassian-opsgenie-user",
+      "description": "compile atlassian-opsgenie-user with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/atlassian-opsgenie-user"
+    },
+    "package:atlassian-opsgenie-user": {
+      "name": "package:atlassian-opsgenie-user",
+      "description": "produce multi-language packaging for atlassian-opsgenie-user",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/atlassian-opsgenie-user/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/atlassian-opsgenie-user"
+    },
+    "compile:awsqs-checkpoint-cloudguardqs-module": {
+      "name": "compile:awsqs-checkpoint-cloudguardqs-module",
+      "description": "compile awsqs-checkpoint-cloudguardqs-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-checkpoint-cloudguardqs-module"
+    },
+    "package:awsqs-checkpoint-cloudguardqs-module": {
+      "name": "package:awsqs-checkpoint-cloudguardqs-module",
+      "description": "produce multi-language packaging for awsqs-checkpoint-cloudguardqs-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-checkpoint-cloudguardqs-module/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-checkpoint-cloudguardqs-module"
+    },
+    "compile:awsqs-ec2-linuxbastionqs-module": {
+      "name": "compile:awsqs-ec2-linuxbastionqs-module",
+      "description": "compile awsqs-ec2-linuxbastionqs-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-ec2-linuxbastionqs-module"
+    },
+    "package:awsqs-ec2-linuxbastionqs-module": {
+      "name": "package:awsqs-ec2-linuxbastionqs-module",
+      "description": "produce multi-language packaging for awsqs-ec2-linuxbastionqs-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-ec2-linuxbastionqs-module/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-ec2-linuxbastionqs-module"
+    },
+    "compile:awsqs-eks-cluster": {
+      "name": "compile:awsqs-eks-cluster",
+      "description": "compile awsqs-eks-cluster with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-eks-cluster"
+    },
+    "package:awsqs-eks-cluster": {
+      "name": "package:awsqs-eks-cluster",
+      "description": "produce multi-language packaging for awsqs-eks-cluster",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-eks-cluster/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-eks-cluster"
+    },
+    "compile:awsqs-iridium-cloudconnectqs-module": {
+      "name": "compile:awsqs-iridium-cloudconnectqs-module",
+      "description": "compile awsqs-iridium-cloudconnectqs-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-iridium-cloudconnectqs-module"
+    },
+    "package:awsqs-iridium-cloudconnectqs-module": {
+      "name": "package:awsqs-iridium-cloudconnectqs-module",
+      "description": "produce multi-language packaging for awsqs-iridium-cloudconnectqs-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-iridium-cloudconnectqs-module/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-iridium-cloudconnectqs-module"
+    },
+    "compile:awsqs-kubernetes-get": {
+      "name": "compile:awsqs-kubernetes-get",
+      "description": "compile awsqs-kubernetes-get with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-kubernetes-get"
+    },
+    "package:awsqs-kubernetes-get": {
+      "name": "package:awsqs-kubernetes-get",
+      "description": "produce multi-language packaging for awsqs-kubernetes-get",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-kubernetes-get/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-kubernetes-get"
+    },
+    "compile:awsqs-kubernetes-helm": {
+      "name": "compile:awsqs-kubernetes-helm",
+      "description": "compile awsqs-kubernetes-helm with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-kubernetes-helm"
+    },
+    "package:awsqs-kubernetes-helm": {
+      "name": "package:awsqs-kubernetes-helm",
+      "description": "produce multi-language packaging for awsqs-kubernetes-helm",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-kubernetes-helm/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-kubernetes-helm"
+    },
+    "compile:awsqs-kubernetes-resource": {
+      "name": "compile:awsqs-kubernetes-resource",
+      "description": "compile awsqs-kubernetes-resource with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-kubernetes-resource"
+    },
+    "package:awsqs-kubernetes-resource": {
+      "name": "package:awsqs-kubernetes-resource",
+      "description": "produce multi-language packaging for awsqs-kubernetes-resource",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-kubernetes-resource/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-kubernetes-resource"
+    },
+    "compile:awsqs-vpc-vpcqs-module": {
+      "name": "compile:awsqs-vpc-vpcqs-module",
+      "description": "compile awsqs-vpc-vpcqs-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-vpc-vpcqs-module"
+    },
+    "package:awsqs-vpc-vpcqs-module": {
+      "name": "package:awsqs-vpc-vpcqs-module",
+      "description": "produce multi-language packaging for awsqs-vpc-vpcqs-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-vpc-vpcqs-module/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-vpc-vpcqs-module"
+    },
+    "compile:datadog-dashboards-dashboard": {
+      "name": "compile:datadog-dashboards-dashboard",
+      "description": "compile datadog-dashboards-dashboard with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-dashboards-dashboard"
+    },
+    "package:datadog-dashboards-dashboard": {
+      "name": "package:datadog-dashboards-dashboard",
+      "description": "produce multi-language packaging for datadog-dashboards-dashboard",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-dashboards-dashboard/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-dashboards-dashboard"
+    },
+    "compile:datadog-integrations-aws": {
+      "name": "compile:datadog-integrations-aws",
+      "description": "compile datadog-integrations-aws with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-integrations-aws"
+    },
+    "package:datadog-integrations-aws": {
+      "name": "package:datadog-integrations-aws",
+      "description": "produce multi-language packaging for datadog-integrations-aws",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-integrations-aws/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-integrations-aws"
+    },
+    "compile:datadog-monitors-downtime": {
+      "name": "compile:datadog-monitors-downtime",
+      "description": "compile datadog-monitors-downtime with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-monitors-downtime"
+    },
+    "package:datadog-monitors-downtime": {
+      "name": "package:datadog-monitors-downtime",
+      "description": "produce multi-language packaging for datadog-monitors-downtime",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-monitors-downtime/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-monitors-downtime"
+    },
+    "compile:datadog-monitors-monitor": {
+      "name": "compile:datadog-monitors-monitor",
+      "description": "compile datadog-monitors-monitor with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-monitors-monitor"
+    },
+    "package:datadog-monitors-monitor": {
+      "name": "package:datadog-monitors-monitor",
+      "description": "produce multi-language packaging for datadog-monitors-monitor",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-monitors-monitor/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-monitors-monitor"
+    },
+    "compile:datadog-slos-slo": {
+      "name": "compile:datadog-slos-slo",
+      "description": "compile datadog-slos-slo with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-slos-slo"
+    },
+    "package:datadog-slos-slo": {
+      "name": "package:datadog-slos-slo",
+      "description": "produce multi-language packaging for datadog-slos-slo",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-slos-slo/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-slos-slo"
+    },
+    "compile:fireeye-cloudintegrations-cloudwatch": {
+      "name": "compile:fireeye-cloudintegrations-cloudwatch",
+      "description": "compile fireeye-cloudintegrations-cloudwatch with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/fireeye-cloudintegrations-cloudwatch"
+    },
+    "package:fireeye-cloudintegrations-cloudwatch": {
+      "name": "package:fireeye-cloudintegrations-cloudwatch",
+      "description": "produce multi-language packaging for fireeye-cloudintegrations-cloudwatch",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/fireeye-cloudintegrations-cloudwatch/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/fireeye-cloudintegrations-cloudwatch"
+    },
+    "compile:generic-database-schema": {
+      "name": "compile:generic-database-schema",
+      "description": "compile generic-database-schema with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/generic-database-schema"
+    },
+    "package:generic-database-schema": {
+      "name": "package:generic-database-schema",
+      "description": "produce multi-language packaging for generic-database-schema",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/generic-database-schema/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/generic-database-schema"
+    },
+    "compile:generic-transcribe-vocabulary": {
+      "name": "compile:generic-transcribe-vocabulary",
+      "description": "compile generic-transcribe-vocabulary with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/generic-transcribe-vocabulary"
+    },
+    "package:generic-transcribe-vocabulary": {
+      "name": "package:generic-transcribe-vocabulary",
+      "description": "produce multi-language packaging for generic-transcribe-vocabulary",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/generic-transcribe-vocabulary/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/generic-transcribe-vocabulary"
+    },
+    "compile:gremlin-agent-helm": {
+      "name": "compile:gremlin-agent-helm",
+      "description": "compile gremlin-agent-helm with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/gremlin-agent-helm"
+    },
+    "package:gremlin-agent-helm": {
+      "name": "package:gremlin-agent-helm",
+      "description": "produce multi-language packaging for gremlin-agent-helm",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/gremlin-agent-helm/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/gremlin-agent-helm"
+    },
+    "compile:jfrog-artifactory-core-module": {
+      "name": "compile:jfrog-artifactory-core-module",
+      "description": "compile jfrog-artifactory-core-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-artifactory-core-module"
+    },
+    "package:jfrog-artifactory-core-module": {
+      "name": "package:jfrog-artifactory-core-module",
+      "description": "produce multi-language packaging for jfrog-artifactory-core-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-artifactory-core-module/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-artifactory-core-module"
+    },
+    "compile:jfrog-artifactory-ec2instance-module": {
+      "name": "compile:jfrog-artifactory-ec2instance-module",
+      "description": "compile jfrog-artifactory-ec2instance-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-artifactory-ec2instance-module"
+    },
+    "package:jfrog-artifactory-ec2instance-module": {
+      "name": "package:jfrog-artifactory-ec2instance-module",
+      "description": "produce multi-language packaging for jfrog-artifactory-ec2instance-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-artifactory-ec2instance-module/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-artifactory-ec2instance-module"
+    },
+    "compile:jfrog-artifactory-existingvpc-module": {
+      "name": "compile:jfrog-artifactory-existingvpc-module",
+      "description": "compile jfrog-artifactory-existingvpc-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-artifactory-existingvpc-module"
+    },
+    "package:jfrog-artifactory-existingvpc-module": {
+      "name": "package:jfrog-artifactory-existingvpc-module",
+      "description": "produce multi-language packaging for jfrog-artifactory-existingvpc-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-artifactory-existingvpc-module/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-artifactory-existingvpc-module"
+    },
+    "compile:jfrog-artifactory-newvpc-module": {
+      "name": "compile:jfrog-artifactory-newvpc-module",
+      "description": "compile jfrog-artifactory-newvpc-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-artifactory-newvpc-module"
+    },
+    "package:jfrog-artifactory-newvpc-module": {
+      "name": "package:jfrog-artifactory-newvpc-module",
+      "description": "produce multi-language packaging for jfrog-artifactory-newvpc-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-artifactory-newvpc-module/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-artifactory-newvpc-module"
+    },
+    "compile:jfrog-linux-bastion-module": {
+      "name": "compile:jfrog-linux-bastion-module",
+      "description": "compile jfrog-linux-bastion-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-linux-bastion-module"
+    },
+    "package:jfrog-linux-bastion-module": {
+      "name": "package:jfrog-linux-bastion-module",
+      "description": "produce multi-language packaging for jfrog-linux-bastion-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-linux-bastion-module/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-linux-bastion-module"
+    },
+    "compile:jfrog-vpc-multiaz-module": {
+      "name": "compile:jfrog-vpc-multiaz-module",
+      "description": "compile jfrog-vpc-multiaz-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-vpc-multiaz-module"
+    },
+    "package:jfrog-vpc-multiaz-module": {
+      "name": "package:jfrog-vpc-multiaz-module",
+      "description": "produce multi-language packaging for jfrog-vpc-multiaz-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-vpc-multiaz-module/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-vpc-multiaz-module"
+    },
+    "compile:jfrog-xray-ec2instance-module": {
+      "name": "compile:jfrog-xray-ec2instance-module",
+      "description": "compile jfrog-xray-ec2instance-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-xray-ec2instance-module"
+    },
+    "package:jfrog-xray-ec2instance-module": {
+      "name": "package:jfrog-xray-ec2instance-module",
+      "description": "produce multi-language packaging for jfrog-xray-ec2instance-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-xray-ec2instance-module/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-xray-ec2instance-module"
+    },
+    "compile:logzio-autodeploymentlogzio-cloudwatch-module": {
+      "name": "compile:logzio-autodeploymentlogzio-cloudwatch-module",
+      "description": "compile logzio-autodeploymentlogzio-cloudwatch-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-autodeploymentlogzio-cloudwatch-module"
+    },
+    "package:logzio-autodeploymentlogzio-cloudwatch-module": {
+      "name": "package:logzio-autodeploymentlogzio-cloudwatch-module",
+      "description": "produce multi-language packaging for logzio-autodeploymentlogzio-cloudwatch-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-autodeploymentlogzio-cloudwatch-module/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-autodeploymentlogzio-cloudwatch-module"
+    },
+    "compile:logzio-awscostandusage-cur-module": {
+      "name": "compile:logzio-awscostandusage-cur-module",
+      "description": "compile logzio-awscostandusage-cur-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-awscostandusage-cur-module"
+    },
+    "package:logzio-awscostandusage-cur-module": {
+      "name": "package:logzio-awscostandusage-cur-module",
+      "description": "produce multi-language packaging for logzio-awscostandusage-cur-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-awscostandusage-cur-module/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-awscostandusage-cur-module"
+    },
+    "compile:logzio-awssecurityhub-collector-module": {
+      "name": "compile:logzio-awssecurityhub-collector-module",
+      "description": "compile logzio-awssecurityhub-collector-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-awssecurityhub-collector-module"
+    },
+    "package:logzio-awssecurityhub-collector-module": {
+      "name": "package:logzio-awssecurityhub-collector-module",
+      "description": "produce multi-language packaging for logzio-awssecurityhub-collector-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-awssecurityhub-collector-module/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-awssecurityhub-collector-module"
+    },
+    "compile:logzio-kinesisshipper-kinesisshipper-module": {
+      "name": "compile:logzio-kinesisshipper-kinesisshipper-module",
+      "description": "compile logzio-kinesisshipper-kinesisshipper-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-kinesisshipper-kinesisshipper-module"
+    },
+    "package:logzio-kinesisshipper-kinesisshipper-module": {
+      "name": "package:logzio-kinesisshipper-kinesisshipper-module",
+      "description": "produce multi-language packaging for logzio-kinesisshipper-kinesisshipper-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-kinesisshipper-kinesisshipper-module/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-kinesisshipper-kinesisshipper-module"
+    },
+    "compile:logzio-myservice-myname-module": {
+      "name": "compile:logzio-myservice-myname-module",
+      "description": "compile logzio-myservice-myname-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-myservice-myname-module"
+    },
+    "package:logzio-myservice-myname-module": {
+      "name": "package:logzio-myservice-myname-module",
+      "description": "produce multi-language packaging for logzio-myservice-myname-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-myservice-myname-module/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-myservice-myname-module"
+    },
+    "compile:mongodb-atlas-cluster": {
+      "name": "compile:mongodb-atlas-cluster",
+      "description": "compile mongodb-atlas-cluster with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-cluster"
+    },
+    "package:mongodb-atlas-cluster": {
+      "name": "package:mongodb-atlas-cluster",
+      "description": "produce multi-language packaging for mongodb-atlas-cluster",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-cluster/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-cluster"
+    },
+    "compile:mongodb-atlas-databaseuser": {
+      "name": "compile:mongodb-atlas-databaseuser",
+      "description": "compile mongodb-atlas-databaseuser with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-databaseuser"
+    },
+    "package:mongodb-atlas-databaseuser": {
+      "name": "package:mongodb-atlas-databaseuser",
+      "description": "produce multi-language packaging for mongodb-atlas-databaseuser",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-databaseuser/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-databaseuser"
+    },
+    "compile:mongodb-atlas-networkpeering": {
+      "name": "compile:mongodb-atlas-networkpeering",
+      "description": "compile mongodb-atlas-networkpeering with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-networkpeering"
+    },
+    "package:mongodb-atlas-networkpeering": {
+      "name": "package:mongodb-atlas-networkpeering",
+      "description": "produce multi-language packaging for mongodb-atlas-networkpeering",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-networkpeering/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-networkpeering"
+    },
+    "compile:mongodb-atlas-project": {
+      "name": "compile:mongodb-atlas-project",
+      "description": "compile mongodb-atlas-project with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-project"
+    },
+    "package:mongodb-atlas-project": {
+      "name": "package:mongodb-atlas-project",
+      "description": "produce multi-language packaging for mongodb-atlas-project",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-project/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-project"
+    },
+    "compile:mongodb-atlas-projectipaccesslist": {
+      "name": "compile:mongodb-atlas-projectipaccesslist",
+      "description": "compile mongodb-atlas-projectipaccesslist with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-projectipaccesslist"
+    },
+    "package:mongodb-atlas-projectipaccesslist": {
+      "name": "package:mongodb-atlas-projectipaccesslist",
+      "description": "produce multi-language packaging for mongodb-atlas-projectipaccesslist",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-projectipaccesslist/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-projectipaccesslist"
+    },
+    "compile:registry-test-resource1-module": {
+      "name": "compile:registry-test-resource1-module",
+      "description": "compile registry-test-resource1-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/registry-test-resource1-module"
+    },
+    "package:registry-test-resource1-module": {
+      "name": "package:registry-test-resource1-module",
+      "description": "produce multi-language packaging for registry-test-resource1-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/registry-test-resource1-module/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/registry-test-resource1-module"
+    },
+    "compile:snyk-container-helm": {
+      "name": "compile:snyk-container-helm",
+      "description": "compile snyk-container-helm with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/snyk-container-helm"
+    },
+    "package:snyk-container-helm": {
+      "name": "package:snyk-container-helm",
+      "description": "produce multi-language packaging for snyk-container-helm",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/snyk-container-helm/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/snyk-container-helm"
+    },
+    "compile:splunk-enterprise-quickstart-module": {
+      "name": "compile:splunk-enterprise-quickstart-module",
+      "description": "compile splunk-enterprise-quickstart-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/splunk-enterprise-quickstart-module"
+    },
+    "package:splunk-enterprise-quickstart-module": {
+      "name": "package:splunk-enterprise-quickstart-module",
+      "description": "produce multi-language packaging for splunk-enterprise-quickstart-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/splunk-enterprise-quickstart-module/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/splunk-enterprise-quickstart-module"
+    },
+    "compile:spot-elastigroup-group": {
+      "name": "compile:spot-elastigroup-group",
+      "description": "compile spot-elastigroup-group with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/spot-elastigroup-group"
+    },
+    "package:spot-elastigroup-group": {
+      "name": "package:spot-elastigroup-group",
+      "description": "produce multi-language packaging for spot-elastigroup-group",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/spot-elastigroup-group/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/spot-elastigroup-group"
+    },
+    "compile:stackery-open-bastion-module": {
+      "name": "compile:stackery-open-bastion-module",
+      "description": "compile stackery-open-bastion-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/stackery-open-bastion-module"
+    },
+    "package:stackery-open-bastion-module": {
+      "name": "package:stackery-open-bastion-module",
+      "description": "produce multi-language packaging for stackery-open-bastion-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/stackery-open-bastion-module/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/stackery-open-bastion-module"
+    },
+    "compile:stocks-orders-marketorder": {
+      "name": "compile:stocks-orders-marketorder",
+      "description": "compile stocks-orders-marketorder with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/stocks-orders-marketorder"
+    },
+    "package:stocks-orders-marketorder": {
+      "name": "package:stocks-orders-marketorder",
+      "description": "produce multi-language packaging for stocks-orders-marketorder",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/stocks-orders-marketorder/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/stocks-orders-marketorder"
+    },
+    "compile:symphonia-opensource-cloudformationartifactsbucket-module": {
+      "name": "compile:symphonia-opensource-cloudformationartifactsbucket-module",
+      "description": "compile symphonia-opensource-cloudformationartifactsbucket-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/symphonia-opensource-cloudformationartifactsbucket-module"
+    },
+    "package:symphonia-opensource-cloudformationartifactsbucket-module": {
+      "name": "package:symphonia-opensource-cloudformationartifactsbucket-module",
+      "description": "produce multi-language packaging for symphonia-opensource-cloudformationartifactsbucket-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/symphonia-opensource-cloudformationartifactsbucket-module/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/symphonia-opensource-cloudformationartifactsbucket-module"
+    },
+    "compile:sysdig-helm-agent": {
+      "name": "compile:sysdig-helm-agent",
+      "description": "compile sysdig-helm-agent with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/sysdig-helm-agent"
+    },
+    "package:sysdig-helm-agent": {
+      "name": "package:sysdig-helm-agent",
+      "description": "produce multi-language packaging for sysdig-helm-agent",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/sysdig-helm-agent/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/sysdig-helm-agent"
+    },
+    "compile:tf-ad-computer": {
+      "name": "compile:tf-ad-computer",
+      "description": "compile tf-ad-computer with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-ad-computer"
+    },
+    "package:tf-ad-computer": {
+      "name": "package:tf-ad-computer",
+      "description": "produce multi-language packaging for tf-ad-computer",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-ad-computer/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-ad-computer"
+    },
+    "compile:tf-ad-user": {
+      "name": "compile:tf-ad-user",
+      "description": "compile tf-ad-user with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-ad-user"
+    },
+    "package:tf-ad-user": {
+      "name": "package:tf-ad-user",
+      "description": "produce multi-language packaging for tf-ad-user",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-ad-user/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-ad-user"
+    },
+    "compile:tf-akamai-dnsrecord": {
+      "name": "compile:tf-akamai-dnsrecord",
+      "description": "compile tf-akamai-dnsrecord with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-akamai-dnsrecord"
+    },
+    "package:tf-akamai-dnsrecord": {
+      "name": "package:tf-akamai-dnsrecord",
+      "description": "produce multi-language packaging for tf-akamai-dnsrecord",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-akamai-dnsrecord/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-akamai-dnsrecord"
+    },
+    "compile:tf-aws-keypair": {
+      "name": "compile:tf-aws-keypair",
+      "description": "compile tf-aws-keypair with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-aws-keypair"
+    },
+    "package:tf-aws-keypair": {
+      "name": "package:tf-aws-keypair",
+      "description": "produce multi-language packaging for tf-aws-keypair",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-aws-keypair/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-aws-keypair"
+    },
+    "compile:tf-aws-s3bucket": {
+      "name": "compile:tf-aws-s3bucket",
+      "description": "compile tf-aws-s3bucket with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-aws-s3bucket"
+    },
+    "package:tf-aws-s3bucket": {
+      "name": "package:tf-aws-s3bucket",
+      "description": "produce multi-language packaging for tf-aws-s3bucket",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-aws-s3bucket/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-aws-s3bucket"
+    },
+    "compile:tf-aws-s3bucketobject": {
+      "name": "compile:tf-aws-s3bucketobject",
+      "description": "compile tf-aws-s3bucketobject with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-aws-s3bucketobject"
+    },
+    "package:tf-aws-s3bucketobject": {
+      "name": "package:tf-aws-s3bucketobject",
+      "description": "produce multi-language packaging for tf-aws-s3bucketobject",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-aws-s3bucketobject/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-aws-s3bucketobject"
+    },
+    "compile:tf-azuread-application": {
+      "name": "compile:tf-azuread-application",
+      "description": "compile tf-azuread-application with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-azuread-application"
+    },
+    "package:tf-azuread-application": {
+      "name": "package:tf-azuread-application",
+      "description": "produce multi-language packaging for tf-azuread-application",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-azuread-application/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-azuread-application"
+    },
+    "compile:tf-azuread-user": {
+      "name": "compile:tf-azuread-user",
+      "description": "compile tf-azuread-user with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-azuread-user"
+    },
+    "package:tf-azuread-user": {
+      "name": "package:tf-azuread-user",
+      "description": "produce multi-language packaging for tf-azuread-user",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-azuread-user/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-azuread-user"
+    },
+    "compile:tf-cloudflare-record": {
+      "name": "compile:tf-cloudflare-record",
+      "description": "compile tf-cloudflare-record with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-cloudflare-record"
+    },
+    "package:tf-cloudflare-record": {
+      "name": "package:tf-cloudflare-record",
+      "description": "produce multi-language packaging for tf-cloudflare-record",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-cloudflare-record/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-cloudflare-record"
+    },
+    "compile:tf-digitalocean-droplet": {
+      "name": "compile:tf-digitalocean-droplet",
+      "description": "compile tf-digitalocean-droplet with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-digitalocean-droplet"
+    },
+    "package:tf-digitalocean-droplet": {
+      "name": "package:tf-digitalocean-droplet",
+      "description": "produce multi-language packaging for tf-digitalocean-droplet",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-digitalocean-droplet/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-digitalocean-droplet"
+    },
+    "compile:tf-github-repository": {
+      "name": "compile:tf-github-repository",
+      "description": "compile tf-github-repository with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-github-repository"
+    },
+    "package:tf-github-repository": {
+      "name": "package:tf-github-repository",
+      "description": "produce multi-language packaging for tf-github-repository",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-github-repository/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-github-repository"
+    },
+    "compile:tf-google-storagebucket": {
+      "name": "compile:tf-google-storagebucket",
+      "description": "compile tf-google-storagebucket with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-google-storagebucket"
+    },
+    "package:tf-google-storagebucket": {
+      "name": "package:tf-google-storagebucket",
+      "description": "produce multi-language packaging for tf-google-storagebucket",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-google-storagebucket/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-google-storagebucket"
+    },
+    "compile:tf-pagerduty-service": {
+      "name": "compile:tf-pagerduty-service",
+      "description": "compile tf-pagerduty-service with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-pagerduty-service"
+    },
+    "package:tf-pagerduty-service": {
+      "name": "package:tf-pagerduty-service",
+      "description": "produce multi-language packaging for tf-pagerduty-service",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-pagerduty-service/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-pagerduty-service"
+    },
+    "compile:tf-random-string": {
+      "name": "compile:tf-random-string",
+      "description": "compile tf-random-string with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-random-string"
+    },
+    "package:tf-random-string": {
+      "name": "package:tf-random-string",
+      "description": "produce multi-language packaging for tf-random-string",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-random-string/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-random-string"
+    },
+    "compile:tf-random-uuid": {
+      "name": "compile:tf-random-uuid",
+      "description": "compile tf-random-uuid with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-random-uuid"
+    },
+    "package:tf-random-uuid": {
+      "name": "package:tf-random-uuid",
+      "description": "produce multi-language packaging for tf-random-uuid",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-random-uuid/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-random-uuid"
+    },
+    "compile:trendmicro-cloudonecontainer-helm": {
+      "name": "compile:trendmicro-cloudonecontainer-helm",
+      "description": "compile trendmicro-cloudonecontainer-helm with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/trendmicro-cloudonecontainer-helm"
+    },
+    "package:trendmicro-cloudonecontainer-helm": {
+      "name": "package:trendmicro-cloudonecontainer-helm",
+      "description": "produce multi-language packaging for trendmicro-cloudonecontainer-helm",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -vv"
+        },
+        {
+          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/trendmicro-cloudonecontainer-helm/dist/ dist/"
+        }
+      ],
+      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/trendmicro-cloudonecontainer-helm"
+    },
     "release": {
       "name": "release",
       "description": "Prepare a release from \"main\" branch",
@@ -271,7 +2185,7 @@
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade @aws-cdk/assert @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser aws-sdk case cdk-import eslint eslint-import-resolver-node eslint-import-resolver-typescript eslint-plugin-import jest jest-junit jsii jsii-diff jsii-docgen jsii-pacmak json-schema npm-check-updates standard-version ts-jest ts-node typescript constructs"
+          "exec": "yarn upgrade @aws-cdk/assert @aws-cdk/core @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser aws-sdk case cdk-import constructs eslint eslint-import-resolver-node eslint-import-resolver-typescript eslint-plugin-import jest jest-junit jsii jsii-diff jsii-docgen jsii-pacmak json-schema npm-check-updates standard-version ts-jest ts-node typescript constructs"
         },
         {
           "exec": "npx projen"

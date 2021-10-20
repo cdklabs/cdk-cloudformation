@@ -3,4 +3,6 @@ node_modules/
 !/.gitattributes
 !/.projen/tasks.json
 !/.projen/deps.json
+!/LICENSE
+!/README.md
 !/package.json

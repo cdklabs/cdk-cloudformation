@@ -14,6 +14,8 @@ const project = new AwsCdkConstructLibrary({
 project.addDevDeps('cdk-import');
 project.addDevDeps('case');
 project.addDevDeps('aws-sdk');
+project.addDevDeps('constructs');
+project.addDevDeps('@aws-cdk/core');
 
 const packagesDir = 'packages';
 const scope = '@cdk-cloudformation';

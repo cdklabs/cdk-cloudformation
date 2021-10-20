@@ -6,6 +6,10 @@
       "type": "build"
     },
     {
+      "name": "@aws-cdk/core",
+      "type": "build"
+    },
+    {
       "name": "@types/jest",
       "type": "build"
     },
@@ -32,6 +36,10 @@
     },
     {
       "name": "cdk-import",
+      "type": "build"
+    },
+    {
+      "name": "constructs",
       "type": "build"
     },
     {

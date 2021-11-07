@@ -229,7 +229,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/alexa-ask-skill"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/alexa-ask-skill"
     },
     "package:alexa-ask-skill": {
       "name": "package:alexa-ask-skill",
@@ -260,7 +260,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-enforcer"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-enforcer"
     },
     "package:aqua-enterprise-enforcer": {
       "name": "package:aqua-enterprise-enforcer",
@@ -291,7 +291,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-kubeenforcer"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-kubeenforcer"
     },
     "package:aqua-enterprise-kubeenforcer": {
       "name": "package:aqua-enterprise-kubeenforcer",
@@ -322,7 +322,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-scanner"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-scanner"
     },
     "package:aqua-enterprise-scanner": {
       "name": "package:aqua-enterprise-scanner",
@@ -353,7 +353,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-server"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-server"
     },
     "package:aqua-enterprise-server": {
       "name": "package:aqua-enterprise-server",
@@ -384,7 +384,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/atlassian-opsgenie-integration"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/atlassian-opsgenie-integration"
     },
     "package:atlassian-opsgenie-integration": {
       "name": "package:atlassian-opsgenie-integration",
@@ -415,7 +415,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/atlassian-opsgenie-team"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/atlassian-opsgenie-team"
     },
     "package:atlassian-opsgenie-team": {
       "name": "package:atlassian-opsgenie-team",
@@ -446,7 +446,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/atlassian-opsgenie-user"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/atlassian-opsgenie-user"
     },
     "package:atlassian-opsgenie-user": {
       "name": "package:atlassian-opsgenie-user",
@@ -477,7 +477,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-checkpoint-cloudguardqs-module"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-checkpoint-cloudguardqs-module"
     },
     "package:awsqs-checkpoint-cloudguardqs-module": {
       "name": "package:awsqs-checkpoint-cloudguardqs-module",
@@ -508,7 +508,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-ec2-linuxbastionqs-module"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-ec2-linuxbastionqs-module"
     },
     "package:awsqs-ec2-linuxbastionqs-module": {
       "name": "package:awsqs-ec2-linuxbastionqs-module",
@@ -539,7 +539,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-eks-cluster"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-eks-cluster"
     },
     "package:awsqs-eks-cluster": {
       "name": "package:awsqs-eks-cluster",
@@ -570,7 +570,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-iridium-cloudconnectqs-module"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-iridium-cloudconnectqs-module"
     },
     "package:awsqs-iridium-cloudconnectqs-module": {
       "name": "package:awsqs-iridium-cloudconnectqs-module",
@@ -601,7 +601,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-kubernetes-get"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-kubernetes-get"
     },
     "package:awsqs-kubernetes-get": {
       "name": "package:awsqs-kubernetes-get",
@@ -632,7 +632,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-kubernetes-helm"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-kubernetes-helm"
     },
     "package:awsqs-kubernetes-helm": {
       "name": "package:awsqs-kubernetes-helm",
@@ -663,7 +663,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-kubernetes-resource"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-kubernetes-resource"
     },
     "package:awsqs-kubernetes-resource": {
       "name": "package:awsqs-kubernetes-resource",
@@ -694,7 +694,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-vpc-vpcqs-module"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-vpc-vpcqs-module"
     },
     "package:awsqs-vpc-vpcqs-module": {
       "name": "package:awsqs-vpc-vpcqs-module",
@@ -725,7 +725,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-dashboards-dashboard"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-dashboards-dashboard"
     },
     "package:datadog-dashboards-dashboard": {
       "name": "package:datadog-dashboards-dashboard",
@@ -756,7 +756,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-integrations-aws"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-integrations-aws"
     },
     "package:datadog-integrations-aws": {
       "name": "package:datadog-integrations-aws",
@@ -787,7 +787,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-monitors-downtime"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-monitors-downtime"
     },
     "package:datadog-monitors-downtime": {
       "name": "package:datadog-monitors-downtime",
@@ -818,7 +818,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-monitors-monitor"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-monitors-monitor"
     },
     "package:datadog-monitors-monitor": {
       "name": "package:datadog-monitors-monitor",
@@ -849,7 +849,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-slos-slo"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-slos-slo"
     },
     "package:datadog-slos-slo": {
       "name": "package:datadog-slos-slo",
@@ -880,7 +880,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/fireeye-cloudintegrations-cloudwatch"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/fireeye-cloudintegrations-cloudwatch"
     },
     "package:fireeye-cloudintegrations-cloudwatch": {
       "name": "package:fireeye-cloudintegrations-cloudwatch",
@@ -911,7 +911,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/generic-database-schema"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/generic-database-schema"
     },
     "package:generic-database-schema": {
       "name": "package:generic-database-schema",
@@ -942,7 +942,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/generic-transcribe-vocabulary"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/generic-transcribe-vocabulary"
     },
     "package:generic-transcribe-vocabulary": {
       "name": "package:generic-transcribe-vocabulary",
@@ -973,7 +973,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/gremlin-agent-helm"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/gremlin-agent-helm"
     },
     "package:gremlin-agent-helm": {
       "name": "package:gremlin-agent-helm",
@@ -1004,7 +1004,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-artifactory-core-module"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-artifactory-core-module"
     },
     "package:jfrog-artifactory-core-module": {
       "name": "package:jfrog-artifactory-core-module",
@@ -1035,7 +1035,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-artifactory-ec2instance-module"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-artifactory-ec2instance-module"
     },
     "package:jfrog-artifactory-ec2instance-module": {
       "name": "package:jfrog-artifactory-ec2instance-module",
@@ -1066,7 +1066,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-artifactory-existingvpc-module"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-artifactory-existingvpc-module"
     },
     "package:jfrog-artifactory-existingvpc-module": {
       "name": "package:jfrog-artifactory-existingvpc-module",
@@ -1097,7 +1097,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-artifactory-newvpc-module"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-artifactory-newvpc-module"
     },
     "package:jfrog-artifactory-newvpc-module": {
       "name": "package:jfrog-artifactory-newvpc-module",
@@ -1128,7 +1128,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-linux-bastion-module"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-linux-bastion-module"
     },
     "package:jfrog-linux-bastion-module": {
       "name": "package:jfrog-linux-bastion-module",
@@ -1159,7 +1159,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-vpc-multiaz-module"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-vpc-multiaz-module"
     },
     "package:jfrog-vpc-multiaz-module": {
       "name": "package:jfrog-vpc-multiaz-module",
@@ -1190,7 +1190,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-xray-ec2instance-module"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-xray-ec2instance-module"
     },
     "package:jfrog-xray-ec2instance-module": {
       "name": "package:jfrog-xray-ec2instance-module",
@@ -1221,7 +1221,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-autodeploymentlogzio-cloudwatch-module"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-autodeploymentlogzio-cloudwatch-module"
     },
     "package:logzio-autodeploymentlogzio-cloudwatch-module": {
       "name": "package:logzio-autodeploymentlogzio-cloudwatch-module",
@@ -1252,7 +1252,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-awscostandusage-cur-module"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-awscostandusage-cur-module"
     },
     "package:logzio-awscostandusage-cur-module": {
       "name": "package:logzio-awscostandusage-cur-module",
@@ -1283,7 +1283,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-awssecurityhub-collector-module"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-awssecurityhub-collector-module"
     },
     "package:logzio-awssecurityhub-collector-module": {
       "name": "package:logzio-awssecurityhub-collector-module",
@@ -1314,7 +1314,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-kinesisshipper-kinesisshipper-module"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-kinesisshipper-kinesisshipper-module"
     },
     "package:logzio-kinesisshipper-kinesisshipper-module": {
       "name": "package:logzio-kinesisshipper-kinesisshipper-module",
@@ -1345,7 +1345,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-myservice-myname-module"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-myservice-myname-module"
     },
     "package:logzio-myservice-myname-module": {
       "name": "package:logzio-myservice-myname-module",
@@ -1376,7 +1376,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-cluster"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-cluster"
     },
     "package:mongodb-atlas-cluster": {
       "name": "package:mongodb-atlas-cluster",
@@ -1407,7 +1407,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-databaseuser"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-databaseuser"
     },
     "package:mongodb-atlas-databaseuser": {
       "name": "package:mongodb-atlas-databaseuser",
@@ -1438,7 +1438,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-networkpeering"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-networkpeering"
     },
     "package:mongodb-atlas-networkpeering": {
       "name": "package:mongodb-atlas-networkpeering",
@@ -1469,7 +1469,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-project"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-project"
     },
     "package:mongodb-atlas-project": {
       "name": "package:mongodb-atlas-project",
@@ -1500,7 +1500,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-projectipaccesslist"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-projectipaccesslist"
     },
     "package:mongodb-atlas-projectipaccesslist": {
       "name": "package:mongodb-atlas-projectipaccesslist",
@@ -1531,7 +1531,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/registry-test-resource1-module"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/registry-test-resource1-module"
     },
     "package:registry-test-resource1-module": {
       "name": "package:registry-test-resource1-module",
@@ -1562,7 +1562,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/snyk-container-helm"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/snyk-container-helm"
     },
     "package:snyk-container-helm": {
       "name": "package:snyk-container-helm",
@@ -1593,7 +1593,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/splunk-enterprise-quickstart-module"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/splunk-enterprise-quickstart-module"
     },
     "package:splunk-enterprise-quickstart-module": {
       "name": "package:splunk-enterprise-quickstart-module",
@@ -1624,7 +1624,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/spot-elastigroup-group"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/spot-elastigroup-group"
     },
     "package:spot-elastigroup-group": {
       "name": "package:spot-elastigroup-group",
@@ -1655,7 +1655,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/stackery-open-bastion-module"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/stackery-open-bastion-module"
     },
     "package:stackery-open-bastion-module": {
       "name": "package:stackery-open-bastion-module",
@@ -1686,7 +1686,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/stocks-orders-marketorder"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/stocks-orders-marketorder"
     },
     "package:stocks-orders-marketorder": {
       "name": "package:stocks-orders-marketorder",
@@ -1717,7 +1717,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/symphonia-opensource-cloudformationartifactsbucket-module"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/symphonia-opensource-cloudformationartifactsbucket-module"
     },
     "package:symphonia-opensource-cloudformationartifactsbucket-module": {
       "name": "package:symphonia-opensource-cloudformationartifactsbucket-module",
@@ -1748,7 +1748,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/sysdig-helm-agent"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/sysdig-helm-agent"
     },
     "package:sysdig-helm-agent": {
       "name": "package:sysdig-helm-agent",
@@ -1779,7 +1779,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-ad-computer"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-ad-computer"
     },
     "package:tf-ad-computer": {
       "name": "package:tf-ad-computer",
@@ -1810,7 +1810,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-ad-user"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-ad-user"
     },
     "package:tf-ad-user": {
       "name": "package:tf-ad-user",
@@ -1841,7 +1841,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-akamai-dnsrecord"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-akamai-dnsrecord"
     },
     "package:tf-akamai-dnsrecord": {
       "name": "package:tf-akamai-dnsrecord",
@@ -1872,7 +1872,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-aws-keypair"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-aws-keypair"
     },
     "package:tf-aws-keypair": {
       "name": "package:tf-aws-keypair",
@@ -1903,7 +1903,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-aws-s3bucket"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-aws-s3bucket"
     },
     "package:tf-aws-s3bucket": {
       "name": "package:tf-aws-s3bucket",
@@ -1934,7 +1934,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-aws-s3bucketobject"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-aws-s3bucketobject"
     },
     "package:tf-aws-s3bucketobject": {
       "name": "package:tf-aws-s3bucketobject",
@@ -1965,7 +1965,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-azuread-application"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-azuread-application"
     },
     "package:tf-azuread-application": {
       "name": "package:tf-azuread-application",
@@ -1996,7 +1996,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-azuread-user"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-azuread-user"
     },
     "package:tf-azuread-user": {
       "name": "package:tf-azuread-user",
@@ -2027,7 +2027,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-cloudflare-record"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-cloudflare-record"
     },
     "package:tf-cloudflare-record": {
       "name": "package:tf-cloudflare-record",
@@ -2058,7 +2058,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-digitalocean-droplet"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-digitalocean-droplet"
     },
     "package:tf-digitalocean-droplet": {
       "name": "package:tf-digitalocean-droplet",
@@ -2089,7 +2089,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-github-repository"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-github-repository"
     },
     "package:tf-github-repository": {
       "name": "package:tf-github-repository",
@@ -2120,7 +2120,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-google-storagebucket"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-google-storagebucket"
     },
     "package:tf-google-storagebucket": {
       "name": "package:tf-google-storagebucket",
@@ -2151,7 +2151,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-pagerduty-service"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-pagerduty-service"
     },
     "package:tf-pagerduty-service": {
       "name": "package:tf-pagerduty-service",
@@ -2182,7 +2182,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-random-string"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-random-string"
     },
     "package:tf-random-string": {
       "name": "package:tf-random-string",
@@ -2213,7 +2213,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-random-uuid"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-random-uuid"
     },
     "package:tf-random-uuid": {
       "name": "package:tf-random-uuid",
@@ -2244,7 +2244,7 @@
           "exec": "jsii"
         }
       ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/trendmicro-cloudonecontainer-helm"
+      "cwd": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/trendmicro-cloudonecontainer-helm"
     },
     "package:trendmicro-cloudonecontainer-helm": {
       "name": "package:trendmicro-cloudonecontainer-helm",

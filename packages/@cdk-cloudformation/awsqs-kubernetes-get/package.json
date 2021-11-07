@@ -10,7 +10,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation-types.git",
-    "directory": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-kubernetes-get"
+    "directory": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-kubernetes-get"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

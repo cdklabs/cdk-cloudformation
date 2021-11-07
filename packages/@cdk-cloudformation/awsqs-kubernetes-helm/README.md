@@ -1,6 +1,9 @@
 # AWS CDK Constructs for AWSQS::Kubernetes::Helm
 
-> An AWS CDK construct library with types for AWSQS::Kubernetes::Helm
+> A resource provider for managing helm.
+
+* [Documentation](https://github.com/aws-quickstart/quickstart-helm-resource-provider/blob/main/README.md)
+* [Source](https://github.com/aws-quickstart/quickstart-helm-resource-provider.git)
 
 ## License
 

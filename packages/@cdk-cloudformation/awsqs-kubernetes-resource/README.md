@@ -1,6 +1,9 @@
 # AWS CDK Constructs for AWSQS::Kubernetes::Resource
 
-> An AWS CDK construct library with types for AWSQS::Kubernetes::Resource
+> Applys a YAML manifest to the specified Kubernetes cluster
+
+* [Documentation](https://github.com/aws-quickstart/quickstart-kubernetes-resource-provider/blob/main/README.md)
+* [Source](https://github.com/aws-quickstart/quickstart-amazon-eks.git)
 
 ## License
 

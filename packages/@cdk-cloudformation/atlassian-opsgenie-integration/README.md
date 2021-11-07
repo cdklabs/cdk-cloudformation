@@ -1,6 +1,8 @@
 # AWS CDK Constructs for Atlassian::Opsgenie::Integration
 
-> An AWS CDK construct library with types for Atlassian::Opsgenie::Integration
+> Opsgenie Integration Resource definition
+
+* [Source](https://github.com/opsgenie/opsgenie-cloudformation-resources)
 
 ## License
 

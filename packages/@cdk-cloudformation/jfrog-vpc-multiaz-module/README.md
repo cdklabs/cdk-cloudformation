@@ -1,6 +1,7 @@
 # AWS CDK Constructs for JFrog::Vpc::MultiAz::MODULE
 
-> An AWS CDK construct library with types for JFrog::Vpc::MultiAz::MODULE
+> Schema for Module Fragment of type JFrog::Vpc::MultiAz::MODULE
+
 
 ## License
 

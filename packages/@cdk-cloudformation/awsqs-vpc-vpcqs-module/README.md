@@ -1,6 +1,7 @@
 # AWS CDK Constructs for AWSQS::VPC::VPCQS::MODULE
 
-> An AWS CDK construct library with types for AWSQS::VPC::VPCQS::MODULE
+> Schema for Module Fragment of type AWSQS::VPC::VPCQS::MODULE
+
 
 ## License
 

@@ -1,6 +1,8 @@
 # AWS CDK Constructs for Atlassian::Opsgenie::User
 
-> An AWS CDK construct library with types for Atlassian::Opsgenie::User
+> Opsgenie User
+
+* [Source](https://github.com/opsgenie/opsgenie-cloudformation-resources)
 
 ## License
 

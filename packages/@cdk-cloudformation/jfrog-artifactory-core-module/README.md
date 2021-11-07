@@ -1,6 +1,7 @@
 # AWS CDK Constructs for JFrog::Artifactory::Core::MODULE
 
-> An AWS CDK construct library with types for JFrog::Artifactory::Core::MODULE
+> Schema for Module Fragment of type JFrog::Artifactory::Core::MODULE
+
 
 ## License
 

@@ -1885,38 +1885,6 @@
         }
       ]
     },
-    "compile:tf-akamai-dnsrecord": {
-      "name": "compile:tf-akamai-dnsrecord",
-      "description": "compile tf-akamai-dnsrecord with JSII",
-      "steps": [
-        {
-          "exec": "jsii"
-        }
-      ],
-      "cwd": "packages/@cdk-cloudformation/tf-akamai-dnsrecord"
-    },
-    "package:tf-akamai-dnsrecord": {
-      "name": "package:tf-akamai-dnsrecord",
-      "description": "produce multi-language packaging for tf-akamai-dnsrecord",
-      "steps": [
-        {
-          "exec": "jsii-pacmak"
-        }
-      ],
-      "cwd": "packages/@cdk-cloudformation/tf-akamai-dnsrecord"
-    },
-    "build:tf-akamai-dnsrecord": {
-      "name": "build:tf-akamai-dnsrecord",
-      "description": "build tf-akamai-dnsrecord",
-      "steps": [
-        {
-          "spawn": "compile:tf-akamai-dnsrecord"
-        },
-        {
-          "spawn": "package:tf-akamai-dnsrecord"
-        }
-      ]
-    },
     "compile:tf-aws-keypair": {
       "name": "compile:tf-aws-keypair",
       "description": "compile tf-aws-keypair with JSII",

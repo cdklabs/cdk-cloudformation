@@ -1,6 +1,7 @@
 # AWS CDK Constructs for Datadog::Dashboards::Dashboard
 
-> An AWS CDK construct library with types for Datadog::Dashboards::Dashboard
+> Datadog Dashboard 2.0.2
+
 
 ## License
 

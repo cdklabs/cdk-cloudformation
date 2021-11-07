@@ -1,6 +1,7 @@
 # AWS CDK Constructs for AWSQS::EC2::LinuxBastionQS::MODULE
 
-> An AWS CDK construct library with types for AWSQS::EC2::LinuxBastionQS::MODULE
+> Schema for Module Fragment of type AWSQS::EC2::LinuxBastionQS::MODULE
+
 
 ## License
 

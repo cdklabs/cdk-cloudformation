@@ -1,6 +1,7 @@
 # AWS CDK Constructs for AWSQS::Iridium::CloudConnectQS::MODULE
 
-> An AWS CDK construct library with types for AWSQS::Iridium::CloudConnectQS::MODULE
+> Schema for Module Fragment of type AWSQS::Iridium::CloudConnectQS::MODULE
+
 
 ## License
 

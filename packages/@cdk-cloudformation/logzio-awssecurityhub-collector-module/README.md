@@ -1,6 +1,7 @@
 # AWS CDK Constructs for logzio::awsSecurityHub::collector::MODULE
 
-> An AWS CDK construct library with types for logzio::awsSecurityHub::collector::MODULE
+> Schema for Module Fragment of type logzio::awsSecurityHub::collector::MODULE
+
 
 ## License
 

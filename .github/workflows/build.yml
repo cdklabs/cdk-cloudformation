@@ -569,16 +569,6 @@ jobs:
       - run: yarn build:tf-ad-user
     container:
       image: jsii/superchain:1-buster-slim
-  tf-akamai-dnsrecord:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-    steps:
-      - uses: actions/checkout@v2
-      - run: yarn install
-      - run: yarn build:tf-akamai-dnsrecord
-    container:
-      image: jsii/superchain:1-buster-slim
   tf-aws-keypair:
     runs-on: ubuntu-latest
     permissions:

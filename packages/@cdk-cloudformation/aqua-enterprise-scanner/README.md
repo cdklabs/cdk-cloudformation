@@ -1,6 +1,8 @@
 # AWS CDK Constructs for Aqua::Enterprise::Scanner
 
-> An AWS CDK construct library with types for Aqua::Enterprise::Scanner
+> A resource provider for Aqua Enterprise Scanner.
+
+* [Source](https://github.com/aquasecurity/aqua-helm.git)
 
 ## License
 

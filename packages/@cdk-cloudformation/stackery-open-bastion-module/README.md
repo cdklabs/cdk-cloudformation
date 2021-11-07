@@ -1,6 +1,7 @@
 # AWS CDK Constructs for Stackery::Open::Bastion::MODULE
 
-> An AWS CDK construct library with types for Stackery::Open::Bastion::MODULE
+> Schema for Module Fragment of type Stackery::Open::Bastion::MODULE
+
 
 ## License
 

@@ -1,6 +1,7 @@
 # AWS CDK Constructs for Spot::Elastigroup::Group
 
-> An AWS CDK construct library with types for Spot::Elastigroup::Group
+> The Spot Elastigroup Resource allows you to create, update, manage, and delete Spot Elastigroups easily with CloudFormation
+
 
 ## License
 

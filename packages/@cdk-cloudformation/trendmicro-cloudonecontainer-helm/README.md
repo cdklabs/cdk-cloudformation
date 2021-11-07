@@ -1,6 +1,9 @@
 # AWS CDK Constructs for TrendMicro::CloudOneContainer::Helm
 
-> An AWS CDK construct library with types for TrendMicro::CloudOneContainer::Helm
+> Deploys Trend Micro Cloud One Container Security into EKS clusters using helm.
+
+* [Documentation](https://github.com/trendmicro/cloudone-container-security-helm/blob/master/README.md)
+* [Source](https://github.com/aws-quickstart/quickstart-trend-micro-cloudone-helm-resource-provider.git)
 
 ## License
 

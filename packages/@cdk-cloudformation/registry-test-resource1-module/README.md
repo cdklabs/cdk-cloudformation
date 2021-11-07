@@ -1,6 +1,7 @@
 # AWS CDK Constructs for REGISTRY::TEST::RESOURCE1::MODULE
 
-> An AWS CDK construct library with types for REGISTRY::TEST::RESOURCE1::MODULE
+> Schema for Module Fragment of type REGISTRY::TEST::RESOURCE::MODULE
+
 
 ## License
 

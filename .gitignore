@@ -151,8 +151,6 @@ tsconfig.json
 /packages/@cdk-cloudformation/tf-ad-computer/lib/
 /packages/@cdk-cloudformation/tf-ad-user/dist/
 /packages/@cdk-cloudformation/tf-ad-user/lib/
-/packages/@cdk-cloudformation/tf-akamai-dnsrecord/dist/
-/packages/@cdk-cloudformation/tf-akamai-dnsrecord/lib/
 /packages/@cdk-cloudformation/tf-aws-keypair/dist/
 /packages/@cdk-cloudformation/tf-aws-keypair/lib/
 /packages/@cdk-cloudformation/tf-aws-s3bucket/dist/

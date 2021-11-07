@@ -1,6 +1,7 @@
 # AWS CDK Constructs for Logzio::MyService::MyName::MODULE
 
-> An AWS CDK construct library with types for Logzio::MyService::MyName::MODULE
+> Schema for Module Fragment of type Logzio::MyService::MyName::MODULE
+
 
 ## License
 

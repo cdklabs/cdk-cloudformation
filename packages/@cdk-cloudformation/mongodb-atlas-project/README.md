@@ -1,6 +1,7 @@
 # AWS CDK Constructs for MongoDB::Atlas::Project
 
-> An AWS CDK construct library with types for MongoDB::Atlas::Project
+> Retrieves or creates projects in any given Atlas organization.
+
 
 ## License
 

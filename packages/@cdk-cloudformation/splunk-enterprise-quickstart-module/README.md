@@ -1,6 +1,7 @@
 # AWS CDK Constructs for Splunk::Enterprise::QuickStart::MODULE
 
-> An AWS CDK construct library with types for Splunk::Enterprise::QuickStart::MODULE
+> Schema for Module Fragment of type Splunk::Enterprise::QuickStart::MODULE
+
 
 ## License
 

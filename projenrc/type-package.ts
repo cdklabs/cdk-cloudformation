@@ -15,8 +15,21 @@ const CONSTRUCTS_VERSION = require('constructs/package.json').version;
  * Options for `TypePackage`.
  */
 export interface TypePackageOptions {
+  /**
+   * Root directory of all generated packages.
+   */
   readonly packagesDir: string;
+
+  /**
+   * CloudFormation type information.
+   */
   readonly type: CloudFormation.DescribeTypeOutput;
+
+  /**
+   * Should this type be included in the build & release
+   * @default true
+   */
+  readonly release?: boolean;
 }
 
 /**
@@ -54,11 +67,16 @@ export class CloudFormationTypeProject extends Component {
 
     new License(project, { spdx });
 
+    const description = options.type.Description ?? `Constructs for ${typeName}`;
+
     new TextFile(project, 'README.md', {
       lines: [
         `# AWS CDK Constructs for ${typeName}`,
         '',
-        `> An AWS CDK construct library with types for ${typeName}`,
+        `> ${description}`,
+        '',
+        ...(options.type.DocumentationUrl ? [`* [Documentation](${options.type.DocumentationUrl})`] : []),
+        ...(options.type.SourceUrl ? [`* [Source](${options.type.SourceUrl})`] : []),
         '',
         '## License',
         '',
@@ -74,7 +92,7 @@ export class CloudFormationTypeProject extends Component {
     new JsonFile(project, 'package.json', {
       obj: {
         name: `${npmScope}/${typeNameKebab}`,
-        description: options.type.Description ?? `Constructs for ${typeName}`,
+        description: description,
         version: options.type.LatestPublicVersion ?? '0.0.0',
         author: {
           name: 'Amazon Web Services',
@@ -148,25 +166,28 @@ export class CloudFormationTypeProject extends Component {
     buildTask.spawn(compileTask);
     buildTask.spawn(packageTask);
 
-    parent.buildWorkflow?.addJobs({
-      [typeNameKebab]: {
-        runsOn: 'ubuntu-latest',
-        container: {
-          image: 'jsii/superchain:1-buster-slim',
-        },
-        permissions: {
-          contents: JobPermission.READ,
-        },
-        steps: [
-          { uses: 'actions/checkout@v2' },
-          { run: 'yarn install' },
-          { run: `yarn ${buildTask.name}` },
-        ],
-      },
-    });
-
     parent.gitignore.addPatterns(`/${outdir}/dist/`);
     parent.gitignore.addPatterns(`/${outdir}/lib/`);
+
+    const release = options.release ?? true;
+    if (release) {
+      parent.buildWorkflow?.addJobs({
+        [typeNameKebab]: {
+          runsOn: 'ubuntu-latest',
+          container: {
+            image: 'jsii/superchain:1-buster-slim',
+          },
+          permissions: {
+            contents: JobPermission.READ,
+          },
+          steps: [
+            { uses: 'actions/checkout@v2' },
+            { run: 'yarn install' },
+            { run: `yarn ${buildTask.name}` },
+          ],
+        },
+      });
+    }
 
     this.subproject = project;
   }
@@ -185,7 +206,6 @@ export class CloudFormationTypeProject extends Component {
     if (!typeName) {
       throw new Error(`Type has no name: ${JSON.stringify(typeInfo)}`);
     }
-
 
     console.error(relative(process.cwd(), outdir));
     const originalWarn = console.warn;

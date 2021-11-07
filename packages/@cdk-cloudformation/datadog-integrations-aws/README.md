@@ -1,6 +1,7 @@
 # AWS CDK Constructs for Datadog::Integrations::AWS
 
-> An AWS CDK construct library with types for Datadog::Integrations::AWS
+> Datadog AWS Integration 2.1.0
+
 
 ## License
 

@@ -1,6 +1,11 @@
 # AWS CDK Constructs for TF::AzureAD::User
 
-> An AWS CDK construct library with types for TF::AzureAD::User
+> Manages a User within Azure Active Directory.
+
+-> **NOTE:** If you're authenticating using a Service Principal then it must have permissions to `Directory.ReadWrite.All` within the `Windows Azure Active Directory` API.
+
+* [Documentation](https://github.com/iann0036/cfn-tf-custom-types/blob/docs/resources/azuread/TF-AzureAD-User/docs/README.md)
+* [Source](https://github.com/iann0036/cfn-tf-custom-types.git)
 
 ## License
 

@@ -1,6 +1,7 @@
 # AWS CDK Constructs for MongoDB::Atlas::NetworkPeering
 
-> An AWS CDK construct library with types for MongoDB::Atlas::NetworkPeering
+> This resource allows to create, read, update and delete a network peering
+
 
 ## License
 

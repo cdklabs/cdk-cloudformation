@@ -1,6 +1,7 @@
 # AWS CDK Constructs for Logzio::awsCostAndUsage::cur::MODULE
 
-> An AWS CDK construct library with types for Logzio::awsCostAndUsage::cur::MODULE
+> Schema for Module Fragment of type Logzio::awsCostAndUsage::cur::MODULE
+
 
 ## License
 

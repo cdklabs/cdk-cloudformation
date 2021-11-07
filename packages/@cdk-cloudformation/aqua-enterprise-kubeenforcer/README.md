@@ -1,6 +1,8 @@
 # AWS CDK Constructs for Aqua::Enterprise::KubeEnforcer
 
-> An AWS CDK construct library with types for Aqua::Enterprise::KubeEnforcer
+> A resource provider for Aqua Enterprise KubeEnforcer.
+
+* [Source](https://github.com/aquasecurity/aqua-helm.git)
 
 ## License
 

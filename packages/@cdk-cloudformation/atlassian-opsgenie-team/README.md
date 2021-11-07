@@ -1,6 +1,8 @@
 # AWS CDK Constructs for Atlassian::Opsgenie::Team
 
-> An AWS CDK construct library with types for Atlassian::Opsgenie::Team
+> Opsgenie Team resource schema
+
+* [Source](https://github.com/opsgenie/opsgenie-cloudformation-resources)
 
 ## License
 

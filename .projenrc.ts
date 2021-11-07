@@ -28,6 +28,9 @@ project.package.addField('workspaces', {
 project.addExcludeFromCleanup('packages/**');
 
 generatePackages(project, {
+  excludeTypes: [
+    'TF::Akamai::DnsRecord', // https://github.com/cdklabs/cdk-cloudformation-types/runs/4131637186
+  ],
   dir: packagesDir,
   scope: scope,
 });

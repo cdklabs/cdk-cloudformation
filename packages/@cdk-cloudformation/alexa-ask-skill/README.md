@@ -1,6 +1,7 @@
 # AWS CDK Constructs for Alexa::ASK::Skill
 
-> An AWS CDK construct library with types for Alexa::ASK::Skill
+> Constructs for Alexa::ASK::Skill
+
 
 ## License
 

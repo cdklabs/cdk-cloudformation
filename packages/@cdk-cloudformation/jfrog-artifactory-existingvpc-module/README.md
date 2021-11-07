@@ -1,6 +1,7 @@
 # AWS CDK Constructs for JFrog::Artifactory::ExistingVpc::MODULE
 
-> An AWS CDK construct library with types for JFrog::Artifactory::ExistingVpc::MODULE
+> Schema for Module Fragment of type JFrog::Artifactory::ExistingVpc::MODULE
+
 
 ## License
 

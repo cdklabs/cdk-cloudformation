@@ -1,6 +1,8 @@
 # AWS CDK Constructs for Aqua::Enterprise::Server
 
-> An AWS CDK construct library with types for Aqua::Enterprise::Server
+> A resource provider for Aqua Enterprise Server.
+
+* [Source](https://github.com/aquasecurity/aqua-helm.git)
 
 ## License
 

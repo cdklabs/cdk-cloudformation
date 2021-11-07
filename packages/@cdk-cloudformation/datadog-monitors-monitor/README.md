@@ -1,6 +1,7 @@
 # AWS CDK Constructs for Datadog::Monitors::Monitor
 
-> An AWS CDK construct library with types for Datadog::Monitors::Monitor
+> Datadog Monitor 4.0.0
+
 
 ## License
 

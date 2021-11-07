@@ -1,6 +1,7 @@
 # AWS CDK Constructs for Datadog::SLOs::SLO
 
-> An AWS CDK construct library with types for Datadog::SLOs::SLO
+> Datadog SLO 1.0.0
+
 
 ## License
 

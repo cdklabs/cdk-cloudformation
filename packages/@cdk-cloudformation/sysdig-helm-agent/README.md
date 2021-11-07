@@ -1,6 +1,8 @@
 # AWS CDK Constructs for Sysdig::Helm::Agent
 
-> An AWS CDK construct library with types for Sysdig::Helm::Agent
+> Sysdig Agent EKS cluster deployment.
+
+* [Source](https://github.com/sysdiglabs/cloudformation-resource-providers.git)
 
 ## License
 

@@ -1,6 +1,7 @@
 # AWS CDK Constructs for JFrog::Artifactory::EC2Instance::MODULE
 
-> An AWS CDK construct library with types for JFrog::Artifactory::EC2Instance::MODULE
+> Schema for Module Fragment of type JFrog::Artifactory::EC2Instance::MODULE
+
 
 ## License
 

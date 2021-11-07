@@ -1,6 +1,7 @@
 # AWS CDK Constructs for Symphonia::OpenSource::CloudFormationArtifactsBucket::MODULE
 
-> An AWS CDK construct library with types for Symphonia::OpenSource::CloudFormationArtifactsBucket::MODULE
+> Schema for Module Fragment of type Symphonia::OpenSource::CloudFormationArtifactsBucket::MODULE
+
 
 ## License
 

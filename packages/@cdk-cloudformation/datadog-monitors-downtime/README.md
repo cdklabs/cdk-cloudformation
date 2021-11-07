@@ -1,6 +1,7 @@
 # AWS CDK Constructs for Datadog::Monitors::Downtime
 
-> An AWS CDK construct library with types for Datadog::Monitors::Downtime
+> Datadog Monitors Downtime 3.0.0
+
 
 ## License
 

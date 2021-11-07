@@ -2,6 +2,9 @@
 
 name: tf-ad-user
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch: {}
 jobs:
   build:

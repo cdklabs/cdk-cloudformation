@@ -2,6 +2,9 @@
 
 name: stocks-orders-marketorder
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch: {}
 jobs:
   build:

@@ -2,6 +2,9 @@
 
 name: trendmicro-cloudonecontainer-helm
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch: {}
 jobs:
   build:

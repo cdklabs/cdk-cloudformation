@@ -2,6 +2,9 @@
 
 name: alexa-ask-skill
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch: {}
 jobs:
   build:

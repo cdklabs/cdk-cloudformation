@@ -2,6 +2,9 @@
 
 name: tf-aws-keypair
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch: {}
 jobs:
   build:

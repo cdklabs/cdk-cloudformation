@@ -2,6 +2,9 @@
 
 name: logzio-myservice-myname-module
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch: {}
 jobs:
   build:

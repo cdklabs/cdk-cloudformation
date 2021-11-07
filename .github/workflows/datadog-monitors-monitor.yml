@@ -2,6 +2,9 @@
 
 name: datadog-monitors-monitor
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch: {}
 jobs:
   build:

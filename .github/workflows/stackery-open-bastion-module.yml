@@ -2,6 +2,9 @@
 
 name: stackery-open-bastion-module
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch: {}
 jobs:
   build:

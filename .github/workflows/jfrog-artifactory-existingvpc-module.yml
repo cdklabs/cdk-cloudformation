@@ -2,6 +2,9 @@
 
 name: jfrog-artifactory-existingvpc-module
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch: {}
 jobs:
   build:

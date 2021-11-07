@@ -2,6 +2,9 @@
 
 name: atlassian-opsgenie-team
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch: {}
 jobs:
   build:

@@ -566,109 +566,10 @@ export class CfnCluster extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "MongoDB::Atlas::Cluster";
 
   /**
-   * `MongoDB::Atlas::Cluster.ApiKeys`
-   * @link http://unknown-url
+   * Resource props.
    */
-  public readonly apiKeys: apiKeyDefinition | undefined;
-  /**
-   * `MongoDB::Atlas::Cluster.AutoScaling`
-   * @link http://unknown-url
-   */
-  public readonly autoScaling: autoScaling | undefined;
-  /**
-   * `MongoDB::Atlas::Cluster.BackupEnabled`
-   * Applicable only for M10+ clusters. Set to true to enable Atlas continuous backups for the cluster. Set to false to disable continuous backups for the cluster. Atlas deletes any stored snapshots. See the continuous backup Snapshot Schedule for more information. You cannot enable continuous backups if you have an existing cluster in the project with Cloud Provider Snapshots enabled. The default value is false.
-   * @link http://unknown-url
-   */
-  public readonly backupEnabled: any | undefined;
-  /**
-   * `MongoDB::Atlas::Cluster.BiConnector`
-   * @link http://unknown-url
-   */
-  public readonly biConnector: any | undefined;
-  /**
-   * `MongoDB::Atlas::Cluster.ClusterType`
-   * Type of the cluster that you want to create.
-   * @link http://unknown-url
-   */
-  public readonly clusterType: string | undefined;
-  /**
-   * `MongoDB::Atlas::Cluster.ConnectionStrings`
-   * Set of connection strings that your applications use to connect to this cluster. Use the parameters in this object to connect your applications to this cluster. See the MongoDB [Connection String URI Format](https://docs.mongodb.com/manual/reference/connection-string/) reference for further details.
-   * @link http://unknown-url
-   */
-  public readonly connectionStrings: connectionStrings | undefined;
-  /**
-   * `MongoDB::Atlas::Cluster.DiskSizeGB`
-   * Capacity, in gigabytes, of the hosts root volume. Increase this number to add capacity, up to a maximum possible value of 4096 (i.e., 4 TB). This value must be a positive integer.
-   * @link http://unknown-url
-   */
-  public readonly diskSizeGB: number | undefined;
-  /**
-   * `MongoDB::Atlas::Cluster.EncryptionAtRestProvider`
-   * Set the Encryption at Rest parameter.
-   * @link http://unknown-url
-   */
-  public readonly encryptionAtRestProvider: string | undefined;
-  /**
-   * `MongoDB::Atlas::Cluster.ProjectId`
-   * Unique identifier of the project the cluster belongs to.
-   * @link http://unknown-url
-   */
-  public readonly projectId: string | undefined;
-  /**
-   * `MongoDB::Atlas::Cluster.Labels`
-   * Array containing key-value pairs that tag and categorize the cluster.
-   * @link http://unknown-url
-   */
-  public readonly labels: any[] | undefined;
-  /**
-   * `MongoDB::Atlas::Cluster.MongoDBMajorVersion`
-   * Major version of the cluster to deploy.
-   * @link http://unknown-url
-   */
-  public readonly mongoDBMajorVersion: string | undefined;
-  /**
-   * `MongoDB::Atlas::Cluster.Name`
-   * Name of the cluster. Once the cluster is created, its name cannot be changed.
-   * @link http://unknown-url
-   */
-  public readonly name: string;
-  /**
-   * `MongoDB::Atlas::Cluster.NumShards`
-   * Positive integer that specifies the number of shards to deploy for a sharded cluster.
-   * @link http://unknown-url
-   */
-  public readonly numShards: number | undefined;
-  /**
-   * `MongoDB::Atlas::Cluster.PitEnabled`
-   * Flag that indicates if the cluster uses Point-in-Time backups. If set to true, providerBackupEnabled must also be set to true.
-   * @link http://unknown-url
-   */
-  public readonly pitEnabled: any | undefined;
-  /**
-   * `MongoDB::Atlas::Cluster.ProviderBackupEnabled`
-   * Applicable only for M10+ clusters. Set to true to enable Atlas Cloud Provider Snapshots backups for the cluster. Set to false to disable Cloud Provider Snapshots backups for the cluster. You cannot enable Cloud Provider Snapshots if you have an existing cluster in the project with continuous backups enabled. Note that you must set this value to true for NVMe clusters. The default value is false.
-   * @link http://unknown-url
-   */
-  public readonly providerBackupEnabled: any | undefined;
-  /**
-   * `MongoDB::Atlas::Cluster.ProviderSettings`
-   * @link http://unknown-url
-   */
-  public readonly providerSettings: any | undefined;
-  /**
-   * `MongoDB::Atlas::Cluster.ReplicationFactor`
-   * ReplicationFactor is deprecated. Use replicationSpecs.
-   * @link http://unknown-url
-   */
-  public readonly replicationFactor: number | undefined;
-  /**
-   * `MongoDB::Atlas::Cluster.ReplicationSpecs`
-   * Configuration for cluster regions.
-   * @link http://unknown-url
-   */
-  public readonly replicationSpecs: replicationSpec[] | undefined;
+  public readonly props: CfnClusterProps;
+
   /**
    * Attribute `MongoDB::Atlas::Cluster.StateName`
    * @link http://unknown-url
@@ -715,24 +616,8 @@ export class CfnCluster extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnClusterProps) {
     super(scope, id, { type: CfnCluster.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnClusterProps(props)! });
 
-    this.apiKeys = props.apiKeys;
-    this.autoScaling = props.autoScaling;
-    this.backupEnabled = props.backupEnabled;
-    this.biConnector = props.biConnector;
-    this.clusterType = props.clusterType;
-    this.connectionStrings = props.connectionStrings;
-    this.diskSizeGB = props.diskSizeGB;
-    this.encryptionAtRestProvider = props.encryptionAtRestProvider;
-    this.projectId = props.projectId;
-    this.labels = props.labels;
-    this.mongoDBMajorVersion = props.mongoDBMajorVersion;
-    this.name = props.name;
-    this.numShards = props.numShards;
-    this.pitEnabled = props.pitEnabled;
-    this.providerBackupEnabled = props.providerBackupEnabled;
-    this.providerSettings = props.providerSettings;
-    this.replicationFactor = props.replicationFactor;
-    this.replicationSpecs = props.replicationSpecs;
+    this.props = props;
+
     this.attrStateName = cdk.Token.asString(this.getAtt('StateName'));
     this.attrSrvAddress = cdk.Token.asString(this.getAtt('SrvAddress'));
     this.attrMongoDBVersion = cdk.Token.asString(this.getAtt('MongoDBVersion'));

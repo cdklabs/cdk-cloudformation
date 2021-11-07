@@ -99,10 +99,10 @@ export class CfnModule extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "Symphonia::OpenSource::CloudFormationArtifactsBucket::MODULE";
 
   /**
-   * `Symphonia::OpenSource::CloudFormationArtifactsBucket::MODULE.Resources`
-   * @link http://unknown-url
+   * Resource props.
    */
-  public readonly resources: any;
+  public readonly props: CfnModuleProps;
+
 
   /**
    * Create a new `Symphonia::OpenSource::CloudFormationArtifactsBucket::MODULE`.
@@ -114,6 +114,7 @@ export class CfnModule extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnModuleProps) {
     super(scope, id, { type: CfnModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnModuleProps(props)! });
 
-    this.resources = props.resources;
+    this.props = props;
+
   }
 }

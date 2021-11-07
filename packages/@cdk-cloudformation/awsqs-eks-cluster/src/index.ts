@@ -370,63 +370,10 @@ export class CfnCluster extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "AWSQS::EKS::Cluster";
 
   /**
-   * `AWSQS::EKS::Cluster.Name`
-   * A unique name for your cluster.
-   * @link https://github.com/aws-quickstart/quickstart-amazon-eks-cluster-resource-provider.git
+   * Resource props.
    */
-  public readonly name: string | undefined;
-  /**
-   * `AWSQS::EKS::Cluster.RoleArn`
-   * Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role. This provides permissions for Amazon EKS to call other AWS APIs.
-   * @link https://github.com/aws-quickstart/quickstart-amazon-eks-cluster-resource-provider.git
-   */
-  public readonly roleArn: string;
-  /**
-   * `AWSQS::EKS::Cluster.LambdaRoleName`
-   * Name of the AWS Identity and Access Management (IAM) role used for clusters that have the public endpoint disabled. this provides permissions for Lambda to be invoked and attach to the cluster VPC
-   * @link https://github.com/aws-quickstart/quickstart-amazon-eks-cluster-resource-provider.git
-   */
-  public readonly lambdaRoleName: string | undefined;
-  /**
-   * `AWSQS::EKS::Cluster.Version`
-   * Desired Kubernetes version for your cluster. If you don't specify this value, the cluster uses the latest version from Amazon EKS.
-   * @link https://github.com/aws-quickstart/quickstart-amazon-eks-cluster-resource-provider.git
-   */
-  public readonly version: string | undefined;
-  /**
-   * `AWSQS::EKS::Cluster.KubernetesNetworkConfig`
-   * Network configuration for Amazon EKS cluster.
-   * @link https://github.com/aws-quickstart/quickstart-amazon-eks-cluster-resource-provider.git
-   */
-  public readonly kubernetesNetworkConfig: any | undefined;
-  /**
-   * `AWSQS::EKS::Cluster.ResourcesVpcConfig`
-   * An object that represents the virtual private cloud (VPC) configuration to use for an Amazon EKS cluster.
-   * @link https://github.com/aws-quickstart/quickstart-amazon-eks-cluster-resource-provider.git
-   */
-  public readonly resourcesVpcConfig: any;
-  /**
-   * `AWSQS::EKS::Cluster.EnabledClusterLoggingTypes`
-   * Enables exporting of logs from the Kubernetes control plane to Amazon CloudWatch Logs. By default, logs from the cluster control plane are not exported to CloudWatch Logs. The valid log types are api, audit, authenticator, controllerManager, and scheduler.
-   * @link https://github.com/aws-quickstart/quickstart-amazon-eks-cluster-resource-provider.git
-   */
-  public readonly enabledClusterLoggingTypes: string[] | undefined;
-  /**
-   * `AWSQS::EKS::Cluster.EncryptionConfig`
-   * Encryption configuration for the cluster.
-   * @link https://github.com/aws-quickstart/quickstart-amazon-eks-cluster-resource-provider.git
-   */
-  public readonly encryptionConfig: EncryptionConfigEntry[] | undefined;
-  /**
-   * `AWSQS::EKS::Cluster.KubernetesApiAccess`
-   * @link https://github.com/aws-quickstart/quickstart-amazon-eks-cluster-resource-provider.git
-   */
-  public readonly kubernetesApiAccess: any | undefined;
-  /**
-   * `AWSQS::EKS::Cluster.Tags`
-   * @link https://github.com/aws-quickstart/quickstart-amazon-eks-cluster-resource-provider.git
-   */
-  public readonly tags: any[] | undefined;
+  public readonly props: CfnClusterProps;
+
   /**
    * Attribute `AWSQS::EKS::Cluster.Arn`
    * @link https://github.com/aws-quickstart/quickstart-amazon-eks-cluster-resource-provider.git
@@ -468,16 +415,8 @@ export class CfnCluster extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnClusterProps) {
     super(scope, id, { type: CfnCluster.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnClusterProps(props)! });
 
-    this.name = props.name;
-    this.roleArn = props.roleArn;
-    this.lambdaRoleName = props.lambdaRoleName;
-    this.version = props.version;
-    this.kubernetesNetworkConfig = props.kubernetesNetworkConfig;
-    this.resourcesVpcConfig = props.resourcesVpcConfig;
-    this.enabledClusterLoggingTypes = props.enabledClusterLoggingTypes;
-    this.encryptionConfig = props.encryptionConfig;
-    this.kubernetesApiAccess = props.kubernetesApiAccess;
-    this.tags = props.tags;
+    this.props = props;
+
     this.attrArn = cdk.Token.asString(this.getAtt('Arn'));
     this.attrEndpoint = cdk.Token.asString(this.getAtt('Endpoint'));
     this.attrClusterSecurityGroupId = cdk.Token.asString(this.getAtt('ClusterSecurityGroupId'));

@@ -162,71 +162,10 @@ export class CfnHelm extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "Snyk::Container::Helm";
 
   /**
-   * `Snyk::Container::Helm.ClusterID`
-   * EKS cluster name
-   * @link https://github.com/snyk/aws-cloudformation-resource-providers.git
+   * Resource props.
    */
-  public readonly clusterID: string;
-  /**
-   * `Snyk::Container::Helm.KubeConfig`
-   * Secrets Manager ARN for kubeconfig file
-   * @link https://github.com/snyk/aws-cloudformation-resource-providers.git
-   */
-  public readonly kubeConfig: Arn;
-  /**
-   * `Snyk::Container::Helm.RoleArn`
-   * IAM to use with EKS cluster authentication, if not resource execution role will be used
-   * @link https://github.com/snyk/aws-cloudformation-resource-providers.git
-   */
-  public readonly roleArn: Arn;
-  /**
-   * `Snyk::Container::Helm.Namespace`
-   * Namespace to use with helm. Created if doesn't exist and default will be used if not provided
-   * @link https://github.com/snyk/aws-cloudformation-resource-providers.git
-   */
-  public readonly namespace: string;
-  /**
-   * `Snyk::Container::Helm.Name`
-   * Name for the helm release
-   * @link https://github.com/snyk/aws-cloudformation-resource-providers.git
-   */
-  public readonly name: string;
-  /**
-   * `Snyk::Container::Helm.Values`
-   * Custom Values can optionally be specified
-   * @link https://github.com/snyk/aws-cloudformation-resource-providers.git
-   */
-  public readonly values: any;
-  /**
-   * `Snyk::Container::Helm.ValueYaml`
-   * String representation of a values.yaml file
-   * @link https://github.com/snyk/aws-cloudformation-resource-providers.git
-   */
-  public readonly valueYaml: string;
-  /**
-   * `Snyk::Container::Helm.Version`
-   * Version can be specified, if not latest will be used
-   * @link https://github.com/snyk/aws-cloudformation-resource-providers.git
-   */
-  public readonly version: string;
-  /**
-   * `Snyk::Container::Helm.ValueOverrideURL`
-   * Custom Value Yaml file can optionally be specified
-   * @link https://github.com/snyk/aws-cloudformation-resource-providers.git
-   */
-  public readonly valueOverrideURL: string;
-  /**
-   * `Snyk::Container::Helm.TimeOut`
-   * Timeout for resource provider. Default 60 mins
-   * @link https://github.com/snyk/aws-cloudformation-resource-providers.git
-   */
-  public readonly timeOut: number;
-  /**
-   * `Snyk::Container::Helm.VPCConfiguration`
-   * For network connectivity to Cluster inside VPC
-   * @link https://github.com/snyk/aws-cloudformation-resource-providers.git
-   */
-  public readonly vPCConfiguration: any;
+  public readonly props: CfnHelmProps;
+
   /**
    * Attribute `Snyk::Container::Helm.ID`
    * @link https://github.com/snyk/aws-cloudformation-resource-providers.git
@@ -243,17 +182,8 @@ export class CfnHelm extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnHelmProps) {
     super(scope, id, { type: CfnHelm.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnHelmProps(props)! });
 
-    this.clusterID = props.clusterID;
-    this.kubeConfig = props.kubeConfig;
-    this.roleArn = props.roleArn;
-    this.namespace = props.namespace;
-    this.name = props.name;
-    this.values = props.values;
-    this.valueYaml = props.valueYaml;
-    this.version = props.version;
-    this.valueOverrideURL = props.valueOverrideURL;
-    this.timeOut = props.timeOut;
-    this.vPCConfiguration = props.vPCConfiguration;
+    this.props = props;
+
     this.attrId = cdk.Token.asString(this.getAtt('ID'));
   }
 }

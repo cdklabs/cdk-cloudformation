@@ -753,132 +753,10 @@ export class CfnApplication extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "TF::AzureAD::Application";
 
   /**
-   * `TF::AzureAD::Application.AppRole`
-   * A collection of `app_role` blocks as documented below. For more information see [official documentation on Application Roles](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles).
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
+   * Resource props.
    */
-  public readonly appRole: AppRoleDefinition[] | undefined;
-  /**
-   * `TF::AzureAD::Application.AvailableToOtherTenants`
-   * Is this Azure AD Application available to other tenants? Defaults to `false`. This property is deprecated and has been replaced by the `sign_in_audience` property.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly availableToOtherTenants: any | undefined;
-  /**
-   * `TF::AzureAD::Application.DisplayName`
-   * The display name for the application.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly displayName: string | undefined;
-  /**
-   * `TF::AzureAD::Application.FallbackPublicClientEnabled`
-   * The fallback application type as public client, such as an installed application running on a mobile device. Defaults to `false`.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly fallbackPublicClientEnabled: any | undefined;
-  /**
-   * `TF::AzureAD::Application.GroupMembershipClaims`
-   * Configures the `groups` claim issued in a user or OAuth 2.0 access token that the app expects. Defaults to `SecurityGroup`. Possible values are `None`, `SecurityGroup`, `DirectoryRole`, `ApplicationGroup` or `All`.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly groupMembershipClaims: string | undefined;
-  /**
-   * `TF::AzureAD::Application.Homepage`
-   * The URL to the application's home page. This property is deprecated and has been replaced by the `homepage_url` property in the `web` block.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly homepage: string | undefined;
-  /**
-   * `TF::AzureAD::Application.IdentifierUris`
-   * The user-defined URI(s) that uniquely identify an application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly identifierUris: string[] | undefined;
-  /**
-   * `TF::AzureAD::Application.LogoutUrl`
-   * The URL of the logout page. This property is deprecated and has been replaced by the `logout_url` property in the `web` block.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly logoutUrl: string | undefined;
-  /**
-   * `TF::AzureAD::Application.Name`
-   * The name of the optional claim.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly name: string | undefined;
-  /**
-   * `TF::AzureAD::Application.Oauth2AllowImplicitFlow`
-   * Does this Azure AD Application allow OAuth 2.0 implicit flow tokens? Defaults to `false`. This property is deprecated and has been replaced by the `access_token_issuance_enabled` property in the `implicit_grant` block.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly oauth2AllowImplicitFlow: any | undefined;
-  /**
-   * `TF::AzureAD::Application.Oauth2Permissions`
-   * A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by `oauth2_permissions` blocks as documented below. This block is deprecated and has been replaced by the `oauth2_permission_scope` block in the `api` block.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly oauth2Permissions: Oauth2PermissionsDefinition[] | undefined;
-  /**
-   * `TF::AzureAD::Application.Owners`
-   * A list of object IDs of principals that will be granted ownership of the application. It's recommended to specify the object ID of the authenticated principal running Terraform, to ensure sufficient permissions that the application can be subsequently updated.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly owners: string[] | undefined;
-  /**
-   * `TF::AzureAD::Application.PreventDuplicateNames`
-   * If `true`, will return an error when an existing Application is found with the same name. Defaults to `false`.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly preventDuplicateNames: any | undefined;
-  /**
-   * `TF::AzureAD::Application.PublicClient`
-   * Is this Azure AD Application a public client? Defaults to `false`. This property is deprecated and has been replaced by the `fallback_public_client_enabled` property.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly publicClient: any | undefined;
-  /**
-   * `TF::AzureAD::Application.ReplyUrls`
-   * A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to. This property is deprecated and has been replaced by the `redirect_uris` property in the `web` block.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly replyUrls: string[] | undefined;
-  /**
-   * `TF::AzureAD::Application.SignInAudience`
-   * The Microsoft account types that are supported for the current application. Must be one of `AzureADMyOrg` or `AzureADMultipleOrgs`. Defaults to `AzureADMyOrg`.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly signInAudience: string | undefined;
-  /**
-   * `TF::AzureAD::Application.Type`
-   * The type of the application: `webapp/api` or `native`. Defaults to `webapp/api`. For `native` apps type `identifier_uris` property can not be set. **This legacy property is deprecated and will be removed in version 2.0 of the provider**.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly type: string | undefined;
-  /**
-   * `TF::AzureAD::Application.Api`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly api: ApiDefinition[] | undefined;
-  /**
-   * `TF::AzureAD::Application.OptionalClaims`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly optionalClaims: OptionalClaimsDefinition[] | undefined;
-  /**
-   * `TF::AzureAD::Application.RequiredResourceAccess`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly requiredResourceAccess: RequiredResourceAccessDefinition[] | undefined;
-  /**
-   * `TF::AzureAD::Application.Timeouts`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly timeouts: TimeoutsDefinition | undefined;
-  /**
-   * `TF::AzureAD::Application.Web`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly web: WebDefinition[] | undefined;
+  public readonly props: CfnApplicationProps;
+
   /**
    * Attribute `TF::AzureAD::Application.tfcfnid`
    * @link https://github.com/iann0036/cfn-tf-custom-types.git
@@ -910,28 +788,8 @@ export class CfnApplication extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnApplicationProps) {
     super(scope, id, { type: CfnApplication.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnApplicationProps(props)! });
 
-    this.appRole = props.appRole;
-    this.availableToOtherTenants = props.availableToOtherTenants;
-    this.displayName = props.displayName;
-    this.fallbackPublicClientEnabled = props.fallbackPublicClientEnabled;
-    this.groupMembershipClaims = props.groupMembershipClaims;
-    this.homepage = props.homepage;
-    this.identifierUris = props.identifierUris;
-    this.logoutUrl = props.logoutUrl;
-    this.name = props.name;
-    this.oauth2AllowImplicitFlow = props.oauth2AllowImplicitFlow;
-    this.oauth2Permissions = props.oauth2Permissions;
-    this.owners = props.owners;
-    this.preventDuplicateNames = props.preventDuplicateNames;
-    this.publicClient = props.publicClient;
-    this.replyUrls = props.replyUrls;
-    this.signInAudience = props.signInAudience;
-    this.type = props.type;
-    this.api = props.api;
-    this.optionalClaims = props.optionalClaims;
-    this.requiredResourceAccess = props.requiredResourceAccess;
-    this.timeouts = props.timeouts;
-    this.web = props.web;
+    this.props = props;
+
     this.attrTfcfnid = cdk.Token.asString(this.getAtt('tfcfnid'));
     this.attrApplicationId = cdk.Token.asString(this.getAtt('ApplicationId'));
     this.attrId = cdk.Token.asString(this.getAtt('Id'));

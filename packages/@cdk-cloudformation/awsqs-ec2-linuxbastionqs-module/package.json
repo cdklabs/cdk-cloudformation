@@ -39,11 +39,11 @@
     }
   },
   "peerDependencies": {
-    "@aws-cdk/core": "^1.128.0",
+    "@aws-cdk/core": "^1.131.0",
     "constructs": "^3.3.161"
   },
   "devDependencies": {
-    "@aws-cdk/core": "1.128.0",
+    "@aws-cdk/core": "1.131.0",
     "constructs": "3.3.161"
   },
   "license": "Apache-2.0",

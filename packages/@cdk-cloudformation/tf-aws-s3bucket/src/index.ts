@@ -1150,126 +1150,10 @@ export class CfnS3bucket extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "TF::AWS::S3Bucket";
 
   /**
-   * `TF::AWS::S3Bucket.AccelerationStatus`
-   * Sets the accelerate configuration of an existing bucket. Can be `Enabled` or `Suspended`.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
+   * Resource props.
    */
-  public readonly accelerationStatus: string | undefined;
-  /**
-   * `TF::AWS::S3Bucket.Acl`
-   * The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, and `log-delivery-write`. Defaults to `private`.  Conflicts with `grant`.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly acl: string | undefined;
-  /**
-   * `TF::AWS::S3Bucket.Arn`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly arn: string | undefined;
-  /**
-   * `TF::AWS::S3Bucket.Bucket`
-   * The name of the bucket. If omitted, Terraform will assign a random, unique name. Must be less than or equal to 63 characters in length.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly bucket: string | undefined;
-  /**
-   * `TF::AWS::S3Bucket.BucketPrefix`
-   * Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be less than or equal to 37 characters in length.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly bucketPrefix: string | undefined;
-  /**
-   * `TF::AWS::S3Bucket.ForceDestroy`
-   * A boolean that indicates all objects (including any [locked objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html)) should be deleted from the bucket so that the bucket can be destroyed without error. These objects are *not* recoverable.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly forceDestroy: any | undefined;
-  /**
-   * `TF::AWS::S3Bucket.HostedZoneId`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly hostedZoneId: string | undefined;
-  /**
-   * `TF::AWS::S3Bucket.Policy`
-   * A valid [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html) JSON document. Note that if the policy document is not specific enough (but still valid), Terraform may view the policy as constantly changing in a `terraform plan`. In this case, please make sure you use the verbose/specific version of the policy. For more information about building AWS IAM policy documents with Terraform, see the [AWS IAM Policy Document Guide](https://learn.hashicorp.com/terraform/aws/iam-policy).
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly policy: string | undefined;
-  /**
-   * `TF::AWS::S3Bucket.RequestPayer`
-   * Specifies who should bear the cost of Amazon S3 data transfer.
-Can be either `BucketOwner` or `Requester`. By default, the owner of the S3 bucket would incur
-the costs of any data transfer. See [Requester Pays Buckets](http://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html)
-developer guide for more information.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly requestPayer: string | undefined;
-  /**
-   * `TF::AWS::S3Bucket.Tags`
-   * A map of tags to assign to the bucket. If configured with a provider [`default_tags` configuration block](/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly tags: TagsDefinition[] | undefined;
-  /**
-   * `TF::AWS::S3Bucket.TagsAll`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly tagsAll: TagsAllDefinition[] | undefined;
-  /**
-   * `TF::AWS::S3Bucket.WebsiteDomain`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly websiteDomain: string | undefined;
-  /**
-   * `TF::AWS::S3Bucket.WebsiteEndpoint`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly websiteEndpoint: string | undefined;
-  /**
-   * `TF::AWS::S3Bucket.CorsRule`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly corsRule: CorsRuleDefinition[] | undefined;
-  /**
-   * `TF::AWS::S3Bucket.Grant`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly grant: GrantDefinition[] | undefined;
-  /**
-   * `TF::AWS::S3Bucket.LifecycleRule`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly lifecycleRule: LifecycleRuleDefinition[] | undefined;
-  /**
-   * `TF::AWS::S3Bucket.Logging`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly logging: LoggingDefinition[] | undefined;
-  /**
-   * `TF::AWS::S3Bucket.ObjectLockConfiguration`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly objectLockConfiguration: ObjectLockConfigurationDefinition[] | undefined;
-  /**
-   * `TF::AWS::S3Bucket.ReplicationConfiguration`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly replicationConfiguration: ReplicationConfigurationDefinition[] | undefined;
-  /**
-   * `TF::AWS::S3Bucket.ServerSideEncryptionConfiguration`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly serverSideEncryptionConfiguration: ServerSideEncryptionConfigurationDefinition[] | undefined;
-  /**
-   * `TF::AWS::S3Bucket.Versioning`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly versioning: VersioningDefinition[] | undefined;
-  /**
-   * `TF::AWS::S3Bucket.Website`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly website: WebsiteDefinition[] | undefined;
+  public readonly props: CfnS3bucketProps;
+
   /**
    * Attribute `TF::AWS::S3Bucket.tfcfnid`
    * @link https://github.com/iann0036/cfn-tf-custom-types.git
@@ -1306,28 +1190,8 @@ developer guide for more information.
   constructor(scope: cdk.Construct, id: string, props: CfnS3bucketProps) {
     super(scope, id, { type: CfnS3bucket.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnS3bucketProps(props)! });
 
-    this.accelerationStatus = props.accelerationStatus;
-    this.acl = props.acl;
-    this.arn = props.arn;
-    this.bucket = props.bucket;
-    this.bucketPrefix = props.bucketPrefix;
-    this.forceDestroy = props.forceDestroy;
-    this.hostedZoneId = props.hostedZoneId;
-    this.policy = props.policy;
-    this.requestPayer = props.requestPayer;
-    this.tags = props.tags;
-    this.tagsAll = props.tagsAll;
-    this.websiteDomain = props.websiteDomain;
-    this.websiteEndpoint = props.websiteEndpoint;
-    this.corsRule = props.corsRule;
-    this.grant = props.grant;
-    this.lifecycleRule = props.lifecycleRule;
-    this.logging = props.logging;
-    this.objectLockConfiguration = props.objectLockConfiguration;
-    this.replicationConfiguration = props.replicationConfiguration;
-    this.serverSideEncryptionConfiguration = props.serverSideEncryptionConfiguration;
-    this.versioning = props.versioning;
-    this.website = props.website;
+    this.props = props;
+
     this.attrTfcfnid = cdk.Token.asString(this.getAtt('tfcfnid'));
     this.attrBucketDomainName = cdk.Token.asString(this.getAtt('BucketDomainName'));
     this.attrBucketRegionalDomainName = cdk.Token.asString(this.getAtt('BucketRegionalDomainName'));

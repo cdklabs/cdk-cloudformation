@@ -170,77 +170,10 @@ export class CfnHelm extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "TrendMicro::CloudOneContainer::Helm";
 
   /**
-   * `TrendMicro::CloudOneContainer::Helm.ClusterID`
-   * EKS cluster name
-   * @link https://github.com/aws-quickstart/quickstart-trend-micro-cloudone-helm-resource-provider.git
+   * Resource props.
    */
-  public readonly clusterID: string;
-  /**
-   * `TrendMicro::CloudOneContainer::Helm.KubeConfig`
-   * Secrets Manager ARN for kubeconfig file
-   * @link https://github.com/aws-quickstart/quickstart-trend-micro-cloudone-helm-resource-provider.git
-   */
-  public readonly kubeConfig: Arn;
-  /**
-   * `TrendMicro::CloudOneContainer::Helm.RoleArn`
-   * IAM to use with EKS cluster authentication, if not resource execution role will be used
-   * @link https://github.com/aws-quickstart/quickstart-trend-micro-cloudone-helm-resource-provider.git
-   */
-  public readonly roleArn: Arn;
-  /**
-   * `TrendMicro::CloudOneContainer::Helm.Chart`
-   * Chart name
-   * @link https://github.com/aws-quickstart/quickstart-trend-micro-cloudone-helm-resource-provider.git
-   */
-  public readonly chart: string;
-  /**
-   * `TrendMicro::CloudOneContainer::Helm.Namespace`
-   * Namespace to use with helm. Created if doesn't exist and default will be used if not provided
-   * @link https://github.com/aws-quickstart/quickstart-trend-micro-cloudone-helm-resource-provider.git
-   */
-  public readonly namespace: string;
-  /**
-   * `TrendMicro::CloudOneContainer::Helm.Name`
-   * Name for the helm release
-   * @link https://github.com/aws-quickstart/quickstart-trend-micro-cloudone-helm-resource-provider.git
-   */
-  public readonly name: string;
-  /**
-   * `TrendMicro::CloudOneContainer::Helm.Values`
-   * Values to provide to the helm chart, note that an API key is required. For supported values and documentation see: https://github.com/trendmicro/cloudone-container-security-helm/blob/master/values.yaml
-   * @link https://github.com/aws-quickstart/quickstart-trend-micro-cloudone-helm-resource-provider.git
-   */
-  public readonly values: any;
-  /**
-   * `TrendMicro::CloudOneContainer::Helm.ValueYaml`
-   * String representation of a values.yaml file
-   * @link https://github.com/aws-quickstart/quickstart-trend-micro-cloudone-helm-resource-provider.git
-   */
-  public readonly valueYaml: string;
-  /**
-   * `TrendMicro::CloudOneContainer::Helm.Version`
-   * Version can be specified, if not latest will be used
-   * @link https://github.com/aws-quickstart/quickstart-trend-micro-cloudone-helm-resource-provider.git
-   */
-  public readonly version: string;
-  /**
-   * `TrendMicro::CloudOneContainer::Helm.ValueOverrideURL`
-   * Custom Value Yaml file can optionally be specified
-   * @link https://github.com/aws-quickstart/quickstart-trend-micro-cloudone-helm-resource-provider.git
-   */
-  public readonly valueOverrideURL: string;
-  /**
-   * `TrendMicro::CloudOneContainer::Helm.TimeOut`
-   * Timeout for resource provider. Default 60 mins
-   * @link https://github.com/aws-quickstart/quickstart-trend-micro-cloudone-helm-resource-provider.git
-   */
-  public readonly timeOut: number;
-  /**
-   * `TrendMicro::CloudOneContainer::Helm.VPCConfiguration`
-   * For network connectivity to Cluster inside VPC
-   * @link https://github.com/aws-quickstart/quickstart-trend-micro-cloudone-helm-resource-provider.git
-   */
-  public readonly vPCConfiguration: any;
+  public readonly props: CfnHelmProps;
+
   /**
    * Attribute `TrendMicro::CloudOneContainer::Helm.ID`
    * @link https://github.com/aws-quickstart/quickstart-trend-micro-cloudone-helm-resource-provider.git
@@ -257,18 +190,8 @@ export class CfnHelm extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnHelmProps) {
     super(scope, id, { type: CfnHelm.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnHelmProps(props)! });
 
-    this.clusterID = props.clusterID;
-    this.kubeConfig = props.kubeConfig;
-    this.roleArn = props.roleArn;
-    this.chart = props.chart;
-    this.namespace = props.namespace;
-    this.name = props.name;
-    this.values = props.values;
-    this.valueYaml = props.valueYaml;
-    this.version = props.version;
-    this.valueOverrideURL = props.valueOverrideURL;
-    this.timeOut = props.timeOut;
-    this.vPCConfiguration = props.vPCConfiguration;
+    this.props = props;
+
     this.attrId = cdk.Token.asString(this.getAtt('ID'));
   }
 }

@@ -563,15 +563,10 @@ export class CfnModule extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "logzio::autoDeploymentLogzio::CloudWatch::MODULE";
 
   /**
-   * `logzio::autoDeploymentLogzio::CloudWatch::MODULE.Parameters`
-   * @link http://unknown-url
+   * Resource props.
    */
-  public readonly parameters: any;
-  /**
-   * `logzio::autoDeploymentLogzio::CloudWatch::MODULE.Resources`
-   * @link http://unknown-url
-   */
-  public readonly resources: any;
+  public readonly props: CfnModuleProps;
+
 
   /**
    * Create a new `logzio::autoDeploymentLogzio::CloudWatch::MODULE`.
@@ -583,7 +578,7 @@ export class CfnModule extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnModuleProps) {
     super(scope, id, { type: CfnModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnModuleProps(props)! });
 
-    this.parameters = props.parameters;
-    this.resources = props.resources;
+    this.props = props;
+
   }
 }

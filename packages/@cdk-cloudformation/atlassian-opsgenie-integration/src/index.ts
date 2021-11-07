@@ -170,74 +170,10 @@ export class CfnIntegration extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "Atlassian::Opsgenie::Integration";
 
   /**
-   * `Atlassian::Opsgenie::Integration.OpsgenieApiEndpoint`
-   * @link https://github.com/opsgenie/opsgenie-cloudformation-resources
+   * Resource props.
    */
-  public readonly opsgenieApiEndpoint: string;
-  /**
-   * `Atlassian::Opsgenie::Integration.OpsgenieApiKey`
-   * @link https://github.com/opsgenie/opsgenie-cloudformation-resources
-   */
-  public readonly opsgenieApiKey: string;
-  /**
-   * `Atlassian::Opsgenie::Integration.Enabled`
-   * Integration status, default is true
-   * @link https://github.com/opsgenie/opsgenie-cloudformation-resources
-   */
-  public readonly enabled: any;
-  /**
-   * `Atlassian::Opsgenie::Integration.Name`
-   * Integration name
-   * @link https://github.com/opsgenie/opsgenie-cloudformation-resources
-   */
-  public readonly name: string;
-  /**
-   * `Atlassian::Opsgenie::Integration.IntegrationType`
-   * Integration types, only api integration types supported
-   * @link https://github.com/opsgenie/opsgenie-cloudformation-resources
-   */
-  public readonly integrationType: string;
-  /**
-   * `Atlassian::Opsgenie::Integration.OwnerTeamId`
-   * Id of the integration owner team.
-   * @link https://github.com/opsgenie/opsgenie-cloudformation-resources
-   */
-  public readonly ownerTeamId: string | undefined;
-  /**
-   * `Atlassian::Opsgenie::Integration.OwnerTeamName`
-   * Name of the integration owner team.
-   * @link https://github.com/opsgenie/opsgenie-cloudformation-resources
-   */
-  public readonly ownerTeamName: string | undefined;
-  /**
-   * `Atlassian::Opsgenie::Integration.AllowReadAccess`
-   * This parameter is for configuring the read access of integration
-   * @link https://github.com/opsgenie/opsgenie-cloudformation-resources
-   */
-  public readonly allowReadAccess: any | undefined;
-  /**
-   * `Atlassian::Opsgenie::Integration.AllowWriteAccess`
-   * This parameter is for configuring the write access of integration.
-   * @link https://github.com/opsgenie/opsgenie-cloudformation-resources
-   */
-  public readonly allowWriteAccess: any | undefined;
-  /**
-   * `Atlassian::Opsgenie::Integration.AllowDeleteAccess`
-   * This parameter is for configuring the delete access of integration.
-   * @link https://github.com/opsgenie/opsgenie-cloudformation-resources
-   */
-  public readonly allowDeleteAccess: any | undefined;
-  /**
-   * `Atlassian::Opsgenie::Integration.AllowConfigurationAccess`
-   * This parameter is for allowing or restricting the configuration access.
-   * @link https://github.com/opsgenie/opsgenie-cloudformation-resources
-   */
-  public readonly allowConfigurationAccess: any | undefined;
-  /**
-   * `Atlassian::Opsgenie::Integration.Responders`
-   * @link https://github.com/opsgenie/opsgenie-cloudformation-resources
-   */
-  public readonly responders: respondersProperty[] | undefined;
+  public readonly props: CfnIntegrationProps;
+
   /**
    * Attribute `Atlassian::Opsgenie::Integration.IntegrationId`
    * @link https://github.com/opsgenie/opsgenie-cloudformation-resources
@@ -259,18 +195,8 @@ export class CfnIntegration extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnIntegrationProps) {
     super(scope, id, { type: CfnIntegration.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnIntegrationProps(props)! });
 
-    this.opsgenieApiEndpoint = props.opsgenieApiEndpoint;
-    this.opsgenieApiKey = props.opsgenieApiKey;
-    this.enabled = props.enabled;
-    this.name = props.name;
-    this.integrationType = props.integrationType;
-    this.ownerTeamId = props.ownerTeamId;
-    this.ownerTeamName = props.ownerTeamName;
-    this.allowReadAccess = props.allowReadAccess;
-    this.allowWriteAccess = props.allowWriteAccess;
-    this.allowDeleteAccess = props.allowDeleteAccess;
-    this.allowConfigurationAccess = props.allowConfigurationAccess;
-    this.responders = props.responders;
+    this.props = props;
+
     this.attrIntegrationId = cdk.Token.asString(this.getAtt('IntegrationId'));
     this.attrIntegrationApiKey = cdk.Token.asString(this.getAtt('IntegrationApiKey'));
   }

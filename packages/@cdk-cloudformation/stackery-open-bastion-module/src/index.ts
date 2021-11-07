@@ -506,15 +506,10 @@ export class CfnModule extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "Stackery::Open::Bastion::MODULE";
 
   /**
-   * `Stackery::Open::Bastion::MODULE.Parameters`
-   * @link http://unknown-url
+   * Resource props.
    */
-  public readonly parameters: any;
-  /**
-   * `Stackery::Open::Bastion::MODULE.Resources`
-   * @link http://unknown-url
-   */
-  public readonly resources: any;
+  public readonly props: CfnModuleProps;
+
 
   /**
    * Create a new `Stackery::Open::Bastion::MODULE`.
@@ -526,7 +521,7 @@ export class CfnModule extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnModuleProps) {
     super(scope, id, { type: CfnModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnModuleProps(props)! });
 
-    this.parameters = props.parameters;
-    this.resources = props.resources;
+    this.props = props;
+
   }
 }

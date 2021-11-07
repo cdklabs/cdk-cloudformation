@@ -145,34 +145,10 @@ export class CfnKeypair extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "TF::AWS::KeyPair";
 
   /**
-   * `TF::AWS::KeyPair.KeyName`
-   * The name for the key pair.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
+   * Resource props.
    */
-  public readonly keyName: string | undefined;
-  /**
-   * `TF::AWS::KeyPair.KeyNamePrefix`
-   * Creates a unique name beginning with the specified prefix. Conflicts with `key_name`.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly keyNamePrefix: string | undefined;
-  /**
-   * `TF::AWS::KeyPair.PublicKey`
-   * The public key material.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly publicKey: string;
-  /**
-   * `TF::AWS::KeyPair.Tags`
-   * Key-value map of resource tags. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly tags: TagsDefinition[] | undefined;
-  /**
-   * `TF::AWS::KeyPair.TagsAll`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly tagsAll: TagsAllDefinition[] | undefined;
+  public readonly props: CfnKeypairProps;
+
   /**
    * Attribute `TF::AWS::KeyPair.tfcfnid`
    * @link https://github.com/iann0036/cfn-tf-custom-types.git
@@ -209,11 +185,8 @@ export class CfnKeypair extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnKeypairProps) {
     super(scope, id, { type: CfnKeypair.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnKeypairProps(props)! });
 
-    this.keyName = props.keyName;
-    this.keyNamePrefix = props.keyNamePrefix;
-    this.publicKey = props.publicKey;
-    this.tags = props.tags;
-    this.tagsAll = props.tagsAll;
+    this.props = props;
+
     this.attrTfcfnid = cdk.Token.asString(this.getAtt('tfcfnid'));
     this.attrArn = cdk.Token.asString(this.getAtt('Arn'));
     this.attrFingerprint = cdk.Token.asString(this.getAtt('Fingerprint'));

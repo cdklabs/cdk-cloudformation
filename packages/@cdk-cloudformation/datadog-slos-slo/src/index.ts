@@ -244,11 +244,11 @@ export enum CfnSloPropsType {
  */
 export enum ThresholdTimeframe {
   /** 7d */
-  7D = '7d',
+  VALUE_7D = '7d',
   /** 30d */
-  30D = '30d',
+  VALUE_30D = '30d',
   /** 90d */
-  90D = '90d',
+  VALUE_90D = '90d',
 }
 
 
@@ -266,51 +266,10 @@ export class CfnSlo extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "Datadog::SLOs::SLO";
 
   /**
-   * `Datadog::SLOs::SLO.Description`
-   * Description of the slo
-   * @link http://unknown-url
+   * Resource props.
    */
-  public readonly description: string | undefined;
-  /**
-   * `Datadog::SLOs::SLO.Groups`
-   * A list of (up to 20) monitor groups that narrow the scope of a monitor service level objective.
-   * @link http://unknown-url
-   */
-  public readonly groups: string[] | undefined;
-  /**
-   * `Datadog::SLOs::SLO.MonitorIds`
-   * A list of monitor ids that defines the scope of a monitor service level objective. Required if type is monitor.
-   * @link http://unknown-url
-   */
-  public readonly monitorIds: number[] | undefined;
-  /**
-   * `Datadog::SLOs::SLO.Name`
-   * Name of the slo
-   * @link http://unknown-url
-   */
-  public readonly name: string;
-  /**
-   * `Datadog::SLOs::SLO.Query`
-   * @link http://unknown-url
-   */
-  public readonly query: Query | undefined;
-  /**
-   * `Datadog::SLOs::SLO.Tags`
-   * Tags associated with the slo
-   * @link http://unknown-url
-   */
-  public readonly tags: string[] | undefined;
-  /**
-   * `Datadog::SLOs::SLO.Thresholds`
-   * @link http://unknown-url
-   */
-  public readonly thresholds: Threshold[];
-  /**
-   * `Datadog::SLOs::SLO.Type`
-   * The type of the slo
-   * @link http://unknown-url
-   */
-  public readonly type: string;
+  public readonly props: CfnSloProps;
+
   /**
    * Attribute `Datadog::SLOs::SLO.Modified`
    * @link http://unknown-url
@@ -342,14 +301,8 @@ export class CfnSlo extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnSloProps) {
     super(scope, id, { type: CfnSlo.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnSloProps(props)! });
 
-    this.description = props.description;
-    this.groups = props.groups;
-    this.monitorIds = props.monitorIds;
-    this.name = props.name;
-    this.query = props.query;
-    this.tags = props.tags;
-    this.thresholds = props.thresholds;
-    this.type = props.type;
+    this.props = props;
+
     this.attrModified = cdk.Token.asString(this.getAtt('Modified'));
     this.attrId = cdk.Token.asString(this.getAtt('Id'));
     this.attrDeleted = cdk.Token.asString(this.getAtt('Deleted'));

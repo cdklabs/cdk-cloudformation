@@ -77,35 +77,10 @@ export class CfnGet extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "AWSQS::Kubernetes::Get";
 
   /**
-   * `AWSQS::Kubernetes::Get.ClusterName`
-   * Name of the EKS cluster to query
-   * @link https://github.com/aws-quickstart/quickstart-amazon-eks.git
+   * Resource props.
    */
-  public readonly clusterName: string;
-  /**
-   * `AWSQS::Kubernetes::Get.Name`
-   * Name of the kubernetes resource to query, should contain kind. Eg.: pod/nginx
-   * @link https://github.com/aws-quickstart/quickstart-amazon-eks.git
-   */
-  public readonly name: string;
-  /**
-   * `AWSQS::Kubernetes::Get.Namespace`
-   * Kubernetes namespace containing the resource
-   * @link https://github.com/aws-quickstart/quickstart-amazon-eks.git
-   */
-  public readonly namespace: string;
-  /**
-   * `AWSQS::Kubernetes::Get.JsonPath`
-   * Jsonpath expression to filter the output
-   * @link https://github.com/aws-quickstart/quickstart-amazon-eks.git
-   */
-  public readonly jsonPath: string;
-  /**
-   * `AWSQS::Kubernetes::Get.Retries`
-   * How many times to retry a request. This provides a mechanism to wait for resources to be created before proceeding. Interval between retries is 60 seconds.
-   * @link https://github.com/aws-quickstart/quickstart-amazon-eks.git
-   */
-  public readonly retries: number | undefined;
+  public readonly props: CfnGetProps;
+
   /**
    * Attribute `AWSQS::Kubernetes::Get.Response`
    * @link https://github.com/aws-quickstart/quickstart-amazon-eks.git
@@ -127,11 +102,8 @@ export class CfnGet extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnGetProps) {
     super(scope, id, { type: CfnGet.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnGetProps(props)! });
 
-    this.clusterName = props.clusterName;
-    this.name = props.name;
-    this.namespace = props.namespace;
-    this.jsonPath = props.jsonPath;
-    this.retries = props.retries;
+    this.props = props;
+
     this.attrResponse = cdk.Token.asString(this.getAtt('Response'));
     this.attrId = cdk.Token.asString(this.getAtt('Id'));
   }

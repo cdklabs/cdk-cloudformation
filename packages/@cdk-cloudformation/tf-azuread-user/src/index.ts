@@ -226,143 +226,10 @@ export class CfnUser extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "TF::AzureAD::User";
 
   /**
-   * `TF::AzureAD::User.AccountEnabled`
-   * `true` if the account should be enabled, otherwise `false`. Defaults to `true`.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
+   * Resource props.
    */
-  public readonly accountEnabled: any | undefined;
-  /**
-   * `TF::AzureAD::User.City`
-   * The city in which the user is located.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly city: string | undefined;
-  /**
-   * `TF::AzureAD::User.CompanyName`
-   * The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly companyName: string | undefined;
-  /**
-   * `TF::AzureAD::User.Country`
-   * The country/region in which the user is located; for example, “US” or “UK”.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly country: string | undefined;
-  /**
-   * `TF::AzureAD::User.Department`
-   * The name for the department in which the user works.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly department: string | undefined;
-  /**
-   * `TF::AzureAD::User.DisplayName`
-   * The name to display in the address book for the user.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly displayName: string;
-  /**
-   * `TF::AzureAD::User.ForcePasswordChange`
-   * `true` if the User is forced to change the password during the next sign-in. Defaults to `false`.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly forcePasswordChange: any | undefined;
-  /**
-   * `TF::AzureAD::User.GivenName`
-   * The given name (first name) of the user.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly givenName: string | undefined;
-  /**
-   * `TF::AzureAD::User.ImmutableId`
-   * The value used to associate an on-premise Active Directory user account with their Azure AD user object. Deprecated in favour of `onpremises_immutable_id`.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly immutableId: string | undefined;
-  /**
-   * `TF::AzureAD::User.JobTitle`
-   * The user’s job title.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly jobTitle: string | undefined;
-  /**
-   * `TF::AzureAD::User.MailNickname`
-   * The mail alias for the user. Defaults to the user name part of the User Principal Name.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly mailNickname: string | undefined;
-  /**
-   * `TF::AzureAD::User.Mobile`
-   * The primary cellular telephone number for the user. Deprecated in favour of `mobile_phone`.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly mobile: string | undefined;
-  /**
-   * `TF::AzureAD::User.MobilePhone`
-   * The primary cellular telephone number for the user.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly mobilePhone: string | undefined;
-  /**
-   * `TF::AzureAD::User.OfficeLocation`
-   * The office location in the user's place of business.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly officeLocation: string | undefined;
-  /**
-   * `TF::AzureAD::User.OnpremisesImmutableId`
-   * The value used to associate an on-premise Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user's userPrincipalName (UPN) property when creating a new user account.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly onpremisesImmutableId: string | undefined;
-  /**
-   * `TF::AzureAD::User.Password`
-   * The password for the User. The password must satisfy minimum requirements as specified by the password policy. The maximum length is 256 characters.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly password: string;
-  /**
-   * `TF::AzureAD::User.PhysicalDeliveryOfficeName`
-   * The office location in the user's place of business. Deprecated in favour of `office_location`.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly physicalDeliveryOfficeName: string | undefined;
-  /**
-   * `TF::AzureAD::User.PostalCode`
-   * The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly postalCode: string | undefined;
-  /**
-   * `TF::AzureAD::User.State`
-   * The state or province in the user's address.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly state: string | undefined;
-  /**
-   * `TF::AzureAD::User.StreetAddress`
-   * The street address of the user's place of business.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly streetAddress: string | undefined;
-  /**
-   * `TF::AzureAD::User.Surname`
-   * The user's surname (family name or last name).
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly surname: string | undefined;
-  /**
-   * `TF::AzureAD::User.UsageLocation`
-   * The usage location of the User. Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries. The usage location is a two letter country code (ISO standard 3166). Examples include: `NO`, `JP`, and `GB`. Cannot be reset to null once set.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly usageLocation: string | undefined;
-  /**
-   * `TF::AzureAD::User.UserPrincipalName`
-   * The User Principal Name of the User.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly userPrincipalName: string;
+  public readonly props: CfnUserProps;
+
   /**
    * Attribute `TF::AzureAD::User.tfcfnid`
    * @link https://github.com/iann0036/cfn-tf-custom-types.git
@@ -409,29 +276,8 @@ export class CfnUser extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnUserProps) {
     super(scope, id, { type: CfnUser.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnUserProps(props)! });
 
-    this.accountEnabled = props.accountEnabled;
-    this.city = props.city;
-    this.companyName = props.companyName;
-    this.country = props.country;
-    this.department = props.department;
-    this.displayName = props.displayName;
-    this.forcePasswordChange = props.forcePasswordChange;
-    this.givenName = props.givenName;
-    this.immutableId = props.immutableId;
-    this.jobTitle = props.jobTitle;
-    this.mailNickname = props.mailNickname;
-    this.mobile = props.mobile;
-    this.mobilePhone = props.mobilePhone;
-    this.officeLocation = props.officeLocation;
-    this.onpremisesImmutableId = props.onpremisesImmutableId;
-    this.password = props.password;
-    this.physicalDeliveryOfficeName = props.physicalDeliveryOfficeName;
-    this.postalCode = props.postalCode;
-    this.state = props.state;
-    this.streetAddress = props.streetAddress;
-    this.surname = props.surname;
-    this.usageLocation = props.usageLocation;
-    this.userPrincipalName = props.userPrincipalName;
+    this.props = props;
+
     this.attrTfcfnid = cdk.Token.asString(this.getAtt('tfcfnid'));
     this.attrId = cdk.Token.asString(this.getAtt('Id'));
     this.attrMail = cdk.Token.asString(this.getAtt('Mail'));

@@ -568,102 +568,10 @@ export class CfnStoragebucket extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "TF::Google::StorageBucket";
 
   /**
-   * `TF::Google::StorageBucket.BucketPolicyOnly`
-   * Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy-only) access to a bucket. This field will be removed in the next major release of the provider.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
+   * Resource props.
    */
-  public readonly bucketPolicyOnly: any | undefined;
-  /**
-   * `TF::Google::StorageBucket.DefaultEventBasedHold`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly defaultEventBasedHold: any | undefined;
-  /**
-   * `TF::Google::StorageBucket.ForceDestroy`
-   * When deleting a bucket, this
-boolean option will delete all contained objects. If you try to delete a
-bucket that contains objects, Terraform will fail that run.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly forceDestroy: any | undefined;
-  /**
-   * `TF::Google::StorageBucket.Labels`
-   * A map of key/value label pairs to assign to the bucket.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly labels: LabelsDefinition[] | undefined;
-  /**
-   * `TF::Google::StorageBucket.Location`
-   * The [GCS location](https://cloud.google.com/storage/docs/bucket-locations).
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly location: string | undefined;
-  /**
-   * `TF::Google::StorageBucket.Name`
-   * The name of the bucket.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly name: string;
-  /**
-   * `TF::Google::StorageBucket.Project`
-   * The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly project: string | undefined;
-  /**
-   * `TF::Google::StorageBucket.RequesterPays`
-   * Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) on a storage bucket.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly requesterPays: any | undefined;
-  /**
-   * `TF::Google::StorageBucket.StorageClass`
-   * The [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of the new bucket. Supported values include: `STANDARD`, `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly storageClass: string | undefined;
-  /**
-   * `TF::Google::StorageBucket.UniformBucketLevelAccess`
-   * Enables [Uniform bucket-level access](https://cloud.google.com/storage/docs/uniform-bucket-level-access) access to a bucket.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly uniformBucketLevelAccess: any | undefined;
-  /**
-   * `TF::Google::StorageBucket.Cors`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly cors: CorsDefinition[] | undefined;
-  /**
-   * `TF::Google::StorageBucket.Encryption`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly encryption: EncryptionDefinition[] | undefined;
-  /**
-   * `TF::Google::StorageBucket.LifecycleRule`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly lifecycleRule: LifecycleRuleDefinition[] | undefined;
-  /**
-   * `TF::Google::StorageBucket.Logging`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly logging: LoggingDefinition[] | undefined;
-  /**
-   * `TF::Google::StorageBucket.RetentionPolicy`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly retentionPolicy: RetentionPolicyDefinition[] | undefined;
-  /**
-   * `TF::Google::StorageBucket.Versioning`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly versioning: VersioningDefinition[] | undefined;
-  /**
-   * `TF::Google::StorageBucket.Website`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly website: WebsiteDefinition[] | undefined;
+  public readonly props: CfnStoragebucketProps;
+
   /**
    * Attribute `TF::Google::StorageBucket.tfcfnid`
    * @link https://github.com/iann0036/cfn-tf-custom-types.git
@@ -695,23 +603,8 @@ is not provided, the provider project is used.
   constructor(scope: cdk.Construct, id: string, props: CfnStoragebucketProps) {
     super(scope, id, { type: CfnStoragebucket.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnStoragebucketProps(props)! });
 
-    this.bucketPolicyOnly = props.bucketPolicyOnly;
-    this.defaultEventBasedHold = props.defaultEventBasedHold;
-    this.forceDestroy = props.forceDestroy;
-    this.labels = props.labels;
-    this.location = props.location;
-    this.name = props.name;
-    this.project = props.project;
-    this.requesterPays = props.requesterPays;
-    this.storageClass = props.storageClass;
-    this.uniformBucketLevelAccess = props.uniformBucketLevelAccess;
-    this.cors = props.cors;
-    this.encryption = props.encryption;
-    this.lifecycleRule = props.lifecycleRule;
-    this.logging = props.logging;
-    this.retentionPolicy = props.retentionPolicy;
-    this.versioning = props.versioning;
-    this.website = props.website;
+    this.props = props;
+
     this.attrTfcfnid = cdk.Token.asString(this.getAtt('tfcfnid'));
     this.attrId = cdk.Token.asString(this.getAtt('Id'));
     this.attrSelfLink = cdk.Token.asString(this.getAtt('SelfLink'));

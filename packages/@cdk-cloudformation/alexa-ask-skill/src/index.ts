@@ -166,20 +166,10 @@ export class CfnSkill extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "Alexa::ASK::Skill";
 
   /**
-   * `Alexa::ASK::Skill.AuthenticationConfiguration`
-   * @link http://unknown-url
+   * Resource props.
    */
-  public readonly authenticationConfiguration: AuthenticationConfiguration;
-  /**
-   * `Alexa::ASK::Skill.VendorId`
-   * @link http://unknown-url
-   */
-  public readonly vendorId: string;
-  /**
-   * `Alexa::ASK::Skill.SkillPackage`
-   * @link http://unknown-url
-   */
-  public readonly skillPackage: SkillPackage;
+  public readonly props: CfnSkillProps;
+
   /**
    * Attribute `Alexa::ASK::Skill.Id`
    * @link http://unknown-url
@@ -196,9 +186,8 @@ export class CfnSkill extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnSkillProps) {
     super(scope, id, { type: CfnSkill.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnSkillProps(props)! });
 
-    this.authenticationConfiguration = props.authenticationConfiguration;
-    this.vendorId = props.vendorId;
-    this.skillPackage = props.skillPackage;
+    this.props = props;
+
     this.attrId = cdk.Token.asString(this.getAtt('Id'));
   }
 }

@@ -61,23 +61,10 @@ export class CfnMarketorder extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "Stocks::Orders::MarketOrder";
 
   /**
-   * `Stocks::Orders::MarketOrder.Quantity`
-   * The number of shares to buy.
-   * @link https://github.com/iann0036/cfn-types/tree/master/stocks-orders-marketorder
+   * Resource props.
    */
-  public readonly quantity: number;
-  /**
-   * `Stocks::Orders::MarketOrder.Symbol`
-   * The stock symbol to buy.
-   * @link https://github.com/iann0036/cfn-types/tree/master/stocks-orders-marketorder
-   */
-  public readonly symbol: string;
-  /**
-   * `Stocks::Orders::MarketOrder.Notes`
-   * A fields for notes about the order. This field may also be used to force a resource update in order to retrieve the latest market value of the position.
-   * @link https://github.com/iann0036/cfn-types/tree/master/stocks-orders-marketorder
-   */
-  public readonly notes: string | undefined;
+  public readonly props: CfnMarketorderProps;
+
   /**
    * Attribute `Stocks::Orders::MarketOrder.Id`
    * @link https://github.com/iann0036/cfn-types/tree/master/stocks-orders-marketorder
@@ -114,9 +101,8 @@ export class CfnMarketorder extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnMarketorderProps) {
     super(scope, id, { type: CfnMarketorder.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnMarketorderProps(props)! });
 
-    this.quantity = props.quantity;
-    this.symbol = props.symbol;
-    this.notes = props.notes;
+    this.props = props;
+
     this.attrId = cdk.Token.asString(this.getAtt('Id'));
     this.attrFilledQuantity = cdk.Token.asString(this.getAtt('FilledQuantity'));
     this.attrFilledValue = cdk.Token.asString(this.getAtt('FilledValue'));

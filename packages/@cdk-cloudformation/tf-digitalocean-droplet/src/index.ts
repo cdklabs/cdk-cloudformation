@@ -169,100 +169,10 @@ export class CfnDroplet extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "TF::DigitalOcean::Droplet";
 
   /**
-   * `TF::DigitalOcean::Droplet.Backups`
-   * Boolean controlling if backups are made. Defaults to
-false.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
+   * Resource props.
    */
-  public readonly backups: any | undefined;
-  /**
-   * `TF::DigitalOcean::Droplet.Image`
-   * The Droplet image ID or slug.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly image: string;
-  /**
-   * `TF::DigitalOcean::Droplet.Ipv6`
-   * Boolean controlling if IPv6 is enabled. Defaults to false.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly ipv6: any | undefined;
-  /**
-   * `TF::DigitalOcean::Droplet.Monitoring`
-   * Boolean controlling whether monitoring agent is installed.
-Defaults to false.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly monitoring: any | undefined;
-  /**
-   * `TF::DigitalOcean::Droplet.Name`
-   * The Droplet name.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly name: string;
-  /**
-   * `TF::DigitalOcean::Droplet.PrivateNetworking`
-   * Boolean controlling if private networking
-is enabled. When VPC is enabled on an account, this will provision the
-Droplet inside of your account's default VPC for the region. Use the
-`vpc_uuid` attribute to specify a different VPC.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly privateNetworking: any | undefined;
-  /**
-   * `TF::DigitalOcean::Droplet.Region`
-   * The region to start in.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly region: string;
-  /**
-   * `TF::DigitalOcean::Droplet.ResizeDisk`
-   * Boolean controlling whether to increase the disk
-size when resizing a Droplet. It defaults to `true`. When set to `false`,
-only the Droplet's RAM and CPU will be resized. **Increasing a Droplet's disk
-size is a permanent change**. Increasing only RAM and CPU is reversible.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly resizeDisk: any | undefined;
-  /**
-   * `TF::DigitalOcean::Droplet.Size`
-   * The unique slug that indentifies the type of Droplet. You can find a list of available slugs on [DigitalOcean API documentation](https://developers.digitalocean.com/documentation/v2/#list-all-sizes).
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly size: string;
-  /**
-   * `TF::DigitalOcean::Droplet.SshKeys`
-   * A list of SSH key IDs or fingerprints to enable in
-the format `[12345, 123456]`. To retrieve this info, use the
-[DigitalOcean API](https://docs.digitalocean.com/reference/api/api-reference/#tag/SSH-Keys)
-or CLI (`doctl compute ssh-key list`). Once a Droplet is created keys can not
-be added or removed via this provider. Modifying this field will prompt you
-to destroy and recreate the Droplet.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly sshKeys: string[] | undefined;
-  /**
-   * `TF::DigitalOcean::Droplet.Tags`
-   * A list of the tags to be applied to this Droplet.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly tags: string[] | undefined;
-  /**
-   * `TF::DigitalOcean::Droplet.UserData`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly userData: string | undefined;
-  /**
-   * `TF::DigitalOcean::Droplet.VolumeIds`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly volumeIds: string[] | undefined;
-  /**
-   * `TF::DigitalOcean::Droplet.VpcUuid`
-   * The ID of the VPC where the Droplet will be located.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly vpcUuid: string | undefined;
+  public readonly props: CfnDropletProps;
+
   /**
    * Attribute `TF::DigitalOcean::Droplet.tfcfnid`
    * @link https://github.com/iann0036/cfn-tf-custom-types.git
@@ -339,20 +249,8 @@ to destroy and recreate the Droplet.
   constructor(scope: cdk.Construct, id: string, props: CfnDropletProps) {
     super(scope, id, { type: CfnDroplet.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnDropletProps(props)! });
 
-    this.backups = props.backups;
-    this.image = props.image;
-    this.ipv6 = props.ipv6;
-    this.monitoring = props.monitoring;
-    this.name = props.name;
-    this.privateNetworking = props.privateNetworking;
-    this.region = props.region;
-    this.resizeDisk = props.resizeDisk;
-    this.size = props.size;
-    this.sshKeys = props.sshKeys;
-    this.tags = props.tags;
-    this.userData = props.userData;
-    this.volumeIds = props.volumeIds;
-    this.vpcUuid = props.vpcUuid;
+    this.props = props;
+
     this.attrTfcfnid = cdk.Token.asString(this.getAtt('tfcfnid'));
     this.attrCreatedAt = cdk.Token.asString(this.getAtt('CreatedAt'));
     this.attrDisk = cdk.Token.asNumber(this.getAtt('Disk'));

@@ -155,21 +155,10 @@ export class CfnProjectipaccesslist extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "MongoDB::Atlas::ProjectIpAccessList";
 
   /**
-   * `MongoDB::Atlas::ProjectIpAccessList.AccessList`
-   * @link https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git
+   * Resource props.
    */
-  public readonly accessList: accessListDefinition[];
-  /**
-   * `MongoDB::Atlas::ProjectIpAccessList.ApiKeys`
-   * @link https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git
-   */
-  public readonly apiKeys: apiKeyDefinition;
-  /**
-   * `MongoDB::Atlas::ProjectIpAccessList.ProjectId`
-   * The unique identifier for the project to which you want to add one or more ip access list entries.
-   * @link https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git
-   */
-  public readonly projectId: string;
+  public readonly props: CfnProjectipaccesslistProps;
+
   /**
    * Attribute `MongoDB::Atlas::ProjectIpAccessList.Id`
    * @link https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git
@@ -186,9 +175,8 @@ export class CfnProjectipaccesslist extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnProjectipaccesslistProps) {
     super(scope, id, { type: CfnProjectipaccesslist.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnProjectipaccesslistProps(props)! });
 
-    this.accessList = props.accessList;
-    this.apiKeys = props.apiKeys;
-    this.projectId = props.projectId;
+    this.props = props;
+
     this.attrId = cdk.Token.asString(this.getAtt('Id'));
   }
 }

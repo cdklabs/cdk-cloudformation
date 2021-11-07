@@ -324,151 +324,10 @@ export class CfnRepository extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "TF::GitHub::Repository";
 
   /**
-   * `TF::GitHub::Repository.AllowMergeCommit`
-   * Set to `false` to disable merge commits on the repository.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
+   * Resource props.
    */
-  public readonly allowMergeCommit: any | undefined;
-  /**
-   * `TF::GitHub::Repository.AllowRebaseMerge`
-   * Set to `false` to disable rebase merges on the repository.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly allowRebaseMerge: any | undefined;
-  /**
-   * `TF::GitHub::Repository.AllowSquashMerge`
-   * Set to `false` to disable squash merges on the repository.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly allowSquashMerge: any | undefined;
-  /**
-   * `TF::GitHub::Repository.ArchiveOnDestroy`
-   * Set to `true` to archive the repository instead of deleting on destroy.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly archiveOnDestroy: any | undefined;
-  /**
-   * `TF::GitHub::Repository.Archived`
-   * Specifies if the repository should be archived. Defaults to `false`. **NOTE** Currently, the API does not support unarchiving.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly archived: any | undefined;
-  /**
-   * `TF::GitHub::Repository.AutoInit`
-   * Set to `true` to produce an initial commit in the repository.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly autoInit: any | undefined;
-  /**
-   * `TF::GitHub::Repository.DefaultBranch`
-   * (Deprecated: Use `github_branch_default` resource instead) The name of the default branch of the repository. **NOTE:** This can only be set after a repository has already been created,
-and after a correct reference has been created for the target branch inside the repository. This means a user will have to omit this parameter from the
-initial repository creation and create the target branch inside of the repository prior to setting this attribute.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly defaultBranch: string | undefined;
-  /**
-   * `TF::GitHub::Repository.DeleteBranchOnMerge`
-   * Automatically delete head branch after a pull request is merged. Defaults to `false`.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly deleteBranchOnMerge: any | undefined;
-  /**
-   * `TF::GitHub::Repository.Description`
-   * A description of the repository.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly description: string | undefined;
-  /**
-   * `TF::GitHub::Repository.GitignoreTemplate`
-   * Use the [name of the template](https://github.com/github/gitignore) without the extension. For example, "Haskell".
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly gitignoreTemplate: string | undefined;
-  /**
-   * `TF::GitHub::Repository.HasDownloads`
-   * Set to `true` to enable the (deprecated) downloads features on the repository.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly hasDownloads: any | undefined;
-  /**
-   * `TF::GitHub::Repository.HasIssues`
-   * Set to `true` to enable the GitHub Issues features
-on the repository.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly hasIssues: any | undefined;
-  /**
-   * `TF::GitHub::Repository.HasProjects`
-   * Set to `true` to enable the GitHub Projects features on the repository. Per the GitHub [documentation](https://developer.github.com/v3/repos/#create) when in an organization that has disabled repository projects it will default to `false` and will otherwise default to `true`. If you specify `true` when it has been disabled it will return an error.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly hasProjects: any | undefined;
-  /**
-   * `TF::GitHub::Repository.HasWiki`
-   * Set to `true` to enable the GitHub Wiki features on
-the repository.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly hasWiki: any | undefined;
-  /**
-   * `TF::GitHub::Repository.HomepageUrl`
-   * URL of a page describing the project.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly homepageUrl: string | undefined;
-  /**
-   * `TF::GitHub::Repository.IsTemplate`
-   * Set to `true` to tell GitHub that this is a template repository.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly isTemplate: any | undefined;
-  /**
-   * `TF::GitHub::Repository.LicenseTemplate`
-   * Use the [name of the template](https://github.com/github/choosealicense.com/tree/gh-pages/_licenses) without the extension. For example, "mit" or "mpl-2.0".
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly licenseTemplate: string | undefined;
-  /**
-   * `TF::GitHub::Repository.Name`
-   * The name of the repository.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly name: string;
-  /**
-   * `TF::GitHub::Repository.Private`
-   * Set to `true` to create a private repository.
-Repositories are created as public (e.g. open source) by default.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly private: any | undefined;
-  /**
-   * `TF::GitHub::Repository.Topics`
-   * The list of topics of the repository.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly topics: string[] | undefined;
-  /**
-   * `TF::GitHub::Repository.Visibility`
-   * Can be `public` or `private`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, visibility can also be `internal`. The `visibility` parameter overrides the `private` parameter.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly visibility: string | undefined;
-  /**
-   * `TF::GitHub::Repository.VulnerabilityAlerts`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly vulnerabilityAlerts: any | undefined;
-  /**
-   * `TF::GitHub::Repository.Pages`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly pages: PagesDefinition[] | undefined;
-  /**
-   * `TF::GitHub::Repository.Template`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly template: TemplateDefinition[] | undefined;
+  public readonly props: CfnRepositoryProps;
+
   /**
    * Attribute `TF::GitHub::Repository.tfcfnid`
    * @link https://github.com/iann0036/cfn-tf-custom-types.git
@@ -535,30 +394,8 @@ Repositories are created as public (e.g. open source) by default.
   constructor(scope: cdk.Construct, id: string, props: CfnRepositoryProps) {
     super(scope, id, { type: CfnRepository.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnRepositoryProps(props)! });
 
-    this.allowMergeCommit = props.allowMergeCommit;
-    this.allowRebaseMerge = props.allowRebaseMerge;
-    this.allowSquashMerge = props.allowSquashMerge;
-    this.archiveOnDestroy = props.archiveOnDestroy;
-    this.archived = props.archived;
-    this.autoInit = props.autoInit;
-    this.defaultBranch = props.defaultBranch;
-    this.deleteBranchOnMerge = props.deleteBranchOnMerge;
-    this.description = props.description;
-    this.gitignoreTemplate = props.gitignoreTemplate;
-    this.hasDownloads = props.hasDownloads;
-    this.hasIssues = props.hasIssues;
-    this.hasProjects = props.hasProjects;
-    this.hasWiki = props.hasWiki;
-    this.homepageUrl = props.homepageUrl;
-    this.isTemplate = props.isTemplate;
-    this.licenseTemplate = props.licenseTemplate;
-    this.name = props.name;
-    this.private = props.private;
-    this.topics = props.topics;
-    this.visibility = props.visibility;
-    this.vulnerabilityAlerts = props.vulnerabilityAlerts;
-    this.pages = props.pages;
-    this.template = props.template;
+    this.props = props;
+
     this.attrTfcfnid = cdk.Token.asString(this.getAtt('tfcfnid'));
     this.attrEtag = cdk.Token.asString(this.getAtt('Etag'));
     this.attrFullName = cdk.Token.asString(this.getAtt('FullName'));

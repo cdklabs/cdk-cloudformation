@@ -108,35 +108,10 @@ export class CfnTeam extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "Atlassian::Opsgenie::Team";
 
   /**
-   * `Atlassian::Opsgenie::Team.Name`
-   * Team name
-   * @link https://github.com/opsgenie/opsgenie-cloudformation-resources
+   * Resource props.
    */
-  public readonly name: string;
-  /**
-   * `Atlassian::Opsgenie::Team.Description`
-   * Team description
-   * @link https://github.com/opsgenie/opsgenie-cloudformation-resources
-   */
-  public readonly description: string | undefined;
-  /**
-   * `Atlassian::Opsgenie::Team.Members`
-   * Array of members
-   * @link https://github.com/opsgenie/opsgenie-cloudformation-resources
-   */
-  public readonly members: Member[] | undefined;
-  /**
-   * `Atlassian::Opsgenie::Team.OpsgenieApiKey`
-   * Api Key
-   * @link https://github.com/opsgenie/opsgenie-cloudformation-resources
-   */
-  public readonly opsgenieApiKey: string | undefined;
-  /**
-   * `Atlassian::Opsgenie::Team.OpsgenieApiEndpoint`
-   * Api endpoint
-   * @link https://github.com/opsgenie/opsgenie-cloudformation-resources
-   */
-  public readonly opsgenieApiEndpoint: string | undefined;
+  public readonly props: CfnTeamProps;
+
   /**
    * Attribute `Atlassian::Opsgenie::Team.TeamId`
    * @link https://github.com/opsgenie/opsgenie-cloudformation-resources
@@ -153,11 +128,8 @@ export class CfnTeam extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnTeamProps) {
     super(scope, id, { type: CfnTeam.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnTeamProps(props)! });
 
-    this.name = props.name;
-    this.description = props.description;
-    this.members = props.members;
-    this.opsgenieApiKey = props.opsgenieApiKey;
-    this.opsgenieApiEndpoint = props.opsgenieApiEndpoint;
+    this.props = props;
+
     this.attrTeamId = cdk.Token.asString(this.getAtt('TeamId'));
   }
 }

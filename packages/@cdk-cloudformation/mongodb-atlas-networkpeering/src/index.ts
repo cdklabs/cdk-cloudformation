@@ -138,58 +138,10 @@ export class CfnNetworkpeering extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "MongoDB::Atlas::NetworkPeering";
 
   /**
-   * `MongoDB::Atlas::NetworkPeering.ProjectId`
-   * The unique identifier of the project.
-   * @link http://unknown-url
+   * Resource props.
    */
-  public readonly projectId: string;
-  /**
-   * `MongoDB::Atlas::NetworkPeering.ContainerId`
-   * Unique identifier of the Atlas VPC container for the AWS region.
-   * @link http://unknown-url
-   */
-  public readonly containerId: string | undefined;
-  /**
-   * `MongoDB::Atlas::NetworkPeering.AccepterRegionName`
-   * AWS region where the peer VPC resides. Returns null if the region is the same region in which the Atlas VPC resides.
-   * @link http://unknown-url
-   */
-  public readonly accepterRegionName: string | undefined;
-  /**
-   * `MongoDB::Atlas::NetworkPeering.AwsAccountId`
-   * AWS account ID of the owner of the peer VPC.
-   * @link http://unknown-url
-   */
-  public readonly awsAccountId: string | undefined;
-  /**
-   * `MongoDB::Atlas::NetworkPeering.ProviderName`
-   * The name of the provider
-   * @link http://unknown-url
-   */
-  public readonly providerName: string | undefined;
-  /**
-   * `MongoDB::Atlas::NetworkPeering.RouteTableCIDRBlock`
-   * Peer VPC CIDR block or subnet.
-   * @link http://unknown-url
-   */
-  public readonly routeTableCIDRBlock: string | undefined;
-  /**
-   * `MongoDB::Atlas::NetworkPeering.VpcId`
-   * Unique identifier of the peer VPC.
-   * @link http://unknown-url
-   */
-  public readonly vpcId: string;
-  /**
-   * `MongoDB::Atlas::NetworkPeering.ConnectionId`
-   * Unique identifier for the peering connection.
-   * @link http://unknown-url
-   */
-  public readonly connectionId: string | undefined;
-  /**
-   * `MongoDB::Atlas::NetworkPeering.ApiKeys`
-   * @link http://unknown-url
-   */
-  public readonly apiKeys: apiKeyDefinition;
+  public readonly props: CfnNetworkpeeringProps;
+
   /**
    * Attribute `MongoDB::Atlas::NetworkPeering.Id`
    * @link http://unknown-url
@@ -216,15 +168,8 @@ export class CfnNetworkpeering extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnNetworkpeeringProps) {
     super(scope, id, { type: CfnNetworkpeering.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnNetworkpeeringProps(props)! });
 
-    this.projectId = props.projectId;
-    this.containerId = props.containerId;
-    this.accepterRegionName = props.accepterRegionName;
-    this.awsAccountId = props.awsAccountId;
-    this.providerName = props.providerName;
-    this.routeTableCIDRBlock = props.routeTableCIDRBlock;
-    this.vpcId = props.vpcId;
-    this.connectionId = props.connectionId;
-    this.apiKeys = props.apiKeys;
+    this.props = props;
+
     this.attrId = cdk.Token.asString(this.getAtt('Id'));
     this.attrStatusName = cdk.Token.asString(this.getAtt('StatusName'));
     this.attrErrorStateName = cdk.Token.asString(this.getAtt('ErrorStateName'));

@@ -157,53 +157,10 @@ export class CfnDowntime extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "Datadog::Monitors::Downtime";
 
   /**
-   * `Datadog::Monitors::Downtime.Disabled`
-   * Whether or not this downtime is disabled
-   * @link http://unknown-url
+   * Resource props.
    */
-  public readonly disabled: any | undefined;
-  /**
-   * `Datadog::Monitors::Downtime.End`
-   * POSIX timestamp to end the downtime. If not provided, the downtime is in effect indefinitely (i.e. until you cancel it).
-   * @link http://unknown-url
-   */
-  public readonly end: number | undefined;
-  /**
-   * `Datadog::Monitors::Downtime.Message`
-   * Message on the downtime
-   * @link http://unknown-url
-   */
-  public readonly message: string | undefined;
-  /**
-   * `Datadog::Monitors::Downtime.MonitorId`
-   * A single monitor to which the downtime applies. If not provided, the downtime applies to all monitors.
-   * @link http://unknown-url
-   */
-  public readonly monitorId: number | undefined;
-  /**
-   * `Datadog::Monitors::Downtime.MonitorTags`
-   * A comma-separated list of monitor tags, to which the downtime applies. The resulting downtime applies to monitors that match ALL provided monitor tags.
-   * @link http://unknown-url
-   */
-  public readonly monitorTags: string[] | undefined;
-  /**
-   * `Datadog::Monitors::Downtime.Scope`
-   * The scope(s) to which the downtime applies
-   * @link http://unknown-url
-   */
-  public readonly scope: string[];
-  /**
-   * `Datadog::Monitors::Downtime.Start`
-   * POSIX timestamp to start the downtime. If not provided, the downtime starts the moment it is created.
-   * @link http://unknown-url
-   */
-  public readonly start: number | undefined;
-  /**
-   * `Datadog::Monitors::Downtime.Timezone`
-   * The timezone for the downtime
-   * @link http://unknown-url
-   */
-  public readonly timezone: string | undefined;
+  public readonly props: CfnDowntimeProps;
+
 
   /**
    * Create a new `Datadog::Monitors::Downtime`.
@@ -215,13 +172,7 @@ export class CfnDowntime extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnDowntimeProps) {
     super(scope, id, { type: CfnDowntime.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnDowntimeProps(props)! });
 
-    this.disabled = props.disabled;
-    this.end = props.end;
-    this.message = props.message;
-    this.monitorId = props.monitorId;
-    this.monitorTags = props.monitorTags;
-    this.scope = props.scope;
-    this.start = props.start;
-    this.timezone = props.timezone;
+    this.props = props;
+
   }
 }

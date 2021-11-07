@@ -328,153 +328,10 @@ export class CfnS3bucketobject extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "TF::AWS::S3BucketObject";
 
   /**
-   * `TF::AWS::S3BucketObject.Acl`
-   * The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, `bucket-owner-read`, and `bucket-owner-full-control`. Defaults to `private`.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
+   * Resource props.
    */
-  public readonly acl: string | undefined;
-  /**
-   * `TF::AWS::S3BucketObject.Bucket`
-   * The name of the bucket to put the file in. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly bucket: string;
-  /**
-   * `TF::AWS::S3BucketObject.BucketKeyEnabled`
-   * Whether or not to use [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html) for SSE-KMS.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly bucketKeyEnabled: any | undefined;
-  /**
-   * `TF::AWS::S3BucketObject.CacheControl`
-   * Specifies caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly cacheControl: string | undefined;
-  /**
-   * `TF::AWS::S3BucketObject.Content`
-   * Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly content: string | undefined;
-  /**
-   * `TF::AWS::S3BucketObject.ContentBase64`
-   * Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for small content such as the result of the `gzipbase64` function with small text strings. For larger objects, use `source` to stream the content from a disk file.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly contentBase64: string | undefined;
-  /**
-   * `TF::AWS::S3BucketObject.ContentDisposition`
-   * Specifies presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly contentDisposition: string | undefined;
-  /**
-   * `TF::AWS::S3BucketObject.ContentEncoding`
-   * Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly contentEncoding: string | undefined;
-  /**
-   * `TF::AWS::S3BucketObject.ContentLanguage`
-   * The language the content is in e.g. en-US or en-GB.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly contentLanguage: string | undefined;
-  /**
-   * `TF::AWS::S3BucketObject.ContentType`
-   * A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly contentType: string | undefined;
-  /**
-   * `TF::AWS::S3BucketObject.Etag`
-   * Used to trigger updates. The only meaningful value is `${filemd5("path/to/file")}` (Terraform 0.11.12 or later) or `${md5(file("path/to/file"))}` (Terraform 0.11.11 or earlier).
-This attribute is not compatible with KMS encryption, `kms_key_id` or `server_side_encryption = "aws:kms"`.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly etag: string | undefined;
-  /**
-   * `TF::AWS::S3BucketObject.ForceDestroy`
-   * Allow the object to be deleted by removing any legal hold on any object version.
-Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly forceDestroy: any | undefined;
-  /**
-   * `TF::AWS::S3BucketObject.Key`
-   * The name of the object once it is in the bucket.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly key: string;
-  /**
-   * `TF::AWS::S3BucketObject.KmsKeyId`
-   * Amazon Resource Name (ARN) of the KMS Key to use for object encryption. If the S3 Bucket has server-side encryption enabled, that value will automatically be used. If referencing the
-`aws_kms_key` resource, use the `arn` attribute. If referencing the `aws_kms_alias` data source or resource, use the `target_key_arn` attribute. Terraform will only perform drift detection if a configuration value
-is provided.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly kmsKeyId: string | undefined;
-  /**
-   * `TF::AWS::S3BucketObject.Metadata`
-   * A map of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly metadata: MetadataDefinition[] | undefined;
-  /**
-   * `TF::AWS::S3BucketObject.ObjectLockLegalHoldStatus`
-   * The [legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds) status that you want to apply to the specified object. Valid values are `ON` and `OFF`.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly objectLockLegalHoldStatus: string | undefined;
-  /**
-   * `TF::AWS::S3BucketObject.ObjectLockMode`
-   * The object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) that you want to apply to this object. Valid values are `GOVERNANCE` and `COMPLIANCE`.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly objectLockMode: string | undefined;
-  /**
-   * `TF::AWS::S3BucketObject.ObjectLockRetainUntilDate`
-   * The date and time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), when this object's object lock will [expire](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods).
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly objectLockRetainUntilDate: string | undefined;
-  /**
-   * `TF::AWS::S3BucketObject.ServerSideEncryption`
-   * Specifies server-side encryption of the object in S3. Valid values are "`AES256`" and "`aws:kms`".
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly serverSideEncryption: string | undefined;
-  /**
-   * `TF::AWS::S3BucketObject.Source`
-   * The path to a file that will be read and uploaded as raw bytes for the object content.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly source: string | undefined;
-  /**
-   * `TF::AWS::S3BucketObject.StorageClass`
-   * Specifies the desired [Storage Class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html)
-for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA`", "`INTELLIGENT_TIERING`", "`GLACIER`", "`DEEP_ARCHIVE`", or "`STANDARD_IA`". Defaults to "`STANDARD`".
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly storageClass: string | undefined;
-  /**
-   * `TF::AWS::S3BucketObject.Tags`
-   * A map of tags to assign to the object. If configured with a provider [`default_tags` configuration block](/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly tags: TagsDefinition[] | undefined;
-  /**
-   * `TF::AWS::S3BucketObject.TagsAll`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly tagsAll: TagsAllDefinition[] | undefined;
-  /**
-   * `TF::AWS::S3BucketObject.WebsiteRedirect`
-   * Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly websiteRedirect: string | undefined;
+  public readonly props: CfnS3bucketobjectProps;
+
   /**
    * Attribute `TF::AWS::S3BucketObject.tfcfnid`
    * @link https://github.com/iann0036/cfn-tf-custom-types.git
@@ -501,30 +358,8 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
   constructor(scope: cdk.Construct, id: string, props: CfnS3bucketobjectProps) {
     super(scope, id, { type: CfnS3bucketobject.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnS3bucketobjectProps(props)! });
 
-    this.acl = props.acl;
-    this.bucket = props.bucket;
-    this.bucketKeyEnabled = props.bucketKeyEnabled;
-    this.cacheControl = props.cacheControl;
-    this.content = props.content;
-    this.contentBase64 = props.contentBase64;
-    this.contentDisposition = props.contentDisposition;
-    this.contentEncoding = props.contentEncoding;
-    this.contentLanguage = props.contentLanguage;
-    this.contentType = props.contentType;
-    this.etag = props.etag;
-    this.forceDestroy = props.forceDestroy;
-    this.key = props.key;
-    this.kmsKeyId = props.kmsKeyId;
-    this.metadata = props.metadata;
-    this.objectLockLegalHoldStatus = props.objectLockLegalHoldStatus;
-    this.objectLockMode = props.objectLockMode;
-    this.objectLockRetainUntilDate = props.objectLockRetainUntilDate;
-    this.serverSideEncryption = props.serverSideEncryption;
-    this.source = props.source;
-    this.storageClass = props.storageClass;
-    this.tags = props.tags;
-    this.tagsAll = props.tagsAll;
-    this.websiteRedirect = props.websiteRedirect;
+    this.props = props;
+
     this.attrTfcfnid = cdk.Token.asString(this.getAtt('tfcfnid'));
     this.attrId = cdk.Token.asString(this.getAtt('Id'));
     this.attrVersionId = cdk.Token.asString(this.getAtt('VersionId'));

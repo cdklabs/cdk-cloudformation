@@ -69,29 +69,10 @@ export class CfnResource extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "AWSQS::Kubernetes::Resource";
 
   /**
-   * `AWSQS::Kubernetes::Resource.ClusterName`
-   * Name of the EKS cluster
-   * @link https://github.com/aws-quickstart/quickstart-amazon-eks.git
+   * Resource props.
    */
-  public readonly clusterName: string;
-  /**
-   * `AWSQS::Kubernetes::Resource.Namespace`
-   * Kubernetes namespace
-   * @link https://github.com/aws-quickstart/quickstart-amazon-eks.git
-   */
-  public readonly namespace: string | undefined;
-  /**
-   * `AWSQS::Kubernetes::Resource.Manifest`
-   * Text representation of the kubernetes yaml manifests to apply to the cluster.
-   * @link https://github.com/aws-quickstart/quickstart-amazon-eks.git
-   */
-  public readonly manifest: string | undefined;
-  /**
-   * `AWSQS::Kubernetes::Resource.Url`
-   * Url to the kubernetes yaml manifests to apply to the cluster. Urls starting with s3:// will be fetched using an authenticated S3 read.
-   * @link https://github.com/aws-quickstart/quickstart-amazon-eks.git
-   */
-  public readonly url: string | undefined;
+  public readonly props: CfnResourceProps;
+
   /**
    * Attribute `AWSQS::Kubernetes::Resource.Name`
    * @link https://github.com/aws-quickstart/quickstart-amazon-eks.git
@@ -128,10 +109,8 @@ export class CfnResource extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnResourceProps) {
     super(scope, id, { type: CfnResource.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnResourceProps(props)! });
 
-    this.clusterName = props.clusterName;
-    this.namespace = props.namespace;
-    this.manifest = props.manifest;
-    this.url = props.url;
+    this.props = props;
+
     this.attrName = cdk.Token.asString(this.getAtt('Name'));
     this.attrResourceVersion = cdk.Token.asString(this.getAtt('ResourceVersion'));
     this.attrSelfLink = cdk.Token.asString(this.getAtt('SelfLink'));

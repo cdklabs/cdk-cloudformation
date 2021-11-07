@@ -377,41 +377,10 @@ export class CfnSchema extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "Generic::Database::Schema";
 
   /**
-   * `Generic::Database::Schema.ClusterArn`
-   * The Amazon Resource Name (ARN) of the Aurora Serverless DB cluster.
-   * @link https://github.com/iann0036/cfn-types/tree/master/generic-database-schema
+   * Resource props.
    */
-  public readonly clusterArn: string;
-  /**
-   * `Generic::Database::Schema.SecretArn`
-   * The name or ARN of the secret that enables access to the DB cluster.
-   * @link https://github.com/iann0036/cfn-types/tree/master/generic-database-schema
-   */
-  public readonly secretArn: string;
-  /**
-   * `Generic::Database::Schema.Databases`
-   * An array of databases to manage within the cluster.
-   * @link https://github.com/iann0036/cfn-types/tree/master/generic-database-schema
-   */
-  public readonly databases: Database[] | undefined;
-  /**
-   * `Generic::Database::Schema.SQL`
-   * An array of SQL statements to execute within the postgres database.
-   * @link https://github.com/iann0036/cfn-types/tree/master/generic-database-schema
-   */
-  public readonly sql: string[] | undefined;
-  /**
-   * `Generic::Database::Schema.Users`
-   * An array of users within the cluster.
-   * @link https://github.com/iann0036/cfn-types/tree/master/generic-database-schema
-   */
-  public readonly users: User[] | undefined;
-  /**
-   * `Generic::Database::Schema.SQLIdempotency`
-   * Whether arbitrary SQL statements are executed once (IDEMPOTENT), or on every update (RUN_ONCE).
-   * @link https://github.com/iann0036/cfn-types/tree/master/generic-database-schema
-   */
-  public readonly sQLIdempotency: string | undefined;
+  public readonly props: CfnSchemaProps;
+
   /**
    * Attribute `Generic::Database::Schema.ExecutionId`
    * @link https://github.com/iann0036/cfn-types/tree/master/generic-database-schema
@@ -428,12 +397,8 @@ export class CfnSchema extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnSchemaProps) {
     super(scope, id, { type: CfnSchema.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnSchemaProps(props)! });
 
-    this.clusterArn = props.clusterArn;
-    this.secretArn = props.secretArn;
-    this.databases = props.databases;
-    this.sql = props.sql;
-    this.users = props.users;
-    this.sQLIdempotency = props.sQLIdempotency;
+    this.props = props;
+
     this.attrExecutionId = cdk.Token.asString(this.getAtt('ExecutionId'));
   }
 }

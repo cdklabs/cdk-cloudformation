@@ -283,64 +283,10 @@ export class CfnDatabaseuser extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "MongoDB::Atlas::DatabaseUser";
 
   /**
-   * `MongoDB::Atlas::DatabaseUser.AWSIAMType`
-   * If this value is set, the new database user authenticates with AWS IAM credentials.
-   * @link http://unknown-url
+   * Resource props.
    */
-  public readonly aWSIAMType: string | undefined;
-  /**
-   * `MongoDB::Atlas::DatabaseUser.ApiKeys`
-   * @link http://unknown-url
-   */
-  public readonly apiKeys: apiKeyDefinition | undefined;
-  /**
-   * `MongoDB::Atlas::DatabaseUser.DatabaseName`
-   * The user’s authentication database. A user must provide both a username and authentication database to log into MongoDB. In Atlas deployments of MongoDB, the authentication database is always the admin database.
-   * @link http://unknown-url
-   */
-  public readonly databaseName: string;
-  /**
-   * `MongoDB::Atlas::DatabaseUser.Labels`
-   * Array containing key-value pairs that tag and categorize the database user.
-   * @link http://unknown-url
-   */
-  public readonly labels: labelDefinition[] | undefined;
-  /**
-   * `MongoDB::Atlas::DatabaseUser.LdapAuthType`
-   * Method by which the provided username is authenticated. If no value is given, Atlas uses the default value of NONE.
-   * @link http://unknown-url
-   */
-  public readonly ldapAuthType: string | undefined;
-  /**
-   * `MongoDB::Atlas::DatabaseUser.Password`
-   * The user’s password. This field is not included in the entity returned from the server.
-   * @link http://unknown-url
-   */
-  public readonly password: string | undefined;
-  /**
-   * `MongoDB::Atlas::DatabaseUser.ProjectId`
-   * Unique identifier of the Atlas project to which the user belongs.
-   * @link http://unknown-url
-   */
-  public readonly projectId: string;
-  /**
-   * `MongoDB::Atlas::DatabaseUser.Roles`
-   * Array of this user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well.
-   * @link http://unknown-url
-   */
-  public readonly roles: roleDefinition[];
-  /**
-   * `MongoDB::Atlas::DatabaseUser.Scopes`
-   * Array of clusters and Atlas Data Lakes that this user has access to. If omitted, Atlas grants the user access to all the clusters and Atlas Data Lakes in the project by default.
-   * @link http://unknown-url
-   */
-  public readonly scopes: scopeDefinition[] | undefined;
-  /**
-   * `MongoDB::Atlas::DatabaseUser.Username`
-   * Username for authenticating to MongoDB.
-   * @link http://unknown-url
-   */
-  public readonly username: string;
+  public readonly props: CfnDatabaseuserProps;
+
   /**
    * Attribute `MongoDB::Atlas::DatabaseUser.UserCFNIdentifier`
    * @link http://unknown-url
@@ -357,16 +303,8 @@ export class CfnDatabaseuser extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnDatabaseuserProps) {
     super(scope, id, { type: CfnDatabaseuser.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnDatabaseuserProps(props)! });
 
-    this.aWSIAMType = props.aWSIAMType;
-    this.apiKeys = props.apiKeys;
-    this.databaseName = props.databaseName;
-    this.labels = props.labels;
-    this.ldapAuthType = props.ldapAuthType;
-    this.password = props.password;
-    this.projectId = props.projectId;
-    this.roles = props.roles;
-    this.scopes = props.scopes;
-    this.username = props.username;
+    this.props = props;
+
     this.attrUserCFNIdentifier = cdk.Token.asString(this.getAtt('UserCFNIdentifier'));
   }
 }

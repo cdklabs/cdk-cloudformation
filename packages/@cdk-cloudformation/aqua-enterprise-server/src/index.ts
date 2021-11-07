@@ -162,71 +162,10 @@ export class CfnServer extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "Aqua::Enterprise::Server";
 
   /**
-   * `Aqua::Enterprise::Server.ClusterID`
-   * EKS cluster name
-   * @link https://github.com/aquasecurity/aqua-helm.git
+   * Resource props.
    */
-  public readonly clusterID: string;
-  /**
-   * `Aqua::Enterprise::Server.KubeConfig`
-   * Secrets Manager ARN for kubeconfig file
-   * @link https://github.com/aquasecurity/aqua-helm.git
-   */
-  public readonly kubeConfig: Arn;
-  /**
-   * `Aqua::Enterprise::Server.RoleArn`
-   * IAM to use with EKS cluster authentication, if not resource execution role will be used
-   * @link https://github.com/aquasecurity/aqua-helm.git
-   */
-  public readonly roleArn: Arn;
-  /**
-   * `Aqua::Enterprise::Server.Namespace`
-   * Namespace to use with helm. Created if doesn't exist and default will be used if not provided
-   * @link https://github.com/aquasecurity/aqua-helm.git
-   */
-  public readonly namespace: string;
-  /**
-   * `Aqua::Enterprise::Server.Name`
-   * Name for the helm release
-   * @link https://github.com/aquasecurity/aqua-helm.git
-   */
-  public readonly name: string;
-  /**
-   * `Aqua::Enterprise::Server.Values`
-   * Custom Values can optionally be specified
-   * @link https://github.com/aquasecurity/aqua-helm.git
-   */
-  public readonly values: any;
-  /**
-   * `Aqua::Enterprise::Server.ValueYaml`
-   * String representation of a values.yaml file
-   * @link https://github.com/aquasecurity/aqua-helm.git
-   */
-  public readonly valueYaml: string;
-  /**
-   * `Aqua::Enterprise::Server.Version`
-   * Version can be specified, if not latest will be used
-   * @link https://github.com/aquasecurity/aqua-helm.git
-   */
-  public readonly version: string;
-  /**
-   * `Aqua::Enterprise::Server.ValueOverrideURL`
-   * Custom Value Yaml file can optionally be specified
-   * @link https://github.com/aquasecurity/aqua-helm.git
-   */
-  public readonly valueOverrideURL: string;
-  /**
-   * `Aqua::Enterprise::Server.TimeOut`
-   * Timeout for resource provider. Default 60 mins
-   * @link https://github.com/aquasecurity/aqua-helm.git
-   */
-  public readonly timeOut: number;
-  /**
-   * `Aqua::Enterprise::Server.VPCConfiguration`
-   * For network connectivity to Cluster inside VPC
-   * @link https://github.com/aquasecurity/aqua-helm.git
-   */
-  public readonly vPCConfiguration: any;
+  public readonly props: CfnServerProps;
+
   /**
    * Attribute `Aqua::Enterprise::Server.ID`
    * @link https://github.com/aquasecurity/aqua-helm.git
@@ -243,17 +182,8 @@ export class CfnServer extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnServerProps) {
     super(scope, id, { type: CfnServer.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnServerProps(props)! });
 
-    this.clusterID = props.clusterID;
-    this.kubeConfig = props.kubeConfig;
-    this.roleArn = props.roleArn;
-    this.namespace = props.namespace;
-    this.name = props.name;
-    this.values = props.values;
-    this.valueYaml = props.valueYaml;
-    this.version = props.version;
-    this.valueOverrideURL = props.valueOverrideURL;
-    this.timeOut = props.timeOut;
-    this.vPCConfiguration = props.vPCConfiguration;
+    this.props = props;
+
     this.attrId = cdk.Token.asString(this.getAtt('ID'));
   }
 }

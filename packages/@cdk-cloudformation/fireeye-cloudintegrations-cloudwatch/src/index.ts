@@ -77,35 +77,10 @@ export class CfnCloudwatch extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "FireEye::CloudIntegrations::Cloudwatch";
 
   /**
-   * `FireEye::CloudIntegrations::Cloudwatch.ApiKey`
-   * Helix API Key
-   * @link http://unknown-url
+   * Resource props.
    */
-  public readonly apiKey: string;
-  /**
-   * `FireEye::CloudIntegrations::Cloudwatch.LogGroupName`
-   * CloudWatch LogGroup to monitor
-   * @link http://unknown-url
-   */
-  public readonly logGroupName: string;
-  /**
-   * `FireEye::CloudIntegrations::Cloudwatch.Region`
-   * LogGroup AWS region
-   * @link http://unknown-url
-   */
-  public readonly region: string;
-  /**
-   * `FireEye::CloudIntegrations::Cloudwatch.ExecRole`
-   * Lambda Execution role
-   * @link http://unknown-url
-   */
-  public readonly execRole: string;
-  /**
-   * `FireEye::CloudIntegrations::Cloudwatch.HelixUploadUrl`
-   * Helix API upload URL
-   * @link http://unknown-url
-   */
-  public readonly helixUploadUrl: string;
+  public readonly props: CfnCloudwatchProps;
+
   /**
    * Attribute `FireEye::CloudIntegrations::Cloudwatch.primaryIdentifier`
    * @link http://unknown-url
@@ -122,11 +97,8 @@ export class CfnCloudwatch extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnCloudwatchProps) {
     super(scope, id, { type: CfnCloudwatch.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnCloudwatchProps(props)! });
 
-    this.apiKey = props.apiKey;
-    this.logGroupName = props.logGroupName;
-    this.region = props.region;
-    this.execRole = props.execRole;
-    this.helixUploadUrl = props.helixUploadUrl;
+    this.props = props;
+
     this.attrPrimaryIdentifier = cdk.Token.asString(this.getAtt('primaryIdentifier'));
   }
 }

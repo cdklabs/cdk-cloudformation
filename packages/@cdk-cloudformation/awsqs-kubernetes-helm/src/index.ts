@@ -248,89 +248,10 @@ export class CfnHelm extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "AWSQS::Kubernetes::Helm";
 
   /**
-   * `AWSQS::Kubernetes::Helm.ClusterID`
-   * EKS cluster name
-   * @link https://github.com/aws-quickstart/quickstart-helm-resource-provider.git
+   * Resource props.
    */
-  public readonly clusterID: string | undefined;
-  /**
-   * `AWSQS::Kubernetes::Helm.KubeConfig`
-   * Secrets Manager ARN for kubeconfig file
-   * @link https://github.com/aws-quickstart/quickstart-helm-resource-provider.git
-   */
-  public readonly kubeConfig: Arn | undefined;
-  /**
-   * `AWSQS::Kubernetes::Helm.RoleArn`
-   * IAM to use with EKS cluster authentication, if not resource execution role will be used
-   * @link https://github.com/aws-quickstart/quickstart-helm-resource-provider.git
-   */
-  public readonly roleArn: Arn | undefined;
-  /**
-   * `AWSQS::Kubernetes::Helm.Repository`
-   * Repository url. Defaults to kubernetes-charts.storage.googleapis.com
-   * @link https://github.com/aws-quickstart/quickstart-helm-resource-provider.git
-   */
-  public readonly repository: string | undefined;
-  /**
-   * `AWSQS::Kubernetes::Helm.RepositoryOptions`
-   * Extra options for repository
-   * @link https://github.com/aws-quickstart/quickstart-helm-resource-provider.git
-   */
-  public readonly repositoryOptions: any | undefined;
-  /**
-   * `AWSQS::Kubernetes::Helm.Chart`
-   * Chart name
-   * @link https://github.com/aws-quickstart/quickstart-helm-resource-provider.git
-   */
-  public readonly chart: string;
-  /**
-   * `AWSQS::Kubernetes::Helm.Namespace`
-   * Namespace to use with helm. Created if doesn't exist and default will be used if not provided
-   * @link https://github.com/aws-quickstart/quickstart-helm-resource-provider.git
-   */
-  public readonly namespace: string | undefined;
-  /**
-   * `AWSQS::Kubernetes::Helm.Name`
-   * Name for the helm release
-   * @link https://github.com/aws-quickstart/quickstart-helm-resource-provider.git
-   */
-  public readonly name: string | undefined;
-  /**
-   * `AWSQS::Kubernetes::Helm.Values`
-   * Custom Values can optionally be specified
-   * @link https://github.com/aws-quickstart/quickstart-helm-resource-provider.git
-   */
-  public readonly values: any | undefined;
-  /**
-   * `AWSQS::Kubernetes::Helm.ValueYaml`
-   * String representation of a values.yaml file
-   * @link https://github.com/aws-quickstart/quickstart-helm-resource-provider.git
-   */
-  public readonly valueYaml: string | undefined;
-  /**
-   * `AWSQS::Kubernetes::Helm.Version`
-   * Version can be specified, if not latest will be used
-   * @link https://github.com/aws-quickstart/quickstart-helm-resource-provider.git
-   */
-  public readonly version: string | undefined;
-  /**
-   * `AWSQS::Kubernetes::Helm.ValueOverrideURL`
-   * Custom Value Yaml file can optionally be specified
-   * @link https://github.com/aws-quickstart/quickstart-helm-resource-provider.git
-   */
-  public readonly valueOverrideURL: string | undefined;
-  /**
-   * `AWSQS::Kubernetes::Helm.TimeOut`
-   * Timeout for resource provider. Default 60 mins
-   * @link https://github.com/aws-quickstart/quickstart-helm-resource-provider.git
-   */
-  public readonly timeOut: number | undefined;
-  /**
-   * `AWSQS::Kubernetes::Helm.VPCConfiguration`
-   * For network connectivity to Cluster inside VPC
-   * @link https://github.com/aws-quickstart/quickstart-helm-resource-provider.git
-   */
-  public readonly vPCConfiguration: any | undefined;
+  public readonly props: CfnHelmProps;
+
   /**
    * Attribute `AWSQS::Kubernetes::Helm.ID`
    * @link https://github.com/aws-quickstart/quickstart-helm-resource-provider.git
@@ -347,20 +268,8 @@ export class CfnHelm extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnHelmProps) {
     super(scope, id, { type: CfnHelm.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnHelmProps(props)! });
 
-    this.clusterID = props.clusterID;
-    this.kubeConfig = props.kubeConfig;
-    this.roleArn = props.roleArn;
-    this.repository = props.repository;
-    this.repositoryOptions = props.repositoryOptions;
-    this.chart = props.chart;
-    this.namespace = props.namespace;
-    this.name = props.name;
-    this.values = props.values;
-    this.valueYaml = props.valueYaml;
-    this.version = props.version;
-    this.valueOverrideURL = props.valueOverrideURL;
-    this.timeOut = props.timeOut;
-    this.vPCConfiguration = props.vPCConfiguration;
+    this.props = props;
+
     this.attrId = cdk.Token.asString(this.getAtt('ID'));
   }
 }

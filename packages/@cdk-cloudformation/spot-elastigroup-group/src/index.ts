@@ -1446,15 +1446,10 @@ export class CfnGroup extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "Spot::Elastigroup::Group";
 
   /**
-   * `Spot::Elastigroup::Group.credentials`
-   * @link http://unknown-url
+   * Resource props.
    */
-  public readonly credentials: any;
-  /**
-   * `Spot::Elastigroup::Group.group`
-   * @link http://unknown-url
-   */
-  public readonly group: any | undefined;
+  public readonly props: CfnGroupProps;
+
 
   /**
    * Create a new `Spot::Elastigroup::Group`.
@@ -1466,7 +1461,7 @@ export class CfnGroup extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnGroupProps) {
     super(scope, id, { type: CfnGroup.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnGroupProps(props)! });
 
-    this.credentials = props.credentials;
-    this.group = props.group;
+    this.props = props;
+
   }
 }

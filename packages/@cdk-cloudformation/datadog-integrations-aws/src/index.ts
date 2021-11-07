@@ -94,47 +94,10 @@ export class CfnAws extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "Datadog::Integrations::AWS";
 
   /**
-   * `Datadog::Integrations::AWS.AccountID`
-   * Your AWS Account ID without dashes.
-   * @link http://unknown-url
+   * Resource props.
    */
-  public readonly accountID: string | undefined;
-  /**
-   * `Datadog::Integrations::AWS.RoleName`
-   * Your Datadog role delegation name.
-   * @link http://unknown-url
-   */
-  public readonly roleName: string | undefined;
-  /**
-   * `Datadog::Integrations::AWS.AccessKeyID`
-   * If your AWS account is a GovCloud or China account, enter the corresponding Access Key ID.
-   * @link http://unknown-url
-   */
-  public readonly accessKeyID: string | undefined;
-  /**
-   * `Datadog::Integrations::AWS.FilterTags`
-   * The array of EC2 tags (in the form key:value) defines a filter that Datadog uses when collecting metrics from EC2.
-   * @link http://unknown-url
-   */
-  public readonly filterTags: string[] | undefined;
-  /**
-   * `Datadog::Integrations::AWS.HostTags`
-   * Array of tags (in the form key:value) to add to all hosts and metrics reporting through this integration.
-   * @link http://unknown-url
-   */
-  public readonly hostTags: string[] | undefined;
-  /**
-   * `Datadog::Integrations::AWS.AccountSpecificNamespaceRules`
-   * An object (in the form {"namespace1":true/false, "namespace2":true/false}) that enables or disables metric collection for specific AWS namespaces for this AWS account only.
-   * @link http://unknown-url
-   */
-  public readonly accountSpecificNamespaceRules: any | undefined;
-  /**
-   * `Datadog::Integrations::AWS.ExternalIDSecretName`
-   * The name of the AWS SecretsManager secret created in your account to hold this integration's `external_id`. Defaults to `DatadogIntegrationExternalID`. Cannot be referenced from created resource.
-   * @link http://unknown-url
-   */
-  public readonly externalIDSecretName: string | undefined;
+  public readonly props: CfnAwsProps;
+
   /**
    * Attribute `Datadog::Integrations::AWS.IntegrationID`
    * @link http://unknown-url
@@ -151,13 +114,8 @@ export class CfnAws extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnAwsProps) {
     super(scope, id, { type: CfnAws.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnAwsProps(props)! });
 
-    this.accountID = props.accountID;
-    this.roleName = props.roleName;
-    this.accessKeyID = props.accessKeyID;
-    this.filterTags = props.filterTags;
-    this.hostTags = props.hostTags;
-    this.accountSpecificNamespaceRules = props.accountSpecificNamespaceRules;
-    this.externalIDSecretName = props.externalIDSecretName;
+    this.props = props;
+
     this.attrIntegrationID = cdk.Token.asString(this.getAtt('IntegrationID'));
   }
 }

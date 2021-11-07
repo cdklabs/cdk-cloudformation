@@ -419,47 +419,10 @@ export class CfnMonitor extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "Datadog::Monitors::Monitor";
 
   /**
-   * `Datadog::Monitors::Monitor.Message`
-   * A message to include with notifications for the monitor
-   * @link http://unknown-url
+   * Resource props.
    */
-  public readonly message: string | undefined;
-  /**
-   * `Datadog::Monitors::Monitor.Name`
-   * Name of the monitor
-   * @link http://unknown-url
-   */
-  public readonly name: string | undefined;
-  /**
-   * `Datadog::Monitors::Monitor.Tags`
-   * Tags associated with the monitor
-   * @link http://unknown-url
-   */
-  public readonly tags: string[] | undefined;
-  /**
-   * `Datadog::Monitors::Monitor.Options`
-   * The monitor options
-   * @link http://unknown-url
-   */
-  public readonly options: MonitorOptions | undefined;
-  /**
-   * `Datadog::Monitors::Monitor.Query`
-   * The monitor query
-   * @link http://unknown-url
-   */
-  public readonly query: string;
-  /**
-   * `Datadog::Monitors::Monitor.Type`
-   * The type of the monitor
-   * @link http://unknown-url
-   */
-  public readonly type: string;
-  /**
-   * `Datadog::Monitors::Monitor.Multi`
-   * Whether or not the monitor is multi alert
-   * @link http://unknown-url
-   */
-  public readonly multi: any | undefined;
+  public readonly props: CfnMonitorProps;
+
   /**
    * Attribute `Datadog::Monitors::Monitor.Modified`
    * @link http://unknown-url
@@ -486,13 +449,8 @@ export class CfnMonitor extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnMonitorProps) {
     super(scope, id, { type: CfnMonitor.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnMonitorProps(props)! });
 
-    this.message = props.message;
-    this.name = props.name;
-    this.tags = props.tags;
-    this.options = props.options;
-    this.query = props.query;
-    this.type = props.type;
-    this.multi = props.multi;
+    this.props = props;
+
     this.attrModified = cdk.Token.asString(this.getAtt('Modified'));
     this.attrDeleted = cdk.Token.asString(this.getAtt('Deleted'));
     this.attrCreated = cdk.Token.asString(this.getAtt('Created'));

@@ -134,60 +134,10 @@ export class CfnString extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "TF::Random::String";
 
   /**
-   * `TF::Random::String.Keepers`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
+   * Resource props.
    */
-  public readonly keepers: KeepersDefinition[] | undefined;
-  /**
-   * `TF::Random::String.Length`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly length: number;
-  /**
-   * `TF::Random::String.Lower`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly lower: any | undefined;
-  /**
-   * `TF::Random::String.MinLower`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly minLower: number | undefined;
-  /**
-   * `TF::Random::String.MinNumeric`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly minNumeric: number | undefined;
-  /**
-   * `TF::Random::String.MinSpecial`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly minSpecial: number | undefined;
-  /**
-   * `TF::Random::String.MinUpper`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly minUpper: number | undefined;
-  /**
-   * `TF::Random::String.Number`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly number: any | undefined;
-  /**
-   * `TF::Random::String.OverrideSpecial`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly overrideSpecial: string | undefined;
-  /**
-   * `TF::Random::String.Special`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly special: any | undefined;
-  /**
-   * `TF::Random::String.Upper`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly upper: any | undefined;
+  public readonly props: CfnStringProps;
+
   /**
    * Attribute `TF::Random::String.tfcfnid`
    * @link https://github.com/iann0036/cfn-tf-custom-types.git
@@ -214,17 +164,8 @@ export class CfnString extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnStringProps) {
     super(scope, id, { type: CfnString.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnStringProps(props)! });
 
-    this.keepers = props.keepers;
-    this.length = props.length;
-    this.lower = props.lower;
-    this.minLower = props.minLower;
-    this.minNumeric = props.minNumeric;
-    this.minSpecial = props.minSpecial;
-    this.minUpper = props.minUpper;
-    this.number = props.number;
-    this.overrideSpecial = props.overrideSpecial;
-    this.special = props.special;
-    this.upper = props.upper;
+    this.props = props;
+
     this.attrTfcfnid = cdk.Token.asString(this.getAtt('tfcfnid'));
     this.attrId = cdk.Token.asString(this.getAtt('Id'));
     this.attrResult = cdk.Token.asString(this.getAtt('Result'));

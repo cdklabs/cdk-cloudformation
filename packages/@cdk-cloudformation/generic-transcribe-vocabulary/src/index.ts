@@ -69,29 +69,10 @@ export class CfnVocabulary extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "Generic::Transcribe::Vocabulary";
 
   /**
-   * `Generic::Transcribe::Vocabulary.LanguageCode`
-   * The language code of the vocabulary entries. For a list of languages and their corresponding language codes, see [What is Amazon Transcribe?](https://docs.aws.amazon.com/transcribe/latest/dg/what-is-transcribe.html).
-   * @link https://github.com/iann0036/cfn-types/tree/master/generic-transcribe-vocabulary
+   * Resource props.
    */
-  public readonly languageCode: string;
-  /**
-   * `Generic::Transcribe::Vocabulary.Phrases`
-   * An array of strings that contains the vocabulary entries.
-   * @link https://github.com/iann0036/cfn-types/tree/master/generic-transcribe-vocabulary
-   */
-  public readonly phrases: string[] | undefined;
-  /**
-   * `Generic::Transcribe::Vocabulary.VocabularyFileUri`
-   * The S3 location of the text file that contains the definition of the custom vocabulary. The URI must be in the same region as the API endpoint that you are calling.
-   * @link https://github.com/iann0036/cfn-types/tree/master/generic-transcribe-vocabulary
-   */
-  public readonly vocabularyFileUri: string | undefined;
-  /**
-   * `Generic::Transcribe::Vocabulary.VocabularyName`
-   * The name of the vocabulary. The name must be unique within an AWS account. The name is case sensitive.
-   * @link https://github.com/iann0036/cfn-types/tree/master/generic-transcribe-vocabulary
-   */
-  public readonly vocabularyName: string;
+  public readonly props: CfnVocabularyProps;
+
 
   /**
    * Create a new `Generic::Transcribe::Vocabulary`.
@@ -103,9 +84,7 @@ export class CfnVocabulary extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnVocabularyProps) {
     super(scope, id, { type: CfnVocabulary.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnVocabularyProps(props)! });
 
-    this.languageCode = props.languageCode;
-    this.phrases = props.phrases;
-    this.vocabularyFileUri = props.vocabularyFileUri;
-    this.vocabularyName = props.vocabularyName;
+    this.props = props;
+
   }
 }

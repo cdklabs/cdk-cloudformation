@@ -73,33 +73,10 @@ export class CfnUser extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "Atlassian::Opsgenie::User";
 
   /**
-   * `Atlassian::Opsgenie::User.OpsgenieApiEndpoint`
-   * @link https://github.com/opsgenie/opsgenie-cloudformation-resources
+   * Resource props.
    */
-  public readonly opsgenieApiEndpoint: string;
-  /**
-   * `Atlassian::Opsgenie::User.OpsgenieApiKey`
-   * @link https://github.com/opsgenie/opsgenie-cloudformation-resources
-   */
-  public readonly opsgenieApiKey: string;
-  /**
-   * `Atlassian::Opsgenie::User.Username`
-   * Opsgenie Username the mail address of the user
-   * @link https://github.com/opsgenie/opsgenie-cloudformation-resources
-   */
-  public readonly username: string;
-  /**
-   * `Atlassian::Opsgenie::User.FullName`
-   * User full name
-   * @link https://github.com/opsgenie/opsgenie-cloudformation-resources
-   */
-  public readonly fullName: string;
-  /**
-   * `Atlassian::Opsgenie::User.Role`
-   * User role, default is User
-   * @link https://github.com/opsgenie/opsgenie-cloudformation-resources
-   */
-  public readonly role: string;
+  public readonly props: CfnUserProps;
+
   /**
    * Attribute `Atlassian::Opsgenie::User.UserId`
    * @link https://github.com/opsgenie/opsgenie-cloudformation-resources
@@ -116,11 +93,8 @@ export class CfnUser extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnUserProps) {
     super(scope, id, { type: CfnUser.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnUserProps(props)! });
 
-    this.opsgenieApiEndpoint = props.opsgenieApiEndpoint;
-    this.opsgenieApiKey = props.opsgenieApiKey;
-    this.username = props.username;
-    this.fullName = props.fullName;
-    this.role = props.role;
+    this.props = props;
+
     this.attrUserId = cdk.Token.asString(this.getAtt('UserId'));
   }
 }

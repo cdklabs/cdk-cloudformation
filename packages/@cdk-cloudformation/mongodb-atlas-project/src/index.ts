@@ -98,22 +98,10 @@ export class CfnProject extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "MongoDB::Atlas::Project";
 
   /**
-   * `MongoDB::Atlas::Project.Name`
-   * Name of the project to create.
-   * @link http://unknown-url
+   * Resource props.
    */
-  public readonly name: string;
-  /**
-   * `MongoDB::Atlas::Project.OrgId`
-   * Unique identifier of the organization within which to create the project.
-   * @link http://unknown-url
-   */
-  public readonly orgId: string;
-  /**
-   * `MongoDB::Atlas::Project.ApiKeys`
-   * @link http://unknown-url
-   */
-  public readonly apiKeys: apiKeyDefinition | undefined;
+  public readonly props: CfnProjectProps;
+
   /**
    * Attribute `MongoDB::Atlas::Project.Id`
    * @link http://unknown-url
@@ -135,9 +123,8 @@ export class CfnProject extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnProjectProps) {
     super(scope, id, { type: CfnProject.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnProjectProps(props)! });
 
-    this.name = props.name;
-    this.orgId = props.orgId;
-    this.apiKeys = props.apiKeys;
+    this.props = props;
+
     this.attrId = cdk.Token.asString(this.getAtt('Id'));
     this.attrCreated = cdk.Token.asString(this.getAtt('Created'));
   }

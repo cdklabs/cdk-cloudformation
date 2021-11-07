@@ -74,10 +74,10 @@ export class CfnUuid extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "TF::Random::Uuid";
 
   /**
-   * `TF::Random::Uuid.Keepers`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
+   * Resource props.
    */
-  public readonly keepers: KeepersDefinition[] | undefined;
+  public readonly props: CfnUuidProps;
+
   /**
    * Attribute `TF::Random::Uuid.tfcfnid`
    * @link https://github.com/iann0036/cfn-tf-custom-types.git
@@ -104,7 +104,8 @@ export class CfnUuid extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnUuidProps) {
     super(scope, id, { type: CfnUuid.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnUuidProps(props)! });
 
-    this.keepers = props.keepers;
+    this.props = props;
+
     this.attrTfcfnid = cdk.Token.asString(this.getAtt('tfcfnid'));
     this.attrId = cdk.Token.asString(this.getAtt('Id'));
     this.attrResult = cdk.Token.asString(this.getAtt('Result'));

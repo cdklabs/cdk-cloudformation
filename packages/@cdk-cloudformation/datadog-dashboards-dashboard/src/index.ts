@@ -45,11 +45,10 @@ export class CfnDashboard extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "Datadog::Dashboards::Dashboard";
 
   /**
-   * `Datadog::Dashboards::Dashboard.DashboardDefinition`
-   * JSON string of the dashboard definition
-   * @link http://unknown-url
+   * Resource props.
    */
-  public readonly dashboardDefinition: string;
+  public readonly props: CfnDashboardProps;
+
   /**
    * Attribute `Datadog::Dashboards::Dashboard.Id`
    * @link http://unknown-url
@@ -71,7 +70,8 @@ export class CfnDashboard extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnDashboardProps) {
     super(scope, id, { type: CfnDashboard.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnDashboardProps(props)! });
 
-    this.dashboardDefinition = props.dashboardDefinition;
+    this.props = props;
+
     this.attrId = cdk.Token.asString(this.getAtt('Id'));
     this.attrUrl = cdk.Token.asString(this.getAtt('Url'));
   }

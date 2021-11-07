@@ -61,25 +61,10 @@ export class CfnComputer extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "TF::AD::Computer";
 
   /**
-   * `TF::AD::Computer.Container`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
+   * Resource props.
    */
-  public readonly container: string | undefined;
-  /**
-   * `TF::AD::Computer.Description`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly description: string | undefined;
-  /**
-   * `TF::AD::Computer.Name`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly name: string;
-  /**
-   * `TF::AD::Computer.Pre2kname`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly pre2kname: string | undefined;
+  public readonly props: CfnComputerProps;
+
   /**
    * Attribute `TF::AD::Computer.tfcfnid`
    * @link https://github.com/iann0036/cfn-tf-custom-types.git
@@ -116,10 +101,8 @@ export class CfnComputer extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnComputerProps) {
     super(scope, id, { type: CfnComputer.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnComputerProps(props)! });
 
-    this.container = props.container;
-    this.description = props.description;
-    this.name = props.name;
-    this.pre2kname = props.pre2kname;
+    this.props = props;
+
     this.attrTfcfnid = cdk.Token.asString(this.getAtt('tfcfnid'));
     this.attrDn = cdk.Token.asString(this.getAtt('Dn'));
     this.attrGuid = cdk.Token.asString(this.getAtt('Guid'));

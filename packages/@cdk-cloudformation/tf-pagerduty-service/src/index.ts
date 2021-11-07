@@ -363,90 +363,10 @@ export class CfnService extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "TF::PagerDuty::Service";
 
   /**
-   * `TF::PagerDuty::Service.AcknowledgementTimeout`
-   * Time in seconds that an incident changes to the Triggered State after being Acknowledged. Disabled if set to the `"null"` string.
-* `escalation_policy` - (Required) The escalation policy used by this service.
-* `alert_creation` - (Optional) Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged. This option is recommended.
-* `alert_grouping` - (Optional) Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident; If value is set to `time`: All alerts within a specified duration will be grouped into the same incident. This duration is set in the `alert_grouping_timeout` setting (described below). Available on Standard, Enterprise, and Event Intelligence plans; If value is set to `intelligent` - Alerts will be intelligently grouped based on a machine learning model that looks at the alert summary, timing, and the history of grouped alerts. Available on Enterprise and Event Intelligence plan.
-* `alert_grouping_timeout` - (Optional) The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alert_grouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
+   * Resource props.
    */
-  public readonly acknowledgementTimeout: string | undefined;
-  /**
-   * `TF::PagerDuty::Service.AlertCreation`
-   * Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged. This option is recommended.
-* `alert_grouping` - (Optional) Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident; If value is set to `time`: All alerts within a specified duration will be grouped into the same incident. This duration is set in the `alert_grouping_timeout` setting (described below). Available on Standard, Enterprise, and Event Intelligence plans; If value is set to `intelligent` - Alerts will be intelligently grouped based on a machine learning model that looks at the alert summary, timing, and the history of grouped alerts. Available on Enterprise and Event Intelligence plan.
-* `alert_grouping_timeout` - (Optional) The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alert_grouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly alertCreation: string | undefined;
-  /**
-   * `TF::PagerDuty::Service.AlertGrouping`
-   * Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident; If value is set to `time`: All alerts within a specified duration will be grouped into the same incident. This duration is set in the `alert_grouping_timeout` setting (described below). Available on Standard, Enterprise, and Event Intelligence plans; If value is set to `intelligent` - Alerts will be intelligently grouped based on a machine learning model that looks at the alert summary, timing, and the history of grouped alerts. Available on Enterprise and Event Intelligence plan.
-* `alert_grouping_timeout` - (Optional) The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alert_grouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly alertGrouping: string | undefined;
-  /**
-   * `TF::PagerDuty::Service.AlertGroupingTimeout`
-   * The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alert_grouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly alertGroupingTimeout: number | undefined;
-  /**
-   * `TF::PagerDuty::Service.AutoResolveTimeout`
-   * Time in seconds that an incident is automatically resolved if left open for that long. Disabled if set to the `"null"` string.
-* `acknowledgement_timeout` - (Optional) Time in seconds that an incident changes to the Triggered State after being Acknowledged. Disabled if set to the `"null"` string.
-* `escalation_policy` - (Required) The escalation policy used by this service.
-* `alert_creation` - (Optional) Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged. This option is recommended.
-* `alert_grouping` - (Optional) Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident; If value is set to `time`: All alerts within a specified duration will be grouped into the same incident. This duration is set in the `alert_grouping_timeout` setting (described below). Available on Standard, Enterprise, and Event Intelligence plans; If value is set to `intelligent` - Alerts will be intelligently grouped based on a machine learning model that looks at the alert summary, timing, and the history of grouped alerts. Available on Enterprise and Event Intelligence plan.
-* `alert_grouping_timeout` - (Optional) The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alert_grouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly autoResolveTimeout: string | undefined;
-  /**
-   * `TF::PagerDuty::Service.Description`
-   * A human-friendly description of the service.
-If not set, a placeholder of "Managed by Terraform" will be set.
-* `auto_resolve_timeout` - (Optional) Time in seconds that an incident is automatically resolved if left open for that long. Disabled if set to the `"null"` string.
-* `acknowledgement_timeout` - (Optional) Time in seconds that an incident changes to the Triggered State after being Acknowledged. Disabled if set to the `"null"` string.
-* `escalation_policy` - (Required) The escalation policy used by this service.
-* `alert_creation` - (Optional) Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged. This option is recommended.
-* `alert_grouping` - (Optional) Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident; If value is set to `time`: All alerts within a specified duration will be grouped into the same incident. This duration is set in the `alert_grouping_timeout` setting (described below). Available on Standard, Enterprise, and Event Intelligence plans; If value is set to `intelligent` - Alerts will be intelligently grouped based on a machine learning model that looks at the alert summary, timing, and the history of grouped alerts. Available on Enterprise and Event Intelligence plan.
-* `alert_grouping_timeout` - (Optional) The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alert_grouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly description: string | undefined;
-  /**
-   * `TF::PagerDuty::Service.EscalationPolicy`
-   * The escalation policy used by this service.
-* `alert_creation` - (Optional) Must be one of two values. PagerDuty receives events from your monitoring systems and can then create incidents in different ways. Value "create_incidents" is default: events will create an incident that cannot be merged. Value "create_alerts_and_incidents" is the alternative: events will create an alert and then add it to a new incident, these incidents can be merged. This option is recommended.
-* `alert_grouping` - (Optional) Defines how alerts on this service will be automatically grouped into incidents. Note that the alert grouping features are available only on certain plans. If not set, each alert will create a separate incident; If value is set to `time`: All alerts within a specified duration will be grouped into the same incident. This duration is set in the `alert_grouping_timeout` setting (described below). Available on Standard, Enterprise, and Event Intelligence plans; If value is set to `intelligent` - Alerts will be intelligently grouped based on a machine learning model that looks at the alert summary, timing, and the history of grouped alerts. Available on Enterprise and Event Intelligence plan.
-* `alert_grouping_timeout` - (Optional) The duration in minutes within which to automatically group incoming alerts. This setting applies only when `alert_grouping` is set to `time`. To continue grouping alerts until the incident is resolved, set this value to `0`.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly escalationPolicy: string;
-  /**
-   * `TF::PagerDuty::Service.Name`
-   * Designates either the start or the end of the scheduled action. Can be `support_hours_start` or `support_hours_end`.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly name: string;
-  /**
-   * `TF::PagerDuty::Service.IncidentUrgencyRule`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly incidentUrgencyRule: IncidentUrgencyRuleDefinition[] | undefined;
-  /**
-   * `TF::PagerDuty::Service.ScheduledActions`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly scheduledActions: ScheduledActionsDefinition[] | undefined;
-  /**
-   * `TF::PagerDuty::Service.SupportHours`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly supportHours: SupportHoursDefinition[] | undefined;
+  public readonly props: CfnServiceProps;
+
   /**
    * Attribute `TF::PagerDuty::Service.tfcfnid`
    * @link https://github.com/iann0036/cfn-tf-custom-types.git
@@ -488,17 +408,8 @@ If not set, a placeholder of "Managed by Terraform" will be set.
   constructor(scope: cdk.Construct, id: string, props: CfnServiceProps) {
     super(scope, id, { type: CfnService.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnServiceProps(props)! });
 
-    this.acknowledgementTimeout = props.acknowledgementTimeout;
-    this.alertCreation = props.alertCreation;
-    this.alertGrouping = props.alertGrouping;
-    this.alertGroupingTimeout = props.alertGroupingTimeout;
-    this.autoResolveTimeout = props.autoResolveTimeout;
-    this.description = props.description;
-    this.escalationPolicy = props.escalationPolicy;
-    this.name = props.name;
-    this.incidentUrgencyRule = props.incidentUrgencyRule;
-    this.scheduledActions = props.scheduledActions;
-    this.supportHours = props.supportHours;
+    this.props = props;
+
     this.attrTfcfnid = cdk.Token.asString(this.getAtt('tfcfnid'));
     this.attrCreatedAt = cdk.Token.asString(this.getAtt('CreatedAt'));
     this.attrHtmlUrl = cdk.Token.asString(this.getAtt('HtmlUrl'));

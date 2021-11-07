@@ -212,58 +212,10 @@ export class CfnRecord extends cdk.CfnResource {
   public static readonly CFN_RESOURCE_TYPE_NAME = "TF::Cloudflare::Record";
 
   /**
-   * `TF::Cloudflare::Record.Data`
-   * Map of attributes that constitute the record value. Primarily used for LOC and SRV record types. Either this or `value` must be specified.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
+   * Resource props.
    */
-  public readonly data: DataDefinition[] | undefined;
-  /**
-   * `TF::Cloudflare::Record.Name`
-   * The name of the record.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly name: string;
-  /**
-   * `TF::Cloudflare::Record.Priority`
-   * The priority of the record.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly priority: number | undefined;
-  /**
-   * `TF::Cloudflare::Record.Proxied`
-   * Whether the record gets Cloudflare's origin protection; defaults to `false`.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly proxied: any | undefined;
-  /**
-   * `TF::Cloudflare::Record.Ttl`
-   * The TTL of the record ([automatic: '1'](https://api.cloudflare.com/#dns-records-for-a-zone-create-dns-record)).
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly ttl: number | undefined;
-  /**
-   * `TF::Cloudflare::Record.Type`
-   * The type of the record.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly type: string;
-  /**
-   * `TF::Cloudflare::Record.Value`
-   * The (string) value of the record. Either this or `data` must be specified.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly value: string | undefined;
-  /**
-   * `TF::Cloudflare::Record.ZoneId`
-   * The DNS zone ID to add the record to.
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly zoneId: string;
-  /**
-   * `TF::Cloudflare::Record.Timeouts`
-   * @link https://github.com/iann0036/cfn-tf-custom-types.git
-   */
-  public readonly timeouts: TimeoutsDefinition | undefined;
+  public readonly props: CfnRecordProps;
+
   /**
    * Attribute `TF::Cloudflare::Record.tfcfnid`
    * @link https://github.com/iann0036/cfn-tf-custom-types.git
@@ -300,15 +252,8 @@ export class CfnRecord extends cdk.CfnResource {
   constructor(scope: cdk.Construct, id: string, props: CfnRecordProps) {
     super(scope, id, { type: CfnRecord.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnRecordProps(props)! });
 
-    this.data = props.data;
-    this.name = props.name;
-    this.priority = props.priority;
-    this.proxied = props.proxied;
-    this.ttl = props.ttl;
-    this.type = props.type;
-    this.value = props.value;
-    this.zoneId = props.zoneId;
-    this.timeouts = props.timeouts;
+    this.props = props;
+
     this.attrTfcfnid = cdk.Token.asString(this.getAtt('tfcfnid'));
     this.attrCreatedOn = cdk.Token.asString(this.getAtt('CreatedOn'));
     this.attrHostname = cdk.Token.asString(this.getAtt('Hostname'));

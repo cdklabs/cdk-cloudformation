@@ -132,7 +132,7 @@ export class CloudFormationTypeProject extends Component {
 
     const packageTask = parent.addTask(`package:${typeNameKebab}`, {
       description: `produce multi-language packaging for ${typeNameKebab}`,
-      exec: 'jsii-pacmak -vv',
+      exec: 'jsii-pacmak',
       cwd: outdir,
     });
 

@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/datadog-dashboards-dashboard",
-  "description": "@cdk-cloudformation/datadog-dashboards-dashboard",
-  "version": "0.0.0",
+  "description": "Datadog Dashboard 2.0.2",
+  "version": "2.0.2",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -10,7 +10,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation-types.git",
-    "directory": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-dashboards-dashboard"
+    "directory": "packages/@cdk-cloudformation/datadog-dashboards-dashboard"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

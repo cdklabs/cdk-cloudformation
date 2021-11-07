@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/fireeye-cloudintegrations-cloudwatch",
-  "description": "@cdk-cloudformation/fireeye-cloudintegrations-cloudwatch",
-  "version": "0.0.0",
+  "description": "This Resource Type will create necessary resources in your AWS account to forward cloudwatch logs to FireEye Helix. Visit FireEye Cloud Integration Portal for more info and to generate a pre-populated CloudFormation Template",
+  "version": "1.1.0",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -10,7 +10,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation-types.git",
-    "directory": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/fireeye-cloudintegrations-cloudwatch"
+    "directory": "packages/@cdk-cloudformation/fireeye-cloudintegrations-cloudwatch"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

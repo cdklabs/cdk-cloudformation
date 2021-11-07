@@ -1,16 +1,17 @@
 {
   "name": "@cdk-cloudformation/tf-akamai-dnsrecord",
-  "description": "@cdk-cloudformation/tf-akamai-dnsrecord",
-  "version": "0.0.0",
+  "description": "Use the `akamai_dns_record` resource to configure a DNS record that can integrate with your existing DNS infrastructure.",
+  "version": "1.0.0",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
     "organization": true
   },
+  "homepage": "https://github.com/iann0036/cfn-tf-custom-types/blob/docs/resources/akamai/TF-Akamai-DnsRecord/docs/README.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation-types.git",
-    "directory": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-akamai-dnsrecord"
+    "directory": "packages/@cdk-cloudformation/tf-akamai-dnsrecord"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

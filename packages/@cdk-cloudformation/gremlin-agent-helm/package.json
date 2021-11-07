@@ -1,16 +1,17 @@
 {
   "name": "@cdk-cloudformation/gremlin-agent-helm",
-  "description": "@cdk-cloudformation/gremlin-agent-helm",
-  "version": "0.0.0",
+  "description": "An example resource schema demonstrating some basic constructs and validation rules.",
+  "version": "1.0.0",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
     "organization": true
   },
+  "homepage": "https://github.com/arunbhagyanath/qs-sysdig.git",
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation-types.git",
-    "directory": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/gremlin-agent-helm"
+    "directory": "packages/@cdk-cloudformation/gremlin-agent-helm"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

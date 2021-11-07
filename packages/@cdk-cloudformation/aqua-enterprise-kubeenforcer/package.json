@@ -1,16 +1,17 @@
 {
   "name": "@cdk-cloudformation/aqua-enterprise-kubeenforcer",
-  "description": "@cdk-cloudformation/aqua-enterprise-kubeenforcer",
-  "version": "0.0.0",
+  "description": "A resource provider for Aqua Enterprise KubeEnforcer.",
+  "version": "1.1.0",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
     "organization": true
   },
+  "homepage": "https://github.com/aquasecurity/aqua-helm.git",
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation-types.git",
-    "directory": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-kubeenforcer"
+    "directory": "packages/@cdk-cloudformation/aqua-enterprise-kubeenforcer"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

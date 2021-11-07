@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/logzio-myservice-myname-module",
-  "description": "@cdk-cloudformation/logzio-myservice-myname-module",
-  "version": "0.0.0",
+  "description": "Schema for Module Fragment of type Logzio::MyService::MyName::MODULE",
+  "version": "1.0.0",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -10,7 +10,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation-types.git",
-    "directory": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-myservice-myname-module"
+    "directory": "packages/@cdk-cloudformation/logzio-myservice-myname-module"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

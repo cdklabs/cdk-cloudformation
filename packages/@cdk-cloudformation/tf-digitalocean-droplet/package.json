@@ -1,16 +1,17 @@
 {
   "name": "@cdk-cloudformation/tf-digitalocean-droplet",
-  "description": "@cdk-cloudformation/tf-digitalocean-droplet",
-  "version": "0.0.0",
+  "description": "Provides a DigitalOcean Droplet resource. This can be used to create,\nmodify, and delete Droplets. Droplets also support\n[provisioning](https://www.terraform.io/docs/language/resources/provisioners/syntax.html).",
+  "version": "1.0.0",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
     "organization": true
   },
+  "homepage": "https://github.com/iann0036/cfn-tf-custom-types/blob/docs/resources/digitalocean/TF-DigitalOcean-Droplet/docs/README.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation-types.git",
-    "directory": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-digitalocean-droplet"
+    "directory": "packages/@cdk-cloudformation/tf-digitalocean-droplet"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

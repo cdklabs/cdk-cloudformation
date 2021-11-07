@@ -1,16 +1,17 @@
 {
   "name": "@cdk-cloudformation/tf-github-repository",
-  "description": "@cdk-cloudformation/tf-github-repository",
-  "version": "0.0.0",
+  "description": "This resource allows you to create and manage repositories within your\nGitHub organization or personal account.",
+  "version": "1.0.0",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
     "organization": true
   },
+  "homepage": "https://github.com/iann0036/cfn-tf-custom-types/blob/docs/resources/github/TF-GitHub-Repository/docs/README.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation-types.git",
-    "directory": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-github-repository"
+    "directory": "packages/@cdk-cloudformation/tf-github-repository"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

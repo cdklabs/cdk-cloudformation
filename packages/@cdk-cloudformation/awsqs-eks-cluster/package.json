@@ -1,16 +1,17 @@
 {
   "name": "@cdk-cloudformation/awsqs-eks-cluster",
-  "description": "@cdk-cloudformation/awsqs-eks-cluster",
-  "version": "0.0.0",
+  "description": "A resource that creates Amazon Elastic Kubernetes Service (Amazon EKS) clusters.",
+  "version": "1.12.0",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
     "organization": true
   },
+  "homepage": "https://github.com/aws-quickstart/quickstart-amazon-eks-cluster-resource-provider/blob/main/README.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation-types.git",
-    "directory": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-eks-cluster"
+    "directory": "packages/@cdk-cloudformation/awsqs-eks-cluster"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

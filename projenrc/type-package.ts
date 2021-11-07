@@ -67,20 +67,25 @@ export class CloudFormationTypeProject extends Component {
       ],
     });
 
+    if (!options.type.LatestPublicVersion) {
+      console.warn(`${typeName} does not have a LatestPublicVersion`);
+    }
+
     new JsonFile(project, 'package.json', {
       obj: {
         name: `${npmScope}/${typeNameKebab}`,
-        description: `${npmScope}/${typeNameKebab}`,
-        version: '0.0.0',
+        description: options.type.Description ?? `Constructs for ${typeName}`,
+        version: options.type.LatestPublicVersion ?? '0.0.0',
         author: {
           name: 'Amazon Web Services',
           url: 'https://aws.amazon.com',
           organization: true,
         },
+        homepage: options.type.DocumentationUrl ?? options.type.SourceUrl,
         repository: {
           type: 'git',
           url: 'https://github.com/cdklabs/cdk-cloudformation-types.git',
-          directory: project.outdir,
+          directory: outdir,
         },
         main: 'lib/index.js',
         types: 'lib/index.d.ts',

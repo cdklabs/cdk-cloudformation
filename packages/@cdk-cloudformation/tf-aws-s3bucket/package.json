@@ -1,16 +1,17 @@
 {
   "name": "@cdk-cloudformation/tf-aws-s3bucket",
-  "description": "@cdk-cloudformation/tf-aws-s3bucket",
-  "version": "0.0.0",
+  "description": "Provides a S3 bucket resource.\n\n-> This functionality is for managing S3 in an AWS Partition. To manage [S3 on Outposts](https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html), see the [`aws_s3control_bucket`](/docs/providers/aws/r/s3control_bucket.html) resource.",
+  "version": "1.0.0",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
     "organization": true
   },
+  "homepage": "https://github.com/iann0036/cfn-tf-custom-types/blob/docs/resources/aws/TF-AWS-S3Bucket/docs/README.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation-types.git",
-    "directory": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-aws-s3bucket"
+    "directory": "packages/@cdk-cloudformation/tf-aws-s3bucket"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/awsqs-iridium-cloudconnectqs-module",
-  "description": "@cdk-cloudformation/awsqs-iridium-cloudconnectqs-module",
-  "version": "0.0.0",
+  "description": "Schema for Module Fragment of type AWSQS::Iridium::CloudConnectQS::MODULE",
+  "version": "1.1.0",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -10,7 +10,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation-types.git",
-    "directory": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-iridium-cloudconnectqs-module"
+    "directory": "packages/@cdk-cloudformation/awsqs-iridium-cloudconnectqs-module"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

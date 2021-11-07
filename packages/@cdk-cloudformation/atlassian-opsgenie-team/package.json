@@ -1,16 +1,17 @@
 {
   "name": "@cdk-cloudformation/atlassian-opsgenie-team",
-  "description": "@cdk-cloudformation/atlassian-opsgenie-team",
-  "version": "0.0.0",
+  "description": "Opsgenie Team resource schema",
+  "version": "1.0.1",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
     "organization": true
   },
+  "homepage": "https://github.com/opsgenie/opsgenie-cloudformation-resources",
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation-types.git",
-    "directory": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/atlassian-opsgenie-team"
+    "directory": "packages/@cdk-cloudformation/atlassian-opsgenie-team"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

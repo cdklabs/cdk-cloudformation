@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/spot-elastigroup-group",
-  "description": "@cdk-cloudformation/spot-elastigroup-group",
-  "version": "0.0.0",
+  "description": "The Spot Elastigroup Resource allows you to create, update, manage, and delete Spot Elastigroups easily with CloudFormation",
+  "version": "1.0.3",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -10,7 +10,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation-types.git",
-    "directory": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/spot-elastigroup-group"
+    "directory": "packages/@cdk-cloudformation/spot-elastigroup-group"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

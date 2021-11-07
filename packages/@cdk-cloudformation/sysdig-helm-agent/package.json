@@ -1,16 +1,17 @@
 {
   "name": "@cdk-cloudformation/sysdig-helm-agent",
-  "description": "@cdk-cloudformation/sysdig-helm-agent",
-  "version": "0.0.0",
+  "description": "Sysdig Agent EKS cluster deployment.",
+  "version": "1.8.0",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
     "organization": true
   },
+  "homepage": "https://github.com/sysdiglabs/cloudformation-resource-providers.git",
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation-types.git",
-    "directory": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/sysdig-helm-agent"
+    "directory": "packages/@cdk-cloudformation/sysdig-helm-agent"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

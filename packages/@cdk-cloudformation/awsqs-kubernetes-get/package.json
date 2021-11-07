@@ -1,16 +1,17 @@
 {
   "name": "@cdk-cloudformation/awsqs-kubernetes-get",
-  "description": "@cdk-cloudformation/awsqs-kubernetes-get",
-  "version": "0.0.0",
+  "description": "Fetches data from a kubernetes cluster using jsonpath expressions.",
+  "version": "1.13.0",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
     "organization": true
   },
+  "homepage": "https://github.com/aws-quickstart/quickstart-kubernetes-resource-provider/blob/main/README.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation-types.git",
-    "directory": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-kubernetes-get"
+    "directory": "packages/@cdk-cloudformation/awsqs-kubernetes-get"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

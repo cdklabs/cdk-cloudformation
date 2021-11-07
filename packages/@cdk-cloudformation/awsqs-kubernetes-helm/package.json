@@ -1,16 +1,17 @@
 {
   "name": "@cdk-cloudformation/awsqs-kubernetes-helm",
-  "description": "@cdk-cloudformation/awsqs-kubernetes-helm",
-  "version": "0.0.0",
+  "description": "A resource provider for managing helm.",
+  "version": "1.11.0",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
     "organization": true
   },
+  "homepage": "https://github.com/aws-quickstart/quickstart-helm-resource-provider/blob/main/README.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation-types.git",
-    "directory": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-kubernetes-helm"
+    "directory": "packages/@cdk-cloudformation/awsqs-kubernetes-helm"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

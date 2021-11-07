@@ -1,16 +1,17 @@
 {
   "name": "@cdk-cloudformation/tf-aws-keypair",
-  "description": "@cdk-cloudformation/tf-aws-keypair",
-  "version": "0.0.0",
+  "description": "Provides an [EC2 key pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html) resource. A key pair is used to control login access to EC2 instances.\n\nCurrently this resource requires an existing user-supplied key pair. This key pair's public key will be registered with AWS to allow logging-in to EC2 instances.\n\nWhen importing an existing key pair the public key material may be in any format supported by AWS. Supported formats (per the [AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#how-to-generate-your-own-key-and-import-it-to-aws)) are:\n\n* OpenSSH public key format (the format in ~/.ssh/authorized_keys)\n* Base64 encoded DER format\n* SSH public key file format as specified in RFC4716",
+  "version": "1.0.0",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
     "organization": true
   },
+  "homepage": "https://github.com/iann0036/cfn-tf-custom-types/blob/docs/resources/aws/TF-AWS-KeyPair/docs/README.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation-types.git",
-    "directory": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-aws-keypair"
+    "directory": "packages/@cdk-cloudformation/tf-aws-keypair"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

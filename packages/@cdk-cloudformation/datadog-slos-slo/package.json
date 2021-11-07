@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/datadog-slos-slo",
-  "description": "@cdk-cloudformation/datadog-slos-slo",
-  "version": "0.0.0",
+  "description": "Datadog SLO 1.0.0",
+  "version": "1.0.0",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -10,7 +10,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation-types.git",
-    "directory": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-slos-slo"
+    "directory": "packages/@cdk-cloudformation/datadog-slos-slo"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

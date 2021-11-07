@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/jfrog-artifactory-existingvpc-module",
-  "description": "@cdk-cloudformation/jfrog-artifactory-existingvpc-module",
-  "version": "0.0.0",
+  "description": "Schema for Module Fragment of type JFrog::Artifactory::ExistingVpc::MODULE",
+  "version": "1.11.0",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -10,7 +10,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation-types.git",
-    "directory": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-artifactory-existingvpc-module"
+    "directory": "packages/@cdk-cloudformation/jfrog-artifactory-existingvpc-module"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

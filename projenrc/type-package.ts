@@ -1,5 +1,5 @@
-import { writeFileSync } from 'fs';
-import { join, relative } from 'path';
+import { mkdirSync, writeFileSync } from 'fs';
+import { dirname, join } from 'path';
 import type { CloudFormation } from 'aws-sdk';
 import * as caseutil from 'case';
 import { CfnResourceGenerator } from 'cdk-import/lib/cfn-resource-generator';
@@ -47,7 +47,7 @@ export class CloudFormationTypeProject extends Component {
     const typeNameSnake = caseutil.snake(typeName);
     const typeNamePascal = caseutil.pascal(typeName);
 
-    const npmScope = '@cdk-cloudformation';
+    const npmScope = '@cdk-cloudformation-types';
 
     this.type = options.type;
 
@@ -207,7 +207,6 @@ export class CloudFormationTypeProject extends Component {
       throw new Error(`Type has no name: ${JSON.stringify(typeInfo)}`);
     }
 
-    console.error(relative(process.cwd(), outdir));
     const originalWarn = console.warn;
     try {
       console.warn = (...args: string[]) => console.error('  >', ...args);
@@ -219,6 +218,7 @@ export class CloudFormationTypeProject extends Component {
       }, schema);
       const code = gen.render();
       const outpath = join(outdir, 'src', 'index.ts');
+      mkdirSync(dirname(outpath), { recursive: true });
       writeFileSync(outpath, code);
     } finally {
       console.warn = originalWarn;

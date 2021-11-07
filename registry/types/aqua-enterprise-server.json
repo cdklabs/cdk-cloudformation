@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "dcd0487f-8648-4de5-8ce0-10c3532cbf7d"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/4f06bc39af5f4b984dd46ad17f10316e6258d9fa/Aqua-Enterprise-Server",
   "Type": "RESOURCE",
   "TypeName": "Aqua::Enterprise::Server",

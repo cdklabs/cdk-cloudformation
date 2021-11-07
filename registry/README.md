@@ -6,6 +6,5 @@ AWS CloudFormation Registry.
 To refresh, you'll need AWS credentials in your environment and run:
 
 ```sh
-yarn
-./registry/refresh.sh
+yarn update-registry
 ```

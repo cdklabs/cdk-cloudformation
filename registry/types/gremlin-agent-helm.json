@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "ea30e958-cac6-47ae-b5aa-2dc70dcf9273"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/408988dff9e863704bcc72e7e13f8d645cee8311/Gremlin-Agent-Helm",
   "Type": "RESOURCE",
   "TypeName": "Gremlin::Agent::Helm",

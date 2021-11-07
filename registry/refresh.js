@@ -32,6 +32,7 @@ async function saveTypeInfo(type) {
   const response = await cfn.describeType({ Arn: type.TypeArn }).promise();
   const filename = `${caseutil.kebab(type.TypeName)}.json`;
   const outfile = join(outdir, filename);
+  delete response.ResponseMetadata; // incldes request id and stuff we don't want stored.
   await fs.writeFile(outfile, JSON.stringify(response, null, 2));
   return filename;
 }

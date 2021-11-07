@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "ad9d3078-e86c-4994-8129-fc683178a2b2"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/Alexa-ASK-Skill",
   "Type": "RESOURCE",
   "TypeName": "Alexa::ASK::Skill",

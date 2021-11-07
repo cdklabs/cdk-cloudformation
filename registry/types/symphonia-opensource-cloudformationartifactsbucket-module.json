@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "0f1c0683-780b-4cca-8a50-ac08caf13b12"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/module/bf9c3875bb157d57566fdd0661e23ca05eb62a19/Symphonia-OpenSource-CloudFormationArtifactsBucket-MODULE",
   "Type": "MODULE",
   "TypeName": "Symphonia::OpenSource::CloudFormationArtifactsBucket::MODULE",

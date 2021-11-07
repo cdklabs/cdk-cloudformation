@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "1358df4c-75f0-47a2-bba5-6969868b5ad4"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/module/8a9caf0628707da0ff455be490fd366079c8223e/Logzio-MyService-MyName-MODULE",
   "Type": "MODULE",
   "TypeName": "Logzio::MyService::MyName::MODULE",

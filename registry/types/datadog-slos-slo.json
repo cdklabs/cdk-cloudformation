@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "c07fed9e-6942-4490-927f-c558cac12878"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/7171b96e5d207b947eb72ca9ce05247c246de623/Datadog-SLOs-SLO",
   "Type": "RESOURCE",
   "TypeName": "Datadog::SLOs::SLO",

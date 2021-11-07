@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "7c5299c6-10b4-43fa-8d1b-c59ec04d3f61"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/408988dff9e863704bcc72e7e13f8d645cee8311/TrendMicro-CloudOneContainer-Helm",
   "Type": "RESOURCE",
   "TypeName": "TrendMicro::CloudOneContainer::Helm",

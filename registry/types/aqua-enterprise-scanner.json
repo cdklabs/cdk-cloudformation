@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "e103243d-4820-4c09-84c6-da95c3b5b87d"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/4f06bc39af5f4b984dd46ad17f10316e6258d9fa/Aqua-Enterprise-Scanner",
   "Type": "RESOURCE",
   "TypeName": "Aqua::Enterprise::Scanner",

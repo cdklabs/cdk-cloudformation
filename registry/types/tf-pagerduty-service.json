@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "fc095f62-fb98-4a74-b5f3-6de5a8c1f495"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/e1238fdd31aee1839e14fb3fb2dac9db154dae29/TF-PagerDuty-Service",
   "Type": "RESOURCE",
   "TypeName": "TF::PagerDuty::Service",

@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "5ad5732e-f8cf-455b-904d-17b87fc8ad67"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/a108ed126706e786484be9f9ab13bf537951db1d/Sysdig-Helm-Agent",
   "Type": "RESOURCE",
   "TypeName": "Sysdig::Helm::Agent",

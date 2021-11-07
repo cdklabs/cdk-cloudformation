@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "7e8205b2-2843-471b-bddd-0cb1b7656769"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/module/06ff50c2e47f57b381f874871d9fac41796c9522/JFrog-Linux-Bastion-MODULE",
   "Type": "MODULE",
   "TypeName": "JFrog::Linux::Bastion::MODULE",

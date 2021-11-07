@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "b9bc5c5a-5efa-4e10-9f4c-45e4f7511fe8"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/module/8a9caf0628707da0ff455be490fd366079c8223e/Logzio-KinesisShipper-KinesisShipper-MODULE",
   "Type": "MODULE",
   "TypeName": "Logzio::KinesisShipper::KinesisShipper::MODULE",

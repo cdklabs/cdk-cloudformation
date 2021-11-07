@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "d926901d-0f8a-446a-9cfb-af3d12c475f4"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/e1238fdd31aee1839e14fb3fb2dac9db154dae29/TF-AWS-KeyPair",
   "Type": "RESOURCE",
   "TypeName": "TF::AWS::KeyPair",

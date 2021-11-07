@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "d2deb045-f36d-4596-8bed-0699a089578c"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/module/8a9caf0628707da0ff455be490fd366079c8223e/Logzio-awsCostAndUsage-cur-MODULE",
   "Type": "MODULE",
   "TypeName": "Logzio::awsCostAndUsage::cur::MODULE",

@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "69c66441-ad4a-4cbf-abb0-093e142b3d17"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/e1238fdd31aee1839e14fb3fb2dac9db154dae29/TF-GitHub-Repository",
   "Type": "RESOURCE",
   "TypeName": "TF::GitHub::Repository",

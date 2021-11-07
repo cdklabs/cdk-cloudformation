@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "e53e2234-6067-4624-851c-e78bef5ab3d5"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/e1238fdd31aee1839e14fb3fb2dac9db154dae29/TF-AzureAD-User",
   "Type": "RESOURCE",
   "TypeName": "TF::AzureAD::User",

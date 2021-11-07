@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "584241ce-566f-4f9c-9cfc-6ad3ae88d802"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/264c59dceccf8b8a42e60198f3ba62cb0aa9f0bf/FireEye-CloudIntegrations-Cloudwatch",
   "Type": "RESOURCE",
   "TypeName": "FireEye::CloudIntegrations::Cloudwatch",

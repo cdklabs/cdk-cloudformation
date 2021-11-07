@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "47be1946-1b43-4a23-bca4-7247705edcca"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/e1238fdd31aee1839e14fb3fb2dac9db154dae29/TF-AzureAD-Application",
   "Type": "RESOURCE",
   "TypeName": "TF::AzureAD::Application",

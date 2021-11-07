@@ -41,204 +41,6 @@
         },
         {
           "spawn": "docgen"
-        },
-        {
-          "spawn": "compile:alexa-ask-skill"
-        },
-        {
-          "spawn": "compile:aqua-enterprise-enforcer"
-        },
-        {
-          "spawn": "compile:aqua-enterprise-kubeenforcer"
-        },
-        {
-          "spawn": "compile:aqua-enterprise-scanner"
-        },
-        {
-          "spawn": "compile:aqua-enterprise-server"
-        },
-        {
-          "spawn": "compile:atlassian-opsgenie-integration"
-        },
-        {
-          "spawn": "compile:atlassian-opsgenie-team"
-        },
-        {
-          "spawn": "compile:atlassian-opsgenie-user"
-        },
-        {
-          "spawn": "compile:awsqs-checkpoint-cloudguardqs-module"
-        },
-        {
-          "spawn": "compile:awsqs-ec2-linuxbastionqs-module"
-        },
-        {
-          "spawn": "compile:awsqs-eks-cluster"
-        },
-        {
-          "spawn": "compile:awsqs-iridium-cloudconnectqs-module"
-        },
-        {
-          "spawn": "compile:awsqs-kubernetes-get"
-        },
-        {
-          "spawn": "compile:awsqs-kubernetes-helm"
-        },
-        {
-          "spawn": "compile:awsqs-kubernetes-resource"
-        },
-        {
-          "spawn": "compile:awsqs-vpc-vpcqs-module"
-        },
-        {
-          "spawn": "compile:datadog-dashboards-dashboard"
-        },
-        {
-          "spawn": "compile:datadog-integrations-aws"
-        },
-        {
-          "spawn": "compile:datadog-monitors-downtime"
-        },
-        {
-          "spawn": "compile:datadog-monitors-monitor"
-        },
-        {
-          "spawn": "compile:datadog-slos-slo"
-        },
-        {
-          "spawn": "compile:fireeye-cloudintegrations-cloudwatch"
-        },
-        {
-          "spawn": "compile:generic-database-schema"
-        },
-        {
-          "spawn": "compile:generic-transcribe-vocabulary"
-        },
-        {
-          "spawn": "compile:gremlin-agent-helm"
-        },
-        {
-          "spawn": "compile:jfrog-artifactory-core-module"
-        },
-        {
-          "spawn": "compile:jfrog-artifactory-ec2instance-module"
-        },
-        {
-          "spawn": "compile:jfrog-artifactory-existingvpc-module"
-        },
-        {
-          "spawn": "compile:jfrog-artifactory-newvpc-module"
-        },
-        {
-          "spawn": "compile:jfrog-linux-bastion-module"
-        },
-        {
-          "spawn": "compile:jfrog-vpc-multiaz-module"
-        },
-        {
-          "spawn": "compile:jfrog-xray-ec2instance-module"
-        },
-        {
-          "spawn": "compile:logzio-autodeploymentlogzio-cloudwatch-module"
-        },
-        {
-          "spawn": "compile:logzio-awscostandusage-cur-module"
-        },
-        {
-          "spawn": "compile:logzio-awssecurityhub-collector-module"
-        },
-        {
-          "spawn": "compile:logzio-kinesisshipper-kinesisshipper-module"
-        },
-        {
-          "spawn": "compile:logzio-myservice-myname-module"
-        },
-        {
-          "spawn": "compile:mongodb-atlas-cluster"
-        },
-        {
-          "spawn": "compile:mongodb-atlas-databaseuser"
-        },
-        {
-          "spawn": "compile:mongodb-atlas-networkpeering"
-        },
-        {
-          "spawn": "compile:mongodb-atlas-project"
-        },
-        {
-          "spawn": "compile:mongodb-atlas-projectipaccesslist"
-        },
-        {
-          "spawn": "compile:registry-test-resource1-module"
-        },
-        {
-          "spawn": "compile:snyk-container-helm"
-        },
-        {
-          "spawn": "compile:splunk-enterprise-quickstart-module"
-        },
-        {
-          "spawn": "compile:spot-elastigroup-group"
-        },
-        {
-          "spawn": "compile:stackery-open-bastion-module"
-        },
-        {
-          "spawn": "compile:stocks-orders-marketorder"
-        },
-        {
-          "spawn": "compile:symphonia-opensource-cloudformationartifactsbucket-module"
-        },
-        {
-          "spawn": "compile:sysdig-helm-agent"
-        },
-        {
-          "spawn": "compile:tf-ad-computer"
-        },
-        {
-          "spawn": "compile:tf-ad-user"
-        },
-        {
-          "spawn": "compile:tf-akamai-dnsrecord"
-        },
-        {
-          "spawn": "compile:tf-aws-keypair"
-        },
-        {
-          "spawn": "compile:tf-aws-s3bucket"
-        },
-        {
-          "spawn": "compile:tf-aws-s3bucketobject"
-        },
-        {
-          "spawn": "compile:tf-azuread-application"
-        },
-        {
-          "spawn": "compile:tf-azuread-user"
-        },
-        {
-          "spawn": "compile:tf-cloudflare-record"
-        },
-        {
-          "spawn": "compile:tf-digitalocean-droplet"
-        },
-        {
-          "spawn": "compile:tf-github-repository"
-        },
-        {
-          "spawn": "compile:tf-google-storagebucket"
-        },
-        {
-          "spawn": "compile:tf-pagerduty-service"
-        },
-        {
-          "spawn": "compile:tf-random-string"
-        },
-        {
-          "spawn": "compile:tf-random-uuid"
-        },
-        {
-          "spawn": "compile:trendmicro-cloudonecontainer-helm"
         }
       ]
     },
@@ -365,204 +167,6 @@
       "steps": [
         {
           "exec": "jsii-pacmak"
-        },
-        {
-          "spawn": "package:alexa-ask-skill"
-        },
-        {
-          "spawn": "package:aqua-enterprise-enforcer"
-        },
-        {
-          "spawn": "package:aqua-enterprise-kubeenforcer"
-        },
-        {
-          "spawn": "package:aqua-enterprise-scanner"
-        },
-        {
-          "spawn": "package:aqua-enterprise-server"
-        },
-        {
-          "spawn": "package:atlassian-opsgenie-integration"
-        },
-        {
-          "spawn": "package:atlassian-opsgenie-team"
-        },
-        {
-          "spawn": "package:atlassian-opsgenie-user"
-        },
-        {
-          "spawn": "package:awsqs-checkpoint-cloudguardqs-module"
-        },
-        {
-          "spawn": "package:awsqs-ec2-linuxbastionqs-module"
-        },
-        {
-          "spawn": "package:awsqs-eks-cluster"
-        },
-        {
-          "spawn": "package:awsqs-iridium-cloudconnectqs-module"
-        },
-        {
-          "spawn": "package:awsqs-kubernetes-get"
-        },
-        {
-          "spawn": "package:awsqs-kubernetes-helm"
-        },
-        {
-          "spawn": "package:awsqs-kubernetes-resource"
-        },
-        {
-          "spawn": "package:awsqs-vpc-vpcqs-module"
-        },
-        {
-          "spawn": "package:datadog-dashboards-dashboard"
-        },
-        {
-          "spawn": "package:datadog-integrations-aws"
-        },
-        {
-          "spawn": "package:datadog-monitors-downtime"
-        },
-        {
-          "spawn": "package:datadog-monitors-monitor"
-        },
-        {
-          "spawn": "package:datadog-slos-slo"
-        },
-        {
-          "spawn": "package:fireeye-cloudintegrations-cloudwatch"
-        },
-        {
-          "spawn": "package:generic-database-schema"
-        },
-        {
-          "spawn": "package:generic-transcribe-vocabulary"
-        },
-        {
-          "spawn": "package:gremlin-agent-helm"
-        },
-        {
-          "spawn": "package:jfrog-artifactory-core-module"
-        },
-        {
-          "spawn": "package:jfrog-artifactory-ec2instance-module"
-        },
-        {
-          "spawn": "package:jfrog-artifactory-existingvpc-module"
-        },
-        {
-          "spawn": "package:jfrog-artifactory-newvpc-module"
-        },
-        {
-          "spawn": "package:jfrog-linux-bastion-module"
-        },
-        {
-          "spawn": "package:jfrog-vpc-multiaz-module"
-        },
-        {
-          "spawn": "package:jfrog-xray-ec2instance-module"
-        },
-        {
-          "spawn": "package:logzio-autodeploymentlogzio-cloudwatch-module"
-        },
-        {
-          "spawn": "package:logzio-awscostandusage-cur-module"
-        },
-        {
-          "spawn": "package:logzio-awssecurityhub-collector-module"
-        },
-        {
-          "spawn": "package:logzio-kinesisshipper-kinesisshipper-module"
-        },
-        {
-          "spawn": "package:logzio-myservice-myname-module"
-        },
-        {
-          "spawn": "package:mongodb-atlas-cluster"
-        },
-        {
-          "spawn": "package:mongodb-atlas-databaseuser"
-        },
-        {
-          "spawn": "package:mongodb-atlas-networkpeering"
-        },
-        {
-          "spawn": "package:mongodb-atlas-project"
-        },
-        {
-          "spawn": "package:mongodb-atlas-projectipaccesslist"
-        },
-        {
-          "spawn": "package:registry-test-resource1-module"
-        },
-        {
-          "spawn": "package:snyk-container-helm"
-        },
-        {
-          "spawn": "package:splunk-enterprise-quickstart-module"
-        },
-        {
-          "spawn": "package:spot-elastigroup-group"
-        },
-        {
-          "spawn": "package:stackery-open-bastion-module"
-        },
-        {
-          "spawn": "package:stocks-orders-marketorder"
-        },
-        {
-          "spawn": "package:symphonia-opensource-cloudformationartifactsbucket-module"
-        },
-        {
-          "spawn": "package:sysdig-helm-agent"
-        },
-        {
-          "spawn": "package:tf-ad-computer"
-        },
-        {
-          "spawn": "package:tf-ad-user"
-        },
-        {
-          "spawn": "package:tf-akamai-dnsrecord"
-        },
-        {
-          "spawn": "package:tf-aws-keypair"
-        },
-        {
-          "spawn": "package:tf-aws-s3bucket"
-        },
-        {
-          "spawn": "package:tf-aws-s3bucketobject"
-        },
-        {
-          "spawn": "package:tf-azuread-application"
-        },
-        {
-          "spawn": "package:tf-azuread-user"
-        },
-        {
-          "spawn": "package:tf-cloudflare-record"
-        },
-        {
-          "spawn": "package:tf-digitalocean-droplet"
-        },
-        {
-          "spawn": "package:tf-github-repository"
-        },
-        {
-          "spawn": "package:tf-google-storagebucket"
-        },
-        {
-          "spawn": "package:tf-pagerduty-service"
-        },
-        {
-          "spawn": "package:tf-random-string"
-        },
-        {
-          "spawn": "package:tf-random-uuid"
-        },
-        {
-          "spawn": "package:trendmicro-cloudonecontainer-helm"
         }
       ]
     },
@@ -633,12 +237,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:alexa-ask-skill": {
+      "name": "build:alexa-ask-skill",
+      "description": "build alexa-ask-skill",
+      "steps": [
+        {
+          "spawn": "compile:alexa-ask-skill"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/alexa-ask-skill/dist/ dist/"
+          "spawn": "package:alexa-ask-skill"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/alexa-ask-skill"
+      ]
     },
     "compile:aqua-enterprise-enforcer": {
       "name": "compile:aqua-enterprise-enforcer",
@@ -656,12 +268,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:aqua-enterprise-enforcer": {
+      "name": "build:aqua-enterprise-enforcer",
+      "description": "build aqua-enterprise-enforcer",
+      "steps": [
+        {
+          "spawn": "compile:aqua-enterprise-enforcer"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-enforcer/dist/ dist/"
+          "spawn": "package:aqua-enterprise-enforcer"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-enforcer"
+      ]
     },
     "compile:aqua-enterprise-kubeenforcer": {
       "name": "compile:aqua-enterprise-kubeenforcer",
@@ -679,12 +299,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:aqua-enterprise-kubeenforcer": {
+      "name": "build:aqua-enterprise-kubeenforcer",
+      "description": "build aqua-enterprise-kubeenforcer",
+      "steps": [
+        {
+          "spawn": "compile:aqua-enterprise-kubeenforcer"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-kubeenforcer/dist/ dist/"
+          "spawn": "package:aqua-enterprise-kubeenforcer"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-kubeenforcer"
+      ]
     },
     "compile:aqua-enterprise-scanner": {
       "name": "compile:aqua-enterprise-scanner",
@@ -702,12 +330,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:aqua-enterprise-scanner": {
+      "name": "build:aqua-enterprise-scanner",
+      "description": "build aqua-enterprise-scanner",
+      "steps": [
+        {
+          "spawn": "compile:aqua-enterprise-scanner"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-scanner/dist/ dist/"
+          "spawn": "package:aqua-enterprise-scanner"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-scanner"
+      ]
     },
     "compile:aqua-enterprise-server": {
       "name": "compile:aqua-enterprise-server",
@@ -725,12 +361,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:aqua-enterprise-server": {
+      "name": "build:aqua-enterprise-server",
+      "description": "build aqua-enterprise-server",
+      "steps": [
+        {
+          "spawn": "compile:aqua-enterprise-server"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-server/dist/ dist/"
+          "spawn": "package:aqua-enterprise-server"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-server"
+      ]
     },
     "compile:atlassian-opsgenie-integration": {
       "name": "compile:atlassian-opsgenie-integration",
@@ -748,12 +392,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:atlassian-opsgenie-integration": {
+      "name": "build:atlassian-opsgenie-integration",
+      "description": "build atlassian-opsgenie-integration",
+      "steps": [
+        {
+          "spawn": "compile:atlassian-opsgenie-integration"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/atlassian-opsgenie-integration/dist/ dist/"
+          "spawn": "package:atlassian-opsgenie-integration"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/atlassian-opsgenie-integration"
+      ]
     },
     "compile:atlassian-opsgenie-team": {
       "name": "compile:atlassian-opsgenie-team",
@@ -771,12 +423,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:atlassian-opsgenie-team": {
+      "name": "build:atlassian-opsgenie-team",
+      "description": "build atlassian-opsgenie-team",
+      "steps": [
+        {
+          "spawn": "compile:atlassian-opsgenie-team"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/atlassian-opsgenie-team/dist/ dist/"
+          "spawn": "package:atlassian-opsgenie-team"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/atlassian-opsgenie-team"
+      ]
     },
     "compile:atlassian-opsgenie-user": {
       "name": "compile:atlassian-opsgenie-user",
@@ -794,12 +454,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:atlassian-opsgenie-user": {
+      "name": "build:atlassian-opsgenie-user",
+      "description": "build atlassian-opsgenie-user",
+      "steps": [
+        {
+          "spawn": "compile:atlassian-opsgenie-user"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/atlassian-opsgenie-user/dist/ dist/"
+          "spawn": "package:atlassian-opsgenie-user"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/atlassian-opsgenie-user"
+      ]
     },
     "compile:awsqs-checkpoint-cloudguardqs-module": {
       "name": "compile:awsqs-checkpoint-cloudguardqs-module",
@@ -817,12 +485,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:awsqs-checkpoint-cloudguardqs-module": {
+      "name": "build:awsqs-checkpoint-cloudguardqs-module",
+      "description": "build awsqs-checkpoint-cloudguardqs-module",
+      "steps": [
+        {
+          "spawn": "compile:awsqs-checkpoint-cloudguardqs-module"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-checkpoint-cloudguardqs-module/dist/ dist/"
+          "spawn": "package:awsqs-checkpoint-cloudguardqs-module"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-checkpoint-cloudguardqs-module"
+      ]
     },
     "compile:awsqs-ec2-linuxbastionqs-module": {
       "name": "compile:awsqs-ec2-linuxbastionqs-module",
@@ -840,12 +516,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:awsqs-ec2-linuxbastionqs-module": {
+      "name": "build:awsqs-ec2-linuxbastionqs-module",
+      "description": "build awsqs-ec2-linuxbastionqs-module",
+      "steps": [
+        {
+          "spawn": "compile:awsqs-ec2-linuxbastionqs-module"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-ec2-linuxbastionqs-module/dist/ dist/"
+          "spawn": "package:awsqs-ec2-linuxbastionqs-module"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-ec2-linuxbastionqs-module"
+      ]
     },
     "compile:awsqs-eks-cluster": {
       "name": "compile:awsqs-eks-cluster",
@@ -863,12 +547,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:awsqs-eks-cluster": {
+      "name": "build:awsqs-eks-cluster",
+      "description": "build awsqs-eks-cluster",
+      "steps": [
+        {
+          "spawn": "compile:awsqs-eks-cluster"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-eks-cluster/dist/ dist/"
+          "spawn": "package:awsqs-eks-cluster"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-eks-cluster"
+      ]
     },
     "compile:awsqs-iridium-cloudconnectqs-module": {
       "name": "compile:awsqs-iridium-cloudconnectqs-module",
@@ -886,12 +578,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:awsqs-iridium-cloudconnectqs-module": {
+      "name": "build:awsqs-iridium-cloudconnectqs-module",
+      "description": "build awsqs-iridium-cloudconnectqs-module",
+      "steps": [
+        {
+          "spawn": "compile:awsqs-iridium-cloudconnectqs-module"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-iridium-cloudconnectqs-module/dist/ dist/"
+          "spawn": "package:awsqs-iridium-cloudconnectqs-module"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-iridium-cloudconnectqs-module"
+      ]
     },
     "compile:awsqs-kubernetes-get": {
       "name": "compile:awsqs-kubernetes-get",
@@ -909,12 +609,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:awsqs-kubernetes-get": {
+      "name": "build:awsqs-kubernetes-get",
+      "description": "build awsqs-kubernetes-get",
+      "steps": [
+        {
+          "spawn": "compile:awsqs-kubernetes-get"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-kubernetes-get/dist/ dist/"
+          "spawn": "package:awsqs-kubernetes-get"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-kubernetes-get"
+      ]
     },
     "compile:awsqs-kubernetes-helm": {
       "name": "compile:awsqs-kubernetes-helm",
@@ -932,12 +640,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:awsqs-kubernetes-helm": {
+      "name": "build:awsqs-kubernetes-helm",
+      "description": "build awsqs-kubernetes-helm",
+      "steps": [
+        {
+          "spawn": "compile:awsqs-kubernetes-helm"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-kubernetes-helm/dist/ dist/"
+          "spawn": "package:awsqs-kubernetes-helm"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-kubernetes-helm"
+      ]
     },
     "compile:awsqs-kubernetes-resource": {
       "name": "compile:awsqs-kubernetes-resource",
@@ -955,12 +671,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:awsqs-kubernetes-resource": {
+      "name": "build:awsqs-kubernetes-resource",
+      "description": "build awsqs-kubernetes-resource",
+      "steps": [
+        {
+          "spawn": "compile:awsqs-kubernetes-resource"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-kubernetes-resource/dist/ dist/"
+          "spawn": "package:awsqs-kubernetes-resource"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-kubernetes-resource"
+      ]
     },
     "compile:awsqs-vpc-vpcqs-module": {
       "name": "compile:awsqs-vpc-vpcqs-module",
@@ -978,12 +702,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:awsqs-vpc-vpcqs-module": {
+      "name": "build:awsqs-vpc-vpcqs-module",
+      "description": "build awsqs-vpc-vpcqs-module",
+      "steps": [
+        {
+          "spawn": "compile:awsqs-vpc-vpcqs-module"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-vpc-vpcqs-module/dist/ dist/"
+          "spawn": "package:awsqs-vpc-vpcqs-module"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/awsqs-vpc-vpcqs-module"
+      ]
     },
     "compile:datadog-dashboards-dashboard": {
       "name": "compile:datadog-dashboards-dashboard",
@@ -1001,12 +733,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:datadog-dashboards-dashboard": {
+      "name": "build:datadog-dashboards-dashboard",
+      "description": "build datadog-dashboards-dashboard",
+      "steps": [
+        {
+          "spawn": "compile:datadog-dashboards-dashboard"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-dashboards-dashboard/dist/ dist/"
+          "spawn": "package:datadog-dashboards-dashboard"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-dashboards-dashboard"
+      ]
     },
     "compile:datadog-integrations-aws": {
       "name": "compile:datadog-integrations-aws",
@@ -1024,12 +764,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:datadog-integrations-aws": {
+      "name": "build:datadog-integrations-aws",
+      "description": "build datadog-integrations-aws",
+      "steps": [
+        {
+          "spawn": "compile:datadog-integrations-aws"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-integrations-aws/dist/ dist/"
+          "spawn": "package:datadog-integrations-aws"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-integrations-aws"
+      ]
     },
     "compile:datadog-monitors-downtime": {
       "name": "compile:datadog-monitors-downtime",
@@ -1047,12 +795,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:datadog-monitors-downtime": {
+      "name": "build:datadog-monitors-downtime",
+      "description": "build datadog-monitors-downtime",
+      "steps": [
+        {
+          "spawn": "compile:datadog-monitors-downtime"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-monitors-downtime/dist/ dist/"
+          "spawn": "package:datadog-monitors-downtime"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-monitors-downtime"
+      ]
     },
     "compile:datadog-monitors-monitor": {
       "name": "compile:datadog-monitors-monitor",
@@ -1070,12 +826,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:datadog-monitors-monitor": {
+      "name": "build:datadog-monitors-monitor",
+      "description": "build datadog-monitors-monitor",
+      "steps": [
+        {
+          "spawn": "compile:datadog-monitors-monitor"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-monitors-monitor/dist/ dist/"
+          "spawn": "package:datadog-monitors-monitor"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-monitors-monitor"
+      ]
     },
     "compile:datadog-slos-slo": {
       "name": "compile:datadog-slos-slo",
@@ -1093,12 +857,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:datadog-slos-slo": {
+      "name": "build:datadog-slos-slo",
+      "description": "build datadog-slos-slo",
+      "steps": [
+        {
+          "spawn": "compile:datadog-slos-slo"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-slos-slo/dist/ dist/"
+          "spawn": "package:datadog-slos-slo"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/datadog-slos-slo"
+      ]
     },
     "compile:fireeye-cloudintegrations-cloudwatch": {
       "name": "compile:fireeye-cloudintegrations-cloudwatch",
@@ -1116,12 +888,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:fireeye-cloudintegrations-cloudwatch": {
+      "name": "build:fireeye-cloudintegrations-cloudwatch",
+      "description": "build fireeye-cloudintegrations-cloudwatch",
+      "steps": [
+        {
+          "spawn": "compile:fireeye-cloudintegrations-cloudwatch"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/fireeye-cloudintegrations-cloudwatch/dist/ dist/"
+          "spawn": "package:fireeye-cloudintegrations-cloudwatch"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/fireeye-cloudintegrations-cloudwatch"
+      ]
     },
     "compile:generic-database-schema": {
       "name": "compile:generic-database-schema",
@@ -1139,12 +919,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:generic-database-schema": {
+      "name": "build:generic-database-schema",
+      "description": "build generic-database-schema",
+      "steps": [
+        {
+          "spawn": "compile:generic-database-schema"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/generic-database-schema/dist/ dist/"
+          "spawn": "package:generic-database-schema"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/generic-database-schema"
+      ]
     },
     "compile:generic-transcribe-vocabulary": {
       "name": "compile:generic-transcribe-vocabulary",
@@ -1162,12 +950,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:generic-transcribe-vocabulary": {
+      "name": "build:generic-transcribe-vocabulary",
+      "description": "build generic-transcribe-vocabulary",
+      "steps": [
+        {
+          "spawn": "compile:generic-transcribe-vocabulary"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/generic-transcribe-vocabulary/dist/ dist/"
+          "spawn": "package:generic-transcribe-vocabulary"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/generic-transcribe-vocabulary"
+      ]
     },
     "compile:gremlin-agent-helm": {
       "name": "compile:gremlin-agent-helm",
@@ -1185,12 +981,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:gremlin-agent-helm": {
+      "name": "build:gremlin-agent-helm",
+      "description": "build gremlin-agent-helm",
+      "steps": [
+        {
+          "spawn": "compile:gremlin-agent-helm"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/gremlin-agent-helm/dist/ dist/"
+          "spawn": "package:gremlin-agent-helm"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/gremlin-agent-helm"
+      ]
     },
     "compile:jfrog-artifactory-core-module": {
       "name": "compile:jfrog-artifactory-core-module",
@@ -1208,12 +1012,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:jfrog-artifactory-core-module": {
+      "name": "build:jfrog-artifactory-core-module",
+      "description": "build jfrog-artifactory-core-module",
+      "steps": [
+        {
+          "spawn": "compile:jfrog-artifactory-core-module"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-artifactory-core-module/dist/ dist/"
+          "spawn": "package:jfrog-artifactory-core-module"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-artifactory-core-module"
+      ]
     },
     "compile:jfrog-artifactory-ec2instance-module": {
       "name": "compile:jfrog-artifactory-ec2instance-module",
@@ -1231,12 +1043,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:jfrog-artifactory-ec2instance-module": {
+      "name": "build:jfrog-artifactory-ec2instance-module",
+      "description": "build jfrog-artifactory-ec2instance-module",
+      "steps": [
+        {
+          "spawn": "compile:jfrog-artifactory-ec2instance-module"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-artifactory-ec2instance-module/dist/ dist/"
+          "spawn": "package:jfrog-artifactory-ec2instance-module"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-artifactory-ec2instance-module"
+      ]
     },
     "compile:jfrog-artifactory-existingvpc-module": {
       "name": "compile:jfrog-artifactory-existingvpc-module",
@@ -1254,12 +1074,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:jfrog-artifactory-existingvpc-module": {
+      "name": "build:jfrog-artifactory-existingvpc-module",
+      "description": "build jfrog-artifactory-existingvpc-module",
+      "steps": [
+        {
+          "spawn": "compile:jfrog-artifactory-existingvpc-module"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-artifactory-existingvpc-module/dist/ dist/"
+          "spawn": "package:jfrog-artifactory-existingvpc-module"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-artifactory-existingvpc-module"
+      ]
     },
     "compile:jfrog-artifactory-newvpc-module": {
       "name": "compile:jfrog-artifactory-newvpc-module",
@@ -1277,12 +1105,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:jfrog-artifactory-newvpc-module": {
+      "name": "build:jfrog-artifactory-newvpc-module",
+      "description": "build jfrog-artifactory-newvpc-module",
+      "steps": [
+        {
+          "spawn": "compile:jfrog-artifactory-newvpc-module"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-artifactory-newvpc-module/dist/ dist/"
+          "spawn": "package:jfrog-artifactory-newvpc-module"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-artifactory-newvpc-module"
+      ]
     },
     "compile:jfrog-linux-bastion-module": {
       "name": "compile:jfrog-linux-bastion-module",
@@ -1300,12 +1136,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:jfrog-linux-bastion-module": {
+      "name": "build:jfrog-linux-bastion-module",
+      "description": "build jfrog-linux-bastion-module",
+      "steps": [
+        {
+          "spawn": "compile:jfrog-linux-bastion-module"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-linux-bastion-module/dist/ dist/"
+          "spawn": "package:jfrog-linux-bastion-module"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-linux-bastion-module"
+      ]
     },
     "compile:jfrog-vpc-multiaz-module": {
       "name": "compile:jfrog-vpc-multiaz-module",
@@ -1323,12 +1167,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:jfrog-vpc-multiaz-module": {
+      "name": "build:jfrog-vpc-multiaz-module",
+      "description": "build jfrog-vpc-multiaz-module",
+      "steps": [
+        {
+          "spawn": "compile:jfrog-vpc-multiaz-module"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-vpc-multiaz-module/dist/ dist/"
+          "spawn": "package:jfrog-vpc-multiaz-module"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-vpc-multiaz-module"
+      ]
     },
     "compile:jfrog-xray-ec2instance-module": {
       "name": "compile:jfrog-xray-ec2instance-module",
@@ -1346,12 +1198,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:jfrog-xray-ec2instance-module": {
+      "name": "build:jfrog-xray-ec2instance-module",
+      "description": "build jfrog-xray-ec2instance-module",
+      "steps": [
+        {
+          "spawn": "compile:jfrog-xray-ec2instance-module"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-xray-ec2instance-module/dist/ dist/"
+          "spawn": "package:jfrog-xray-ec2instance-module"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/jfrog-xray-ec2instance-module"
+      ]
     },
     "compile:logzio-autodeploymentlogzio-cloudwatch-module": {
       "name": "compile:logzio-autodeploymentlogzio-cloudwatch-module",
@@ -1369,12 +1229,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:logzio-autodeploymentlogzio-cloudwatch-module": {
+      "name": "build:logzio-autodeploymentlogzio-cloudwatch-module",
+      "description": "build logzio-autodeploymentlogzio-cloudwatch-module",
+      "steps": [
+        {
+          "spawn": "compile:logzio-autodeploymentlogzio-cloudwatch-module"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-autodeploymentlogzio-cloudwatch-module/dist/ dist/"
+          "spawn": "package:logzio-autodeploymentlogzio-cloudwatch-module"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-autodeploymentlogzio-cloudwatch-module"
+      ]
     },
     "compile:logzio-awscostandusage-cur-module": {
       "name": "compile:logzio-awscostandusage-cur-module",
@@ -1392,12 +1260,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:logzio-awscostandusage-cur-module": {
+      "name": "build:logzio-awscostandusage-cur-module",
+      "description": "build logzio-awscostandusage-cur-module",
+      "steps": [
+        {
+          "spawn": "compile:logzio-awscostandusage-cur-module"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-awscostandusage-cur-module/dist/ dist/"
+          "spawn": "package:logzio-awscostandusage-cur-module"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-awscostandusage-cur-module"
+      ]
     },
     "compile:logzio-awssecurityhub-collector-module": {
       "name": "compile:logzio-awssecurityhub-collector-module",
@@ -1415,12 +1291,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:logzio-awssecurityhub-collector-module": {
+      "name": "build:logzio-awssecurityhub-collector-module",
+      "description": "build logzio-awssecurityhub-collector-module",
+      "steps": [
+        {
+          "spawn": "compile:logzio-awssecurityhub-collector-module"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-awssecurityhub-collector-module/dist/ dist/"
+          "spawn": "package:logzio-awssecurityhub-collector-module"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-awssecurityhub-collector-module"
+      ]
     },
     "compile:logzio-kinesisshipper-kinesisshipper-module": {
       "name": "compile:logzio-kinesisshipper-kinesisshipper-module",
@@ -1438,12 +1322,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:logzio-kinesisshipper-kinesisshipper-module": {
+      "name": "build:logzio-kinesisshipper-kinesisshipper-module",
+      "description": "build logzio-kinesisshipper-kinesisshipper-module",
+      "steps": [
+        {
+          "spawn": "compile:logzio-kinesisshipper-kinesisshipper-module"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-kinesisshipper-kinesisshipper-module/dist/ dist/"
+          "spawn": "package:logzio-kinesisshipper-kinesisshipper-module"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-kinesisshipper-kinesisshipper-module"
+      ]
     },
     "compile:logzio-myservice-myname-module": {
       "name": "compile:logzio-myservice-myname-module",
@@ -1461,12 +1353,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:logzio-myservice-myname-module": {
+      "name": "build:logzio-myservice-myname-module",
+      "description": "build logzio-myservice-myname-module",
+      "steps": [
+        {
+          "spawn": "compile:logzio-myservice-myname-module"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-myservice-myname-module/dist/ dist/"
+          "spawn": "package:logzio-myservice-myname-module"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/logzio-myservice-myname-module"
+      ]
     },
     "compile:mongodb-atlas-cluster": {
       "name": "compile:mongodb-atlas-cluster",
@@ -1484,12 +1384,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:mongodb-atlas-cluster": {
+      "name": "build:mongodb-atlas-cluster",
+      "description": "build mongodb-atlas-cluster",
+      "steps": [
+        {
+          "spawn": "compile:mongodb-atlas-cluster"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-cluster/dist/ dist/"
+          "spawn": "package:mongodb-atlas-cluster"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-cluster"
+      ]
     },
     "compile:mongodb-atlas-databaseuser": {
       "name": "compile:mongodb-atlas-databaseuser",
@@ -1507,12 +1415,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:mongodb-atlas-databaseuser": {
+      "name": "build:mongodb-atlas-databaseuser",
+      "description": "build mongodb-atlas-databaseuser",
+      "steps": [
+        {
+          "spawn": "compile:mongodb-atlas-databaseuser"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-databaseuser/dist/ dist/"
+          "spawn": "package:mongodb-atlas-databaseuser"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-databaseuser"
+      ]
     },
     "compile:mongodb-atlas-networkpeering": {
       "name": "compile:mongodb-atlas-networkpeering",
@@ -1530,12 +1446,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:mongodb-atlas-networkpeering": {
+      "name": "build:mongodb-atlas-networkpeering",
+      "description": "build mongodb-atlas-networkpeering",
+      "steps": [
+        {
+          "spawn": "compile:mongodb-atlas-networkpeering"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-networkpeering/dist/ dist/"
+          "spawn": "package:mongodb-atlas-networkpeering"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-networkpeering"
+      ]
     },
     "compile:mongodb-atlas-project": {
       "name": "compile:mongodb-atlas-project",
@@ -1553,12 +1477,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:mongodb-atlas-project": {
+      "name": "build:mongodb-atlas-project",
+      "description": "build mongodb-atlas-project",
+      "steps": [
+        {
+          "spawn": "compile:mongodb-atlas-project"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-project/dist/ dist/"
+          "spawn": "package:mongodb-atlas-project"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-project"
+      ]
     },
     "compile:mongodb-atlas-projectipaccesslist": {
       "name": "compile:mongodb-atlas-projectipaccesslist",
@@ -1576,12 +1508,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:mongodb-atlas-projectipaccesslist": {
+      "name": "build:mongodb-atlas-projectipaccesslist",
+      "description": "build mongodb-atlas-projectipaccesslist",
+      "steps": [
+        {
+          "spawn": "compile:mongodb-atlas-projectipaccesslist"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-projectipaccesslist/dist/ dist/"
+          "spawn": "package:mongodb-atlas-projectipaccesslist"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/mongodb-atlas-projectipaccesslist"
+      ]
     },
     "compile:registry-test-resource1-module": {
       "name": "compile:registry-test-resource1-module",
@@ -1599,12 +1539,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:registry-test-resource1-module": {
+      "name": "build:registry-test-resource1-module",
+      "description": "build registry-test-resource1-module",
+      "steps": [
+        {
+          "spawn": "compile:registry-test-resource1-module"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/registry-test-resource1-module/dist/ dist/"
+          "spawn": "package:registry-test-resource1-module"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/registry-test-resource1-module"
+      ]
     },
     "compile:snyk-container-helm": {
       "name": "compile:snyk-container-helm",
@@ -1622,12 +1570,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:snyk-container-helm": {
+      "name": "build:snyk-container-helm",
+      "description": "build snyk-container-helm",
+      "steps": [
+        {
+          "spawn": "compile:snyk-container-helm"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/snyk-container-helm/dist/ dist/"
+          "spawn": "package:snyk-container-helm"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/snyk-container-helm"
+      ]
     },
     "compile:splunk-enterprise-quickstart-module": {
       "name": "compile:splunk-enterprise-quickstart-module",
@@ -1645,12 +1601,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:splunk-enterprise-quickstart-module": {
+      "name": "build:splunk-enterprise-quickstart-module",
+      "description": "build splunk-enterprise-quickstart-module",
+      "steps": [
+        {
+          "spawn": "compile:splunk-enterprise-quickstart-module"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/splunk-enterprise-quickstart-module/dist/ dist/"
+          "spawn": "package:splunk-enterprise-quickstart-module"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/splunk-enterprise-quickstart-module"
+      ]
     },
     "compile:spot-elastigroup-group": {
       "name": "compile:spot-elastigroup-group",
@@ -1668,12 +1632,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:spot-elastigroup-group": {
+      "name": "build:spot-elastigroup-group",
+      "description": "build spot-elastigroup-group",
+      "steps": [
+        {
+          "spawn": "compile:spot-elastigroup-group"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/spot-elastigroup-group/dist/ dist/"
+          "spawn": "package:spot-elastigroup-group"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/spot-elastigroup-group"
+      ]
     },
     "compile:stackery-open-bastion-module": {
       "name": "compile:stackery-open-bastion-module",
@@ -1691,12 +1663,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:stackery-open-bastion-module": {
+      "name": "build:stackery-open-bastion-module",
+      "description": "build stackery-open-bastion-module",
+      "steps": [
+        {
+          "spawn": "compile:stackery-open-bastion-module"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/stackery-open-bastion-module/dist/ dist/"
+          "spawn": "package:stackery-open-bastion-module"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/stackery-open-bastion-module"
+      ]
     },
     "compile:stocks-orders-marketorder": {
       "name": "compile:stocks-orders-marketorder",
@@ -1714,12 +1694,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:stocks-orders-marketorder": {
+      "name": "build:stocks-orders-marketorder",
+      "description": "build stocks-orders-marketorder",
+      "steps": [
+        {
+          "spawn": "compile:stocks-orders-marketorder"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/stocks-orders-marketorder/dist/ dist/"
+          "spawn": "package:stocks-orders-marketorder"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/stocks-orders-marketorder"
+      ]
     },
     "compile:symphonia-opensource-cloudformationartifactsbucket-module": {
       "name": "compile:symphonia-opensource-cloudformationartifactsbucket-module",
@@ -1737,12 +1725,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:symphonia-opensource-cloudformationartifactsbucket-module": {
+      "name": "build:symphonia-opensource-cloudformationartifactsbucket-module",
+      "description": "build symphonia-opensource-cloudformationartifactsbucket-module",
+      "steps": [
+        {
+          "spawn": "compile:symphonia-opensource-cloudformationartifactsbucket-module"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/symphonia-opensource-cloudformationartifactsbucket-module/dist/ dist/"
+          "spawn": "package:symphonia-opensource-cloudformationartifactsbucket-module"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/symphonia-opensource-cloudformationartifactsbucket-module"
+      ]
     },
     "compile:sysdig-helm-agent": {
       "name": "compile:sysdig-helm-agent",
@@ -1760,12 +1756,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:sysdig-helm-agent": {
+      "name": "build:sysdig-helm-agent",
+      "description": "build sysdig-helm-agent",
+      "steps": [
+        {
+          "spawn": "compile:sysdig-helm-agent"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/sysdig-helm-agent/dist/ dist/"
+          "spawn": "package:sysdig-helm-agent"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/sysdig-helm-agent"
+      ]
     },
     "compile:tf-ad-computer": {
       "name": "compile:tf-ad-computer",
@@ -1783,12 +1787,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:tf-ad-computer": {
+      "name": "build:tf-ad-computer",
+      "description": "build tf-ad-computer",
+      "steps": [
+        {
+          "spawn": "compile:tf-ad-computer"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-ad-computer/dist/ dist/"
+          "spawn": "package:tf-ad-computer"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-ad-computer"
+      ]
     },
     "compile:tf-ad-user": {
       "name": "compile:tf-ad-user",
@@ -1806,12 +1818,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:tf-ad-user": {
+      "name": "build:tf-ad-user",
+      "description": "build tf-ad-user",
+      "steps": [
+        {
+          "spawn": "compile:tf-ad-user"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-ad-user/dist/ dist/"
+          "spawn": "package:tf-ad-user"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-ad-user"
+      ]
     },
     "compile:tf-akamai-dnsrecord": {
       "name": "compile:tf-akamai-dnsrecord",
@@ -1829,12 +1849,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:tf-akamai-dnsrecord": {
+      "name": "build:tf-akamai-dnsrecord",
+      "description": "build tf-akamai-dnsrecord",
+      "steps": [
+        {
+          "spawn": "compile:tf-akamai-dnsrecord"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-akamai-dnsrecord/dist/ dist/"
+          "spawn": "package:tf-akamai-dnsrecord"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-akamai-dnsrecord"
+      ]
     },
     "compile:tf-aws-keypair": {
       "name": "compile:tf-aws-keypair",
@@ -1852,12 +1880,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:tf-aws-keypair": {
+      "name": "build:tf-aws-keypair",
+      "description": "build tf-aws-keypair",
+      "steps": [
+        {
+          "spawn": "compile:tf-aws-keypair"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-aws-keypair/dist/ dist/"
+          "spawn": "package:tf-aws-keypair"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-aws-keypair"
+      ]
     },
     "compile:tf-aws-s3bucket": {
       "name": "compile:tf-aws-s3bucket",
@@ -1875,12 +1911,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:tf-aws-s3bucket": {
+      "name": "build:tf-aws-s3bucket",
+      "description": "build tf-aws-s3bucket",
+      "steps": [
+        {
+          "spawn": "compile:tf-aws-s3bucket"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-aws-s3bucket/dist/ dist/"
+          "spawn": "package:tf-aws-s3bucket"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-aws-s3bucket"
+      ]
     },
     "compile:tf-aws-s3bucketobject": {
       "name": "compile:tf-aws-s3bucketobject",
@@ -1898,12 +1942,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:tf-aws-s3bucketobject": {
+      "name": "build:tf-aws-s3bucketobject",
+      "description": "build tf-aws-s3bucketobject",
+      "steps": [
+        {
+          "spawn": "compile:tf-aws-s3bucketobject"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-aws-s3bucketobject/dist/ dist/"
+          "spawn": "package:tf-aws-s3bucketobject"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-aws-s3bucketobject"
+      ]
     },
     "compile:tf-azuread-application": {
       "name": "compile:tf-azuread-application",
@@ -1921,12 +1973,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:tf-azuread-application": {
+      "name": "build:tf-azuread-application",
+      "description": "build tf-azuread-application",
+      "steps": [
+        {
+          "spawn": "compile:tf-azuread-application"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-azuread-application/dist/ dist/"
+          "spawn": "package:tf-azuread-application"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-azuread-application"
+      ]
     },
     "compile:tf-azuread-user": {
       "name": "compile:tf-azuread-user",
@@ -1944,12 +2004,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:tf-azuread-user": {
+      "name": "build:tf-azuread-user",
+      "description": "build tf-azuread-user",
+      "steps": [
+        {
+          "spawn": "compile:tf-azuread-user"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-azuread-user/dist/ dist/"
+          "spawn": "package:tf-azuread-user"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-azuread-user"
+      ]
     },
     "compile:tf-cloudflare-record": {
       "name": "compile:tf-cloudflare-record",
@@ -1967,12 +2035,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:tf-cloudflare-record": {
+      "name": "build:tf-cloudflare-record",
+      "description": "build tf-cloudflare-record",
+      "steps": [
+        {
+          "spawn": "compile:tf-cloudflare-record"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-cloudflare-record/dist/ dist/"
+          "spawn": "package:tf-cloudflare-record"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-cloudflare-record"
+      ]
     },
     "compile:tf-digitalocean-droplet": {
       "name": "compile:tf-digitalocean-droplet",
@@ -1990,12 +2066,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:tf-digitalocean-droplet": {
+      "name": "build:tf-digitalocean-droplet",
+      "description": "build tf-digitalocean-droplet",
+      "steps": [
+        {
+          "spawn": "compile:tf-digitalocean-droplet"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-digitalocean-droplet/dist/ dist/"
+          "spawn": "package:tf-digitalocean-droplet"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-digitalocean-droplet"
+      ]
     },
     "compile:tf-github-repository": {
       "name": "compile:tf-github-repository",
@@ -2013,12 +2097,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:tf-github-repository": {
+      "name": "build:tf-github-repository",
+      "description": "build tf-github-repository",
+      "steps": [
+        {
+          "spawn": "compile:tf-github-repository"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-github-repository/dist/ dist/"
+          "spawn": "package:tf-github-repository"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-github-repository"
+      ]
     },
     "compile:tf-google-storagebucket": {
       "name": "compile:tf-google-storagebucket",
@@ -2036,12 +2128,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:tf-google-storagebucket": {
+      "name": "build:tf-google-storagebucket",
+      "description": "build tf-google-storagebucket",
+      "steps": [
+        {
+          "spawn": "compile:tf-google-storagebucket"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-google-storagebucket/dist/ dist/"
+          "spawn": "package:tf-google-storagebucket"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-google-storagebucket"
+      ]
     },
     "compile:tf-pagerduty-service": {
       "name": "compile:tf-pagerduty-service",
@@ -2059,12 +2159,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:tf-pagerduty-service": {
+      "name": "build:tf-pagerduty-service",
+      "description": "build tf-pagerduty-service",
+      "steps": [
+        {
+          "spawn": "compile:tf-pagerduty-service"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-pagerduty-service/dist/ dist/"
+          "spawn": "package:tf-pagerduty-service"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-pagerduty-service"
+      ]
     },
     "compile:tf-random-string": {
       "name": "compile:tf-random-string",
@@ -2082,12 +2190,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:tf-random-string": {
+      "name": "build:tf-random-string",
+      "description": "build tf-random-string",
+      "steps": [
+        {
+          "spawn": "compile:tf-random-string"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-random-string/dist/ dist/"
+          "spawn": "package:tf-random-string"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-random-string"
+      ]
     },
     "compile:tf-random-uuid": {
       "name": "compile:tf-random-uuid",
@@ -2105,12 +2221,20 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:tf-random-uuid": {
+      "name": "build:tf-random-uuid",
+      "description": "build tf-random-uuid",
+      "steps": [
+        {
+          "spawn": "compile:tf-random-uuid"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-random-uuid/dist/ dist/"
+          "spawn": "package:tf-random-uuid"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/tf-random-uuid"
+      ]
     },
     "compile:trendmicro-cloudonecontainer-helm": {
       "name": "compile:trendmicro-cloudonecontainer-helm",
@@ -2128,12 +2252,28 @@
       "steps": [
         {
           "exec": "jsii-pacmak -vv"
+        }
+      ]
+    },
+    "build:trendmicro-cloudonecontainer-helm": {
+      "name": "build:trendmicro-cloudonecontainer-helm",
+      "description": "build trendmicro-cloudonecontainer-helm",
+      "steps": [
+        {
+          "spawn": "compile:trendmicro-cloudonecontainer-helm"
         },
         {
-          "exec": "rsync -av /Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/trendmicro-cloudonecontainer-helm/dist/ dist/"
+          "spawn": "package:trendmicro-cloudonecontainer-helm"
         }
-      ],
-      "cwd": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/trendmicro-cloudonecontainer-helm"
+      ]
+    },
+    "update-registry": {
+      "name": "update-registry",
+      "steps": [
+        {
+          "exec": "node registry/refresh.js"
+        }
+      ]
     },
     "release": {
       "name": "release",

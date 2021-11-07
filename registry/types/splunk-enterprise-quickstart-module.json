@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "5fae1ae5-2a62-4b93-a847-72800cbc4d67"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/module/c90b10f63c592300fda916a73ffef76788069f34/Splunk-Enterprise-QuickStart-MODULE",
   "Type": "MODULE",
   "TypeName": "Splunk::Enterprise::QuickStart::MODULE",

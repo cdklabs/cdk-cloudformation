@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "a1653608-db4f-4cca-b605-c2fa5fd47601"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/408988dff9e863704bcc72e7e13f8d645cee8311/AWSQS-EKS-Cluster",
   "Type": "RESOURCE",
   "TypeName": "AWSQS::EKS::Cluster",
@@ -13,8 +10,8 @@
   "Visibility": "PUBLIC",
   "SourceUrl": "https://github.com/aws-quickstart/quickstart-amazon-eks-cluster-resource-provider.git",
   "DocumentationUrl": "https://github.com/aws-quickstart/quickstart-amazon-eks-cluster-resource-provider/blob/main/README.md",
-  "TimeCreated": "2021-08-03T00:24:45.436Z",
+  "TimeCreated": "2021-11-04T00:10:58.050Z",
   "PublisherId": "408988dff9e863704bcc72e7e13f8d645cee8311",
-  "LatestPublicVersion": "1.11.0",
+  "LatestPublicVersion": "1.12.0",
   "IsActivated": false
 }

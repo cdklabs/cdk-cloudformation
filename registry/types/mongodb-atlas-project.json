@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "8cfd4f59-2a10-4474-a8f7-06524bb696ad"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/bb989456c78c398a858fef18f2ca1bfc1fbba082/MongoDB-Atlas-Project",
   "Type": "RESOURCE",
   "TypeName": "MongoDB::Atlas::Project",

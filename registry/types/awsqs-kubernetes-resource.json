@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "1e0bf188-200b-4bbc-b22c-2e0575c426bf"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/408988dff9e863704bcc72e7e13f8d645cee8311/AWSQS-Kubernetes-Resource",
   "Type": "RESOURCE",
   "TypeName": "AWSQS::Kubernetes::Resource",

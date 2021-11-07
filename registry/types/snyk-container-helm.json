@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "37af09db-19cc-4f69-8521-2850ce7151e4"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/23b85bc331bd703709e021cd4c874df9f591d746/Snyk-Container-Helm",
   "Type": "RESOURCE",
   "TypeName": "Snyk::Container::Helm",

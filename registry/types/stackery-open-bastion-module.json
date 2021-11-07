@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "19f1746f-fc1e-485f-95f5-c8e4f56adbcf"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/module/c7a1566696d21e673a0e14208c79edfc9dd639e3/Stackery-Open-Bastion-MODULE",
   "Type": "MODULE",
   "TypeName": "Stackery::Open::Bastion::MODULE",

@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "bd56c139-3ab3-4c0c-a8b6-b13a8760f143"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/module/06ff50c2e47f57b381f874871d9fac41796c9522/JFrog-Artifactory-EC2Instance-MODULE",
   "Type": "MODULE",
   "TypeName": "JFrog::Artifactory::EC2Instance::MODULE",

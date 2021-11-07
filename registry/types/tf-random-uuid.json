@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "b675479b-29bb-42b9-bd91-6b0ce3c5cecb"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/e1238fdd31aee1839e14fb3fb2dac9db154dae29/TF-Random-Uuid",
   "Type": "RESOURCE",
   "TypeName": "TF::Random::Uuid",

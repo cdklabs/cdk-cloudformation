@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "10b0b23f-db93-456f-a15f-7069843b7061"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/4f06bc39af5f4b984dd46ad17f10316e6258d9fa/Aqua-Enterprise-Enforcer",
   "Type": "RESOURCE",
   "TypeName": "Aqua::Enterprise::Enforcer",

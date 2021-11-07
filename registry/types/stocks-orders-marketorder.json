@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "ae5a097a-9009-4c9b-9dbc-042d83137606"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/e1238fdd31aee1839e14fb3fb2dac9db154dae29/Stocks-Orders-MarketOrder",
   "Type": "RESOURCE",
   "TypeName": "Stocks::Orders::MarketOrder",

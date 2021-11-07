@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "46aa6ac5-aac0-4edb-a8f6-9ea1263f1004"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/e1238fdd31aee1839e14fb3fb2dac9db154dae29/TF-Cloudflare-Record",
   "Type": "RESOURCE",
   "TypeName": "TF::Cloudflare::Record",

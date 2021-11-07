@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "071c452d-d6a6-4067-bce3-a8d23c032c10"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/module/06ff50c2e47f57b381f874871d9fac41796c9522/JFrog-Artifactory-NewVpc-MODULE",
   "Type": "MODULE",
   "TypeName": "JFrog::Artifactory::NewVpc::MODULE",

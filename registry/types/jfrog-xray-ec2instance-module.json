@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "c5ad2aa6-3ed0-47db-bb0c-0e4b888dda90"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/module/06ff50c2e47f57b381f874871d9fac41796c9522/JFrog-Xray-EC2Instance-MODULE",
   "Type": "MODULE",
   "TypeName": "JFrog::Xray::EC2Instance::MODULE",

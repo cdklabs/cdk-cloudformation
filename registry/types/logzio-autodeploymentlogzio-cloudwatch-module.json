@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "4ea2f0b8-e193-4ad2-9bce-e17fb2c00943"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/module/8a9caf0628707da0ff455be490fd366079c8223e/logzio-autoDeploymentLogzio-CloudWatch-MODULE",
   "Type": "MODULE",
   "TypeName": "logzio::autoDeploymentLogzio::CloudWatch::MODULE",

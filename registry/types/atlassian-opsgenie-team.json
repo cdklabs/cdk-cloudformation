@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "00b32f97-be35-42d1-8410-a95eadd0829a"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/4fb8713ab4ce2587ce74e0559d7661bb6e01e72b/Atlassian-Opsgenie-Team",
   "Type": "RESOURCE",
   "TypeName": "Atlassian::Opsgenie::Team",

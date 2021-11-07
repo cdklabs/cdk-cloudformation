@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "e261e3f4-63de-43ae-b846-5cbba3929c85"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/e1238fdd31aee1839e14fb3fb2dac9db154dae29/TF-AWS-S3Bucket",
   "Type": "RESOURCE",
   "TypeName": "TF::AWS::S3Bucket",

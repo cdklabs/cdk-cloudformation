@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "96977b74-e0de-4b7d-bf3b-58dc3ea6136f"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/7171b96e5d207b947eb72ca9ce05247c246de623/Datadog-Monitors-Downtime",
   "Type": "RESOURCE",
   "TypeName": "Datadog::Monitors::Downtime",

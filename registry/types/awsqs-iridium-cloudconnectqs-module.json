@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "cecc6e7b-f9b1-4a4e-9b4f-e4e8f162b743"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/module/408988dff9e863704bcc72e7e13f8d645cee8311/AWSQS-Iridium-CloudConnectQS-MODULE",
   "Type": "MODULE",
   "TypeName": "AWSQS::Iridium::CloudConnectQS::MODULE",

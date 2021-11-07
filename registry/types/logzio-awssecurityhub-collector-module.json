@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "c55e0fb3-4a24-4c57-8887-267de578d94b"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/module/8a9caf0628707da0ff455be490fd366079c8223e/logzio-awsSecurityHub-collector-MODULE",
   "Type": "MODULE",
   "TypeName": "logzio::awsSecurityHub::collector::MODULE",

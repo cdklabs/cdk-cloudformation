@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "42008647-cdd3-4fe0-95da-666e13341306"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/4fb8713ab4ce2587ce74e0559d7661bb6e01e72b/Atlassian-Opsgenie-Integration",
   "Type": "RESOURCE",
   "TypeName": "Atlassian::Opsgenie::Integration",

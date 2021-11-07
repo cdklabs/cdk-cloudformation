@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "030f05cb-9cc7-47df-945e-937aa4ddc9b4"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/91d05981c6c0b080f2f1adcb370e1145c39b99e2/Spot-Elastigroup-Group",
   "Type": "RESOURCE",
   "TypeName": "Spot::Elastigroup::Group",

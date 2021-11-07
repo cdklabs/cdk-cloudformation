@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "e6f2d2f6-fdb0-4954-9d88-5fb5a7b9dd60"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/bb989456c78c398a858fef18f2ca1bfc1fbba082/MongoDB-Atlas-ProjectIpAccessList",
   "Type": "RESOURCE",
   "TypeName": "MongoDB::Atlas::ProjectIpAccessList",

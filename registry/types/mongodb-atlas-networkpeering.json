@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "3c0d39f2-f5dd-4cc4-8692-fcf104196b96"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/bb989456c78c398a858fef18f2ca1bfc1fbba082/MongoDB-Atlas-NetworkPeering",
   "Type": "RESOURCE",
   "TypeName": "MongoDB::Atlas::NetworkPeering",

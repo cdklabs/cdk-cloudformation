@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "03d6bb54-ab20-4ab6-aa49-5b9e2a4a3578"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/e1238fdd31aee1839e14fb3fb2dac9db154dae29/TF-Google-StorageBucket",
   "Type": "RESOURCE",
   "TypeName": "TF::Google::StorageBucket",

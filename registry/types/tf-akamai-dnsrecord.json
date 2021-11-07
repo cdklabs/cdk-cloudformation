@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "7865691c-d021-4802-b1e0-6543f2389dab"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/e1238fdd31aee1839e14fb3fb2dac9db154dae29/TF-Akamai-DnsRecord",
   "Type": "RESOURCE",
   "TypeName": "TF::Akamai::DnsRecord",

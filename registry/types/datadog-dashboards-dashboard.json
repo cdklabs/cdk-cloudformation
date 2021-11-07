@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "e637ddeb-ea6e-4c3f-931b-ea451120b2e5"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/7171b96e5d207b947eb72ca9ce05247c246de623/Datadog-Dashboards-Dashboard",
   "Type": "RESOURCE",
   "TypeName": "Datadog::Dashboards::Dashboard",

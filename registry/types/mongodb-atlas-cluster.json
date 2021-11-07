@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "1aa7ebb6-35e9-408a-a20e-c6a522fe118b"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/bb989456c78c398a858fef18f2ca1bfc1fbba082/MongoDB-Atlas-Cluster",
   "Type": "RESOURCE",
   "TypeName": "MongoDB::Atlas::Cluster",

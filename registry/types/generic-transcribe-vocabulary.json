@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "2aaab092-94e8-472b-9cd3-64f6b8e41acb"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/resource/e1238fdd31aee1839e14fb3fb2dac9db154dae29/Generic-Transcribe-Vocabulary",
   "Type": "RESOURCE",
   "TypeName": "Generic::Transcribe::Vocabulary",

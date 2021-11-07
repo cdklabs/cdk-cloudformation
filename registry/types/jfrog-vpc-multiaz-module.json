@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "6c3fa94c-0e3b-4791-bed4-c42b40fbbc6d"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/module/06ff50c2e47f57b381f874871d9fac41796c9522/JFrog-Vpc-MultiAz-MODULE",
   "Type": "MODULE",
   "TypeName": "JFrog::Vpc::MultiAz::MODULE",

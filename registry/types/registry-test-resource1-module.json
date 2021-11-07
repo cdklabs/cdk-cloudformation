@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "b9e52bff-9f9b-4141-bd73-812f117e2c66"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/module/4686b5f994c8b12636b1af16ce88b8e2d2e75c8c/REGISTRY-TEST-RESOURCE1-MODULE",
   "Type": "MODULE",
   "TypeName": "REGISTRY::TEST::RESOURCE1::MODULE",

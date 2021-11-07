@@ -4,6 +4,8 @@ import type { CloudFormation } from 'aws-sdk';
 import * as caseutil from 'case';
 import { CfnResourceGenerator } from 'cdk-import/lib/cfn-resource-generator';
 import { Component, JsonFile, License, Project, TextFile, TypeScriptProject } from 'projen';
+import { TaskWorkflow } from 'projen/lib/github';
+import { JobPermission } from 'projen/lib/github/workflows-model';
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const CDK_VERSION = require('@aws-cdk/core/package.json').version;
@@ -43,7 +45,7 @@ export class CloudFormationTypeProject extends Component {
 
     const outdir = join(options.packagesDir, npmScope, typeNameKebab);
 
-    this.subproject = new Project({
+    const project = new Project({
       name: `${npmScope}/${typeNameKebab}`,
       parent: parent,
       outdir: outdir,
@@ -51,9 +53,9 @@ export class CloudFormationTypeProject extends Component {
 
     const spdx = 'Apache-2.0';
 
-    new License(this.subproject, { spdx });
+    new License(project, { spdx });
 
-    new TextFile(this.subproject, 'README.md', {
+    new TextFile(project, 'README.md', {
       lines: [
         `# AWS CDK Constructs for ${typeName}`,
         '',
@@ -66,7 +68,7 @@ export class CloudFormationTypeProject extends Component {
       ],
     });
 
-    new JsonFile(this.subproject, 'package.json', {
+    new JsonFile(project, 'package.json', {
       obj: {
         name: `${npmScope}/${typeNameKebab}`,
         description: `${npmScope}/${typeNameKebab}`,
@@ -79,7 +81,7 @@ export class CloudFormationTypeProject extends Component {
         repository: {
           type: 'git',
           url: 'https://github.com/cdklabs/cdk-cloudformation-types.git',
-          directory: this.subproject.outdir,
+          directory: project.outdir,
         },
         main: 'lib/index.js',
         types: 'lib/index.d.ts',
@@ -111,26 +113,48 @@ export class CloudFormationTypeProject extends Component {
           '@aws-cdk/core': `^${CDK_VERSION}`,
           'constructs': `^${CONSTRUCTS_VERSION}`,
         },
+        devDependencies: {
+          '@aws-cdk/core': CDK_VERSION,
+          'constructs': CONSTRUCTS_VERSION,
+        },
         license: spdx,
       },
     });
 
-    const compile = parent.addTask(`compile:${typeNameKebab}`, {
+    project.addGitIgnore('/lib/');
+    project.addGitIgnore('/dist/');
+    project.addPackageIgnore('/src/');
+
+    const compileTask = parent.addTask(`compile:${typeNameKebab}`, {
       description: `compile ${typeNameKebab} with JSII`,
-      cwd: this.subproject.outdir,
       exec: 'jsii',
+      cwd: project.outdir,
     });
 
-    const pkg = parent.addTask(`package:${typeNameKebab}`, {
+    const packageTask = parent.addTask(`package:${typeNameKebab}`, {
       description: `produce multi-language packaging for ${typeNameKebab}`,
-      cwd: this.subproject.outdir,
       exec: 'jsii-pacmak -vv',
     });
 
-    pkg.exec(`rsync -av ${this.subproject.outdir}/dist/ dist/`);
+    const buildTask = parent.addTask(`build:${typeNameKebab}`, {
+      description: `build ${typeNameKebab}`,
+    });
 
-    parent.compileTask.spawn(compile);
-    parent.packageTask?.spawn(pkg);
+    buildTask.spawn(compileTask);
+    buildTask.spawn(packageTask);
+
+    new TaskWorkflow(parent.github!, {
+      task: buildTask,
+      name: typeNameKebab,
+      permissions: {
+        contents: JobPermission.READ,
+      },
+    });
+
+    parent.gitignore.addPatterns(`/${outdir}/dist/`);
+    parent.gitignore.addPatterns(`/${outdir}/lib/`);
+
+    this.subproject = project;
   }
 
   public preSynthesize(): void {

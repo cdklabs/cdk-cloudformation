@@ -1,7 +1,4 @@
 {
-  "ResponseMetadata": {
-    "RequestId": "5df919ae-3814-4cf6-9ab8-745e23aa4f98"
-  },
   "Arn": "arn:aws:cloudformation:us-east-1::type/module/408988dff9e863704bcc72e7e13f8d645cee8311/AWSQS-EC2-LinuxBastionQS-MODULE",
   "Type": "MODULE",
   "TypeName": "AWSQS::EC2::LinuxBastionQS::MODULE",

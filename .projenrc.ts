@@ -32,4 +32,8 @@ generatePackages(project, {
   scope: scope,
 });
 
+project.addTask('update-registry', {
+  exec: 'node registry/refresh.js',
+});
+
 project.synth();

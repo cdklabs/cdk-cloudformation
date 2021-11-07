@@ -145,11 +145,9 @@ export class CloudFormationTypeProject extends Component {
 
     new TaskWorkflow(parent.github!, {
       task: buildTask,
-      name: typeNameKebab,
+      name: `build-${typeNameKebab}`,
       triggers: {
-        push: {
-          branches: ['main'],
-        },
+        pullRequest: {},
       },
       permissions: {
         contents: JobPermission.READ,

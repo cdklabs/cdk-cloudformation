@@ -10,7 +10,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation-types.git",
-    "directory": "/__w/cdk-cloudformation-types/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-scanner"
+    "directory": "/Users/benisrae/code/cdk-cloudformation-types/packages/@cdk-cloudformation/aqua-enterprise-scanner"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

@@ -4,7 +4,6 @@ import type { CloudFormation } from 'aws-sdk';
 import * as caseutil from 'case';
 import { CfnResourceGenerator } from 'cdk-import/lib/cfn-resource-generator';
 import { Component, JsonFile, License, Project, TextFile, TypeScriptProject } from 'projen';
-import { TaskWorkflow } from 'projen/lib/github';
 import { JobPermission } from 'projen/lib/github/workflows-model';
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
@@ -128,12 +127,13 @@ export class CloudFormationTypeProject extends Component {
     const compileTask = parent.addTask(`compile:${typeNameKebab}`, {
       description: `compile ${typeNameKebab} with JSII`,
       exec: 'jsii',
-      cwd: project.outdir,
+      cwd: outdir,
     });
 
     const packageTask = parent.addTask(`package:${typeNameKebab}`, {
       description: `produce multi-language packaging for ${typeNameKebab}`,
       exec: 'jsii-pacmak -vv',
+      cwd: outdir,
     });
 
     const buildTask = parent.addTask(`build:${typeNameKebab}`, {
@@ -143,14 +143,20 @@ export class CloudFormationTypeProject extends Component {
     buildTask.spawn(compileTask);
     buildTask.spawn(packageTask);
 
-    new TaskWorkflow(parent.github!, {
-      task: buildTask,
-      name: `build-${typeNameKebab}`,
-      triggers: {
-        pullRequest: {},
-      },
-      permissions: {
-        contents: JobPermission.READ,
+    parent.buildWorkflow?.addJobs({
+      [typeNameKebab]: {
+        runsOn: 'ubuntu-latest',
+        container: {
+          image: 'jsii/superchain:1-buster-slim',
+        },
+        permissions: {
+          contents: JobPermission.READ,
+        },
+        steps: [
+          { uses: 'actions/checkout@v2' },
+          { run: 'yarn install' },
+          { run: `yarn ${buildTask.name}` },
+        ],
       },
     });
 

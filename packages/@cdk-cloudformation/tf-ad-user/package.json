@@ -19,19 +19,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.tf_ad_user",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.tf_ad_user",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "tf-ad-user"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-tf-ad-user",
-        "module": "cdk_cloudformation_tf_ad_user"
+        "distName": "cdk-cloudformation-types-tf-ad-user",
+        "module": "cdk_cloudformation_types_tf_ad_user"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.TFADUser",
-        "packageId": "Cdklabs.CdkCloudFormation.TFADUser"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.TFADUser",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.TFADUser"
       }
     },
     "tsc": {

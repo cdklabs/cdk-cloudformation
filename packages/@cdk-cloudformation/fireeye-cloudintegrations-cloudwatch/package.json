@@ -18,19 +18,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.fireeye_cloudintegrations_cloudwatch",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.fireeye_cloudintegrations_cloudwatch",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "fireeye-cloudintegrations-cloudwatch"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-fireeye-cloudintegrations-cloudwatch",
-        "module": "cdk_cloudformation_fireeye_cloudintegrations_cloudwatch"
+        "distName": "cdk-cloudformation-types-fireeye-cloudintegrations-cloudwatch",
+        "module": "cdk_cloudformation_types_fireeye_cloudintegrations_cloudwatch"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.FireEyeCloudIntegrationsCloudwatch",
-        "packageId": "Cdklabs.CdkCloudFormation.FireEyeCloudIntegrationsCloudwatch"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.FireEyeCloudIntegrationsCloudwatch",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.FireEyeCloudIntegrationsCloudwatch"
       }
     },
     "tsc": {

@@ -18,19 +18,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.logzio_awssecurityhub_collector_module",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.logzio_awssecurityhub_collector_module",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "logzio-awssecurityhub-collector-module"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-logzio-awssecurityhub-collector-module",
-        "module": "cdk_cloudformation_logzio_awssecurityhub_collector_module"
+        "distName": "cdk-cloudformation-types-logzio-awssecurityhub-collector-module",
+        "module": "cdk_cloudformation_types_logzio_awssecurityhub_collector_module"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.LogzioAwsSecurityHubCollectorMODULE",
-        "packageId": "Cdklabs.CdkCloudFormation.LogzioAwsSecurityHubCollectorMODULE"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.LogzioAwsSecurityHubCollectorMODULE",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.LogzioAwsSecurityHubCollectorMODULE"
       }
     },
     "tsc": {

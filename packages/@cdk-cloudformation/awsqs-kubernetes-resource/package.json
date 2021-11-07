@@ -19,19 +19,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.awsqs_kubernetes_resource",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.awsqs_kubernetes_resource",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "awsqs-kubernetes-resource"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-awsqs-kubernetes-resource",
-        "module": "cdk_cloudformation_awsqs_kubernetes_resource"
+        "distName": "cdk-cloudformation-types-awsqs-kubernetes-resource",
+        "module": "cdk_cloudformation_types_awsqs_kubernetes_resource"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.AWSQSKubernetesResource",
-        "packageId": "Cdklabs.CdkCloudFormation.AWSQSKubernetesResource"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.AWSQSKubernetesResource",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.AWSQSKubernetesResource"
       }
     },
     "tsc": {

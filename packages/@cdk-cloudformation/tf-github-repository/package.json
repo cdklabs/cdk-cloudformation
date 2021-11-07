@@ -1,6 +1,6 @@
 {
   "name": "@cdk-cloudformation/tf-github-repository",
-  "description": "This resource allows you to create and manage repositories within your\nGitHub organization or personal account.",
+  "description": "This resource allows you to create and manage repositories within your",
   "version": "1.0.0",
   "author": {
     "name": "Amazon Web Services",
@@ -19,19 +19,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.tf_github_repository",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.tf_github_repository",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "tf-github-repository"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-tf-github-repository",
-        "module": "cdk_cloudformation_tf_github_repository"
+        "distName": "cdk-cloudformation-types-tf-github-repository",
+        "module": "cdk_cloudformation_types_tf_github_repository"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.TFGitHubRepository",
-        "packageId": "Cdklabs.CdkCloudFormation.TFGitHubRepository"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.TFGitHubRepository",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.TFGitHubRepository"
       }
     },
     "tsc": {

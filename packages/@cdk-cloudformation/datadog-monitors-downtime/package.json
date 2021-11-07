@@ -18,19 +18,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.datadog_monitors_downtime",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.datadog_monitors_downtime",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "datadog-monitors-downtime"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-datadog-monitors-downtime",
-        "module": "cdk_cloudformation_datadog_monitors_downtime"
+        "distName": "cdk-cloudformation-types-datadog-monitors-downtime",
+        "module": "cdk_cloudformation_types_datadog_monitors_downtime"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.DatadogMonitorsDowntime",
-        "packageId": "Cdklabs.CdkCloudFormation.DatadogMonitorsDowntime"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.DatadogMonitorsDowntime",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.DatadogMonitorsDowntime"
       }
     },
     "tsc": {

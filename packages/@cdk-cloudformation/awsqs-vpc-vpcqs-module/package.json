@@ -18,19 +18,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.awsqs_vpc_vpcqs_module",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.awsqs_vpc_vpcqs_module",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "awsqs-vpc-vpcqs-module"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-awsqs-vpc-vpcqs-module",
-        "module": "cdk_cloudformation_awsqs_vpc_vpcqs_module"
+        "distName": "cdk-cloudformation-types-awsqs-vpc-vpcqs-module",
+        "module": "cdk_cloudformation_types_awsqs_vpc_vpcqs_module"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.AwsqsVpcVpcqsModule",
-        "packageId": "Cdklabs.CdkCloudFormation.AwsqsVpcVpcqsModule"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.AwsqsVpcVpcqsModule",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.AwsqsVpcVpcqsModule"
       }
     },
     "tsc": {

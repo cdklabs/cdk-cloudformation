@@ -19,19 +19,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.tf_random_string",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.tf_random_string",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "tf-random-string"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-tf-random-string",
-        "module": "cdk_cloudformation_tf_random_string"
+        "distName": "cdk-cloudformation-types-tf-random-string",
+        "module": "cdk_cloudformation_types_tf_random_string"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.TFRandomString",
-        "packageId": "Cdklabs.CdkCloudFormation.TFRandomString"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.TFRandomString",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.TFRandomString"
       }
     },
     "tsc": {

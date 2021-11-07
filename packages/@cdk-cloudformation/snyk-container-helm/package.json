@@ -19,19 +19,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.snyk_container_helm",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.snyk_container_helm",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "snyk-container-helm"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-snyk-container-helm",
-        "module": "cdk_cloudformation_snyk_container_helm"
+        "distName": "cdk-cloudformation-types-snyk-container-helm",
+        "module": "cdk_cloudformation_types_snyk_container_helm"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.SnykContainerHelm",
-        "packageId": "Cdklabs.CdkCloudFormation.SnykContainerHelm"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.SnykContainerHelm",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.SnykContainerHelm"
       }
     },
     "tsc": {

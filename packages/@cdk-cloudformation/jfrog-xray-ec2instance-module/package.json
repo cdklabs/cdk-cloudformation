@@ -18,19 +18,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.jfrog_xray_ec2instance_module",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.jfrog_xray_ec2instance_module",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "jfrog-xray-ec2instance-module"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-jfrog-xray-ec2instance-module",
-        "module": "cdk_cloudformation_jfrog_xray_ec2instance_module"
+        "distName": "cdk-cloudformation-types-jfrog-xray-ec2instance-module",
+        "module": "cdk_cloudformation_types_jfrog_xray_ec2instance_module"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.JFrogXrayEC2InstanceMODULE",
-        "packageId": "Cdklabs.CdkCloudFormation.JFrogXrayEC2InstanceMODULE"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.JFrogXrayEC2InstanceMODULE",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.JFrogXrayEC2InstanceMODULE"
       }
     },
     "tsc": {

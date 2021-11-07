@@ -18,19 +18,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.jfrog_artifactory_existingvpc_module",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.jfrog_artifactory_existingvpc_module",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "jfrog-artifactory-existingvpc-module"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-jfrog-artifactory-existingvpc-module",
-        "module": "cdk_cloudformation_jfrog_artifactory_existingvpc_module"
+        "distName": "cdk-cloudformation-types-jfrog-artifactory-existingvpc-module",
+        "module": "cdk_cloudformation_types_jfrog_artifactory_existingvpc_module"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.JFrogArtifactoryExistingVpcMODULE",
-        "packageId": "Cdklabs.CdkCloudFormation.JFrogArtifactoryExistingVpcMODULE"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.JFrogArtifactoryExistingVpcMODULE",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.JFrogArtifactoryExistingVpcMODULE"
       }
     },
     "tsc": {

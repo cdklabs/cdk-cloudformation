@@ -1,6 +1,6 @@
 {
   "name": "@cdk-cloudformation/tf-aws-keypair",
-  "description": "Provides an [EC2 key pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html) resource. A key pair is used to control login access to EC2 instances.\n\nCurrently this resource requires an existing user-supplied key pair. This key pair's public key will be registered with AWS to allow logging-in to EC2 instances.\n\nWhen importing an existing key pair the public key material may be in any format supported by AWS. Supported formats (per the [AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#how-to-generate-your-own-key-and-import-it-to-aws)) are:\n\n* OpenSSH public key format (the format in ~/.ssh/authorized_keys)\n* Base64 encoded DER format\n* SSH public key file format as specified in RFC4716",
+  "description": "Provides an [EC2 key pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html) resource. A key pair is used to control login access to EC2 instances.",
   "version": "1.0.0",
   "author": {
     "name": "Amazon Web Services",
@@ -19,19 +19,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.tf_aws_keypair",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.tf_aws_keypair",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "tf-aws-keypair"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-tf-aws-keypair",
-        "module": "cdk_cloudformation_tf_aws_keypair"
+        "distName": "cdk-cloudformation-types-tf-aws-keypair",
+        "module": "cdk_cloudformation_types_tf_aws_keypair"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.TFAWSKeyPair",
-        "packageId": "Cdklabs.CdkCloudFormation.TFAWSKeyPair"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.TFAWSKeyPair",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.TFAWSKeyPair"
       }
     },
     "tsc": {

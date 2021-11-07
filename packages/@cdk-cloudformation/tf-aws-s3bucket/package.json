@@ -1,6 +1,6 @@
 {
   "name": "@cdk-cloudformation/tf-aws-s3bucket",
-  "description": "Provides a S3 bucket resource.\n\n-> This functionality is for managing S3 in an AWS Partition. To manage [S3 on Outposts](https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html), see the [`aws_s3control_bucket`](/docs/providers/aws/r/s3control_bucket.html) resource.",
+  "description": "Provides a S3 bucket resource.",
   "version": "1.0.0",
   "author": {
     "name": "Amazon Web Services",
@@ -19,19 +19,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.tf_aws_s3bucket",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.tf_aws_s3bucket",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "tf-aws-s3bucket"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-tf-aws-s3bucket",
-        "module": "cdk_cloudformation_tf_aws_s3bucket"
+        "distName": "cdk-cloudformation-types-tf-aws-s3bucket",
+        "module": "cdk_cloudformation_types_tf_aws_s3bucket"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.TFAWSS3Bucket",
-        "packageId": "Cdklabs.CdkCloudFormation.TFAWSS3Bucket"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.TFAWSS3Bucket",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.TFAWSS3Bucket"
       }
     },
     "tsc": {

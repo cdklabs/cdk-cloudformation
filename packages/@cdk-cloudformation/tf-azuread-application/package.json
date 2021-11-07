@@ -1,6 +1,6 @@
 {
   "name": "@cdk-cloudformation/tf-azuread-application",
-  "description": "Manages an Application within Azure Active Directory.\n\n-> **NOTE:** If you're authenticating using a Service Principal then it must have permissions to both `Read and write owned by applications` and `Sign in and read user profile` within the `Windows Azure Active Directory` API.",
+  "description": "Manages an Application within Azure Active Directory.",
   "version": "1.0.0",
   "author": {
     "name": "Amazon Web Services",
@@ -19,19 +19,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.tf_azuread_application",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.tf_azuread_application",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "tf-azuread-application"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-tf-azuread-application",
-        "module": "cdk_cloudformation_tf_azuread_application"
+        "distName": "cdk-cloudformation-types-tf-azuread-application",
+        "module": "cdk_cloudformation_types_tf_azuread_application"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.TFAzureADApplication",
-        "packageId": "Cdklabs.CdkCloudFormation.TFAzureADApplication"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.TFAzureADApplication",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.TFAzureADApplication"
       }
     },
     "tsc": {

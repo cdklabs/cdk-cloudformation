@@ -18,19 +18,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.datadog_integrations_aws",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.datadog_integrations_aws",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "datadog-integrations-aws"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-datadog-integrations-aws",
-        "module": "cdk_cloudformation_datadog_integrations_aws"
+        "distName": "cdk-cloudformation-types-datadog-integrations-aws",
+        "module": "cdk_cloudformation_types_datadog_integrations_aws"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.DatadogIntegrationsAWS",
-        "packageId": "Cdklabs.CdkCloudFormation.DatadogIntegrationsAWS"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.DatadogIntegrationsAWS",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.DatadogIntegrationsAWS"
       }
     },
     "tsc": {

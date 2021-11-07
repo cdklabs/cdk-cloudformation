@@ -18,19 +18,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.symphonia_opensource_cloudformationartifactsbucket_module",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.symphonia_opensource_cloudformationartifactsbucket_module",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "symphonia-opensource-cloudformationartifactsbucket-module"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-symphonia-opensource-cloudformationartifactsbucket-module",
-        "module": "cdk_cloudformation_symphonia_opensource_cloudformationartifactsbucket_module"
+        "distName": "cdk-cloudformation-types-symphonia-opensource-cloudformationartifactsbucket-module",
+        "module": "cdk_cloudformation_types_symphonia_opensource_cloudformationartifactsbucket_module"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.SymphoniaOpenSourceCloudFormationArtifactsBucketMODULE",
-        "packageId": "Cdklabs.CdkCloudFormation.SymphoniaOpenSourceCloudFormationArtifactsBucketMODULE"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.SymphoniaOpenSourceCloudFormationArtifactsBucketMODULE",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.SymphoniaOpenSourceCloudFormationArtifactsBucketMODULE"
       }
     },
     "tsc": {

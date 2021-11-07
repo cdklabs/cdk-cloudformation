@@ -19,19 +19,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.stocks_orders_marketorder",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.stocks_orders_marketorder",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "stocks-orders-marketorder"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-stocks-orders-marketorder",
-        "module": "cdk_cloudformation_stocks_orders_marketorder"
+        "distName": "cdk-cloudformation-types-stocks-orders-marketorder",
+        "module": "cdk_cloudformation_types_stocks_orders_marketorder"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.StocksOrdersMarketOrder",
-        "packageId": "Cdklabs.CdkCloudFormation.StocksOrdersMarketOrder"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.StocksOrdersMarketOrder",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.StocksOrdersMarketOrder"
       }
     },
     "tsc": {

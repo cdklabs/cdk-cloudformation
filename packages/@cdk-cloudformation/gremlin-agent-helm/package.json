@@ -19,19 +19,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.gremlin_agent_helm",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.gremlin_agent_helm",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "gremlin-agent-helm"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-gremlin-agent-helm",
-        "module": "cdk_cloudformation_gremlin_agent_helm"
+        "distName": "cdk-cloudformation-types-gremlin-agent-helm",
+        "module": "cdk_cloudformation_types_gremlin_agent_helm"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.GremlinAgentHelm",
-        "packageId": "Cdklabs.CdkCloudFormation.GremlinAgentHelm"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.GremlinAgentHelm",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.GremlinAgentHelm"
       }
     },
     "tsc": {

@@ -18,19 +18,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.mongodb_atlas_databaseuser",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.mongodb_atlas_databaseuser",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "mongodb-atlas-databaseuser"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-mongodb-atlas-databaseuser",
-        "module": "cdk_cloudformation_mongodb_atlas_databaseuser"
+        "distName": "cdk-cloudformation-types-mongodb-atlas-databaseuser",
+        "module": "cdk_cloudformation_types_mongodb_atlas_databaseuser"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.MongoDBAtlasDatabaseUser",
-        "packageId": "Cdklabs.CdkCloudFormation.MongoDBAtlasDatabaseUser"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.MongoDBAtlasDatabaseUser",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.MongoDBAtlasDatabaseUser"
       }
     },
     "tsc": {

@@ -18,19 +18,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.awsqs_ec2_linuxbastionqs_module",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.awsqs_ec2_linuxbastionqs_module",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "awsqs-ec2-linuxbastionqs-module"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-awsqs-ec2-linuxbastionqs-module",
-        "module": "cdk_cloudformation_awsqs_ec2_linuxbastionqs_module"
+        "distName": "cdk-cloudformation-types-awsqs-ec2-linuxbastionqs-module",
+        "module": "cdk_cloudformation_types_awsqs_ec2_linuxbastionqs_module"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.AWSQSEC2LinuxBastionQSMODULE",
-        "packageId": "Cdklabs.CdkCloudFormation.AWSQSEC2LinuxBastionQSMODULE"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.AWSQSEC2LinuxBastionQSMODULE",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.AWSQSEC2LinuxBastionQSMODULE"
       }
     },
     "tsc": {

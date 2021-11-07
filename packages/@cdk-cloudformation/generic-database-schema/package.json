@@ -19,19 +19,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.generic_database_schema",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.generic_database_schema",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "generic-database-schema"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-generic-database-schema",
-        "module": "cdk_cloudformation_generic_database_schema"
+        "distName": "cdk-cloudformation-types-generic-database-schema",
+        "module": "cdk_cloudformation_types_generic_database_schema"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.GenericDatabaseSchema",
-        "packageId": "Cdklabs.CdkCloudFormation.GenericDatabaseSchema"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.GenericDatabaseSchema",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.GenericDatabaseSchema"
       }
     },
     "tsc": {

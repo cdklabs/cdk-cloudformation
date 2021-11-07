@@ -18,19 +18,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.stackery_open_bastion_module",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.stackery_open_bastion_module",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "stackery-open-bastion-module"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-stackery-open-bastion-module",
-        "module": "cdk_cloudformation_stackery_open_bastion_module"
+        "distName": "cdk-cloudformation-types-stackery-open-bastion-module",
+        "module": "cdk_cloudformation_types_stackery_open_bastion_module"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.StackeryOpenBastionMODULE",
-        "packageId": "Cdklabs.CdkCloudFormation.StackeryOpenBastionMODULE"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.StackeryOpenBastionMODULE",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.StackeryOpenBastionMODULE"
       }
     },
     "tsc": {

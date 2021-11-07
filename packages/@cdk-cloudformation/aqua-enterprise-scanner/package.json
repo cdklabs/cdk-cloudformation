@@ -19,19 +19,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.aqua_enterprise_scanner",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.aqua_enterprise_scanner",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "aqua-enterprise-scanner"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-aqua-enterprise-scanner",
-        "module": "cdk_cloudformation_aqua_enterprise_scanner"
+        "distName": "cdk-cloudformation-types-aqua-enterprise-scanner",
+        "module": "cdk_cloudformation_types_aqua_enterprise_scanner"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.AquaEnterpriseScanner",
-        "packageId": "Cdklabs.CdkCloudFormation.AquaEnterpriseScanner"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.AquaEnterpriseScanner",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.AquaEnterpriseScanner"
       }
     },
     "tsc": {

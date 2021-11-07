@@ -92,7 +92,7 @@ export class CloudFormationTypeProject extends Component {
     new JsonFile(project, 'package.json', {
       obj: {
         name: `${npmScope}/${typeNameKebab}`,
-        description: description,
+        description: description.split('\n')[0], // only first line
         version: options.type.LatestPublicVersion ?? '0.0.0',
         author: {
           name: 'Amazon Web Services',
@@ -111,19 +111,19 @@ export class CloudFormationTypeProject extends Component {
           outdir: 'dist',
           targets: {
             java: {
-              package: `io.github.cdklabs.cdk_cloudformation.${typeNameSnake}`,
+              package: `io.github.cdklabs.cdk_cloudformation_types.${typeNameSnake}`,
               maven: {
-                groupId: 'io.github.cdklabs.cdk_cloudformation',
+                groupId: 'io.github.cdklabs.cdk_cloudformation_types',
                 artifactId: typeNameKebab,
               },
             },
             python: {
-              distName: `cdk-cloudformation-${typeNameKebab}`,
-              module: `cdk_cloudformation_${typeNameSnake}`,
+              distName: `cdk-cloudformation-types-${typeNameKebab}`,
+              module: `cdk_cloudformation_types_${typeNameSnake}`,
             },
             dotnet: {
-              namespace: `Cdklabs.CdkCloudFormation.${typeNamePascal}`,
-              packageId: `Cdklabs.CdkCloudFormation.${typeNamePascal}`,
+              namespace: `Cdklabs.CdkCloudFormationTypes.${typeNamePascal}`,
+              packageId: `Cdklabs.CdkCloudFormationTypes.${typeNamePascal}`,
             },
           },
           tsc: {

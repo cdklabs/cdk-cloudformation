@@ -19,19 +19,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.generic_transcribe_vocabulary",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.generic_transcribe_vocabulary",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "generic-transcribe-vocabulary"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-generic-transcribe-vocabulary",
-        "module": "cdk_cloudformation_generic_transcribe_vocabulary"
+        "distName": "cdk-cloudformation-types-generic-transcribe-vocabulary",
+        "module": "cdk_cloudformation_types_generic_transcribe_vocabulary"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.GenericTranscribeVocabulary",
-        "packageId": "Cdklabs.CdkCloudFormation.GenericTranscribeVocabulary"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.GenericTranscribeVocabulary",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.GenericTranscribeVocabulary"
       }
     },
     "tsc": {

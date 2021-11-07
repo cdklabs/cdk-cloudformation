@@ -18,19 +18,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.datadog_dashboards_dashboard",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.datadog_dashboards_dashboard",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "datadog-dashboards-dashboard"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-datadog-dashboards-dashboard",
-        "module": "cdk_cloudformation_datadog_dashboards_dashboard"
+        "distName": "cdk-cloudformation-types-datadog-dashboards-dashboard",
+        "module": "cdk_cloudformation_types_datadog_dashboards_dashboard"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.DatadogDashboardsDashboard",
-        "packageId": "Cdklabs.CdkCloudFormation.DatadogDashboardsDashboard"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.DatadogDashboardsDashboard",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.DatadogDashboardsDashboard"
       }
     },
     "tsc": {

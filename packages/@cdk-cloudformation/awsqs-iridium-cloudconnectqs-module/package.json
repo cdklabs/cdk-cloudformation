@@ -18,19 +18,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.awsqs_iridium_cloudconnectqs_module",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.awsqs_iridium_cloudconnectqs_module",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "awsqs-iridium-cloudconnectqs-module"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-awsqs-iridium-cloudconnectqs-module",
-        "module": "cdk_cloudformation_awsqs_iridium_cloudconnectqs_module"
+        "distName": "cdk-cloudformation-types-awsqs-iridium-cloudconnectqs-module",
+        "module": "cdk_cloudformation_types_awsqs_iridium_cloudconnectqs_module"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.AWSQSIridiumCloudConnectQSMODULE",
-        "packageId": "Cdklabs.CdkCloudFormation.AWSQSIridiumCloudConnectQSMODULE"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.AWSQSIridiumCloudConnectQSMODULE",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.AWSQSIridiumCloudConnectQSMODULE"
       }
     },
     "tsc": {

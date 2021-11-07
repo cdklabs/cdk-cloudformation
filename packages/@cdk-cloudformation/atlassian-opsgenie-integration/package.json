@@ -19,19 +19,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.atlassian_opsgenie_integration",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.atlassian_opsgenie_integration",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "atlassian-opsgenie-integration"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-atlassian-opsgenie-integration",
-        "module": "cdk_cloudformation_atlassian_opsgenie_integration"
+        "distName": "cdk-cloudformation-types-atlassian-opsgenie-integration",
+        "module": "cdk_cloudformation_types_atlassian_opsgenie_integration"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.AtlassianOpsgenieIntegration",
-        "packageId": "Cdklabs.CdkCloudFormation.AtlassianOpsgenieIntegration"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.AtlassianOpsgenieIntegration",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.AtlassianOpsgenieIntegration"
       }
     },
     "tsc": {

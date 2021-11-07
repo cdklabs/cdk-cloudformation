@@ -18,19 +18,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.mongodb_atlas_networkpeering",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.mongodb_atlas_networkpeering",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "mongodb-atlas-networkpeering"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-mongodb-atlas-networkpeering",
-        "module": "cdk_cloudformation_mongodb_atlas_networkpeering"
+        "distName": "cdk-cloudformation-types-mongodb-atlas-networkpeering",
+        "module": "cdk_cloudformation_types_mongodb_atlas_networkpeering"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.MongoDBAtlasNetworkPeering",
-        "packageId": "Cdklabs.CdkCloudFormation.MongoDBAtlasNetworkPeering"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.MongoDBAtlasNetworkPeering",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.MongoDBAtlasNetworkPeering"
       }
     },
     "tsc": {

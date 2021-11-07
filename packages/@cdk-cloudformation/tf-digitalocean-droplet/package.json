@@ -1,6 +1,6 @@
 {
   "name": "@cdk-cloudformation/tf-digitalocean-droplet",
-  "description": "Provides a DigitalOcean Droplet resource. This can be used to create,\nmodify, and delete Droplets. Droplets also support\n[provisioning](https://www.terraform.io/docs/language/resources/provisioners/syntax.html).",
+  "description": "Provides a DigitalOcean Droplet resource. This can be used to create,",
   "version": "1.0.0",
   "author": {
     "name": "Amazon Web Services",
@@ -19,19 +19,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.tf_digitalocean_droplet",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.tf_digitalocean_droplet",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "tf-digitalocean-droplet"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-tf-digitalocean-droplet",
-        "module": "cdk_cloudformation_tf_digitalocean_droplet"
+        "distName": "cdk-cloudformation-types-tf-digitalocean-droplet",
+        "module": "cdk_cloudformation_types_tf_digitalocean_droplet"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.TFDigitalOceanDroplet",
-        "packageId": "Cdklabs.CdkCloudFormation.TFDigitalOceanDroplet"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.TFDigitalOceanDroplet",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.TFDigitalOceanDroplet"
       }
     },
     "tsc": {

@@ -19,19 +19,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.aqua_enterprise_kubeenforcer",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.aqua_enterprise_kubeenforcer",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "aqua-enterprise-kubeenforcer"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-aqua-enterprise-kubeenforcer",
-        "module": "cdk_cloudformation_aqua_enterprise_kubeenforcer"
+        "distName": "cdk-cloudformation-types-aqua-enterprise-kubeenforcer",
+        "module": "cdk_cloudformation_types_aqua_enterprise_kubeenforcer"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.AquaEnterpriseKubeEnforcer",
-        "packageId": "Cdklabs.CdkCloudFormation.AquaEnterpriseKubeEnforcer"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.AquaEnterpriseKubeEnforcer",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.AquaEnterpriseKubeEnforcer"
       }
     },
     "tsc": {

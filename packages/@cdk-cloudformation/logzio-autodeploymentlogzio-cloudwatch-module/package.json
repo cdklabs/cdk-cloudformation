@@ -18,19 +18,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.logzio_autodeploymentlogzio_cloudwatch_module",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.logzio_autodeploymentlogzio_cloudwatch_module",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "logzio-autodeploymentlogzio-cloudwatch-module"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-logzio-autodeploymentlogzio-cloudwatch-module",
-        "module": "cdk_cloudformation_logzio_autodeploymentlogzio_cloudwatch_module"
+        "distName": "cdk-cloudformation-types-logzio-autodeploymentlogzio-cloudwatch-module",
+        "module": "cdk_cloudformation_types_logzio_autodeploymentlogzio_cloudwatch_module"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.LogzioAutoDeploymentLogzioCloudWatchMODULE",
-        "packageId": "Cdklabs.CdkCloudFormation.LogzioAutoDeploymentLogzioCloudWatchMODULE"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.LogzioAutoDeploymentLogzioCloudWatchMODULE",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.LogzioAutoDeploymentLogzioCloudWatchMODULE"
       }
     },
     "tsc": {

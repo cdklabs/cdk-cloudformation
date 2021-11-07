@@ -19,19 +19,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.tf_pagerduty_service",
+        "package": "io.github.cdklabs.cdk_cloudformation_types.tf_pagerduty_service",
         "maven": {
-          "groupId": "io.github.cdklabs.cdk_cloudformation",
+          "groupId": "io.github.cdklabs.cdk_cloudformation_types",
           "artifactId": "tf-pagerduty-service"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-tf-pagerduty-service",
-        "module": "cdk_cloudformation_tf_pagerduty_service"
+        "distName": "cdk-cloudformation-types-tf-pagerduty-service",
+        "module": "cdk_cloudformation_types_tf_pagerduty_service"
       },
       "dotnet": {
-        "namespace": "Cdklabs.CdkCloudFormation.TFPagerDutyService",
-        "packageId": "Cdklabs.CdkCloudFormation.TFPagerDutyService"
+        "namespace": "Cdklabs.CdkCloudFormationTypes.TFPagerDutyService",
+        "packageId": "Cdklabs.CdkCloudFormationTypes.TFPagerDutyService"
       }
     },
     "tsc": {

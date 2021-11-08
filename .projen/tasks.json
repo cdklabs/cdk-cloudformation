@@ -1,0 +1,2407 @@
+{
+  "tasks": {
+    "clobber": {
+      "name": "clobber",
+      "description": "hard resets to HEAD of origin and cleans the local repo",
+      "env": {
+        "BRANCH": "$(git branch --show-current)"
+      },
+      "steps": [
+        {
+          "exec": "git checkout -b scratch",
+          "name": "save current HEAD in \"scratch\" branch"
+        },
+        {
+          "exec": "git checkout $BRANCH"
+        },
+        {
+          "exec": "git fetch origin",
+          "name": "fetch latest changes from origin"
+        },
+        {
+          "exec": "git reset --hard origin/$BRANCH",
+          "name": "hard reset to origin commit"
+        },
+        {
+          "exec": "git clean -fdx",
+          "name": "clean all untracked files"
+        },
+        {
+          "say": "ready to rock! (unpushed commits are under the \"scratch\" branch)"
+        }
+      ],
+      "condition": "git diff --exit-code > /dev/null"
+    },
+    "compile": {
+      "name": "compile",
+      "description": "Only compile",
+      "steps": [
+        {
+          "exec": "jsii --silence-warnings=reserved-word --no-fix-peer-dependencies"
+        },
+        {
+          "spawn": "docgen"
+        }
+      ]
+    },
+    "test:compile": {
+      "name": "test:compile",
+      "description": "compiles the test code",
+      "steps": [
+        {
+          "exec": "tsc --noEmit --project tsconfig.dev.json"
+        }
+      ]
+    },
+    "test": {
+      "name": "test",
+      "description": "Run tests",
+      "steps": [
+        {
+          "exec": "rm -fr lib/"
+        },
+        {
+          "spawn": "test:compile"
+        },
+        {
+          "exec": "jest --passWithNoTests --all --updateSnapshot"
+        },
+        {
+          "spawn": "eslint"
+        }
+      ]
+    },
+    "build": {
+      "name": "build",
+      "description": "Full release build (test+compile)",
+      "steps": [
+        {
+          "exec": "npx projen"
+        },
+        {
+          "spawn": "test"
+        },
+        {
+          "spawn": "compile"
+        },
+        {
+          "spawn": "package"
+        }
+      ]
+    },
+    "test:watch": {
+      "name": "test:watch",
+      "description": "Run jest in watch mode",
+      "steps": [
+        {
+          "exec": "jest --watch"
+        }
+      ]
+    },
+    "test:update": {
+      "name": "test:update",
+      "description": "Update jest snapshots",
+      "steps": [
+        {
+          "exec": "jest --updateSnapshot"
+        }
+      ]
+    },
+    "bump": {
+      "name": "bump",
+      "description": "Bumps version based on latest git tag and generates a changelog entry",
+      "env": {
+        "OUTFILE": "package.json",
+        "CHANGELOG": "dist/changelog.md",
+        "BUMPFILE": "dist/version.txt",
+        "RELEASETAG": "dist/releasetag.txt"
+      },
+      "steps": [
+        {
+          "builtin": "release/bump-version"
+        }
+      ],
+      "condition": "! git log --oneline -1 | grep -q \"chore(release):\""
+    },
+    "unbump": {
+      "name": "unbump",
+      "description": "Restores version to 0.0.0",
+      "env": {
+        "OUTFILE": "package.json",
+        "CHANGELOG": "dist/changelog.md",
+        "BUMPFILE": "dist/version.txt",
+        "RELEASETAG": "dist/releasetag.txt"
+      },
+      "steps": [
+        {
+          "builtin": "release/reset-version"
+        }
+      ]
+    },
+    "publish:github": {
+      "name": "publish:github",
+      "description": "Publish this package to GitHub Releases",
+      "requiredEnv": [
+        "GITHUB_TOKEN",
+        "GITHUB_REPOSITORY",
+        "GITHUB_REF"
+      ],
+      "steps": [
+        {
+          "exec": "errout=$(mktemp); gh release create $(cat dist/releasetag.txt) -R $GITHUB_REPOSITORY -F dist/changelog.md -t $(cat dist/releasetag.txt) --target $GITHUB_REF 2> $errout && true; exitcode=$?; if [ $exitcode -ne 0 ] && ! grep -q \"Release.tag_name already exists\" $errout; then cat $errout; exit $exitcode; fi"
+        }
+      ]
+    },
+    "watch": {
+      "name": "watch",
+      "description": "Watch & compile in the background",
+      "steps": [
+        {
+          "exec": "jsii -w --silence-warnings=reserved-word --no-fix-peer-dependencies"
+        }
+      ]
+    },
+    "package": {
+      "name": "package",
+      "description": "Create an npm tarball",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ]
+    },
+    "eslint": {
+      "name": "eslint",
+      "description": "Runs eslint against the codebase",
+      "steps": [
+        {
+          "exec": "eslint --ext .ts,.tsx --fix --no-error-on-unmatched-pattern src test build-tools .projenrc.js"
+        }
+      ]
+    },
+    "default": {
+      "name": "default",
+      "steps": [
+        {
+          "exec": "ts-node --project tsconfig.dev.json .projenrc.ts"
+        }
+      ]
+    },
+    "compat": {
+      "name": "compat",
+      "description": "Perform API compatibility check against latest version",
+      "steps": [
+        {
+          "exec": "jsii-diff npm:$(node -p \"require('./package.json').name\") -k --ignore-file .compatignore || (echo \"\nUNEXPECTED BREAKING CHANGES: add keys such as 'removed:constructs.Node.of' to .compatignore to skip.\n\" && exit 1)"
+        }
+      ]
+    },
+    "publish:npm": {
+      "name": "publish:npm",
+      "description": "Publish this package to npm",
+      "env": {
+        "NPM_DIST_TAG": "latest",
+        "NPM_REGISTRY": "registry.npmjs.org"
+      },
+      "requiredEnv": [
+        "NPM_TOKEN"
+      ],
+      "steps": [
+        {
+          "exec": "npx -p jsii-release@latest jsii-release-npm"
+        }
+      ]
+    },
+    "docgen": {
+      "name": "docgen",
+      "description": "Generate API.md from .jsii manifest",
+      "steps": [
+        {
+          "exec": "jsii-docgen"
+        }
+      ]
+    },
+    "compile:alexa-ask-skill": {
+      "name": "compile:alexa-ask-skill",
+      "description": "compile alexa-ask-skill with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/alexa-ask-skill"
+    },
+    "package:alexa-ask-skill": {
+      "name": "package:alexa-ask-skill",
+      "description": "produce multi-language packaging for alexa-ask-skill",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/alexa-ask-skill"
+    },
+    "build:alexa-ask-skill": {
+      "name": "build:alexa-ask-skill",
+      "description": "build alexa-ask-skill",
+      "steps": [
+        {
+          "spawn": "compile:alexa-ask-skill"
+        },
+        {
+          "spawn": "package:alexa-ask-skill"
+        }
+      ]
+    },
+    "compile:aqua-enterprise-enforcer": {
+      "name": "compile:aqua-enterprise-enforcer",
+      "description": "compile aqua-enterprise-enforcer with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/aqua-enterprise-enforcer"
+    },
+    "package:aqua-enterprise-enforcer": {
+      "name": "package:aqua-enterprise-enforcer",
+      "description": "produce multi-language packaging for aqua-enterprise-enforcer",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/aqua-enterprise-enforcer"
+    },
+    "build:aqua-enterprise-enforcer": {
+      "name": "build:aqua-enterprise-enforcer",
+      "description": "build aqua-enterprise-enforcer",
+      "steps": [
+        {
+          "spawn": "compile:aqua-enterprise-enforcer"
+        },
+        {
+          "spawn": "package:aqua-enterprise-enforcer"
+        }
+      ]
+    },
+    "compile:aqua-enterprise-kubeenforcer": {
+      "name": "compile:aqua-enterprise-kubeenforcer",
+      "description": "compile aqua-enterprise-kubeenforcer with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/aqua-enterprise-kubeenforcer"
+    },
+    "package:aqua-enterprise-kubeenforcer": {
+      "name": "package:aqua-enterprise-kubeenforcer",
+      "description": "produce multi-language packaging for aqua-enterprise-kubeenforcer",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/aqua-enterprise-kubeenforcer"
+    },
+    "build:aqua-enterprise-kubeenforcer": {
+      "name": "build:aqua-enterprise-kubeenforcer",
+      "description": "build aqua-enterprise-kubeenforcer",
+      "steps": [
+        {
+          "spawn": "compile:aqua-enterprise-kubeenforcer"
+        },
+        {
+          "spawn": "package:aqua-enterprise-kubeenforcer"
+        }
+      ]
+    },
+    "compile:aqua-enterprise-scanner": {
+      "name": "compile:aqua-enterprise-scanner",
+      "description": "compile aqua-enterprise-scanner with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/aqua-enterprise-scanner"
+    },
+    "package:aqua-enterprise-scanner": {
+      "name": "package:aqua-enterprise-scanner",
+      "description": "produce multi-language packaging for aqua-enterprise-scanner",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/aqua-enterprise-scanner"
+    },
+    "build:aqua-enterprise-scanner": {
+      "name": "build:aqua-enterprise-scanner",
+      "description": "build aqua-enterprise-scanner",
+      "steps": [
+        {
+          "spawn": "compile:aqua-enterprise-scanner"
+        },
+        {
+          "spawn": "package:aqua-enterprise-scanner"
+        }
+      ]
+    },
+    "compile:aqua-enterprise-server": {
+      "name": "compile:aqua-enterprise-server",
+      "description": "compile aqua-enterprise-server with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/aqua-enterprise-server"
+    },
+    "package:aqua-enterprise-server": {
+      "name": "package:aqua-enterprise-server",
+      "description": "produce multi-language packaging for aqua-enterprise-server",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/aqua-enterprise-server"
+    },
+    "build:aqua-enterprise-server": {
+      "name": "build:aqua-enterprise-server",
+      "description": "build aqua-enterprise-server",
+      "steps": [
+        {
+          "spawn": "compile:aqua-enterprise-server"
+        },
+        {
+          "spawn": "package:aqua-enterprise-server"
+        }
+      ]
+    },
+    "compile:atlassian-opsgenie-integration": {
+      "name": "compile:atlassian-opsgenie-integration",
+      "description": "compile atlassian-opsgenie-integration with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/atlassian-opsgenie-integration"
+    },
+    "package:atlassian-opsgenie-integration": {
+      "name": "package:atlassian-opsgenie-integration",
+      "description": "produce multi-language packaging for atlassian-opsgenie-integration",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/atlassian-opsgenie-integration"
+    },
+    "build:atlassian-opsgenie-integration": {
+      "name": "build:atlassian-opsgenie-integration",
+      "description": "build atlassian-opsgenie-integration",
+      "steps": [
+        {
+          "spawn": "compile:atlassian-opsgenie-integration"
+        },
+        {
+          "spawn": "package:atlassian-opsgenie-integration"
+        }
+      ]
+    },
+    "compile:atlassian-opsgenie-team": {
+      "name": "compile:atlassian-opsgenie-team",
+      "description": "compile atlassian-opsgenie-team with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/atlassian-opsgenie-team"
+    },
+    "package:atlassian-opsgenie-team": {
+      "name": "package:atlassian-opsgenie-team",
+      "description": "produce multi-language packaging for atlassian-opsgenie-team",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/atlassian-opsgenie-team"
+    },
+    "build:atlassian-opsgenie-team": {
+      "name": "build:atlassian-opsgenie-team",
+      "description": "build atlassian-opsgenie-team",
+      "steps": [
+        {
+          "spawn": "compile:atlassian-opsgenie-team"
+        },
+        {
+          "spawn": "package:atlassian-opsgenie-team"
+        }
+      ]
+    },
+    "compile:atlassian-opsgenie-user": {
+      "name": "compile:atlassian-opsgenie-user",
+      "description": "compile atlassian-opsgenie-user with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/atlassian-opsgenie-user"
+    },
+    "package:atlassian-opsgenie-user": {
+      "name": "package:atlassian-opsgenie-user",
+      "description": "produce multi-language packaging for atlassian-opsgenie-user",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/atlassian-opsgenie-user"
+    },
+    "build:atlassian-opsgenie-user": {
+      "name": "build:atlassian-opsgenie-user",
+      "description": "build atlassian-opsgenie-user",
+      "steps": [
+        {
+          "spawn": "compile:atlassian-opsgenie-user"
+        },
+        {
+          "spawn": "package:atlassian-opsgenie-user"
+        }
+      ]
+    },
+    "compile:awsqs-checkpoint-cloudguardqs-module": {
+      "name": "compile:awsqs-checkpoint-cloudguardqs-module",
+      "description": "compile awsqs-checkpoint-cloudguardqs-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/awsqs-checkpoint-cloudguardqs-module"
+    },
+    "package:awsqs-checkpoint-cloudguardqs-module": {
+      "name": "package:awsqs-checkpoint-cloudguardqs-module",
+      "description": "produce multi-language packaging for awsqs-checkpoint-cloudguardqs-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/awsqs-checkpoint-cloudguardqs-module"
+    },
+    "build:awsqs-checkpoint-cloudguardqs-module": {
+      "name": "build:awsqs-checkpoint-cloudguardqs-module",
+      "description": "build awsqs-checkpoint-cloudguardqs-module",
+      "steps": [
+        {
+          "spawn": "compile:awsqs-checkpoint-cloudguardqs-module"
+        },
+        {
+          "spawn": "package:awsqs-checkpoint-cloudguardqs-module"
+        }
+      ]
+    },
+    "compile:awsqs-ec2-linuxbastionqs-module": {
+      "name": "compile:awsqs-ec2-linuxbastionqs-module",
+      "description": "compile awsqs-ec2-linuxbastionqs-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/awsqs-ec2-linuxbastionqs-module"
+    },
+    "package:awsqs-ec2-linuxbastionqs-module": {
+      "name": "package:awsqs-ec2-linuxbastionqs-module",
+      "description": "produce multi-language packaging for awsqs-ec2-linuxbastionqs-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/awsqs-ec2-linuxbastionqs-module"
+    },
+    "build:awsqs-ec2-linuxbastionqs-module": {
+      "name": "build:awsqs-ec2-linuxbastionqs-module",
+      "description": "build awsqs-ec2-linuxbastionqs-module",
+      "steps": [
+        {
+          "spawn": "compile:awsqs-ec2-linuxbastionqs-module"
+        },
+        {
+          "spawn": "package:awsqs-ec2-linuxbastionqs-module"
+        }
+      ]
+    },
+    "compile:awsqs-eks-cluster": {
+      "name": "compile:awsqs-eks-cluster",
+      "description": "compile awsqs-eks-cluster with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/awsqs-eks-cluster"
+    },
+    "package:awsqs-eks-cluster": {
+      "name": "package:awsqs-eks-cluster",
+      "description": "produce multi-language packaging for awsqs-eks-cluster",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/awsqs-eks-cluster"
+    },
+    "build:awsqs-eks-cluster": {
+      "name": "build:awsqs-eks-cluster",
+      "description": "build awsqs-eks-cluster",
+      "steps": [
+        {
+          "spawn": "compile:awsqs-eks-cluster"
+        },
+        {
+          "spawn": "package:awsqs-eks-cluster"
+        }
+      ]
+    },
+    "compile:awsqs-iridium-cloudconnectqs-module": {
+      "name": "compile:awsqs-iridium-cloudconnectqs-module",
+      "description": "compile awsqs-iridium-cloudconnectqs-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/awsqs-iridium-cloudconnectqs-module"
+    },
+    "package:awsqs-iridium-cloudconnectqs-module": {
+      "name": "package:awsqs-iridium-cloudconnectqs-module",
+      "description": "produce multi-language packaging for awsqs-iridium-cloudconnectqs-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/awsqs-iridium-cloudconnectqs-module"
+    },
+    "build:awsqs-iridium-cloudconnectqs-module": {
+      "name": "build:awsqs-iridium-cloudconnectqs-module",
+      "description": "build awsqs-iridium-cloudconnectqs-module",
+      "steps": [
+        {
+          "spawn": "compile:awsqs-iridium-cloudconnectqs-module"
+        },
+        {
+          "spawn": "package:awsqs-iridium-cloudconnectqs-module"
+        }
+      ]
+    },
+    "compile:awsqs-kubernetes-get": {
+      "name": "compile:awsqs-kubernetes-get",
+      "description": "compile awsqs-kubernetes-get with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/awsqs-kubernetes-get"
+    },
+    "package:awsqs-kubernetes-get": {
+      "name": "package:awsqs-kubernetes-get",
+      "description": "produce multi-language packaging for awsqs-kubernetes-get",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/awsqs-kubernetes-get"
+    },
+    "build:awsqs-kubernetes-get": {
+      "name": "build:awsqs-kubernetes-get",
+      "description": "build awsqs-kubernetes-get",
+      "steps": [
+        {
+          "spawn": "compile:awsqs-kubernetes-get"
+        },
+        {
+          "spawn": "package:awsqs-kubernetes-get"
+        }
+      ]
+    },
+    "compile:awsqs-kubernetes-helm": {
+      "name": "compile:awsqs-kubernetes-helm",
+      "description": "compile awsqs-kubernetes-helm with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/awsqs-kubernetes-helm"
+    },
+    "package:awsqs-kubernetes-helm": {
+      "name": "package:awsqs-kubernetes-helm",
+      "description": "produce multi-language packaging for awsqs-kubernetes-helm",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/awsqs-kubernetes-helm"
+    },
+    "build:awsqs-kubernetes-helm": {
+      "name": "build:awsqs-kubernetes-helm",
+      "description": "build awsqs-kubernetes-helm",
+      "steps": [
+        {
+          "spawn": "compile:awsqs-kubernetes-helm"
+        },
+        {
+          "spawn": "package:awsqs-kubernetes-helm"
+        }
+      ]
+    },
+    "compile:awsqs-kubernetes-resource": {
+      "name": "compile:awsqs-kubernetes-resource",
+      "description": "compile awsqs-kubernetes-resource with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/awsqs-kubernetes-resource"
+    },
+    "package:awsqs-kubernetes-resource": {
+      "name": "package:awsqs-kubernetes-resource",
+      "description": "produce multi-language packaging for awsqs-kubernetes-resource",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/awsqs-kubernetes-resource"
+    },
+    "build:awsqs-kubernetes-resource": {
+      "name": "build:awsqs-kubernetes-resource",
+      "description": "build awsqs-kubernetes-resource",
+      "steps": [
+        {
+          "spawn": "compile:awsqs-kubernetes-resource"
+        },
+        {
+          "spawn": "package:awsqs-kubernetes-resource"
+        }
+      ]
+    },
+    "compile:awsqs-vpc-vpcqs-module": {
+      "name": "compile:awsqs-vpc-vpcqs-module",
+      "description": "compile awsqs-vpc-vpcqs-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/awsqs-vpc-vpcqs-module"
+    },
+    "package:awsqs-vpc-vpcqs-module": {
+      "name": "package:awsqs-vpc-vpcqs-module",
+      "description": "produce multi-language packaging for awsqs-vpc-vpcqs-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/awsqs-vpc-vpcqs-module"
+    },
+    "build:awsqs-vpc-vpcqs-module": {
+      "name": "build:awsqs-vpc-vpcqs-module",
+      "description": "build awsqs-vpc-vpcqs-module",
+      "steps": [
+        {
+          "spawn": "compile:awsqs-vpc-vpcqs-module"
+        },
+        {
+          "spawn": "package:awsqs-vpc-vpcqs-module"
+        }
+      ]
+    },
+    "compile:datadog-dashboards-dashboard": {
+      "name": "compile:datadog-dashboards-dashboard",
+      "description": "compile datadog-dashboards-dashboard with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/datadog-dashboards-dashboard"
+    },
+    "package:datadog-dashboards-dashboard": {
+      "name": "package:datadog-dashboards-dashboard",
+      "description": "produce multi-language packaging for datadog-dashboards-dashboard",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/datadog-dashboards-dashboard"
+    },
+    "build:datadog-dashboards-dashboard": {
+      "name": "build:datadog-dashboards-dashboard",
+      "description": "build datadog-dashboards-dashboard",
+      "steps": [
+        {
+          "spawn": "compile:datadog-dashboards-dashboard"
+        },
+        {
+          "spawn": "package:datadog-dashboards-dashboard"
+        }
+      ]
+    },
+    "compile:datadog-integrations-aws": {
+      "name": "compile:datadog-integrations-aws",
+      "description": "compile datadog-integrations-aws with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/datadog-integrations-aws"
+    },
+    "package:datadog-integrations-aws": {
+      "name": "package:datadog-integrations-aws",
+      "description": "produce multi-language packaging for datadog-integrations-aws",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/datadog-integrations-aws"
+    },
+    "build:datadog-integrations-aws": {
+      "name": "build:datadog-integrations-aws",
+      "description": "build datadog-integrations-aws",
+      "steps": [
+        {
+          "spawn": "compile:datadog-integrations-aws"
+        },
+        {
+          "spawn": "package:datadog-integrations-aws"
+        }
+      ]
+    },
+    "compile:datadog-monitors-downtime": {
+      "name": "compile:datadog-monitors-downtime",
+      "description": "compile datadog-monitors-downtime with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/datadog-monitors-downtime"
+    },
+    "package:datadog-monitors-downtime": {
+      "name": "package:datadog-monitors-downtime",
+      "description": "produce multi-language packaging for datadog-monitors-downtime",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/datadog-monitors-downtime"
+    },
+    "build:datadog-monitors-downtime": {
+      "name": "build:datadog-monitors-downtime",
+      "description": "build datadog-monitors-downtime",
+      "steps": [
+        {
+          "spawn": "compile:datadog-monitors-downtime"
+        },
+        {
+          "spawn": "package:datadog-monitors-downtime"
+        }
+      ]
+    },
+    "compile:datadog-monitors-monitor": {
+      "name": "compile:datadog-monitors-monitor",
+      "description": "compile datadog-monitors-monitor with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/datadog-monitors-monitor"
+    },
+    "package:datadog-monitors-monitor": {
+      "name": "package:datadog-monitors-monitor",
+      "description": "produce multi-language packaging for datadog-monitors-monitor",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/datadog-monitors-monitor"
+    },
+    "build:datadog-monitors-monitor": {
+      "name": "build:datadog-monitors-monitor",
+      "description": "build datadog-monitors-monitor",
+      "steps": [
+        {
+          "spawn": "compile:datadog-monitors-monitor"
+        },
+        {
+          "spawn": "package:datadog-monitors-monitor"
+        }
+      ]
+    },
+    "compile:datadog-slos-slo": {
+      "name": "compile:datadog-slos-slo",
+      "description": "compile datadog-slos-slo with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/datadog-slos-slo"
+    },
+    "package:datadog-slos-slo": {
+      "name": "package:datadog-slos-slo",
+      "description": "produce multi-language packaging for datadog-slos-slo",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/datadog-slos-slo"
+    },
+    "build:datadog-slos-slo": {
+      "name": "build:datadog-slos-slo",
+      "description": "build datadog-slos-slo",
+      "steps": [
+        {
+          "spawn": "compile:datadog-slos-slo"
+        },
+        {
+          "spawn": "package:datadog-slos-slo"
+        }
+      ]
+    },
+    "compile:fireeye-cloudintegrations-cloudwatch": {
+      "name": "compile:fireeye-cloudintegrations-cloudwatch",
+      "description": "compile fireeye-cloudintegrations-cloudwatch with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/fireeye-cloudintegrations-cloudwatch"
+    },
+    "package:fireeye-cloudintegrations-cloudwatch": {
+      "name": "package:fireeye-cloudintegrations-cloudwatch",
+      "description": "produce multi-language packaging for fireeye-cloudintegrations-cloudwatch",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/fireeye-cloudintegrations-cloudwatch"
+    },
+    "build:fireeye-cloudintegrations-cloudwatch": {
+      "name": "build:fireeye-cloudintegrations-cloudwatch",
+      "description": "build fireeye-cloudintegrations-cloudwatch",
+      "steps": [
+        {
+          "spawn": "compile:fireeye-cloudintegrations-cloudwatch"
+        },
+        {
+          "spawn": "package:fireeye-cloudintegrations-cloudwatch"
+        }
+      ]
+    },
+    "compile:generic-database-schema": {
+      "name": "compile:generic-database-schema",
+      "description": "compile generic-database-schema with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/generic-database-schema"
+    },
+    "package:generic-database-schema": {
+      "name": "package:generic-database-schema",
+      "description": "produce multi-language packaging for generic-database-schema",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/generic-database-schema"
+    },
+    "build:generic-database-schema": {
+      "name": "build:generic-database-schema",
+      "description": "build generic-database-schema",
+      "steps": [
+        {
+          "spawn": "compile:generic-database-schema"
+        },
+        {
+          "spawn": "package:generic-database-schema"
+        }
+      ]
+    },
+    "compile:generic-transcribe-vocabulary": {
+      "name": "compile:generic-transcribe-vocabulary",
+      "description": "compile generic-transcribe-vocabulary with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/generic-transcribe-vocabulary"
+    },
+    "package:generic-transcribe-vocabulary": {
+      "name": "package:generic-transcribe-vocabulary",
+      "description": "produce multi-language packaging for generic-transcribe-vocabulary",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/generic-transcribe-vocabulary"
+    },
+    "build:generic-transcribe-vocabulary": {
+      "name": "build:generic-transcribe-vocabulary",
+      "description": "build generic-transcribe-vocabulary",
+      "steps": [
+        {
+          "spawn": "compile:generic-transcribe-vocabulary"
+        },
+        {
+          "spawn": "package:generic-transcribe-vocabulary"
+        }
+      ]
+    },
+    "compile:gremlin-agent-helm": {
+      "name": "compile:gremlin-agent-helm",
+      "description": "compile gremlin-agent-helm with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/gremlin-agent-helm"
+    },
+    "package:gremlin-agent-helm": {
+      "name": "package:gremlin-agent-helm",
+      "description": "produce multi-language packaging for gremlin-agent-helm",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/gremlin-agent-helm"
+    },
+    "build:gremlin-agent-helm": {
+      "name": "build:gremlin-agent-helm",
+      "description": "build gremlin-agent-helm",
+      "steps": [
+        {
+          "spawn": "compile:gremlin-agent-helm"
+        },
+        {
+          "spawn": "package:gremlin-agent-helm"
+        }
+      ]
+    },
+    "compile:jfrog-artifactory-core-module": {
+      "name": "compile:jfrog-artifactory-core-module",
+      "description": "compile jfrog-artifactory-core-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/jfrog-artifactory-core-module"
+    },
+    "package:jfrog-artifactory-core-module": {
+      "name": "package:jfrog-artifactory-core-module",
+      "description": "produce multi-language packaging for jfrog-artifactory-core-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/jfrog-artifactory-core-module"
+    },
+    "build:jfrog-artifactory-core-module": {
+      "name": "build:jfrog-artifactory-core-module",
+      "description": "build jfrog-artifactory-core-module",
+      "steps": [
+        {
+          "spawn": "compile:jfrog-artifactory-core-module"
+        },
+        {
+          "spawn": "package:jfrog-artifactory-core-module"
+        }
+      ]
+    },
+    "compile:jfrog-artifactory-ec2instance-module": {
+      "name": "compile:jfrog-artifactory-ec2instance-module",
+      "description": "compile jfrog-artifactory-ec2instance-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/jfrog-artifactory-ec2instance-module"
+    },
+    "package:jfrog-artifactory-ec2instance-module": {
+      "name": "package:jfrog-artifactory-ec2instance-module",
+      "description": "produce multi-language packaging for jfrog-artifactory-ec2instance-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/jfrog-artifactory-ec2instance-module"
+    },
+    "build:jfrog-artifactory-ec2instance-module": {
+      "name": "build:jfrog-artifactory-ec2instance-module",
+      "description": "build jfrog-artifactory-ec2instance-module",
+      "steps": [
+        {
+          "spawn": "compile:jfrog-artifactory-ec2instance-module"
+        },
+        {
+          "spawn": "package:jfrog-artifactory-ec2instance-module"
+        }
+      ]
+    },
+    "compile:jfrog-artifactory-existingvpc-module": {
+      "name": "compile:jfrog-artifactory-existingvpc-module",
+      "description": "compile jfrog-artifactory-existingvpc-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/jfrog-artifactory-existingvpc-module"
+    },
+    "package:jfrog-artifactory-existingvpc-module": {
+      "name": "package:jfrog-artifactory-existingvpc-module",
+      "description": "produce multi-language packaging for jfrog-artifactory-existingvpc-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/jfrog-artifactory-existingvpc-module"
+    },
+    "build:jfrog-artifactory-existingvpc-module": {
+      "name": "build:jfrog-artifactory-existingvpc-module",
+      "description": "build jfrog-artifactory-existingvpc-module",
+      "steps": [
+        {
+          "spawn": "compile:jfrog-artifactory-existingvpc-module"
+        },
+        {
+          "spawn": "package:jfrog-artifactory-existingvpc-module"
+        }
+      ]
+    },
+    "compile:jfrog-artifactory-newvpc-module": {
+      "name": "compile:jfrog-artifactory-newvpc-module",
+      "description": "compile jfrog-artifactory-newvpc-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/jfrog-artifactory-newvpc-module"
+    },
+    "package:jfrog-artifactory-newvpc-module": {
+      "name": "package:jfrog-artifactory-newvpc-module",
+      "description": "produce multi-language packaging for jfrog-artifactory-newvpc-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/jfrog-artifactory-newvpc-module"
+    },
+    "build:jfrog-artifactory-newvpc-module": {
+      "name": "build:jfrog-artifactory-newvpc-module",
+      "description": "build jfrog-artifactory-newvpc-module",
+      "steps": [
+        {
+          "spawn": "compile:jfrog-artifactory-newvpc-module"
+        },
+        {
+          "spawn": "package:jfrog-artifactory-newvpc-module"
+        }
+      ]
+    },
+    "compile:jfrog-linux-bastion-module": {
+      "name": "compile:jfrog-linux-bastion-module",
+      "description": "compile jfrog-linux-bastion-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/jfrog-linux-bastion-module"
+    },
+    "package:jfrog-linux-bastion-module": {
+      "name": "package:jfrog-linux-bastion-module",
+      "description": "produce multi-language packaging for jfrog-linux-bastion-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/jfrog-linux-bastion-module"
+    },
+    "build:jfrog-linux-bastion-module": {
+      "name": "build:jfrog-linux-bastion-module",
+      "description": "build jfrog-linux-bastion-module",
+      "steps": [
+        {
+          "spawn": "compile:jfrog-linux-bastion-module"
+        },
+        {
+          "spawn": "package:jfrog-linux-bastion-module"
+        }
+      ]
+    },
+    "compile:jfrog-vpc-multiaz-module": {
+      "name": "compile:jfrog-vpc-multiaz-module",
+      "description": "compile jfrog-vpc-multiaz-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/jfrog-vpc-multiaz-module"
+    },
+    "package:jfrog-vpc-multiaz-module": {
+      "name": "package:jfrog-vpc-multiaz-module",
+      "description": "produce multi-language packaging for jfrog-vpc-multiaz-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/jfrog-vpc-multiaz-module"
+    },
+    "build:jfrog-vpc-multiaz-module": {
+      "name": "build:jfrog-vpc-multiaz-module",
+      "description": "build jfrog-vpc-multiaz-module",
+      "steps": [
+        {
+          "spawn": "compile:jfrog-vpc-multiaz-module"
+        },
+        {
+          "spawn": "package:jfrog-vpc-multiaz-module"
+        }
+      ]
+    },
+    "compile:jfrog-xray-ec2instance-module": {
+      "name": "compile:jfrog-xray-ec2instance-module",
+      "description": "compile jfrog-xray-ec2instance-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/jfrog-xray-ec2instance-module"
+    },
+    "package:jfrog-xray-ec2instance-module": {
+      "name": "package:jfrog-xray-ec2instance-module",
+      "description": "produce multi-language packaging for jfrog-xray-ec2instance-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/jfrog-xray-ec2instance-module"
+    },
+    "build:jfrog-xray-ec2instance-module": {
+      "name": "build:jfrog-xray-ec2instance-module",
+      "description": "build jfrog-xray-ec2instance-module",
+      "steps": [
+        {
+          "spawn": "compile:jfrog-xray-ec2instance-module"
+        },
+        {
+          "spawn": "package:jfrog-xray-ec2instance-module"
+        }
+      ]
+    },
+    "compile:logzio-autodeploymentlogzio-cloudwatch-module": {
+      "name": "compile:logzio-autodeploymentlogzio-cloudwatch-module",
+      "description": "compile logzio-autodeploymentlogzio-cloudwatch-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/logzio-autodeploymentlogzio-cloudwatch-module"
+    },
+    "package:logzio-autodeploymentlogzio-cloudwatch-module": {
+      "name": "package:logzio-autodeploymentlogzio-cloudwatch-module",
+      "description": "produce multi-language packaging for logzio-autodeploymentlogzio-cloudwatch-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/logzio-autodeploymentlogzio-cloudwatch-module"
+    },
+    "build:logzio-autodeploymentlogzio-cloudwatch-module": {
+      "name": "build:logzio-autodeploymentlogzio-cloudwatch-module",
+      "description": "build logzio-autodeploymentlogzio-cloudwatch-module",
+      "steps": [
+        {
+          "spawn": "compile:logzio-autodeploymentlogzio-cloudwatch-module"
+        },
+        {
+          "spawn": "package:logzio-autodeploymentlogzio-cloudwatch-module"
+        }
+      ]
+    },
+    "compile:logzio-awscostandusage-cur-module": {
+      "name": "compile:logzio-awscostandusage-cur-module",
+      "description": "compile logzio-awscostandusage-cur-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/logzio-awscostandusage-cur-module"
+    },
+    "package:logzio-awscostandusage-cur-module": {
+      "name": "package:logzio-awscostandusage-cur-module",
+      "description": "produce multi-language packaging for logzio-awscostandusage-cur-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/logzio-awscostandusage-cur-module"
+    },
+    "build:logzio-awscostandusage-cur-module": {
+      "name": "build:logzio-awscostandusage-cur-module",
+      "description": "build logzio-awscostandusage-cur-module",
+      "steps": [
+        {
+          "spawn": "compile:logzio-awscostandusage-cur-module"
+        },
+        {
+          "spawn": "package:logzio-awscostandusage-cur-module"
+        }
+      ]
+    },
+    "compile:logzio-awssecurityhub-collector-module": {
+      "name": "compile:logzio-awssecurityhub-collector-module",
+      "description": "compile logzio-awssecurityhub-collector-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/logzio-awssecurityhub-collector-module"
+    },
+    "package:logzio-awssecurityhub-collector-module": {
+      "name": "package:logzio-awssecurityhub-collector-module",
+      "description": "produce multi-language packaging for logzio-awssecurityhub-collector-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/logzio-awssecurityhub-collector-module"
+    },
+    "build:logzio-awssecurityhub-collector-module": {
+      "name": "build:logzio-awssecurityhub-collector-module",
+      "description": "build logzio-awssecurityhub-collector-module",
+      "steps": [
+        {
+          "spawn": "compile:logzio-awssecurityhub-collector-module"
+        },
+        {
+          "spawn": "package:logzio-awssecurityhub-collector-module"
+        }
+      ]
+    },
+    "compile:logzio-kinesisshipper-kinesisshipper-module": {
+      "name": "compile:logzio-kinesisshipper-kinesisshipper-module",
+      "description": "compile logzio-kinesisshipper-kinesisshipper-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/logzio-kinesisshipper-kinesisshipper-module"
+    },
+    "package:logzio-kinesisshipper-kinesisshipper-module": {
+      "name": "package:logzio-kinesisshipper-kinesisshipper-module",
+      "description": "produce multi-language packaging for logzio-kinesisshipper-kinesisshipper-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/logzio-kinesisshipper-kinesisshipper-module"
+    },
+    "build:logzio-kinesisshipper-kinesisshipper-module": {
+      "name": "build:logzio-kinesisshipper-kinesisshipper-module",
+      "description": "build logzio-kinesisshipper-kinesisshipper-module",
+      "steps": [
+        {
+          "spawn": "compile:logzio-kinesisshipper-kinesisshipper-module"
+        },
+        {
+          "spawn": "package:logzio-kinesisshipper-kinesisshipper-module"
+        }
+      ]
+    },
+    "compile:logzio-myservice-myname-module": {
+      "name": "compile:logzio-myservice-myname-module",
+      "description": "compile logzio-myservice-myname-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/logzio-myservice-myname-module"
+    },
+    "package:logzio-myservice-myname-module": {
+      "name": "package:logzio-myservice-myname-module",
+      "description": "produce multi-language packaging for logzio-myservice-myname-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/logzio-myservice-myname-module"
+    },
+    "build:logzio-myservice-myname-module": {
+      "name": "build:logzio-myservice-myname-module",
+      "description": "build logzio-myservice-myname-module",
+      "steps": [
+        {
+          "spawn": "compile:logzio-myservice-myname-module"
+        },
+        {
+          "spawn": "package:logzio-myservice-myname-module"
+        }
+      ]
+    },
+    "compile:mongodb-atlas-cluster": {
+      "name": "compile:mongodb-atlas-cluster",
+      "description": "compile mongodb-atlas-cluster with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/mongodb-atlas-cluster"
+    },
+    "package:mongodb-atlas-cluster": {
+      "name": "package:mongodb-atlas-cluster",
+      "description": "produce multi-language packaging for mongodb-atlas-cluster",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/mongodb-atlas-cluster"
+    },
+    "build:mongodb-atlas-cluster": {
+      "name": "build:mongodb-atlas-cluster",
+      "description": "build mongodb-atlas-cluster",
+      "steps": [
+        {
+          "spawn": "compile:mongodb-atlas-cluster"
+        },
+        {
+          "spawn": "package:mongodb-atlas-cluster"
+        }
+      ]
+    },
+    "compile:mongodb-atlas-databaseuser": {
+      "name": "compile:mongodb-atlas-databaseuser",
+      "description": "compile mongodb-atlas-databaseuser with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/mongodb-atlas-databaseuser"
+    },
+    "package:mongodb-atlas-databaseuser": {
+      "name": "package:mongodb-atlas-databaseuser",
+      "description": "produce multi-language packaging for mongodb-atlas-databaseuser",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/mongodb-atlas-databaseuser"
+    },
+    "build:mongodb-atlas-databaseuser": {
+      "name": "build:mongodb-atlas-databaseuser",
+      "description": "build mongodb-atlas-databaseuser",
+      "steps": [
+        {
+          "spawn": "compile:mongodb-atlas-databaseuser"
+        },
+        {
+          "spawn": "package:mongodb-atlas-databaseuser"
+        }
+      ]
+    },
+    "compile:mongodb-atlas-networkpeering": {
+      "name": "compile:mongodb-atlas-networkpeering",
+      "description": "compile mongodb-atlas-networkpeering with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/mongodb-atlas-networkpeering"
+    },
+    "package:mongodb-atlas-networkpeering": {
+      "name": "package:mongodb-atlas-networkpeering",
+      "description": "produce multi-language packaging for mongodb-atlas-networkpeering",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/mongodb-atlas-networkpeering"
+    },
+    "build:mongodb-atlas-networkpeering": {
+      "name": "build:mongodb-atlas-networkpeering",
+      "description": "build mongodb-atlas-networkpeering",
+      "steps": [
+        {
+          "spawn": "compile:mongodb-atlas-networkpeering"
+        },
+        {
+          "spawn": "package:mongodb-atlas-networkpeering"
+        }
+      ]
+    },
+    "compile:mongodb-atlas-project": {
+      "name": "compile:mongodb-atlas-project",
+      "description": "compile mongodb-atlas-project with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/mongodb-atlas-project"
+    },
+    "package:mongodb-atlas-project": {
+      "name": "package:mongodb-atlas-project",
+      "description": "produce multi-language packaging for mongodb-atlas-project",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/mongodb-atlas-project"
+    },
+    "build:mongodb-atlas-project": {
+      "name": "build:mongodb-atlas-project",
+      "description": "build mongodb-atlas-project",
+      "steps": [
+        {
+          "spawn": "compile:mongodb-atlas-project"
+        },
+        {
+          "spawn": "package:mongodb-atlas-project"
+        }
+      ]
+    },
+    "compile:mongodb-atlas-projectipaccesslist": {
+      "name": "compile:mongodb-atlas-projectipaccesslist",
+      "description": "compile mongodb-atlas-projectipaccesslist with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/mongodb-atlas-projectipaccesslist"
+    },
+    "package:mongodb-atlas-projectipaccesslist": {
+      "name": "package:mongodb-atlas-projectipaccesslist",
+      "description": "produce multi-language packaging for mongodb-atlas-projectipaccesslist",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/mongodb-atlas-projectipaccesslist"
+    },
+    "build:mongodb-atlas-projectipaccesslist": {
+      "name": "build:mongodb-atlas-projectipaccesslist",
+      "description": "build mongodb-atlas-projectipaccesslist",
+      "steps": [
+        {
+          "spawn": "compile:mongodb-atlas-projectipaccesslist"
+        },
+        {
+          "spawn": "package:mongodb-atlas-projectipaccesslist"
+        }
+      ]
+    },
+    "compile:registry-test-resource1-module": {
+      "name": "compile:registry-test-resource1-module",
+      "description": "compile registry-test-resource1-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/registry-test-resource1-module"
+    },
+    "package:registry-test-resource1-module": {
+      "name": "package:registry-test-resource1-module",
+      "description": "produce multi-language packaging for registry-test-resource1-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/registry-test-resource1-module"
+    },
+    "build:registry-test-resource1-module": {
+      "name": "build:registry-test-resource1-module",
+      "description": "build registry-test-resource1-module",
+      "steps": [
+        {
+          "spawn": "compile:registry-test-resource1-module"
+        },
+        {
+          "spawn": "package:registry-test-resource1-module"
+        }
+      ]
+    },
+    "compile:snyk-container-helm": {
+      "name": "compile:snyk-container-helm",
+      "description": "compile snyk-container-helm with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/snyk-container-helm"
+    },
+    "package:snyk-container-helm": {
+      "name": "package:snyk-container-helm",
+      "description": "produce multi-language packaging for snyk-container-helm",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/snyk-container-helm"
+    },
+    "build:snyk-container-helm": {
+      "name": "build:snyk-container-helm",
+      "description": "build snyk-container-helm",
+      "steps": [
+        {
+          "spawn": "compile:snyk-container-helm"
+        },
+        {
+          "spawn": "package:snyk-container-helm"
+        }
+      ]
+    },
+    "compile:splunk-enterprise-quickstart-module": {
+      "name": "compile:splunk-enterprise-quickstart-module",
+      "description": "compile splunk-enterprise-quickstart-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/splunk-enterprise-quickstart-module"
+    },
+    "package:splunk-enterprise-quickstart-module": {
+      "name": "package:splunk-enterprise-quickstart-module",
+      "description": "produce multi-language packaging for splunk-enterprise-quickstart-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/splunk-enterprise-quickstart-module"
+    },
+    "build:splunk-enterprise-quickstart-module": {
+      "name": "build:splunk-enterprise-quickstart-module",
+      "description": "build splunk-enterprise-quickstart-module",
+      "steps": [
+        {
+          "spawn": "compile:splunk-enterprise-quickstart-module"
+        },
+        {
+          "spawn": "package:splunk-enterprise-quickstart-module"
+        }
+      ]
+    },
+    "compile:spot-elastigroup-group": {
+      "name": "compile:spot-elastigroup-group",
+      "description": "compile spot-elastigroup-group with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/spot-elastigroup-group"
+    },
+    "package:spot-elastigroup-group": {
+      "name": "package:spot-elastigroup-group",
+      "description": "produce multi-language packaging for spot-elastigroup-group",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/spot-elastigroup-group"
+    },
+    "build:spot-elastigroup-group": {
+      "name": "build:spot-elastigroup-group",
+      "description": "build spot-elastigroup-group",
+      "steps": [
+        {
+          "spawn": "compile:spot-elastigroup-group"
+        },
+        {
+          "spawn": "package:spot-elastigroup-group"
+        }
+      ]
+    },
+    "compile:stackery-open-bastion-module": {
+      "name": "compile:stackery-open-bastion-module",
+      "description": "compile stackery-open-bastion-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/stackery-open-bastion-module"
+    },
+    "package:stackery-open-bastion-module": {
+      "name": "package:stackery-open-bastion-module",
+      "description": "produce multi-language packaging for stackery-open-bastion-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/stackery-open-bastion-module"
+    },
+    "build:stackery-open-bastion-module": {
+      "name": "build:stackery-open-bastion-module",
+      "description": "build stackery-open-bastion-module",
+      "steps": [
+        {
+          "spawn": "compile:stackery-open-bastion-module"
+        },
+        {
+          "spawn": "package:stackery-open-bastion-module"
+        }
+      ]
+    },
+    "compile:stocks-orders-marketorder": {
+      "name": "compile:stocks-orders-marketorder",
+      "description": "compile stocks-orders-marketorder with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/stocks-orders-marketorder"
+    },
+    "package:stocks-orders-marketorder": {
+      "name": "package:stocks-orders-marketorder",
+      "description": "produce multi-language packaging for stocks-orders-marketorder",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/stocks-orders-marketorder"
+    },
+    "build:stocks-orders-marketorder": {
+      "name": "build:stocks-orders-marketorder",
+      "description": "build stocks-orders-marketorder",
+      "steps": [
+        {
+          "spawn": "compile:stocks-orders-marketorder"
+        },
+        {
+          "spawn": "package:stocks-orders-marketorder"
+        }
+      ]
+    },
+    "compile:symphonia-opensource-cloudformationartifactsbucket-module": {
+      "name": "compile:symphonia-opensource-cloudformationartifactsbucket-module",
+      "description": "compile symphonia-opensource-cloudformationartifactsbucket-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/symphonia-opensource-cloudformationartifactsbucket-module"
+    },
+    "package:symphonia-opensource-cloudformationartifactsbucket-module": {
+      "name": "package:symphonia-opensource-cloudformationartifactsbucket-module",
+      "description": "produce multi-language packaging for symphonia-opensource-cloudformationartifactsbucket-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/symphonia-opensource-cloudformationartifactsbucket-module"
+    },
+    "build:symphonia-opensource-cloudformationartifactsbucket-module": {
+      "name": "build:symphonia-opensource-cloudformationartifactsbucket-module",
+      "description": "build symphonia-opensource-cloudformationartifactsbucket-module",
+      "steps": [
+        {
+          "spawn": "compile:symphonia-opensource-cloudformationartifactsbucket-module"
+        },
+        {
+          "spawn": "package:symphonia-opensource-cloudformationartifactsbucket-module"
+        }
+      ]
+    },
+    "compile:sysdig-helm-agent": {
+      "name": "compile:sysdig-helm-agent",
+      "description": "compile sysdig-helm-agent with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/sysdig-helm-agent"
+    },
+    "package:sysdig-helm-agent": {
+      "name": "package:sysdig-helm-agent",
+      "description": "produce multi-language packaging for sysdig-helm-agent",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/sysdig-helm-agent"
+    },
+    "build:sysdig-helm-agent": {
+      "name": "build:sysdig-helm-agent",
+      "description": "build sysdig-helm-agent",
+      "steps": [
+        {
+          "spawn": "compile:sysdig-helm-agent"
+        },
+        {
+          "spawn": "package:sysdig-helm-agent"
+        }
+      ]
+    },
+    "compile:tf-ad-computer": {
+      "name": "compile:tf-ad-computer",
+      "description": "compile tf-ad-computer with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/tf-ad-computer"
+    },
+    "package:tf-ad-computer": {
+      "name": "package:tf-ad-computer",
+      "description": "produce multi-language packaging for tf-ad-computer",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/tf-ad-computer"
+    },
+    "build:tf-ad-computer": {
+      "name": "build:tf-ad-computer",
+      "description": "build tf-ad-computer",
+      "steps": [
+        {
+          "spawn": "compile:tf-ad-computer"
+        },
+        {
+          "spawn": "package:tf-ad-computer"
+        }
+      ]
+    },
+    "compile:tf-ad-user": {
+      "name": "compile:tf-ad-user",
+      "description": "compile tf-ad-user with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/tf-ad-user"
+    },
+    "package:tf-ad-user": {
+      "name": "package:tf-ad-user",
+      "description": "produce multi-language packaging for tf-ad-user",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/tf-ad-user"
+    },
+    "build:tf-ad-user": {
+      "name": "build:tf-ad-user",
+      "description": "build tf-ad-user",
+      "steps": [
+        {
+          "spawn": "compile:tf-ad-user"
+        },
+        {
+          "spawn": "package:tf-ad-user"
+        }
+      ]
+    },
+    "compile:tf-aws-keypair": {
+      "name": "compile:tf-aws-keypair",
+      "description": "compile tf-aws-keypair with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/tf-aws-keypair"
+    },
+    "package:tf-aws-keypair": {
+      "name": "package:tf-aws-keypair",
+      "description": "produce multi-language packaging for tf-aws-keypair",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/tf-aws-keypair"
+    },
+    "build:tf-aws-keypair": {
+      "name": "build:tf-aws-keypair",
+      "description": "build tf-aws-keypair",
+      "steps": [
+        {
+          "spawn": "compile:tf-aws-keypair"
+        },
+        {
+          "spawn": "package:tf-aws-keypair"
+        }
+      ]
+    },
+    "compile:tf-aws-s3bucket": {
+      "name": "compile:tf-aws-s3bucket",
+      "description": "compile tf-aws-s3bucket with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/tf-aws-s3bucket"
+    },
+    "package:tf-aws-s3bucket": {
+      "name": "package:tf-aws-s3bucket",
+      "description": "produce multi-language packaging for tf-aws-s3bucket",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/tf-aws-s3bucket"
+    },
+    "build:tf-aws-s3bucket": {
+      "name": "build:tf-aws-s3bucket",
+      "description": "build tf-aws-s3bucket",
+      "steps": [
+        {
+          "spawn": "compile:tf-aws-s3bucket"
+        },
+        {
+          "spawn": "package:tf-aws-s3bucket"
+        }
+      ]
+    },
+    "compile:tf-aws-s3bucketobject": {
+      "name": "compile:tf-aws-s3bucketobject",
+      "description": "compile tf-aws-s3bucketobject with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/tf-aws-s3bucketobject"
+    },
+    "package:tf-aws-s3bucketobject": {
+      "name": "package:tf-aws-s3bucketobject",
+      "description": "produce multi-language packaging for tf-aws-s3bucketobject",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/tf-aws-s3bucketobject"
+    },
+    "build:tf-aws-s3bucketobject": {
+      "name": "build:tf-aws-s3bucketobject",
+      "description": "build tf-aws-s3bucketobject",
+      "steps": [
+        {
+          "spawn": "compile:tf-aws-s3bucketobject"
+        },
+        {
+          "spawn": "package:tf-aws-s3bucketobject"
+        }
+      ]
+    },
+    "compile:tf-azuread-application": {
+      "name": "compile:tf-azuread-application",
+      "description": "compile tf-azuread-application with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/tf-azuread-application"
+    },
+    "package:tf-azuread-application": {
+      "name": "package:tf-azuread-application",
+      "description": "produce multi-language packaging for tf-azuread-application",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/tf-azuread-application"
+    },
+    "build:tf-azuread-application": {
+      "name": "build:tf-azuread-application",
+      "description": "build tf-azuread-application",
+      "steps": [
+        {
+          "spawn": "compile:tf-azuread-application"
+        },
+        {
+          "spawn": "package:tf-azuread-application"
+        }
+      ]
+    },
+    "compile:tf-azuread-user": {
+      "name": "compile:tf-azuread-user",
+      "description": "compile tf-azuread-user with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/tf-azuread-user"
+    },
+    "package:tf-azuread-user": {
+      "name": "package:tf-azuread-user",
+      "description": "produce multi-language packaging for tf-azuread-user",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/tf-azuread-user"
+    },
+    "build:tf-azuread-user": {
+      "name": "build:tf-azuread-user",
+      "description": "build tf-azuread-user",
+      "steps": [
+        {
+          "spawn": "compile:tf-azuread-user"
+        },
+        {
+          "spawn": "package:tf-azuread-user"
+        }
+      ]
+    },
+    "compile:tf-cloudflare-record": {
+      "name": "compile:tf-cloudflare-record",
+      "description": "compile tf-cloudflare-record with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/tf-cloudflare-record"
+    },
+    "package:tf-cloudflare-record": {
+      "name": "package:tf-cloudflare-record",
+      "description": "produce multi-language packaging for tf-cloudflare-record",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/tf-cloudflare-record"
+    },
+    "build:tf-cloudflare-record": {
+      "name": "build:tf-cloudflare-record",
+      "description": "build tf-cloudflare-record",
+      "steps": [
+        {
+          "spawn": "compile:tf-cloudflare-record"
+        },
+        {
+          "spawn": "package:tf-cloudflare-record"
+        }
+      ]
+    },
+    "compile:tf-digitalocean-droplet": {
+      "name": "compile:tf-digitalocean-droplet",
+      "description": "compile tf-digitalocean-droplet with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/tf-digitalocean-droplet"
+    },
+    "package:tf-digitalocean-droplet": {
+      "name": "package:tf-digitalocean-droplet",
+      "description": "produce multi-language packaging for tf-digitalocean-droplet",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/tf-digitalocean-droplet"
+    },
+    "build:tf-digitalocean-droplet": {
+      "name": "build:tf-digitalocean-droplet",
+      "description": "build tf-digitalocean-droplet",
+      "steps": [
+        {
+          "spawn": "compile:tf-digitalocean-droplet"
+        },
+        {
+          "spawn": "package:tf-digitalocean-droplet"
+        }
+      ]
+    },
+    "compile:tf-github-repository": {
+      "name": "compile:tf-github-repository",
+      "description": "compile tf-github-repository with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/tf-github-repository"
+    },
+    "package:tf-github-repository": {
+      "name": "package:tf-github-repository",
+      "description": "produce multi-language packaging for tf-github-repository",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/tf-github-repository"
+    },
+    "build:tf-github-repository": {
+      "name": "build:tf-github-repository",
+      "description": "build tf-github-repository",
+      "steps": [
+        {
+          "spawn": "compile:tf-github-repository"
+        },
+        {
+          "spawn": "package:tf-github-repository"
+        }
+      ]
+    },
+    "compile:tf-google-storagebucket": {
+      "name": "compile:tf-google-storagebucket",
+      "description": "compile tf-google-storagebucket with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/tf-google-storagebucket"
+    },
+    "package:tf-google-storagebucket": {
+      "name": "package:tf-google-storagebucket",
+      "description": "produce multi-language packaging for tf-google-storagebucket",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/tf-google-storagebucket"
+    },
+    "build:tf-google-storagebucket": {
+      "name": "build:tf-google-storagebucket",
+      "description": "build tf-google-storagebucket",
+      "steps": [
+        {
+          "spawn": "compile:tf-google-storagebucket"
+        },
+        {
+          "spawn": "package:tf-google-storagebucket"
+        }
+      ]
+    },
+    "compile:tf-pagerduty-service": {
+      "name": "compile:tf-pagerduty-service",
+      "description": "compile tf-pagerduty-service with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/tf-pagerduty-service"
+    },
+    "package:tf-pagerduty-service": {
+      "name": "package:tf-pagerduty-service",
+      "description": "produce multi-language packaging for tf-pagerduty-service",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/tf-pagerduty-service"
+    },
+    "build:tf-pagerduty-service": {
+      "name": "build:tf-pagerduty-service",
+      "description": "build tf-pagerduty-service",
+      "steps": [
+        {
+          "spawn": "compile:tf-pagerduty-service"
+        },
+        {
+          "spawn": "package:tf-pagerduty-service"
+        }
+      ]
+    },
+    "compile:tf-random-string": {
+      "name": "compile:tf-random-string",
+      "description": "compile tf-random-string with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/tf-random-string"
+    },
+    "package:tf-random-string": {
+      "name": "package:tf-random-string",
+      "description": "produce multi-language packaging for tf-random-string",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/tf-random-string"
+    },
+    "build:tf-random-string": {
+      "name": "build:tf-random-string",
+      "description": "build tf-random-string",
+      "steps": [
+        {
+          "spawn": "compile:tf-random-string"
+        },
+        {
+          "spawn": "package:tf-random-string"
+        }
+      ]
+    },
+    "compile:tf-random-uuid": {
+      "name": "compile:tf-random-uuid",
+      "description": "compile tf-random-uuid with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/tf-random-uuid"
+    },
+    "package:tf-random-uuid": {
+      "name": "package:tf-random-uuid",
+      "description": "produce multi-language packaging for tf-random-uuid",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/tf-random-uuid"
+    },
+    "build:tf-random-uuid": {
+      "name": "build:tf-random-uuid",
+      "description": "build tf-random-uuid",
+      "steps": [
+        {
+          "spawn": "compile:tf-random-uuid"
+        },
+        {
+          "spawn": "package:tf-random-uuid"
+        }
+      ]
+    },
+    "compile:trendmicro-cloudonecontainer-helm": {
+      "name": "compile:trendmicro-cloudonecontainer-helm",
+      "description": "compile trendmicro-cloudonecontainer-helm with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/trendmicro-cloudonecontainer-helm"
+    },
+    "package:trendmicro-cloudonecontainer-helm": {
+      "name": "package:trendmicro-cloudonecontainer-helm",
+      "description": "produce multi-language packaging for trendmicro-cloudonecontainer-helm",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation-types/trendmicro-cloudonecontainer-helm"
+    },
+    "build:trendmicro-cloudonecontainer-helm": {
+      "name": "build:trendmicro-cloudonecontainer-helm",
+      "description": "build trendmicro-cloudonecontainer-helm",
+      "steps": [
+        {
+          "spawn": "compile:trendmicro-cloudonecontainer-helm"
+        },
+        {
+          "spawn": "package:trendmicro-cloudonecontainer-helm"
+        }
+      ]
+    },
+    "update-registry": {
+      "name": "update-registry",
+      "steps": [
+        {
+          "exec": "node registry/refresh.js"
+        }
+      ]
+    },
+    "release": {
+      "name": "release",
+      "description": "Prepare a release from \"main\" branch",
+      "env": {
+        "RELEASE": "true"
+      },
+      "steps": [
+        {
+          "exec": "rm -fr dist"
+        },
+        {
+          "spawn": "bump"
+        },
+        {
+          "spawn": "build"
+        },
+        {
+          "spawn": "unbump"
+        },
+        {
+          "exec": "git diff --ignore-space-at-eol --exit-code"
+        }
+      ]
+    },
+    "upgrade": {
+      "name": "upgrade",
+      "description": "upgrade dependencies",
+      "env": {
+        "CI": "0"
+      },
+      "steps": [
+        {
+          "exec": "npm-check-updates --dep dev --upgrade --target=minor --reject='projen'"
+        },
+        {
+          "exec": "npm-check-updates --dep optional --upgrade --target=minor --reject='projen'"
+        },
+        {
+          "exec": "npm-check-updates --dep peer --upgrade --target=minor --reject='projen'"
+        },
+        {
+          "exec": "npm-check-updates --dep prod --upgrade --target=minor --reject='projen'"
+        },
+        {
+          "exec": "npm-check-updates --dep bundle --upgrade --target=minor --reject='projen'"
+        },
+        {
+          "exec": "yarn install --check-files"
+        },
+        {
+          "exec": "yarn upgrade @aws-cdk/assert @aws-cdk/core @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser aws-sdk case cdk-import constructs eslint eslint-import-resolver-node eslint-import-resolver-typescript eslint-plugin-import jest jest-junit jsii jsii-diff jsii-docgen jsii-pacmak json-schema npm-check-updates standard-version ts-jest ts-node typescript constructs"
+        },
+        {
+          "exec": "npx projen"
+        }
+      ]
+    },
+    "upgrade-projen": {
+      "name": "upgrade-projen",
+      "description": "upgrade projen",
+      "env": {
+        "CI": "0"
+      },
+      "steps": [
+        {
+          "exec": "npm-check-updates --dep dev --upgrade --target=minor --filter='projen'"
+        },
+        {
+          "exec": "npm-check-updates --dep optional --upgrade --target=minor --filter='projen'"
+        },
+        {
+          "exec": "npm-check-updates --dep peer --upgrade --target=minor --filter='projen'"
+        },
+        {
+          "exec": "npm-check-updates --dep prod --upgrade --target=minor --filter='projen'"
+        },
+        {
+          "exec": "npm-check-updates --dep bundle --upgrade --target=minor --filter='projen'"
+        },
+        {
+          "exec": "yarn install --check-files"
+        },
+        {
+          "exec": "yarn upgrade projen"
+        },
+        {
+          "exec": "npx projen"
+        }
+      ]
+    }
+  },
+  "env": {
+    "PATH": "$(npx -c \"node -e \\\"console.log(process.env.PATH)\\\"\")"
+  },
+  "//": "~~ Generated by projen. To modify, edit .projenrc.js and run \"npx projen\"."
+}

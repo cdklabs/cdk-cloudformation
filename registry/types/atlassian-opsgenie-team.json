@@ -1,0 +1,16 @@
+{
+  "Arn": "arn:aws:cloudformation:us-east-1::type/resource/4fb8713ab4ce2587ce74e0559d7661bb6e01e72b/Atlassian-Opsgenie-Team",
+  "Type": "RESOURCE",
+  "TypeName": "Atlassian::Opsgenie::Team",
+  "Description": "Opsgenie Team resource schema",
+  "Schema": "{\n  \"typeName\": \"Atlassian::Opsgenie::Team\",\n  \"description\": \"Opsgenie Team resource schema\",\n  \"sourceUrl\": \"https://github.com/opsgenie/opsgenie-cloudformation-resources\",\n  \"definitions\": {\n    \"Member\": {\n      \"type\": \"object\",\n      \"dependencies\": {\n        \"UserId\": [\n          \"Role\"\n        ],\n        \"Role\": [\n          \"UserId\"\n        ]\n      },\n      \"properties\": {\n        \"UserId\": {\n          \"type\": \"string\",\n          \"pattern\": \"^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$\"\n        },\n        \"Role\": {\n          \"type\": \"string\",\n          \"pattern\": \"^[a-zA-Z0-9-_.]+$\"\n        }\n      }\n    }\n  },\n  \"properties\": {\n    \"TeamId\": {\n      \"description\": \"Team id\",\n      \"type\": \"string\",\n      \"pattern\": \"[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}\"\n    },\n    \"Name\": {\n      \"description\": \"Team name\",\n      \"type\": \"string\",\n      \"pattern\": \"^[a-zA-Z0-9- _.]+$\"\n    },\n    \"Description\": {\n      \"description\": \"Team description\",\n      \"type\": \"string\",\n      \"minLength\": 1,\n      \"pattern\": \"^[a-zA-Z0-9- _.]+$\",\n      \"maxLength\": 100\n    },\n    \"Members\": {\n      \"description\": \"Array of members\",\n      \"type\": \"array\",\n      \"items\": {\n        \"$ref\": \"#/definitions/Member\"\n      }\n    },\n    \"OpsgenieApiKey\": {\n      \"description\": \"Api Key\",\n      \"type\": \"string\",\n      \"pattern\": \"[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}\"\n    },\n    \"OpsgenieApiEndpoint\": {\n      \"description\": \"Api endpoint\",\n      \"type\": \"string\",\n      \"pattern\": \"^https:\\/\\/api(\\\\.eu|\\\\.sandbox|)\\\\.opsgenie\\\\.com$\"\n    }\n  },\n  \"required\": [\n    \"Name\"\n  ],\n  \"primaryIdentifier\": [\n    \"/properties/TeamId\"\n  ],\n  \"readOnlyProperties\": [\n    \"/properties/TeamId\"\n  ],\n  \"handlers\": {\n    \"create\": {\n      \"permissions\": [\n        \"\"\n      ]\n    },\n    \"read\": {\n      \"permissions\": [\n        \"\"\n      ]\n    },\n    \"update\": {\n      \"permissions\": [\n        \"\"\n      ]\n    },\n    \"delete\": {\n      \"permissions\": [\n        \"\"\n      ]\n    },\n    \"list\": {\n      \"permissions\": [\n        \"\"\n      ]\n    }\n  },\n  \"additionalProperties\": false\n}\n",
+  "ProvisioningType": "FULLY_MUTABLE",
+  "DeprecatedStatus": "LIVE",
+  "RequiredActivatedTypes": [],
+  "Visibility": "PUBLIC",
+  "SourceUrl": "https://github.com/opsgenie/opsgenie-cloudformation-resources",
+  "TimeCreated": "2021-09-06T10:25:24.989Z",
+  "PublisherId": "4fb8713ab4ce2587ce74e0559d7661bb6e01e72b",
+  "LatestPublicVersion": "1.0.1",
+  "IsActivated": false
+}

@@ -17,6 +17,10 @@ project.addDevDeps('@aws-cdk/core');
 project.addDevDeps('jsii');
 project.addDevDeps('jsii-pacmak');
 
+// the root is not really a library
+project.compileTask.reset();
+project.packageTask.reset();
+
 const packagesDir = 'packages';
 const scope = '@cdk-cloudformation';
 

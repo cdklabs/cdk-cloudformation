@@ -31,6 +31,9 @@
       "dotnet": {
         "namespace": "Cdklabs.CdkCloudFormationTypes.StackeryOpenBastionMODULE",
         "packageId": "Cdklabs.CdkCloudFormationTypes.StackeryOpenBastionMODULE"
+      },
+      "go": {
+        "moduleName": "github.com/cdklabs/cdk-cloudformation-types-go"
       }
     },
     "tsc": {

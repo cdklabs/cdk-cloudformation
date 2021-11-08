@@ -31,6 +31,9 @@
       "dotnet": {
         "namespace": "Cdklabs.CdkCloudFormationTypes.MongoDBAtlasNetworkPeering",
         "packageId": "Cdklabs.CdkCloudFormationTypes.MongoDBAtlasNetworkPeering"
+      },
+      "go": {
+        "moduleName": "github.com/cdklabs/cdk-cloudformation-types-go"
       }
     },
     "tsc": {

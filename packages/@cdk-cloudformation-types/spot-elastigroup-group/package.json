@@ -31,6 +31,9 @@
       "dotnet": {
         "namespace": "Cdklabs.CdkCloudFormationTypes.SpotElastigroupGroup",
         "packageId": "Cdklabs.CdkCloudFormationTypes.SpotElastigroupGroup"
+      },
+      "go": {
+        "moduleName": "github.com/cdklabs/cdk-cloudformation-types-go"
       }
     },
     "tsc": {

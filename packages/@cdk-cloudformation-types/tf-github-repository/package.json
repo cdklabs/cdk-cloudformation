@@ -32,6 +32,9 @@
       "dotnet": {
         "namespace": "Cdklabs.CdkCloudFormationTypes.TFGitHubRepository",
         "packageId": "Cdklabs.CdkCloudFormationTypes.TFGitHubRepository"
+      },
+      "go": {
+        "moduleName": "github.com/cdklabs/cdk-cloudformation-types-go"
       }
     },
     "tsc": {

@@ -32,6 +32,9 @@
       "dotnet": {
         "namespace": "Cdklabs.CdkCloudFormationTypes.AquaEnterpriseServer",
         "packageId": "Cdklabs.CdkCloudFormationTypes.AquaEnterpriseServer"
+      },
+      "go": {
+        "moduleName": "github.com/cdklabs/cdk-cloudformation-types-go"
       }
     },
     "tsc": {

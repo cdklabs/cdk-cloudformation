@@ -31,6 +31,9 @@
       "dotnet": {
         "namespace": "Cdklabs.CdkCloudFormationTypes.AwsqsVpcVpcqsModule",
         "packageId": "Cdklabs.CdkCloudFormationTypes.AwsqsVpcVpcqsModule"
+      },
+      "go": {
+        "moduleName": "github.com/cdklabs/cdk-cloudformation-types-go"
       }
     },
     "tsc": {

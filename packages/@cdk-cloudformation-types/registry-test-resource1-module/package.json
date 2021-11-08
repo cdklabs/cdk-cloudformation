@@ -31,6 +31,9 @@
       "dotnet": {
         "namespace": "Cdklabs.CdkCloudFormationTypes.RegistryTestResource1Module",
         "packageId": "Cdklabs.CdkCloudFormationTypes.RegistryTestResource1Module"
+      },
+      "go": {
+        "moduleName": "github.com/cdklabs/cdk-cloudformation-types-go"
       }
     },
     "tsc": {

@@ -31,6 +31,9 @@
       "dotnet": {
         "namespace": "Cdklabs.CdkCloudFormationTypes.DatadogSLOsSLO",
         "packageId": "Cdklabs.CdkCloudFormationTypes.DatadogSLOsSLO"
+      },
+      "go": {
+        "moduleName": "github.com/cdklabs/cdk-cloudformation-types-go"
       }
     },
     "tsc": {

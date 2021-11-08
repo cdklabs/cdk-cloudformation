@@ -32,6 +32,9 @@
       "dotnet": {
         "namespace": "Cdklabs.CdkCloudFormationTypes.AquaEnterpriseKubeEnforcer",
         "packageId": "Cdklabs.CdkCloudFormationTypes.AquaEnterpriseKubeEnforcer"
+      },
+      "go": {
+        "moduleName": "github.com/cdklabs/cdk-cloudformation-types-go"
       }
     },
     "tsc": {

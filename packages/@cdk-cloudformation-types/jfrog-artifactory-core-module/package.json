@@ -31,6 +31,9 @@
       "dotnet": {
         "namespace": "Cdklabs.CdkCloudFormationTypes.JFrogArtifactoryCoreMODULE",
         "packageId": "Cdklabs.CdkCloudFormationTypes.JFrogArtifactoryCoreMODULE"
+      },
+      "go": {
+        "moduleName": "github.com/cdklabs/cdk-cloudformation-types-go"
       }
     },
     "tsc": {

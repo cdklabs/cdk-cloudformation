@@ -31,6 +31,9 @@
       "dotnet": {
         "namespace": "Cdklabs.CdkCloudFormationTypes.AWSQSEC2LinuxBastionQSMODULE",
         "packageId": "Cdklabs.CdkCloudFormationTypes.AWSQSEC2LinuxBastionQSMODULE"
+      },
+      "go": {
+        "moduleName": "github.com/cdklabs/cdk-cloudformation-types-go"
       }
     },
     "tsc": {

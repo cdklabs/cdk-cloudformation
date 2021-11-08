@@ -31,6 +31,9 @@
       "dotnet": {
         "namespace": "Cdklabs.CdkCloudFormationTypes.JFrogArtifactoryExistingVpcMODULE",
         "packageId": "Cdklabs.CdkCloudFormationTypes.JFrogArtifactoryExistingVpcMODULE"
+      },
+      "go": {
+        "moduleName": "github.com/cdklabs/cdk-cloudformation-types-go"
       }
     },
     "tsc": {

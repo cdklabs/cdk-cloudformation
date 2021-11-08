@@ -32,6 +32,9 @@
       "dotnet": {
         "namespace": "Cdklabs.CdkCloudFormationTypes.GenericDatabaseSchema",
         "packageId": "Cdklabs.CdkCloudFormationTypes.GenericDatabaseSchema"
+      },
+      "go": {
+        "moduleName": "github.com/cdklabs/cdk-cloudformation-types-go"
       }
     },
     "tsc": {

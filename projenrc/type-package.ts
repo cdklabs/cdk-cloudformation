@@ -127,6 +127,9 @@ export class CloudFormationTypeProject extends Component {
               namespace: `Cdklabs.CdkCloudFormationTypes.${typeNamePascal}`,
               packageId: `Cdklabs.CdkCloudFormationTypes.${typeNamePascal}`,
             },
+            go: {
+              moduleName: 'github.com/cdklabs/cdk-cloudformation-types-go',
+            },
           },
           tsc: {
             outDir: 'lib',
@@ -173,6 +176,8 @@ export class CloudFormationTypeProject extends Component {
 
     const release = options.release ?? true;
     if (release) {
+
+
       parent.buildWorkflow?.addJobs({
         [typeNameKebab]: {
           runsOn: 'ubuntu-latest',

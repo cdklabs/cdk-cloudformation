@@ -31,6 +31,9 @@
       "dotnet": {
         "namespace": "Cdklabs.CdkCloudFormationTypes.JFrogLinuxBastionMODULE",
         "packageId": "Cdklabs.CdkCloudFormationTypes.JFrogLinuxBastionMODULE"
+      },
+      "go": {
+        "moduleName": "github.com/cdklabs/cdk-cloudformation-types-go"
       }
     },
     "tsc": {

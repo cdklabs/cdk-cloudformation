@@ -32,6 +32,9 @@
       "dotnet": {
         "namespace": "Cdklabs.CdkCloudFormationTypes.TFCloudflareRecord",
         "packageId": "Cdklabs.CdkCloudFormationTypes.TFCloudflareRecord"
+      },
+      "go": {
+        "moduleName": "github.com/cdklabs/cdk-cloudformation-types-go"
       }
     },
     "tsc": {

@@ -31,6 +31,9 @@
       "dotnet": {
         "namespace": "Cdklabs.CdkCloudFormationTypes.LogzioAutoDeploymentLogzioCloudWatchMODULE",
         "packageId": "Cdklabs.CdkCloudFormationTypes.LogzioAutoDeploymentLogzioCloudWatchMODULE"
+      },
+      "go": {
+        "moduleName": "github.com/cdklabs/cdk-cloudformation-types-go"
       }
     },
     "tsc": {

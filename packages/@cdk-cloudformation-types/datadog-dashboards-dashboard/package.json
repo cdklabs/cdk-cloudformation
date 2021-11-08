@@ -31,6 +31,9 @@
       "dotnet": {
         "namespace": "Cdklabs.CdkCloudFormationTypes.DatadogDashboardsDashboard",
         "packageId": "Cdklabs.CdkCloudFormationTypes.DatadogDashboardsDashboard"
+      },
+      "go": {
+        "moduleName": "github.com/cdklabs/cdk-cloudformation-types-go"
       }
     },
     "tsc": {

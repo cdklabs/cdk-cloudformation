@@ -31,6 +31,9 @@
       "dotnet": {
         "namespace": "Cdklabs.CdkCloudFormationTypes.DatadogMonitorsMonitor",
         "packageId": "Cdklabs.CdkCloudFormationTypes.DatadogMonitorsMonitor"
+      },
+      "go": {
+        "moduleName": "github.com/cdklabs/cdk-cloudformation-types-go"
       }
     },
     "tsc": {

@@ -32,6 +32,9 @@
       "dotnet": {
         "namespace": "Cdklabs.CdkCloudFormationTypes.AWSQSKubernetesHelm",
         "packageId": "Cdklabs.CdkCloudFormationTypes.AWSQSKubernetesHelm"
+      },
+      "go": {
+        "moduleName": "github.com/cdklabs/cdk-cloudformation-types-go"
       }
     },
     "tsc": {

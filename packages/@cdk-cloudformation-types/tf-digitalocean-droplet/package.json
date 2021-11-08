@@ -32,6 +32,9 @@
       "dotnet": {
         "namespace": "Cdklabs.CdkCloudFormationTypes.TFDigitalOceanDroplet",
         "packageId": "Cdklabs.CdkCloudFormationTypes.TFDigitalOceanDroplet"
+      },
+      "go": {
+        "moduleName": "github.com/cdklabs/cdk-cloudformation-types-go"
       }
     },
     "tsc": {

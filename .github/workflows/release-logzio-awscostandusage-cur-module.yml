@@ -21,9 +21,7 @@ jobs:
       - run: yarn install
       - name: build:logzio-awscostandusage-cur-module
         run: npx projen build:logzio-awscostandusage-cur-module
-      - run: mv
-          packages/@cdk-cloudformation-types/logzio-awscostandusage-cur-module/dist
-          .
+      - run: mv packages/@cdk-cloudformation/logzio-awscostandusage-cur-module/dist .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1
         if: always()

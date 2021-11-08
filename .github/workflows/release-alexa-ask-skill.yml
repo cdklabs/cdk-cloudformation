@@ -21,7 +21,7 @@ jobs:
       - run: yarn install
       - name: build:alexa-ask-skill
         run: npx projen build:alexa-ask-skill
-      - run: mv packages/@cdk-cloudformation-types/alexa-ask-skill/dist .
+      - run: mv packages/@cdk-cloudformation/alexa-ask-skill/dist .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1
         if: always()

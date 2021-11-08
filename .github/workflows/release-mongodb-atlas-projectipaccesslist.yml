@@ -21,9 +21,7 @@ jobs:
       - run: yarn install
       - name: build:mongodb-atlas-projectipaccesslist
         run: npx projen build:mongodb-atlas-projectipaccesslist
-      - run: mv
-          packages/@cdk-cloudformation-types/mongodb-atlas-projectipaccesslist/dist
-          .
+      - run: mv packages/@cdk-cloudformation/mongodb-atlas-projectipaccesslist/dist .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1
         if: always()

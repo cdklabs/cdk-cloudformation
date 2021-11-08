@@ -22,7 +22,7 @@ jobs:
       - name: build:logzio-autodeploymentlogzio-cloudwatch-module
         run: npx projen build:logzio-autodeploymentlogzio-cloudwatch-module
       - run: mv
-          packages/@cdk-cloudformation-types/logzio-autodeploymentlogzio-cloudwatch-module/dist
+          packages/@cdk-cloudformation/logzio-autodeploymentlogzio-cloudwatch-module/dist
           .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1

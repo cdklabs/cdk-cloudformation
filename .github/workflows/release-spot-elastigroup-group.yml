@@ -21,7 +21,7 @@ jobs:
       - run: yarn install
       - name: build:spot-elastigroup-group
         run: npx projen build:spot-elastigroup-group
-      - run: mv packages/@cdk-cloudformation-types/spot-elastigroup-group/dist .
+      - run: mv packages/@cdk-cloudformation/spot-elastigroup-group/dist .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1
         if: always()

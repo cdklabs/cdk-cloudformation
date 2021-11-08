@@ -21,7 +21,7 @@ jobs:
       - run: yarn install
       - name: build:tf-github-repository
         run: npx projen build:tf-github-repository
-      - run: mv packages/@cdk-cloudformation-types/tf-github-repository/dist .
+      - run: mv packages/@cdk-cloudformation/tf-github-repository/dist .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1
         if: always()

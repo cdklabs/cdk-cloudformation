@@ -21,7 +21,7 @@ jobs:
       - run: yarn install
       - name: build:stackery-open-bastion-module
         run: npx projen build:stackery-open-bastion-module
-      - run: mv packages/@cdk-cloudformation-types/stackery-open-bastion-module/dist .
+      - run: mv packages/@cdk-cloudformation/stackery-open-bastion-module/dist .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1
         if: always()

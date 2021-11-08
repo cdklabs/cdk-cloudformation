@@ -21,7 +21,7 @@ jobs:
       - run: yarn install
       - name: build:atlassian-opsgenie-integration
         run: npx projen build:atlassian-opsgenie-integration
-      - run: mv packages/@cdk-cloudformation-types/atlassian-opsgenie-integration/dist .
+      - run: mv packages/@cdk-cloudformation/atlassian-opsgenie-integration/dist .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1
         if: always()

@@ -21,7 +21,7 @@ jobs:
       - run: yarn install
       - name: build:datadog-integrations-aws
         run: npx projen build:datadog-integrations-aws
-      - run: mv packages/@cdk-cloudformation-types/datadog-integrations-aws/dist .
+      - run: mv packages/@cdk-cloudformation/datadog-integrations-aws/dist .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1
         if: always()

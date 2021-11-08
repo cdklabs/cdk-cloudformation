@@ -21,9 +21,7 @@ jobs:
       - run: yarn install
       - name: build:splunk-enterprise-quickstart-module
         run: npx projen build:splunk-enterprise-quickstart-module
-      - run: mv
-          packages/@cdk-cloudformation-types/splunk-enterprise-quickstart-module/dist
-          .
+      - run: mv packages/@cdk-cloudformation/splunk-enterprise-quickstart-module/dist .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1
         if: always()

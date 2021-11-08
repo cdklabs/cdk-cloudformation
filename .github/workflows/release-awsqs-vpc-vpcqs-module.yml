@@ -21,7 +21,7 @@ jobs:
       - run: yarn install
       - name: build:awsqs-vpc-vpcqs-module
         run: npx projen build:awsqs-vpc-vpcqs-module
-      - run: mv packages/@cdk-cloudformation-types/awsqs-vpc-vpcqs-module/dist .
+      - run: mv packages/@cdk-cloudformation/awsqs-vpc-vpcqs-module/dist .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1
         if: always()

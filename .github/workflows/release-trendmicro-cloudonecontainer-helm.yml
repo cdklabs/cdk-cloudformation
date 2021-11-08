@@ -21,9 +21,7 @@ jobs:
       - run: yarn install
       - name: build:trendmicro-cloudonecontainer-helm
         run: npx projen build:trendmicro-cloudonecontainer-helm
-      - run: mv
-          packages/@cdk-cloudformation-types/trendmicro-cloudonecontainer-helm/dist
-          .
+      - run: mv packages/@cdk-cloudformation/trendmicro-cloudonecontainer-helm/dist .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1
         if: always()

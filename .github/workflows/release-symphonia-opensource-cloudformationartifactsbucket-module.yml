@@ -22,7 +22,7 @@ jobs:
       - name: build:symphonia-opensource-cloudformationartifactsbucket-module
         run: npx projen build:symphonia-opensource-cloudformationartifactsbucket-module
       - run: mv
-          packages/@cdk-cloudformation-types/symphonia-opensource-cloudformationartifactsbucket-module/dist
+          packages/@cdk-cloudformation/symphonia-opensource-cloudformationartifactsbucket-module/dist
           .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1

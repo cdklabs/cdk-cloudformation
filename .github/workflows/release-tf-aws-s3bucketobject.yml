@@ -21,7 +21,7 @@ jobs:
       - run: yarn install
       - name: build:tf-aws-s3bucketobject
         run: npx projen build:tf-aws-s3bucketobject
-      - run: mv packages/@cdk-cloudformation-types/tf-aws-s3bucketobject/dist .
+      - run: mv packages/@cdk-cloudformation/tf-aws-s3bucketobject/dist .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1
         if: always()

@@ -21,7 +21,7 @@ jobs:
       - run: yarn install
       - name: build:aqua-enterprise-server
         run: npx projen build:aqua-enterprise-server
-      - run: mv packages/@cdk-cloudformation-types/aqua-enterprise-server/dist .
+      - run: mv packages/@cdk-cloudformation/aqua-enterprise-server/dist .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1
         if: always()

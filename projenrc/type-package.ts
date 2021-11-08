@@ -49,7 +49,7 @@ export class CloudFormationTypeProject extends Component {
     const typeNameSnake = caseutil.snake(typeName);
     const typeNamePascal = caseutil.pascal(typeName);
 
-    const npmScope = '@cdk-cloudformation-types';
+    const npmScope = '@cdk-cloudformation';
 
     this.type = options.type;
 
@@ -71,21 +71,30 @@ export class CloudFormationTypeProject extends Component {
 
     const description = options.type.Description ?? `Constructs for ${typeName}`;
 
-    new TextFile(project, 'README.md', {
-      lines: [
-        `# AWS CDK Constructs for ${typeName}`,
-        '',
-        `> ${description}`,
-        '',
-        ...(options.type.DocumentationUrl ? [`* [Documentation](${options.type.DocumentationUrl})`] : []),
-        ...(options.type.SourceUrl ? [`* [Source](${options.type.SourceUrl})`] : []),
-        '',
-        '## License',
-        '',
-        'Distributed under the Apache-2.0 License.',
-        '',
-      ],
-    });
+    const readme = [
+      `# AWS CDK CloudFormation Constructs for ${typeName}`,
+      '',
+    ];
+
+    readme.push(description);
+    readme.push();
+
+    if (options.type.DocumentationUrl || options.type.SourceUrl) {
+      readme.push('## References');
+      if (options.type.DocumentationUrl) {
+        readme.push(`* [Documentation](${options.type.DocumentationUrl})`);
+      }
+      if (options.type.SourceUrl) {
+        readme.push(`* [Source](${options.type.SourceUrl})`);
+      }
+      readme.push();
+    }
+
+    readme.push('## License');
+    readme.push('');
+    readme.push('Distributed under the Apache-2.0 License.');
+
+    new TextFile(project, 'README.md', { lines: readme });
 
     if (!options.type.LatestPublicVersion) {
       console.warn(`${typeName} does not have a LatestPublicVersion`);
@@ -104,7 +113,7 @@ export class CloudFormationTypeProject extends Component {
         homepage: options.type.DocumentationUrl ?? options.type.SourceUrl,
         repository: {
           type: 'git',
-          url: 'https://github.com/cdklabs/cdk-cloudformation-types.git',
+          url: 'https://github.com/cdklabs/cdk-cloudformation.git',
           directory: outdir,
         },
         main: 'lib/index.js',
@@ -113,23 +122,25 @@ export class CloudFormationTypeProject extends Component {
           outdir: 'dist',
           targets: {
             java: {
-              package: `io.github.cdklabs.cdk_cloudformation_types.${typeNameSnake}`,
+              package: `io.github.cdklabs.cdk_cloudformation.${typeNameSnake}`,
               maven: {
-                groupId: 'io.github.cdklabs.cdk_cloudformation_types',
+                groupId: 'io.github.cdklabs.cdk_cloudformation',
                 artifactId: typeNameKebab,
               },
             },
             python: {
-              distName: `cdk-cloudformation-types-${typeNameKebab}`,
-              module: `cdk_cloudformation_types_${typeNameSnake}`,
+              distName: `cdk-cloudformation-${typeNameKebab}`,
+              module: `cdk_cloudformation_${typeNameSnake}`,
             },
             dotnet: {
-              namespace: `Cdklabs.CdkCloudFormationTypes.${typeNamePascal}`,
-              packageId: `Cdklabs.CdkCloudFormationTypes.${typeNamePascal}`,
+              namespace: `CdkCloudFormation.${typeNamePascal}`,
+              packageId: `CdkCloudFormation.${typeNamePascal}`,
             },
-            go: {
-              moduleName: 'github.com/cdklabs/cdk-cloudformation-types-go',
-            },
+
+            // TODO: add go support once we migrate to v2
+            //go: {
+            //  moduleName: 'github.com/cdklabs/cdk-cloudformation-go',
+            //},
           },
           tsc: {
             outDir: 'lib',
@@ -148,9 +159,11 @@ export class CloudFormationTypeProject extends Component {
       },
     });
 
+    project.addGitIgnore('/.jsii');
     project.addGitIgnore('/lib/');
+    project.addGitIgnore('/.npmignore'); // <-- created by JSII
+    project.addGitIgnore('/tsconfig.json'); // <-- created by JSII
     project.addGitIgnore('/dist/');
-    project.addPackageIgnore('/src/');
 
     const compileTask = parent.addTask(`compile:${typeNameKebab}`, {
       description: `compile ${typeNameKebab} with JSII`,

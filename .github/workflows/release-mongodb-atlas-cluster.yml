@@ -21,7 +21,7 @@ jobs:
       - run: yarn install
       - name: build:mongodb-atlas-cluster
         run: npx projen build:mongodb-atlas-cluster
-      - run: mv packages/@cdk-cloudformation-types/mongodb-atlas-cluster/dist .
+      - run: mv packages/@cdk-cloudformation/mongodb-atlas-cluster/dist .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1
         if: always()

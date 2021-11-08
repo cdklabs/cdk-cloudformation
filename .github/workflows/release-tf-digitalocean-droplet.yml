@@ -21,7 +21,7 @@ jobs:
       - run: yarn install
       - name: build:tf-digitalocean-droplet
         run: npx projen build:tf-digitalocean-droplet
-      - run: mv packages/@cdk-cloudformation-types/tf-digitalocean-droplet/dist .
+      - run: mv packages/@cdk-cloudformation/tf-digitalocean-droplet/dist .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1
         if: always()

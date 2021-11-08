@@ -21,7 +21,7 @@ jobs:
       - run: yarn install
       - name: build:aqua-enterprise-scanner
         run: npx projen build:aqua-enterprise-scanner
-      - run: mv packages/@cdk-cloudformation-types/aqua-enterprise-scanner/dist .
+      - run: mv packages/@cdk-cloudformation/aqua-enterprise-scanner/dist .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1
         if: always()

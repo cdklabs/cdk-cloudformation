@@ -21,7 +21,7 @@ jobs:
       - run: yarn install
       - name: build:generic-transcribe-vocabulary
         run: npx projen build:generic-transcribe-vocabulary
-      - run: mv packages/@cdk-cloudformation-types/generic-transcribe-vocabulary/dist .
+      - run: mv packages/@cdk-cloudformation/generic-transcribe-vocabulary/dist .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1
         if: always()

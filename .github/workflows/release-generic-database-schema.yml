@@ -21,7 +21,7 @@ jobs:
       - run: yarn install
       - name: build:generic-database-schema
         run: npx projen build:generic-database-schema
-      - run: mv packages/@cdk-cloudformation-types/generic-database-schema/dist .
+      - run: mv packages/@cdk-cloudformation/generic-database-schema/dist .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1
         if: always()

@@ -21,7 +21,7 @@ jobs:
       - run: yarn install
       - name: build:tf-random-uuid
         run: npx projen build:tf-random-uuid
-      - run: mv packages/@cdk-cloudformation-types/tf-random-uuid/dist .
+      - run: mv packages/@cdk-cloudformation/tf-random-uuid/dist .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1
         if: always()

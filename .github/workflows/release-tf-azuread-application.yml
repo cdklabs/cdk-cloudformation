@@ -21,7 +21,7 @@ jobs:
       - run: yarn install
       - name: build:tf-azuread-application
         run: npx projen build:tf-azuread-application
-      - run: mv packages/@cdk-cloudformation-types/tf-azuread-application/dist .
+      - run: mv packages/@cdk-cloudformation/tf-azuread-application/dist .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1
         if: always()

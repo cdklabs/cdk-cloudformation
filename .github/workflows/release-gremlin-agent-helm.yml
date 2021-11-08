@@ -21,7 +21,7 @@ jobs:
       - run: yarn install
       - name: build:gremlin-agent-helm
         run: npx projen build:gremlin-agent-helm
-      - run: mv packages/@cdk-cloudformation-types/gremlin-agent-helm/dist .
+      - run: mv packages/@cdk-cloudformation/gremlin-agent-helm/dist .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1
         if: always()

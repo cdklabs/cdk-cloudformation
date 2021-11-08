@@ -21,8 +21,7 @@ jobs:
       - run: yarn install
       - name: build:awsqs-ec2-linuxbastionqs-module
         run: npx projen build:awsqs-ec2-linuxbastionqs-module
-      - run: mv packages/@cdk-cloudformation-types/awsqs-ec2-linuxbastionqs-module/dist
-          .
+      - run: mv packages/@cdk-cloudformation/awsqs-ec2-linuxbastionqs-module/dist .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1
         if: always()

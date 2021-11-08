@@ -21,7 +21,7 @@ jobs:
       - run: yarn install
       - name: build:jfrog-vpc-multiaz-module
         run: npx projen build:jfrog-vpc-multiaz-module
-      - run: mv packages/@cdk-cloudformation-types/jfrog-vpc-multiaz-module/dist .
+      - run: mv packages/@cdk-cloudformation/jfrog-vpc-multiaz-module/dist .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1
         if: always()

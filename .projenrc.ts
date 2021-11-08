@@ -5,6 +5,7 @@ const project = new TypeScriptProject({
   defaultReleaseBranch: 'main',
   name: 'cdk-cloudformation-types',
   projenrcTs: true,
+  sampleCode: false,
 });
 
 project.package.addField('private', true);
@@ -17,7 +18,7 @@ project.addDevDeps('@aws-cdk/core');
 project.addDevDeps('jsii');
 project.addDevDeps('jsii-pacmak');
 
-// the root is not really a library
+// the root is not really a library:x
 project.compileTask.reset();
 project.packageTask.reset();
 

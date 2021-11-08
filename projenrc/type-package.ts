@@ -191,8 +191,6 @@ export class CloudFormationTypeProject extends Component {
 
     const release = options.release ?? true;
     if (release) {
-
-
       parent.buildWorkflow?.addJobs({
         [typeNameKebab]: {
           runsOn: 'ubuntu-latest',
@@ -240,10 +238,12 @@ export class CloudFormationTypeProject extends Component {
         buildJobId: releaseWorkflow.jobId,
       });
 
-      // publisher.publishToNpm();
-      // publisher.publishToMaven();
-      // publisher.publishToNuget();
-      // publisher.publishToPyPi();
+      publisher.publishToNpm();
+      publisher.publishToMaven({
+        mavenEndpoint: 'https://s01.oss.sonatype.org', // cdklabs endpoint
+      });
+      publisher.publishToNuget();
+      publisher.publishToPyPi();
       // publisher.publishToGo();
 
       releaseWorkflow.addJobs(publisher.render());

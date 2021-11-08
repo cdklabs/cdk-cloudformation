@@ -20,7 +20,6 @@
     "eslint": "npx projen eslint",
     "default": "npx projen default",
     "compat": "npx projen compat",
-    "publish:npm": "npx projen publish:npm",
     "docgen": "npx projen docgen",
     "compile:alexa-ask-skill": "npx projen compile:alexa-ask-skill",
     "package:alexa-ask-skill": "npx projen package:alexa-ask-skill",

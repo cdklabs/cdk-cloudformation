@@ -9,6 +9,7 @@ const project = new AwsCdkConstructLibrary({
   name: 'cdk-cloudformation-types',
   projenrcTs: true,
   repositoryUrl: 'https://github.com/cdklabs/cdk-cloudformation-types.git',
+  releaseToNpm: false,
 });
 
 project.addDevDeps('cdk-import');

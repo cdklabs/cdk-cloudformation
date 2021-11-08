@@ -7,6 +7,16 @@
     "url": "https://aws.amazon.com",
     "organization": true
   },
+  "keywords": [
+    "cdk",
+    "awscdk",
+    "aws-cdk",
+    "cloudformation",
+    "cfn",
+    "extensions",
+    "constructs",
+    "cfn-resources"
+  ],
   "homepage": "https://github.com/trendmicro/cloudone-container-security-helm/blob/master/README.md",
   "repository": {
     "type": "git",
@@ -15,6 +25,9 @@
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "jsii": {
     "outdir": "dist",
     "targets": {

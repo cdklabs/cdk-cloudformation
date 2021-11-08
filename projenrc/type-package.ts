@@ -28,10 +28,11 @@ export interface TypePackageOptions {
   readonly type: CloudFormation.DescribeTypeOutput;
 
   /**
-   * Should this type be included in the build & release
-   * @default true
+   * A pre-release tag to use in the version.
+   * @example "alpha.2"
+   * @default - no pre-release tag
    */
-  readonly release?: boolean;
+  readonly prerelease?: string;
 }
 
 /**
@@ -40,6 +41,8 @@ export interface TypePackageOptions {
 export class CloudFormationTypeProject extends Component {
   private readonly subproject: Project;
   private readonly type: CloudFormation.DescribeTypeOutput;
+
+  public readonly statusBadge: string;
 
   constructor(parent: TypeScriptProject, options: TypePackageOptions) {
     super(parent);
@@ -100,18 +103,22 @@ export class CloudFormationTypeProject extends Component {
       console.warn(`${typeName} does not have a LatestPublicVersion`);
     }
 
-    const version = options.type.LatestPublicVersion ?? '0.0.0';
+    let version = options.type.LatestPublicVersion ?? '0.0.0';
+    if (options.prerelease) {
+      version += `-${options.prerelease}`;
+    }
 
     new JsonFile(project, 'package.json', {
       obj: {
         name: `${npmScope}/${typeNameKebab}`,
         description: description.split('\n')[0], // only first line
-        version: `${version}-alpha.1`,
+        version: version,
         author: {
           name: 'Amazon Web Services',
           url: 'https://aws.amazon.com',
           organization: true,
         },
+        keywords: ['cdk', 'awscdk', 'aws-cdk', 'cloudformation', 'cfn', 'extensions', 'constructs', 'cfn-resources'],
         homepage: options.type.DocumentationUrl ?? options.type.SourceUrl,
         repository: {
           type: 'git',
@@ -120,6 +127,9 @@ export class CloudFormationTypeProject extends Component {
         },
         main: 'lib/index.js',
         types: 'lib/index.d.ts',
+        publishConfig: {
+          access: 'public',
+        },
         jsii: {
           outdir: 'dist',
           targets: {
@@ -189,65 +199,64 @@ export class CloudFormationTypeProject extends Component {
     parent.gitignore.addPatterns(`/${outdir}/dist/`);
     parent.gitignore.addPatterns(`/${outdir}/lib/`);
 
-    const release = options.release ?? true;
-    if (release) {
-      parent.buildWorkflow?.addJobs({
-        [typeNameKebab]: {
-          runsOn: 'ubuntu-latest',
-          container: {
-            image: 'jsii/superchain:1-buster-slim',
-          },
-          permissions: {
-            contents: JobPermission.READ,
-          },
-          steps: [
-            { uses: 'actions/checkout@v2' },
-            { run: 'yarn install' },
-            { run: `yarn ${buildTask.name}` },
-          ],
-        },
-      });
-
-      // create a release workflow for this package
-      const artifactDir = 'dist';
-      const releaseWorkflow = new TaskWorkflow(parent.github!, {
-        triggers: {
-          push: {
-            branches: ['main'],
-          },
-        },
-        name: `release-${typeNameKebab}`,
-        task: buildTask,
-        preBuildSteps: [
-          { run: 'yarn install' },
-        ],
-        postBuildSteps: [
-          { run: `mv ${outdir}/dist .` },
-        ],
-        permissions: {
-          contents: JobPermission.READ,
-        },
-        artifactsDirectory: artifactDir,
+    parent.buildWorkflow?.addJobs({
+      [typeNameKebab]: {
+        runsOn: 'ubuntu-latest',
         container: {
           image: 'jsii/superchain:1-buster-slim',
         },
-      });
+        permissions: {
+          contents: JobPermission.READ,
+        },
+        steps: [
+          { uses: 'actions/checkout@v2' },
+          { run: 'yarn install' },
+          { run: `yarn ${buildTask.name}` },
+        ],
+      },
+    });
 
-      const publisher = new Publisher(project, {
-        artifactName: artifactDir,
-        buildJobId: releaseWorkflow.jobId,
-      });
+    // create a release workflow for this package
+    const artifactDir = 'dist';
+    const releaseWorkflow = new TaskWorkflow(parent.github!, {
+      triggers: {
+        push: {
+          branches: ['main'],
+        },
+      },
+      name: `release-${typeNameKebab}`,
+      task: buildTask,
+      preBuildSteps: [
+        { run: 'yarn install' },
+      ],
+      postBuildSteps: [
+        { run: `mv ${outdir}/dist .` },
+      ],
+      permissions: {
+        contents: JobPermission.READ,
+      },
+      artifactsDirectory: artifactDir,
+      container: {
+        image: 'jsii/superchain:1-buster-slim',
+      },
+    });
 
-      publisher.publishToNpm();
-      publisher.publishToMaven({
-        mavenEndpoint: 'https://s01.oss.sonatype.org', // cdklabs endpoint
-      });
-      publisher.publishToNuget();
-      publisher.publishToPyPi();
-      // publisher.publishToGo();
+    const publisher = new Publisher(project, {
+      artifactName: artifactDir,
+      buildJobId: releaseWorkflow.jobId,
+    });
 
-      releaseWorkflow.addJobs(publisher.render());
-    }
+    publisher.publishToNpm();
+    publisher.publishToMaven({
+      mavenEndpoint: 'https://s01.oss.sonatype.org', // cdklabs endpoint
+    });
+    publisher.publishToNuget();
+    publisher.publishToPyPi();
+    // publisher.publishToGo();
+
+    releaseWorkflow.addJobs(publisher.render());
+
+    this.statusBadge = `[![${typeNameKebab}](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/${releaseWorkflow.name}.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/${releaseWorkflow.name}.yml)`;
 
     this.subproject = project;
   }

@@ -7,6 +7,16 @@
     "url": "https://aws.amazon.com",
     "organization": true
   },
+  "keywords": [
+    "cdk",
+    "awscdk",
+    "aws-cdk",
+    "cloudformation",
+    "cfn",
+    "extensions",
+    "constructs",
+    "cfn-resources"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation.git",
@@ -14,6 +24,9 @@
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "jsii": {
     "outdir": "dist",
     "targets": {

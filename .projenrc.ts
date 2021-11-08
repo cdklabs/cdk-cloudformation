@@ -38,6 +38,7 @@ generatePackages(project, {
   ],
   dir: packagesDir,
   scope: scope,
+  prerelease: 'alpha.1',
 });
 
 project.addTask('update-registry', {

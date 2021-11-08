@@ -1,8 +1,39 @@
-# AWS CDK CloudFormation Constructs for MongoDB::Atlas::ProjectIpAccessList
+# @cdk-cloudformation/mongodb-atlas-projectipaccesslist
+
+> An AWS CDK L1 construct for the [AWS CloudFormation Registry] type `MongoDB::Atlas::ProjectIpAccessList` v1.1.0.
+
+[AWS CloudFormation Registry]: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html
+
+## Description
 
 An example resource schema demonstrating some basic constructs and validation rules.
+
+## Usage
+
+In order to use this library, you will need to activate this AWS CloudFormation Registry type in your account. You can do this via the AWS Management Console or using the [AWS CLI](https://aws.amazon.com/cli/) using the following command:
+
+```sh
+aws cloudformation activate-type \
+  --type-name MongoDB::Atlas::ProjectIpAccessList \
+  --publisher-id bb989456c78c398a858fef18f2ca1bfc1fbba082 \
+  --type RESOURCE \
+  --execution-role-arn ROLE-ARN
+```
+
+Alternatively:
+
+```sh
+aws cloudformation activate-type \
+  --public-type-arn arn:aws:cloudformation:us-east-1::type/resource/bb989456c78c398a858fef18f2ca1bfc1fbba082/MongoDB-Atlas-ProjectIpAccessList \
+  --execution-role-arn ROLE-ARN
+```
+
+You can find more information about activating this type in the [AWS CloudFormation documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-public.html).
+
 ## References
+
 * [Source](https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git)
+
 ## License
 
 Distributed under the Apache-2.0 License.

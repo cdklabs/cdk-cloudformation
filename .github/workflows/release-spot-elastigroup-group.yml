@@ -2,6 +2,9 @@
 
 name: release-spot-elastigroup-group
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch: {}
 jobs:
   build:

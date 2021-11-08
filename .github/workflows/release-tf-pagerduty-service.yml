@@ -2,6 +2,9 @@
 
 name: release-tf-pagerduty-service
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch: {}
 jobs:
   build:

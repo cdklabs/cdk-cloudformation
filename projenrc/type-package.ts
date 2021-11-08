@@ -193,6 +193,11 @@ export class CloudFormationTypeProject extends Component {
       // create a release workflow for this package
       const dist = `${outdir}/dist`;
       const releaseWorkflow = new TaskWorkflow(parent.github!, {
+        triggers: {
+          push: {
+            branches: ['main'],
+          },
+        },
         name: `release-${typeNameKebab}`,
         task: buildTask,
         permissions: {

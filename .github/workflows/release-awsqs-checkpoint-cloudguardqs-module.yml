@@ -2,6 +2,9 @@
 
 name: release-awsqs-checkpoint-cloudguardqs-module
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch: {}
 jobs:
   build:

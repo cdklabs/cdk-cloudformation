@@ -2,6 +2,9 @@
 
 name: release-tf-google-storagebucket
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch: {}
 jobs:
   build:

@@ -2,6 +2,9 @@
 
 name: release-jfrog-artifactory-ec2instance-module
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch: {}
 jobs:
   build:

@@ -2,6 +2,9 @@
 
 name: release-generic-database-schema
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch: {}
 jobs:
   build:

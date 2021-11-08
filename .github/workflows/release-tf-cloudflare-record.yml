@@ -2,6 +2,9 @@
 
 name: release-tf-cloudflare-record
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch: {}
 jobs:
   build:

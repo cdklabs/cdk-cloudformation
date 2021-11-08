@@ -2,6 +2,9 @@
 
 name: release-atlassian-opsgenie-integration
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch: {}
 jobs:
   build:

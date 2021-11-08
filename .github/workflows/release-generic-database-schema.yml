@@ -21,11 +21,12 @@ jobs:
       - run: yarn install
       - name: build:generic-database-schema
         run: npx projen build:generic-database-schema
+      - run: mv packages/@cdk-cloudformation-types/generic-database-schema/dist .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1
         if: always()
         with:
-          name: packages/@cdk-cloudformation-types/generic-database-schema/dist
-          path: packages/@cdk-cloudformation-types/generic-database-schema/dist
+          name: dist
+          path: dist
     container:
       image: jsii/superchain:1-buster-slim

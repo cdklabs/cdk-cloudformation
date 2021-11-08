@@ -21,11 +21,12 @@ jobs:
       - run: yarn install
       - name: build:atlassian-opsgenie-integration
         run: npx projen build:atlassian-opsgenie-integration
+      - run: mv packages/@cdk-cloudformation-types/atlassian-opsgenie-integration/dist .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1
         if: always()
         with:
-          name: packages/@cdk-cloudformation-types/atlassian-opsgenie-integration/dist
-          path: packages/@cdk-cloudformation-types/atlassian-opsgenie-integration/dist
+          name: dist
+          path: dist
     container:
       image: jsii/superchain:1-buster-slim

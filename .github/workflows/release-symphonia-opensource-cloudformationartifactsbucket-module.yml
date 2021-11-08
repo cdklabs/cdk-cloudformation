@@ -21,11 +21,14 @@ jobs:
       - run: yarn install
       - name: build:symphonia-opensource-cloudformationartifactsbucket-module
         run: npx projen build:symphonia-opensource-cloudformationartifactsbucket-module
+      - run: mv
+          packages/@cdk-cloudformation-types/symphonia-opensource-cloudformationartifactsbucket-module/dist
+          .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1
         if: always()
         with:
-          name: packages/@cdk-cloudformation-types/symphonia-opensource-cloudformationartifactsbucket-module/dist
-          path: packages/@cdk-cloudformation-types/symphonia-opensource-cloudformationartifactsbucket-module/dist
+          name: dist
+          path: dist
     container:
       image: jsii/superchain:1-buster-slim

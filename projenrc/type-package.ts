@@ -191,7 +191,7 @@ export class CloudFormationTypeProject extends Component {
       });
 
       // create a release workflow for this package
-      const dist = `${outdir}/dist`;
+      const artifactDir = 'dist';
       const releaseWorkflow = new TaskWorkflow(parent.github!, {
         triggers: {
           push: {
@@ -203,17 +203,20 @@ export class CloudFormationTypeProject extends Component {
         preBuildSteps: [
           { run: 'yarn install' },
         ],
+        postBuildSteps: [
+          { run: `mv ${outdir}/dist .` },
+        ],
         permissions: {
           contents: JobPermission.READ,
         },
-        artifactsDirectory: dist,
+        artifactsDirectory: artifactDir,
         container: {
           image: 'jsii/superchain:1-buster-slim',
         },
       });
 
       const publisher = new Publisher(project, {
-        artifactName: dist,
+        artifactName: artifactDir,
         buildJobId: releaseWorkflow.jobId,
       });
 

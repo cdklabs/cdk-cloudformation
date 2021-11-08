@@ -21,11 +21,14 @@ jobs:
       - run: yarn install
       - name: build:logzio-awscostandusage-cur-module
         run: npx projen build:logzio-awscostandusage-cur-module
+      - run: mv
+          packages/@cdk-cloudformation-types/logzio-awscostandusage-cur-module/dist
+          .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1
         if: always()
         with:
-          name: packages/@cdk-cloudformation-types/logzio-awscostandusage-cur-module/dist
-          path: packages/@cdk-cloudformation-types/logzio-awscostandusage-cur-module/dist
+          name: dist
+          path: dist
     container:
       image: jsii/superchain:1-buster-slim

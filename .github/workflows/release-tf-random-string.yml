@@ -21,11 +21,12 @@ jobs:
       - run: yarn install
       - name: build:tf-random-string
         run: npx projen build:tf-random-string
+      - run: mv packages/@cdk-cloudformation-types/tf-random-string/dist .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1
         if: always()
         with:
-          name: packages/@cdk-cloudformation-types/tf-random-string/dist
-          path: packages/@cdk-cloudformation-types/tf-random-string/dist
+          name: dist
+          path: dist
     container:
       image: jsii/superchain:1-buster-slim

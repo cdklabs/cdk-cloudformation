@@ -21,11 +21,13 @@ jobs:
       - run: yarn install
       - name: build:awsqs-ec2-linuxbastionqs-module
         run: npx projen build:awsqs-ec2-linuxbastionqs-module
+      - run: mv packages/@cdk-cloudformation-types/awsqs-ec2-linuxbastionqs-module/dist
+          .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1
         if: always()
         with:
-          name: packages/@cdk-cloudformation-types/awsqs-ec2-linuxbastionqs-module/dist
-          path: packages/@cdk-cloudformation-types/awsqs-ec2-linuxbastionqs-module/dist
+          name: dist
+          path: dist
     container:
       image: jsii/superchain:1-buster-slim

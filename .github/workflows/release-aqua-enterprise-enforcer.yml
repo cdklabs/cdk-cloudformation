@@ -21,11 +21,12 @@ jobs:
       - run: yarn install
       - name: build:aqua-enterprise-enforcer
         run: npx projen build:aqua-enterprise-enforcer
+      - run: mv packages/@cdk-cloudformation-types/aqua-enterprise-enforcer/dist .
       - name: Upload artifact
         uses: actions/upload-artifact@v2.1.1
         if: always()
         with:
-          name: packages/@cdk-cloudformation-types/aqua-enterprise-enforcer/dist
-          path: packages/@cdk-cloudformation-types/aqua-enterprise-enforcer/dist
+          name: dist
+          path: dist
     container:
       image: jsii/superchain:1-buster-slim

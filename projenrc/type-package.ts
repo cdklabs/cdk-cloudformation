@@ -4,7 +4,9 @@ import type { CloudFormation } from 'aws-sdk';
 import * as caseutil from 'case';
 import { CfnResourceGenerator } from 'cdk-import/lib/cfn-resource-generator';
 import { Component, JsonFile, License, Project, TextFile, TypeScriptProject } from 'projen';
+import { TaskWorkflow } from 'projen/lib/github';
 import { JobPermission } from 'projen/lib/github/workflows-model';
+import { Publisher } from 'projen/lib/release';
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const CDK_VERSION = require('@aws-cdk/core/package.json').version;
@@ -187,6 +189,33 @@ export class CloudFormationTypeProject extends Component {
           ],
         },
       });
+
+      // create a release workflow for this package
+      const dist = `${outdir}/dist`;
+      const releaseWorkflow = new TaskWorkflow(parent.github!, {
+        name: `release-${typeNameKebab}`,
+        task: buildTask,
+        permissions: {
+          contents: JobPermission.READ,
+        },
+        artifactsDirectory: dist,
+        container: {
+          image: 'jsii/superchain:1-buster-slim',
+        },
+      });
+
+      const publisher = new Publisher(project, {
+        artifactName: dist,
+        buildJobId: releaseWorkflow.jobId,
+      });
+
+      // publisher.publishToNpm();
+      // publisher.publishToMaven();
+      // publisher.publishToNuget();
+      // publisher.publishToPyPi();
+      // publisher.publishToGo();
+
+      releaseWorkflow.addJobs(publisher.render());
     }
 
     this.subproject = project;

@@ -39,14 +39,12 @@ junit.xml
 !/.mergify.yml
 !/.github/pull_request_template.md
 !/test/
+!/tsconfig.json
 !/tsconfig.dev.json
 !/src/
 /lib
 /dist/
 !/.eslintrc.json
-.jsii
-tsconfig.json
-!/API.md
 /packages/@cdk-cloudformation-types/alexa-ask-skill/dist/
 /packages/@cdk-cloudformation-types/alexa-ask-skill/lib/
 /packages/@cdk-cloudformation-types/aqua-enterprise-enforcer/dist/

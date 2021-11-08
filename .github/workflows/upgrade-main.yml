@@ -39,8 +39,6 @@ jobs:
         with:
           name: .upgrade.tmp.patch
           path: .upgrade.tmp.patch
-    container:
-      image: jsii/superchain:1-buster-slim
   pr:
     name: Create Pull Request
     needs: upgrade

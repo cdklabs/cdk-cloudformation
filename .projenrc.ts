@@ -1,22 +1,21 @@
-import { AwsCdkConstructLibrary } from 'projen';
+import { TypeScriptProject } from 'projen';
 import { generatePackages } from './projenrc/generate-packages';
 
-const project = new AwsCdkConstructLibrary({
-  author: 'Elad Ben-Israel',
-  authorAddress: 'benisrae@amazon.com',
-  cdkVersion: '1.95.2',
+const project = new TypeScriptProject({
   defaultReleaseBranch: 'main',
   name: 'cdk-cloudformation-types',
   projenrcTs: true,
-  repositoryUrl: 'https://github.com/cdklabs/cdk-cloudformation-types.git',
-  releaseToNpm: false,
 });
+
+project.package.addField('private', true);
 
 project.addDevDeps('cdk-import');
 project.addDevDeps('case');
 project.addDevDeps('aws-sdk');
 project.addDevDeps('constructs');
 project.addDevDeps('@aws-cdk/core');
+project.addDevDeps('jsii');
+project.addDevDeps('jsii-pacmak');
 
 const packagesDir = 'packages';
 const scope = '@cdk-cloudformation';

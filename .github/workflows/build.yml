@@ -47,8 +47,6 @@ jobs:
           }}/actions/runs/${{ github.run_id }}/cancel
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    container:
-      image: jsii/superchain:1-buster-slim
   alexa-ask-skill:
     runs-on: ubuntu-latest
     permissions:

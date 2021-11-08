@@ -25,14 +25,15 @@ export interface GeneratePackagesOptions {
   readonly prerelease?: string;
 }
 
-export function generatePackages(project: TypeScriptProject, options: GeneratePackagesOptions) {
+export function generatePackages(root: TypeScriptProject, options: GeneratePackagesOptions): CloudFormationTypeProject[] {
   const types: CloudFormation.DescribeTypeOutput[] = readdirSync(TYPE_DESCRIPTIONS).map(file => {
     return JSON.parse(readFileSync(join(TYPE_DESCRIPTIONS, file), 'utf8'));
   });
 
   const excludes = options.excludeTypes ?? [];
   const shouldExclude = (type: CloudFormation.DescribeTypeOutput) => type.TypeName && excludes.includes(type.TypeName);
-  const statusMarkdown = new Array<string>();
+
+  const projects = new Array<CloudFormationTypeProject>();
 
   for (const type of types) {
     if (shouldExclude(type)) {
@@ -40,16 +41,25 @@ export function generatePackages(project: TypeScriptProject, options: GeneratePa
       continue;
     }
 
-    const p = new CloudFormationTypeProject(project, {
+    const p = new CloudFormationTypeProject(root, {
       packagesDir: options.dir,
       type: type,
       prerelease: options.prerelease,
     });
 
+    projects.push(p);
+  }
+
+  return projects;
+}
+
+export function updateReadme(root: TypeScriptProject, projects: CloudFormationTypeProject[]) {
+  const statusMarkdown = new Array<string>();
+  for (const p of projects) {
     statusMarkdown.push(`* ${p.statusBadge}`);
   }
 
-  const readme = readFileSync(join(project.outdir, 'README.md'), 'utf-8').split('\n');
+  const readme = readFileSync(join(root.outdir, 'README.md'), 'utf-8').split('\n');
 
   // put status markdown between `<!--STATUS-BEGIN-->` and `<!--STATUS-END-->`.
   const statusBegin = readme.indexOf('<!--STATUS-BEGIN-->');
@@ -58,10 +68,12 @@ export function generatePackages(project: TypeScriptProject, options: GeneratePa
   const combined = [
     ...readme.slice(0, statusBegin + 1),
     '',
+    `Release status for ${projects.length} libraries:`,
+    '',
     ...statusMarkdown,
     '',
     ...readme.slice(statusEnd),
   ];
 
-  writeFileSync(join(project.outdir, 'README.md'), combined.join('\n'));
+  writeFileSync(join(root.outdir, 'README.md'), combined.join('\n'));
 }

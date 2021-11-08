@@ -1,5 +1,5 @@
 import { TypeScriptProject } from 'projen';
-import { generatePackages } from './projenrc/generate-packages';
+import { generatePackages, updateReadme } from './projenrc/generate-packages';
 
 const project = new TypeScriptProject({
   defaultReleaseBranch: 'main',
@@ -32,7 +32,7 @@ project.package.addField('workspaces', {
 
 project.addExcludeFromCleanup('packages/**');
 
-generatePackages(project, {
+const projects = generatePackages(project, {
   excludeTypes: [
     'TF::Akamai::DnsRecord', // https://github.com/cdklabs/cdk-cloudformation-types/runs/4131637186
   ],
@@ -40,6 +40,8 @@ generatePackages(project, {
   scope: scope,
   prerelease: 'alpha.1',
 });
+
+updateReadme(project, projects);
 
 project.addTask('update-registry', {
   exec: 'node registry/refresh.js',

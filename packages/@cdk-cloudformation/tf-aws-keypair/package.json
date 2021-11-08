@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/tf-aws-keypair",
   "description": "Provides an [EC2 key pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html) resource. A key pair is used to control login access to EC2 instances.",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.1",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

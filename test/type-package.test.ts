@@ -20,35 +20,35 @@ test('CloudFormationTypeProject', () => {
   const snapshot = Testing.synth(root);
   const keys = Object.keys(snapshot).filter(key => key.startsWith('my-packages/'));
   expect(keys).toStrictEqual([
-    'my-packages/@cdk-cloudformation-types/tf-random-uuid/.gitignore',
-    'my-packages/@cdk-cloudformation-types/tf-random-uuid/.projen/tasks.json',
-    'my-packages/@cdk-cloudformation-types/tf-random-uuid/LICENSE',
-    'my-packages/@cdk-cloudformation-types/tf-random-uuid/package.json',
-    'my-packages/@cdk-cloudformation-types/tf-random-uuid/README.md',
-    'my-packages/@cdk-cloudformation-types/tf-random-uuid/src/index.ts',
+    'my-packages/@cdk-cloudformation/tf-random-uuid/.gitignore',
+    'my-packages/@cdk-cloudformation/tf-random-uuid/.projen/tasks.json',
+    'my-packages/@cdk-cloudformation/tf-random-uuid/LICENSE',
+    'my-packages/@cdk-cloudformation/tf-random-uuid/package.json',
+    'my-packages/@cdk-cloudformation/tf-random-uuid/README.md',
+    'my-packages/@cdk-cloudformation/tf-random-uuid/src/index.ts',
   ]);
 
-  const pkgJson = snapshot['my-packages/@cdk-cloudformation-types/tf-random-uuid/package.json'];
+  const pkgJson = snapshot['my-packages/@cdk-cloudformation/tf-random-uuid/package.json'];
   expect(pkgJson.description).toStrictEqual('CloudFormation equivalent of random_uuid');
   expect(pkgJson.version).toStrictEqual('1.0.0');
-  expect(pkgJson.name).toStrictEqual('@cdk-cloudformation-types/tf-random-uuid');
+  expect(pkgJson.name).toStrictEqual('@cdk-cloudformation/tf-random-uuid');
   expect(pkgJson.jsii).toStrictEqual({
     outdir: 'dist',
     targets: {
       dotnet: {
-        namespace: 'Cdklabs.CdkCloudFormationTypes.TFRandomUuid',
-        packageId: 'Cdklabs.CdkCloudFormationTypes.TFRandomUuid',
+        namespace: 'CdkCloudFormation.TFRandomUuid',
+        packageId: 'CdkCloudFormation.TFRandomUuid',
       },
       java: {
         maven: {
           artifactId: 'tf-random-uuid',
-          groupId: 'io.github.cdklabs.cdk_cloudformation_types',
+          groupId: 'io.github.cdklabs.cdk_cloudformation',
         },
-        package: 'io.github.cdklabs.cdk_cloudformation_types.tf_random_uuid',
+        package: 'io.github.cdklabs.cdk_cloudformation.tf_random_uuid',
       },
       python: {
-        distName: 'cdk-cloudformation-types-tf-random-uuid',
-        module: 'cdk_cloudformation_types_tf_random_uuid',
+        distName: 'cdk-cloudformation-tf-random-uuid',
+        module: 'cdk_cloudformation_tf_random_uuid',
       },
     },
     tsc: {

@@ -100,11 +100,13 @@ export class CloudFormationTypeProject extends Component {
       console.warn(`${typeName} does not have a LatestPublicVersion`);
     }
 
+    const version = options.type.LatestPublicVersion ?? '0.0.0';
+
     new JsonFile(project, 'package.json', {
       obj: {
         name: `${npmScope}/${typeNameKebab}`,
         description: description.split('\n')[0], // only first line
-        version: options.type.LatestPublicVersion ?? '0.0.0',
+        version: `${version}-alpha.1`,
         author: {
           name: 'Amazon Web Services',
           url: 'https://aws.amazon.com',

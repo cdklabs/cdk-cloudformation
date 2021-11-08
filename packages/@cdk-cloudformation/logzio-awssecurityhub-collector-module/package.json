@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/logzio-awssecurityhub-collector-module",
   "description": "Schema for Module Fragment of type logzio::awsSecurityHub::collector::MODULE",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.1",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/logzio-kinesisshipper-kinesisshipper-module",
   "description": "Schema for Module Fragment of type Logzio::KinesisShipper::KinesisShipper::MODULE",
-  "version": "1.2.0",
+  "version": "1.2.0-alpha.1",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

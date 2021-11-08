@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/aqua-enterprise-scanner",
   "description": "A resource provider for Aqua Enterprise Scanner.",
-  "version": "1.1.0",
+  "version": "1.1.0-alpha.1",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

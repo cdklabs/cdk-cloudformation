@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/generic-database-schema",
   "description": "Uses the Aurora Data API to execute SQL and enforce a schema within a database cluster. Currently only supports Aurora Postgres.",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.1",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

@@ -18,6 +18,7 @@ jobs:
         run: |-
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
+      - run: yarn install
       - name: build:tf-cloudflare-record
         run: npx projen build:tf-cloudflare-record
       - name: Upload artifact

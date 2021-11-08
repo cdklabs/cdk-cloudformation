@@ -200,6 +200,9 @@ export class CloudFormationTypeProject extends Component {
         },
         name: `release-${typeNameKebab}`,
         task: buildTask,
+        preBuildSteps: [
+          { run: 'yarn install' },
+        ],
         permissions: {
           contents: JobPermission.READ,
         },

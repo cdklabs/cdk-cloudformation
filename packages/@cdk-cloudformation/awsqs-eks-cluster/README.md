@@ -1,4 +1,4 @@
-# @cdk-cloudformation/awsqs-eks-cluster
+# awsqs-eks-cluster
 
 > AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `AWSQS::EKS::Cluster` v1.12.0.
 
@@ -8,6 +8,11 @@
 ## Description
 
 A resource that creates Amazon Elastic Kubernetes Service (Amazon EKS) clusters.
+
+## References
+
+* [Documentation](https://github.com/aws-quickstart/quickstart-amazon-eks-cluster-resource-provider/blob/main/README.md)
+* [Source](https://github.com/aws-quickstart/quickstart-amazon-eks-cluster-resource-provider.git)
 
 ## Usage
 
@@ -31,10 +36,14 @@ aws cloudformation activate-type \
 
 You can find more information about activating this type in the [AWS CloudFormation documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-public.html).
 
-## References
+## Feedback
 
-* [Documentation](https://github.com/aws-quickstart/quickstart-amazon-eks-cluster-resource-provider/blob/main/README.md)
-* [Source](https://github.com/aws-quickstart/quickstart-amazon-eks-cluster-resource-provider.git)
+This library is auto-generated and published to all supported programming languages by the [cdklabs/cdk-cloudformation] project based on the API schema published for `AWSQS::EKS::Cluster`.
+
+* Issues related to this generated library should be [reported here](https://github.com/cdklabs/cdk-cloudformation/issues/new?title=Issue+with+%40cdk-cloudformation%2Fawsqs-eks-cluster+v1.12.0).
+* Issues related to `AWSQS::EKS::Cluster` should be reported to the [publisher](https://github.com/aws-quickstart/quickstart-amazon-eks-cluster-resource-provider/blob/main/README.md).
+
+[cdklabs/cdk-cloudformation]: https://github.com/cdklabs/cdk-cloudformation
 
 ## License
 

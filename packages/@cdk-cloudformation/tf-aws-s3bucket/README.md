@@ -1,4 +1,4 @@
-# @cdk-cloudformation/tf-aws-s3bucket
+# tf-aws-s3bucket
 
 > AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `TF::AWS::S3Bucket` v1.0.0.
 
@@ -10,6 +10,11 @@
 Provides a S3 bucket resource.
 
 -> This functionality is for managing S3 in an AWS Partition. To manage [S3 on Outposts](https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html), see the [`aws_s3control_bucket`](/docs/providers/aws/r/s3control_bucket.html) resource.
+
+## References
+
+* [Documentation](https://github.com/iann0036/cfn-tf-custom-types/blob/docs/resources/aws/TF-AWS-S3Bucket/docs/README.md)
+* [Source](https://github.com/iann0036/cfn-tf-custom-types.git)
 
 ## Usage
 
@@ -33,10 +38,14 @@ aws cloudformation activate-type \
 
 You can find more information about activating this type in the [AWS CloudFormation documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-public.html).
 
-## References
+## Feedback
 
-* [Documentation](https://github.com/iann0036/cfn-tf-custom-types/blob/docs/resources/aws/TF-AWS-S3Bucket/docs/README.md)
-* [Source](https://github.com/iann0036/cfn-tf-custom-types.git)
+This library is auto-generated and published to all supported programming languages by the [cdklabs/cdk-cloudformation] project based on the API schema published for `TF::AWS::S3Bucket`.
+
+* Issues related to this generated library should be [reported here](https://github.com/cdklabs/cdk-cloudformation/issues/new?title=Issue+with+%40cdk-cloudformation%2Ftf-aws-s3bucket+v1.0.0).
+* Issues related to `TF::AWS::S3Bucket` should be reported to the [publisher](https://github.com/iann0036/cfn-tf-custom-types/blob/docs/resources/aws/TF-AWS-S3Bucket/docs/README.md).
+
+[cdklabs/cdk-cloudformation]: https://github.com/cdklabs/cdk-cloudformation
 
 ## License
 

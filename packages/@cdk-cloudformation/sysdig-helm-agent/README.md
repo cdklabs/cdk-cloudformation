@@ -1,4 +1,4 @@
-# @cdk-cloudformation/sysdig-helm-agent
+# sysdig-helm-agent
 
 > AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `Sysdig::Helm::Agent` v1.8.0.
 
@@ -8,6 +8,10 @@
 ## Description
 
 Sysdig Agent EKS cluster deployment.
+
+## References
+
+* [Source](https://github.com/sysdiglabs/cloudformation-resource-providers.git)
 
 ## Usage
 
@@ -31,9 +35,14 @@ aws cloudformation activate-type \
 
 You can find more information about activating this type in the [AWS CloudFormation documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-public.html).
 
-## References
+## Feedback
 
-* [Source](https://github.com/sysdiglabs/cloudformation-resource-providers.git)
+This library is auto-generated and published to all supported programming languages by the [cdklabs/cdk-cloudformation] project based on the API schema published for `Sysdig::Helm::Agent`.
+
+* Issues related to this generated library should be [reported here](https://github.com/cdklabs/cdk-cloudformation/issues/new?title=Issue+with+%40cdk-cloudformation%2Fsysdig-helm-agent+v1.8.0).
+* Issues related to `Sysdig::Helm::Agent` should be reported to the [publisher](https://github.com/sysdiglabs/cloudformation-resource-providers.git).
+
+[cdklabs/cdk-cloudformation]: https://github.com/cdklabs/cdk-cloudformation
 
 ## License
 

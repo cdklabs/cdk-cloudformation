@@ -1,4 +1,4 @@
-# @cdk-cloudformation/atlassian-opsgenie-user
+# atlassian-opsgenie-user
 
 > AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `Atlassian::Opsgenie::User` v1.0.1.
 
@@ -8,6 +8,10 @@
 ## Description
 
 Opsgenie User
+
+## References
+
+* [Source](https://github.com/opsgenie/opsgenie-cloudformation-resources)
 
 ## Usage
 
@@ -31,9 +35,14 @@ aws cloudformation activate-type \
 
 You can find more information about activating this type in the [AWS CloudFormation documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-public.html).
 
-## References
+## Feedback
 
-* [Source](https://github.com/opsgenie/opsgenie-cloudformation-resources)
+This library is auto-generated and published to all supported programming languages by the [cdklabs/cdk-cloudformation] project based on the API schema published for `Atlassian::Opsgenie::User`.
+
+* Issues related to this generated library should be [reported here](https://github.com/cdklabs/cdk-cloudformation/issues/new?title=Issue+with+%40cdk-cloudformation%2Fatlassian-opsgenie-user+v1.0.1).
+* Issues related to `Atlassian::Opsgenie::User` should be reported to the [publisher](https://github.com/opsgenie/opsgenie-cloudformation-resources).
+
+[cdklabs/cdk-cloudformation]: https://github.com/cdklabs/cdk-cloudformation
 
 ## License
 

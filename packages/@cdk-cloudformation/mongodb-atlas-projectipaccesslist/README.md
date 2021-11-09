@@ -1,4 +1,4 @@
-# @cdk-cloudformation/mongodb-atlas-projectipaccesslist
+# mongodb-atlas-projectipaccesslist
 
 > AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `MongoDB::Atlas::ProjectIpAccessList` v1.1.0.
 
@@ -8,6 +8,10 @@
 ## Description
 
 An example resource schema demonstrating some basic constructs and validation rules.
+
+## References
+
+* [Source](https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git)
 
 ## Usage
 
@@ -31,9 +35,14 @@ aws cloudformation activate-type \
 
 You can find more information about activating this type in the [AWS CloudFormation documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-public.html).
 
-## References
+## Feedback
 
-* [Source](https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git)
+This library is auto-generated and published to all supported programming languages by the [cdklabs/cdk-cloudformation] project based on the API schema published for `MongoDB::Atlas::ProjectIpAccessList`.
+
+* Issues related to this generated library should be [reported here](https://github.com/cdklabs/cdk-cloudformation/issues/new?title=Issue+with+%40cdk-cloudformation%2Fmongodb-atlas-projectipaccesslist+v1.1.0).
+* Issues related to `MongoDB::Atlas::ProjectIpAccessList` should be reported to the [publisher](https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git).
+
+[cdklabs/cdk-cloudformation]: https://github.com/cdklabs/cdk-cloudformation
 
 ## License
 

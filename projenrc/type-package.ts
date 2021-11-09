@@ -80,6 +80,7 @@ export class CloudFormationTypeProject extends Component {
       type: options.type,
       typeName: typeName,
       npmName: npmName,
+      kebabName: typeNameKebab,
     });
 
     if (!options.type.LatestPublicVersion) {

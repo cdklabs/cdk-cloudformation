@@ -1,4 +1,4 @@
-# @cdk-cloudformation/generic-transcribe-vocabulary
+# generic-transcribe-vocabulary
 
 > AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `Generic::Transcribe::Vocabulary` v1.0.0.
 
@@ -8,6 +8,10 @@
 ## Description
 
 A custom vocabulary that you can use to change the way Amazon Transcribe handles transcription of an audio file.
+
+## References
+
+* [Source](https://github.com/iann0036/cfn-types/tree/master/generic-transcribe-vocabulary)
 
 ## Usage
 
@@ -31,9 +35,14 @@ aws cloudformation activate-type \
 
 You can find more information about activating this type in the [AWS CloudFormation documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-public.html).
 
-## References
+## Feedback
 
-* [Source](https://github.com/iann0036/cfn-types/tree/master/generic-transcribe-vocabulary)
+This library is auto-generated and published to all supported programming languages by the [cdklabs/cdk-cloudformation] project based on the API schema published for `Generic::Transcribe::Vocabulary`.
+
+* Issues related to this generated library should be [reported here](https://github.com/cdklabs/cdk-cloudformation/issues/new?title=Issue+with+%40cdk-cloudformation%2Fgeneric-transcribe-vocabulary+v1.0.0).
+* Issues related to `Generic::Transcribe::Vocabulary` should be reported to the [publisher](https://github.com/iann0036/cfn-types/tree/master/generic-transcribe-vocabulary).
+
+[cdklabs/cdk-cloudformation]: https://github.com/cdklabs/cdk-cloudformation
 
 ## License
 

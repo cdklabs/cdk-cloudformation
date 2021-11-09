@@ -1,4 +1,4 @@
-# @cdk-cloudformation/generic-database-schema
+# generic-database-schema
 
 > AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `Generic::Database::Schema` v1.0.0.
 
@@ -8,6 +8,10 @@
 ## Description
 
 Uses the Aurora Data API to execute SQL and enforce a schema within a database cluster. Currently only supports Aurora Postgres.
+
+## References
+
+* [Source](https://github.com/iann0036/cfn-types/tree/master/generic-database-schema)
 
 ## Usage
 
@@ -31,9 +35,14 @@ aws cloudformation activate-type \
 
 You can find more information about activating this type in the [AWS CloudFormation documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-public.html).
 
-## References
+## Feedback
 
-* [Source](https://github.com/iann0036/cfn-types/tree/master/generic-database-schema)
+This library is auto-generated and published to all supported programming languages by the [cdklabs/cdk-cloudformation] project based on the API schema published for `Generic::Database::Schema`.
+
+* Issues related to this generated library should be [reported here](https://github.com/cdklabs/cdk-cloudformation/issues/new?title=Issue+with+%40cdk-cloudformation%2Fgeneric-database-schema+v1.0.0).
+* Issues related to `Generic::Database::Schema` should be reported to the [publisher](https://github.com/iann0036/cfn-types/tree/master/generic-database-schema).
+
+[cdklabs/cdk-cloudformation]: https://github.com/cdklabs/cdk-cloudformation
 
 ## License
 

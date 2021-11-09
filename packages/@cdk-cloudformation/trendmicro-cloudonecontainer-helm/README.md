@@ -1,4 +1,4 @@
-# @cdk-cloudformation/trendmicro-cloudonecontainer-helm
+# trendmicro-cloudonecontainer-helm
 
 > AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `TrendMicro::CloudOneContainer::Helm` v1.2.0.
 
@@ -8,6 +8,11 @@
 ## Description
 
 Deploys Trend Micro Cloud One Container Security into EKS clusters using helm.
+
+## References
+
+* [Documentation](https://github.com/trendmicro/cloudone-container-security-helm/blob/master/README.md)
+* [Source](https://github.com/aws-quickstart/quickstart-trend-micro-cloudone-helm-resource-provider.git)
 
 ## Usage
 
@@ -31,10 +36,14 @@ aws cloudformation activate-type \
 
 You can find more information about activating this type in the [AWS CloudFormation documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-public.html).
 
-## References
+## Feedback
 
-* [Documentation](https://github.com/trendmicro/cloudone-container-security-helm/blob/master/README.md)
-* [Source](https://github.com/aws-quickstart/quickstart-trend-micro-cloudone-helm-resource-provider.git)
+This library is auto-generated and published to all supported programming languages by the [cdklabs/cdk-cloudformation] project based on the API schema published for `TrendMicro::CloudOneContainer::Helm`.
+
+* Issues related to this generated library should be [reported here](https://github.com/cdklabs/cdk-cloudformation/issues/new?title=Issue+with+%40cdk-cloudformation%2Ftrendmicro-cloudonecontainer-helm+v1.2.0).
+* Issues related to `TrendMicro::CloudOneContainer::Helm` should be reported to the [publisher](https://github.com/trendmicro/cloudone-container-security-helm/blob/master/README.md).
+
+[cdklabs/cdk-cloudformation]: https://github.com/cdklabs/cdk-cloudformation
 
 ## License
 

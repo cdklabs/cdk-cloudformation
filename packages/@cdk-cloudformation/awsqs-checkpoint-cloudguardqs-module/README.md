@@ -1,4 +1,4 @@
-# @cdk-cloudformation/awsqs-checkpoint-cloudguardqs-module
+# awsqs-checkpoint-cloudguardqs-module
 
 > AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `AWSQS::CheckPoint::CloudGuardQS::MODULE` v1.1.0.
 
@@ -30,6 +30,15 @@ aws cloudformation activate-type \
 ```
 
 You can find more information about activating this type in the [AWS CloudFormation documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-public.html).
+
+## Feedback
+
+This library is auto-generated and published to all supported programming languages by the [cdklabs/cdk-cloudformation] project based on the API schema published for `AWSQS::CheckPoint::CloudGuardQS::MODULE`.
+
+* Issues related to this generated library should be [reported here](https://github.com/cdklabs/cdk-cloudformation/issues/new?title=Issue+with+%40cdk-cloudformation%2Fawsqs-checkpoint-cloudguardqs-module+v1.1.0).
+* Issues related to `AWSQS::CheckPoint::CloudGuardQS::MODULE` should be reported to the [publisher](undefined).
+
+[cdklabs/cdk-cloudformation]: https://github.com/cdklabs/cdk-cloudformation
 
 ## License
 

@@ -1,4 +1,4 @@
-# @cdk-cloudformation/snyk-container-helm
+# snyk-container-helm
 
 > AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `Snyk::Container::Helm` v1.2.0.
 
@@ -8,6 +8,11 @@
 ## Description
 
 Snyk integrates with Amazon EKS, enabling you to import and test your running workloads and identify vulnerabilities in their associated images and configurations that might make those workloads less secure. Once imported, Snyk continues to monitor those workloads, identifying additional security issues as new images are deployed and the workload configuration changes.
+
+## References
+
+* [Documentation](https://github.com/snyk/aws-cloudformation-resource-providers/blob/main/snyk-container-helm/README.md)
+* [Source](https://github.com/snyk/aws-cloudformation-resource-providers.git)
 
 ## Usage
 
@@ -31,10 +36,14 @@ aws cloudformation activate-type \
 
 You can find more information about activating this type in the [AWS CloudFormation documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-public.html).
 
-## References
+## Feedback
 
-* [Documentation](https://github.com/snyk/aws-cloudformation-resource-providers/blob/main/snyk-container-helm/README.md)
-* [Source](https://github.com/snyk/aws-cloudformation-resource-providers.git)
+This library is auto-generated and published to all supported programming languages by the [cdklabs/cdk-cloudformation] project based on the API schema published for `Snyk::Container::Helm`.
+
+* Issues related to this generated library should be [reported here](https://github.com/cdklabs/cdk-cloudformation/issues/new?title=Issue+with+%40cdk-cloudformation%2Fsnyk-container-helm+v1.2.0).
+* Issues related to `Snyk::Container::Helm` should be reported to the [publisher](https://github.com/snyk/aws-cloudformation-resource-providers/blob/main/snyk-container-helm/README.md).
+
+[cdklabs/cdk-cloudformation]: https://github.com/cdklabs/cdk-cloudformation
 
 ## License
 

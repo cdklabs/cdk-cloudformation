@@ -1,9 +1,11 @@
+import { URL } from 'url';
 import { CloudFormation } from 'aws-sdk';
 import { Component, Project, TextFile } from 'projen';
 
 export interface ReadmeOptions {
   readonly npmName: string;
   readonly typeName: string;
+  readonly kebabName: string;
   readonly type: CloudFormation.DescribeTypeOutput;
 }
 
@@ -16,7 +18,7 @@ export class Readme extends Component {
 
     const readme = new Array<string>();
 
-    readme.push(`# ${options.npmName}`);
+    readme.push(`# ${options.kebabName}`);
     readme.push('');
 
     const version = options.type.LatestPublicVersion ? ` v${options.type.LatestPublicVersion}` : '';
@@ -31,6 +33,18 @@ export class Readme extends Component {
       readme.push('## Description');
       readme.push('');
       readme.push(description);
+    }
+
+    if (options.type.DocumentationUrl || options.type.SourceUrl) {
+      readme.push('');
+      readme.push('## References');
+      readme.push('');
+      if (options.type.DocumentationUrl) {
+        readme.push(`* [Documentation](${options.type.DocumentationUrl})`);
+      }
+      if (options.type.SourceUrl) {
+        readme.push(`* [Source](${options.type.SourceUrl})`);
+      }
     }
 
     readme.push('');
@@ -57,18 +71,22 @@ export class Readme extends Component {
 
     readme.push('You can find more information about activating this type in the [AWS CloudFormation documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-public.html).');
 
-    if (options.type.DocumentationUrl || options.type.SourceUrl) {
-      readme.push('');
-      readme.push('## References');
-      readme.push('');
-      if (options.type.DocumentationUrl) {
-        readme.push(`* [Documentation](${options.type.DocumentationUrl})`);
-      }
-      if (options.type.SourceUrl) {
-        readme.push(`* [Source](${options.type.SourceUrl})`);
-      }
-    }
 
+    readme.push('');
+    readme.push('## Feedback');
+    readme.push('');
+    readme.push(`This library is auto-generated and published to all supported programming languages by the [cdklabs/cdk-cloudformation] project based on the API schema published for \`${typeName}\`.`);
+    readme.push('');
+
+    const newIssueUrl = new URL('https://github.com/cdklabs/cdk-cloudformation/issues/new');
+    newIssueUrl.searchParams.append('title', `Issue with ${options.npmName}${version}`);
+
+    readme.push(`* Issues related to this generated library should be [reported here](${newIssueUrl.toString()}).`);
+
+    const publisherUrl = options.type.DocumentationUrl ?? options.type.SourceUrl;
+    readme.push(`* Issues related to \`${typeName}\` should be reported to the [publisher](${publisherUrl}).`);
+    readme.push('');
+    readme.push('[cdklabs/cdk-cloudformation]: https://github.com/cdklabs/cdk-cloudformation');
 
     readme.push('');
     readme.push('## License');

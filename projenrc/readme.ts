@@ -21,8 +21,9 @@ export class Readme extends Component {
 
     const version = options.type.LatestPublicVersion ? ` v${options.type.LatestPublicVersion}` : '';
 
-    readme.push(`> An AWS CDK L1 construct for the [AWS CloudFormation Registry] type \`${typeName}\`${version}.`);
+    readme.push(`> AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type \`${typeName}\`${version}.`);
     readme.push('');
+    readme.push('[L1 construct]: https://docs.aws.amazon.com/cdk/latest/guide/constructs.html');
     readme.push('[AWS CloudFormation Registry]: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html');
     readme.push('');
 

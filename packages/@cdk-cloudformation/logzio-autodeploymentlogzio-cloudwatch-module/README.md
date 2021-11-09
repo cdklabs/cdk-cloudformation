@@ -1,7 +1,8 @@
 # @cdk-cloudformation/logzio-autodeploymentlogzio-cloudwatch-module
 
-> An AWS CDK L1 construct for the [AWS CloudFormation Registry] type `logzio::autoDeploymentLogzio::CloudWatch::MODULE` v2.0.0.
+> AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `logzio::autoDeploymentLogzio::CloudWatch::MODULE` v2.0.0.
 
+[L1 construct]: https://docs.aws.amazon.com/cdk/latest/guide/constructs.html
 [AWS CloudFormation Registry]: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html
 
 ## Description

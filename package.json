@@ -243,6 +243,8 @@
     "ts-node": "^9",
     "typescript": "^4.4.4"
   },
+  "peerDependencies": {},
+  "dependencies": {},
   "bundledDependencies": [],
   "main": "lib/index.js",
   "license": "Apache-2.0",

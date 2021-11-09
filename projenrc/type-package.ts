@@ -3,10 +3,11 @@ import { dirname, join } from 'path';
 import type { CloudFormation } from 'aws-sdk';
 import * as caseutil from 'case';
 import { CfnResourceGenerator } from 'cdk-import/lib/cfn-resource-generator';
-import { Component, JsonFile, License, Project, TextFile, TypeScriptProject } from 'projen';
+import { Component, JsonFile, License, Project, TypeScriptProject } from 'projen';
 import { TaskWorkflow } from 'projen/lib/github';
 import { JobPermission } from 'projen/lib/github/workflows-model';
 import { Publisher } from 'projen/lib/release';
+import { Readme } from './readme';
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const CDK_VERSION = require('@aws-cdk/core/package.json').version;
@@ -73,31 +74,14 @@ export class CloudFormationTypeProject extends Component {
     new License(project, { spdx });
 
     const description = options.type.Description ?? `Constructs for ${typeName}`;
+    const npmName = `${npmScope}/${typeNameKebab}`;
 
-    const readme = [
-      `# AWS CDK CloudFormation Constructs for ${typeName}`,
-      '',
-    ];
-
-    readme.push(description);
-    readme.push();
-
-    if (options.type.DocumentationUrl || options.type.SourceUrl) {
-      readme.push('## References');
-      if (options.type.DocumentationUrl) {
-        readme.push(`* [Documentation](${options.type.DocumentationUrl})`);
-      }
-      if (options.type.SourceUrl) {
-        readme.push(`* [Source](${options.type.SourceUrl})`);
-      }
-      readme.push();
-    }
-
-    readme.push('## License');
-    readme.push('');
-    readme.push('Distributed under the Apache-2.0 License.');
-
-    new TextFile(project, 'README.md', { lines: readme });
+    new Readme(project, {
+      type: options.type,
+      typeName: typeName,
+      npmName: npmName,
+      kebabName: typeNameKebab,
+    });
 
     if (!options.type.LatestPublicVersion) {
       console.warn(`${typeName} does not have a LatestPublicVersion`);
@@ -110,7 +94,7 @@ export class CloudFormationTypeProject extends Component {
 
     new JsonFile(project, 'package.json', {
       obj: {
-        name: `${npmScope}/${typeNameKebab}`,
+        name: npmName,
         description: description.split('\n')[0], // only first line
         version: version,
         author: {
@@ -256,7 +240,9 @@ export class CloudFormationTypeProject extends Component {
 
     releaseWorkflow.addJobs(publisher.render());
 
+    // used in the main README to list the release status of all packages
     this.statusBadge = `[![${typeNameKebab}](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/${releaseWorkflow.name}.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/${releaseWorkflow.name}.yml)`;
+
 
     this.subproject = project;
   }

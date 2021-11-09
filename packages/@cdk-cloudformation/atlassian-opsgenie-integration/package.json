@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/atlassian-opsgenie-integration",
   "description": "Opsgenie Integration Resource definition",
-  "version": "1.0.1-alpha.1",
+  "version": "1.0.1-alpha.2",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/logzio-myservice-myname-module",
   "description": "Schema for Module Fragment of type Logzio::MyService::MyName::MODULE",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

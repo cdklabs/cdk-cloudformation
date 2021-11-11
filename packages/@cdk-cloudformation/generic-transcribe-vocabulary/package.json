@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/generic-transcribe-vocabulary",
   "description": "A custom vocabulary that you can use to change the way Amazon Transcribe handles transcription of an audio file.",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.4",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

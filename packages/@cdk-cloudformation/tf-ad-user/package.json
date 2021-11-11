@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/tf-ad-user",
   "description": "CloudFormation equivalent of ad_user",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.4",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

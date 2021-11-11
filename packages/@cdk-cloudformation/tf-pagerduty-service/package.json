@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/tf-pagerduty-service",
   "description": "A [service](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Services/get_services) represents something you monitor (like a web service, email service, or database service). It is a container for related incidents that associates them with escalation policies.",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -15,7 +15,12 @@
     "cfn",
     "extensions",
     "constructs",
-    "cfn-resources"
+    "cfn-resources",
+    "cloudformation-registry",
+    "l1",
+    "tf",
+    "pagerduty",
+    "service"
   ],
   "homepage": "https://github.com/iann0036/cfn-tf-custom-types/blob/docs/resources/pagerduty/TF-PagerDuty-Service/docs/README.md",
   "repository": {

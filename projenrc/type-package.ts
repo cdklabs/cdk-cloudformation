@@ -92,6 +92,8 @@ export class CloudFormationTypeProject extends Component {
       version += `-${options.prerelease}`;
     }
 
+    const keywords = this.renderKeywords(options.type);
+
     new JsonFile(project, 'package.json', {
       obj: {
         name: npmName,
@@ -102,7 +104,7 @@ export class CloudFormationTypeProject extends Component {
           url: 'https://aws.amazon.com',
           organization: true,
         },
-        keywords: ['cdk', 'awscdk', 'aws-cdk', 'cloudformation', 'cfn', 'extensions', 'constructs', 'cfn-resources'],
+        keywords: keywords,
         homepage: options.type.DocumentationUrl ?? options.type.SourceUrl,
         repository: {
           type: 'git',
@@ -278,5 +280,25 @@ export class CloudFormationTypeProject extends Component {
     } finally {
       console.warn = originalWarn;
     }
+  }
+
+  private renderKeywords(type: CloudFormation.DescribeTypeOutput) {
+    const keywords = [
+      'cdk',
+      'awscdk',
+      'aws-cdk',
+      'cloudformation',
+      'cfn',
+      'extensions',
+      'constructs',
+      'cfn-resources',
+      'cloudformation-registry',
+      'l1',
+    ];
+    const typeName = type.TypeName;
+    if (typeName) {
+      keywords.push(...typeName.split('::').map(x => x.toLowerCase()));
+    }
+    return keywords;
   }
 }

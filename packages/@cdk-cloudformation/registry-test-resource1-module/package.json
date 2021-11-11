@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/registry-test-resource1-module",
   "description": "Schema for Module Fragment of type REGISTRY::TEST::RESOURCE::MODULE",
-  "version": "1.5.0-alpha.2",
+  "version": "1.5.0-alpha.3",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -15,7 +15,13 @@
     "cfn",
     "extensions",
     "constructs",
-    "cfn-resources"
+    "cfn-resources",
+    "cloudformation-registry",
+    "l1",
+    "registry",
+    "test",
+    "resource1",
+    "module"
   ],
   "repository": {
     "type": "git",

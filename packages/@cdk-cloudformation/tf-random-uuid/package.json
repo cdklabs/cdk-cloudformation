@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/tf-random-uuid",
   "description": "CloudFormation equivalent of random_uuid",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -15,7 +15,12 @@
     "cfn",
     "extensions",
     "constructs",
-    "cfn-resources"
+    "cfn-resources",
+    "cloudformation-registry",
+    "l1",
+    "tf",
+    "random",
+    "uuid"
   ],
   "homepage": "https://github.com/iann0036/cfn-tf-custom-types/blob/docs/resources/random/TF-Random-Uuid/docs/README.md",
   "repository": {

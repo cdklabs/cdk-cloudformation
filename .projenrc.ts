@@ -1,5 +1,6 @@
 import { TypeScriptProject } from 'projen';
 import { generatePackages, updateReadme } from './projenrc/generate-packages';
+import { UpdateRegistry } from './projenrc/update-registry';
 
 const project = new TypeScriptProject({
   defaultReleaseBranch: 'main',
@@ -38,13 +39,11 @@ const projects = generatePackages(project, {
   ],
   dir: packagesDir,
   scope: scope,
-  prerelease: 'alpha.2',
+  prerelease: 'alpha.3',
 });
 
 updateReadme(project, projects);
 
-project.addTask('update-registry', {
-  exec: 'node registry/refresh.js',
-});
+new UpdateRegistry(project);
 
 project.synth();

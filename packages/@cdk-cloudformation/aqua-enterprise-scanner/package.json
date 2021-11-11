@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/aqua-enterprise-scanner",
   "description": "A resource provider for Aqua Enterprise Scanner.",
-  "version": "1.1.0-alpha.2",
+  "version": "1.1.0-alpha.3",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -15,7 +15,12 @@
     "cfn",
     "extensions",
     "constructs",
-    "cfn-resources"
+    "cfn-resources",
+    "cloudformation-registry",
+    "l1",
+    "aqua",
+    "enterprise",
+    "scanner"
   ],
   "homepage": "https://github.com/aquasecurity/aqua-helm.git",
   "repository": {

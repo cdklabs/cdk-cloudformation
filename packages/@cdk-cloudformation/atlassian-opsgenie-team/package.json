@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/atlassian-opsgenie-team",
   "description": "Opsgenie Team resource schema",
-  "version": "1.0.1-alpha.3",
+  "version": "1.0.1-alpha.4",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

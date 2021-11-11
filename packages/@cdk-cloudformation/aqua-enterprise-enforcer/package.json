@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/aqua-enterprise-enforcer",
   "description": "A resource provider for Aqua Enterprise Enforcer.",
-  "version": "1.6.0-alpha.3",
+  "version": "1.6.0-alpha.4",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

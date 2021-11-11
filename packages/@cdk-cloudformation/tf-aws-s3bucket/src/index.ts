@@ -6,13 +6,13 @@ import * as cdk from '@aws-cdk/core';
  *
  * -> This functionality is for managing S3 in an AWS Partition. To manage [S3 on Outposts](https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html), see the [`aws_s3control_bucket`](/docs/providers/aws/r/s3control_bucket.html) resource.
  *
- * @schema CfnS3bucketProps
+ * @schema CfnS3BucketProps
  */
-export interface CfnS3bucketProps {
+export interface CfnS3BucketProps {
   /**
    * Sets the accelerate configuration of an existing bucket. Can be `Enabled` or `Suspended`.
    *
-   * @schema CfnS3bucketProps#AccelerationStatus
+   * @schema CfnS3BucketProps#AccelerationStatus
    */
   readonly accelerationStatus?: string;
 
@@ -20,45 +20,45 @@ export interface CfnS3bucketProps {
    * The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, and `log-delivery-write`. Defaults to `private`.  Conflicts with `grant`.
    *
    * @default private`.  Conflicts with `grant`.
-   * @schema CfnS3bucketProps#Acl
+   * @schema CfnS3BucketProps#Acl
    */
   readonly acl?: string;
 
   /**
-   * @schema CfnS3bucketProps#Arn
+   * @schema CfnS3BucketProps#Arn
    */
   readonly arn?: string;
 
   /**
    * The name of the bucket. If omitted, Terraform will assign a random, unique name. Must be less than or equal to 63 characters in length.
    *
-   * @schema CfnS3bucketProps#Bucket
+   * @schema CfnS3BucketProps#Bucket
    */
   readonly bucket?: string;
 
   /**
    * Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be less than or equal to 37 characters in length.
    *
-   * @schema CfnS3bucketProps#BucketPrefix
+   * @schema CfnS3BucketProps#BucketPrefix
    */
   readonly bucketPrefix?: string;
 
   /**
    * A boolean that indicates all objects (including any [locked objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html)) should be deleted from the bucket so that the bucket can be destroyed without error. These objects are *not* recoverable.
    *
-   * @schema CfnS3bucketProps#ForceDestroy
+   * @schema CfnS3BucketProps#ForceDestroy
    */
   readonly forceDestroy?: boolean;
 
   /**
-   * @schema CfnS3bucketProps#HostedZoneId
+   * @schema CfnS3BucketProps#HostedZoneId
    */
   readonly hostedZoneId?: string;
 
   /**
    * A valid [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html) JSON document. Note that if the policy document is not specific enough (but still valid), Terraform may view the policy as constantly changing in a `terraform plan`. In this case, please make sure you use the verbose/specific version of the policy. For more information about building AWS IAM policy documents with Terraform, see the [AWS IAM Policy Document Guide](https://learn.hashicorp.com/terraform/aws/iam-policy).
    *
-   * @schema CfnS3bucketProps#Policy
+   * @schema CfnS3BucketProps#Policy
    */
   readonly policy?: string;
 
@@ -68,84 +68,84 @@ export interface CfnS3bucketProps {
    * the costs of any data transfer. See [Requester Pays Buckets](http://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html)
    * developer guide for more information.
    *
-   * @schema CfnS3bucketProps#RequestPayer
+   * @schema CfnS3BucketProps#RequestPayer
    */
   readonly requestPayer?: string;
 
   /**
    * A map of tags to assign to the bucket. If configured with a provider [`default_tags` configuration block](/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
    *
-   * @schema CfnS3bucketProps#Tags
+   * @schema CfnS3BucketProps#Tags
    */
   readonly tags?: TagsDefinition[];
 
   /**
-   * @schema CfnS3bucketProps#TagsAll
+   * @schema CfnS3BucketProps#TagsAll
    */
   readonly tagsAll?: TagsAllDefinition[];
 
   /**
-   * @schema CfnS3bucketProps#WebsiteDomain
+   * @schema CfnS3BucketProps#WebsiteDomain
    */
   readonly websiteDomain?: string;
 
   /**
-   * @schema CfnS3bucketProps#WebsiteEndpoint
+   * @schema CfnS3BucketProps#WebsiteEndpoint
    */
   readonly websiteEndpoint?: string;
 
   /**
-   * @schema CfnS3bucketProps#CorsRule
+   * @schema CfnS3BucketProps#CorsRule
    */
   readonly corsRule?: CorsRuleDefinition[];
 
   /**
-   * @schema CfnS3bucketProps#Grant
+   * @schema CfnS3BucketProps#Grant
    */
   readonly grant?: GrantDefinition[];
 
   /**
-   * @schema CfnS3bucketProps#LifecycleRule
+   * @schema CfnS3BucketProps#LifecycleRule
    */
   readonly lifecycleRule?: LifecycleRuleDefinition[];
 
   /**
-   * @schema CfnS3bucketProps#Logging
+   * @schema CfnS3BucketProps#Logging
    */
   readonly logging?: LoggingDefinition[];
 
   /**
-   * @schema CfnS3bucketProps#ObjectLockConfiguration
+   * @schema CfnS3BucketProps#ObjectLockConfiguration
    */
   readonly objectLockConfiguration?: ObjectLockConfigurationDefinition[];
 
   /**
-   * @schema CfnS3bucketProps#ReplicationConfiguration
+   * @schema CfnS3BucketProps#ReplicationConfiguration
    */
   readonly replicationConfiguration?: ReplicationConfigurationDefinition[];
 
   /**
-   * @schema CfnS3bucketProps#ServerSideEncryptionConfiguration
+   * @schema CfnS3BucketProps#ServerSideEncryptionConfiguration
    */
   readonly serverSideEncryptionConfiguration?: ServerSideEncryptionConfigurationDefinition[];
 
   /**
-   * @schema CfnS3bucketProps#Versioning
+   * @schema CfnS3BucketProps#Versioning
    */
   readonly versioning?: VersioningDefinition[];
 
   /**
-   * @schema CfnS3bucketProps#Website
+   * @schema CfnS3BucketProps#Website
    */
   readonly website?: WebsiteDefinition[];
 
 }
 
 /**
- * Converts an object of type 'CfnS3bucketProps' to JSON representation.
+ * Converts an object of type 'CfnS3BucketProps' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnS3bucketProps(obj: CfnS3bucketProps | undefined): Record<string, any> | undefined {
+export function toJson_CfnS3BucketProps(obj: CfnS3BucketProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'AccelerationStatus': obj.accelerationStatus,
@@ -1143,7 +1143,7 @@ export function toJson_SseKmsEncryptedObjectsDefinition(obj: SseKmsEncryptedObje
  * @stability external
  * @link https://github.com/iann0036/cfn-tf-custom-types.git
  */
-export class CfnS3bucket extends cdk.CfnResource {
+export class CfnS3Bucket extends cdk.CfnResource {
   /**
   * The CloudFormation resource type name for this resource class.
   */
@@ -1152,7 +1152,7 @@ export class CfnS3bucket extends cdk.CfnResource {
   /**
    * Resource props.
    */
-  public readonly props: CfnS3bucketProps;
+  public readonly props: CfnS3BucketProps;
 
   /**
    * Attribute `TF::AWS::S3Bucket.tfcfnid`
@@ -1187,8 +1187,8 @@ export class CfnS3bucket extends cdk.CfnResource {
    * @param id    - scoped id of the resource
    * @param props - resource properties
    */
-  constructor(scope: cdk.Construct, id: string, props: CfnS3bucketProps) {
-    super(scope, id, { type: CfnS3bucket.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnS3bucketProps(props)! });
+  constructor(scope: cdk.Construct, id: string, props: CfnS3BucketProps) {
+    super(scope, id, { type: CfnS3Bucket.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnS3BucketProps(props)! });
 
     this.props = props;
 

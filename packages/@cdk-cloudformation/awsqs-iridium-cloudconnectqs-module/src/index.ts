@@ -4,30 +4,30 @@ import * as cdk from '@aws-cdk/core';
 /**
  * Schema for Module Fragment of type AWSQS::Iridium::CloudConnectQS::MODULE
  *
- * @schema CfnModuleProps
+ * @schema CfnCloudConnectQsModuleProps
  */
-export interface CfnModuleProps {
+export interface CfnCloudConnectQsModuleProps {
   /**
-   * @schema CfnModuleProps#Parameters
+   * @schema CfnCloudConnectQsModuleProps#Parameters
    */
-  readonly parameters?: CfnModulePropsParameters;
+  readonly parameters?: CfnCloudConnectQsModulePropsParameters;
 
   /**
-   * @schema CfnModuleProps#Resources
+   * @schema CfnCloudConnectQsModuleProps#Resources
    */
-  readonly resources?: CfnModulePropsResources;
+  readonly resources?: CfnCloudConnectQsModulePropsResources;
 
 }
 
 /**
- * Converts an object of type 'CfnModuleProps' to JSON representation.
+ * Converts an object of type 'CfnCloudConnectQsModuleProps' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModuleProps(obj: CfnModuleProps | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudConnectQsModuleProps(obj: CfnCloudConnectQsModuleProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'Parameters': toJson_CfnModulePropsParameters(obj.parameters),
-    'Resources': toJson_CfnModulePropsResources(obj.resources),
+    'Parameters': toJson_CfnCloudConnectQsModulePropsParameters(obj.parameters),
+    'Resources': toJson_CfnCloudConnectQsModulePropsResources(obj.resources),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -35,58 +35,58 @@ export function toJson_CfnModuleProps(obj: CfnModuleProps | undefined): Record<s
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParameters
+ * @schema CfnCloudConnectQsModulePropsParameters
  */
-export interface CfnModulePropsParameters {
+export interface CfnCloudConnectQsModulePropsParameters {
   /**
    * Amazon Resource Number (ARN) of the role in the Iridium AWS account.
    *
-   * @schema CfnModulePropsParameters#IridiumRoleARN
+   * @schema CfnCloudConnectQsModulePropsParameters#IridiumRoleARN
    */
-  readonly iridiumRoleArn?: CfnModulePropsParametersIridiumRoleArn;
+  readonly iridiumRoleArn?: CfnCloudConnectQsModulePropsParametersIridiumRoleArn;
 
   /**
    * Name of the mobile-originated queue in Amazon SQS.
    *
-   * @schema CfnModulePropsParameters#MobileOriginatedQueueName
+   * @schema CfnCloudConnectQsModulePropsParameters#MobileOriginatedQueueName
    */
-  readonly mobileOriginatedQueueName?: CfnModulePropsParametersMobileOriginatedQueueName;
+  readonly mobileOriginatedQueueName?: CfnCloudConnectQsModulePropsParametersMobileOriginatedQueueName;
 
   /**
    * Name of the mobile-terminated queue in Amazon SQS.
    *
-   * @schema CfnModulePropsParameters#MobileTerminatedQueueName
+   * @schema CfnCloudConnectQsModulePropsParameters#MobileTerminatedQueueName
    */
-  readonly mobileTerminatedQueueName?: CfnModulePropsParametersMobileTerminatedQueueName;
+  readonly mobileTerminatedQueueName?: CfnCloudConnectQsModulePropsParametersMobileTerminatedQueueName;
 
   /**
    * Name of the mobile-terminated confirmation queue in Amazon SQS.
    *
-   * @schema CfnModulePropsParameters#MobileTerminatedConfirmationQueueName
+   * @schema CfnCloudConnectQsModulePropsParameters#MobileTerminatedConfirmationQueueName
    */
-  readonly mobileTerminatedConfirmationQueueName?: CfnModulePropsParametersMobileTerminatedConfirmationQueueName;
+  readonly mobileTerminatedConfirmationQueueName?: CfnCloudConnectQsModulePropsParametersMobileTerminatedConfirmationQueueName;
 
   /**
    * Name of the mobile-terminated error queue in Amazon SQS.
    *
-   * @schema CfnModulePropsParameters#MobileTerminatedErrorQueueName
+   * @schema CfnCloudConnectQsModulePropsParameters#MobileTerminatedErrorQueueName
    */
-  readonly mobileTerminatedErrorQueueName?: CfnModulePropsParametersMobileTerminatedErrorQueueName;
+  readonly mobileTerminatedErrorQueueName?: CfnCloudConnectQsModulePropsParametersMobileTerminatedErrorQueueName;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParameters' to JSON representation.
+ * Converts an object of type 'CfnCloudConnectQsModulePropsParameters' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParameters(obj: CfnModulePropsParameters | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudConnectQsModulePropsParameters(obj: CfnCloudConnectQsModulePropsParameters | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'IridiumRoleARN': toJson_CfnModulePropsParametersIridiumRoleArn(obj.iridiumRoleArn),
-    'MobileOriginatedQueueName': toJson_CfnModulePropsParametersMobileOriginatedQueueName(obj.mobileOriginatedQueueName),
-    'MobileTerminatedQueueName': toJson_CfnModulePropsParametersMobileTerminatedQueueName(obj.mobileTerminatedQueueName),
-    'MobileTerminatedConfirmationQueueName': toJson_CfnModulePropsParametersMobileTerminatedConfirmationQueueName(obj.mobileTerminatedConfirmationQueueName),
-    'MobileTerminatedErrorQueueName': toJson_CfnModulePropsParametersMobileTerminatedErrorQueueName(obj.mobileTerminatedErrorQueueName),
+    'IridiumRoleARN': toJson_CfnCloudConnectQsModulePropsParametersIridiumRoleArn(obj.iridiumRoleArn),
+    'MobileOriginatedQueueName': toJson_CfnCloudConnectQsModulePropsParametersMobileOriginatedQueueName(obj.mobileOriginatedQueueName),
+    'MobileTerminatedQueueName': toJson_CfnCloudConnectQsModulePropsParametersMobileTerminatedQueueName(obj.mobileTerminatedQueueName),
+    'MobileTerminatedConfirmationQueueName': toJson_CfnCloudConnectQsModulePropsParametersMobileTerminatedConfirmationQueueName(obj.mobileTerminatedConfirmationQueueName),
+    'MobileTerminatedErrorQueueName': toJson_CfnCloudConnectQsModulePropsParametersMobileTerminatedErrorQueueName(obj.mobileTerminatedErrorQueueName),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -94,54 +94,54 @@ export function toJson_CfnModulePropsParameters(obj: CfnModulePropsParameters | 
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResources
+ * @schema CfnCloudConnectQsModulePropsResources
  */
-export interface CfnModulePropsResources {
+export interface CfnCloudConnectQsModulePropsResources {
   /**
-   * @schema CfnModulePropsResources#MobileOriginatedSQSQueue
+   * @schema CfnCloudConnectQsModulePropsResources#MobileOriginatedSQSQueue
    */
-  readonly mobileOriginatedSqsQueue?: CfnModulePropsResourcesMobileOriginatedSqsQueue;
+  readonly mobileOriginatedSqsQueue?: CfnCloudConnectQsModulePropsResourcesMobileOriginatedSqsQueue;
 
   /**
-   * @schema CfnModulePropsResources#MobileTerminatedSQSQueue
+   * @schema CfnCloudConnectQsModulePropsResources#MobileTerminatedSQSQueue
    */
-  readonly mobileTerminatedSqsQueue?: CfnModulePropsResourcesMobileTerminatedSqsQueue;
+  readonly mobileTerminatedSqsQueue?: CfnCloudConnectQsModulePropsResourcesMobileTerminatedSqsQueue;
 
   /**
-   * @schema CfnModulePropsResources#MobileTerminatedConfirmationSQSQueue
+   * @schema CfnCloudConnectQsModulePropsResources#MobileTerminatedConfirmationSQSQueue
    */
-  readonly mobileTerminatedConfirmationSqsQueue?: CfnModulePropsResourcesMobileTerminatedConfirmationSqsQueue;
+  readonly mobileTerminatedConfirmationSqsQueue?: CfnCloudConnectQsModulePropsResourcesMobileTerminatedConfirmationSqsQueue;
 
   /**
-   * @schema CfnModulePropsResources#MobileTerminatedErrorSQSQueue
+   * @schema CfnCloudConnectQsModulePropsResources#MobileTerminatedErrorSQSQueue
    */
-  readonly mobileTerminatedErrorSqsQueue?: CfnModulePropsResourcesMobileTerminatedErrorSqsQueue;
+  readonly mobileTerminatedErrorSqsQueue?: CfnCloudConnectQsModulePropsResourcesMobileTerminatedErrorSqsQueue;
 
   /**
-   * @schema CfnModulePropsResources#SQSQueueCrossAccountPolicy
+   * @schema CfnCloudConnectQsModulePropsResources#SQSQueueCrossAccountPolicy
    */
-  readonly sqsQueueCrossAccountPolicy?: CfnModulePropsResourcesSqsQueueCrossAccountPolicy;
+  readonly sqsQueueCrossAccountPolicy?: CfnCloudConnectQsModulePropsResourcesSqsQueueCrossAccountPolicy;
 
   /**
-   * @schema CfnModulePropsResources#SQSCrossAccountRole
+   * @schema CfnCloudConnectQsModulePropsResources#SQSCrossAccountRole
    */
-  readonly sqsCrossAccountRole?: CfnModulePropsResourcesSqsCrossAccountRole;
+  readonly sqsCrossAccountRole?: CfnCloudConnectQsModulePropsResourcesSqsCrossAccountRole;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResources' to JSON representation.
+ * Converts an object of type 'CfnCloudConnectQsModulePropsResources' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResources(obj: CfnModulePropsResources | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudConnectQsModulePropsResources(obj: CfnCloudConnectQsModulePropsResources | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'MobileOriginatedSQSQueue': toJson_CfnModulePropsResourcesMobileOriginatedSqsQueue(obj.mobileOriginatedSqsQueue),
-    'MobileTerminatedSQSQueue': toJson_CfnModulePropsResourcesMobileTerminatedSqsQueue(obj.mobileTerminatedSqsQueue),
-    'MobileTerminatedConfirmationSQSQueue': toJson_CfnModulePropsResourcesMobileTerminatedConfirmationSqsQueue(obj.mobileTerminatedConfirmationSqsQueue),
-    'MobileTerminatedErrorSQSQueue': toJson_CfnModulePropsResourcesMobileTerminatedErrorSqsQueue(obj.mobileTerminatedErrorSqsQueue),
-    'SQSQueueCrossAccountPolicy': toJson_CfnModulePropsResourcesSqsQueueCrossAccountPolicy(obj.sqsQueueCrossAccountPolicy),
-    'SQSCrossAccountRole': toJson_CfnModulePropsResourcesSqsCrossAccountRole(obj.sqsCrossAccountRole),
+    'MobileOriginatedSQSQueue': toJson_CfnCloudConnectQsModulePropsResourcesMobileOriginatedSqsQueue(obj.mobileOriginatedSqsQueue),
+    'MobileTerminatedSQSQueue': toJson_CfnCloudConnectQsModulePropsResourcesMobileTerminatedSqsQueue(obj.mobileTerminatedSqsQueue),
+    'MobileTerminatedConfirmationSQSQueue': toJson_CfnCloudConnectQsModulePropsResourcesMobileTerminatedConfirmationSqsQueue(obj.mobileTerminatedConfirmationSqsQueue),
+    'MobileTerminatedErrorSQSQueue': toJson_CfnCloudConnectQsModulePropsResourcesMobileTerminatedErrorSqsQueue(obj.mobileTerminatedErrorSqsQueue),
+    'SQSQueueCrossAccountPolicy': toJson_CfnCloudConnectQsModulePropsResourcesSqsQueueCrossAccountPolicy(obj.sqsQueueCrossAccountPolicy),
+    'SQSCrossAccountRole': toJson_CfnCloudConnectQsModulePropsResourcesSqsCrossAccountRole(obj.sqsCrossAccountRole),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -151,26 +151,26 @@ export function toJson_CfnModulePropsResources(obj: CfnModulePropsResources | un
 /**
  * Amazon Resource Number (ARN) of the role in the Iridium AWS account.
  *
- * @schema CfnModulePropsParametersIridiumRoleArn
+ * @schema CfnCloudConnectQsModulePropsParametersIridiumRoleArn
  */
-export interface CfnModulePropsParametersIridiumRoleArn {
+export interface CfnCloudConnectQsModulePropsParametersIridiumRoleArn {
   /**
-   * @schema CfnModulePropsParametersIridiumRoleArn#Type
+   * @schema CfnCloudConnectQsModulePropsParametersIridiumRoleArn#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersIridiumRoleArn#Description
+   * @schema CfnCloudConnectQsModulePropsParametersIridiumRoleArn#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersIridiumRoleArn' to JSON representation.
+ * Converts an object of type 'CfnCloudConnectQsModulePropsParametersIridiumRoleArn' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersIridiumRoleArn(obj: CfnModulePropsParametersIridiumRoleArn | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudConnectQsModulePropsParametersIridiumRoleArn(obj: CfnCloudConnectQsModulePropsParametersIridiumRoleArn | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -184,26 +184,26 @@ export function toJson_CfnModulePropsParametersIridiumRoleArn(obj: CfnModuleProp
 /**
  * Name of the mobile-originated queue in Amazon SQS.
  *
- * @schema CfnModulePropsParametersMobileOriginatedQueueName
+ * @schema CfnCloudConnectQsModulePropsParametersMobileOriginatedQueueName
  */
-export interface CfnModulePropsParametersMobileOriginatedQueueName {
+export interface CfnCloudConnectQsModulePropsParametersMobileOriginatedQueueName {
   /**
-   * @schema CfnModulePropsParametersMobileOriginatedQueueName#Type
+   * @schema CfnCloudConnectQsModulePropsParametersMobileOriginatedQueueName#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersMobileOriginatedQueueName#Description
+   * @schema CfnCloudConnectQsModulePropsParametersMobileOriginatedQueueName#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersMobileOriginatedQueueName' to JSON representation.
+ * Converts an object of type 'CfnCloudConnectQsModulePropsParametersMobileOriginatedQueueName' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersMobileOriginatedQueueName(obj: CfnModulePropsParametersMobileOriginatedQueueName | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudConnectQsModulePropsParametersMobileOriginatedQueueName(obj: CfnCloudConnectQsModulePropsParametersMobileOriginatedQueueName | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -217,26 +217,26 @@ export function toJson_CfnModulePropsParametersMobileOriginatedQueueName(obj: Cf
 /**
  * Name of the mobile-terminated queue in Amazon SQS.
  *
- * @schema CfnModulePropsParametersMobileTerminatedQueueName
+ * @schema CfnCloudConnectQsModulePropsParametersMobileTerminatedQueueName
  */
-export interface CfnModulePropsParametersMobileTerminatedQueueName {
+export interface CfnCloudConnectQsModulePropsParametersMobileTerminatedQueueName {
   /**
-   * @schema CfnModulePropsParametersMobileTerminatedQueueName#Type
+   * @schema CfnCloudConnectQsModulePropsParametersMobileTerminatedQueueName#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersMobileTerminatedQueueName#Description
+   * @schema CfnCloudConnectQsModulePropsParametersMobileTerminatedQueueName#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersMobileTerminatedQueueName' to JSON representation.
+ * Converts an object of type 'CfnCloudConnectQsModulePropsParametersMobileTerminatedQueueName' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersMobileTerminatedQueueName(obj: CfnModulePropsParametersMobileTerminatedQueueName | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudConnectQsModulePropsParametersMobileTerminatedQueueName(obj: CfnCloudConnectQsModulePropsParametersMobileTerminatedQueueName | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -250,26 +250,26 @@ export function toJson_CfnModulePropsParametersMobileTerminatedQueueName(obj: Cf
 /**
  * Name of the mobile-terminated confirmation queue in Amazon SQS.
  *
- * @schema CfnModulePropsParametersMobileTerminatedConfirmationQueueName
+ * @schema CfnCloudConnectQsModulePropsParametersMobileTerminatedConfirmationQueueName
  */
-export interface CfnModulePropsParametersMobileTerminatedConfirmationQueueName {
+export interface CfnCloudConnectQsModulePropsParametersMobileTerminatedConfirmationQueueName {
   /**
-   * @schema CfnModulePropsParametersMobileTerminatedConfirmationQueueName#Type
+   * @schema CfnCloudConnectQsModulePropsParametersMobileTerminatedConfirmationQueueName#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersMobileTerminatedConfirmationQueueName#Description
+   * @schema CfnCloudConnectQsModulePropsParametersMobileTerminatedConfirmationQueueName#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersMobileTerminatedConfirmationQueueName' to JSON representation.
+ * Converts an object of type 'CfnCloudConnectQsModulePropsParametersMobileTerminatedConfirmationQueueName' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersMobileTerminatedConfirmationQueueName(obj: CfnModulePropsParametersMobileTerminatedConfirmationQueueName | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudConnectQsModulePropsParametersMobileTerminatedConfirmationQueueName(obj: CfnCloudConnectQsModulePropsParametersMobileTerminatedConfirmationQueueName | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -283,26 +283,26 @@ export function toJson_CfnModulePropsParametersMobileTerminatedConfirmationQueue
 /**
  * Name of the mobile-terminated error queue in Amazon SQS.
  *
- * @schema CfnModulePropsParametersMobileTerminatedErrorQueueName
+ * @schema CfnCloudConnectQsModulePropsParametersMobileTerminatedErrorQueueName
  */
-export interface CfnModulePropsParametersMobileTerminatedErrorQueueName {
+export interface CfnCloudConnectQsModulePropsParametersMobileTerminatedErrorQueueName {
   /**
-   * @schema CfnModulePropsParametersMobileTerminatedErrorQueueName#Type
+   * @schema CfnCloudConnectQsModulePropsParametersMobileTerminatedErrorQueueName#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersMobileTerminatedErrorQueueName#Description
+   * @schema CfnCloudConnectQsModulePropsParametersMobileTerminatedErrorQueueName#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersMobileTerminatedErrorQueueName' to JSON representation.
+ * Converts an object of type 'CfnCloudConnectQsModulePropsParametersMobileTerminatedErrorQueueName' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersMobileTerminatedErrorQueueName(obj: CfnModulePropsParametersMobileTerminatedErrorQueueName | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudConnectQsModulePropsParametersMobileTerminatedErrorQueueName(obj: CfnCloudConnectQsModulePropsParametersMobileTerminatedErrorQueueName | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -314,26 +314,26 @@ export function toJson_CfnModulePropsParametersMobileTerminatedErrorQueueName(ob
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesMobileOriginatedSqsQueue
+ * @schema CfnCloudConnectQsModulePropsResourcesMobileOriginatedSqsQueue
  */
-export interface CfnModulePropsResourcesMobileOriginatedSqsQueue {
+export interface CfnCloudConnectQsModulePropsResourcesMobileOriginatedSqsQueue {
   /**
-   * @schema CfnModulePropsResourcesMobileOriginatedSqsQueue#Type
+   * @schema CfnCloudConnectQsModulePropsResourcesMobileOriginatedSqsQueue#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesMobileOriginatedSqsQueue#Properties
+   * @schema CfnCloudConnectQsModulePropsResourcesMobileOriginatedSqsQueue#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesMobileOriginatedSqsQueue' to JSON representation.
+ * Converts an object of type 'CfnCloudConnectQsModulePropsResourcesMobileOriginatedSqsQueue' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesMobileOriginatedSqsQueue(obj: CfnModulePropsResourcesMobileOriginatedSqsQueue | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudConnectQsModulePropsResourcesMobileOriginatedSqsQueue(obj: CfnCloudConnectQsModulePropsResourcesMobileOriginatedSqsQueue | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -345,26 +345,26 @@ export function toJson_CfnModulePropsResourcesMobileOriginatedSqsQueue(obj: CfnM
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesMobileTerminatedSqsQueue
+ * @schema CfnCloudConnectQsModulePropsResourcesMobileTerminatedSqsQueue
  */
-export interface CfnModulePropsResourcesMobileTerminatedSqsQueue {
+export interface CfnCloudConnectQsModulePropsResourcesMobileTerminatedSqsQueue {
   /**
-   * @schema CfnModulePropsResourcesMobileTerminatedSqsQueue#Type
+   * @schema CfnCloudConnectQsModulePropsResourcesMobileTerminatedSqsQueue#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesMobileTerminatedSqsQueue#Properties
+   * @schema CfnCloudConnectQsModulePropsResourcesMobileTerminatedSqsQueue#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesMobileTerminatedSqsQueue' to JSON representation.
+ * Converts an object of type 'CfnCloudConnectQsModulePropsResourcesMobileTerminatedSqsQueue' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesMobileTerminatedSqsQueue(obj: CfnModulePropsResourcesMobileTerminatedSqsQueue | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudConnectQsModulePropsResourcesMobileTerminatedSqsQueue(obj: CfnCloudConnectQsModulePropsResourcesMobileTerminatedSqsQueue | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -376,26 +376,26 @@ export function toJson_CfnModulePropsResourcesMobileTerminatedSqsQueue(obj: CfnM
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesMobileTerminatedConfirmationSqsQueue
+ * @schema CfnCloudConnectQsModulePropsResourcesMobileTerminatedConfirmationSqsQueue
  */
-export interface CfnModulePropsResourcesMobileTerminatedConfirmationSqsQueue {
+export interface CfnCloudConnectQsModulePropsResourcesMobileTerminatedConfirmationSqsQueue {
   /**
-   * @schema CfnModulePropsResourcesMobileTerminatedConfirmationSqsQueue#Type
+   * @schema CfnCloudConnectQsModulePropsResourcesMobileTerminatedConfirmationSqsQueue#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesMobileTerminatedConfirmationSqsQueue#Properties
+   * @schema CfnCloudConnectQsModulePropsResourcesMobileTerminatedConfirmationSqsQueue#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesMobileTerminatedConfirmationSqsQueue' to JSON representation.
+ * Converts an object of type 'CfnCloudConnectQsModulePropsResourcesMobileTerminatedConfirmationSqsQueue' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesMobileTerminatedConfirmationSqsQueue(obj: CfnModulePropsResourcesMobileTerminatedConfirmationSqsQueue | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudConnectQsModulePropsResourcesMobileTerminatedConfirmationSqsQueue(obj: CfnCloudConnectQsModulePropsResourcesMobileTerminatedConfirmationSqsQueue | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -407,26 +407,26 @@ export function toJson_CfnModulePropsResourcesMobileTerminatedConfirmationSqsQue
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesMobileTerminatedErrorSqsQueue
+ * @schema CfnCloudConnectQsModulePropsResourcesMobileTerminatedErrorSqsQueue
  */
-export interface CfnModulePropsResourcesMobileTerminatedErrorSqsQueue {
+export interface CfnCloudConnectQsModulePropsResourcesMobileTerminatedErrorSqsQueue {
   /**
-   * @schema CfnModulePropsResourcesMobileTerminatedErrorSqsQueue#Type
+   * @schema CfnCloudConnectQsModulePropsResourcesMobileTerminatedErrorSqsQueue#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesMobileTerminatedErrorSqsQueue#Properties
+   * @schema CfnCloudConnectQsModulePropsResourcesMobileTerminatedErrorSqsQueue#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesMobileTerminatedErrorSqsQueue' to JSON representation.
+ * Converts an object of type 'CfnCloudConnectQsModulePropsResourcesMobileTerminatedErrorSqsQueue' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesMobileTerminatedErrorSqsQueue(obj: CfnModulePropsResourcesMobileTerminatedErrorSqsQueue | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudConnectQsModulePropsResourcesMobileTerminatedErrorSqsQueue(obj: CfnCloudConnectQsModulePropsResourcesMobileTerminatedErrorSqsQueue | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -438,26 +438,26 @@ export function toJson_CfnModulePropsResourcesMobileTerminatedErrorSqsQueue(obj:
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesSqsQueueCrossAccountPolicy
+ * @schema CfnCloudConnectQsModulePropsResourcesSqsQueueCrossAccountPolicy
  */
-export interface CfnModulePropsResourcesSqsQueueCrossAccountPolicy {
+export interface CfnCloudConnectQsModulePropsResourcesSqsQueueCrossAccountPolicy {
   /**
-   * @schema CfnModulePropsResourcesSqsQueueCrossAccountPolicy#Type
+   * @schema CfnCloudConnectQsModulePropsResourcesSqsQueueCrossAccountPolicy#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesSqsQueueCrossAccountPolicy#Properties
+   * @schema CfnCloudConnectQsModulePropsResourcesSqsQueueCrossAccountPolicy#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesSqsQueueCrossAccountPolicy' to JSON representation.
+ * Converts an object of type 'CfnCloudConnectQsModulePropsResourcesSqsQueueCrossAccountPolicy' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesSqsQueueCrossAccountPolicy(obj: CfnModulePropsResourcesSqsQueueCrossAccountPolicy | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudConnectQsModulePropsResourcesSqsQueueCrossAccountPolicy(obj: CfnCloudConnectQsModulePropsResourcesSqsQueueCrossAccountPolicy | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -469,26 +469,26 @@ export function toJson_CfnModulePropsResourcesSqsQueueCrossAccountPolicy(obj: Cf
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesSqsCrossAccountRole
+ * @schema CfnCloudConnectQsModulePropsResourcesSqsCrossAccountRole
  */
-export interface CfnModulePropsResourcesSqsCrossAccountRole {
+export interface CfnCloudConnectQsModulePropsResourcesSqsCrossAccountRole {
   /**
-   * @schema CfnModulePropsResourcesSqsCrossAccountRole#Type
+   * @schema CfnCloudConnectQsModulePropsResourcesSqsCrossAccountRole#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesSqsCrossAccountRole#Properties
+   * @schema CfnCloudConnectQsModulePropsResourcesSqsCrossAccountRole#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesSqsCrossAccountRole' to JSON representation.
+ * Converts an object of type 'CfnCloudConnectQsModulePropsResourcesSqsCrossAccountRole' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesSqsCrossAccountRole(obj: CfnModulePropsResourcesSqsCrossAccountRole | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudConnectQsModulePropsResourcesSqsCrossAccountRole(obj: CfnCloudConnectQsModulePropsResourcesSqsCrossAccountRole | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -507,7 +507,7 @@ export function toJson_CfnModulePropsResourcesSqsCrossAccountRole(obj: CfnModule
  * @stability external
  * @link http://unknown-url
  */
-export class CfnModule extends cdk.CfnResource {
+export class CfnCloudConnectQsModule extends cdk.CfnResource {
   /**
   * The CloudFormation resource type name for this resource class.
   */
@@ -516,7 +516,7 @@ export class CfnModule extends cdk.CfnResource {
   /**
    * Resource props.
    */
-  public readonly props: CfnModuleProps;
+  public readonly props: CfnCloudConnectQsModuleProps;
 
 
   /**
@@ -526,8 +526,8 @@ export class CfnModule extends cdk.CfnResource {
    * @param id    - scoped id of the resource
    * @param props - resource properties
    */
-  constructor(scope: cdk.Construct, id: string, props: CfnModuleProps) {
-    super(scope, id, { type: CfnModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnModuleProps(props)! });
+  constructor(scope: cdk.Construct, id: string, props: CfnCloudConnectQsModuleProps) {
+    super(scope, id, { type: CfnCloudConnectQsModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnCloudConnectQsModuleProps(props)! });
 
     this.props = props;
 

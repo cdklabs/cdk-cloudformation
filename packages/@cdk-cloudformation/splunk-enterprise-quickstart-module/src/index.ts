@@ -4,30 +4,30 @@ import * as cdk from '@aws-cdk/core';
 /**
  * Schema for Module Fragment of type Splunk::Enterprise::QuickStart::MODULE
  *
- * @schema CfnModuleProps
+ * @schema CfnQuickStartModuleProps
  */
-export interface CfnModuleProps {
+export interface CfnQuickStartModuleProps {
   /**
-   * @schema CfnModuleProps#Parameters
+   * @schema CfnQuickStartModuleProps#Parameters
    */
-  readonly parameters?: CfnModulePropsParameters;
+  readonly parameters?: CfnQuickStartModulePropsParameters;
 
   /**
-   * @schema CfnModuleProps#Resources
+   * @schema CfnQuickStartModuleProps#Resources
    */
-  readonly resources?: CfnModulePropsResources;
+  readonly resources?: CfnQuickStartModulePropsResources;
 
 }
 
 /**
- * Converts an object of type 'CfnModuleProps' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModuleProps' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModuleProps(obj: CfnModuleProps | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModuleProps(obj: CfnQuickStartModuleProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'Parameters': toJson_CfnModulePropsParameters(obj.parameters),
-    'Resources': toJson_CfnModulePropsResources(obj.resources),
+    'Parameters': toJson_CfnQuickStartModulePropsParameters(obj.parameters),
+    'Resources': toJson_CfnQuickStartModulePropsResources(obj.resources),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -35,162 +35,162 @@ export function toJson_CfnModuleProps(obj: CfnModuleProps | undefined): Record<s
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParameters
+ * @schema CfnQuickStartModulePropsParameters
  */
-export interface CfnModulePropsParameters {
+export interface CfnQuickStartModulePropsParameters {
   /**
-   * @schema CfnModulePropsParameters#AvailabilityZones
+   * @schema CfnQuickStartModulePropsParameters#AvailabilityZones
    */
-  readonly availabilityZones?: CfnModulePropsParametersAvailabilityZones;
+  readonly availabilityZones?: CfnQuickStartModulePropsParametersAvailabilityZones;
 
   /**
-   * @schema CfnModulePropsParameters#NumberOfAZs
+   * @schema CfnQuickStartModulePropsParameters#NumberOfAZs
    */
-  readonly numberOfAZs?: CfnModulePropsParametersNumberOfAZs;
+  readonly numberOfAZs?: CfnQuickStartModulePropsParametersNumberOfAZs;
 
   /**
-   * @schema CfnModulePropsParameters#WebClientLocation
+   * @schema CfnQuickStartModulePropsParameters#WebClientLocation
    */
-  readonly webClientLocation?: CfnModulePropsParametersWebClientLocation;
+  readonly webClientLocation?: CfnQuickStartModulePropsParametersWebClientLocation;
 
   /**
-   * @schema CfnModulePropsParameters#HECClientLocation
+   * @schema CfnQuickStartModulePropsParameters#HECClientLocation
    */
-  readonly hecClientLocation?: CfnModulePropsParametersHecClientLocation;
+  readonly hecClientLocation?: CfnQuickStartModulePropsParametersHecClientLocation;
 
   /**
-   * @schema CfnModulePropsParameters#IndexerInstanceType
+   * @schema CfnQuickStartModulePropsParameters#IndexerInstanceType
    */
-  readonly indexerInstanceType?: CfnModulePropsParametersIndexerInstanceType;
+  readonly indexerInstanceType?: CfnQuickStartModulePropsParametersIndexerInstanceType;
 
   /**
-   * @schema CfnModulePropsParameters#SearchHeadInstanceType
+   * @schema CfnQuickStartModulePropsParameters#SearchHeadInstanceType
    */
-  readonly searchHeadInstanceType?: CfnModulePropsParametersSearchHeadInstanceType;
+  readonly searchHeadInstanceType?: CfnQuickStartModulePropsParametersSearchHeadInstanceType;
 
   /**
-   * @schema CfnModulePropsParameters#KeyName
+   * @schema CfnQuickStartModulePropsParameters#KeyName
    */
-  readonly keyName?: CfnModulePropsParametersKeyName;
+  readonly keyName?: CfnQuickStartModulePropsParametersKeyName;
 
   /**
-   * @schema CfnModulePropsParameters#PublicSubnet1CIDR
+   * @schema CfnQuickStartModulePropsParameters#PublicSubnet1CIDR
    */
-  readonly publicSubnet1Cidr?: CfnModulePropsParametersPublicSubnet1Cidr;
+  readonly publicSubnet1Cidr?: CfnQuickStartModulePropsParametersPublicSubnet1Cidr;
 
   /**
-   * @schema CfnModulePropsParameters#PublicSubnet2CIDR
+   * @schema CfnQuickStartModulePropsParameters#PublicSubnet2CIDR
    */
-  readonly publicSubnet2Cidr?: CfnModulePropsParametersPublicSubnet2Cidr;
+  readonly publicSubnet2Cidr?: CfnQuickStartModulePropsParametersPublicSubnet2Cidr;
 
   /**
-   * @schema CfnModulePropsParameters#PublicSubnet3CIDR
+   * @schema CfnQuickStartModulePropsParameters#PublicSubnet3CIDR
    */
-  readonly publicSubnet3Cidr?: CfnModulePropsParametersPublicSubnet3Cidr;
+  readonly publicSubnet3Cidr?: CfnQuickStartModulePropsParametersPublicSubnet3Cidr;
 
   /**
-   * @schema CfnModulePropsParameters#SHCEnabled
+   * @schema CfnQuickStartModulePropsParameters#SHCEnabled
    */
-  readonly shcEnabled?: CfnModulePropsParametersShcEnabled;
+  readonly shcEnabled?: CfnQuickStartModulePropsParametersShcEnabled;
 
   /**
-   * @schema CfnModulePropsParameters#SSHClientLocation
+   * @schema CfnQuickStartModulePropsParameters#SSHClientLocation
    */
-  readonly sshClientLocation?: CfnModulePropsParametersSshClientLocation;
+  readonly sshClientLocation?: CfnQuickStartModulePropsParametersSshClientLocation;
 
   /**
-   * @schema CfnModulePropsParameters#SplunkAdminPassword
+   * @schema CfnQuickStartModulePropsParameters#SplunkAdminPassword
    */
-  readonly splunkAdminPassword?: CfnModulePropsParametersSplunkAdminPassword;
+  readonly splunkAdminPassword?: CfnQuickStartModulePropsParametersSplunkAdminPassword;
 
   /**
-   * @schema CfnModulePropsParameters#SplunkIndexerCount
+   * @schema CfnQuickStartModulePropsParameters#SplunkIndexerCount
    */
-  readonly splunkIndexerCount?: CfnModulePropsParametersSplunkIndexerCount;
+  readonly splunkIndexerCount?: CfnQuickStartModulePropsParametersSplunkIndexerCount;
 
   /**
-   * @schema CfnModulePropsParameters#SplunkIndexerDiskSize
+   * @schema CfnQuickStartModulePropsParameters#SplunkIndexerDiskSize
    */
-  readonly splunkIndexerDiskSize?: CfnModulePropsParametersSplunkIndexerDiskSize;
+  readonly splunkIndexerDiskSize?: CfnQuickStartModulePropsParametersSplunkIndexerDiskSize;
 
   /**
-   * @schema CfnModulePropsParameters#SplunkSearchHeadDiskSize
+   * @schema CfnQuickStartModulePropsParameters#SplunkSearchHeadDiskSize
    */
-  readonly splunkSearchHeadDiskSize?: CfnModulePropsParametersSplunkSearchHeadDiskSize;
+  readonly splunkSearchHeadDiskSize?: CfnQuickStartModulePropsParametersSplunkSearchHeadDiskSize;
 
   /**
-   * @schema CfnModulePropsParameters#SplunkLicenseBucket
+   * @schema CfnQuickStartModulePropsParameters#SplunkLicenseBucket
    */
-  readonly splunkLicenseBucket?: CfnModulePropsParametersSplunkLicenseBucket;
+  readonly splunkLicenseBucket?: CfnQuickStartModulePropsParametersSplunkLicenseBucket;
 
   /**
-   * @schema CfnModulePropsParameters#SplunkLicensePath
+   * @schema CfnQuickStartModulePropsParameters#SplunkLicensePath
    */
-  readonly splunkLicensePath?: CfnModulePropsParametersSplunkLicensePath;
+  readonly splunkLicensePath?: CfnQuickStartModulePropsParametersSplunkLicensePath;
 
   /**
-   * @schema CfnModulePropsParameters#SplunkReplicationFactor
+   * @schema CfnQuickStartModulePropsParameters#SplunkReplicationFactor
    */
-  readonly splunkReplicationFactor?: CfnModulePropsParametersSplunkReplicationFactor;
+  readonly splunkReplicationFactor?: CfnQuickStartModulePropsParametersSplunkReplicationFactor;
 
   /**
-   * @schema CfnModulePropsParameters#SplunkSearchFactor
+   * @schema CfnQuickStartModulePropsParameters#SplunkSearchFactor
    */
-  readonly splunkSearchFactor?: CfnModulePropsParametersSplunkSearchFactor;
+  readonly splunkSearchFactor?: CfnQuickStartModulePropsParametersSplunkSearchFactor;
 
   /**
-   * @schema CfnModulePropsParameters#SplunkClusterSecret
+   * @schema CfnQuickStartModulePropsParameters#SplunkClusterSecret
    */
-  readonly splunkClusterSecret?: CfnModulePropsParametersSplunkClusterSecret;
+  readonly splunkClusterSecret?: CfnQuickStartModulePropsParametersSplunkClusterSecret;
 
   /**
-   * @schema CfnModulePropsParameters#SplunkIndexerDiscoverySecret
+   * @schema CfnQuickStartModulePropsParameters#SplunkIndexerDiscoverySecret
    */
-  readonly splunkIndexerDiscoverySecret?: CfnModulePropsParametersSplunkIndexerDiscoverySecret;
+  readonly splunkIndexerDiscoverySecret?: CfnQuickStartModulePropsParametersSplunkIndexerDiscoverySecret;
 
   /**
-   * @schema CfnModulePropsParameters#VPCCIDR
+   * @schema CfnQuickStartModulePropsParameters#VPCCIDR
    */
-  readonly vpccidr?: CfnModulePropsParametersVpccidr;
+  readonly vpccidr?: CfnQuickStartModulePropsParametersVpccidr;
 
   /**
-   * @schema CfnModulePropsParameters#SmartStoreBucketName
+   * @schema CfnQuickStartModulePropsParameters#SmartStoreBucketName
    */
-  readonly smartStoreBucketName?: CfnModulePropsParametersSmartStoreBucketName;
+  readonly smartStoreBucketName?: CfnQuickStartModulePropsParametersSmartStoreBucketName;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParameters' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsParameters' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParameters(obj: CfnModulePropsParameters | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsParameters(obj: CfnQuickStartModulePropsParameters | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'AvailabilityZones': toJson_CfnModulePropsParametersAvailabilityZones(obj.availabilityZones),
-    'NumberOfAZs': toJson_CfnModulePropsParametersNumberOfAZs(obj.numberOfAZs),
-    'WebClientLocation': toJson_CfnModulePropsParametersWebClientLocation(obj.webClientLocation),
-    'HECClientLocation': toJson_CfnModulePropsParametersHecClientLocation(obj.hecClientLocation),
-    'IndexerInstanceType': toJson_CfnModulePropsParametersIndexerInstanceType(obj.indexerInstanceType),
-    'SearchHeadInstanceType': toJson_CfnModulePropsParametersSearchHeadInstanceType(obj.searchHeadInstanceType),
-    'KeyName': toJson_CfnModulePropsParametersKeyName(obj.keyName),
-    'PublicSubnet1CIDR': toJson_CfnModulePropsParametersPublicSubnet1Cidr(obj.publicSubnet1Cidr),
-    'PublicSubnet2CIDR': toJson_CfnModulePropsParametersPublicSubnet2Cidr(obj.publicSubnet2Cidr),
-    'PublicSubnet3CIDR': toJson_CfnModulePropsParametersPublicSubnet3Cidr(obj.publicSubnet3Cidr),
-    'SHCEnabled': toJson_CfnModulePropsParametersShcEnabled(obj.shcEnabled),
-    'SSHClientLocation': toJson_CfnModulePropsParametersSshClientLocation(obj.sshClientLocation),
-    'SplunkAdminPassword': toJson_CfnModulePropsParametersSplunkAdminPassword(obj.splunkAdminPassword),
-    'SplunkIndexerCount': toJson_CfnModulePropsParametersSplunkIndexerCount(obj.splunkIndexerCount),
-    'SplunkIndexerDiskSize': toJson_CfnModulePropsParametersSplunkIndexerDiskSize(obj.splunkIndexerDiskSize),
-    'SplunkSearchHeadDiskSize': toJson_CfnModulePropsParametersSplunkSearchHeadDiskSize(obj.splunkSearchHeadDiskSize),
-    'SplunkLicenseBucket': toJson_CfnModulePropsParametersSplunkLicenseBucket(obj.splunkLicenseBucket),
-    'SplunkLicensePath': toJson_CfnModulePropsParametersSplunkLicensePath(obj.splunkLicensePath),
-    'SplunkReplicationFactor': toJson_CfnModulePropsParametersSplunkReplicationFactor(obj.splunkReplicationFactor),
-    'SplunkSearchFactor': toJson_CfnModulePropsParametersSplunkSearchFactor(obj.splunkSearchFactor),
-    'SplunkClusterSecret': toJson_CfnModulePropsParametersSplunkClusterSecret(obj.splunkClusterSecret),
-    'SplunkIndexerDiscoverySecret': toJson_CfnModulePropsParametersSplunkIndexerDiscoverySecret(obj.splunkIndexerDiscoverySecret),
-    'VPCCIDR': toJson_CfnModulePropsParametersVpccidr(obj.vpccidr),
-    'SmartStoreBucketName': toJson_CfnModulePropsParametersSmartStoreBucketName(obj.smartStoreBucketName),
+    'AvailabilityZones': toJson_CfnQuickStartModulePropsParametersAvailabilityZones(obj.availabilityZones),
+    'NumberOfAZs': toJson_CfnQuickStartModulePropsParametersNumberOfAZs(obj.numberOfAZs),
+    'WebClientLocation': toJson_CfnQuickStartModulePropsParametersWebClientLocation(obj.webClientLocation),
+    'HECClientLocation': toJson_CfnQuickStartModulePropsParametersHecClientLocation(obj.hecClientLocation),
+    'IndexerInstanceType': toJson_CfnQuickStartModulePropsParametersIndexerInstanceType(obj.indexerInstanceType),
+    'SearchHeadInstanceType': toJson_CfnQuickStartModulePropsParametersSearchHeadInstanceType(obj.searchHeadInstanceType),
+    'KeyName': toJson_CfnQuickStartModulePropsParametersKeyName(obj.keyName),
+    'PublicSubnet1CIDR': toJson_CfnQuickStartModulePropsParametersPublicSubnet1Cidr(obj.publicSubnet1Cidr),
+    'PublicSubnet2CIDR': toJson_CfnQuickStartModulePropsParametersPublicSubnet2Cidr(obj.publicSubnet2Cidr),
+    'PublicSubnet3CIDR': toJson_CfnQuickStartModulePropsParametersPublicSubnet3Cidr(obj.publicSubnet3Cidr),
+    'SHCEnabled': toJson_CfnQuickStartModulePropsParametersShcEnabled(obj.shcEnabled),
+    'SSHClientLocation': toJson_CfnQuickStartModulePropsParametersSshClientLocation(obj.sshClientLocation),
+    'SplunkAdminPassword': toJson_CfnQuickStartModulePropsParametersSplunkAdminPassword(obj.splunkAdminPassword),
+    'SplunkIndexerCount': toJson_CfnQuickStartModulePropsParametersSplunkIndexerCount(obj.splunkIndexerCount),
+    'SplunkIndexerDiskSize': toJson_CfnQuickStartModulePropsParametersSplunkIndexerDiskSize(obj.splunkIndexerDiskSize),
+    'SplunkSearchHeadDiskSize': toJson_CfnQuickStartModulePropsParametersSplunkSearchHeadDiskSize(obj.splunkSearchHeadDiskSize),
+    'SplunkLicenseBucket': toJson_CfnQuickStartModulePropsParametersSplunkLicenseBucket(obj.splunkLicenseBucket),
+    'SplunkLicensePath': toJson_CfnQuickStartModulePropsParametersSplunkLicensePath(obj.splunkLicensePath),
+    'SplunkReplicationFactor': toJson_CfnQuickStartModulePropsParametersSplunkReplicationFactor(obj.splunkReplicationFactor),
+    'SplunkSearchFactor': toJson_CfnQuickStartModulePropsParametersSplunkSearchFactor(obj.splunkSearchFactor),
+    'SplunkClusterSecret': toJson_CfnQuickStartModulePropsParametersSplunkClusterSecret(obj.splunkClusterSecret),
+    'SplunkIndexerDiscoverySecret': toJson_CfnQuickStartModulePropsParametersSplunkIndexerDiscoverySecret(obj.splunkIndexerDiscoverySecret),
+    'VPCCIDR': toJson_CfnQuickStartModulePropsParametersVpccidr(obj.vpccidr),
+    'SmartStoreBucketName': toJson_CfnQuickStartModulePropsParametersSmartStoreBucketName(obj.smartStoreBucketName),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -198,222 +198,222 @@ export function toJson_CfnModulePropsParameters(obj: CfnModulePropsParameters | 
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResources
+ * @schema CfnQuickStartModulePropsResources
  */
-export interface CfnModulePropsResources {
+export interface CfnQuickStartModulePropsResources {
   /**
-   * @schema CfnModulePropsResources#VPC
+   * @schema CfnQuickStartModulePropsResources#VPC
    */
-  readonly vpc?: CfnModulePropsResourcesVpc;
+  readonly vpc?: CfnQuickStartModulePropsResourcesVpc;
 
   /**
-   * @schema CfnModulePropsResources#PublicSubnet1
+   * @schema CfnQuickStartModulePropsResources#PublicSubnet1
    */
-  readonly publicSubnet1?: CfnModulePropsResourcesPublicSubnet1;
+  readonly publicSubnet1?: CfnQuickStartModulePropsResourcesPublicSubnet1;
 
   /**
-   * @schema CfnModulePropsResources#PublicSubnet2
+   * @schema CfnQuickStartModulePropsResources#PublicSubnet2
    */
-  readonly publicSubnet2?: CfnModulePropsResourcesPublicSubnet2;
+  readonly publicSubnet2?: CfnQuickStartModulePropsResourcesPublicSubnet2;
 
   /**
-   * @schema CfnModulePropsResources#PublicSubnet3
+   * @schema CfnQuickStartModulePropsResources#PublicSubnet3
    */
-  readonly publicSubnet3?: CfnModulePropsResourcesPublicSubnet3;
+  readonly publicSubnet3?: CfnQuickStartModulePropsResourcesPublicSubnet3;
 
   /**
-   * @schema CfnModulePropsResources#InternetGateway
+   * @schema CfnQuickStartModulePropsResources#InternetGateway
    */
-  readonly internetGateway?: CfnModulePropsResourcesInternetGateway;
+  readonly internetGateway?: CfnQuickStartModulePropsResourcesInternetGateway;
 
   /**
-   * @schema CfnModulePropsResources#VPCGatewayAttachment
+   * @schema CfnQuickStartModulePropsResources#VPCGatewayAttachment
    */
-  readonly vpcGatewayAttachment?: CfnModulePropsResourcesVpcGatewayAttachment;
+  readonly vpcGatewayAttachment?: CfnQuickStartModulePropsResourcesVpcGatewayAttachment;
 
   /**
-   * @schema CfnModulePropsResources#PublicSubnetRouteTable
+   * @schema CfnQuickStartModulePropsResources#PublicSubnetRouteTable
    */
-  readonly publicSubnetRouteTable?: CfnModulePropsResourcesPublicSubnetRouteTable;
+  readonly publicSubnetRouteTable?: CfnQuickStartModulePropsResourcesPublicSubnetRouteTable;
 
   /**
-   * @schema CfnModulePropsResources#PublicSubnetRoute
+   * @schema CfnQuickStartModulePropsResources#PublicSubnetRoute
    */
-  readonly publicSubnetRoute?: CfnModulePropsResourcesPublicSubnetRoute;
+  readonly publicSubnetRoute?: CfnQuickStartModulePropsResourcesPublicSubnetRoute;
 
   /**
-   * @schema CfnModulePropsResources#PublicSubnet1RouteTableAssociation
+   * @schema CfnQuickStartModulePropsResources#PublicSubnet1RouteTableAssociation
    */
-  readonly publicSubnet1RouteTableAssociation?: CfnModulePropsResourcesPublicSubnet1RouteTableAssociation;
+  readonly publicSubnet1RouteTableAssociation?: CfnQuickStartModulePropsResourcesPublicSubnet1RouteTableAssociation;
 
   /**
-   * @schema CfnModulePropsResources#PublicSubnet2RouteTableAssociation
+   * @schema CfnQuickStartModulePropsResources#PublicSubnet2RouteTableAssociation
    */
-  readonly publicSubnet2RouteTableAssociation?: CfnModulePropsResourcesPublicSubnet2RouteTableAssociation;
+  readonly publicSubnet2RouteTableAssociation?: CfnQuickStartModulePropsResourcesPublicSubnet2RouteTableAssociation;
 
   /**
-   * @schema CfnModulePropsResources#PublicSubnet3RouteTableAssociation
+   * @schema CfnQuickStartModulePropsResources#PublicSubnet3RouteTableAssociation
    */
-  readonly publicSubnet3RouteTableAssociation?: CfnModulePropsResourcesPublicSubnet3RouteTableAssociation;
+  readonly publicSubnet3RouteTableAssociation?: CfnQuickStartModulePropsResourcesPublicSubnet3RouteTableAssociation;
 
   /**
-   * @schema CfnModulePropsResources#SplunkSmartstoreBucket
+   * @schema CfnQuickStartModulePropsResources#SplunkSmartstoreBucket
    */
-  readonly splunkSmartstoreBucket?: CfnModulePropsResourcesSplunkSmartstoreBucket;
+  readonly splunkSmartstoreBucket?: CfnQuickStartModulePropsResourcesSplunkSmartstoreBucket;
 
   /**
-   * @schema CfnModulePropsResources#SmartStoreS3BucketRole
+   * @schema CfnQuickStartModulePropsResources#SmartStoreS3BucketRole
    */
-  readonly smartStoreS3BucketRole?: CfnModulePropsResourcesSmartStoreS3BucketRole;
+  readonly smartStoreS3BucketRole?: CfnQuickStartModulePropsResourcesSmartStoreS3BucketRole;
 
   /**
-   * @schema CfnModulePropsResources#SmartStoreS3AccessInstanceProfile
+   * @schema CfnQuickStartModulePropsResources#SmartStoreS3AccessInstanceProfile
    */
-  readonly smartStoreS3AccessInstanceProfile?: CfnModulePropsResourcesSmartStoreS3AccessInstanceProfile;
+  readonly smartStoreS3AccessInstanceProfile?: CfnQuickStartModulePropsResourcesSmartStoreS3AccessInstanceProfile;
 
   /**
-   * @schema CfnModulePropsResources#SmartStoreS3BucketPolicy
+   * @schema CfnQuickStartModulePropsResources#SmartStoreS3BucketPolicy
    */
-  readonly smartStoreS3BucketPolicy?: CfnModulePropsResourcesSmartStoreS3BucketPolicy;
+  readonly smartStoreS3BucketPolicy?: CfnQuickStartModulePropsResourcesSmartStoreS3BucketPolicy;
 
   /**
-   * @schema CfnModulePropsResources#SplunkSearchHeadSecurityGroup
+   * @schema CfnQuickStartModulePropsResources#SplunkSearchHeadSecurityGroup
    */
-  readonly splunkSearchHeadSecurityGroup?: CfnModulePropsResourcesSplunkSearchHeadSecurityGroup;
+  readonly splunkSearchHeadSecurityGroup?: CfnQuickStartModulePropsResourcesSplunkSearchHeadSecurityGroup;
 
   /**
-   * @schema CfnModulePropsResources#SplunkIndexerSecurityGroup
+   * @schema CfnQuickStartModulePropsResources#SplunkIndexerSecurityGroup
    */
-  readonly splunkIndexerSecurityGroup?: CfnModulePropsResourcesSplunkIndexerSecurityGroup;
+  readonly splunkIndexerSecurityGroup?: CfnQuickStartModulePropsResourcesSplunkIndexerSecurityGroup;
 
   /**
-   * @schema CfnModulePropsResources#SplunkSecurityGroup
+   * @schema CfnQuickStartModulePropsResources#SplunkSecurityGroup
    */
-  readonly splunkSecurityGroup?: CfnModulePropsResourcesSplunkSecurityGroup;
+  readonly splunkSecurityGroup?: CfnQuickStartModulePropsResourcesSplunkSecurityGroup;
 
   /**
-   * @schema CfnModulePropsResources#SplunkHttpEventCollectorLoadBalancerSecurityGroup
+   * @schema CfnQuickStartModulePropsResources#SplunkHttpEventCollectorLoadBalancerSecurityGroup
    */
-  readonly splunkHttpEventCollectorLoadBalancerSecurityGroup?: CfnModulePropsResourcesSplunkHttpEventCollectorLoadBalancerSecurityGroup;
+  readonly splunkHttpEventCollectorLoadBalancerSecurityGroup?: CfnQuickStartModulePropsResourcesSplunkHttpEventCollectorLoadBalancerSecurityGroup;
 
   /**
-   * @schema CfnModulePropsResources#SplunkSearchHeadInstance
+   * @schema CfnQuickStartModulePropsResources#SplunkSearchHeadInstance
    */
-  readonly splunkSearchHeadInstance?: CfnModulePropsResourcesSplunkSearchHeadInstance;
+  readonly splunkSearchHeadInstance?: CfnQuickStartModulePropsResourcesSplunkSearchHeadInstance;
 
   /**
-   * @schema CfnModulePropsResources#SplunkCM
+   * @schema CfnQuickStartModulePropsResources#SplunkCM
    */
-  readonly splunkCm?: CfnModulePropsResourcesSplunkCm;
+  readonly splunkCm?: CfnQuickStartModulePropsResourcesSplunkCm;
 
   /**
-   * @schema CfnModulePropsResources#SplunkCMWaitHandle
+   * @schema CfnQuickStartModulePropsResources#SplunkCMWaitHandle
    */
-  readonly splunkCmWaitHandle?: CfnModulePropsResourcesSplunkCmWaitHandle;
+  readonly splunkCmWaitHandle?: CfnQuickStartModulePropsResourcesSplunkCmWaitHandle;
 
   /**
-   * @schema CfnModulePropsResources#SplunkCMWaitCondition
+   * @schema CfnQuickStartModulePropsResources#SplunkCMWaitCondition
    */
-  readonly splunkCmWaitCondition?: CfnModulePropsResourcesSplunkCmWaitCondition;
+  readonly splunkCmWaitCondition?: CfnQuickStartModulePropsResourcesSplunkCmWaitCondition;
 
   /**
-   * @schema CfnModulePropsResources#SplunkSHCDeployer
+   * @schema CfnQuickStartModulePropsResources#SplunkSHCDeployer
    */
-  readonly splunkShcDeployer?: CfnModulePropsResourcesSplunkShcDeployer;
+  readonly splunkShcDeployer?: CfnQuickStartModulePropsResourcesSplunkShcDeployer;
 
   /**
-   * @schema CfnModulePropsResources#SplunkSHCMember1
+   * @schema CfnQuickStartModulePropsResources#SplunkSHCMember1
    */
-  readonly splunkShcMember1?: CfnModulePropsResourcesSplunkShcMember1;
+  readonly splunkShcMember1?: CfnQuickStartModulePropsResourcesSplunkShcMember1;
 
   /**
-   * @schema CfnModulePropsResources#SplunkSHCMember2
+   * @schema CfnQuickStartModulePropsResources#SplunkSHCMember2
    */
-  readonly splunkShcMember2?: CfnModulePropsResourcesSplunkShcMember2;
+  readonly splunkShcMember2?: CfnQuickStartModulePropsResourcesSplunkShcMember2;
 
   /**
-   * @schema CfnModulePropsResources#SplunkSHCMember3
+   * @schema CfnQuickStartModulePropsResources#SplunkSHCMember3
    */
-  readonly splunkShcMember3?: CfnModulePropsResourcesSplunkShcMember3;
+  readonly splunkShcMember3?: CfnQuickStartModulePropsResourcesSplunkShcMember3;
 
   /**
-   * @schema CfnModulePropsResources#CfnUser
+   * @schema CfnQuickStartModulePropsResources#CfnUser
    */
-  readonly cfnUser?: CfnModulePropsResourcesCfnUser;
+  readonly cfnUser?: CfnQuickStartModulePropsResourcesCfnUser;
 
   /**
-   * @schema CfnModulePropsResources#CfnKeys
+   * @schema CfnQuickStartModulePropsResources#CfnKeys
    */
-  readonly cfnKeys?: CfnModulePropsResourcesCfnKeys;
+  readonly cfnKeys?: CfnQuickStartModulePropsResourcesCfnKeys;
 
   /**
-   * @schema CfnModulePropsResources#BucketPolicy
+   * @schema CfnQuickStartModulePropsResources#BucketPolicy
    */
-  readonly bucketPolicy?: CfnModulePropsResourcesBucketPolicy;
+  readonly bucketPolicy?: CfnQuickStartModulePropsResourcesBucketPolicy;
 
   /**
-   * @schema CfnModulePropsResources#SplunkIndexerLaunchConfiguration
+   * @schema CfnQuickStartModulePropsResources#SplunkIndexerLaunchConfiguration
    */
-  readonly splunkIndexerLaunchConfiguration?: CfnModulePropsResourcesSplunkIndexerLaunchConfiguration;
+  readonly splunkIndexerLaunchConfiguration?: CfnQuickStartModulePropsResourcesSplunkIndexerLaunchConfiguration;
 
   /**
-   * @schema CfnModulePropsResources#SplunkSHCLoadBalancer
+   * @schema CfnQuickStartModulePropsResources#SplunkSHCLoadBalancer
    */
-  readonly splunkShcLoadBalancer?: CfnModulePropsResourcesSplunkShcLoadBalancer;
+  readonly splunkShcLoadBalancer?: CfnQuickStartModulePropsResourcesSplunkShcLoadBalancer;
 
   /**
-   * @schema CfnModulePropsResources#SplunkHttpEventCollectorLoadBalancer
+   * @schema CfnQuickStartModulePropsResources#SplunkHttpEventCollectorLoadBalancer
    */
-  readonly splunkHttpEventCollectorLoadBalancer?: CfnModulePropsResourcesSplunkHttpEventCollectorLoadBalancer;
+  readonly splunkHttpEventCollectorLoadBalancer?: CfnQuickStartModulePropsResourcesSplunkHttpEventCollectorLoadBalancer;
 
   /**
-   * @schema CfnModulePropsResources#SplunkIndexerNodesASG
+   * @schema CfnQuickStartModulePropsResources#SplunkIndexerNodesASG
    */
-  readonly splunkIndexerNodesAsg?: CfnModulePropsResourcesSplunkIndexerNodesAsg;
+  readonly splunkIndexerNodesAsg?: CfnQuickStartModulePropsResourcesSplunkIndexerNodesAsg;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResources' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResources' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResources(obj: CfnModulePropsResources | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResources(obj: CfnQuickStartModulePropsResources | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'VPC': toJson_CfnModulePropsResourcesVpc(obj.vpc),
-    'PublicSubnet1': toJson_CfnModulePropsResourcesPublicSubnet1(obj.publicSubnet1),
-    'PublicSubnet2': toJson_CfnModulePropsResourcesPublicSubnet2(obj.publicSubnet2),
-    'PublicSubnet3': toJson_CfnModulePropsResourcesPublicSubnet3(obj.publicSubnet3),
-    'InternetGateway': toJson_CfnModulePropsResourcesInternetGateway(obj.internetGateway),
-    'VPCGatewayAttachment': toJson_CfnModulePropsResourcesVpcGatewayAttachment(obj.vpcGatewayAttachment),
-    'PublicSubnetRouteTable': toJson_CfnModulePropsResourcesPublicSubnetRouteTable(obj.publicSubnetRouteTable),
-    'PublicSubnetRoute': toJson_CfnModulePropsResourcesPublicSubnetRoute(obj.publicSubnetRoute),
-    'PublicSubnet1RouteTableAssociation': toJson_CfnModulePropsResourcesPublicSubnet1RouteTableAssociation(obj.publicSubnet1RouteTableAssociation),
-    'PublicSubnet2RouteTableAssociation': toJson_CfnModulePropsResourcesPublicSubnet2RouteTableAssociation(obj.publicSubnet2RouteTableAssociation),
-    'PublicSubnet3RouteTableAssociation': toJson_CfnModulePropsResourcesPublicSubnet3RouteTableAssociation(obj.publicSubnet3RouteTableAssociation),
-    'SplunkSmartstoreBucket': toJson_CfnModulePropsResourcesSplunkSmartstoreBucket(obj.splunkSmartstoreBucket),
-    'SmartStoreS3BucketRole': toJson_CfnModulePropsResourcesSmartStoreS3BucketRole(obj.smartStoreS3BucketRole),
-    'SmartStoreS3AccessInstanceProfile': toJson_CfnModulePropsResourcesSmartStoreS3AccessInstanceProfile(obj.smartStoreS3AccessInstanceProfile),
-    'SmartStoreS3BucketPolicy': toJson_CfnModulePropsResourcesSmartStoreS3BucketPolicy(obj.smartStoreS3BucketPolicy),
-    'SplunkSearchHeadSecurityGroup': toJson_CfnModulePropsResourcesSplunkSearchHeadSecurityGroup(obj.splunkSearchHeadSecurityGroup),
-    'SplunkIndexerSecurityGroup': toJson_CfnModulePropsResourcesSplunkIndexerSecurityGroup(obj.splunkIndexerSecurityGroup),
-    'SplunkSecurityGroup': toJson_CfnModulePropsResourcesSplunkSecurityGroup(obj.splunkSecurityGroup),
-    'SplunkHttpEventCollectorLoadBalancerSecurityGroup': toJson_CfnModulePropsResourcesSplunkHttpEventCollectorLoadBalancerSecurityGroup(obj.splunkHttpEventCollectorLoadBalancerSecurityGroup),
-    'SplunkSearchHeadInstance': toJson_CfnModulePropsResourcesSplunkSearchHeadInstance(obj.splunkSearchHeadInstance),
-    'SplunkCM': toJson_CfnModulePropsResourcesSplunkCm(obj.splunkCm),
-    'SplunkCMWaitHandle': toJson_CfnModulePropsResourcesSplunkCmWaitHandle(obj.splunkCmWaitHandle),
-    'SplunkCMWaitCondition': toJson_CfnModulePropsResourcesSplunkCmWaitCondition(obj.splunkCmWaitCondition),
-    'SplunkSHCDeployer': toJson_CfnModulePropsResourcesSplunkShcDeployer(obj.splunkShcDeployer),
-    'SplunkSHCMember1': toJson_CfnModulePropsResourcesSplunkShcMember1(obj.splunkShcMember1),
-    'SplunkSHCMember2': toJson_CfnModulePropsResourcesSplunkShcMember2(obj.splunkShcMember2),
-    'SplunkSHCMember3': toJson_CfnModulePropsResourcesSplunkShcMember3(obj.splunkShcMember3),
-    'CfnUser': toJson_CfnModulePropsResourcesCfnUser(obj.cfnUser),
-    'CfnKeys': toJson_CfnModulePropsResourcesCfnKeys(obj.cfnKeys),
-    'BucketPolicy': toJson_CfnModulePropsResourcesBucketPolicy(obj.bucketPolicy),
-    'SplunkIndexerLaunchConfiguration': toJson_CfnModulePropsResourcesSplunkIndexerLaunchConfiguration(obj.splunkIndexerLaunchConfiguration),
-    'SplunkSHCLoadBalancer': toJson_CfnModulePropsResourcesSplunkShcLoadBalancer(obj.splunkShcLoadBalancer),
-    'SplunkHttpEventCollectorLoadBalancer': toJson_CfnModulePropsResourcesSplunkHttpEventCollectorLoadBalancer(obj.splunkHttpEventCollectorLoadBalancer),
-    'SplunkIndexerNodesASG': toJson_CfnModulePropsResourcesSplunkIndexerNodesAsg(obj.splunkIndexerNodesAsg),
+    'VPC': toJson_CfnQuickStartModulePropsResourcesVpc(obj.vpc),
+    'PublicSubnet1': toJson_CfnQuickStartModulePropsResourcesPublicSubnet1(obj.publicSubnet1),
+    'PublicSubnet2': toJson_CfnQuickStartModulePropsResourcesPublicSubnet2(obj.publicSubnet2),
+    'PublicSubnet3': toJson_CfnQuickStartModulePropsResourcesPublicSubnet3(obj.publicSubnet3),
+    'InternetGateway': toJson_CfnQuickStartModulePropsResourcesInternetGateway(obj.internetGateway),
+    'VPCGatewayAttachment': toJson_CfnQuickStartModulePropsResourcesVpcGatewayAttachment(obj.vpcGatewayAttachment),
+    'PublicSubnetRouteTable': toJson_CfnQuickStartModulePropsResourcesPublicSubnetRouteTable(obj.publicSubnetRouteTable),
+    'PublicSubnetRoute': toJson_CfnQuickStartModulePropsResourcesPublicSubnetRoute(obj.publicSubnetRoute),
+    'PublicSubnet1RouteTableAssociation': toJson_CfnQuickStartModulePropsResourcesPublicSubnet1RouteTableAssociation(obj.publicSubnet1RouteTableAssociation),
+    'PublicSubnet2RouteTableAssociation': toJson_CfnQuickStartModulePropsResourcesPublicSubnet2RouteTableAssociation(obj.publicSubnet2RouteTableAssociation),
+    'PublicSubnet3RouteTableAssociation': toJson_CfnQuickStartModulePropsResourcesPublicSubnet3RouteTableAssociation(obj.publicSubnet3RouteTableAssociation),
+    'SplunkSmartstoreBucket': toJson_CfnQuickStartModulePropsResourcesSplunkSmartstoreBucket(obj.splunkSmartstoreBucket),
+    'SmartStoreS3BucketRole': toJson_CfnQuickStartModulePropsResourcesSmartStoreS3BucketRole(obj.smartStoreS3BucketRole),
+    'SmartStoreS3AccessInstanceProfile': toJson_CfnQuickStartModulePropsResourcesSmartStoreS3AccessInstanceProfile(obj.smartStoreS3AccessInstanceProfile),
+    'SmartStoreS3BucketPolicy': toJson_CfnQuickStartModulePropsResourcesSmartStoreS3BucketPolicy(obj.smartStoreS3BucketPolicy),
+    'SplunkSearchHeadSecurityGroup': toJson_CfnQuickStartModulePropsResourcesSplunkSearchHeadSecurityGroup(obj.splunkSearchHeadSecurityGroup),
+    'SplunkIndexerSecurityGroup': toJson_CfnQuickStartModulePropsResourcesSplunkIndexerSecurityGroup(obj.splunkIndexerSecurityGroup),
+    'SplunkSecurityGroup': toJson_CfnQuickStartModulePropsResourcesSplunkSecurityGroup(obj.splunkSecurityGroup),
+    'SplunkHttpEventCollectorLoadBalancerSecurityGroup': toJson_CfnQuickStartModulePropsResourcesSplunkHttpEventCollectorLoadBalancerSecurityGroup(obj.splunkHttpEventCollectorLoadBalancerSecurityGroup),
+    'SplunkSearchHeadInstance': toJson_CfnQuickStartModulePropsResourcesSplunkSearchHeadInstance(obj.splunkSearchHeadInstance),
+    'SplunkCM': toJson_CfnQuickStartModulePropsResourcesSplunkCm(obj.splunkCm),
+    'SplunkCMWaitHandle': toJson_CfnQuickStartModulePropsResourcesSplunkCmWaitHandle(obj.splunkCmWaitHandle),
+    'SplunkCMWaitCondition': toJson_CfnQuickStartModulePropsResourcesSplunkCmWaitCondition(obj.splunkCmWaitCondition),
+    'SplunkSHCDeployer': toJson_CfnQuickStartModulePropsResourcesSplunkShcDeployer(obj.splunkShcDeployer),
+    'SplunkSHCMember1': toJson_CfnQuickStartModulePropsResourcesSplunkShcMember1(obj.splunkShcMember1),
+    'SplunkSHCMember2': toJson_CfnQuickStartModulePropsResourcesSplunkShcMember2(obj.splunkShcMember2),
+    'SplunkSHCMember3': toJson_CfnQuickStartModulePropsResourcesSplunkShcMember3(obj.splunkShcMember3),
+    'CfnUser': toJson_CfnQuickStartModulePropsResourcesCfnUser(obj.cfnUser),
+    'CfnKeys': toJson_CfnQuickStartModulePropsResourcesCfnKeys(obj.cfnKeys),
+    'BucketPolicy': toJson_CfnQuickStartModulePropsResourcesBucketPolicy(obj.bucketPolicy),
+    'SplunkIndexerLaunchConfiguration': toJson_CfnQuickStartModulePropsResourcesSplunkIndexerLaunchConfiguration(obj.splunkIndexerLaunchConfiguration),
+    'SplunkSHCLoadBalancer': toJson_CfnQuickStartModulePropsResourcesSplunkShcLoadBalancer(obj.splunkShcLoadBalancer),
+    'SplunkHttpEventCollectorLoadBalancer': toJson_CfnQuickStartModulePropsResourcesSplunkHttpEventCollectorLoadBalancer(obj.splunkHttpEventCollectorLoadBalancer),
+    'SplunkIndexerNodesASG': toJson_CfnQuickStartModulePropsResourcesSplunkIndexerNodesAsg(obj.splunkIndexerNodesAsg),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -421,21 +421,21 @@ export function toJson_CfnModulePropsResources(obj: CfnModulePropsResources | un
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersAvailabilityZones
+ * @schema CfnQuickStartModulePropsParametersAvailabilityZones
  */
-export interface CfnModulePropsParametersAvailabilityZones {
+export interface CfnQuickStartModulePropsParametersAvailabilityZones {
   /**
-   * @schema CfnModulePropsParametersAvailabilityZones#Type
+   * @schema CfnQuickStartModulePropsParametersAvailabilityZones#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersAvailabilityZones' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsParametersAvailabilityZones' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersAvailabilityZones(obj: CfnModulePropsParametersAvailabilityZones | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsParametersAvailabilityZones(obj: CfnQuickStartModulePropsParametersAvailabilityZones | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -446,21 +446,21 @@ export function toJson_CfnModulePropsParametersAvailabilityZones(obj: CfnModuleP
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersNumberOfAZs
+ * @schema CfnQuickStartModulePropsParametersNumberOfAZs
  */
-export interface CfnModulePropsParametersNumberOfAZs {
+export interface CfnQuickStartModulePropsParametersNumberOfAZs {
   /**
-   * @schema CfnModulePropsParametersNumberOfAZs#Type
+   * @schema CfnQuickStartModulePropsParametersNumberOfAZs#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersNumberOfAZs' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsParametersNumberOfAZs' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersNumberOfAZs(obj: CfnModulePropsParametersNumberOfAZs | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsParametersNumberOfAZs(obj: CfnQuickStartModulePropsParametersNumberOfAZs | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -471,21 +471,21 @@ export function toJson_CfnModulePropsParametersNumberOfAZs(obj: CfnModulePropsPa
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersWebClientLocation
+ * @schema CfnQuickStartModulePropsParametersWebClientLocation
  */
-export interface CfnModulePropsParametersWebClientLocation {
+export interface CfnQuickStartModulePropsParametersWebClientLocation {
   /**
-   * @schema CfnModulePropsParametersWebClientLocation#Type
+   * @schema CfnQuickStartModulePropsParametersWebClientLocation#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersWebClientLocation' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsParametersWebClientLocation' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersWebClientLocation(obj: CfnModulePropsParametersWebClientLocation | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsParametersWebClientLocation(obj: CfnQuickStartModulePropsParametersWebClientLocation | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -496,21 +496,21 @@ export function toJson_CfnModulePropsParametersWebClientLocation(obj: CfnModuleP
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersHecClientLocation
+ * @schema CfnQuickStartModulePropsParametersHecClientLocation
  */
-export interface CfnModulePropsParametersHecClientLocation {
+export interface CfnQuickStartModulePropsParametersHecClientLocation {
   /**
-   * @schema CfnModulePropsParametersHecClientLocation#Type
+   * @schema CfnQuickStartModulePropsParametersHecClientLocation#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersHecClientLocation' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsParametersHecClientLocation' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersHecClientLocation(obj: CfnModulePropsParametersHecClientLocation | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsParametersHecClientLocation(obj: CfnQuickStartModulePropsParametersHecClientLocation | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -521,21 +521,21 @@ export function toJson_CfnModulePropsParametersHecClientLocation(obj: CfnModuleP
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersIndexerInstanceType
+ * @schema CfnQuickStartModulePropsParametersIndexerInstanceType
  */
-export interface CfnModulePropsParametersIndexerInstanceType {
+export interface CfnQuickStartModulePropsParametersIndexerInstanceType {
   /**
-   * @schema CfnModulePropsParametersIndexerInstanceType#Type
+   * @schema CfnQuickStartModulePropsParametersIndexerInstanceType#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersIndexerInstanceType' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsParametersIndexerInstanceType' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersIndexerInstanceType(obj: CfnModulePropsParametersIndexerInstanceType | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsParametersIndexerInstanceType(obj: CfnQuickStartModulePropsParametersIndexerInstanceType | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -546,21 +546,21 @@ export function toJson_CfnModulePropsParametersIndexerInstanceType(obj: CfnModul
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersSearchHeadInstanceType
+ * @schema CfnQuickStartModulePropsParametersSearchHeadInstanceType
  */
-export interface CfnModulePropsParametersSearchHeadInstanceType {
+export interface CfnQuickStartModulePropsParametersSearchHeadInstanceType {
   /**
-   * @schema CfnModulePropsParametersSearchHeadInstanceType#Type
+   * @schema CfnQuickStartModulePropsParametersSearchHeadInstanceType#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersSearchHeadInstanceType' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsParametersSearchHeadInstanceType' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersSearchHeadInstanceType(obj: CfnModulePropsParametersSearchHeadInstanceType | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsParametersSearchHeadInstanceType(obj: CfnQuickStartModulePropsParametersSearchHeadInstanceType | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -571,21 +571,21 @@ export function toJson_CfnModulePropsParametersSearchHeadInstanceType(obj: CfnMo
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersKeyName
+ * @schema CfnQuickStartModulePropsParametersKeyName
  */
-export interface CfnModulePropsParametersKeyName {
+export interface CfnQuickStartModulePropsParametersKeyName {
   /**
-   * @schema CfnModulePropsParametersKeyName#Type
+   * @schema CfnQuickStartModulePropsParametersKeyName#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersKeyName' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsParametersKeyName' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersKeyName(obj: CfnModulePropsParametersKeyName | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsParametersKeyName(obj: CfnQuickStartModulePropsParametersKeyName | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -596,21 +596,21 @@ export function toJson_CfnModulePropsParametersKeyName(obj: CfnModulePropsParame
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersPublicSubnet1Cidr
+ * @schema CfnQuickStartModulePropsParametersPublicSubnet1Cidr
  */
-export interface CfnModulePropsParametersPublicSubnet1Cidr {
+export interface CfnQuickStartModulePropsParametersPublicSubnet1Cidr {
   /**
-   * @schema CfnModulePropsParametersPublicSubnet1Cidr#Type
+   * @schema CfnQuickStartModulePropsParametersPublicSubnet1Cidr#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPublicSubnet1Cidr' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsParametersPublicSubnet1Cidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPublicSubnet1Cidr(obj: CfnModulePropsParametersPublicSubnet1Cidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsParametersPublicSubnet1Cidr(obj: CfnQuickStartModulePropsParametersPublicSubnet1Cidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -621,21 +621,21 @@ export function toJson_CfnModulePropsParametersPublicSubnet1Cidr(obj: CfnModuleP
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersPublicSubnet2Cidr
+ * @schema CfnQuickStartModulePropsParametersPublicSubnet2Cidr
  */
-export interface CfnModulePropsParametersPublicSubnet2Cidr {
+export interface CfnQuickStartModulePropsParametersPublicSubnet2Cidr {
   /**
-   * @schema CfnModulePropsParametersPublicSubnet2Cidr#Type
+   * @schema CfnQuickStartModulePropsParametersPublicSubnet2Cidr#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPublicSubnet2Cidr' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsParametersPublicSubnet2Cidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPublicSubnet2Cidr(obj: CfnModulePropsParametersPublicSubnet2Cidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsParametersPublicSubnet2Cidr(obj: CfnQuickStartModulePropsParametersPublicSubnet2Cidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -646,21 +646,21 @@ export function toJson_CfnModulePropsParametersPublicSubnet2Cidr(obj: CfnModuleP
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersPublicSubnet3Cidr
+ * @schema CfnQuickStartModulePropsParametersPublicSubnet3Cidr
  */
-export interface CfnModulePropsParametersPublicSubnet3Cidr {
+export interface CfnQuickStartModulePropsParametersPublicSubnet3Cidr {
   /**
-   * @schema CfnModulePropsParametersPublicSubnet3Cidr#Type
+   * @schema CfnQuickStartModulePropsParametersPublicSubnet3Cidr#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPublicSubnet3Cidr' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsParametersPublicSubnet3Cidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPublicSubnet3Cidr(obj: CfnModulePropsParametersPublicSubnet3Cidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsParametersPublicSubnet3Cidr(obj: CfnQuickStartModulePropsParametersPublicSubnet3Cidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -671,21 +671,21 @@ export function toJson_CfnModulePropsParametersPublicSubnet3Cidr(obj: CfnModuleP
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersShcEnabled
+ * @schema CfnQuickStartModulePropsParametersShcEnabled
  */
-export interface CfnModulePropsParametersShcEnabled {
+export interface CfnQuickStartModulePropsParametersShcEnabled {
   /**
-   * @schema CfnModulePropsParametersShcEnabled#Type
+   * @schema CfnQuickStartModulePropsParametersShcEnabled#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersShcEnabled' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsParametersShcEnabled' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersShcEnabled(obj: CfnModulePropsParametersShcEnabled | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsParametersShcEnabled(obj: CfnQuickStartModulePropsParametersShcEnabled | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -696,21 +696,21 @@ export function toJson_CfnModulePropsParametersShcEnabled(obj: CfnModulePropsPar
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersSshClientLocation
+ * @schema CfnQuickStartModulePropsParametersSshClientLocation
  */
-export interface CfnModulePropsParametersSshClientLocation {
+export interface CfnQuickStartModulePropsParametersSshClientLocation {
   /**
-   * @schema CfnModulePropsParametersSshClientLocation#Type
+   * @schema CfnQuickStartModulePropsParametersSshClientLocation#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersSshClientLocation' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsParametersSshClientLocation' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersSshClientLocation(obj: CfnModulePropsParametersSshClientLocation | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsParametersSshClientLocation(obj: CfnQuickStartModulePropsParametersSshClientLocation | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -721,21 +721,21 @@ export function toJson_CfnModulePropsParametersSshClientLocation(obj: CfnModuleP
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersSplunkAdminPassword
+ * @schema CfnQuickStartModulePropsParametersSplunkAdminPassword
  */
-export interface CfnModulePropsParametersSplunkAdminPassword {
+export interface CfnQuickStartModulePropsParametersSplunkAdminPassword {
   /**
-   * @schema CfnModulePropsParametersSplunkAdminPassword#Type
+   * @schema CfnQuickStartModulePropsParametersSplunkAdminPassword#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersSplunkAdminPassword' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsParametersSplunkAdminPassword' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersSplunkAdminPassword(obj: CfnModulePropsParametersSplunkAdminPassword | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsParametersSplunkAdminPassword(obj: CfnQuickStartModulePropsParametersSplunkAdminPassword | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -746,21 +746,21 @@ export function toJson_CfnModulePropsParametersSplunkAdminPassword(obj: CfnModul
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersSplunkIndexerCount
+ * @schema CfnQuickStartModulePropsParametersSplunkIndexerCount
  */
-export interface CfnModulePropsParametersSplunkIndexerCount {
+export interface CfnQuickStartModulePropsParametersSplunkIndexerCount {
   /**
-   * @schema CfnModulePropsParametersSplunkIndexerCount#Type
+   * @schema CfnQuickStartModulePropsParametersSplunkIndexerCount#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersSplunkIndexerCount' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsParametersSplunkIndexerCount' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersSplunkIndexerCount(obj: CfnModulePropsParametersSplunkIndexerCount | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsParametersSplunkIndexerCount(obj: CfnQuickStartModulePropsParametersSplunkIndexerCount | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -771,21 +771,21 @@ export function toJson_CfnModulePropsParametersSplunkIndexerCount(obj: CfnModule
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersSplunkIndexerDiskSize
+ * @schema CfnQuickStartModulePropsParametersSplunkIndexerDiskSize
  */
-export interface CfnModulePropsParametersSplunkIndexerDiskSize {
+export interface CfnQuickStartModulePropsParametersSplunkIndexerDiskSize {
   /**
-   * @schema CfnModulePropsParametersSplunkIndexerDiskSize#Type
+   * @schema CfnQuickStartModulePropsParametersSplunkIndexerDiskSize#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersSplunkIndexerDiskSize' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsParametersSplunkIndexerDiskSize' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersSplunkIndexerDiskSize(obj: CfnModulePropsParametersSplunkIndexerDiskSize | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsParametersSplunkIndexerDiskSize(obj: CfnQuickStartModulePropsParametersSplunkIndexerDiskSize | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -796,21 +796,21 @@ export function toJson_CfnModulePropsParametersSplunkIndexerDiskSize(obj: CfnMod
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersSplunkSearchHeadDiskSize
+ * @schema CfnQuickStartModulePropsParametersSplunkSearchHeadDiskSize
  */
-export interface CfnModulePropsParametersSplunkSearchHeadDiskSize {
+export interface CfnQuickStartModulePropsParametersSplunkSearchHeadDiskSize {
   /**
-   * @schema CfnModulePropsParametersSplunkSearchHeadDiskSize#Type
+   * @schema CfnQuickStartModulePropsParametersSplunkSearchHeadDiskSize#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersSplunkSearchHeadDiskSize' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsParametersSplunkSearchHeadDiskSize' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersSplunkSearchHeadDiskSize(obj: CfnModulePropsParametersSplunkSearchHeadDiskSize | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsParametersSplunkSearchHeadDiskSize(obj: CfnQuickStartModulePropsParametersSplunkSearchHeadDiskSize | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -821,21 +821,21 @@ export function toJson_CfnModulePropsParametersSplunkSearchHeadDiskSize(obj: Cfn
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersSplunkLicenseBucket
+ * @schema CfnQuickStartModulePropsParametersSplunkLicenseBucket
  */
-export interface CfnModulePropsParametersSplunkLicenseBucket {
+export interface CfnQuickStartModulePropsParametersSplunkLicenseBucket {
   /**
-   * @schema CfnModulePropsParametersSplunkLicenseBucket#Type
+   * @schema CfnQuickStartModulePropsParametersSplunkLicenseBucket#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersSplunkLicenseBucket' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsParametersSplunkLicenseBucket' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersSplunkLicenseBucket(obj: CfnModulePropsParametersSplunkLicenseBucket | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsParametersSplunkLicenseBucket(obj: CfnQuickStartModulePropsParametersSplunkLicenseBucket | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -846,21 +846,21 @@ export function toJson_CfnModulePropsParametersSplunkLicenseBucket(obj: CfnModul
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersSplunkLicensePath
+ * @schema CfnQuickStartModulePropsParametersSplunkLicensePath
  */
-export interface CfnModulePropsParametersSplunkLicensePath {
+export interface CfnQuickStartModulePropsParametersSplunkLicensePath {
   /**
-   * @schema CfnModulePropsParametersSplunkLicensePath#Type
+   * @schema CfnQuickStartModulePropsParametersSplunkLicensePath#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersSplunkLicensePath' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsParametersSplunkLicensePath' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersSplunkLicensePath(obj: CfnModulePropsParametersSplunkLicensePath | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsParametersSplunkLicensePath(obj: CfnQuickStartModulePropsParametersSplunkLicensePath | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -871,21 +871,21 @@ export function toJson_CfnModulePropsParametersSplunkLicensePath(obj: CfnModuleP
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersSplunkReplicationFactor
+ * @schema CfnQuickStartModulePropsParametersSplunkReplicationFactor
  */
-export interface CfnModulePropsParametersSplunkReplicationFactor {
+export interface CfnQuickStartModulePropsParametersSplunkReplicationFactor {
   /**
-   * @schema CfnModulePropsParametersSplunkReplicationFactor#Type
+   * @schema CfnQuickStartModulePropsParametersSplunkReplicationFactor#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersSplunkReplicationFactor' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsParametersSplunkReplicationFactor' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersSplunkReplicationFactor(obj: CfnModulePropsParametersSplunkReplicationFactor | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsParametersSplunkReplicationFactor(obj: CfnQuickStartModulePropsParametersSplunkReplicationFactor | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -896,21 +896,21 @@ export function toJson_CfnModulePropsParametersSplunkReplicationFactor(obj: CfnM
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersSplunkSearchFactor
+ * @schema CfnQuickStartModulePropsParametersSplunkSearchFactor
  */
-export interface CfnModulePropsParametersSplunkSearchFactor {
+export interface CfnQuickStartModulePropsParametersSplunkSearchFactor {
   /**
-   * @schema CfnModulePropsParametersSplunkSearchFactor#Type
+   * @schema CfnQuickStartModulePropsParametersSplunkSearchFactor#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersSplunkSearchFactor' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsParametersSplunkSearchFactor' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersSplunkSearchFactor(obj: CfnModulePropsParametersSplunkSearchFactor | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsParametersSplunkSearchFactor(obj: CfnQuickStartModulePropsParametersSplunkSearchFactor | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -921,21 +921,21 @@ export function toJson_CfnModulePropsParametersSplunkSearchFactor(obj: CfnModule
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersSplunkClusterSecret
+ * @schema CfnQuickStartModulePropsParametersSplunkClusterSecret
  */
-export interface CfnModulePropsParametersSplunkClusterSecret {
+export interface CfnQuickStartModulePropsParametersSplunkClusterSecret {
   /**
-   * @schema CfnModulePropsParametersSplunkClusterSecret#Type
+   * @schema CfnQuickStartModulePropsParametersSplunkClusterSecret#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersSplunkClusterSecret' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsParametersSplunkClusterSecret' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersSplunkClusterSecret(obj: CfnModulePropsParametersSplunkClusterSecret | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsParametersSplunkClusterSecret(obj: CfnQuickStartModulePropsParametersSplunkClusterSecret | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -946,21 +946,21 @@ export function toJson_CfnModulePropsParametersSplunkClusterSecret(obj: CfnModul
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersSplunkIndexerDiscoverySecret
+ * @schema CfnQuickStartModulePropsParametersSplunkIndexerDiscoverySecret
  */
-export interface CfnModulePropsParametersSplunkIndexerDiscoverySecret {
+export interface CfnQuickStartModulePropsParametersSplunkIndexerDiscoverySecret {
   /**
-   * @schema CfnModulePropsParametersSplunkIndexerDiscoverySecret#Type
+   * @schema CfnQuickStartModulePropsParametersSplunkIndexerDiscoverySecret#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersSplunkIndexerDiscoverySecret' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsParametersSplunkIndexerDiscoverySecret' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersSplunkIndexerDiscoverySecret(obj: CfnModulePropsParametersSplunkIndexerDiscoverySecret | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsParametersSplunkIndexerDiscoverySecret(obj: CfnQuickStartModulePropsParametersSplunkIndexerDiscoverySecret | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -971,21 +971,21 @@ export function toJson_CfnModulePropsParametersSplunkIndexerDiscoverySecret(obj:
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersVpccidr
+ * @schema CfnQuickStartModulePropsParametersVpccidr
  */
-export interface CfnModulePropsParametersVpccidr {
+export interface CfnQuickStartModulePropsParametersVpccidr {
   /**
-   * @schema CfnModulePropsParametersVpccidr#Type
+   * @schema CfnQuickStartModulePropsParametersVpccidr#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersVpccidr' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsParametersVpccidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersVpccidr(obj: CfnModulePropsParametersVpccidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsParametersVpccidr(obj: CfnQuickStartModulePropsParametersVpccidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -996,21 +996,21 @@ export function toJson_CfnModulePropsParametersVpccidr(obj: CfnModulePropsParame
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersSmartStoreBucketName
+ * @schema CfnQuickStartModulePropsParametersSmartStoreBucketName
  */
-export interface CfnModulePropsParametersSmartStoreBucketName {
+export interface CfnQuickStartModulePropsParametersSmartStoreBucketName {
   /**
-   * @schema CfnModulePropsParametersSmartStoreBucketName#Type
+   * @schema CfnQuickStartModulePropsParametersSmartStoreBucketName#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersSmartStoreBucketName' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsParametersSmartStoreBucketName' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersSmartStoreBucketName(obj: CfnModulePropsParametersSmartStoreBucketName | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsParametersSmartStoreBucketName(obj: CfnQuickStartModulePropsParametersSmartStoreBucketName | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1021,57 +1021,26 @@ export function toJson_CfnModulePropsParametersSmartStoreBucketName(obj: CfnModu
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesVpc
+ * @schema CfnQuickStartModulePropsResourcesVpc
  */
-export interface CfnModulePropsResourcesVpc {
+export interface CfnQuickStartModulePropsResourcesVpc {
   /**
-   * @schema CfnModulePropsResourcesVpc#Type
+   * @schema CfnQuickStartModulePropsResourcesVpc#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesVpc#Properties
+   * @schema CfnQuickStartModulePropsResourcesVpc#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesVpc' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesVpc' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesVpc(obj: CfnModulePropsResourcesVpc | undefined): Record<string, any> | undefined {
-  if (obj === undefined) { return undefined; }
-  const result = {
-    'Type': obj.type,
-    'Properties': obj.properties,
-  };
-  // filter undefined values
-  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
-}
-/* eslint-enable max-len, quote-props */
-
-/**
- * @schema CfnModulePropsResourcesPublicSubnet1
- */
-export interface CfnModulePropsResourcesPublicSubnet1 {
-  /**
-   * @schema CfnModulePropsResourcesPublicSubnet1#Type
-   */
-  readonly type?: string;
-
-  /**
-   * @schema CfnModulePropsResourcesPublicSubnet1#Properties
-   */
-  readonly properties?: any;
-
-}
-
-/**
- * Converts an object of type 'CfnModulePropsResourcesPublicSubnet1' to JSON representation.
- */
-/* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPublicSubnet1(obj: CfnModulePropsResourcesPublicSubnet1 | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesVpc(obj: CfnQuickStartModulePropsResourcesVpc | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1083,26 +1052,26 @@ export function toJson_CfnModulePropsResourcesPublicSubnet1(obj: CfnModulePropsR
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPublicSubnet2
+ * @schema CfnQuickStartModulePropsResourcesPublicSubnet1
  */
-export interface CfnModulePropsResourcesPublicSubnet2 {
+export interface CfnQuickStartModulePropsResourcesPublicSubnet1 {
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet2#Type
+   * @schema CfnQuickStartModulePropsResourcesPublicSubnet1#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet2#Properties
+   * @schema CfnQuickStartModulePropsResourcesPublicSubnet1#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPublicSubnet2' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesPublicSubnet1' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPublicSubnet2(obj: CfnModulePropsResourcesPublicSubnet2 | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesPublicSubnet1(obj: CfnQuickStartModulePropsResourcesPublicSubnet1 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1114,26 +1083,26 @@ export function toJson_CfnModulePropsResourcesPublicSubnet2(obj: CfnModulePropsR
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPublicSubnet3
+ * @schema CfnQuickStartModulePropsResourcesPublicSubnet2
  */
-export interface CfnModulePropsResourcesPublicSubnet3 {
+export interface CfnQuickStartModulePropsResourcesPublicSubnet2 {
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet3#Type
+   * @schema CfnQuickStartModulePropsResourcesPublicSubnet2#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet3#Properties
+   * @schema CfnQuickStartModulePropsResourcesPublicSubnet2#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPublicSubnet3' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesPublicSubnet2' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPublicSubnet3(obj: CfnModulePropsResourcesPublicSubnet3 | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesPublicSubnet2(obj: CfnQuickStartModulePropsResourcesPublicSubnet2 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1145,26 +1114,26 @@ export function toJson_CfnModulePropsResourcesPublicSubnet3(obj: CfnModulePropsR
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesInternetGateway
+ * @schema CfnQuickStartModulePropsResourcesPublicSubnet3
  */
-export interface CfnModulePropsResourcesInternetGateway {
+export interface CfnQuickStartModulePropsResourcesPublicSubnet3 {
   /**
-   * @schema CfnModulePropsResourcesInternetGateway#Type
+   * @schema CfnQuickStartModulePropsResourcesPublicSubnet3#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesInternetGateway#Properties
+   * @schema CfnQuickStartModulePropsResourcesPublicSubnet3#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesInternetGateway' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesPublicSubnet3' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesInternetGateway(obj: CfnModulePropsResourcesInternetGateway | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesPublicSubnet3(obj: CfnQuickStartModulePropsResourcesPublicSubnet3 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1176,26 +1145,26 @@ export function toJson_CfnModulePropsResourcesInternetGateway(obj: CfnModuleProp
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesVpcGatewayAttachment
+ * @schema CfnQuickStartModulePropsResourcesInternetGateway
  */
-export interface CfnModulePropsResourcesVpcGatewayAttachment {
+export interface CfnQuickStartModulePropsResourcesInternetGateway {
   /**
-   * @schema CfnModulePropsResourcesVpcGatewayAttachment#Type
+   * @schema CfnQuickStartModulePropsResourcesInternetGateway#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesVpcGatewayAttachment#Properties
+   * @schema CfnQuickStartModulePropsResourcesInternetGateway#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesVpcGatewayAttachment' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesInternetGateway' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesVpcGatewayAttachment(obj: CfnModulePropsResourcesVpcGatewayAttachment | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesInternetGateway(obj: CfnQuickStartModulePropsResourcesInternetGateway | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1207,26 +1176,26 @@ export function toJson_CfnModulePropsResourcesVpcGatewayAttachment(obj: CfnModul
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPublicSubnetRouteTable
+ * @schema CfnQuickStartModulePropsResourcesVpcGatewayAttachment
  */
-export interface CfnModulePropsResourcesPublicSubnetRouteTable {
+export interface CfnQuickStartModulePropsResourcesVpcGatewayAttachment {
   /**
-   * @schema CfnModulePropsResourcesPublicSubnetRouteTable#Type
+   * @schema CfnQuickStartModulePropsResourcesVpcGatewayAttachment#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPublicSubnetRouteTable#Properties
+   * @schema CfnQuickStartModulePropsResourcesVpcGatewayAttachment#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPublicSubnetRouteTable' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesVpcGatewayAttachment' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPublicSubnetRouteTable(obj: CfnModulePropsResourcesPublicSubnetRouteTable | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesVpcGatewayAttachment(obj: CfnQuickStartModulePropsResourcesVpcGatewayAttachment | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1238,26 +1207,26 @@ export function toJson_CfnModulePropsResourcesPublicSubnetRouteTable(obj: CfnMod
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPublicSubnetRoute
+ * @schema CfnQuickStartModulePropsResourcesPublicSubnetRouteTable
  */
-export interface CfnModulePropsResourcesPublicSubnetRoute {
+export interface CfnQuickStartModulePropsResourcesPublicSubnetRouteTable {
   /**
-   * @schema CfnModulePropsResourcesPublicSubnetRoute#Type
+   * @schema CfnQuickStartModulePropsResourcesPublicSubnetRouteTable#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPublicSubnetRoute#Properties
+   * @schema CfnQuickStartModulePropsResourcesPublicSubnetRouteTable#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPublicSubnetRoute' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesPublicSubnetRouteTable' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPublicSubnetRoute(obj: CfnModulePropsResourcesPublicSubnetRoute | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesPublicSubnetRouteTable(obj: CfnQuickStartModulePropsResourcesPublicSubnetRouteTable | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1269,26 +1238,26 @@ export function toJson_CfnModulePropsResourcesPublicSubnetRoute(obj: CfnModulePr
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPublicSubnet1RouteTableAssociation
+ * @schema CfnQuickStartModulePropsResourcesPublicSubnetRoute
  */
-export interface CfnModulePropsResourcesPublicSubnet1RouteTableAssociation {
+export interface CfnQuickStartModulePropsResourcesPublicSubnetRoute {
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet1RouteTableAssociation#Type
+   * @schema CfnQuickStartModulePropsResourcesPublicSubnetRoute#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet1RouteTableAssociation#Properties
+   * @schema CfnQuickStartModulePropsResourcesPublicSubnetRoute#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPublicSubnet1RouteTableAssociation' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesPublicSubnetRoute' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPublicSubnet1RouteTableAssociation(obj: CfnModulePropsResourcesPublicSubnet1RouteTableAssociation | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesPublicSubnetRoute(obj: CfnQuickStartModulePropsResourcesPublicSubnetRoute | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1300,26 +1269,26 @@ export function toJson_CfnModulePropsResourcesPublicSubnet1RouteTableAssociation
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPublicSubnet2RouteTableAssociation
+ * @schema CfnQuickStartModulePropsResourcesPublicSubnet1RouteTableAssociation
  */
-export interface CfnModulePropsResourcesPublicSubnet2RouteTableAssociation {
+export interface CfnQuickStartModulePropsResourcesPublicSubnet1RouteTableAssociation {
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet2RouteTableAssociation#Type
+   * @schema CfnQuickStartModulePropsResourcesPublicSubnet1RouteTableAssociation#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet2RouteTableAssociation#Properties
+   * @schema CfnQuickStartModulePropsResourcesPublicSubnet1RouteTableAssociation#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPublicSubnet2RouteTableAssociation' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesPublicSubnet1RouteTableAssociation' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPublicSubnet2RouteTableAssociation(obj: CfnModulePropsResourcesPublicSubnet2RouteTableAssociation | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesPublicSubnet1RouteTableAssociation(obj: CfnQuickStartModulePropsResourcesPublicSubnet1RouteTableAssociation | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1331,26 +1300,26 @@ export function toJson_CfnModulePropsResourcesPublicSubnet2RouteTableAssociation
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPublicSubnet3RouteTableAssociation
+ * @schema CfnQuickStartModulePropsResourcesPublicSubnet2RouteTableAssociation
  */
-export interface CfnModulePropsResourcesPublicSubnet3RouteTableAssociation {
+export interface CfnQuickStartModulePropsResourcesPublicSubnet2RouteTableAssociation {
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet3RouteTableAssociation#Type
+   * @schema CfnQuickStartModulePropsResourcesPublicSubnet2RouteTableAssociation#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet3RouteTableAssociation#Properties
+   * @schema CfnQuickStartModulePropsResourcesPublicSubnet2RouteTableAssociation#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPublicSubnet3RouteTableAssociation' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesPublicSubnet2RouteTableAssociation' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPublicSubnet3RouteTableAssociation(obj: CfnModulePropsResourcesPublicSubnet3RouteTableAssociation | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesPublicSubnet2RouteTableAssociation(obj: CfnQuickStartModulePropsResourcesPublicSubnet2RouteTableAssociation | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1362,26 +1331,26 @@ export function toJson_CfnModulePropsResourcesPublicSubnet3RouteTableAssociation
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesSplunkSmartstoreBucket
+ * @schema CfnQuickStartModulePropsResourcesPublicSubnet3RouteTableAssociation
  */
-export interface CfnModulePropsResourcesSplunkSmartstoreBucket {
+export interface CfnQuickStartModulePropsResourcesPublicSubnet3RouteTableAssociation {
   /**
-   * @schema CfnModulePropsResourcesSplunkSmartstoreBucket#Type
+   * @schema CfnQuickStartModulePropsResourcesPublicSubnet3RouteTableAssociation#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesSplunkSmartstoreBucket#Properties
+   * @schema CfnQuickStartModulePropsResourcesPublicSubnet3RouteTableAssociation#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesSplunkSmartstoreBucket' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesPublicSubnet3RouteTableAssociation' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesSplunkSmartstoreBucket(obj: CfnModulePropsResourcesSplunkSmartstoreBucket | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesPublicSubnet3RouteTableAssociation(obj: CfnQuickStartModulePropsResourcesPublicSubnet3RouteTableAssociation | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1393,26 +1362,26 @@ export function toJson_CfnModulePropsResourcesSplunkSmartstoreBucket(obj: CfnMod
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesSmartStoreS3BucketRole
+ * @schema CfnQuickStartModulePropsResourcesSplunkSmartstoreBucket
  */
-export interface CfnModulePropsResourcesSmartStoreS3BucketRole {
+export interface CfnQuickStartModulePropsResourcesSplunkSmartstoreBucket {
   /**
-   * @schema CfnModulePropsResourcesSmartStoreS3BucketRole#Type
+   * @schema CfnQuickStartModulePropsResourcesSplunkSmartstoreBucket#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesSmartStoreS3BucketRole#Properties
+   * @schema CfnQuickStartModulePropsResourcesSplunkSmartstoreBucket#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesSmartStoreS3BucketRole' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesSplunkSmartstoreBucket' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesSmartStoreS3BucketRole(obj: CfnModulePropsResourcesSmartStoreS3BucketRole | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesSplunkSmartstoreBucket(obj: CfnQuickStartModulePropsResourcesSplunkSmartstoreBucket | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1424,26 +1393,26 @@ export function toJson_CfnModulePropsResourcesSmartStoreS3BucketRole(obj: CfnMod
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesSmartStoreS3AccessInstanceProfile
+ * @schema CfnQuickStartModulePropsResourcesSmartStoreS3BucketRole
  */
-export interface CfnModulePropsResourcesSmartStoreS3AccessInstanceProfile {
+export interface CfnQuickStartModulePropsResourcesSmartStoreS3BucketRole {
   /**
-   * @schema CfnModulePropsResourcesSmartStoreS3AccessInstanceProfile#Type
+   * @schema CfnQuickStartModulePropsResourcesSmartStoreS3BucketRole#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesSmartStoreS3AccessInstanceProfile#Properties
+   * @schema CfnQuickStartModulePropsResourcesSmartStoreS3BucketRole#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesSmartStoreS3AccessInstanceProfile' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesSmartStoreS3BucketRole' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesSmartStoreS3AccessInstanceProfile(obj: CfnModulePropsResourcesSmartStoreS3AccessInstanceProfile | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesSmartStoreS3BucketRole(obj: CfnQuickStartModulePropsResourcesSmartStoreS3BucketRole | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1455,26 +1424,26 @@ export function toJson_CfnModulePropsResourcesSmartStoreS3AccessInstanceProfile(
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesSmartStoreS3BucketPolicy
+ * @schema CfnQuickStartModulePropsResourcesSmartStoreS3AccessInstanceProfile
  */
-export interface CfnModulePropsResourcesSmartStoreS3BucketPolicy {
+export interface CfnQuickStartModulePropsResourcesSmartStoreS3AccessInstanceProfile {
   /**
-   * @schema CfnModulePropsResourcesSmartStoreS3BucketPolicy#Type
+   * @schema CfnQuickStartModulePropsResourcesSmartStoreS3AccessInstanceProfile#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesSmartStoreS3BucketPolicy#Properties
+   * @schema CfnQuickStartModulePropsResourcesSmartStoreS3AccessInstanceProfile#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesSmartStoreS3BucketPolicy' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesSmartStoreS3AccessInstanceProfile' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesSmartStoreS3BucketPolicy(obj: CfnModulePropsResourcesSmartStoreS3BucketPolicy | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesSmartStoreS3AccessInstanceProfile(obj: CfnQuickStartModulePropsResourcesSmartStoreS3AccessInstanceProfile | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1486,26 +1455,26 @@ export function toJson_CfnModulePropsResourcesSmartStoreS3BucketPolicy(obj: CfnM
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesSplunkSearchHeadSecurityGroup
+ * @schema CfnQuickStartModulePropsResourcesSmartStoreS3BucketPolicy
  */
-export interface CfnModulePropsResourcesSplunkSearchHeadSecurityGroup {
+export interface CfnQuickStartModulePropsResourcesSmartStoreS3BucketPolicy {
   /**
-   * @schema CfnModulePropsResourcesSplunkSearchHeadSecurityGroup#Type
+   * @schema CfnQuickStartModulePropsResourcesSmartStoreS3BucketPolicy#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesSplunkSearchHeadSecurityGroup#Properties
+   * @schema CfnQuickStartModulePropsResourcesSmartStoreS3BucketPolicy#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesSplunkSearchHeadSecurityGroup' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesSmartStoreS3BucketPolicy' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesSplunkSearchHeadSecurityGroup(obj: CfnModulePropsResourcesSplunkSearchHeadSecurityGroup | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesSmartStoreS3BucketPolicy(obj: CfnQuickStartModulePropsResourcesSmartStoreS3BucketPolicy | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1517,26 +1486,26 @@ export function toJson_CfnModulePropsResourcesSplunkSearchHeadSecurityGroup(obj:
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesSplunkIndexerSecurityGroup
+ * @schema CfnQuickStartModulePropsResourcesSplunkSearchHeadSecurityGroup
  */
-export interface CfnModulePropsResourcesSplunkIndexerSecurityGroup {
+export interface CfnQuickStartModulePropsResourcesSplunkSearchHeadSecurityGroup {
   /**
-   * @schema CfnModulePropsResourcesSplunkIndexerSecurityGroup#Type
+   * @schema CfnQuickStartModulePropsResourcesSplunkSearchHeadSecurityGroup#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesSplunkIndexerSecurityGroup#Properties
+   * @schema CfnQuickStartModulePropsResourcesSplunkSearchHeadSecurityGroup#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesSplunkIndexerSecurityGroup' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesSplunkSearchHeadSecurityGroup' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesSplunkIndexerSecurityGroup(obj: CfnModulePropsResourcesSplunkIndexerSecurityGroup | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesSplunkSearchHeadSecurityGroup(obj: CfnQuickStartModulePropsResourcesSplunkSearchHeadSecurityGroup | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1548,26 +1517,26 @@ export function toJson_CfnModulePropsResourcesSplunkIndexerSecurityGroup(obj: Cf
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesSplunkSecurityGroup
+ * @schema CfnQuickStartModulePropsResourcesSplunkIndexerSecurityGroup
  */
-export interface CfnModulePropsResourcesSplunkSecurityGroup {
+export interface CfnQuickStartModulePropsResourcesSplunkIndexerSecurityGroup {
   /**
-   * @schema CfnModulePropsResourcesSplunkSecurityGroup#Type
+   * @schema CfnQuickStartModulePropsResourcesSplunkIndexerSecurityGroup#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesSplunkSecurityGroup#Properties
+   * @schema CfnQuickStartModulePropsResourcesSplunkIndexerSecurityGroup#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesSplunkSecurityGroup' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesSplunkIndexerSecurityGroup' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesSplunkSecurityGroup(obj: CfnModulePropsResourcesSplunkSecurityGroup | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesSplunkIndexerSecurityGroup(obj: CfnQuickStartModulePropsResourcesSplunkIndexerSecurityGroup | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1579,26 +1548,26 @@ export function toJson_CfnModulePropsResourcesSplunkSecurityGroup(obj: CfnModule
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesSplunkHttpEventCollectorLoadBalancerSecurityGroup
+ * @schema CfnQuickStartModulePropsResourcesSplunkSecurityGroup
  */
-export interface CfnModulePropsResourcesSplunkHttpEventCollectorLoadBalancerSecurityGroup {
+export interface CfnQuickStartModulePropsResourcesSplunkSecurityGroup {
   /**
-   * @schema CfnModulePropsResourcesSplunkHttpEventCollectorLoadBalancerSecurityGroup#Type
+   * @schema CfnQuickStartModulePropsResourcesSplunkSecurityGroup#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesSplunkHttpEventCollectorLoadBalancerSecurityGroup#Properties
+   * @schema CfnQuickStartModulePropsResourcesSplunkSecurityGroup#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesSplunkHttpEventCollectorLoadBalancerSecurityGroup' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesSplunkSecurityGroup' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesSplunkHttpEventCollectorLoadBalancerSecurityGroup(obj: CfnModulePropsResourcesSplunkHttpEventCollectorLoadBalancerSecurityGroup | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesSplunkSecurityGroup(obj: CfnQuickStartModulePropsResourcesSplunkSecurityGroup | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1610,26 +1579,26 @@ export function toJson_CfnModulePropsResourcesSplunkHttpEventCollectorLoadBalanc
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesSplunkSearchHeadInstance
+ * @schema CfnQuickStartModulePropsResourcesSplunkHttpEventCollectorLoadBalancerSecurityGroup
  */
-export interface CfnModulePropsResourcesSplunkSearchHeadInstance {
+export interface CfnQuickStartModulePropsResourcesSplunkHttpEventCollectorLoadBalancerSecurityGroup {
   /**
-   * @schema CfnModulePropsResourcesSplunkSearchHeadInstance#Type
+   * @schema CfnQuickStartModulePropsResourcesSplunkHttpEventCollectorLoadBalancerSecurityGroup#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesSplunkSearchHeadInstance#Properties
+   * @schema CfnQuickStartModulePropsResourcesSplunkHttpEventCollectorLoadBalancerSecurityGroup#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesSplunkSearchHeadInstance' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesSplunkHttpEventCollectorLoadBalancerSecurityGroup' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesSplunkSearchHeadInstance(obj: CfnModulePropsResourcesSplunkSearchHeadInstance | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesSplunkHttpEventCollectorLoadBalancerSecurityGroup(obj: CfnQuickStartModulePropsResourcesSplunkHttpEventCollectorLoadBalancerSecurityGroup | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1641,26 +1610,26 @@ export function toJson_CfnModulePropsResourcesSplunkSearchHeadInstance(obj: CfnM
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesSplunkCm
+ * @schema CfnQuickStartModulePropsResourcesSplunkSearchHeadInstance
  */
-export interface CfnModulePropsResourcesSplunkCm {
+export interface CfnQuickStartModulePropsResourcesSplunkSearchHeadInstance {
   /**
-   * @schema CfnModulePropsResourcesSplunkCm#Type
+   * @schema CfnQuickStartModulePropsResourcesSplunkSearchHeadInstance#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesSplunkCm#Properties
+   * @schema CfnQuickStartModulePropsResourcesSplunkSearchHeadInstance#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesSplunkCm' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesSplunkSearchHeadInstance' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesSplunkCm(obj: CfnModulePropsResourcesSplunkCm | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesSplunkSearchHeadInstance(obj: CfnQuickStartModulePropsResourcesSplunkSearchHeadInstance | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1672,26 +1641,26 @@ export function toJson_CfnModulePropsResourcesSplunkCm(obj: CfnModulePropsResour
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesSplunkCmWaitHandle
+ * @schema CfnQuickStartModulePropsResourcesSplunkCm
  */
-export interface CfnModulePropsResourcesSplunkCmWaitHandle {
+export interface CfnQuickStartModulePropsResourcesSplunkCm {
   /**
-   * @schema CfnModulePropsResourcesSplunkCmWaitHandle#Type
+   * @schema CfnQuickStartModulePropsResourcesSplunkCm#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesSplunkCmWaitHandle#Properties
+   * @schema CfnQuickStartModulePropsResourcesSplunkCm#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesSplunkCmWaitHandle' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesSplunkCm' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesSplunkCmWaitHandle(obj: CfnModulePropsResourcesSplunkCmWaitHandle | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesSplunkCm(obj: CfnQuickStartModulePropsResourcesSplunkCm | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1703,26 +1672,26 @@ export function toJson_CfnModulePropsResourcesSplunkCmWaitHandle(obj: CfnModuleP
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesSplunkCmWaitCondition
+ * @schema CfnQuickStartModulePropsResourcesSplunkCmWaitHandle
  */
-export interface CfnModulePropsResourcesSplunkCmWaitCondition {
+export interface CfnQuickStartModulePropsResourcesSplunkCmWaitHandle {
   /**
-   * @schema CfnModulePropsResourcesSplunkCmWaitCondition#Type
+   * @schema CfnQuickStartModulePropsResourcesSplunkCmWaitHandle#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesSplunkCmWaitCondition#Properties
+   * @schema CfnQuickStartModulePropsResourcesSplunkCmWaitHandle#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesSplunkCmWaitCondition' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesSplunkCmWaitHandle' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesSplunkCmWaitCondition(obj: CfnModulePropsResourcesSplunkCmWaitCondition | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesSplunkCmWaitHandle(obj: CfnQuickStartModulePropsResourcesSplunkCmWaitHandle | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1734,26 +1703,26 @@ export function toJson_CfnModulePropsResourcesSplunkCmWaitCondition(obj: CfnModu
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesSplunkShcDeployer
+ * @schema CfnQuickStartModulePropsResourcesSplunkCmWaitCondition
  */
-export interface CfnModulePropsResourcesSplunkShcDeployer {
+export interface CfnQuickStartModulePropsResourcesSplunkCmWaitCondition {
   /**
-   * @schema CfnModulePropsResourcesSplunkShcDeployer#Type
+   * @schema CfnQuickStartModulePropsResourcesSplunkCmWaitCondition#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesSplunkShcDeployer#Properties
+   * @schema CfnQuickStartModulePropsResourcesSplunkCmWaitCondition#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesSplunkShcDeployer' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesSplunkCmWaitCondition' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesSplunkShcDeployer(obj: CfnModulePropsResourcesSplunkShcDeployer | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesSplunkCmWaitCondition(obj: CfnQuickStartModulePropsResourcesSplunkCmWaitCondition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1765,26 +1734,26 @@ export function toJson_CfnModulePropsResourcesSplunkShcDeployer(obj: CfnModulePr
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesSplunkShcMember1
+ * @schema CfnQuickStartModulePropsResourcesSplunkShcDeployer
  */
-export interface CfnModulePropsResourcesSplunkShcMember1 {
+export interface CfnQuickStartModulePropsResourcesSplunkShcDeployer {
   /**
-   * @schema CfnModulePropsResourcesSplunkShcMember1#Type
+   * @schema CfnQuickStartModulePropsResourcesSplunkShcDeployer#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesSplunkShcMember1#Properties
+   * @schema CfnQuickStartModulePropsResourcesSplunkShcDeployer#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesSplunkShcMember1' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesSplunkShcDeployer' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesSplunkShcMember1(obj: CfnModulePropsResourcesSplunkShcMember1 | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesSplunkShcDeployer(obj: CfnQuickStartModulePropsResourcesSplunkShcDeployer | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1796,26 +1765,26 @@ export function toJson_CfnModulePropsResourcesSplunkShcMember1(obj: CfnModulePro
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesSplunkShcMember2
+ * @schema CfnQuickStartModulePropsResourcesSplunkShcMember1
  */
-export interface CfnModulePropsResourcesSplunkShcMember2 {
+export interface CfnQuickStartModulePropsResourcesSplunkShcMember1 {
   /**
-   * @schema CfnModulePropsResourcesSplunkShcMember2#Type
+   * @schema CfnQuickStartModulePropsResourcesSplunkShcMember1#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesSplunkShcMember2#Properties
+   * @schema CfnQuickStartModulePropsResourcesSplunkShcMember1#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesSplunkShcMember2' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesSplunkShcMember1' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesSplunkShcMember2(obj: CfnModulePropsResourcesSplunkShcMember2 | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesSplunkShcMember1(obj: CfnQuickStartModulePropsResourcesSplunkShcMember1 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1827,26 +1796,26 @@ export function toJson_CfnModulePropsResourcesSplunkShcMember2(obj: CfnModulePro
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesSplunkShcMember3
+ * @schema CfnQuickStartModulePropsResourcesSplunkShcMember2
  */
-export interface CfnModulePropsResourcesSplunkShcMember3 {
+export interface CfnQuickStartModulePropsResourcesSplunkShcMember2 {
   /**
-   * @schema CfnModulePropsResourcesSplunkShcMember3#Type
+   * @schema CfnQuickStartModulePropsResourcesSplunkShcMember2#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesSplunkShcMember3#Properties
+   * @schema CfnQuickStartModulePropsResourcesSplunkShcMember2#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesSplunkShcMember3' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesSplunkShcMember2' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesSplunkShcMember3(obj: CfnModulePropsResourcesSplunkShcMember3 | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesSplunkShcMember2(obj: CfnQuickStartModulePropsResourcesSplunkShcMember2 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1858,26 +1827,26 @@ export function toJson_CfnModulePropsResourcesSplunkShcMember3(obj: CfnModulePro
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesCfnUser
+ * @schema CfnQuickStartModulePropsResourcesSplunkShcMember3
  */
-export interface CfnModulePropsResourcesCfnUser {
+export interface CfnQuickStartModulePropsResourcesSplunkShcMember3 {
   /**
-   * @schema CfnModulePropsResourcesCfnUser#Type
+   * @schema CfnQuickStartModulePropsResourcesSplunkShcMember3#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesCfnUser#Properties
+   * @schema CfnQuickStartModulePropsResourcesSplunkShcMember3#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesCfnUser' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesSplunkShcMember3' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesCfnUser(obj: CfnModulePropsResourcesCfnUser | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesSplunkShcMember3(obj: CfnQuickStartModulePropsResourcesSplunkShcMember3 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1889,26 +1858,26 @@ export function toJson_CfnModulePropsResourcesCfnUser(obj: CfnModulePropsResourc
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesCfnKeys
+ * @schema CfnQuickStartModulePropsResourcesCfnUser
  */
-export interface CfnModulePropsResourcesCfnKeys {
+export interface CfnQuickStartModulePropsResourcesCfnUser {
   /**
-   * @schema CfnModulePropsResourcesCfnKeys#Type
+   * @schema CfnQuickStartModulePropsResourcesCfnUser#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesCfnKeys#Properties
+   * @schema CfnQuickStartModulePropsResourcesCfnUser#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesCfnKeys' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesCfnUser' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesCfnKeys(obj: CfnModulePropsResourcesCfnKeys | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesCfnUser(obj: CfnQuickStartModulePropsResourcesCfnUser | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1920,26 +1889,26 @@ export function toJson_CfnModulePropsResourcesCfnKeys(obj: CfnModulePropsResourc
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesBucketPolicy
+ * @schema CfnQuickStartModulePropsResourcesCfnKeys
  */
-export interface CfnModulePropsResourcesBucketPolicy {
+export interface CfnQuickStartModulePropsResourcesCfnKeys {
   /**
-   * @schema CfnModulePropsResourcesBucketPolicy#Type
+   * @schema CfnQuickStartModulePropsResourcesCfnKeys#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesBucketPolicy#Properties
+   * @schema CfnQuickStartModulePropsResourcesCfnKeys#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesBucketPolicy' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesCfnKeys' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesBucketPolicy(obj: CfnModulePropsResourcesBucketPolicy | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesCfnKeys(obj: CfnQuickStartModulePropsResourcesCfnKeys | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1951,26 +1920,26 @@ export function toJson_CfnModulePropsResourcesBucketPolicy(obj: CfnModulePropsRe
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesSplunkIndexerLaunchConfiguration
+ * @schema CfnQuickStartModulePropsResourcesBucketPolicy
  */
-export interface CfnModulePropsResourcesSplunkIndexerLaunchConfiguration {
+export interface CfnQuickStartModulePropsResourcesBucketPolicy {
   /**
-   * @schema CfnModulePropsResourcesSplunkIndexerLaunchConfiguration#Type
+   * @schema CfnQuickStartModulePropsResourcesBucketPolicy#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesSplunkIndexerLaunchConfiguration#Properties
+   * @schema CfnQuickStartModulePropsResourcesBucketPolicy#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesSplunkIndexerLaunchConfiguration' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesBucketPolicy' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesSplunkIndexerLaunchConfiguration(obj: CfnModulePropsResourcesSplunkIndexerLaunchConfiguration | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesBucketPolicy(obj: CfnQuickStartModulePropsResourcesBucketPolicy | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1982,26 +1951,26 @@ export function toJson_CfnModulePropsResourcesSplunkIndexerLaunchConfiguration(o
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesSplunkShcLoadBalancer
+ * @schema CfnQuickStartModulePropsResourcesSplunkIndexerLaunchConfiguration
  */
-export interface CfnModulePropsResourcesSplunkShcLoadBalancer {
+export interface CfnQuickStartModulePropsResourcesSplunkIndexerLaunchConfiguration {
   /**
-   * @schema CfnModulePropsResourcesSplunkShcLoadBalancer#Type
+   * @schema CfnQuickStartModulePropsResourcesSplunkIndexerLaunchConfiguration#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesSplunkShcLoadBalancer#Properties
+   * @schema CfnQuickStartModulePropsResourcesSplunkIndexerLaunchConfiguration#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesSplunkShcLoadBalancer' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesSplunkIndexerLaunchConfiguration' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesSplunkShcLoadBalancer(obj: CfnModulePropsResourcesSplunkShcLoadBalancer | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesSplunkIndexerLaunchConfiguration(obj: CfnQuickStartModulePropsResourcesSplunkIndexerLaunchConfiguration | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2013,26 +1982,26 @@ export function toJson_CfnModulePropsResourcesSplunkShcLoadBalancer(obj: CfnModu
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesSplunkHttpEventCollectorLoadBalancer
+ * @schema CfnQuickStartModulePropsResourcesSplunkShcLoadBalancer
  */
-export interface CfnModulePropsResourcesSplunkHttpEventCollectorLoadBalancer {
+export interface CfnQuickStartModulePropsResourcesSplunkShcLoadBalancer {
   /**
-   * @schema CfnModulePropsResourcesSplunkHttpEventCollectorLoadBalancer#Type
+   * @schema CfnQuickStartModulePropsResourcesSplunkShcLoadBalancer#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesSplunkHttpEventCollectorLoadBalancer#Properties
+   * @schema CfnQuickStartModulePropsResourcesSplunkShcLoadBalancer#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesSplunkHttpEventCollectorLoadBalancer' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesSplunkShcLoadBalancer' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesSplunkHttpEventCollectorLoadBalancer(obj: CfnModulePropsResourcesSplunkHttpEventCollectorLoadBalancer | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesSplunkShcLoadBalancer(obj: CfnQuickStartModulePropsResourcesSplunkShcLoadBalancer | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2044,26 +2013,57 @@ export function toJson_CfnModulePropsResourcesSplunkHttpEventCollectorLoadBalanc
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesSplunkIndexerNodesAsg
+ * @schema CfnQuickStartModulePropsResourcesSplunkHttpEventCollectorLoadBalancer
  */
-export interface CfnModulePropsResourcesSplunkIndexerNodesAsg {
+export interface CfnQuickStartModulePropsResourcesSplunkHttpEventCollectorLoadBalancer {
   /**
-   * @schema CfnModulePropsResourcesSplunkIndexerNodesAsg#Type
+   * @schema CfnQuickStartModulePropsResourcesSplunkHttpEventCollectorLoadBalancer#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesSplunkIndexerNodesAsg#Properties
+   * @schema CfnQuickStartModulePropsResourcesSplunkHttpEventCollectorLoadBalancer#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesSplunkIndexerNodesAsg' to JSON representation.
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesSplunkHttpEventCollectorLoadBalancer' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesSplunkIndexerNodesAsg(obj: CfnModulePropsResourcesSplunkIndexerNodesAsg | undefined): Record<string, any> | undefined {
+export function toJson_CfnQuickStartModulePropsResourcesSplunkHttpEventCollectorLoadBalancer(obj: CfnQuickStartModulePropsResourcesSplunkHttpEventCollectorLoadBalancer | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'Type': obj.type,
+    'Properties': obj.properties,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnQuickStartModulePropsResourcesSplunkIndexerNodesAsg
+ */
+export interface CfnQuickStartModulePropsResourcesSplunkIndexerNodesAsg {
+  /**
+   * @schema CfnQuickStartModulePropsResourcesSplunkIndexerNodesAsg#Type
+   */
+  readonly type?: string;
+
+  /**
+   * @schema CfnQuickStartModulePropsResourcesSplunkIndexerNodesAsg#Properties
+   */
+  readonly properties?: any;
+
+}
+
+/**
+ * Converts an object of type 'CfnQuickStartModulePropsResourcesSplunkIndexerNodesAsg' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnQuickStartModulePropsResourcesSplunkIndexerNodesAsg(obj: CfnQuickStartModulePropsResourcesSplunkIndexerNodesAsg | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2082,7 +2082,7 @@ export function toJson_CfnModulePropsResourcesSplunkIndexerNodesAsg(obj: CfnModu
  * @stability external
  * @link http://unknown-url
  */
-export class CfnModule extends cdk.CfnResource {
+export class CfnQuickStartModule extends cdk.CfnResource {
   /**
   * The CloudFormation resource type name for this resource class.
   */
@@ -2091,7 +2091,7 @@ export class CfnModule extends cdk.CfnResource {
   /**
    * Resource props.
    */
-  public readonly props: CfnModuleProps;
+  public readonly props: CfnQuickStartModuleProps;
 
 
   /**
@@ -2101,8 +2101,8 @@ export class CfnModule extends cdk.CfnResource {
    * @param id    - scoped id of the resource
    * @param props - resource properties
    */
-  constructor(scope: cdk.Construct, id: string, props: CfnModuleProps) {
-    super(scope, id, { type: CfnModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnModuleProps(props)! });
+  constructor(scope: cdk.Construct, id: string, props: CfnQuickStartModuleProps) {
+    super(scope, id, { type: CfnQuickStartModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnQuickStartModuleProps(props)! });
 
     this.props = props;
 

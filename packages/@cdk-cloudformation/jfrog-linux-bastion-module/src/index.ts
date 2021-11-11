@@ -4,30 +4,30 @@ import * as cdk from '@aws-cdk/core';
 /**
  * Schema for Module Fragment of type JFrog::Linux::Bastion::MODULE
  *
- * @schema CfnModuleProps
+ * @schema CfnBastionModuleProps
  */
-export interface CfnModuleProps {
+export interface CfnBastionModuleProps {
   /**
-   * @schema CfnModuleProps#Parameters
+   * @schema CfnBastionModuleProps#Parameters
    */
-  readonly parameters?: CfnModulePropsParameters;
+  readonly parameters?: CfnBastionModulePropsParameters;
 
   /**
-   * @schema CfnModuleProps#Resources
+   * @schema CfnBastionModuleProps#Resources
    */
-  readonly resources?: CfnModulePropsResources;
+  readonly resources?: CfnBastionModulePropsResources;
 
 }
 
 /**
- * Converts an object of type 'CfnModuleProps' to JSON representation.
+ * Converts an object of type 'CfnBastionModuleProps' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModuleProps(obj: CfnModuleProps | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModuleProps(obj: CfnBastionModuleProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'Parameters': toJson_CfnModulePropsParameters(obj.parameters),
-    'Resources': toJson_CfnModulePropsResources(obj.resources),
+    'Parameters': toJson_CfnBastionModulePropsParameters(obj.parameters),
+    'Resources': toJson_CfnBastionModulePropsResources(obj.resources),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -35,194 +35,194 @@ export function toJson_CfnModuleProps(obj: CfnModuleProps | undefined): Record<s
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParameters
+ * @schema CfnBastionModulePropsParameters
  */
-export interface CfnModulePropsParameters {
+export interface CfnBastionModulePropsParameters {
   /**
    * Logical Id of the MODULE
    *
-   * @schema CfnModulePropsParameters#LogicalId
+   * @schema CfnBastionModulePropsParameters#LogicalId
    */
-  readonly logicalId?: CfnModulePropsParametersLogicalId;
+  readonly logicalId?: CfnBastionModulePropsParametersLogicalId;
 
   /**
    * The Linux distribution for the AMI to be used for the bastion instances.
    *
-   * @schema CfnModulePropsParameters#BastionAMIOS
+   * @schema CfnBastionModulePropsParameters#BastionAMIOS
    */
-  readonly bastionAmios?: CfnModulePropsParametersBastionAmios;
+  readonly bastionAmios?: CfnBastionModulePropsParametersBastionAmios;
 
   /**
    * The value used for the name tag of the bastion host
    *
-   * @schema CfnModulePropsParameters#BastionHostName
+   * @schema CfnBastionModulePropsParameters#BastionHostName
    */
-  readonly bastionHostName?: CfnModulePropsParametersBastionHostName;
+  readonly bastionHostName?: CfnBastionModulePropsParametersBastionHostName;
 
   /**
    * Banner text to display upon login.
    *
-   * @schema CfnModulePropsParameters#BastionBanner
+   * @schema CfnBastionModulePropsParameters#BastionBanner
    */
-  readonly bastionBanner?: CfnModulePropsParametersBastionBanner;
+  readonly bastionBanner?: CfnBastionModulePropsParametersBastionBanner;
 
   /**
    * VPC tenancy to launch the bastion in. Options: 'dedicated' or 'default'
    *
-   * @schema CfnModulePropsParameters#BastionTenancy
+   * @schema CfnBastionModulePropsParameters#BastionTenancy
    */
-  readonly bastionTenancy?: CfnModulePropsParametersBastionTenancy;
+  readonly bastionTenancy?: CfnBastionModulePropsParametersBastionTenancy;
 
   /**
    * Amazon EC2 instance type for the bastion instances.
    *
-   * @schema CfnModulePropsParameters#BastionInstanceType
+   * @schema CfnBastionModulePropsParameters#BastionInstanceType
    */
-  readonly bastionInstanceType?: CfnModulePropsParametersBastionInstanceType;
+  readonly bastionInstanceType?: CfnBastionModulePropsParametersBastionInstanceType;
 
   /**
    * To include a banner to be displayed when connecting via SSH to the bastion, choose true.
    *
-   * @schema CfnModulePropsParameters#EnableBanner
+   * @schema CfnBastionModulePropsParameters#EnableBanner
    */
-  readonly enableBanner?: CfnModulePropsParametersEnableBanner;
+  readonly enableBanner?: CfnBastionModulePropsParametersEnableBanner;
 
   /**
    * To enable TCP forwarding, choose true.
    *
-   * @schema CfnModulePropsParameters#EnableTCPForwarding
+   * @schema CfnBastionModulePropsParameters#EnableTCPForwarding
    */
-  readonly enableTcpForwarding?: CfnModulePropsParametersEnableTcpForwarding;
+  readonly enableTcpForwarding?: CfnBastionModulePropsParametersEnableTcpForwarding;
 
   /**
    * To enable X11 forwarding, choose true.
    *
-   * @schema CfnModulePropsParameters#EnableX11Forwarding
+   * @schema CfnBastionModulePropsParameters#EnableX11Forwarding
    */
-  readonly enableX11Forwarding?: CfnModulePropsParametersEnableX11Forwarding;
+  readonly enableX11Forwarding?: CfnBastionModulePropsParametersEnableX11Forwarding;
 
   /**
    * Name of an existing public/private key pair. If you do not have one in this AWS Region, please create it before continuing.
    *
-   * @schema CfnModulePropsParameters#KeyPairName
+   * @schema CfnBastionModulePropsParameters#KeyPairName
    */
-  readonly keyPairName?: CfnModulePropsParametersKeyPairName;
+  readonly keyPairName?: CfnBastionModulePropsParametersKeyPairName;
 
   /**
    * The number of bastion hosts to create. The maximum number is four.
    *
-   * @schema CfnModulePropsParameters#NumBastionHosts
+   * @schema CfnBastionModulePropsParameters#NumBastionHosts
    */
-  readonly numBastionHosts?: CfnModulePropsParametersNumBastionHosts;
+  readonly numBastionHosts?: CfnBastionModulePropsParametersNumBastionHosts;
 
   /**
    * ID of the public subnet in Availability Zone 1 of your existing VPC (e.g., subnet-z0376dab).
    *
-   * @schema CfnModulePropsParameters#PublicSubnet1Id
+   * @schema CfnBastionModulePropsParameters#PublicSubnet1Id
    */
-  readonly publicSubnet1Id?: CfnModulePropsParametersPublicSubnet1Id;
+  readonly publicSubnet1Id?: CfnBastionModulePropsParametersPublicSubnet1Id;
 
   /**
    * ID of the public subnet in Availability Zone 1 of your existing VPC (e.g., subnet-z0376dab).
    *
-   * @schema CfnModulePropsParameters#PublicSubnet2Id
+   * @schema CfnBastionModulePropsParameters#PublicSubnet2Id
    */
-  readonly publicSubnet2Id?: CfnModulePropsParametersPublicSubnet2Id;
+  readonly publicSubnet2Id?: CfnBastionModulePropsParametersPublicSubnet2Id;
 
   /**
    * S3 bucket name for the Quick Start assets. Quick Start bucket name can include numbers, lowercase letters, uppercase letters, and hyphens (-). It cannot start or end with a hyphen (-).
    *
-   * @schema CfnModulePropsParameters#QSS3BucketName
+   * @schema CfnBastionModulePropsParameters#QSS3BucketName
    */
-  readonly qss3BucketName?: CfnModulePropsParametersQss3BucketName;
+  readonly qss3BucketName?: CfnBastionModulePropsParametersQss3BucketName;
 
   /**
    * The AWS Region where the Quick Start S3 bucket (QSS3BucketName) is hosted. When using your own bucket, you must specify this value.
    *
-   * @schema CfnModulePropsParameters#QSS3BucketRegion
+   * @schema CfnBastionModulePropsParameters#QSS3BucketRegion
    */
-  readonly qss3BucketRegion?: CfnModulePropsParametersQss3BucketRegion;
+  readonly qss3BucketRegion?: CfnBastionModulePropsParametersQss3BucketRegion;
 
   /**
    * S3 key prefix for the Quick Start assets. Quick Start key prefix can include numbers, lowercase letters, uppercase letters, hyphens (-), dots (.) and forward slash (/) and it should end with a forward slash (/).
    *
-   * @schema CfnModulePropsParameters#QSS3KeyPrefix
+   * @schema CfnBastionModulePropsParameters#QSS3KeyPrefix
    */
-  readonly qss3KeyPrefix?: CfnModulePropsParametersQss3KeyPrefix;
+  readonly qss3KeyPrefix?: CfnBastionModulePropsParametersQss3KeyPrefix;
 
   /**
    * Allowed CIDR block for external SSH access to the bastions.
    *
-   * @schema CfnModulePropsParameters#RemoteAccessCIDR
+   * @schema CfnBastionModulePropsParameters#RemoteAccessCIDR
    */
-  readonly remoteAccessCidr?: CfnModulePropsParametersRemoteAccessCidr;
+  readonly remoteAccessCidr?: CfnBastionModulePropsParametersRemoteAccessCidr;
 
   /**
    * ID of the VPC (e.g., vpc-0343606e).
    *
-   * @schema CfnModulePropsParameters#VPCID
+   * @schema CfnBastionModulePropsParameters#VPCID
    */
-  readonly vpcid?: CfnModulePropsParametersVpcid;
+  readonly vpcid?: CfnBastionModulePropsParametersVpcid;
 
   /**
    * An alternative initialization script to run during setup.
    *
-   * @schema CfnModulePropsParameters#AlternativeInitializationScript
+   * @schema CfnBastionModulePropsParameters#AlternativeInitializationScript
    */
-  readonly alternativeInitializationScript?: CfnModulePropsParametersAlternativeInitializationScript;
+  readonly alternativeInitializationScript?: CfnBastionModulePropsParametersAlternativeInitializationScript;
 
   /**
    * The Region-specific image to use for the instance.
    *
-   * @schema CfnModulePropsParameters#OSImageOverride
+   * @schema CfnBastionModulePropsParameters#OSImageOverride
    */
-  readonly osImageOverride?: CfnModulePropsParametersOsImageOverride;
+  readonly osImageOverride?: CfnBastionModulePropsParametersOsImageOverride;
 
   /**
    * A comma-separated list of environment variables for use in bootstrapping. Variables must be in the format KEY=VALUE. VALUE cannot contain commas.
    *
-   * @schema CfnModulePropsParameters#EnvironmentVariables
+   * @schema CfnBastionModulePropsParameters#EnvironmentVariables
    */
-  readonly environmentVariables?: CfnModulePropsParametersEnvironmentVariables;
+  readonly environmentVariables?: CfnBastionModulePropsParametersEnvironmentVariables;
 
   /**
    * The size in GB for the root EBS volume.
    *
-   * @schema CfnModulePropsParameters#RootVolumeSize
+   * @schema CfnBastionModulePropsParameters#RootVolumeSize
    */
-  readonly rootVolumeSize?: CfnModulePropsParametersRootVolumeSize;
+  readonly rootVolumeSize?: CfnBastionModulePropsParametersRootVolumeSize;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParameters' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsParameters' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParameters(obj: CfnModulePropsParameters | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsParameters(obj: CfnBastionModulePropsParameters | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'LogicalId': toJson_CfnModulePropsParametersLogicalId(obj.logicalId),
-    'BastionAMIOS': toJson_CfnModulePropsParametersBastionAmios(obj.bastionAmios),
-    'BastionHostName': toJson_CfnModulePropsParametersBastionHostName(obj.bastionHostName),
-    'BastionBanner': toJson_CfnModulePropsParametersBastionBanner(obj.bastionBanner),
-    'BastionTenancy': toJson_CfnModulePropsParametersBastionTenancy(obj.bastionTenancy),
-    'BastionInstanceType': toJson_CfnModulePropsParametersBastionInstanceType(obj.bastionInstanceType),
-    'EnableBanner': toJson_CfnModulePropsParametersEnableBanner(obj.enableBanner),
-    'EnableTCPForwarding': toJson_CfnModulePropsParametersEnableTcpForwarding(obj.enableTcpForwarding),
-    'EnableX11Forwarding': toJson_CfnModulePropsParametersEnableX11Forwarding(obj.enableX11Forwarding),
-    'KeyPairName': toJson_CfnModulePropsParametersKeyPairName(obj.keyPairName),
-    'NumBastionHosts': toJson_CfnModulePropsParametersNumBastionHosts(obj.numBastionHosts),
-    'PublicSubnet1Id': toJson_CfnModulePropsParametersPublicSubnet1Id(obj.publicSubnet1Id),
-    'PublicSubnet2Id': toJson_CfnModulePropsParametersPublicSubnet2Id(obj.publicSubnet2Id),
-    'QSS3BucketName': toJson_CfnModulePropsParametersQss3BucketName(obj.qss3BucketName),
-    'QSS3BucketRegion': toJson_CfnModulePropsParametersQss3BucketRegion(obj.qss3BucketRegion),
-    'QSS3KeyPrefix': toJson_CfnModulePropsParametersQss3KeyPrefix(obj.qss3KeyPrefix),
-    'RemoteAccessCIDR': toJson_CfnModulePropsParametersRemoteAccessCidr(obj.remoteAccessCidr),
-    'VPCID': toJson_CfnModulePropsParametersVpcid(obj.vpcid),
-    'AlternativeInitializationScript': toJson_CfnModulePropsParametersAlternativeInitializationScript(obj.alternativeInitializationScript),
-    'OSImageOverride': toJson_CfnModulePropsParametersOsImageOverride(obj.osImageOverride),
-    'EnvironmentVariables': toJson_CfnModulePropsParametersEnvironmentVariables(obj.environmentVariables),
-    'RootVolumeSize': toJson_CfnModulePropsParametersRootVolumeSize(obj.rootVolumeSize),
+    'LogicalId': toJson_CfnBastionModulePropsParametersLogicalId(obj.logicalId),
+    'BastionAMIOS': toJson_CfnBastionModulePropsParametersBastionAmios(obj.bastionAmios),
+    'BastionHostName': toJson_CfnBastionModulePropsParametersBastionHostName(obj.bastionHostName),
+    'BastionBanner': toJson_CfnBastionModulePropsParametersBastionBanner(obj.bastionBanner),
+    'BastionTenancy': toJson_CfnBastionModulePropsParametersBastionTenancy(obj.bastionTenancy),
+    'BastionInstanceType': toJson_CfnBastionModulePropsParametersBastionInstanceType(obj.bastionInstanceType),
+    'EnableBanner': toJson_CfnBastionModulePropsParametersEnableBanner(obj.enableBanner),
+    'EnableTCPForwarding': toJson_CfnBastionModulePropsParametersEnableTcpForwarding(obj.enableTcpForwarding),
+    'EnableX11Forwarding': toJson_CfnBastionModulePropsParametersEnableX11Forwarding(obj.enableX11Forwarding),
+    'KeyPairName': toJson_CfnBastionModulePropsParametersKeyPairName(obj.keyPairName),
+    'NumBastionHosts': toJson_CfnBastionModulePropsParametersNumBastionHosts(obj.numBastionHosts),
+    'PublicSubnet1Id': toJson_CfnBastionModulePropsParametersPublicSubnet1Id(obj.publicSubnet1Id),
+    'PublicSubnet2Id': toJson_CfnBastionModulePropsParametersPublicSubnet2Id(obj.publicSubnet2Id),
+    'QSS3BucketName': toJson_CfnBastionModulePropsParametersQss3BucketName(obj.qss3BucketName),
+    'QSS3BucketRegion': toJson_CfnBastionModulePropsParametersQss3BucketRegion(obj.qss3BucketRegion),
+    'QSS3KeyPrefix': toJson_CfnBastionModulePropsParametersQss3KeyPrefix(obj.qss3KeyPrefix),
+    'RemoteAccessCIDR': toJson_CfnBastionModulePropsParametersRemoteAccessCidr(obj.remoteAccessCidr),
+    'VPCID': toJson_CfnBastionModulePropsParametersVpcid(obj.vpcid),
+    'AlternativeInitializationScript': toJson_CfnBastionModulePropsParametersAlternativeInitializationScript(obj.alternativeInitializationScript),
+    'OSImageOverride': toJson_CfnBastionModulePropsParametersOsImageOverride(obj.osImageOverride),
+    'EnvironmentVariables': toJson_CfnBastionModulePropsParametersEnvironmentVariables(obj.environmentVariables),
+    'RootVolumeSize': toJson_CfnBastionModulePropsParametersRootVolumeSize(obj.rootVolumeSize),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -230,90 +230,90 @@ export function toJson_CfnModulePropsParameters(obj: CfnModulePropsParameters | 
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResources
+ * @schema CfnBastionModulePropsResources
  */
-export interface CfnModulePropsResources {
+export interface CfnBastionModulePropsResources {
   /**
-   * @schema CfnModulePropsResources#BastionMainLogGroup
+   * @schema CfnBastionModulePropsResources#BastionMainLogGroup
    */
-  readonly bastionMainLogGroup?: CfnModulePropsResourcesBastionMainLogGroup;
+  readonly bastionMainLogGroup?: CfnBastionModulePropsResourcesBastionMainLogGroup;
 
   /**
-   * @schema CfnModulePropsResources#SSHMetricFilter
+   * @schema CfnBastionModulePropsResources#SSHMetricFilter
    */
-  readonly sshMetricFilter?: CfnModulePropsResourcesSshMetricFilter;
+  readonly sshMetricFilter?: CfnBastionModulePropsResourcesSshMetricFilter;
 
   /**
-   * @schema CfnModulePropsResources#BastionHostRole
+   * @schema CfnBastionModulePropsResources#BastionHostRole
    */
-  readonly bastionHostRole?: CfnModulePropsResourcesBastionHostRole;
+  readonly bastionHostRole?: CfnBastionModulePropsResourcesBastionHostRole;
 
   /**
-   * @schema CfnModulePropsResources#BastionHostPolicy
+   * @schema CfnBastionModulePropsResources#BastionHostPolicy
    */
-  readonly bastionHostPolicy?: CfnModulePropsResourcesBastionHostPolicy;
+  readonly bastionHostPolicy?: CfnBastionModulePropsResourcesBastionHostPolicy;
 
   /**
-   * @schema CfnModulePropsResources#BastionHostProfile
+   * @schema CfnBastionModulePropsResources#BastionHostProfile
    */
-  readonly bastionHostProfile?: CfnModulePropsResourcesBastionHostProfile;
+  readonly bastionHostProfile?: CfnBastionModulePropsResourcesBastionHostProfile;
 
   /**
-   * @schema CfnModulePropsResources#EIP1
+   * @schema CfnBastionModulePropsResources#EIP1
    */
-  readonly eip1?: CfnModulePropsResourcesEip1;
+  readonly eip1?: CfnBastionModulePropsResourcesEip1;
 
   /**
-   * @schema CfnModulePropsResources#EIP2
+   * @schema CfnBastionModulePropsResources#EIP2
    */
-  readonly eip2?: CfnModulePropsResourcesEip2;
+  readonly eip2?: CfnBastionModulePropsResourcesEip2;
 
   /**
-   * @schema CfnModulePropsResources#EIP3
+   * @schema CfnBastionModulePropsResources#EIP3
    */
-  readonly eip3?: CfnModulePropsResourcesEip3;
+  readonly eip3?: CfnBastionModulePropsResourcesEip3;
 
   /**
-   * @schema CfnModulePropsResources#EIP4
+   * @schema CfnBastionModulePropsResources#EIP4
    */
-  readonly eip4?: CfnModulePropsResourcesEip4;
+  readonly eip4?: CfnBastionModulePropsResourcesEip4;
 
   /**
-   * @schema CfnModulePropsResources#BastionAutoScalingGroup
+   * @schema CfnBastionModulePropsResources#BastionAutoScalingGroup
    */
-  readonly bastionAutoScalingGroup?: CfnModulePropsResourcesBastionAutoScalingGroup;
+  readonly bastionAutoScalingGroup?: CfnBastionModulePropsResourcesBastionAutoScalingGroup;
 
   /**
-   * @schema CfnModulePropsResources#BastionLaunchConfiguration
+   * @schema CfnBastionModulePropsResources#BastionLaunchConfiguration
    */
-  readonly bastionLaunchConfiguration?: CfnModulePropsResourcesBastionLaunchConfiguration;
+  readonly bastionLaunchConfiguration?: CfnBastionModulePropsResourcesBastionLaunchConfiguration;
 
   /**
-   * @schema CfnModulePropsResources#BastionSecurityGroup
+   * @schema CfnBastionModulePropsResources#BastionSecurityGroup
    */
-  readonly bastionSecurityGroup?: CfnModulePropsResourcesBastionSecurityGroup;
+  readonly bastionSecurityGroup?: CfnBastionModulePropsResourcesBastionSecurityGroup;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResources' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsResources' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResources(obj: CfnModulePropsResources | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsResources(obj: CfnBastionModulePropsResources | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'BastionMainLogGroup': toJson_CfnModulePropsResourcesBastionMainLogGroup(obj.bastionMainLogGroup),
-    'SSHMetricFilter': toJson_CfnModulePropsResourcesSshMetricFilter(obj.sshMetricFilter),
-    'BastionHostRole': toJson_CfnModulePropsResourcesBastionHostRole(obj.bastionHostRole),
-    'BastionHostPolicy': toJson_CfnModulePropsResourcesBastionHostPolicy(obj.bastionHostPolicy),
-    'BastionHostProfile': toJson_CfnModulePropsResourcesBastionHostProfile(obj.bastionHostProfile),
-    'EIP1': toJson_CfnModulePropsResourcesEip1(obj.eip1),
-    'EIP2': toJson_CfnModulePropsResourcesEip2(obj.eip2),
-    'EIP3': toJson_CfnModulePropsResourcesEip3(obj.eip3),
-    'EIP4': toJson_CfnModulePropsResourcesEip4(obj.eip4),
-    'BastionAutoScalingGroup': toJson_CfnModulePropsResourcesBastionAutoScalingGroup(obj.bastionAutoScalingGroup),
-    'BastionLaunchConfiguration': toJson_CfnModulePropsResourcesBastionLaunchConfiguration(obj.bastionLaunchConfiguration),
-    'BastionSecurityGroup': toJson_CfnModulePropsResourcesBastionSecurityGroup(obj.bastionSecurityGroup),
+    'BastionMainLogGroup': toJson_CfnBastionModulePropsResourcesBastionMainLogGroup(obj.bastionMainLogGroup),
+    'SSHMetricFilter': toJson_CfnBastionModulePropsResourcesSshMetricFilter(obj.sshMetricFilter),
+    'BastionHostRole': toJson_CfnBastionModulePropsResourcesBastionHostRole(obj.bastionHostRole),
+    'BastionHostPolicy': toJson_CfnBastionModulePropsResourcesBastionHostPolicy(obj.bastionHostPolicy),
+    'BastionHostProfile': toJson_CfnBastionModulePropsResourcesBastionHostProfile(obj.bastionHostProfile),
+    'EIP1': toJson_CfnBastionModulePropsResourcesEip1(obj.eip1),
+    'EIP2': toJson_CfnBastionModulePropsResourcesEip2(obj.eip2),
+    'EIP3': toJson_CfnBastionModulePropsResourcesEip3(obj.eip3),
+    'EIP4': toJson_CfnBastionModulePropsResourcesEip4(obj.eip4),
+    'BastionAutoScalingGroup': toJson_CfnBastionModulePropsResourcesBastionAutoScalingGroup(obj.bastionAutoScalingGroup),
+    'BastionLaunchConfiguration': toJson_CfnBastionModulePropsResourcesBastionLaunchConfiguration(obj.bastionLaunchConfiguration),
+    'BastionSecurityGroup': toJson_CfnBastionModulePropsResourcesBastionSecurityGroup(obj.bastionSecurityGroup),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -323,26 +323,26 @@ export function toJson_CfnModulePropsResources(obj: CfnModulePropsResources | un
 /**
  * Logical Id of the MODULE
  *
- * @schema CfnModulePropsParametersLogicalId
+ * @schema CfnBastionModulePropsParametersLogicalId
  */
-export interface CfnModulePropsParametersLogicalId {
+export interface CfnBastionModulePropsParametersLogicalId {
   /**
-   * @schema CfnModulePropsParametersLogicalId#Type
+   * @schema CfnBastionModulePropsParametersLogicalId#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersLogicalId#Description
+   * @schema CfnBastionModulePropsParametersLogicalId#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersLogicalId' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsParametersLogicalId' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersLogicalId(obj: CfnModulePropsParametersLogicalId | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsParametersLogicalId(obj: CfnBastionModulePropsParametersLogicalId | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -356,26 +356,26 @@ export function toJson_CfnModulePropsParametersLogicalId(obj: CfnModulePropsPara
 /**
  * The Linux distribution for the AMI to be used for the bastion instances.
  *
- * @schema CfnModulePropsParametersBastionAmios
+ * @schema CfnBastionModulePropsParametersBastionAmios
  */
-export interface CfnModulePropsParametersBastionAmios {
+export interface CfnBastionModulePropsParametersBastionAmios {
   /**
-   * @schema CfnModulePropsParametersBastionAmios#Type
+   * @schema CfnBastionModulePropsParametersBastionAmios#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersBastionAmios#Description
+   * @schema CfnBastionModulePropsParametersBastionAmios#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersBastionAmios' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsParametersBastionAmios' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersBastionAmios(obj: CfnModulePropsParametersBastionAmios | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsParametersBastionAmios(obj: CfnBastionModulePropsParametersBastionAmios | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -389,26 +389,26 @@ export function toJson_CfnModulePropsParametersBastionAmios(obj: CfnModulePropsP
 /**
  * The value used for the name tag of the bastion host
  *
- * @schema CfnModulePropsParametersBastionHostName
+ * @schema CfnBastionModulePropsParametersBastionHostName
  */
-export interface CfnModulePropsParametersBastionHostName {
+export interface CfnBastionModulePropsParametersBastionHostName {
   /**
-   * @schema CfnModulePropsParametersBastionHostName#Type
+   * @schema CfnBastionModulePropsParametersBastionHostName#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersBastionHostName#Description
+   * @schema CfnBastionModulePropsParametersBastionHostName#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersBastionHostName' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsParametersBastionHostName' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersBastionHostName(obj: CfnModulePropsParametersBastionHostName | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsParametersBastionHostName(obj: CfnBastionModulePropsParametersBastionHostName | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -422,26 +422,26 @@ export function toJson_CfnModulePropsParametersBastionHostName(obj: CfnModulePro
 /**
  * Banner text to display upon login.
  *
- * @schema CfnModulePropsParametersBastionBanner
+ * @schema CfnBastionModulePropsParametersBastionBanner
  */
-export interface CfnModulePropsParametersBastionBanner {
+export interface CfnBastionModulePropsParametersBastionBanner {
   /**
-   * @schema CfnModulePropsParametersBastionBanner#Type
+   * @schema CfnBastionModulePropsParametersBastionBanner#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersBastionBanner#Description
+   * @schema CfnBastionModulePropsParametersBastionBanner#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersBastionBanner' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsParametersBastionBanner' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersBastionBanner(obj: CfnModulePropsParametersBastionBanner | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsParametersBastionBanner(obj: CfnBastionModulePropsParametersBastionBanner | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -455,26 +455,26 @@ export function toJson_CfnModulePropsParametersBastionBanner(obj: CfnModuleProps
 /**
  * VPC tenancy to launch the bastion in. Options: 'dedicated' or 'default'
  *
- * @schema CfnModulePropsParametersBastionTenancy
+ * @schema CfnBastionModulePropsParametersBastionTenancy
  */
-export interface CfnModulePropsParametersBastionTenancy {
+export interface CfnBastionModulePropsParametersBastionTenancy {
   /**
-   * @schema CfnModulePropsParametersBastionTenancy#Type
+   * @schema CfnBastionModulePropsParametersBastionTenancy#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersBastionTenancy#Description
+   * @schema CfnBastionModulePropsParametersBastionTenancy#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersBastionTenancy' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsParametersBastionTenancy' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersBastionTenancy(obj: CfnModulePropsParametersBastionTenancy | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsParametersBastionTenancy(obj: CfnBastionModulePropsParametersBastionTenancy | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -488,26 +488,26 @@ export function toJson_CfnModulePropsParametersBastionTenancy(obj: CfnModuleProp
 /**
  * Amazon EC2 instance type for the bastion instances.
  *
- * @schema CfnModulePropsParametersBastionInstanceType
+ * @schema CfnBastionModulePropsParametersBastionInstanceType
  */
-export interface CfnModulePropsParametersBastionInstanceType {
+export interface CfnBastionModulePropsParametersBastionInstanceType {
   /**
-   * @schema CfnModulePropsParametersBastionInstanceType#Type
+   * @schema CfnBastionModulePropsParametersBastionInstanceType#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersBastionInstanceType#Description
+   * @schema CfnBastionModulePropsParametersBastionInstanceType#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersBastionInstanceType' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsParametersBastionInstanceType' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersBastionInstanceType(obj: CfnModulePropsParametersBastionInstanceType | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsParametersBastionInstanceType(obj: CfnBastionModulePropsParametersBastionInstanceType | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -521,26 +521,26 @@ export function toJson_CfnModulePropsParametersBastionInstanceType(obj: CfnModul
 /**
  * To include a banner to be displayed when connecting via SSH to the bastion, choose true.
  *
- * @schema CfnModulePropsParametersEnableBanner
+ * @schema CfnBastionModulePropsParametersEnableBanner
  */
-export interface CfnModulePropsParametersEnableBanner {
+export interface CfnBastionModulePropsParametersEnableBanner {
   /**
-   * @schema CfnModulePropsParametersEnableBanner#Type
+   * @schema CfnBastionModulePropsParametersEnableBanner#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersEnableBanner#Description
+   * @schema CfnBastionModulePropsParametersEnableBanner#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersEnableBanner' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsParametersEnableBanner' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersEnableBanner(obj: CfnModulePropsParametersEnableBanner | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsParametersEnableBanner(obj: CfnBastionModulePropsParametersEnableBanner | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -554,26 +554,26 @@ export function toJson_CfnModulePropsParametersEnableBanner(obj: CfnModulePropsP
 /**
  * To enable TCP forwarding, choose true.
  *
- * @schema CfnModulePropsParametersEnableTcpForwarding
+ * @schema CfnBastionModulePropsParametersEnableTcpForwarding
  */
-export interface CfnModulePropsParametersEnableTcpForwarding {
+export interface CfnBastionModulePropsParametersEnableTcpForwarding {
   /**
-   * @schema CfnModulePropsParametersEnableTcpForwarding#Type
+   * @schema CfnBastionModulePropsParametersEnableTcpForwarding#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersEnableTcpForwarding#Description
+   * @schema CfnBastionModulePropsParametersEnableTcpForwarding#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersEnableTcpForwarding' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsParametersEnableTcpForwarding' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersEnableTcpForwarding(obj: CfnModulePropsParametersEnableTcpForwarding | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsParametersEnableTcpForwarding(obj: CfnBastionModulePropsParametersEnableTcpForwarding | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -587,26 +587,26 @@ export function toJson_CfnModulePropsParametersEnableTcpForwarding(obj: CfnModul
 /**
  * To enable X11 forwarding, choose true.
  *
- * @schema CfnModulePropsParametersEnableX11Forwarding
+ * @schema CfnBastionModulePropsParametersEnableX11Forwarding
  */
-export interface CfnModulePropsParametersEnableX11Forwarding {
+export interface CfnBastionModulePropsParametersEnableX11Forwarding {
   /**
-   * @schema CfnModulePropsParametersEnableX11Forwarding#Type
+   * @schema CfnBastionModulePropsParametersEnableX11Forwarding#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersEnableX11Forwarding#Description
+   * @schema CfnBastionModulePropsParametersEnableX11Forwarding#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersEnableX11Forwarding' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsParametersEnableX11Forwarding' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersEnableX11Forwarding(obj: CfnModulePropsParametersEnableX11Forwarding | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsParametersEnableX11Forwarding(obj: CfnBastionModulePropsParametersEnableX11Forwarding | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -620,26 +620,26 @@ export function toJson_CfnModulePropsParametersEnableX11Forwarding(obj: CfnModul
 /**
  * Name of an existing public/private key pair. If you do not have one in this AWS Region, please create it before continuing.
  *
- * @schema CfnModulePropsParametersKeyPairName
+ * @schema CfnBastionModulePropsParametersKeyPairName
  */
-export interface CfnModulePropsParametersKeyPairName {
+export interface CfnBastionModulePropsParametersKeyPairName {
   /**
-   * @schema CfnModulePropsParametersKeyPairName#Type
+   * @schema CfnBastionModulePropsParametersKeyPairName#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersKeyPairName#Description
+   * @schema CfnBastionModulePropsParametersKeyPairName#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersKeyPairName' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsParametersKeyPairName' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersKeyPairName(obj: CfnModulePropsParametersKeyPairName | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsParametersKeyPairName(obj: CfnBastionModulePropsParametersKeyPairName | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -653,26 +653,26 @@ export function toJson_CfnModulePropsParametersKeyPairName(obj: CfnModulePropsPa
 /**
  * The number of bastion hosts to create. The maximum number is four.
  *
- * @schema CfnModulePropsParametersNumBastionHosts
+ * @schema CfnBastionModulePropsParametersNumBastionHosts
  */
-export interface CfnModulePropsParametersNumBastionHosts {
+export interface CfnBastionModulePropsParametersNumBastionHosts {
   /**
-   * @schema CfnModulePropsParametersNumBastionHosts#Type
+   * @schema CfnBastionModulePropsParametersNumBastionHosts#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersNumBastionHosts#Description
+   * @schema CfnBastionModulePropsParametersNumBastionHosts#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersNumBastionHosts' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsParametersNumBastionHosts' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersNumBastionHosts(obj: CfnModulePropsParametersNumBastionHosts | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsParametersNumBastionHosts(obj: CfnBastionModulePropsParametersNumBastionHosts | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -686,26 +686,26 @@ export function toJson_CfnModulePropsParametersNumBastionHosts(obj: CfnModulePro
 /**
  * ID of the public subnet in Availability Zone 1 of your existing VPC (e.g., subnet-z0376dab).
  *
- * @schema CfnModulePropsParametersPublicSubnet1Id
+ * @schema CfnBastionModulePropsParametersPublicSubnet1Id
  */
-export interface CfnModulePropsParametersPublicSubnet1Id {
+export interface CfnBastionModulePropsParametersPublicSubnet1Id {
   /**
-   * @schema CfnModulePropsParametersPublicSubnet1Id#Type
+   * @schema CfnBastionModulePropsParametersPublicSubnet1Id#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPublicSubnet1Id#Description
+   * @schema CfnBastionModulePropsParametersPublicSubnet1Id#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPublicSubnet1Id' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsParametersPublicSubnet1Id' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPublicSubnet1Id(obj: CfnModulePropsParametersPublicSubnet1Id | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsParametersPublicSubnet1Id(obj: CfnBastionModulePropsParametersPublicSubnet1Id | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -719,26 +719,26 @@ export function toJson_CfnModulePropsParametersPublicSubnet1Id(obj: CfnModulePro
 /**
  * ID of the public subnet in Availability Zone 1 of your existing VPC (e.g., subnet-z0376dab).
  *
- * @schema CfnModulePropsParametersPublicSubnet2Id
+ * @schema CfnBastionModulePropsParametersPublicSubnet2Id
  */
-export interface CfnModulePropsParametersPublicSubnet2Id {
+export interface CfnBastionModulePropsParametersPublicSubnet2Id {
   /**
-   * @schema CfnModulePropsParametersPublicSubnet2Id#Type
+   * @schema CfnBastionModulePropsParametersPublicSubnet2Id#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPublicSubnet2Id#Description
+   * @schema CfnBastionModulePropsParametersPublicSubnet2Id#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPublicSubnet2Id' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsParametersPublicSubnet2Id' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPublicSubnet2Id(obj: CfnModulePropsParametersPublicSubnet2Id | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsParametersPublicSubnet2Id(obj: CfnBastionModulePropsParametersPublicSubnet2Id | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -752,26 +752,26 @@ export function toJson_CfnModulePropsParametersPublicSubnet2Id(obj: CfnModulePro
 /**
  * S3 bucket name for the Quick Start assets. Quick Start bucket name can include numbers, lowercase letters, uppercase letters, and hyphens (-). It cannot start or end with a hyphen (-).
  *
- * @schema CfnModulePropsParametersQss3BucketName
+ * @schema CfnBastionModulePropsParametersQss3BucketName
  */
-export interface CfnModulePropsParametersQss3BucketName {
+export interface CfnBastionModulePropsParametersQss3BucketName {
   /**
-   * @schema CfnModulePropsParametersQss3BucketName#Type
+   * @schema CfnBastionModulePropsParametersQss3BucketName#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersQss3BucketName#Description
+   * @schema CfnBastionModulePropsParametersQss3BucketName#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersQss3BucketName' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsParametersQss3BucketName' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersQss3BucketName(obj: CfnModulePropsParametersQss3BucketName | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsParametersQss3BucketName(obj: CfnBastionModulePropsParametersQss3BucketName | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -785,26 +785,26 @@ export function toJson_CfnModulePropsParametersQss3BucketName(obj: CfnModuleProp
 /**
  * The AWS Region where the Quick Start S3 bucket (QSS3BucketName) is hosted. When using your own bucket, you must specify this value.
  *
- * @schema CfnModulePropsParametersQss3BucketRegion
+ * @schema CfnBastionModulePropsParametersQss3BucketRegion
  */
-export interface CfnModulePropsParametersQss3BucketRegion {
+export interface CfnBastionModulePropsParametersQss3BucketRegion {
   /**
-   * @schema CfnModulePropsParametersQss3BucketRegion#Type
+   * @schema CfnBastionModulePropsParametersQss3BucketRegion#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersQss3BucketRegion#Description
+   * @schema CfnBastionModulePropsParametersQss3BucketRegion#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersQss3BucketRegion' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsParametersQss3BucketRegion' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersQss3BucketRegion(obj: CfnModulePropsParametersQss3BucketRegion | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsParametersQss3BucketRegion(obj: CfnBastionModulePropsParametersQss3BucketRegion | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -818,26 +818,26 @@ export function toJson_CfnModulePropsParametersQss3BucketRegion(obj: CfnModulePr
 /**
  * S3 key prefix for the Quick Start assets. Quick Start key prefix can include numbers, lowercase letters, uppercase letters, hyphens (-), dots (.) and forward slash (/) and it should end with a forward slash (/).
  *
- * @schema CfnModulePropsParametersQss3KeyPrefix
+ * @schema CfnBastionModulePropsParametersQss3KeyPrefix
  */
-export interface CfnModulePropsParametersQss3KeyPrefix {
+export interface CfnBastionModulePropsParametersQss3KeyPrefix {
   /**
-   * @schema CfnModulePropsParametersQss3KeyPrefix#Type
+   * @schema CfnBastionModulePropsParametersQss3KeyPrefix#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersQss3KeyPrefix#Description
+   * @schema CfnBastionModulePropsParametersQss3KeyPrefix#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersQss3KeyPrefix' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsParametersQss3KeyPrefix' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersQss3KeyPrefix(obj: CfnModulePropsParametersQss3KeyPrefix | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsParametersQss3KeyPrefix(obj: CfnBastionModulePropsParametersQss3KeyPrefix | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -851,26 +851,26 @@ export function toJson_CfnModulePropsParametersQss3KeyPrefix(obj: CfnModuleProps
 /**
  * Allowed CIDR block for external SSH access to the bastions.
  *
- * @schema CfnModulePropsParametersRemoteAccessCidr
+ * @schema CfnBastionModulePropsParametersRemoteAccessCidr
  */
-export interface CfnModulePropsParametersRemoteAccessCidr {
+export interface CfnBastionModulePropsParametersRemoteAccessCidr {
   /**
-   * @schema CfnModulePropsParametersRemoteAccessCidr#Type
+   * @schema CfnBastionModulePropsParametersRemoteAccessCidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersRemoteAccessCidr#Description
+   * @schema CfnBastionModulePropsParametersRemoteAccessCidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersRemoteAccessCidr' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsParametersRemoteAccessCidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersRemoteAccessCidr(obj: CfnModulePropsParametersRemoteAccessCidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsParametersRemoteAccessCidr(obj: CfnBastionModulePropsParametersRemoteAccessCidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -884,26 +884,26 @@ export function toJson_CfnModulePropsParametersRemoteAccessCidr(obj: CfnModulePr
 /**
  * ID of the VPC (e.g., vpc-0343606e).
  *
- * @schema CfnModulePropsParametersVpcid
+ * @schema CfnBastionModulePropsParametersVpcid
  */
-export interface CfnModulePropsParametersVpcid {
+export interface CfnBastionModulePropsParametersVpcid {
   /**
-   * @schema CfnModulePropsParametersVpcid#Type
+   * @schema CfnBastionModulePropsParametersVpcid#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersVpcid#Description
+   * @schema CfnBastionModulePropsParametersVpcid#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersVpcid' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsParametersVpcid' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersVpcid(obj: CfnModulePropsParametersVpcid | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsParametersVpcid(obj: CfnBastionModulePropsParametersVpcid | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -917,26 +917,26 @@ export function toJson_CfnModulePropsParametersVpcid(obj: CfnModulePropsParamete
 /**
  * An alternative initialization script to run during setup.
  *
- * @schema CfnModulePropsParametersAlternativeInitializationScript
+ * @schema CfnBastionModulePropsParametersAlternativeInitializationScript
  */
-export interface CfnModulePropsParametersAlternativeInitializationScript {
+export interface CfnBastionModulePropsParametersAlternativeInitializationScript {
   /**
-   * @schema CfnModulePropsParametersAlternativeInitializationScript#Type
+   * @schema CfnBastionModulePropsParametersAlternativeInitializationScript#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersAlternativeInitializationScript#Description
+   * @schema CfnBastionModulePropsParametersAlternativeInitializationScript#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersAlternativeInitializationScript' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsParametersAlternativeInitializationScript' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersAlternativeInitializationScript(obj: CfnModulePropsParametersAlternativeInitializationScript | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsParametersAlternativeInitializationScript(obj: CfnBastionModulePropsParametersAlternativeInitializationScript | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -950,26 +950,26 @@ export function toJson_CfnModulePropsParametersAlternativeInitializationScript(o
 /**
  * The Region-specific image to use for the instance.
  *
- * @schema CfnModulePropsParametersOsImageOverride
+ * @schema CfnBastionModulePropsParametersOsImageOverride
  */
-export interface CfnModulePropsParametersOsImageOverride {
+export interface CfnBastionModulePropsParametersOsImageOverride {
   /**
-   * @schema CfnModulePropsParametersOsImageOverride#Type
+   * @schema CfnBastionModulePropsParametersOsImageOverride#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersOsImageOverride#Description
+   * @schema CfnBastionModulePropsParametersOsImageOverride#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersOsImageOverride' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsParametersOsImageOverride' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersOsImageOverride(obj: CfnModulePropsParametersOsImageOverride | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsParametersOsImageOverride(obj: CfnBastionModulePropsParametersOsImageOverride | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -983,26 +983,26 @@ export function toJson_CfnModulePropsParametersOsImageOverride(obj: CfnModulePro
 /**
  * A comma-separated list of environment variables for use in bootstrapping. Variables must be in the format KEY=VALUE. VALUE cannot contain commas.
  *
- * @schema CfnModulePropsParametersEnvironmentVariables
+ * @schema CfnBastionModulePropsParametersEnvironmentVariables
  */
-export interface CfnModulePropsParametersEnvironmentVariables {
+export interface CfnBastionModulePropsParametersEnvironmentVariables {
   /**
-   * @schema CfnModulePropsParametersEnvironmentVariables#Type
+   * @schema CfnBastionModulePropsParametersEnvironmentVariables#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersEnvironmentVariables#Description
+   * @schema CfnBastionModulePropsParametersEnvironmentVariables#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersEnvironmentVariables' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsParametersEnvironmentVariables' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersEnvironmentVariables(obj: CfnModulePropsParametersEnvironmentVariables | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsParametersEnvironmentVariables(obj: CfnBastionModulePropsParametersEnvironmentVariables | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1016,26 +1016,26 @@ export function toJson_CfnModulePropsParametersEnvironmentVariables(obj: CfnModu
 /**
  * The size in GB for the root EBS volume.
  *
- * @schema CfnModulePropsParametersRootVolumeSize
+ * @schema CfnBastionModulePropsParametersRootVolumeSize
  */
-export interface CfnModulePropsParametersRootVolumeSize {
+export interface CfnBastionModulePropsParametersRootVolumeSize {
   /**
-   * @schema CfnModulePropsParametersRootVolumeSize#Type
+   * @schema CfnBastionModulePropsParametersRootVolumeSize#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersRootVolumeSize#Description
+   * @schema CfnBastionModulePropsParametersRootVolumeSize#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersRootVolumeSize' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsParametersRootVolumeSize' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersRootVolumeSize(obj: CfnModulePropsParametersRootVolumeSize | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsParametersRootVolumeSize(obj: CfnBastionModulePropsParametersRootVolumeSize | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1047,26 +1047,26 @@ export function toJson_CfnModulePropsParametersRootVolumeSize(obj: CfnModuleProp
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesBastionMainLogGroup
+ * @schema CfnBastionModulePropsResourcesBastionMainLogGroup
  */
-export interface CfnModulePropsResourcesBastionMainLogGroup {
+export interface CfnBastionModulePropsResourcesBastionMainLogGroup {
   /**
-   * @schema CfnModulePropsResourcesBastionMainLogGroup#Type
+   * @schema CfnBastionModulePropsResourcesBastionMainLogGroup#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesBastionMainLogGroup#Properties
+   * @schema CfnBastionModulePropsResourcesBastionMainLogGroup#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesBastionMainLogGroup' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsResourcesBastionMainLogGroup' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesBastionMainLogGroup(obj: CfnModulePropsResourcesBastionMainLogGroup | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsResourcesBastionMainLogGroup(obj: CfnBastionModulePropsResourcesBastionMainLogGroup | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1078,26 +1078,26 @@ export function toJson_CfnModulePropsResourcesBastionMainLogGroup(obj: CfnModule
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesSshMetricFilter
+ * @schema CfnBastionModulePropsResourcesSshMetricFilter
  */
-export interface CfnModulePropsResourcesSshMetricFilter {
+export interface CfnBastionModulePropsResourcesSshMetricFilter {
   /**
-   * @schema CfnModulePropsResourcesSshMetricFilter#Type
+   * @schema CfnBastionModulePropsResourcesSshMetricFilter#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesSshMetricFilter#Properties
+   * @schema CfnBastionModulePropsResourcesSshMetricFilter#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesSshMetricFilter' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsResourcesSshMetricFilter' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesSshMetricFilter(obj: CfnModulePropsResourcesSshMetricFilter | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsResourcesSshMetricFilter(obj: CfnBastionModulePropsResourcesSshMetricFilter | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1109,26 +1109,26 @@ export function toJson_CfnModulePropsResourcesSshMetricFilter(obj: CfnModuleProp
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesBastionHostRole
+ * @schema CfnBastionModulePropsResourcesBastionHostRole
  */
-export interface CfnModulePropsResourcesBastionHostRole {
+export interface CfnBastionModulePropsResourcesBastionHostRole {
   /**
-   * @schema CfnModulePropsResourcesBastionHostRole#Type
+   * @schema CfnBastionModulePropsResourcesBastionHostRole#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesBastionHostRole#Properties
+   * @schema CfnBastionModulePropsResourcesBastionHostRole#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesBastionHostRole' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsResourcesBastionHostRole' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesBastionHostRole(obj: CfnModulePropsResourcesBastionHostRole | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsResourcesBastionHostRole(obj: CfnBastionModulePropsResourcesBastionHostRole | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1140,26 +1140,26 @@ export function toJson_CfnModulePropsResourcesBastionHostRole(obj: CfnModuleProp
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesBastionHostPolicy
+ * @schema CfnBastionModulePropsResourcesBastionHostPolicy
  */
-export interface CfnModulePropsResourcesBastionHostPolicy {
+export interface CfnBastionModulePropsResourcesBastionHostPolicy {
   /**
-   * @schema CfnModulePropsResourcesBastionHostPolicy#Type
+   * @schema CfnBastionModulePropsResourcesBastionHostPolicy#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesBastionHostPolicy#Properties
+   * @schema CfnBastionModulePropsResourcesBastionHostPolicy#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesBastionHostPolicy' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsResourcesBastionHostPolicy' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesBastionHostPolicy(obj: CfnModulePropsResourcesBastionHostPolicy | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsResourcesBastionHostPolicy(obj: CfnBastionModulePropsResourcesBastionHostPolicy | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1171,26 +1171,26 @@ export function toJson_CfnModulePropsResourcesBastionHostPolicy(obj: CfnModulePr
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesBastionHostProfile
+ * @schema CfnBastionModulePropsResourcesBastionHostProfile
  */
-export interface CfnModulePropsResourcesBastionHostProfile {
+export interface CfnBastionModulePropsResourcesBastionHostProfile {
   /**
-   * @schema CfnModulePropsResourcesBastionHostProfile#Type
+   * @schema CfnBastionModulePropsResourcesBastionHostProfile#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesBastionHostProfile#Properties
+   * @schema CfnBastionModulePropsResourcesBastionHostProfile#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesBastionHostProfile' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsResourcesBastionHostProfile' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesBastionHostProfile(obj: CfnModulePropsResourcesBastionHostProfile | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsResourcesBastionHostProfile(obj: CfnBastionModulePropsResourcesBastionHostProfile | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1202,26 +1202,26 @@ export function toJson_CfnModulePropsResourcesBastionHostProfile(obj: CfnModuleP
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesEip1
+ * @schema CfnBastionModulePropsResourcesEip1
  */
-export interface CfnModulePropsResourcesEip1 {
+export interface CfnBastionModulePropsResourcesEip1 {
   /**
-   * @schema CfnModulePropsResourcesEip1#Type
+   * @schema CfnBastionModulePropsResourcesEip1#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesEip1#Properties
+   * @schema CfnBastionModulePropsResourcesEip1#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesEip1' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsResourcesEip1' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesEip1(obj: CfnModulePropsResourcesEip1 | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsResourcesEip1(obj: CfnBastionModulePropsResourcesEip1 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1233,26 +1233,26 @@ export function toJson_CfnModulePropsResourcesEip1(obj: CfnModulePropsResourcesE
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesEip2
+ * @schema CfnBastionModulePropsResourcesEip2
  */
-export interface CfnModulePropsResourcesEip2 {
+export interface CfnBastionModulePropsResourcesEip2 {
   /**
-   * @schema CfnModulePropsResourcesEip2#Type
+   * @schema CfnBastionModulePropsResourcesEip2#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesEip2#Properties
+   * @schema CfnBastionModulePropsResourcesEip2#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesEip2' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsResourcesEip2' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesEip2(obj: CfnModulePropsResourcesEip2 | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsResourcesEip2(obj: CfnBastionModulePropsResourcesEip2 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1264,26 +1264,26 @@ export function toJson_CfnModulePropsResourcesEip2(obj: CfnModulePropsResourcesE
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesEip3
+ * @schema CfnBastionModulePropsResourcesEip3
  */
-export interface CfnModulePropsResourcesEip3 {
+export interface CfnBastionModulePropsResourcesEip3 {
   /**
-   * @schema CfnModulePropsResourcesEip3#Type
+   * @schema CfnBastionModulePropsResourcesEip3#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesEip3#Properties
+   * @schema CfnBastionModulePropsResourcesEip3#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesEip3' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsResourcesEip3' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesEip3(obj: CfnModulePropsResourcesEip3 | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsResourcesEip3(obj: CfnBastionModulePropsResourcesEip3 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1295,26 +1295,26 @@ export function toJson_CfnModulePropsResourcesEip3(obj: CfnModulePropsResourcesE
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesEip4
+ * @schema CfnBastionModulePropsResourcesEip4
  */
-export interface CfnModulePropsResourcesEip4 {
+export interface CfnBastionModulePropsResourcesEip4 {
   /**
-   * @schema CfnModulePropsResourcesEip4#Type
+   * @schema CfnBastionModulePropsResourcesEip4#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesEip4#Properties
+   * @schema CfnBastionModulePropsResourcesEip4#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesEip4' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsResourcesEip4' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesEip4(obj: CfnModulePropsResourcesEip4 | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsResourcesEip4(obj: CfnBastionModulePropsResourcesEip4 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1326,26 +1326,26 @@ export function toJson_CfnModulePropsResourcesEip4(obj: CfnModulePropsResourcesE
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesBastionAutoScalingGroup
+ * @schema CfnBastionModulePropsResourcesBastionAutoScalingGroup
  */
-export interface CfnModulePropsResourcesBastionAutoScalingGroup {
+export interface CfnBastionModulePropsResourcesBastionAutoScalingGroup {
   /**
-   * @schema CfnModulePropsResourcesBastionAutoScalingGroup#Type
+   * @schema CfnBastionModulePropsResourcesBastionAutoScalingGroup#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesBastionAutoScalingGroup#Properties
+   * @schema CfnBastionModulePropsResourcesBastionAutoScalingGroup#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesBastionAutoScalingGroup' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsResourcesBastionAutoScalingGroup' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesBastionAutoScalingGroup(obj: CfnModulePropsResourcesBastionAutoScalingGroup | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsResourcesBastionAutoScalingGroup(obj: CfnBastionModulePropsResourcesBastionAutoScalingGroup | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1357,26 +1357,26 @@ export function toJson_CfnModulePropsResourcesBastionAutoScalingGroup(obj: CfnMo
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesBastionLaunchConfiguration
+ * @schema CfnBastionModulePropsResourcesBastionLaunchConfiguration
  */
-export interface CfnModulePropsResourcesBastionLaunchConfiguration {
+export interface CfnBastionModulePropsResourcesBastionLaunchConfiguration {
   /**
-   * @schema CfnModulePropsResourcesBastionLaunchConfiguration#Type
+   * @schema CfnBastionModulePropsResourcesBastionLaunchConfiguration#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesBastionLaunchConfiguration#Properties
+   * @schema CfnBastionModulePropsResourcesBastionLaunchConfiguration#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesBastionLaunchConfiguration' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsResourcesBastionLaunchConfiguration' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesBastionLaunchConfiguration(obj: CfnModulePropsResourcesBastionLaunchConfiguration | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsResourcesBastionLaunchConfiguration(obj: CfnBastionModulePropsResourcesBastionLaunchConfiguration | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1388,26 +1388,26 @@ export function toJson_CfnModulePropsResourcesBastionLaunchConfiguration(obj: Cf
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesBastionSecurityGroup
+ * @schema CfnBastionModulePropsResourcesBastionSecurityGroup
  */
-export interface CfnModulePropsResourcesBastionSecurityGroup {
+export interface CfnBastionModulePropsResourcesBastionSecurityGroup {
   /**
-   * @schema CfnModulePropsResourcesBastionSecurityGroup#Type
+   * @schema CfnBastionModulePropsResourcesBastionSecurityGroup#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesBastionSecurityGroup#Properties
+   * @schema CfnBastionModulePropsResourcesBastionSecurityGroup#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesBastionSecurityGroup' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsResourcesBastionSecurityGroup' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesBastionSecurityGroup(obj: CfnModulePropsResourcesBastionSecurityGroup | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsResourcesBastionSecurityGroup(obj: CfnBastionModulePropsResourcesBastionSecurityGroup | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1426,7 +1426,7 @@ export function toJson_CfnModulePropsResourcesBastionSecurityGroup(obj: CfnModul
  * @stability external
  * @link http://unknown-url
  */
-export class CfnModule extends cdk.CfnResource {
+export class CfnBastionModule extends cdk.CfnResource {
   /**
   * The CloudFormation resource type name for this resource class.
   */
@@ -1435,7 +1435,7 @@ export class CfnModule extends cdk.CfnResource {
   /**
    * Resource props.
    */
-  public readonly props: CfnModuleProps;
+  public readonly props: CfnBastionModuleProps;
 
 
   /**
@@ -1445,8 +1445,8 @@ export class CfnModule extends cdk.CfnResource {
    * @param id    - scoped id of the resource
    * @param props - resource properties
    */
-  constructor(scope: cdk.Construct, id: string, props: CfnModuleProps) {
-    super(scope, id, { type: CfnModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnModuleProps(props)! });
+  constructor(scope: cdk.Construct, id: string, props: CfnBastionModuleProps) {
+    super(scope, id, { type: CfnBastionModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnBastionModuleProps(props)! });
 
     this.props = props;
 

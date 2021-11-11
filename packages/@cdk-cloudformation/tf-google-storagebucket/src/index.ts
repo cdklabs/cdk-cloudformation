@@ -13,18 +13,18 @@ import * as cdk from '@aws-cdk/core';
  * **Note**: If the project id is not set on the resource or in the provider block it will be dynamically
  * determined which will require enabling the compute api.
  *
- * @schema CfnStoragebucketProps
+ * @schema CfnStorageBucketProps
  */
-export interface CfnStoragebucketProps {
+export interface CfnStorageBucketProps {
   /**
    * Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy-only) access to a bucket. This field will be removed in the next major release of the provider.
    *
-   * @schema CfnStoragebucketProps#BucketPolicyOnly
+   * @schema CfnStorageBucketProps#BucketPolicyOnly
    */
   readonly bucketPolicyOnly?: boolean;
 
   /**
-   * @schema CfnStoragebucketProps#DefaultEventBasedHold
+   * @schema CfnStorageBucketProps#DefaultEventBasedHold
    */
   readonly defaultEventBasedHold?: boolean;
 
@@ -33,28 +33,28 @@ export interface CfnStoragebucketProps {
    * boolean option will delete all contained objects. If you try to delete a
    * bucket that contains objects, Terraform will fail that run.
    *
-   * @schema CfnStoragebucketProps#ForceDestroy
+   * @schema CfnStorageBucketProps#ForceDestroy
    */
   readonly forceDestroy?: boolean;
 
   /**
    * A map of key/value label pairs to assign to the bucket.
    *
-   * @schema CfnStoragebucketProps#Labels
+   * @schema CfnStorageBucketProps#Labels
    */
   readonly labels?: LabelsDefinition[];
 
   /**
    * The [GCS location](https://cloud.google.com/storage/docs/bucket-locations).
    *
-   * @schema CfnStoragebucketProps#Location
+   * @schema CfnStorageBucketProps#Location
    */
   readonly location?: string;
 
   /**
    * The name of the bucket.
    *
-   * @schema CfnStoragebucketProps#Name
+   * @schema CfnStorageBucketProps#Name
    */
   readonly name: string;
 
@@ -62,73 +62,73 @@ export interface CfnStoragebucketProps {
    * The ID of the project in which the resource belongs. If it
    * is not provided, the provider project is used.
    *
-   * @schema CfnStoragebucketProps#Project
+   * @schema CfnStorageBucketProps#Project
    */
   readonly project?: string;
 
   /**
    * Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) on a storage bucket.
    *
-   * @schema CfnStoragebucketProps#RequesterPays
+   * @schema CfnStorageBucketProps#RequesterPays
    */
   readonly requesterPays?: boolean;
 
   /**
    * The [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of the new bucket. Supported values include: `STANDARD`, `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
    *
-   * @schema CfnStoragebucketProps#StorageClass
+   * @schema CfnStorageBucketProps#StorageClass
    */
   readonly storageClass?: string;
 
   /**
    * Enables [Uniform bucket-level access](https://cloud.google.com/storage/docs/uniform-bucket-level-access) access to a bucket.
    *
-   * @schema CfnStoragebucketProps#UniformBucketLevelAccess
+   * @schema CfnStorageBucketProps#UniformBucketLevelAccess
    */
   readonly uniformBucketLevelAccess?: boolean;
 
   /**
-   * @schema CfnStoragebucketProps#Cors
+   * @schema CfnStorageBucketProps#Cors
    */
   readonly cors?: CorsDefinition[];
 
   /**
-   * @schema CfnStoragebucketProps#Encryption
+   * @schema CfnStorageBucketProps#Encryption
    */
   readonly encryption?: EncryptionDefinition[];
 
   /**
-   * @schema CfnStoragebucketProps#LifecycleRule
+   * @schema CfnStorageBucketProps#LifecycleRule
    */
   readonly lifecycleRule?: LifecycleRuleDefinition[];
 
   /**
-   * @schema CfnStoragebucketProps#Logging
+   * @schema CfnStorageBucketProps#Logging
    */
   readonly logging?: LoggingDefinition[];
 
   /**
-   * @schema CfnStoragebucketProps#RetentionPolicy
+   * @schema CfnStorageBucketProps#RetentionPolicy
    */
   readonly retentionPolicy?: RetentionPolicyDefinition[];
 
   /**
-   * @schema CfnStoragebucketProps#Versioning
+   * @schema CfnStorageBucketProps#Versioning
    */
   readonly versioning?: VersioningDefinition[];
 
   /**
-   * @schema CfnStoragebucketProps#Website
+   * @schema CfnStorageBucketProps#Website
    */
   readonly website?: WebsiteDefinition[];
 
 }
 
 /**
- * Converts an object of type 'CfnStoragebucketProps' to JSON representation.
+ * Converts an object of type 'CfnStorageBucketProps' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnStoragebucketProps(obj: CfnStoragebucketProps | undefined): Record<string, any> | undefined {
+export function toJson_CfnStorageBucketProps(obj: CfnStorageBucketProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'BucketPolicyOnly': obj.bucketPolicyOnly,
@@ -561,7 +561,7 @@ export function toJson_ConditionDefinition(obj: ConditionDefinition | undefined)
  * @stability external
  * @link https://github.com/iann0036/cfn-tf-custom-types.git
  */
-export class CfnStoragebucket extends cdk.CfnResource {
+export class CfnStorageBucket extends cdk.CfnResource {
   /**
   * The CloudFormation resource type name for this resource class.
   */
@@ -570,7 +570,7 @@ export class CfnStoragebucket extends cdk.CfnResource {
   /**
    * Resource props.
    */
-  public readonly props: CfnStoragebucketProps;
+  public readonly props: CfnStorageBucketProps;
 
   /**
    * Attribute `TF::Google::StorageBucket.tfcfnid`
@@ -600,8 +600,8 @@ export class CfnStoragebucket extends cdk.CfnResource {
    * @param id    - scoped id of the resource
    * @param props - resource properties
    */
-  constructor(scope: cdk.Construct, id: string, props: CfnStoragebucketProps) {
-    super(scope, id, { type: CfnStoragebucket.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnStoragebucketProps(props)! });
+  constructor(scope: cdk.Construct, id: string, props: CfnStorageBucketProps) {
+    super(scope, id, { type: CfnStorageBucket.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnStorageBucketProps(props)! });
 
     this.props = props;
 

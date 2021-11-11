@@ -4,30 +4,30 @@ import * as cdk from '@aws-cdk/core';
 /**
  * Schema for Module Fragment of type AWSQS::CheckPoint::CloudGuardQS::MODULE
  *
- * @schema CfnModuleProps
+ * @schema CfnCloudGuardQsModuleProps
  */
-export interface CfnModuleProps {
+export interface CfnCloudGuardQsModuleProps {
   /**
-   * @schema CfnModuleProps#Parameters
+   * @schema CfnCloudGuardQsModuleProps#Parameters
    */
-  readonly parameters?: CfnModulePropsParameters;
+  readonly parameters?: CfnCloudGuardQsModulePropsParameters;
 
   /**
-   * @schema CfnModuleProps#Resources
+   * @schema CfnCloudGuardQsModuleProps#Resources
    */
-  readonly resources?: CfnModulePropsResources;
+  readonly resources?: CfnCloudGuardQsModulePropsResources;
 
 }
 
 /**
- * Converts an object of type 'CfnModuleProps' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModuleProps' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModuleProps(obj: CfnModuleProps | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModuleProps(obj: CfnCloudGuardQsModuleProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'Parameters': toJson_CfnModulePropsParameters(obj.parameters),
-    'Resources': toJson_CfnModulePropsResources(obj.resources),
+    'Parameters': toJson_CfnCloudGuardQsModulePropsParameters(obj.parameters),
+    'Resources': toJson_CfnCloudGuardQsModulePropsResources(obj.resources),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -35,594 +35,594 @@ export function toJson_CfnModuleProps(obj: CfnModuleProps | undefined): Record<s
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParameters
+ * @schema CfnCloudGuardQsModulePropsParameters
  */
-export interface CfnModulePropsParameters {
+export interface CfnCloudGuardQsModulePropsParameters {
   /**
    * List of Availability Zones (AZs) to use for the subnets in the VPC. Select at least two
    *
-   * @schema CfnModulePropsParameters#AvailabilityZones
+   * @schema CfnCloudGuardQsModulePropsParameters#AvailabilityZones
    */
-  readonly availabilityZones?: CfnModulePropsParametersAvailabilityZones;
+  readonly availabilityZones?: CfnCloudGuardQsModulePropsParametersAvailabilityZones;
 
   /**
    * Number of Availability Zones to use in the VPC. This must match your selections in the list of Availability Zones parameter.  Default: 2
    *
-   * @schema CfnModulePropsParameters#NumberOfAZs
+   * @schema CfnCloudGuardQsModulePropsParameters#NumberOfAZs
    */
-  readonly numberOfAZs?: CfnModulePropsParametersNumberOfAZs;
+  readonly numberOfAZs?: CfnCloudGuardQsModulePropsParametersNumberOfAZs;
 
   /**
    * CIDR block for the VPC. Default: 10.0.0.0/16
    *
-   * @schema CfnModulePropsParameters#VPCCIDR
+   * @schema CfnCloudGuardQsModulePropsParameters#VPCCIDR
    */
-  readonly vpccidr?: CfnModulePropsParametersVpccidr;
+  readonly vpccidr?: CfnCloudGuardQsModulePropsParametersVpccidr;
 
   /**
    * CIDR block for public subnet 1 located in the 1st Availability Zone. If you choose to deploy a Security Management Server it will be deployed in this subnet. Default: 10.0.10.0/24
    *
-   * @schema CfnModulePropsParameters#PublicSubnet1CIDR
+   * @schema CfnCloudGuardQsModulePropsParameters#PublicSubnet1CIDR
    */
-  readonly publicSubnet1Cidr?: CfnModulePropsParametersPublicSubnet1Cidr;
+  readonly publicSubnet1Cidr?: CfnCloudGuardQsModulePropsParametersPublicSubnet1Cidr;
 
   /**
    * CIDR block for public subnet 2 located in the 2nd Availability Zone. Default: 10.0.20.0/24
    *
-   * @schema CfnModulePropsParameters#PublicSubnet2CIDR
+   * @schema CfnCloudGuardQsModulePropsParameters#PublicSubnet2CIDR
    */
-  readonly publicSubnet2Cidr?: CfnModulePropsParametersPublicSubnet2Cidr;
+  readonly publicSubnet2Cidr?: CfnCloudGuardQsModulePropsParametersPublicSubnet2Cidr;
 
   /**
    * CIDR block for public subnet 3 located in the 3rd Availability Zone. Default: 10.0.30.0/24
    *
-   * @schema CfnModulePropsParameters#PublicSubnet3CIDR
+   * @schema CfnCloudGuardQsModulePropsParameters#PublicSubnet3CIDR
    */
-  readonly publicSubnet3Cidr?: CfnModulePropsParametersPublicSubnet3Cidr;
+  readonly publicSubnet3Cidr?: CfnCloudGuardQsModulePropsParametersPublicSubnet3Cidr;
 
   /**
    * CIDR block for public subnet 4 located in the 4th Availability Zone. Default: 10.0.40.0/24
    *
-   * @schema CfnModulePropsParameters#PublicSubnet4CIDR
+   * @schema CfnCloudGuardQsModulePropsParameters#PublicSubnet4CIDR
    */
-  readonly publicSubnet4Cidr?: CfnModulePropsParametersPublicSubnet4Cidr;
+  readonly publicSubnet4Cidr?: CfnCloudGuardQsModulePropsParametersPublicSubnet4Cidr;
 
   /**
    * CIDR block for private subnet 1 located in the 1st Availability Zone. Default: 10.0.11.0/24
    *
-   * @schema CfnModulePropsParameters#PrivateSubnet1CIDR
+   * @schema CfnCloudGuardQsModulePropsParameters#PrivateSubnet1CIDR
    */
-  readonly privateSubnet1Cidr?: CfnModulePropsParametersPrivateSubnet1Cidr;
+  readonly privateSubnet1Cidr?: CfnCloudGuardQsModulePropsParametersPrivateSubnet1Cidr;
 
   /**
    * CIDR block for private subnet 2 located in the 2nd Availability Zone. Default: 10.0.21.0/24
    *
-   * @schema CfnModulePropsParameters#PrivateSubnet2CIDR
+   * @schema CfnCloudGuardQsModulePropsParameters#PrivateSubnet2CIDR
    */
-  readonly privateSubnet2Cidr?: CfnModulePropsParametersPrivateSubnet2Cidr;
+  readonly privateSubnet2Cidr?: CfnCloudGuardQsModulePropsParametersPrivateSubnet2Cidr;
 
   /**
    * CIDR block for private subnet 3 located in the 3rd Availability Zone. Default: 10.0.31.0/24
    *
-   * @schema CfnModulePropsParameters#PrivateSubnet3CIDR
+   * @schema CfnCloudGuardQsModulePropsParameters#PrivateSubnet3CIDR
    */
-  readonly privateSubnet3Cidr?: CfnModulePropsParametersPrivateSubnet3Cidr;
+  readonly privateSubnet3Cidr?: CfnCloudGuardQsModulePropsParametersPrivateSubnet3Cidr;
 
   /**
    * CIDR block for private subnet 4 located in the 4th Availability Zone. Default: 10.0.41.0/24
    *
-   * @schema CfnModulePropsParameters#PrivateSubnet4CIDR
+   * @schema CfnCloudGuardQsModulePropsParameters#PrivateSubnet4CIDR
    */
-  readonly privateSubnet4Cidr?: CfnModulePropsParametersPrivateSubnet4Cidr;
+  readonly privateSubnet4Cidr?: CfnCloudGuardQsModulePropsParametersPrivateSubnet4Cidr;
 
   /**
    * The EC2 Key Pair to allow SSH access to the instances. For more detail visit: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html
    *
-   * @schema CfnModulePropsParameters#KeyName
+   * @schema CfnCloudGuardQsModulePropsParameters#KeyName
    */
-  readonly keyName?: CfnModulePropsParametersKeyName;
+  readonly keyName?: CfnCloudGuardQsModulePropsParametersKeyName;
 
   /**
    * Encrypt Environment instances volume with default AWS KMS key. Default: true
    *
-   * @schema CfnModulePropsParameters#EnableVolumeEncryption
+   * @schema CfnCloudGuardQsModulePropsParameters#EnableVolumeEncryption
    */
-  readonly enableVolumeEncryption?: CfnModulePropsParametersEnableVolumeEncryption;
+  readonly enableVolumeEncryption?: CfnCloudGuardQsModulePropsParametersEnableVolumeEncryption;
 
   /**
    * Enable SSH connection over AWS web console. Default: false
    *
-   * @schema CfnModulePropsParameters#EnableInstanceConnect
+   * @schema CfnCloudGuardQsModulePropsParameters#EnableInstanceConnect
    */
-  readonly enableInstanceConnect?: CfnModulePropsParametersEnableInstanceConnect;
+  readonly enableInstanceConnect?: CfnCloudGuardQsModulePropsParametersEnableInstanceConnect;
 
   /**
    * Automatically download Blade Contracts and other important data. Improve product experience by sending data to Check Point. Default: true
    *
-   * @schema CfnModulePropsParameters#AllowUploadDownload
+   * @schema CfnCloudGuardQsModulePropsParameters#AllowUploadDownload
    */
-  readonly allowUploadDownload?: CfnModulePropsParametersAllowUploadDownload;
+  readonly allowUploadDownload?: CfnCloudGuardQsModulePropsParametersAllowUploadDownload;
 
   /**
    * The tag is used by the Security Management Server to automatically provision the Security Gateways. Must be up to 12 alphanumeric characters and unique for each Quick Start deployment. Default: quickstart
    *
-   * @schema CfnModulePropsParameters#ProvisionTag
+   * @schema CfnCloudGuardQsModulePropsParameters#ProvisionTag
    */
-  readonly provisionTag?: CfnModulePropsParametersProvisionTag;
+  readonly provisionTag?: CfnCloudGuardQsModulePropsParametersProvisionTag;
 
   /**
    * Use Network Load Balancer if you wish to preserve the source IP address and Application Load Balancer if you wish to perform SSL Offloading. Default: Network Load Balancer. Allowed values: Network Load Balancer, Application Load Balancer
    *
-   * @schema CfnModulePropsParameters#LoadBalancersType
+   * @schema CfnCloudGuardQsModulePropsParameters#LoadBalancersType
    */
-  readonly loadBalancersType?: CfnModulePropsParametersLoadBalancersType;
+  readonly loadBalancersType?: CfnCloudGuardQsModulePropsParametersLoadBalancersType;
 
   /**
    * The protocol to use on the Application Load Balancer. If Network Load Balancer was selected this section will be ignored. Default: HTTP. Allowed values: HTTP, HTTPS
    *
-   * @schema CfnModulePropsParameters#ALBProtocol
+   * @schema CfnCloudGuardQsModulePropsParameters#ALBProtocol
    */
-  readonly albProtocol?: CfnModulePropsParametersAlbProtocol;
+  readonly albProtocol?: CfnCloudGuardQsModulePropsParametersAlbProtocol;
 
   /**
    * The protocol to use on the Network Load Balancer. If Application Load Balancer was selected this section will be ignored. Default: TCP. Allowed values: TCP, TLS, UDP, TCP_UDP
    *
-   * @schema CfnModulePropsParameters#NLBProtocol
+   * @schema CfnCloudGuardQsModulePropsParameters#NLBProtocol
    */
-  readonly nlbProtocol?: CfnModulePropsParametersNlbProtocol;
+  readonly nlbProtocol?: CfnCloudGuardQsModulePropsParametersNlbProtocol;
 
   /**
    * Amazon Resource Name (ARN) of an HTTPS Certificate, ignored if the selected protocol is HTTP (for the ALBProtocol parameter)
    *
-   * @schema CfnModulePropsParameters#Certificate
+   * @schema CfnCloudGuardQsModulePropsParameters#Certificate
    */
-  readonly certificate?: CfnModulePropsParametersCertificate;
+  readonly certificate?: CfnCloudGuardQsModulePropsParametersCertificate;
 
   /**
    * The external Load Balancer listens to this port. Leave this field blank to use default ports: 80 for HTTP and 443 for HTTPS
    *
-   * @schema CfnModulePropsParameters#ServicePort
+   * @schema CfnCloudGuardQsModulePropsParameters#ServicePort
    */
-  readonly servicePort?: CfnModulePropsParametersServicePort;
+  readonly servicePort?: CfnCloudGuardQsModulePropsParametersServicePort;
 
   /**
    * Notifications about scaling events will be sent to this email address (optional)
    *
-   * @schema CfnModulePropsParameters#AdminEmail
+   * @schema CfnCloudGuardQsModulePropsParameters#AdminEmail
    */
-  readonly adminEmail?: CfnModulePropsParametersAdminEmail;
+  readonly adminEmail?: CfnCloudGuardQsModulePropsParametersAdminEmail;
 
   /**
    * The EC2 instance type for the Security Gateways. Default: c5.xlarge. Allowed values: c5.xlarge, c5.xlarge, c5.2xlarge, c5.4xlarge, c5.9xlarge, c5.18xlarge, c5n.large, c5n.xlarge, c5n.2xlarge, c5n.4xlarge, c5n.9xlarge, c5n.18xlarge
    *
-   * @schema CfnModulePropsParameters#GatewayInstanceType
+   * @schema CfnCloudGuardQsModulePropsParameters#GatewayInstanceType
    */
-  readonly gatewayInstanceType?: CfnModulePropsParametersGatewayInstanceType;
+  readonly gatewayInstanceType?: CfnCloudGuardQsModulePropsParametersGatewayInstanceType;
 
   /**
    * The minimal number of Security Gateways
    *
-   * @schema CfnModulePropsParameters#GatewaysMinSize
+   * @schema CfnCloudGuardQsModulePropsParameters#GatewaysMinSize
    */
-  readonly gatewaysMinSize?: CfnModulePropsParametersGatewaysMinSize;
+  readonly gatewaysMinSize?: CfnCloudGuardQsModulePropsParametersGatewaysMinSize;
 
   /**
    * The maximal number of Security Gateways
    *
-   * @schema CfnModulePropsParameters#GatewaysMaxSize
+   * @schema CfnCloudGuardQsModulePropsParameters#GatewaysMaxSize
    */
-  readonly gatewaysMaxSize?: CfnModulePropsParametersGatewaysMaxSize;
+  readonly gatewaysMaxSize?: CfnCloudGuardQsModulePropsParametersGatewaysMaxSize;
 
   /**
    * The version and license to install on the Security Gateways. Default: R80.40-PAYG-NGTP-GW. Allowed values: R80.40-BYOL-GW, R80.40-PAYG-NGTP-GW, R80.40-PAYG-NGTX-GW, R81-BYOL-GW, R81-PAYG-NGTP-GW, R81-PAYG-NGTX-GW
    *
-   * @schema CfnModulePropsParameters#GatewayVersion
+   * @schema CfnCloudGuardQsModulePropsParameters#GatewayVersion
    */
-  readonly gatewayVersion?: CfnModulePropsParametersGatewayVersion;
+  readonly gatewayVersion?: CfnCloudGuardQsModulePropsParametersGatewayVersion;
 
   /**
    * Admin user's password hash (use command "openssl passwd -1 PASSWORD" to get the PASSWORD's hash) (optional)
    *
-   * @schema CfnModulePropsParameters#GatewayPasswordHash
+   * @schema CfnCloudGuardQsModulePropsParameters#GatewayPasswordHash
    */
-  readonly gatewayPasswordHash?: CfnModulePropsParametersGatewayPasswordHash;
+  readonly gatewayPasswordHash?: CfnCloudGuardQsModulePropsParametersGatewayPasswordHash;
 
   /**
    * The Secure Internal Communication key creates trusted connections between Check Point components.  Choose a random string consisting of at least 8 alphanumeric characters.
    *
-   * @schema CfnModulePropsParameters#GatewaySICKey
+   * @schema CfnCloudGuardQsModulePropsParameters#GatewaySICKey
    */
-  readonly gatewaySicKey?: CfnModulePropsParametersGatewaySicKey;
+  readonly gatewaySicKey?: CfnCloudGuardQsModulePropsParametersGatewaySicKey;
 
   /**
    * Report Check Point specific CloudWatch metrics. Default: false
    *
-   * @schema CfnModulePropsParameters#CloudWatch
+   * @schema CfnCloudGuardQsModulePropsParameters#CloudWatch
    */
-  readonly cloudWatch?: CfnModulePropsParametersCloudWatch;
+  readonly cloudWatch?: CfnCloudGuardQsModulePropsParametersCloudWatch;
 
   /**
    * Select false to use an existing Security Management Server or to deploy one later and to ignore the other parameters of this section. Default: true
    *
-   * @schema CfnModulePropsParameters#ManagementDeploy
+   * @schema CfnCloudGuardQsModulePropsParameters#ManagementDeploy
    */
-  readonly managementDeploy?: CfnModulePropsParametersManagementDeploy;
+  readonly managementDeploy?: CfnCloudGuardQsModulePropsParametersManagementDeploy;
 
   /**
    * The EC2 instance type of the Security Management Server. Default: m5.xlarge. Allowed values: m5.large, m5.xlarge, m5.2xlarge, m5.4xlarge, m5.12xlarge, m5.24xlarge
    *
-   * @schema CfnModulePropsParameters#ManagementInstanceType
+   * @schema CfnCloudGuardQsModulePropsParameters#ManagementInstanceType
    */
-  readonly managementInstanceType?: CfnModulePropsParametersManagementInstanceType;
+  readonly managementInstanceType?: CfnCloudGuardQsModulePropsParametersManagementInstanceType;
 
   /**
    * The version and license to install on the Security Management Server. Default: R80.40-PAYG-MGMT. Allowed values: R80.40-BYOL-MGMT, R80.40-PAYG-MGMT, R81-BYOL-MGMT, R81-PAYG-MGMT
    *
-   * @schema CfnModulePropsParameters#ManagementVersion
+   * @schema CfnCloudGuardQsModulePropsParameters#ManagementVersion
    */
-  readonly managementVersion?: CfnModulePropsParametersManagementVersion;
+  readonly managementVersion?: CfnCloudGuardQsModulePropsParametersManagementVersion;
 
   /**
    * Admin user's password hash (use command "openssl passwd -1 PASSWORD" to get the PASSWORD's hash) (optional)
    *
-   * @schema CfnModulePropsParameters#ManagementPasswordHash
+   * @schema CfnCloudGuardQsModulePropsParameters#ManagementPasswordHash
    */
-  readonly managementPasswordHash?: CfnModulePropsParametersManagementPasswordHash;
+  readonly managementPasswordHash?: CfnCloudGuardQsModulePropsParametersManagementPasswordHash;
 
   /**
    * The name of the Security Policy package to be installed on the gateways in the Security Gateways Auto Scaling group. Default: Standard
    *
-   * @schema CfnModulePropsParameters#GatewaysPolicy
+   * @schema CfnCloudGuardQsModulePropsParameters#GatewaysPolicy
    */
-  readonly gatewaysPolicy?: CfnModulePropsParametersGatewaysPolicy;
+  readonly gatewaysPolicy?: CfnCloudGuardQsModulePropsParametersGatewaysPolicy;
 
   /**
    * Turn on the Intrusion Prevention System, Application Control, Anti-Virus and Anti-Bot Blades (these and additional Blades can be manually turned on or off later). Default: true
    *
-   * @schema CfnModulePropsParameters#GatewaysBlades
+   * @schema CfnCloudGuardQsModulePropsParameters#GatewaysBlades
    */
-  readonly gatewaysBlades?: CfnModulePropsParametersGatewaysBlades;
+  readonly gatewaysBlades?: CfnCloudGuardQsModulePropsParametersGatewaysBlades;
 
   /**
    * Allow web, SSH, and graphical clients only from this network to communicate with the Security Management Server
    *
-   * @schema CfnModulePropsParameters#AdminCIDR
+   * @schema CfnCloudGuardQsModulePropsParameters#AdminCIDR
    */
-  readonly adminCidr?: CfnModulePropsParametersAdminCidr;
+  readonly adminCidr?: CfnCloudGuardQsModulePropsParametersAdminCidr;
 
   /**
    * Allow gateways only from this network to communicate with the Security Management Server
    *
-   * @schema CfnModulePropsParameters#GatewaysAddresses
+   * @schema CfnCloudGuardQsModulePropsParameters#GatewaysAddresses
    */
-  readonly gatewaysAddresses?: CfnModulePropsParametersGatewaysAddresses;
+  readonly gatewaysAddresses?: CfnCloudGuardQsModulePropsParametersGatewaysAddresses;
 
   /**
    * Select true to deploy web servers and an internal Application Load Balancer. If you select false the other parameters of this section will be ignored. Default: false
    *
-   * @schema CfnModulePropsParameters#ServersDeploy
+   * @schema CfnCloudGuardQsModulePropsParameters#ServersDeploy
    */
-  readonly serversDeploy?: CfnModulePropsParametersServersDeploy;
+  readonly serversDeploy?: CfnCloudGuardQsModulePropsParametersServersDeploy;
 
   /**
    * The EC2 instance type for the web servers. Default: t3.micro. Allowed values: t3.nano, t3.micro, t3.small, t3.medium, t3.large, t3.xlarge, t3.2xlarge
    *
-   * @schema CfnModulePropsParameters#ServerInstanceType
+   * @schema CfnCloudGuardQsModulePropsParameters#ServerInstanceType
    */
-  readonly serverInstanceType?: CfnModulePropsParametersServerInstanceType;
+  readonly serverInstanceType?: CfnCloudGuardQsModulePropsParametersServerInstanceType;
 
   /**
    * The Amazon Machine Image ID of a preconfigured web server (e.g. ami-0dc7dc63)
    *
-   * @schema CfnModulePropsParameters#ServerAMI
+   * @schema CfnCloudGuardQsModulePropsParameters#ServerAMI
    */
-  readonly serverAmi?: CfnModulePropsParametersServerAmi;
+  readonly serverAmi?: CfnCloudGuardQsModulePropsParametersServerAmi;
 
   /**
    * Set to false to create only public subnets. If false, the CIDR parameters for ALL private subnets will be ignored. Default: true
    *
-   * @schema CfnModulePropsParameters#CreatePrivateSubnets
+   * @schema CfnCloudGuardQsModulePropsParameters#CreatePrivateSubnets
    */
-  readonly createPrivateSubnets?: CfnModulePropsParametersCreatePrivateSubnets;
+  readonly createPrivateSubnets?: CfnCloudGuardQsModulePropsParametersCreatePrivateSubnets;
 
   /**
    * Set true for creating designated subnets for VPC TGW attachments. If false, the CIDR parameters for the TGW subnets will be ignored. Default: false
    *
-   * @schema CfnModulePropsParameters#CreateTgwSubnets
+   * @schema CfnCloudGuardQsModulePropsParameters#CreateTgwSubnets
    */
-  readonly createTgwSubnets?: CfnModulePropsParametersCreateTgwSubnets;
+  readonly createTgwSubnets?: CfnCloudGuardQsModulePropsParametersCreateTgwSubnets;
 
   /**
    * CIDR block for TGW subnet 1 located in Availability Zone 1. Default: 10.0.12.0/24
    *
-   * @schema CfnModulePropsParameters#TgwSubnet1CIDR
+   * @schema CfnCloudGuardQsModulePropsParameters#TgwSubnet1CIDR
    */
-  readonly tgwSubnet1Cidr?: CfnModulePropsParametersTgwSubnet1Cidr;
+  readonly tgwSubnet1Cidr?: CfnCloudGuardQsModulePropsParametersTgwSubnet1Cidr;
 
   /**
    * CIDR block for TGW subnet 2 located in Availability Zone 2. Default: 10.0.22.0/24
    *
-   * @schema CfnModulePropsParameters#TgwSubnet2CIDR
+   * @schema CfnCloudGuardQsModulePropsParameters#TgwSubnet2CIDR
    */
-  readonly tgwSubnet2Cidr?: CfnModulePropsParametersTgwSubnet2Cidr;
+  readonly tgwSubnet2Cidr?: CfnCloudGuardQsModulePropsParametersTgwSubnet2Cidr;
 
   /**
    * CIDR block for TGW subnet 3 located in Availability Zone 3. Default: 10.0.32.0/24
    *
-   * @schema CfnModulePropsParameters#TgwSubnet3CIDR
+   * @schema CfnCloudGuardQsModulePropsParameters#TgwSubnet3CIDR
    */
-  readonly tgwSubnet3Cidr?: CfnModulePropsParametersTgwSubnet3Cidr;
+  readonly tgwSubnet3Cidr?: CfnCloudGuardQsModulePropsParametersTgwSubnet3Cidr;
 
   /**
    * CIDR block for TGW subnet 4 located in Availability Zone 4. Default: 10.0.42.0/24
    *
-   * @schema CfnModulePropsParameters#TgwSubnet4CIDR
+   * @schema CfnCloudGuardQsModulePropsParameters#TgwSubnet4CIDR
    */
-  readonly tgwSubnet4Cidr?: CfnModulePropsParametersTgwSubnet4Cidr;
+  readonly tgwSubnet4Cidr?: CfnCloudGuardQsModulePropsParametersTgwSubnet4Cidr;
 
   /**
    * Port for the ELB. Default: 8080
    *
-   * @schema CfnModulePropsParameters#ELBPort
+   * @schema CfnCloudGuardQsModulePropsParameters#ELBPort
    */
-  readonly elbPort?: CfnModulePropsParametersElbPort;
+  readonly elbPort?: CfnCloudGuardQsModulePropsParametersElbPort;
 
   /**
    * Allocate an elastic IP for the Management. Default: true
    *
-   * @schema CfnModulePropsParameters#AllocatePublicAddress
+   * @schema CfnCloudGuardQsModulePropsParameters#AllocatePublicAddress
    */
-  readonly allocatePublicAddress?: CfnModulePropsParametersAllocatePublicAddress;
+  readonly allocatePublicAddress?: CfnCloudGuardQsModulePropsParametersAllocatePublicAddress;
 
   /**
    * IAM role to attach to the instance profile of the Management Server. Default: Create with read permissions. Allowed values: None (configure later), Use existing (specify an existing IAM role name), Create with assume role permissions (specify an STS role ARN), Create with read permissions, Create with read-write permissions
    *
-   * @schema CfnModulePropsParameters#ManagementPermissions
+   * @schema CfnCloudGuardQsModulePropsParameters#ManagementPermissions
    */
-  readonly managementPermissions?: CfnModulePropsParametersManagementPermissions;
+  readonly managementPermissions?: CfnCloudGuardQsModulePropsParametersManagementPermissions;
 
   /**
    * Select 'Over the internet' if any of the gateways you wish to manage are not directly accessed via their private IP address. Default: 'Locally managed'. Allowed values: Locally managed, Over the internet
    *
-   * @schema CfnModulePropsParameters#GatewayManagement
+   * @schema CfnCloudGuardQsModulePropsParameters#GatewayManagement
    */
-  readonly gatewayManagement?: CfnModulePropsParametersGatewayManagement;
+  readonly gatewayManagement?: CfnCloudGuardQsModulePropsParametersGatewayManagement;
 
   /**
    * Mandatory only if deploying a secondary Management Server, the Secure Internal Communication key creates trusted connections between Check Point components. Choose a random string consisting of at least 8 alphanumeric characters
    *
-   * @schema CfnModulePropsParameters#ManagementSICKey
+   * @schema CfnCloudGuardQsModulePropsParameters#ManagementSICKey
    */
-  readonly managementSicKey?: CfnModulePropsParametersManagementSicKey;
+  readonly managementSicKey?: CfnCloudGuardQsModulePropsParametersManagementSicKey;
 
   /**
    * A predefined IAM role to attach to the instance profile. Ignored if IAM role is not set to 'Use existing'
    *
-   * @schema CfnModulePropsParameters#ManagementPredefinedRole
+   * @schema CfnCloudGuardQsModulePropsParameters#ManagementPredefinedRole
    */
-  readonly managementPredefinedRole?: CfnModulePropsParametersManagementPredefinedRole;
+  readonly managementPredefinedRole?: CfnCloudGuardQsModulePropsParametersManagementPredefinedRole;
 
   /**
    * (optional). Default: 169.254.169.123
    *
-   * @schema CfnModulePropsParameters#NTPPrimary
+   * @schema CfnCloudGuardQsModulePropsParameters#NTPPrimary
    */
-  readonly ntpPrimary?: CfnModulePropsParametersNtpPrimary;
+  readonly ntpPrimary?: CfnCloudGuardQsModulePropsParametersNtpPrimary;
 
   /**
    * (optional). Default: 0.pool.ntp.org
    *
-   * @schema CfnModulePropsParameters#NTPSecondary
+   * @schema CfnCloudGuardQsModulePropsParameters#NTPSecondary
    */
-  readonly ntpSecondary?: CfnModulePropsParametersNtpSecondary;
+  readonly ntpSecondary?: CfnCloudGuardQsModulePropsParametersNtpSecondary;
 
   /**
    * (optional). Default: mgmt-aws
    *
-   * @schema CfnModulePropsParameters#ManagementHostname
+   * @schema CfnCloudGuardQsModulePropsParameters#ManagementHostname
    */
-  readonly managementHostname?: CfnModulePropsParametersManagementHostname;
+  readonly managementHostname?: CfnCloudGuardQsModulePropsParametersManagementHostname;
 
   /**
    * Determines if this is the primary Management Server or not. Default: true
    *
-   * @schema CfnModulePropsParameters#PrimaryManagement
+   * @schema CfnCloudGuardQsModulePropsParameters#PrimaryManagement
    */
-  readonly primaryManagement?: CfnModulePropsParametersPrimaryManagement;
+  readonly primaryManagement?: CfnCloudGuardQsModulePropsParametersPrimaryManagement;
 
   /**
    * EBS Volume size of the management server
    *
-   * @schema CfnModulePropsParameters#ManagementStackVolumeSize
+   * @schema CfnCloudGuardQsModulePropsParameters#ManagementStackVolumeSize
    */
-  readonly managementStackVolumeSize?: CfnModulePropsParametersManagementStackVolumeSize;
+  readonly managementStackVolumeSize?: CfnCloudGuardQsModulePropsParametersManagementStackVolumeSize;
 
   /**
    * Change the admin shell to enable advanced command line configuration. Default: /etc/cli.sh. Allowed values: /etc/cli.sh, /bin/bash, /bin/csh, /bin/tcsh
    *
-   * @schema CfnModulePropsParameters#ShellManagementStack
+   * @schema CfnCloudGuardQsModulePropsParameters#ShellManagementStack
    */
-  readonly shellManagementStack?: CfnModulePropsParametersShellManagementStack;
+  readonly shellManagementStack?: CfnCloudGuardQsModulePropsParametersShellManagementStack;
 
   /**
    * The Elasitc Load Balancer Type. Default: none. Allowed values: none, internal, internet-facing
    *
-   * @schema CfnModulePropsParameters#ELBType
+   * @schema CfnCloudGuardQsModulePropsParameters#ELBType
    */
-  readonly elbType?: CfnModulePropsParametersElbType;
+  readonly elbType?: CfnCloudGuardQsModulePropsParametersElbType;
 
   /**
    * A list of Target Groups to associate with the Auto Scaling group (comma separated list of ARNs, without spaces) (optional)
    *
-   * @schema CfnModulePropsParameters#GatewaysTargetGroups
+   * @schema CfnCloudGuardQsModulePropsParameters#GatewaysTargetGroups
    */
-  readonly gatewaysTargetGroups?: CfnModulePropsParametersGatewaysTargetGroups;
+  readonly gatewaysTargetGroups?: CfnCloudGuardQsModulePropsParametersGatewaysTargetGroups;
 
   /**
    * Determines if the gateways are provisioned using their private or public address. Default: private. Allowed values: private, public
    *
-   * @schema CfnModulePropsParameters#ControlGatewayOverPrivateOrPublicAddress
+   * @schema CfnCloudGuardQsModulePropsParameters#ControlGatewayOverPrivateOrPublicAddress
    */
-  readonly controlGatewayOverPrivateOrPublicAddress?: CfnModulePropsParametersControlGatewayOverPrivateOrPublicAddress;
+  readonly controlGatewayOverPrivateOrPublicAddress?: CfnCloudGuardQsModulePropsParametersControlGatewayOverPrivateOrPublicAddress;
 
   /**
    * EBS Volume size of the security gateway server
    *
-   * @schema CfnModulePropsParameters#SecurityGatewayVolumeSize
+   * @schema CfnCloudGuardQsModulePropsParameters#SecurityGatewayVolumeSize
    */
-  readonly securityGatewayVolumeSize?: CfnModulePropsParametersSecurityGatewayVolumeSize;
+  readonly securityGatewayVolumeSize?: CfnCloudGuardQsModulePropsParametersSecurityGatewayVolumeSize;
 
   /**
    * Allow clients only from this network to communicate with the Web Servers. Default: 0.0.0.0/0
    *
-   * @schema CfnModulePropsParameters#ELBClients
+   * @schema CfnCloudGuardQsModulePropsParameters#ELBClients
    */
-  readonly elbClients?: CfnModulePropsParametersElbClients;
+  readonly elbClients?: CfnCloudGuardQsModulePropsParametersElbClients;
 
   /**
    * Change the admin shell to enable advanced command line configuration. Default: /etc/cli.sh. Allowed Values: /etc/cli.sh /bin/bash /bin/csh /bin/tcsh
    *
-   * @schema CfnModulePropsParameters#ShellSecurityGatewayStack
+   * @schema CfnCloudGuardQsModulePropsParameters#ShellSecurityGatewayStack
    */
-  readonly shellSecurityGatewayStack?: CfnModulePropsParametersShellSecurityGatewayStack;
+  readonly shellSecurityGatewayStack?: CfnCloudGuardQsModulePropsParametersShellSecurityGatewayStack;
 
   /**
    * IAM Permissions for the management server. Default: Create with read permissions. Allowed values: Create with read permissions Create with read-write permissions Create with assume role permissions (specify an STS role ARN)
    *
-   * @schema CfnModulePropsParameters#Permissions
+   * @schema CfnCloudGuardQsModulePropsParameters#Permissions
    */
-  readonly permissions?: CfnModulePropsParametersPermissions;
+  readonly permissions?: CfnCloudGuardQsModulePropsParametersPermissions;
 
   /**
    * The IAM role will be able to assume these STS Roles (comma separated list of ARNs, without spaces)
    *
-   * @schema CfnModulePropsParameters#STSRoles
+   * @schema CfnCloudGuardQsModulePropsParameters#STSRoles
    */
-  readonly stsRoles?: CfnModulePropsParametersStsRoles;
+  readonly stsRoles?: CfnCloudGuardQsModulePropsParametersStsRoles;
 
   /**
    * A 12 digits number that represents the ID of a trusted account. IAM users in this account will be able assume the IAM role and receive the permissions attached to it.
    *
-   * @schema CfnModulePropsParameters#TrustedAccount
+   * @schema CfnCloudGuardQsModulePropsParameters#TrustedAccount
    */
-  readonly trustedAccount?: CfnModulePropsParametersTrustedAccount;
+  readonly trustedAccount?: CfnCloudGuardQsModulePropsParametersTrustedAccount;
 
   /**
    * An optional list of Target Groups to associate with the Auto Scaling group (comma separated list of ARNs, without spaces)
    *
-   * @schema CfnModulePropsParameters#ServersTargetGroups
+   * @schema CfnCloudGuardQsModulePropsParameters#ServersTargetGroups
    */
-  readonly serversTargetGroups?: CfnModulePropsParametersServersTargetGroups;
+  readonly serversTargetGroups?: CfnCloudGuardQsModulePropsParametersServersTargetGroups;
 
   /**
    * The ID of Security Group from which access will be allowed to the instances in this Auto Scaling group
    *
-   * @schema CfnModulePropsParameters#SourceSecurityGroup
+   * @schema CfnCloudGuardQsModulePropsParameters#SourceSecurityGroup
    */
-  readonly sourceSecurityGroup?: CfnModulePropsParametersSourceSecurityGroup;
+  readonly sourceSecurityGroup?: CfnCloudGuardQsModulePropsParametersSourceSecurityGroup;
 
   /**
    * The minimal number of servers in the Auto Scaling group. Default: 2
    *
-   * @schema CfnModulePropsParameters#ServersMinSize
+   * @schema CfnCloudGuardQsModulePropsParameters#ServersMinSize
    */
-  readonly serversMinSize?: CfnModulePropsParametersServersMinSize;
+  readonly serversMinSize?: CfnCloudGuardQsModulePropsParametersServersMinSize;
 
   /**
    * The maximal number of servers in the Auto Scaling group. Default: 10
    *
-   * @schema CfnModulePropsParameters#ServersMaxSize
+   * @schema CfnCloudGuardQsModulePropsParameters#ServersMaxSize
    */
-  readonly serversMaxSize?: CfnModulePropsParametersServersMaxSize;
+  readonly serversMaxSize?: CfnCloudGuardQsModulePropsParametersServersMaxSize;
 
   /**
    * The servers name tag. Default: Server
    *
-   * @schema CfnModulePropsParameters#ServerName
+   * @schema CfnCloudGuardQsModulePropsParameters#ServerName
    */
-  readonly serverName?: CfnModulePropsParametersServerName;
+  readonly serverName?: CfnCloudGuardQsModulePropsParametersServerName;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParameters' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParameters' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParameters(obj: CfnModulePropsParameters | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParameters(obj: CfnCloudGuardQsModulePropsParameters | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'AvailabilityZones': toJson_CfnModulePropsParametersAvailabilityZones(obj.availabilityZones),
-    'NumberOfAZs': toJson_CfnModulePropsParametersNumberOfAZs(obj.numberOfAZs),
-    'VPCCIDR': toJson_CfnModulePropsParametersVpccidr(obj.vpccidr),
-    'PublicSubnet1CIDR': toJson_CfnModulePropsParametersPublicSubnet1Cidr(obj.publicSubnet1Cidr),
-    'PublicSubnet2CIDR': toJson_CfnModulePropsParametersPublicSubnet2Cidr(obj.publicSubnet2Cidr),
-    'PublicSubnet3CIDR': toJson_CfnModulePropsParametersPublicSubnet3Cidr(obj.publicSubnet3Cidr),
-    'PublicSubnet4CIDR': toJson_CfnModulePropsParametersPublicSubnet4Cidr(obj.publicSubnet4Cidr),
-    'PrivateSubnet1CIDR': toJson_CfnModulePropsParametersPrivateSubnet1Cidr(obj.privateSubnet1Cidr),
-    'PrivateSubnet2CIDR': toJson_CfnModulePropsParametersPrivateSubnet2Cidr(obj.privateSubnet2Cidr),
-    'PrivateSubnet3CIDR': toJson_CfnModulePropsParametersPrivateSubnet3Cidr(obj.privateSubnet3Cidr),
-    'PrivateSubnet4CIDR': toJson_CfnModulePropsParametersPrivateSubnet4Cidr(obj.privateSubnet4Cidr),
-    'KeyName': toJson_CfnModulePropsParametersKeyName(obj.keyName),
-    'EnableVolumeEncryption': toJson_CfnModulePropsParametersEnableVolumeEncryption(obj.enableVolumeEncryption),
-    'EnableInstanceConnect': toJson_CfnModulePropsParametersEnableInstanceConnect(obj.enableInstanceConnect),
-    'AllowUploadDownload': toJson_CfnModulePropsParametersAllowUploadDownload(obj.allowUploadDownload),
-    'ProvisionTag': toJson_CfnModulePropsParametersProvisionTag(obj.provisionTag),
-    'LoadBalancersType': toJson_CfnModulePropsParametersLoadBalancersType(obj.loadBalancersType),
-    'ALBProtocol': toJson_CfnModulePropsParametersAlbProtocol(obj.albProtocol),
-    'NLBProtocol': toJson_CfnModulePropsParametersNlbProtocol(obj.nlbProtocol),
-    'Certificate': toJson_CfnModulePropsParametersCertificate(obj.certificate),
-    'ServicePort': toJson_CfnModulePropsParametersServicePort(obj.servicePort),
-    'AdminEmail': toJson_CfnModulePropsParametersAdminEmail(obj.adminEmail),
-    'GatewayInstanceType': toJson_CfnModulePropsParametersGatewayInstanceType(obj.gatewayInstanceType),
-    'GatewaysMinSize': toJson_CfnModulePropsParametersGatewaysMinSize(obj.gatewaysMinSize),
-    'GatewaysMaxSize': toJson_CfnModulePropsParametersGatewaysMaxSize(obj.gatewaysMaxSize),
-    'GatewayVersion': toJson_CfnModulePropsParametersGatewayVersion(obj.gatewayVersion),
-    'GatewayPasswordHash': toJson_CfnModulePropsParametersGatewayPasswordHash(obj.gatewayPasswordHash),
-    'GatewaySICKey': toJson_CfnModulePropsParametersGatewaySicKey(obj.gatewaySicKey),
-    'CloudWatch': toJson_CfnModulePropsParametersCloudWatch(obj.cloudWatch),
-    'ManagementDeploy': toJson_CfnModulePropsParametersManagementDeploy(obj.managementDeploy),
-    'ManagementInstanceType': toJson_CfnModulePropsParametersManagementInstanceType(obj.managementInstanceType),
-    'ManagementVersion': toJson_CfnModulePropsParametersManagementVersion(obj.managementVersion),
-    'ManagementPasswordHash': toJson_CfnModulePropsParametersManagementPasswordHash(obj.managementPasswordHash),
-    'GatewaysPolicy': toJson_CfnModulePropsParametersGatewaysPolicy(obj.gatewaysPolicy),
-    'GatewaysBlades': toJson_CfnModulePropsParametersGatewaysBlades(obj.gatewaysBlades),
-    'AdminCIDR': toJson_CfnModulePropsParametersAdminCidr(obj.adminCidr),
-    'GatewaysAddresses': toJson_CfnModulePropsParametersGatewaysAddresses(obj.gatewaysAddresses),
-    'ServersDeploy': toJson_CfnModulePropsParametersServersDeploy(obj.serversDeploy),
-    'ServerInstanceType': toJson_CfnModulePropsParametersServerInstanceType(obj.serverInstanceType),
-    'ServerAMI': toJson_CfnModulePropsParametersServerAmi(obj.serverAmi),
-    'CreatePrivateSubnets': toJson_CfnModulePropsParametersCreatePrivateSubnets(obj.createPrivateSubnets),
-    'CreateTgwSubnets': toJson_CfnModulePropsParametersCreateTgwSubnets(obj.createTgwSubnets),
-    'TgwSubnet1CIDR': toJson_CfnModulePropsParametersTgwSubnet1Cidr(obj.tgwSubnet1Cidr),
-    'TgwSubnet2CIDR': toJson_CfnModulePropsParametersTgwSubnet2Cidr(obj.tgwSubnet2Cidr),
-    'TgwSubnet3CIDR': toJson_CfnModulePropsParametersTgwSubnet3Cidr(obj.tgwSubnet3Cidr),
-    'TgwSubnet4CIDR': toJson_CfnModulePropsParametersTgwSubnet4Cidr(obj.tgwSubnet4Cidr),
-    'ELBPort': toJson_CfnModulePropsParametersElbPort(obj.elbPort),
-    'AllocatePublicAddress': toJson_CfnModulePropsParametersAllocatePublicAddress(obj.allocatePublicAddress),
-    'ManagementPermissions': toJson_CfnModulePropsParametersManagementPermissions(obj.managementPermissions),
-    'GatewayManagement': toJson_CfnModulePropsParametersGatewayManagement(obj.gatewayManagement),
-    'ManagementSICKey': toJson_CfnModulePropsParametersManagementSicKey(obj.managementSicKey),
-    'ManagementPredefinedRole': toJson_CfnModulePropsParametersManagementPredefinedRole(obj.managementPredefinedRole),
-    'NTPPrimary': toJson_CfnModulePropsParametersNtpPrimary(obj.ntpPrimary),
-    'NTPSecondary': toJson_CfnModulePropsParametersNtpSecondary(obj.ntpSecondary),
-    'ManagementHostname': toJson_CfnModulePropsParametersManagementHostname(obj.managementHostname),
-    'PrimaryManagement': toJson_CfnModulePropsParametersPrimaryManagement(obj.primaryManagement),
-    'ManagementStackVolumeSize': toJson_CfnModulePropsParametersManagementStackVolumeSize(obj.managementStackVolumeSize),
-    'ShellManagementStack': toJson_CfnModulePropsParametersShellManagementStack(obj.shellManagementStack),
-    'ELBType': toJson_CfnModulePropsParametersElbType(obj.elbType),
-    'GatewaysTargetGroups': toJson_CfnModulePropsParametersGatewaysTargetGroups(obj.gatewaysTargetGroups),
-    'ControlGatewayOverPrivateOrPublicAddress': toJson_CfnModulePropsParametersControlGatewayOverPrivateOrPublicAddress(obj.controlGatewayOverPrivateOrPublicAddress),
-    'SecurityGatewayVolumeSize': toJson_CfnModulePropsParametersSecurityGatewayVolumeSize(obj.securityGatewayVolumeSize),
-    'ELBClients': toJson_CfnModulePropsParametersElbClients(obj.elbClients),
-    'ShellSecurityGatewayStack': toJson_CfnModulePropsParametersShellSecurityGatewayStack(obj.shellSecurityGatewayStack),
-    'Permissions': toJson_CfnModulePropsParametersPermissions(obj.permissions),
-    'STSRoles': toJson_CfnModulePropsParametersStsRoles(obj.stsRoles),
-    'TrustedAccount': toJson_CfnModulePropsParametersTrustedAccount(obj.trustedAccount),
-    'ServersTargetGroups': toJson_CfnModulePropsParametersServersTargetGroups(obj.serversTargetGroups),
-    'SourceSecurityGroup': toJson_CfnModulePropsParametersSourceSecurityGroup(obj.sourceSecurityGroup),
-    'ServersMinSize': toJson_CfnModulePropsParametersServersMinSize(obj.serversMinSize),
-    'ServersMaxSize': toJson_CfnModulePropsParametersServersMaxSize(obj.serversMaxSize),
-    'ServerName': toJson_CfnModulePropsParametersServerName(obj.serverName),
+    'AvailabilityZones': toJson_CfnCloudGuardQsModulePropsParametersAvailabilityZones(obj.availabilityZones),
+    'NumberOfAZs': toJson_CfnCloudGuardQsModulePropsParametersNumberOfAZs(obj.numberOfAZs),
+    'VPCCIDR': toJson_CfnCloudGuardQsModulePropsParametersVpccidr(obj.vpccidr),
+    'PublicSubnet1CIDR': toJson_CfnCloudGuardQsModulePropsParametersPublicSubnet1Cidr(obj.publicSubnet1Cidr),
+    'PublicSubnet2CIDR': toJson_CfnCloudGuardQsModulePropsParametersPublicSubnet2Cidr(obj.publicSubnet2Cidr),
+    'PublicSubnet3CIDR': toJson_CfnCloudGuardQsModulePropsParametersPublicSubnet3Cidr(obj.publicSubnet3Cidr),
+    'PublicSubnet4CIDR': toJson_CfnCloudGuardQsModulePropsParametersPublicSubnet4Cidr(obj.publicSubnet4Cidr),
+    'PrivateSubnet1CIDR': toJson_CfnCloudGuardQsModulePropsParametersPrivateSubnet1Cidr(obj.privateSubnet1Cidr),
+    'PrivateSubnet2CIDR': toJson_CfnCloudGuardQsModulePropsParametersPrivateSubnet2Cidr(obj.privateSubnet2Cidr),
+    'PrivateSubnet3CIDR': toJson_CfnCloudGuardQsModulePropsParametersPrivateSubnet3Cidr(obj.privateSubnet3Cidr),
+    'PrivateSubnet4CIDR': toJson_CfnCloudGuardQsModulePropsParametersPrivateSubnet4Cidr(obj.privateSubnet4Cidr),
+    'KeyName': toJson_CfnCloudGuardQsModulePropsParametersKeyName(obj.keyName),
+    'EnableVolumeEncryption': toJson_CfnCloudGuardQsModulePropsParametersEnableVolumeEncryption(obj.enableVolumeEncryption),
+    'EnableInstanceConnect': toJson_CfnCloudGuardQsModulePropsParametersEnableInstanceConnect(obj.enableInstanceConnect),
+    'AllowUploadDownload': toJson_CfnCloudGuardQsModulePropsParametersAllowUploadDownload(obj.allowUploadDownload),
+    'ProvisionTag': toJson_CfnCloudGuardQsModulePropsParametersProvisionTag(obj.provisionTag),
+    'LoadBalancersType': toJson_CfnCloudGuardQsModulePropsParametersLoadBalancersType(obj.loadBalancersType),
+    'ALBProtocol': toJson_CfnCloudGuardQsModulePropsParametersAlbProtocol(obj.albProtocol),
+    'NLBProtocol': toJson_CfnCloudGuardQsModulePropsParametersNlbProtocol(obj.nlbProtocol),
+    'Certificate': toJson_CfnCloudGuardQsModulePropsParametersCertificate(obj.certificate),
+    'ServicePort': toJson_CfnCloudGuardQsModulePropsParametersServicePort(obj.servicePort),
+    'AdminEmail': toJson_CfnCloudGuardQsModulePropsParametersAdminEmail(obj.adminEmail),
+    'GatewayInstanceType': toJson_CfnCloudGuardQsModulePropsParametersGatewayInstanceType(obj.gatewayInstanceType),
+    'GatewaysMinSize': toJson_CfnCloudGuardQsModulePropsParametersGatewaysMinSize(obj.gatewaysMinSize),
+    'GatewaysMaxSize': toJson_CfnCloudGuardQsModulePropsParametersGatewaysMaxSize(obj.gatewaysMaxSize),
+    'GatewayVersion': toJson_CfnCloudGuardQsModulePropsParametersGatewayVersion(obj.gatewayVersion),
+    'GatewayPasswordHash': toJson_CfnCloudGuardQsModulePropsParametersGatewayPasswordHash(obj.gatewayPasswordHash),
+    'GatewaySICKey': toJson_CfnCloudGuardQsModulePropsParametersGatewaySicKey(obj.gatewaySicKey),
+    'CloudWatch': toJson_CfnCloudGuardQsModulePropsParametersCloudWatch(obj.cloudWatch),
+    'ManagementDeploy': toJson_CfnCloudGuardQsModulePropsParametersManagementDeploy(obj.managementDeploy),
+    'ManagementInstanceType': toJson_CfnCloudGuardQsModulePropsParametersManagementInstanceType(obj.managementInstanceType),
+    'ManagementVersion': toJson_CfnCloudGuardQsModulePropsParametersManagementVersion(obj.managementVersion),
+    'ManagementPasswordHash': toJson_CfnCloudGuardQsModulePropsParametersManagementPasswordHash(obj.managementPasswordHash),
+    'GatewaysPolicy': toJson_CfnCloudGuardQsModulePropsParametersGatewaysPolicy(obj.gatewaysPolicy),
+    'GatewaysBlades': toJson_CfnCloudGuardQsModulePropsParametersGatewaysBlades(obj.gatewaysBlades),
+    'AdminCIDR': toJson_CfnCloudGuardQsModulePropsParametersAdminCidr(obj.adminCidr),
+    'GatewaysAddresses': toJson_CfnCloudGuardQsModulePropsParametersGatewaysAddresses(obj.gatewaysAddresses),
+    'ServersDeploy': toJson_CfnCloudGuardQsModulePropsParametersServersDeploy(obj.serversDeploy),
+    'ServerInstanceType': toJson_CfnCloudGuardQsModulePropsParametersServerInstanceType(obj.serverInstanceType),
+    'ServerAMI': toJson_CfnCloudGuardQsModulePropsParametersServerAmi(obj.serverAmi),
+    'CreatePrivateSubnets': toJson_CfnCloudGuardQsModulePropsParametersCreatePrivateSubnets(obj.createPrivateSubnets),
+    'CreateTgwSubnets': toJson_CfnCloudGuardQsModulePropsParametersCreateTgwSubnets(obj.createTgwSubnets),
+    'TgwSubnet1CIDR': toJson_CfnCloudGuardQsModulePropsParametersTgwSubnet1Cidr(obj.tgwSubnet1Cidr),
+    'TgwSubnet2CIDR': toJson_CfnCloudGuardQsModulePropsParametersTgwSubnet2Cidr(obj.tgwSubnet2Cidr),
+    'TgwSubnet3CIDR': toJson_CfnCloudGuardQsModulePropsParametersTgwSubnet3Cidr(obj.tgwSubnet3Cidr),
+    'TgwSubnet4CIDR': toJson_CfnCloudGuardQsModulePropsParametersTgwSubnet4Cidr(obj.tgwSubnet4Cidr),
+    'ELBPort': toJson_CfnCloudGuardQsModulePropsParametersElbPort(obj.elbPort),
+    'AllocatePublicAddress': toJson_CfnCloudGuardQsModulePropsParametersAllocatePublicAddress(obj.allocatePublicAddress),
+    'ManagementPermissions': toJson_CfnCloudGuardQsModulePropsParametersManagementPermissions(obj.managementPermissions),
+    'GatewayManagement': toJson_CfnCloudGuardQsModulePropsParametersGatewayManagement(obj.gatewayManagement),
+    'ManagementSICKey': toJson_CfnCloudGuardQsModulePropsParametersManagementSicKey(obj.managementSicKey),
+    'ManagementPredefinedRole': toJson_CfnCloudGuardQsModulePropsParametersManagementPredefinedRole(obj.managementPredefinedRole),
+    'NTPPrimary': toJson_CfnCloudGuardQsModulePropsParametersNtpPrimary(obj.ntpPrimary),
+    'NTPSecondary': toJson_CfnCloudGuardQsModulePropsParametersNtpSecondary(obj.ntpSecondary),
+    'ManagementHostname': toJson_CfnCloudGuardQsModulePropsParametersManagementHostname(obj.managementHostname),
+    'PrimaryManagement': toJson_CfnCloudGuardQsModulePropsParametersPrimaryManagement(obj.primaryManagement),
+    'ManagementStackVolumeSize': toJson_CfnCloudGuardQsModulePropsParametersManagementStackVolumeSize(obj.managementStackVolumeSize),
+    'ShellManagementStack': toJson_CfnCloudGuardQsModulePropsParametersShellManagementStack(obj.shellManagementStack),
+    'ELBType': toJson_CfnCloudGuardQsModulePropsParametersElbType(obj.elbType),
+    'GatewaysTargetGroups': toJson_CfnCloudGuardQsModulePropsParametersGatewaysTargetGroups(obj.gatewaysTargetGroups),
+    'ControlGatewayOverPrivateOrPublicAddress': toJson_CfnCloudGuardQsModulePropsParametersControlGatewayOverPrivateOrPublicAddress(obj.controlGatewayOverPrivateOrPublicAddress),
+    'SecurityGatewayVolumeSize': toJson_CfnCloudGuardQsModulePropsParametersSecurityGatewayVolumeSize(obj.securityGatewayVolumeSize),
+    'ELBClients': toJson_CfnCloudGuardQsModulePropsParametersElbClients(obj.elbClients),
+    'ShellSecurityGatewayStack': toJson_CfnCloudGuardQsModulePropsParametersShellSecurityGatewayStack(obj.shellSecurityGatewayStack),
+    'Permissions': toJson_CfnCloudGuardQsModulePropsParametersPermissions(obj.permissions),
+    'STSRoles': toJson_CfnCloudGuardQsModulePropsParametersStsRoles(obj.stsRoles),
+    'TrustedAccount': toJson_CfnCloudGuardQsModulePropsParametersTrustedAccount(obj.trustedAccount),
+    'ServersTargetGroups': toJson_CfnCloudGuardQsModulePropsParametersServersTargetGroups(obj.serversTargetGroups),
+    'SourceSecurityGroup': toJson_CfnCloudGuardQsModulePropsParametersSourceSecurityGroup(obj.sourceSecurityGroup),
+    'ServersMinSize': toJson_CfnCloudGuardQsModulePropsParametersServersMinSize(obj.serversMinSize),
+    'ServersMaxSize': toJson_CfnCloudGuardQsModulePropsParametersServersMaxSize(obj.serversMaxSize),
+    'ServerName': toJson_CfnCloudGuardQsModulePropsParametersServerName(obj.serverName),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -630,360 +630,360 @@ export function toJson_CfnModulePropsParameters(obj: CfnModulePropsParameters | 
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResources
+ * @schema CfnCloudGuardQsModulePropsResources
  */
-export interface CfnModulePropsResources {
+export interface CfnCloudGuardQsModulePropsResources {
   /**
-   * @schema CfnModulePropsResources#VPC
+   * @schema CfnCloudGuardQsModulePropsResources#VPC
    */
-  readonly vpc?: CfnModulePropsResourcesVpc;
+  readonly vpc?: CfnCloudGuardQsModulePropsResourcesVpc;
 
   /**
-   * @schema CfnModulePropsResources#InternetGateway
+   * @schema CfnCloudGuardQsModulePropsResources#InternetGateway
    */
-  readonly internetGateway?: CfnModulePropsResourcesInternetGateway;
+  readonly internetGateway?: CfnCloudGuardQsModulePropsResourcesInternetGateway;
 
   /**
-   * @schema CfnModulePropsResources#VPCGatewayAttachment
+   * @schema CfnCloudGuardQsModulePropsResources#VPCGatewayAttachment
    */
-  readonly vpcGatewayAttachment?: CfnModulePropsResourcesVpcGatewayAttachment;
+  readonly vpcGatewayAttachment?: CfnCloudGuardQsModulePropsResourcesVpcGatewayAttachment;
 
   /**
-   * @schema CfnModulePropsResources#PublicSubnet1
+   * @schema CfnCloudGuardQsModulePropsResources#PublicSubnet1
    */
-  readonly publicSubnet1?: CfnModulePropsResourcesPublicSubnet1;
+  readonly publicSubnet1?: CfnCloudGuardQsModulePropsResourcesPublicSubnet1;
 
   /**
-   * @schema CfnModulePropsResources#PublicSubnet2
+   * @schema CfnCloudGuardQsModulePropsResources#PublicSubnet2
    */
-  readonly publicSubnet2?: CfnModulePropsResourcesPublicSubnet2;
+  readonly publicSubnet2?: CfnCloudGuardQsModulePropsResourcesPublicSubnet2;
 
   /**
-   * @schema CfnModulePropsResources#PublicSubnet3
+   * @schema CfnCloudGuardQsModulePropsResources#PublicSubnet3
    */
-  readonly publicSubnet3?: CfnModulePropsResourcesPublicSubnet3;
+  readonly publicSubnet3?: CfnCloudGuardQsModulePropsResourcesPublicSubnet3;
 
   /**
-   * @schema CfnModulePropsResources#PublicSubnet4
+   * @schema CfnCloudGuardQsModulePropsResources#PublicSubnet4
    */
-  readonly publicSubnet4?: CfnModulePropsResourcesPublicSubnet4;
+  readonly publicSubnet4?: CfnCloudGuardQsModulePropsResourcesPublicSubnet4;
 
   /**
-   * @schema CfnModulePropsResources#PublicSubnetRouteTable
+   * @schema CfnCloudGuardQsModulePropsResources#PublicSubnetRouteTable
    */
-  readonly publicSubnetRouteTable?: CfnModulePropsResourcesPublicSubnetRouteTable;
+  readonly publicSubnetRouteTable?: CfnCloudGuardQsModulePropsResourcesPublicSubnetRouteTable;
 
   /**
-   * @schema CfnModulePropsResources#PublicSubnetRoute
+   * @schema CfnCloudGuardQsModulePropsResources#PublicSubnetRoute
    */
-  readonly publicSubnetRoute?: CfnModulePropsResourcesPublicSubnetRoute;
+  readonly publicSubnetRoute?: CfnCloudGuardQsModulePropsResourcesPublicSubnetRoute;
 
   /**
-   * @schema CfnModulePropsResources#PublicSubnet1RouteTableAssociation
+   * @schema CfnCloudGuardQsModulePropsResources#PublicSubnet1RouteTableAssociation
    */
-  readonly publicSubnet1RouteTableAssociation?: CfnModulePropsResourcesPublicSubnet1RouteTableAssociation;
+  readonly publicSubnet1RouteTableAssociation?: CfnCloudGuardQsModulePropsResourcesPublicSubnet1RouteTableAssociation;
 
   /**
-   * @schema CfnModulePropsResources#PublicSubnet2RouteTableAssociation
+   * @schema CfnCloudGuardQsModulePropsResources#PublicSubnet2RouteTableAssociation
    */
-  readonly publicSubnet2RouteTableAssociation?: CfnModulePropsResourcesPublicSubnet2RouteTableAssociation;
+  readonly publicSubnet2RouteTableAssociation?: CfnCloudGuardQsModulePropsResourcesPublicSubnet2RouteTableAssociation;
 
   /**
-   * @schema CfnModulePropsResources#PublicSubnet3RouteTableAssociation
+   * @schema CfnCloudGuardQsModulePropsResources#PublicSubnet3RouteTableAssociation
    */
-  readonly publicSubnet3RouteTableAssociation?: CfnModulePropsResourcesPublicSubnet3RouteTableAssociation;
+  readonly publicSubnet3RouteTableAssociation?: CfnCloudGuardQsModulePropsResourcesPublicSubnet3RouteTableAssociation;
 
   /**
-   * @schema CfnModulePropsResources#PublicSubnet4RouteTableAssociation
+   * @schema CfnCloudGuardQsModulePropsResources#PublicSubnet4RouteTableAssociation
    */
-  readonly publicSubnet4RouteTableAssociation?: CfnModulePropsResourcesPublicSubnet4RouteTableAssociation;
+  readonly publicSubnet4RouteTableAssociation?: CfnCloudGuardQsModulePropsResourcesPublicSubnet4RouteTableAssociation;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet1
+   * @schema CfnCloudGuardQsModulePropsResources#PrivateSubnet1
    */
-  readonly privateSubnet1?: CfnModulePropsResourcesPrivateSubnet1;
+  readonly privateSubnet1?: CfnCloudGuardQsModulePropsResourcesPrivateSubnet1;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet2
+   * @schema CfnCloudGuardQsModulePropsResources#PrivateSubnet2
    */
-  readonly privateSubnet2?: CfnModulePropsResourcesPrivateSubnet2;
+  readonly privateSubnet2?: CfnCloudGuardQsModulePropsResourcesPrivateSubnet2;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet3
+   * @schema CfnCloudGuardQsModulePropsResources#PrivateSubnet3
    */
-  readonly privateSubnet3?: CfnModulePropsResourcesPrivateSubnet3;
+  readonly privateSubnet3?: CfnCloudGuardQsModulePropsResourcesPrivateSubnet3;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet4
+   * @schema CfnCloudGuardQsModulePropsResources#PrivateSubnet4
    */
-  readonly privateSubnet4?: CfnModulePropsResourcesPrivateSubnet4;
+  readonly privateSubnet4?: CfnCloudGuardQsModulePropsResourcesPrivateSubnet4;
 
   /**
-   * @schema CfnModulePropsResources#TgwSubnet1
+   * @schema CfnCloudGuardQsModulePropsResources#TgwSubnet1
    */
-  readonly tgwSubnet1?: CfnModulePropsResourcesTgwSubnet1;
+  readonly tgwSubnet1?: CfnCloudGuardQsModulePropsResourcesTgwSubnet1;
 
   /**
-   * @schema CfnModulePropsResources#TgwSubnet2
+   * @schema CfnCloudGuardQsModulePropsResources#TgwSubnet2
    */
-  readonly tgwSubnet2?: CfnModulePropsResourcesTgwSubnet2;
+  readonly tgwSubnet2?: CfnCloudGuardQsModulePropsResourcesTgwSubnet2;
 
   /**
-   * @schema CfnModulePropsResources#TgwSubnet3
+   * @schema CfnCloudGuardQsModulePropsResources#TgwSubnet3
    */
-  readonly tgwSubnet3?: CfnModulePropsResourcesTgwSubnet3;
+  readonly tgwSubnet3?: CfnCloudGuardQsModulePropsResourcesTgwSubnet3;
 
   /**
-   * @schema CfnModulePropsResources#TgwSubnet4
+   * @schema CfnCloudGuardQsModulePropsResources#TgwSubnet4
    */
-  readonly tgwSubnet4?: CfnModulePropsResourcesTgwSubnet4;
+  readonly tgwSubnet4?: CfnCloudGuardQsModulePropsResourcesTgwSubnet4;
 
   /**
-   * @schema CfnModulePropsResources#ExternalALBSecurityGroup
+   * @schema CfnCloudGuardQsModulePropsResources#ExternalALBSecurityGroup
    */
-  readonly externalAlbSecurityGroup?: CfnModulePropsResourcesExternalAlbSecurityGroup;
+  readonly externalAlbSecurityGroup?: CfnCloudGuardQsModulePropsResourcesExternalAlbSecurityGroup;
 
   /**
-   * @schema CfnModulePropsResources#ExternalLoadBalancer
+   * @schema CfnCloudGuardQsModulePropsResources#ExternalLoadBalancer
    */
-  readonly externalLoadBalancer?: CfnModulePropsResourcesExternalLoadBalancer;
+  readonly externalLoadBalancer?: CfnCloudGuardQsModulePropsResourcesExternalLoadBalancer;
 
   /**
-   * @schema CfnModulePropsResources#ExternalLBTargetGroup
+   * @schema CfnCloudGuardQsModulePropsResources#ExternalLBTargetGroup
    */
-  readonly externalLbTargetGroup?: CfnModulePropsResourcesExternalLbTargetGroup;
+  readonly externalLbTargetGroup?: CfnCloudGuardQsModulePropsResourcesExternalLbTargetGroup;
 
   /**
-   * @schema CfnModulePropsResources#ExternalLBListener
+   * @schema CfnCloudGuardQsModulePropsResources#ExternalLBListener
    */
-  readonly externalLbListener?: CfnModulePropsResourcesExternalLbListener;
+  readonly externalLbListener?: CfnCloudGuardQsModulePropsResourcesExternalLbListener;
 
   /**
-   * @schema CfnModulePropsResources#ChkpGatewayRole
+   * @schema CfnCloudGuardQsModulePropsResources#ChkpGatewayRole
    */
-  readonly chkpGatewayRole?: CfnModulePropsResourcesChkpGatewayRole;
+  readonly chkpGatewayRole?: CfnCloudGuardQsModulePropsResourcesChkpGatewayRole;
 
   /**
-   * @schema CfnModulePropsResources#InstanceProfileSecurityGatewayStack
+   * @schema CfnCloudGuardQsModulePropsResources#InstanceProfileSecurityGatewayStack
    */
-  readonly instanceProfileSecurityGatewayStack?: CfnModulePropsResourcesInstanceProfileSecurityGatewayStack;
+  readonly instanceProfileSecurityGatewayStack?: CfnCloudGuardQsModulePropsResourcesInstanceProfileSecurityGatewayStack;
 
   /**
-   * @schema CfnModulePropsResources#NotificationTopicSecurityGatewayStack
+   * @schema CfnCloudGuardQsModulePropsResources#NotificationTopicSecurityGatewayStack
    */
-  readonly notificationTopicSecurityGatewayStack?: CfnModulePropsResourcesNotificationTopicSecurityGatewayStack;
+  readonly notificationTopicSecurityGatewayStack?: CfnCloudGuardQsModulePropsResourcesNotificationTopicSecurityGatewayStack;
 
   /**
-   * @schema CfnModulePropsResources#ElasticLoadBalancer
+   * @schema CfnCloudGuardQsModulePropsResources#ElasticLoadBalancer
    */
-  readonly elasticLoadBalancer?: CfnModulePropsResourcesElasticLoadBalancer;
+  readonly elasticLoadBalancer?: CfnCloudGuardQsModulePropsResourcesElasticLoadBalancer;
 
   /**
-   * @schema CfnModulePropsResources#PermissiveSecurityGroup
+   * @schema CfnCloudGuardQsModulePropsResources#PermissiveSecurityGroup
    */
-  readonly permissiveSecurityGroup?: CfnModulePropsResourcesPermissiveSecurityGroup;
+  readonly permissiveSecurityGroup?: CfnCloudGuardQsModulePropsResourcesPermissiveSecurityGroup;
 
   /**
-   * @schema CfnModulePropsResources#GatewayGroup
+   * @schema CfnCloudGuardQsModulePropsResources#GatewayGroup
    */
-  readonly gatewayGroup?: CfnModulePropsResourcesGatewayGroup;
+  readonly gatewayGroup?: CfnCloudGuardQsModulePropsResourcesGatewayGroup;
 
   /**
-   * @schema CfnModulePropsResources#GatewayLaunchConfig
+   * @schema CfnCloudGuardQsModulePropsResources#GatewayLaunchConfig
    */
-  readonly gatewayLaunchConfig?: CfnModulePropsResourcesGatewayLaunchConfig;
+  readonly gatewayLaunchConfig?: CfnCloudGuardQsModulePropsResourcesGatewayLaunchConfig;
 
   /**
-   * @schema CfnModulePropsResources#GatewayScaleUpPolicy
+   * @schema CfnCloudGuardQsModulePropsResources#GatewayScaleUpPolicy
    */
-  readonly gatewayScaleUpPolicy?: CfnModulePropsResourcesGatewayScaleUpPolicy;
+  readonly gatewayScaleUpPolicy?: CfnCloudGuardQsModulePropsResourcesGatewayScaleUpPolicy;
 
   /**
-   * @schema CfnModulePropsResources#GatewayScaleDownPolicy
+   * @schema CfnCloudGuardQsModulePropsResources#GatewayScaleDownPolicy
    */
-  readonly gatewayScaleDownPolicy?: CfnModulePropsResourcesGatewayScaleDownPolicy;
+  readonly gatewayScaleDownPolicy?: CfnCloudGuardQsModulePropsResourcesGatewayScaleDownPolicy;
 
   /**
-   * @schema CfnModulePropsResources#CPUAlarmHighSecurityGatewayStack
+   * @schema CfnCloudGuardQsModulePropsResources#CPUAlarmHighSecurityGatewayStack
    */
-  readonly cpuAlarmHighSecurityGatewayStack?: CfnModulePropsResourcesCpuAlarmHighSecurityGatewayStack;
+  readonly cpuAlarmHighSecurityGatewayStack?: CfnCloudGuardQsModulePropsResourcesCpuAlarmHighSecurityGatewayStack;
 
   /**
-   * @schema CfnModulePropsResources#CPUAlarmLowSecurityGatewayStack
+   * @schema CfnCloudGuardQsModulePropsResources#CPUAlarmLowSecurityGatewayStack
    */
-  readonly cpuAlarmLowSecurityGatewayStack?: CfnModulePropsResourcesCpuAlarmLowSecurityGatewayStack;
+  readonly cpuAlarmLowSecurityGatewayStack?: CfnCloudGuardQsModulePropsResourcesCpuAlarmLowSecurityGatewayStack;
 
   /**
-   * @schema CfnModulePropsResources#ELBSecurityGroup
+   * @schema CfnCloudGuardQsModulePropsResources#ELBSecurityGroup
    */
-  readonly elbSecurityGroup?: CfnModulePropsResourcesElbSecurityGroup;
+  readonly elbSecurityGroup?: CfnCloudGuardQsModulePropsResourcesElbSecurityGroup;
 
   /**
-   * @schema CfnModulePropsResources#ManagementReadyHandle
+   * @schema CfnCloudGuardQsModulePropsResources#ManagementReadyHandle
    */
-  readonly managementReadyHandle?: CfnModulePropsResourcesManagementReadyHandle;
+  readonly managementReadyHandle?: CfnCloudGuardQsModulePropsResourcesManagementReadyHandle;
 
   /**
-   * @schema CfnModulePropsResources#ManagementReadyCondition
+   * @schema CfnCloudGuardQsModulePropsResources#ManagementReadyCondition
    */
-  readonly managementReadyCondition?: CfnModulePropsResourcesManagementReadyCondition;
+  readonly managementReadyCondition?: CfnCloudGuardQsModulePropsResourcesManagementReadyCondition;
 
   /**
-   * @schema CfnModulePropsResources#ManagementSecurityGroup
+   * @schema CfnCloudGuardQsModulePropsResources#ManagementSecurityGroup
    */
-  readonly managementSecurityGroup?: CfnModulePropsResourcesManagementSecurityGroup;
+  readonly managementSecurityGroup?: CfnCloudGuardQsModulePropsResourcesManagementSecurityGroup;
 
   /**
-   * @schema CfnModulePropsResources#CMEIAMRole
+   * @schema CfnCloudGuardQsModulePropsResources#CMEIAMRole
    */
-  readonly cmeiamRole?: CfnModulePropsResourcesCmeiamRole;
+  readonly cmeiamRole?: CfnCloudGuardQsModulePropsResourcesCmeiamRole;
 
   /**
-   * @schema CfnModulePropsResources#InstanceProfile
+   * @schema CfnCloudGuardQsModulePropsResources#InstanceProfile
    */
-  readonly instanceProfile?: CfnModulePropsResourcesInstanceProfile;
+  readonly instanceProfile?: CfnCloudGuardQsModulePropsResourcesInstanceProfile;
 
   /**
-   * @schema CfnModulePropsResources#ManagementInstance
+   * @schema CfnCloudGuardQsModulePropsResources#ManagementInstance
    */
-  readonly managementInstance?: CfnModulePropsResourcesManagementInstance;
+  readonly managementInstance?: CfnCloudGuardQsModulePropsResourcesManagementInstance;
 
   /**
-   * @schema CfnModulePropsResources#PublicAddress
+   * @schema CfnCloudGuardQsModulePropsResources#PublicAddress
    */
-  readonly publicAddress?: CfnModulePropsResourcesPublicAddress;
+  readonly publicAddress?: CfnCloudGuardQsModulePropsResourcesPublicAddress;
 
   /**
-   * @schema CfnModulePropsResources#AddressAssoc
+   * @schema CfnCloudGuardQsModulePropsResources#AddressAssoc
    */
-  readonly addressAssoc?: CfnModulePropsResourcesAddressAssoc;
+  readonly addressAssoc?: CfnCloudGuardQsModulePropsResourcesAddressAssoc;
 
   /**
-   * @schema CfnModulePropsResources#InternalSecurityGroup
+   * @schema CfnCloudGuardQsModulePropsResources#InternalSecurityGroup
    */
-  readonly internalSecurityGroup?: CfnModulePropsResourcesInternalSecurityGroup;
+  readonly internalSecurityGroup?: CfnCloudGuardQsModulePropsResourcesInternalSecurityGroup;
 
   /**
-   * @schema CfnModulePropsResources#InternalLBTargetGroup
+   * @schema CfnCloudGuardQsModulePropsResources#InternalLBTargetGroup
    */
-  readonly internalLbTargetGroup?: CfnModulePropsResourcesInternalLbTargetGroup;
+  readonly internalLbTargetGroup?: CfnCloudGuardQsModulePropsResourcesInternalLbTargetGroup;
 
   /**
-   * @schema CfnModulePropsResources#InternalLoadBalancer
+   * @schema CfnCloudGuardQsModulePropsResources#InternalLoadBalancer
    */
-  readonly internalLoadBalancer?: CfnModulePropsResourcesInternalLoadBalancer;
+  readonly internalLoadBalancer?: CfnCloudGuardQsModulePropsResourcesInternalLoadBalancer;
 
   /**
-   * @schema CfnModulePropsResources#InternalLBListener
+   * @schema CfnCloudGuardQsModulePropsResources#InternalLBListener
    */
-  readonly internalLbListener?: CfnModulePropsResourcesInternalLbListener;
+  readonly internalLbListener?: CfnCloudGuardQsModulePropsResourcesInternalLbListener;
 
   /**
-   * @schema CfnModulePropsResources#NotificationTopic
+   * @schema CfnCloudGuardQsModulePropsResources#NotificationTopic
    */
-  readonly notificationTopic?: CfnModulePropsResourcesNotificationTopic;
+  readonly notificationTopic?: CfnCloudGuardQsModulePropsResourcesNotificationTopic;
 
   /**
-   * @schema CfnModulePropsResources#ServersSecurityGroup
+   * @schema CfnCloudGuardQsModulePropsResources#ServersSecurityGroup
    */
-  readonly serversSecurityGroup?: CfnModulePropsResourcesServersSecurityGroup;
+  readonly serversSecurityGroup?: CfnCloudGuardQsModulePropsResourcesServersSecurityGroup;
 
   /**
-   * @schema CfnModulePropsResources#ServersLaunchConfiguration
+   * @schema CfnCloudGuardQsModulePropsResources#ServersLaunchConfiguration
    */
-  readonly serversLaunchConfiguration?: CfnModulePropsResourcesServersLaunchConfiguration;
+  readonly serversLaunchConfiguration?: CfnCloudGuardQsModulePropsResourcesServersLaunchConfiguration;
 
   /**
-   * @schema CfnModulePropsResources#ServersGroup
+   * @schema CfnCloudGuardQsModulePropsResources#ServersGroup
    */
-  readonly serversGroup?: CfnModulePropsResourcesServersGroup;
+  readonly serversGroup?: CfnCloudGuardQsModulePropsResourcesServersGroup;
 
   /**
-   * @schema CfnModulePropsResources#ScaleUpPolicy
+   * @schema CfnCloudGuardQsModulePropsResources#ScaleUpPolicy
    */
-  readonly scaleUpPolicy?: CfnModulePropsResourcesScaleUpPolicy;
+  readonly scaleUpPolicy?: CfnCloudGuardQsModulePropsResourcesScaleUpPolicy;
 
   /**
-   * @schema CfnModulePropsResources#ScaleDownPolicy
+   * @schema CfnCloudGuardQsModulePropsResources#ScaleDownPolicy
    */
-  readonly scaleDownPolicy?: CfnModulePropsResourcesScaleDownPolicy;
+  readonly scaleDownPolicy?: CfnCloudGuardQsModulePropsResourcesScaleDownPolicy;
 
   /**
-   * @schema CfnModulePropsResources#CPUAlarmHigh
+   * @schema CfnCloudGuardQsModulePropsResources#CPUAlarmHigh
    */
-  readonly cpuAlarmHigh?: CfnModulePropsResourcesCpuAlarmHigh;
+  readonly cpuAlarmHigh?: CfnCloudGuardQsModulePropsResourcesCpuAlarmHigh;
 
   /**
-   * @schema CfnModulePropsResources#CPUAlarmLow
+   * @schema CfnCloudGuardQsModulePropsResources#CPUAlarmLow
    */
-  readonly cpuAlarmLow?: CfnModulePropsResourcesCpuAlarmLow;
+  readonly cpuAlarmLow?: CfnCloudGuardQsModulePropsResourcesCpuAlarmLow;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResources' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResources' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResources(obj: CfnModulePropsResources | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResources(obj: CfnCloudGuardQsModulePropsResources | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'VPC': toJson_CfnModulePropsResourcesVpc(obj.vpc),
-    'InternetGateway': toJson_CfnModulePropsResourcesInternetGateway(obj.internetGateway),
-    'VPCGatewayAttachment': toJson_CfnModulePropsResourcesVpcGatewayAttachment(obj.vpcGatewayAttachment),
-    'PublicSubnet1': toJson_CfnModulePropsResourcesPublicSubnet1(obj.publicSubnet1),
-    'PublicSubnet2': toJson_CfnModulePropsResourcesPublicSubnet2(obj.publicSubnet2),
-    'PublicSubnet3': toJson_CfnModulePropsResourcesPublicSubnet3(obj.publicSubnet3),
-    'PublicSubnet4': toJson_CfnModulePropsResourcesPublicSubnet4(obj.publicSubnet4),
-    'PublicSubnetRouteTable': toJson_CfnModulePropsResourcesPublicSubnetRouteTable(obj.publicSubnetRouteTable),
-    'PublicSubnetRoute': toJson_CfnModulePropsResourcesPublicSubnetRoute(obj.publicSubnetRoute),
-    'PublicSubnet1RouteTableAssociation': toJson_CfnModulePropsResourcesPublicSubnet1RouteTableAssociation(obj.publicSubnet1RouteTableAssociation),
-    'PublicSubnet2RouteTableAssociation': toJson_CfnModulePropsResourcesPublicSubnet2RouteTableAssociation(obj.publicSubnet2RouteTableAssociation),
-    'PublicSubnet3RouteTableAssociation': toJson_CfnModulePropsResourcesPublicSubnet3RouteTableAssociation(obj.publicSubnet3RouteTableAssociation),
-    'PublicSubnet4RouteTableAssociation': toJson_CfnModulePropsResourcesPublicSubnet4RouteTableAssociation(obj.publicSubnet4RouteTableAssociation),
-    'PrivateSubnet1': toJson_CfnModulePropsResourcesPrivateSubnet1(obj.privateSubnet1),
-    'PrivateSubnet2': toJson_CfnModulePropsResourcesPrivateSubnet2(obj.privateSubnet2),
-    'PrivateSubnet3': toJson_CfnModulePropsResourcesPrivateSubnet3(obj.privateSubnet3),
-    'PrivateSubnet4': toJson_CfnModulePropsResourcesPrivateSubnet4(obj.privateSubnet4),
-    'TgwSubnet1': toJson_CfnModulePropsResourcesTgwSubnet1(obj.tgwSubnet1),
-    'TgwSubnet2': toJson_CfnModulePropsResourcesTgwSubnet2(obj.tgwSubnet2),
-    'TgwSubnet3': toJson_CfnModulePropsResourcesTgwSubnet3(obj.tgwSubnet3),
-    'TgwSubnet4': toJson_CfnModulePropsResourcesTgwSubnet4(obj.tgwSubnet4),
-    'ExternalALBSecurityGroup': toJson_CfnModulePropsResourcesExternalAlbSecurityGroup(obj.externalAlbSecurityGroup),
-    'ExternalLoadBalancer': toJson_CfnModulePropsResourcesExternalLoadBalancer(obj.externalLoadBalancer),
-    'ExternalLBTargetGroup': toJson_CfnModulePropsResourcesExternalLbTargetGroup(obj.externalLbTargetGroup),
-    'ExternalLBListener': toJson_CfnModulePropsResourcesExternalLbListener(obj.externalLbListener),
-    'ChkpGatewayRole': toJson_CfnModulePropsResourcesChkpGatewayRole(obj.chkpGatewayRole),
-    'InstanceProfileSecurityGatewayStack': toJson_CfnModulePropsResourcesInstanceProfileSecurityGatewayStack(obj.instanceProfileSecurityGatewayStack),
-    'NotificationTopicSecurityGatewayStack': toJson_CfnModulePropsResourcesNotificationTopicSecurityGatewayStack(obj.notificationTopicSecurityGatewayStack),
-    'ElasticLoadBalancer': toJson_CfnModulePropsResourcesElasticLoadBalancer(obj.elasticLoadBalancer),
-    'PermissiveSecurityGroup': toJson_CfnModulePropsResourcesPermissiveSecurityGroup(obj.permissiveSecurityGroup),
-    'GatewayGroup': toJson_CfnModulePropsResourcesGatewayGroup(obj.gatewayGroup),
-    'GatewayLaunchConfig': toJson_CfnModulePropsResourcesGatewayLaunchConfig(obj.gatewayLaunchConfig),
-    'GatewayScaleUpPolicy': toJson_CfnModulePropsResourcesGatewayScaleUpPolicy(obj.gatewayScaleUpPolicy),
-    'GatewayScaleDownPolicy': toJson_CfnModulePropsResourcesGatewayScaleDownPolicy(obj.gatewayScaleDownPolicy),
-    'CPUAlarmHighSecurityGatewayStack': toJson_CfnModulePropsResourcesCpuAlarmHighSecurityGatewayStack(obj.cpuAlarmHighSecurityGatewayStack),
-    'CPUAlarmLowSecurityGatewayStack': toJson_CfnModulePropsResourcesCpuAlarmLowSecurityGatewayStack(obj.cpuAlarmLowSecurityGatewayStack),
-    'ELBSecurityGroup': toJson_CfnModulePropsResourcesElbSecurityGroup(obj.elbSecurityGroup),
-    'ManagementReadyHandle': toJson_CfnModulePropsResourcesManagementReadyHandle(obj.managementReadyHandle),
-    'ManagementReadyCondition': toJson_CfnModulePropsResourcesManagementReadyCondition(obj.managementReadyCondition),
-    'ManagementSecurityGroup': toJson_CfnModulePropsResourcesManagementSecurityGroup(obj.managementSecurityGroup),
-    'CMEIAMRole': toJson_CfnModulePropsResourcesCmeiamRole(obj.cmeiamRole),
-    'InstanceProfile': toJson_CfnModulePropsResourcesInstanceProfile(obj.instanceProfile),
-    'ManagementInstance': toJson_CfnModulePropsResourcesManagementInstance(obj.managementInstance),
-    'PublicAddress': toJson_CfnModulePropsResourcesPublicAddress(obj.publicAddress),
-    'AddressAssoc': toJson_CfnModulePropsResourcesAddressAssoc(obj.addressAssoc),
-    'InternalSecurityGroup': toJson_CfnModulePropsResourcesInternalSecurityGroup(obj.internalSecurityGroup),
-    'InternalLBTargetGroup': toJson_CfnModulePropsResourcesInternalLbTargetGroup(obj.internalLbTargetGroup),
-    'InternalLoadBalancer': toJson_CfnModulePropsResourcesInternalLoadBalancer(obj.internalLoadBalancer),
-    'InternalLBListener': toJson_CfnModulePropsResourcesInternalLbListener(obj.internalLbListener),
-    'NotificationTopic': toJson_CfnModulePropsResourcesNotificationTopic(obj.notificationTopic),
-    'ServersSecurityGroup': toJson_CfnModulePropsResourcesServersSecurityGroup(obj.serversSecurityGroup),
-    'ServersLaunchConfiguration': toJson_CfnModulePropsResourcesServersLaunchConfiguration(obj.serversLaunchConfiguration),
-    'ServersGroup': toJson_CfnModulePropsResourcesServersGroup(obj.serversGroup),
-    'ScaleUpPolicy': toJson_CfnModulePropsResourcesScaleUpPolicy(obj.scaleUpPolicy),
-    'ScaleDownPolicy': toJson_CfnModulePropsResourcesScaleDownPolicy(obj.scaleDownPolicy),
-    'CPUAlarmHigh': toJson_CfnModulePropsResourcesCpuAlarmHigh(obj.cpuAlarmHigh),
-    'CPUAlarmLow': toJson_CfnModulePropsResourcesCpuAlarmLow(obj.cpuAlarmLow),
+    'VPC': toJson_CfnCloudGuardQsModulePropsResourcesVpc(obj.vpc),
+    'InternetGateway': toJson_CfnCloudGuardQsModulePropsResourcesInternetGateway(obj.internetGateway),
+    'VPCGatewayAttachment': toJson_CfnCloudGuardQsModulePropsResourcesVpcGatewayAttachment(obj.vpcGatewayAttachment),
+    'PublicSubnet1': toJson_CfnCloudGuardQsModulePropsResourcesPublicSubnet1(obj.publicSubnet1),
+    'PublicSubnet2': toJson_CfnCloudGuardQsModulePropsResourcesPublicSubnet2(obj.publicSubnet2),
+    'PublicSubnet3': toJson_CfnCloudGuardQsModulePropsResourcesPublicSubnet3(obj.publicSubnet3),
+    'PublicSubnet4': toJson_CfnCloudGuardQsModulePropsResourcesPublicSubnet4(obj.publicSubnet4),
+    'PublicSubnetRouteTable': toJson_CfnCloudGuardQsModulePropsResourcesPublicSubnetRouteTable(obj.publicSubnetRouteTable),
+    'PublicSubnetRoute': toJson_CfnCloudGuardQsModulePropsResourcesPublicSubnetRoute(obj.publicSubnetRoute),
+    'PublicSubnet1RouteTableAssociation': toJson_CfnCloudGuardQsModulePropsResourcesPublicSubnet1RouteTableAssociation(obj.publicSubnet1RouteTableAssociation),
+    'PublicSubnet2RouteTableAssociation': toJson_CfnCloudGuardQsModulePropsResourcesPublicSubnet2RouteTableAssociation(obj.publicSubnet2RouteTableAssociation),
+    'PublicSubnet3RouteTableAssociation': toJson_CfnCloudGuardQsModulePropsResourcesPublicSubnet3RouteTableAssociation(obj.publicSubnet3RouteTableAssociation),
+    'PublicSubnet4RouteTableAssociation': toJson_CfnCloudGuardQsModulePropsResourcesPublicSubnet4RouteTableAssociation(obj.publicSubnet4RouteTableAssociation),
+    'PrivateSubnet1': toJson_CfnCloudGuardQsModulePropsResourcesPrivateSubnet1(obj.privateSubnet1),
+    'PrivateSubnet2': toJson_CfnCloudGuardQsModulePropsResourcesPrivateSubnet2(obj.privateSubnet2),
+    'PrivateSubnet3': toJson_CfnCloudGuardQsModulePropsResourcesPrivateSubnet3(obj.privateSubnet3),
+    'PrivateSubnet4': toJson_CfnCloudGuardQsModulePropsResourcesPrivateSubnet4(obj.privateSubnet4),
+    'TgwSubnet1': toJson_CfnCloudGuardQsModulePropsResourcesTgwSubnet1(obj.tgwSubnet1),
+    'TgwSubnet2': toJson_CfnCloudGuardQsModulePropsResourcesTgwSubnet2(obj.tgwSubnet2),
+    'TgwSubnet3': toJson_CfnCloudGuardQsModulePropsResourcesTgwSubnet3(obj.tgwSubnet3),
+    'TgwSubnet4': toJson_CfnCloudGuardQsModulePropsResourcesTgwSubnet4(obj.tgwSubnet4),
+    'ExternalALBSecurityGroup': toJson_CfnCloudGuardQsModulePropsResourcesExternalAlbSecurityGroup(obj.externalAlbSecurityGroup),
+    'ExternalLoadBalancer': toJson_CfnCloudGuardQsModulePropsResourcesExternalLoadBalancer(obj.externalLoadBalancer),
+    'ExternalLBTargetGroup': toJson_CfnCloudGuardQsModulePropsResourcesExternalLbTargetGroup(obj.externalLbTargetGroup),
+    'ExternalLBListener': toJson_CfnCloudGuardQsModulePropsResourcesExternalLbListener(obj.externalLbListener),
+    'ChkpGatewayRole': toJson_CfnCloudGuardQsModulePropsResourcesChkpGatewayRole(obj.chkpGatewayRole),
+    'InstanceProfileSecurityGatewayStack': toJson_CfnCloudGuardQsModulePropsResourcesInstanceProfileSecurityGatewayStack(obj.instanceProfileSecurityGatewayStack),
+    'NotificationTopicSecurityGatewayStack': toJson_CfnCloudGuardQsModulePropsResourcesNotificationTopicSecurityGatewayStack(obj.notificationTopicSecurityGatewayStack),
+    'ElasticLoadBalancer': toJson_CfnCloudGuardQsModulePropsResourcesElasticLoadBalancer(obj.elasticLoadBalancer),
+    'PermissiveSecurityGroup': toJson_CfnCloudGuardQsModulePropsResourcesPermissiveSecurityGroup(obj.permissiveSecurityGroup),
+    'GatewayGroup': toJson_CfnCloudGuardQsModulePropsResourcesGatewayGroup(obj.gatewayGroup),
+    'GatewayLaunchConfig': toJson_CfnCloudGuardQsModulePropsResourcesGatewayLaunchConfig(obj.gatewayLaunchConfig),
+    'GatewayScaleUpPolicy': toJson_CfnCloudGuardQsModulePropsResourcesGatewayScaleUpPolicy(obj.gatewayScaleUpPolicy),
+    'GatewayScaleDownPolicy': toJson_CfnCloudGuardQsModulePropsResourcesGatewayScaleDownPolicy(obj.gatewayScaleDownPolicy),
+    'CPUAlarmHighSecurityGatewayStack': toJson_CfnCloudGuardQsModulePropsResourcesCpuAlarmHighSecurityGatewayStack(obj.cpuAlarmHighSecurityGatewayStack),
+    'CPUAlarmLowSecurityGatewayStack': toJson_CfnCloudGuardQsModulePropsResourcesCpuAlarmLowSecurityGatewayStack(obj.cpuAlarmLowSecurityGatewayStack),
+    'ELBSecurityGroup': toJson_CfnCloudGuardQsModulePropsResourcesElbSecurityGroup(obj.elbSecurityGroup),
+    'ManagementReadyHandle': toJson_CfnCloudGuardQsModulePropsResourcesManagementReadyHandle(obj.managementReadyHandle),
+    'ManagementReadyCondition': toJson_CfnCloudGuardQsModulePropsResourcesManagementReadyCondition(obj.managementReadyCondition),
+    'ManagementSecurityGroup': toJson_CfnCloudGuardQsModulePropsResourcesManagementSecurityGroup(obj.managementSecurityGroup),
+    'CMEIAMRole': toJson_CfnCloudGuardQsModulePropsResourcesCmeiamRole(obj.cmeiamRole),
+    'InstanceProfile': toJson_CfnCloudGuardQsModulePropsResourcesInstanceProfile(obj.instanceProfile),
+    'ManagementInstance': toJson_CfnCloudGuardQsModulePropsResourcesManagementInstance(obj.managementInstance),
+    'PublicAddress': toJson_CfnCloudGuardQsModulePropsResourcesPublicAddress(obj.publicAddress),
+    'AddressAssoc': toJson_CfnCloudGuardQsModulePropsResourcesAddressAssoc(obj.addressAssoc),
+    'InternalSecurityGroup': toJson_CfnCloudGuardQsModulePropsResourcesInternalSecurityGroup(obj.internalSecurityGroup),
+    'InternalLBTargetGroup': toJson_CfnCloudGuardQsModulePropsResourcesInternalLbTargetGroup(obj.internalLbTargetGroup),
+    'InternalLoadBalancer': toJson_CfnCloudGuardQsModulePropsResourcesInternalLoadBalancer(obj.internalLoadBalancer),
+    'InternalLBListener': toJson_CfnCloudGuardQsModulePropsResourcesInternalLbListener(obj.internalLbListener),
+    'NotificationTopic': toJson_CfnCloudGuardQsModulePropsResourcesNotificationTopic(obj.notificationTopic),
+    'ServersSecurityGroup': toJson_CfnCloudGuardQsModulePropsResourcesServersSecurityGroup(obj.serversSecurityGroup),
+    'ServersLaunchConfiguration': toJson_CfnCloudGuardQsModulePropsResourcesServersLaunchConfiguration(obj.serversLaunchConfiguration),
+    'ServersGroup': toJson_CfnCloudGuardQsModulePropsResourcesServersGroup(obj.serversGroup),
+    'ScaleUpPolicy': toJson_CfnCloudGuardQsModulePropsResourcesScaleUpPolicy(obj.scaleUpPolicy),
+    'ScaleDownPolicy': toJson_CfnCloudGuardQsModulePropsResourcesScaleDownPolicy(obj.scaleDownPolicy),
+    'CPUAlarmHigh': toJson_CfnCloudGuardQsModulePropsResourcesCpuAlarmHigh(obj.cpuAlarmHigh),
+    'CPUAlarmLow': toJson_CfnCloudGuardQsModulePropsResourcesCpuAlarmLow(obj.cpuAlarmLow),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -993,26 +993,26 @@ export function toJson_CfnModulePropsResources(obj: CfnModulePropsResources | un
 /**
  * List of Availability Zones (AZs) to use for the subnets in the VPC. Select at least two
  *
- * @schema CfnModulePropsParametersAvailabilityZones
+ * @schema CfnCloudGuardQsModulePropsParametersAvailabilityZones
  */
-export interface CfnModulePropsParametersAvailabilityZones {
+export interface CfnCloudGuardQsModulePropsParametersAvailabilityZones {
   /**
-   * @schema CfnModulePropsParametersAvailabilityZones#Type
+   * @schema CfnCloudGuardQsModulePropsParametersAvailabilityZones#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersAvailabilityZones#Description
+   * @schema CfnCloudGuardQsModulePropsParametersAvailabilityZones#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersAvailabilityZones' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersAvailabilityZones' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersAvailabilityZones(obj: CfnModulePropsParametersAvailabilityZones | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersAvailabilityZones(obj: CfnCloudGuardQsModulePropsParametersAvailabilityZones | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1026,26 +1026,26 @@ export function toJson_CfnModulePropsParametersAvailabilityZones(obj: CfnModuleP
 /**
  * Number of Availability Zones to use in the VPC. This must match your selections in the list of Availability Zones parameter.  Default: 2
  *
- * @schema CfnModulePropsParametersNumberOfAZs
+ * @schema CfnCloudGuardQsModulePropsParametersNumberOfAZs
  */
-export interface CfnModulePropsParametersNumberOfAZs {
+export interface CfnCloudGuardQsModulePropsParametersNumberOfAZs {
   /**
-   * @schema CfnModulePropsParametersNumberOfAZs#Type
+   * @schema CfnCloudGuardQsModulePropsParametersNumberOfAZs#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersNumberOfAZs#Description
+   * @schema CfnCloudGuardQsModulePropsParametersNumberOfAZs#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersNumberOfAZs' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersNumberOfAZs' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersNumberOfAZs(obj: CfnModulePropsParametersNumberOfAZs | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersNumberOfAZs(obj: CfnCloudGuardQsModulePropsParametersNumberOfAZs | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1059,26 +1059,26 @@ export function toJson_CfnModulePropsParametersNumberOfAZs(obj: CfnModulePropsPa
 /**
  * CIDR block for the VPC. Default: 10.0.0.0/16
  *
- * @schema CfnModulePropsParametersVpccidr
+ * @schema CfnCloudGuardQsModulePropsParametersVpccidr
  */
-export interface CfnModulePropsParametersVpccidr {
+export interface CfnCloudGuardQsModulePropsParametersVpccidr {
   /**
-   * @schema CfnModulePropsParametersVpccidr#Type
+   * @schema CfnCloudGuardQsModulePropsParametersVpccidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersVpccidr#Description
+   * @schema CfnCloudGuardQsModulePropsParametersVpccidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersVpccidr' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersVpccidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersVpccidr(obj: CfnModulePropsParametersVpccidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersVpccidr(obj: CfnCloudGuardQsModulePropsParametersVpccidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1092,26 +1092,26 @@ export function toJson_CfnModulePropsParametersVpccidr(obj: CfnModulePropsParame
 /**
  * CIDR block for public subnet 1 located in the 1st Availability Zone. If you choose to deploy a Security Management Server it will be deployed in this subnet. Default: 10.0.10.0/24
  *
- * @schema CfnModulePropsParametersPublicSubnet1Cidr
+ * @schema CfnCloudGuardQsModulePropsParametersPublicSubnet1Cidr
  */
-export interface CfnModulePropsParametersPublicSubnet1Cidr {
+export interface CfnCloudGuardQsModulePropsParametersPublicSubnet1Cidr {
   /**
-   * @schema CfnModulePropsParametersPublicSubnet1Cidr#Type
+   * @schema CfnCloudGuardQsModulePropsParametersPublicSubnet1Cidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPublicSubnet1Cidr#Description
+   * @schema CfnCloudGuardQsModulePropsParametersPublicSubnet1Cidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPublicSubnet1Cidr' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersPublicSubnet1Cidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPublicSubnet1Cidr(obj: CfnModulePropsParametersPublicSubnet1Cidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersPublicSubnet1Cidr(obj: CfnCloudGuardQsModulePropsParametersPublicSubnet1Cidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1125,26 +1125,26 @@ export function toJson_CfnModulePropsParametersPublicSubnet1Cidr(obj: CfnModuleP
 /**
  * CIDR block for public subnet 2 located in the 2nd Availability Zone. Default: 10.0.20.0/24
  *
- * @schema CfnModulePropsParametersPublicSubnet2Cidr
+ * @schema CfnCloudGuardQsModulePropsParametersPublicSubnet2Cidr
  */
-export interface CfnModulePropsParametersPublicSubnet2Cidr {
+export interface CfnCloudGuardQsModulePropsParametersPublicSubnet2Cidr {
   /**
-   * @schema CfnModulePropsParametersPublicSubnet2Cidr#Type
+   * @schema CfnCloudGuardQsModulePropsParametersPublicSubnet2Cidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPublicSubnet2Cidr#Description
+   * @schema CfnCloudGuardQsModulePropsParametersPublicSubnet2Cidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPublicSubnet2Cidr' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersPublicSubnet2Cidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPublicSubnet2Cidr(obj: CfnModulePropsParametersPublicSubnet2Cidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersPublicSubnet2Cidr(obj: CfnCloudGuardQsModulePropsParametersPublicSubnet2Cidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1158,26 +1158,26 @@ export function toJson_CfnModulePropsParametersPublicSubnet2Cidr(obj: CfnModuleP
 /**
  * CIDR block for public subnet 3 located in the 3rd Availability Zone. Default: 10.0.30.0/24
  *
- * @schema CfnModulePropsParametersPublicSubnet3Cidr
+ * @schema CfnCloudGuardQsModulePropsParametersPublicSubnet3Cidr
  */
-export interface CfnModulePropsParametersPublicSubnet3Cidr {
+export interface CfnCloudGuardQsModulePropsParametersPublicSubnet3Cidr {
   /**
-   * @schema CfnModulePropsParametersPublicSubnet3Cidr#Type
+   * @schema CfnCloudGuardQsModulePropsParametersPublicSubnet3Cidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPublicSubnet3Cidr#Description
+   * @schema CfnCloudGuardQsModulePropsParametersPublicSubnet3Cidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPublicSubnet3Cidr' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersPublicSubnet3Cidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPublicSubnet3Cidr(obj: CfnModulePropsParametersPublicSubnet3Cidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersPublicSubnet3Cidr(obj: CfnCloudGuardQsModulePropsParametersPublicSubnet3Cidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1191,26 +1191,26 @@ export function toJson_CfnModulePropsParametersPublicSubnet3Cidr(obj: CfnModuleP
 /**
  * CIDR block for public subnet 4 located in the 4th Availability Zone. Default: 10.0.40.0/24
  *
- * @schema CfnModulePropsParametersPublicSubnet4Cidr
+ * @schema CfnCloudGuardQsModulePropsParametersPublicSubnet4Cidr
  */
-export interface CfnModulePropsParametersPublicSubnet4Cidr {
+export interface CfnCloudGuardQsModulePropsParametersPublicSubnet4Cidr {
   /**
-   * @schema CfnModulePropsParametersPublicSubnet4Cidr#Type
+   * @schema CfnCloudGuardQsModulePropsParametersPublicSubnet4Cidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPublicSubnet4Cidr#Description
+   * @schema CfnCloudGuardQsModulePropsParametersPublicSubnet4Cidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPublicSubnet4Cidr' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersPublicSubnet4Cidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPublicSubnet4Cidr(obj: CfnModulePropsParametersPublicSubnet4Cidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersPublicSubnet4Cidr(obj: CfnCloudGuardQsModulePropsParametersPublicSubnet4Cidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1224,26 +1224,26 @@ export function toJson_CfnModulePropsParametersPublicSubnet4Cidr(obj: CfnModuleP
 /**
  * CIDR block for private subnet 1 located in the 1st Availability Zone. Default: 10.0.11.0/24
  *
- * @schema CfnModulePropsParametersPrivateSubnet1Cidr
+ * @schema CfnCloudGuardQsModulePropsParametersPrivateSubnet1Cidr
  */
-export interface CfnModulePropsParametersPrivateSubnet1Cidr {
+export interface CfnCloudGuardQsModulePropsParametersPrivateSubnet1Cidr {
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet1Cidr#Type
+   * @schema CfnCloudGuardQsModulePropsParametersPrivateSubnet1Cidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet1Cidr#Description
+   * @schema CfnCloudGuardQsModulePropsParametersPrivateSubnet1Cidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPrivateSubnet1Cidr' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersPrivateSubnet1Cidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPrivateSubnet1Cidr(obj: CfnModulePropsParametersPrivateSubnet1Cidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersPrivateSubnet1Cidr(obj: CfnCloudGuardQsModulePropsParametersPrivateSubnet1Cidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1257,26 +1257,26 @@ export function toJson_CfnModulePropsParametersPrivateSubnet1Cidr(obj: CfnModule
 /**
  * CIDR block for private subnet 2 located in the 2nd Availability Zone. Default: 10.0.21.0/24
  *
- * @schema CfnModulePropsParametersPrivateSubnet2Cidr
+ * @schema CfnCloudGuardQsModulePropsParametersPrivateSubnet2Cidr
  */
-export interface CfnModulePropsParametersPrivateSubnet2Cidr {
+export interface CfnCloudGuardQsModulePropsParametersPrivateSubnet2Cidr {
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet2Cidr#Type
+   * @schema CfnCloudGuardQsModulePropsParametersPrivateSubnet2Cidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet2Cidr#Description
+   * @schema CfnCloudGuardQsModulePropsParametersPrivateSubnet2Cidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPrivateSubnet2Cidr' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersPrivateSubnet2Cidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPrivateSubnet2Cidr(obj: CfnModulePropsParametersPrivateSubnet2Cidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersPrivateSubnet2Cidr(obj: CfnCloudGuardQsModulePropsParametersPrivateSubnet2Cidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1290,26 +1290,26 @@ export function toJson_CfnModulePropsParametersPrivateSubnet2Cidr(obj: CfnModule
 /**
  * CIDR block for private subnet 3 located in the 3rd Availability Zone. Default: 10.0.31.0/24
  *
- * @schema CfnModulePropsParametersPrivateSubnet3Cidr
+ * @schema CfnCloudGuardQsModulePropsParametersPrivateSubnet3Cidr
  */
-export interface CfnModulePropsParametersPrivateSubnet3Cidr {
+export interface CfnCloudGuardQsModulePropsParametersPrivateSubnet3Cidr {
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet3Cidr#Type
+   * @schema CfnCloudGuardQsModulePropsParametersPrivateSubnet3Cidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet3Cidr#Description
+   * @schema CfnCloudGuardQsModulePropsParametersPrivateSubnet3Cidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPrivateSubnet3Cidr' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersPrivateSubnet3Cidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPrivateSubnet3Cidr(obj: CfnModulePropsParametersPrivateSubnet3Cidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersPrivateSubnet3Cidr(obj: CfnCloudGuardQsModulePropsParametersPrivateSubnet3Cidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1323,26 +1323,26 @@ export function toJson_CfnModulePropsParametersPrivateSubnet3Cidr(obj: CfnModule
 /**
  * CIDR block for private subnet 4 located in the 4th Availability Zone. Default: 10.0.41.0/24
  *
- * @schema CfnModulePropsParametersPrivateSubnet4Cidr
+ * @schema CfnCloudGuardQsModulePropsParametersPrivateSubnet4Cidr
  */
-export interface CfnModulePropsParametersPrivateSubnet4Cidr {
+export interface CfnCloudGuardQsModulePropsParametersPrivateSubnet4Cidr {
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet4Cidr#Type
+   * @schema CfnCloudGuardQsModulePropsParametersPrivateSubnet4Cidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet4Cidr#Description
+   * @schema CfnCloudGuardQsModulePropsParametersPrivateSubnet4Cidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPrivateSubnet4Cidr' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersPrivateSubnet4Cidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPrivateSubnet4Cidr(obj: CfnModulePropsParametersPrivateSubnet4Cidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersPrivateSubnet4Cidr(obj: CfnCloudGuardQsModulePropsParametersPrivateSubnet4Cidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1356,26 +1356,26 @@ export function toJson_CfnModulePropsParametersPrivateSubnet4Cidr(obj: CfnModule
 /**
  * The EC2 Key Pair to allow SSH access to the instances. For more detail visit: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html
  *
- * @schema CfnModulePropsParametersKeyName
+ * @schema CfnCloudGuardQsModulePropsParametersKeyName
  */
-export interface CfnModulePropsParametersKeyName {
+export interface CfnCloudGuardQsModulePropsParametersKeyName {
   /**
-   * @schema CfnModulePropsParametersKeyName#Type
+   * @schema CfnCloudGuardQsModulePropsParametersKeyName#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersKeyName#Description
+   * @schema CfnCloudGuardQsModulePropsParametersKeyName#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersKeyName' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersKeyName' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersKeyName(obj: CfnModulePropsParametersKeyName | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersKeyName(obj: CfnCloudGuardQsModulePropsParametersKeyName | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1389,26 +1389,26 @@ export function toJson_CfnModulePropsParametersKeyName(obj: CfnModulePropsParame
 /**
  * Encrypt Environment instances volume with default AWS KMS key. Default: true
  *
- * @schema CfnModulePropsParametersEnableVolumeEncryption
+ * @schema CfnCloudGuardQsModulePropsParametersEnableVolumeEncryption
  */
-export interface CfnModulePropsParametersEnableVolumeEncryption {
+export interface CfnCloudGuardQsModulePropsParametersEnableVolumeEncryption {
   /**
-   * @schema CfnModulePropsParametersEnableVolumeEncryption#Type
+   * @schema CfnCloudGuardQsModulePropsParametersEnableVolumeEncryption#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersEnableVolumeEncryption#Description
+   * @schema CfnCloudGuardQsModulePropsParametersEnableVolumeEncryption#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersEnableVolumeEncryption' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersEnableVolumeEncryption' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersEnableVolumeEncryption(obj: CfnModulePropsParametersEnableVolumeEncryption | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersEnableVolumeEncryption(obj: CfnCloudGuardQsModulePropsParametersEnableVolumeEncryption | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1422,26 +1422,26 @@ export function toJson_CfnModulePropsParametersEnableVolumeEncryption(obj: CfnMo
 /**
  * Enable SSH connection over AWS web console. Default: false
  *
- * @schema CfnModulePropsParametersEnableInstanceConnect
+ * @schema CfnCloudGuardQsModulePropsParametersEnableInstanceConnect
  */
-export interface CfnModulePropsParametersEnableInstanceConnect {
+export interface CfnCloudGuardQsModulePropsParametersEnableInstanceConnect {
   /**
-   * @schema CfnModulePropsParametersEnableInstanceConnect#Type
+   * @schema CfnCloudGuardQsModulePropsParametersEnableInstanceConnect#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersEnableInstanceConnect#Description
+   * @schema CfnCloudGuardQsModulePropsParametersEnableInstanceConnect#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersEnableInstanceConnect' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersEnableInstanceConnect' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersEnableInstanceConnect(obj: CfnModulePropsParametersEnableInstanceConnect | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersEnableInstanceConnect(obj: CfnCloudGuardQsModulePropsParametersEnableInstanceConnect | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1455,26 +1455,26 @@ export function toJson_CfnModulePropsParametersEnableInstanceConnect(obj: CfnMod
 /**
  * Automatically download Blade Contracts and other important data. Improve product experience by sending data to Check Point. Default: true
  *
- * @schema CfnModulePropsParametersAllowUploadDownload
+ * @schema CfnCloudGuardQsModulePropsParametersAllowUploadDownload
  */
-export interface CfnModulePropsParametersAllowUploadDownload {
+export interface CfnCloudGuardQsModulePropsParametersAllowUploadDownload {
   /**
-   * @schema CfnModulePropsParametersAllowUploadDownload#Type
+   * @schema CfnCloudGuardQsModulePropsParametersAllowUploadDownload#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersAllowUploadDownload#Description
+   * @schema CfnCloudGuardQsModulePropsParametersAllowUploadDownload#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersAllowUploadDownload' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersAllowUploadDownload' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersAllowUploadDownload(obj: CfnModulePropsParametersAllowUploadDownload | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersAllowUploadDownload(obj: CfnCloudGuardQsModulePropsParametersAllowUploadDownload | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1488,26 +1488,26 @@ export function toJson_CfnModulePropsParametersAllowUploadDownload(obj: CfnModul
 /**
  * The tag is used by the Security Management Server to automatically provision the Security Gateways. Must be up to 12 alphanumeric characters and unique for each Quick Start deployment. Default: quickstart
  *
- * @schema CfnModulePropsParametersProvisionTag
+ * @schema CfnCloudGuardQsModulePropsParametersProvisionTag
  */
-export interface CfnModulePropsParametersProvisionTag {
+export interface CfnCloudGuardQsModulePropsParametersProvisionTag {
   /**
-   * @schema CfnModulePropsParametersProvisionTag#Type
+   * @schema CfnCloudGuardQsModulePropsParametersProvisionTag#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersProvisionTag#Description
+   * @schema CfnCloudGuardQsModulePropsParametersProvisionTag#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersProvisionTag' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersProvisionTag' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersProvisionTag(obj: CfnModulePropsParametersProvisionTag | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersProvisionTag(obj: CfnCloudGuardQsModulePropsParametersProvisionTag | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1521,26 +1521,26 @@ export function toJson_CfnModulePropsParametersProvisionTag(obj: CfnModulePropsP
 /**
  * Use Network Load Balancer if you wish to preserve the source IP address and Application Load Balancer if you wish to perform SSL Offloading. Default: Network Load Balancer. Allowed values: Network Load Balancer, Application Load Balancer
  *
- * @schema CfnModulePropsParametersLoadBalancersType
+ * @schema CfnCloudGuardQsModulePropsParametersLoadBalancersType
  */
-export interface CfnModulePropsParametersLoadBalancersType {
+export interface CfnCloudGuardQsModulePropsParametersLoadBalancersType {
   /**
-   * @schema CfnModulePropsParametersLoadBalancersType#Type
+   * @schema CfnCloudGuardQsModulePropsParametersLoadBalancersType#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersLoadBalancersType#Description
+   * @schema CfnCloudGuardQsModulePropsParametersLoadBalancersType#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersLoadBalancersType' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersLoadBalancersType' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersLoadBalancersType(obj: CfnModulePropsParametersLoadBalancersType | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersLoadBalancersType(obj: CfnCloudGuardQsModulePropsParametersLoadBalancersType | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1554,26 +1554,26 @@ export function toJson_CfnModulePropsParametersLoadBalancersType(obj: CfnModuleP
 /**
  * The protocol to use on the Application Load Balancer. If Network Load Balancer was selected this section will be ignored. Default: HTTP. Allowed values: HTTP, HTTPS
  *
- * @schema CfnModulePropsParametersAlbProtocol
+ * @schema CfnCloudGuardQsModulePropsParametersAlbProtocol
  */
-export interface CfnModulePropsParametersAlbProtocol {
+export interface CfnCloudGuardQsModulePropsParametersAlbProtocol {
   /**
-   * @schema CfnModulePropsParametersAlbProtocol#Type
+   * @schema CfnCloudGuardQsModulePropsParametersAlbProtocol#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersAlbProtocol#Description
+   * @schema CfnCloudGuardQsModulePropsParametersAlbProtocol#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersAlbProtocol' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersAlbProtocol' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersAlbProtocol(obj: CfnModulePropsParametersAlbProtocol | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersAlbProtocol(obj: CfnCloudGuardQsModulePropsParametersAlbProtocol | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1587,26 +1587,26 @@ export function toJson_CfnModulePropsParametersAlbProtocol(obj: CfnModulePropsPa
 /**
  * The protocol to use on the Network Load Balancer. If Application Load Balancer was selected this section will be ignored. Default: TCP. Allowed values: TCP, TLS, UDP, TCP_UDP
  *
- * @schema CfnModulePropsParametersNlbProtocol
+ * @schema CfnCloudGuardQsModulePropsParametersNlbProtocol
  */
-export interface CfnModulePropsParametersNlbProtocol {
+export interface CfnCloudGuardQsModulePropsParametersNlbProtocol {
   /**
-   * @schema CfnModulePropsParametersNlbProtocol#Type
+   * @schema CfnCloudGuardQsModulePropsParametersNlbProtocol#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersNlbProtocol#Description
+   * @schema CfnCloudGuardQsModulePropsParametersNlbProtocol#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersNlbProtocol' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersNlbProtocol' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersNlbProtocol(obj: CfnModulePropsParametersNlbProtocol | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersNlbProtocol(obj: CfnCloudGuardQsModulePropsParametersNlbProtocol | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1620,26 +1620,26 @@ export function toJson_CfnModulePropsParametersNlbProtocol(obj: CfnModulePropsPa
 /**
  * Amazon Resource Name (ARN) of an HTTPS Certificate, ignored if the selected protocol is HTTP (for the ALBProtocol parameter)
  *
- * @schema CfnModulePropsParametersCertificate
+ * @schema CfnCloudGuardQsModulePropsParametersCertificate
  */
-export interface CfnModulePropsParametersCertificate {
+export interface CfnCloudGuardQsModulePropsParametersCertificate {
   /**
-   * @schema CfnModulePropsParametersCertificate#Type
+   * @schema CfnCloudGuardQsModulePropsParametersCertificate#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersCertificate#Description
+   * @schema CfnCloudGuardQsModulePropsParametersCertificate#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersCertificate' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersCertificate' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersCertificate(obj: CfnModulePropsParametersCertificate | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersCertificate(obj: CfnCloudGuardQsModulePropsParametersCertificate | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1653,26 +1653,26 @@ export function toJson_CfnModulePropsParametersCertificate(obj: CfnModulePropsPa
 /**
  * The external Load Balancer listens to this port. Leave this field blank to use default ports: 80 for HTTP and 443 for HTTPS
  *
- * @schema CfnModulePropsParametersServicePort
+ * @schema CfnCloudGuardQsModulePropsParametersServicePort
  */
-export interface CfnModulePropsParametersServicePort {
+export interface CfnCloudGuardQsModulePropsParametersServicePort {
   /**
-   * @schema CfnModulePropsParametersServicePort#Type
+   * @schema CfnCloudGuardQsModulePropsParametersServicePort#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersServicePort#Description
+   * @schema CfnCloudGuardQsModulePropsParametersServicePort#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersServicePort' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersServicePort' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersServicePort(obj: CfnModulePropsParametersServicePort | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersServicePort(obj: CfnCloudGuardQsModulePropsParametersServicePort | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1686,26 +1686,26 @@ export function toJson_CfnModulePropsParametersServicePort(obj: CfnModulePropsPa
 /**
  * Notifications about scaling events will be sent to this email address (optional)
  *
- * @schema CfnModulePropsParametersAdminEmail
+ * @schema CfnCloudGuardQsModulePropsParametersAdminEmail
  */
-export interface CfnModulePropsParametersAdminEmail {
+export interface CfnCloudGuardQsModulePropsParametersAdminEmail {
   /**
-   * @schema CfnModulePropsParametersAdminEmail#Type
+   * @schema CfnCloudGuardQsModulePropsParametersAdminEmail#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersAdminEmail#Description
+   * @schema CfnCloudGuardQsModulePropsParametersAdminEmail#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersAdminEmail' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersAdminEmail' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersAdminEmail(obj: CfnModulePropsParametersAdminEmail | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersAdminEmail(obj: CfnCloudGuardQsModulePropsParametersAdminEmail | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1719,26 +1719,26 @@ export function toJson_CfnModulePropsParametersAdminEmail(obj: CfnModulePropsPar
 /**
  * The EC2 instance type for the Security Gateways. Default: c5.xlarge. Allowed values: c5.xlarge, c5.xlarge, c5.2xlarge, c5.4xlarge, c5.9xlarge, c5.18xlarge, c5n.large, c5n.xlarge, c5n.2xlarge, c5n.4xlarge, c5n.9xlarge, c5n.18xlarge
  *
- * @schema CfnModulePropsParametersGatewayInstanceType
+ * @schema CfnCloudGuardQsModulePropsParametersGatewayInstanceType
  */
-export interface CfnModulePropsParametersGatewayInstanceType {
+export interface CfnCloudGuardQsModulePropsParametersGatewayInstanceType {
   /**
-   * @schema CfnModulePropsParametersGatewayInstanceType#Type
+   * @schema CfnCloudGuardQsModulePropsParametersGatewayInstanceType#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersGatewayInstanceType#Description
+   * @schema CfnCloudGuardQsModulePropsParametersGatewayInstanceType#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersGatewayInstanceType' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersGatewayInstanceType' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersGatewayInstanceType(obj: CfnModulePropsParametersGatewayInstanceType | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersGatewayInstanceType(obj: CfnCloudGuardQsModulePropsParametersGatewayInstanceType | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1752,26 +1752,26 @@ export function toJson_CfnModulePropsParametersGatewayInstanceType(obj: CfnModul
 /**
  * The minimal number of Security Gateways
  *
- * @schema CfnModulePropsParametersGatewaysMinSize
+ * @schema CfnCloudGuardQsModulePropsParametersGatewaysMinSize
  */
-export interface CfnModulePropsParametersGatewaysMinSize {
+export interface CfnCloudGuardQsModulePropsParametersGatewaysMinSize {
   /**
-   * @schema CfnModulePropsParametersGatewaysMinSize#Type
+   * @schema CfnCloudGuardQsModulePropsParametersGatewaysMinSize#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersGatewaysMinSize#Description
+   * @schema CfnCloudGuardQsModulePropsParametersGatewaysMinSize#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersGatewaysMinSize' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersGatewaysMinSize' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersGatewaysMinSize(obj: CfnModulePropsParametersGatewaysMinSize | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersGatewaysMinSize(obj: CfnCloudGuardQsModulePropsParametersGatewaysMinSize | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1785,26 +1785,26 @@ export function toJson_CfnModulePropsParametersGatewaysMinSize(obj: CfnModulePro
 /**
  * The maximal number of Security Gateways
  *
- * @schema CfnModulePropsParametersGatewaysMaxSize
+ * @schema CfnCloudGuardQsModulePropsParametersGatewaysMaxSize
  */
-export interface CfnModulePropsParametersGatewaysMaxSize {
+export interface CfnCloudGuardQsModulePropsParametersGatewaysMaxSize {
   /**
-   * @schema CfnModulePropsParametersGatewaysMaxSize#Type
+   * @schema CfnCloudGuardQsModulePropsParametersGatewaysMaxSize#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersGatewaysMaxSize#Description
+   * @schema CfnCloudGuardQsModulePropsParametersGatewaysMaxSize#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersGatewaysMaxSize' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersGatewaysMaxSize' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersGatewaysMaxSize(obj: CfnModulePropsParametersGatewaysMaxSize | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersGatewaysMaxSize(obj: CfnCloudGuardQsModulePropsParametersGatewaysMaxSize | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1818,26 +1818,26 @@ export function toJson_CfnModulePropsParametersGatewaysMaxSize(obj: CfnModulePro
 /**
  * The version and license to install on the Security Gateways. Default: R80.40-PAYG-NGTP-GW. Allowed values: R80.40-BYOL-GW, R80.40-PAYG-NGTP-GW, R80.40-PAYG-NGTX-GW, R81-BYOL-GW, R81-PAYG-NGTP-GW, R81-PAYG-NGTX-GW
  *
- * @schema CfnModulePropsParametersGatewayVersion
+ * @schema CfnCloudGuardQsModulePropsParametersGatewayVersion
  */
-export interface CfnModulePropsParametersGatewayVersion {
+export interface CfnCloudGuardQsModulePropsParametersGatewayVersion {
   /**
-   * @schema CfnModulePropsParametersGatewayVersion#Type
+   * @schema CfnCloudGuardQsModulePropsParametersGatewayVersion#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersGatewayVersion#Description
+   * @schema CfnCloudGuardQsModulePropsParametersGatewayVersion#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersGatewayVersion' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersGatewayVersion' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersGatewayVersion(obj: CfnModulePropsParametersGatewayVersion | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersGatewayVersion(obj: CfnCloudGuardQsModulePropsParametersGatewayVersion | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1851,26 +1851,26 @@ export function toJson_CfnModulePropsParametersGatewayVersion(obj: CfnModuleProp
 /**
  * Admin user's password hash (use command "openssl passwd -1 PASSWORD" to get the PASSWORD's hash) (optional)
  *
- * @schema CfnModulePropsParametersGatewayPasswordHash
+ * @schema CfnCloudGuardQsModulePropsParametersGatewayPasswordHash
  */
-export interface CfnModulePropsParametersGatewayPasswordHash {
+export interface CfnCloudGuardQsModulePropsParametersGatewayPasswordHash {
   /**
-   * @schema CfnModulePropsParametersGatewayPasswordHash#Type
+   * @schema CfnCloudGuardQsModulePropsParametersGatewayPasswordHash#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersGatewayPasswordHash#Description
+   * @schema CfnCloudGuardQsModulePropsParametersGatewayPasswordHash#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersGatewayPasswordHash' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersGatewayPasswordHash' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersGatewayPasswordHash(obj: CfnModulePropsParametersGatewayPasswordHash | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersGatewayPasswordHash(obj: CfnCloudGuardQsModulePropsParametersGatewayPasswordHash | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1884,26 +1884,26 @@ export function toJson_CfnModulePropsParametersGatewayPasswordHash(obj: CfnModul
 /**
  * The Secure Internal Communication key creates trusted connections between Check Point components.  Choose a random string consisting of at least 8 alphanumeric characters.
  *
- * @schema CfnModulePropsParametersGatewaySicKey
+ * @schema CfnCloudGuardQsModulePropsParametersGatewaySicKey
  */
-export interface CfnModulePropsParametersGatewaySicKey {
+export interface CfnCloudGuardQsModulePropsParametersGatewaySicKey {
   /**
-   * @schema CfnModulePropsParametersGatewaySicKey#Type
+   * @schema CfnCloudGuardQsModulePropsParametersGatewaySicKey#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersGatewaySicKey#Description
+   * @schema CfnCloudGuardQsModulePropsParametersGatewaySicKey#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersGatewaySicKey' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersGatewaySicKey' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersGatewaySicKey(obj: CfnModulePropsParametersGatewaySicKey | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersGatewaySicKey(obj: CfnCloudGuardQsModulePropsParametersGatewaySicKey | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1917,26 +1917,26 @@ export function toJson_CfnModulePropsParametersGatewaySicKey(obj: CfnModuleProps
 /**
  * Report Check Point specific CloudWatch metrics. Default: false
  *
- * @schema CfnModulePropsParametersCloudWatch
+ * @schema CfnCloudGuardQsModulePropsParametersCloudWatch
  */
-export interface CfnModulePropsParametersCloudWatch {
+export interface CfnCloudGuardQsModulePropsParametersCloudWatch {
   /**
-   * @schema CfnModulePropsParametersCloudWatch#Type
+   * @schema CfnCloudGuardQsModulePropsParametersCloudWatch#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersCloudWatch#Description
+   * @schema CfnCloudGuardQsModulePropsParametersCloudWatch#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersCloudWatch' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersCloudWatch' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersCloudWatch(obj: CfnModulePropsParametersCloudWatch | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersCloudWatch(obj: CfnCloudGuardQsModulePropsParametersCloudWatch | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1950,26 +1950,26 @@ export function toJson_CfnModulePropsParametersCloudWatch(obj: CfnModulePropsPar
 /**
  * Select false to use an existing Security Management Server or to deploy one later and to ignore the other parameters of this section. Default: true
  *
- * @schema CfnModulePropsParametersManagementDeploy
+ * @schema CfnCloudGuardQsModulePropsParametersManagementDeploy
  */
-export interface CfnModulePropsParametersManagementDeploy {
+export interface CfnCloudGuardQsModulePropsParametersManagementDeploy {
   /**
-   * @schema CfnModulePropsParametersManagementDeploy#Type
+   * @schema CfnCloudGuardQsModulePropsParametersManagementDeploy#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersManagementDeploy#Description
+   * @schema CfnCloudGuardQsModulePropsParametersManagementDeploy#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersManagementDeploy' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersManagementDeploy' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersManagementDeploy(obj: CfnModulePropsParametersManagementDeploy | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersManagementDeploy(obj: CfnCloudGuardQsModulePropsParametersManagementDeploy | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1983,26 +1983,26 @@ export function toJson_CfnModulePropsParametersManagementDeploy(obj: CfnModulePr
 /**
  * The EC2 instance type of the Security Management Server. Default: m5.xlarge. Allowed values: m5.large, m5.xlarge, m5.2xlarge, m5.4xlarge, m5.12xlarge, m5.24xlarge
  *
- * @schema CfnModulePropsParametersManagementInstanceType
+ * @schema CfnCloudGuardQsModulePropsParametersManagementInstanceType
  */
-export interface CfnModulePropsParametersManagementInstanceType {
+export interface CfnCloudGuardQsModulePropsParametersManagementInstanceType {
   /**
-   * @schema CfnModulePropsParametersManagementInstanceType#Type
+   * @schema CfnCloudGuardQsModulePropsParametersManagementInstanceType#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersManagementInstanceType#Description
+   * @schema CfnCloudGuardQsModulePropsParametersManagementInstanceType#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersManagementInstanceType' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersManagementInstanceType' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersManagementInstanceType(obj: CfnModulePropsParametersManagementInstanceType | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersManagementInstanceType(obj: CfnCloudGuardQsModulePropsParametersManagementInstanceType | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2016,26 +2016,26 @@ export function toJson_CfnModulePropsParametersManagementInstanceType(obj: CfnMo
 /**
  * The version and license to install on the Security Management Server. Default: R80.40-PAYG-MGMT. Allowed values: R80.40-BYOL-MGMT, R80.40-PAYG-MGMT, R81-BYOL-MGMT, R81-PAYG-MGMT
  *
- * @schema CfnModulePropsParametersManagementVersion
+ * @schema CfnCloudGuardQsModulePropsParametersManagementVersion
  */
-export interface CfnModulePropsParametersManagementVersion {
+export interface CfnCloudGuardQsModulePropsParametersManagementVersion {
   /**
-   * @schema CfnModulePropsParametersManagementVersion#Type
+   * @schema CfnCloudGuardQsModulePropsParametersManagementVersion#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersManagementVersion#Description
+   * @schema CfnCloudGuardQsModulePropsParametersManagementVersion#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersManagementVersion' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersManagementVersion' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersManagementVersion(obj: CfnModulePropsParametersManagementVersion | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersManagementVersion(obj: CfnCloudGuardQsModulePropsParametersManagementVersion | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2049,26 +2049,26 @@ export function toJson_CfnModulePropsParametersManagementVersion(obj: CfnModuleP
 /**
  * Admin user's password hash (use command "openssl passwd -1 PASSWORD" to get the PASSWORD's hash) (optional)
  *
- * @schema CfnModulePropsParametersManagementPasswordHash
+ * @schema CfnCloudGuardQsModulePropsParametersManagementPasswordHash
  */
-export interface CfnModulePropsParametersManagementPasswordHash {
+export interface CfnCloudGuardQsModulePropsParametersManagementPasswordHash {
   /**
-   * @schema CfnModulePropsParametersManagementPasswordHash#Type
+   * @schema CfnCloudGuardQsModulePropsParametersManagementPasswordHash#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersManagementPasswordHash#Description
+   * @schema CfnCloudGuardQsModulePropsParametersManagementPasswordHash#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersManagementPasswordHash' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersManagementPasswordHash' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersManagementPasswordHash(obj: CfnModulePropsParametersManagementPasswordHash | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersManagementPasswordHash(obj: CfnCloudGuardQsModulePropsParametersManagementPasswordHash | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2082,26 +2082,26 @@ export function toJson_CfnModulePropsParametersManagementPasswordHash(obj: CfnMo
 /**
  * The name of the Security Policy package to be installed on the gateways in the Security Gateways Auto Scaling group. Default: Standard
  *
- * @schema CfnModulePropsParametersGatewaysPolicy
+ * @schema CfnCloudGuardQsModulePropsParametersGatewaysPolicy
  */
-export interface CfnModulePropsParametersGatewaysPolicy {
+export interface CfnCloudGuardQsModulePropsParametersGatewaysPolicy {
   /**
-   * @schema CfnModulePropsParametersGatewaysPolicy#Type
+   * @schema CfnCloudGuardQsModulePropsParametersGatewaysPolicy#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersGatewaysPolicy#Description
+   * @schema CfnCloudGuardQsModulePropsParametersGatewaysPolicy#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersGatewaysPolicy' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersGatewaysPolicy' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersGatewaysPolicy(obj: CfnModulePropsParametersGatewaysPolicy | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersGatewaysPolicy(obj: CfnCloudGuardQsModulePropsParametersGatewaysPolicy | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2115,26 +2115,26 @@ export function toJson_CfnModulePropsParametersGatewaysPolicy(obj: CfnModuleProp
 /**
  * Turn on the Intrusion Prevention System, Application Control, Anti-Virus and Anti-Bot Blades (these and additional Blades can be manually turned on or off later). Default: true
  *
- * @schema CfnModulePropsParametersGatewaysBlades
+ * @schema CfnCloudGuardQsModulePropsParametersGatewaysBlades
  */
-export interface CfnModulePropsParametersGatewaysBlades {
+export interface CfnCloudGuardQsModulePropsParametersGatewaysBlades {
   /**
-   * @schema CfnModulePropsParametersGatewaysBlades#Type
+   * @schema CfnCloudGuardQsModulePropsParametersGatewaysBlades#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersGatewaysBlades#Description
+   * @schema CfnCloudGuardQsModulePropsParametersGatewaysBlades#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersGatewaysBlades' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersGatewaysBlades' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersGatewaysBlades(obj: CfnModulePropsParametersGatewaysBlades | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersGatewaysBlades(obj: CfnCloudGuardQsModulePropsParametersGatewaysBlades | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2148,26 +2148,26 @@ export function toJson_CfnModulePropsParametersGatewaysBlades(obj: CfnModuleProp
 /**
  * Allow web, SSH, and graphical clients only from this network to communicate with the Security Management Server
  *
- * @schema CfnModulePropsParametersAdminCidr
+ * @schema CfnCloudGuardQsModulePropsParametersAdminCidr
  */
-export interface CfnModulePropsParametersAdminCidr {
+export interface CfnCloudGuardQsModulePropsParametersAdminCidr {
   /**
-   * @schema CfnModulePropsParametersAdminCidr#Type
+   * @schema CfnCloudGuardQsModulePropsParametersAdminCidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersAdminCidr#Description
+   * @schema CfnCloudGuardQsModulePropsParametersAdminCidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersAdminCidr' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersAdminCidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersAdminCidr(obj: CfnModulePropsParametersAdminCidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersAdminCidr(obj: CfnCloudGuardQsModulePropsParametersAdminCidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2181,26 +2181,26 @@ export function toJson_CfnModulePropsParametersAdminCidr(obj: CfnModulePropsPara
 /**
  * Allow gateways only from this network to communicate with the Security Management Server
  *
- * @schema CfnModulePropsParametersGatewaysAddresses
+ * @schema CfnCloudGuardQsModulePropsParametersGatewaysAddresses
  */
-export interface CfnModulePropsParametersGatewaysAddresses {
+export interface CfnCloudGuardQsModulePropsParametersGatewaysAddresses {
   /**
-   * @schema CfnModulePropsParametersGatewaysAddresses#Type
+   * @schema CfnCloudGuardQsModulePropsParametersGatewaysAddresses#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersGatewaysAddresses#Description
+   * @schema CfnCloudGuardQsModulePropsParametersGatewaysAddresses#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersGatewaysAddresses' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersGatewaysAddresses' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersGatewaysAddresses(obj: CfnModulePropsParametersGatewaysAddresses | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersGatewaysAddresses(obj: CfnCloudGuardQsModulePropsParametersGatewaysAddresses | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2214,26 +2214,26 @@ export function toJson_CfnModulePropsParametersGatewaysAddresses(obj: CfnModuleP
 /**
  * Select true to deploy web servers and an internal Application Load Balancer. If you select false the other parameters of this section will be ignored. Default: false
  *
- * @schema CfnModulePropsParametersServersDeploy
+ * @schema CfnCloudGuardQsModulePropsParametersServersDeploy
  */
-export interface CfnModulePropsParametersServersDeploy {
+export interface CfnCloudGuardQsModulePropsParametersServersDeploy {
   /**
-   * @schema CfnModulePropsParametersServersDeploy#Type
+   * @schema CfnCloudGuardQsModulePropsParametersServersDeploy#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersServersDeploy#Description
+   * @schema CfnCloudGuardQsModulePropsParametersServersDeploy#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersServersDeploy' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersServersDeploy' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersServersDeploy(obj: CfnModulePropsParametersServersDeploy | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersServersDeploy(obj: CfnCloudGuardQsModulePropsParametersServersDeploy | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2247,26 +2247,26 @@ export function toJson_CfnModulePropsParametersServersDeploy(obj: CfnModuleProps
 /**
  * The EC2 instance type for the web servers. Default: t3.micro. Allowed values: t3.nano, t3.micro, t3.small, t3.medium, t3.large, t3.xlarge, t3.2xlarge
  *
- * @schema CfnModulePropsParametersServerInstanceType
+ * @schema CfnCloudGuardQsModulePropsParametersServerInstanceType
  */
-export interface CfnModulePropsParametersServerInstanceType {
+export interface CfnCloudGuardQsModulePropsParametersServerInstanceType {
   /**
-   * @schema CfnModulePropsParametersServerInstanceType#Type
+   * @schema CfnCloudGuardQsModulePropsParametersServerInstanceType#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersServerInstanceType#Description
+   * @schema CfnCloudGuardQsModulePropsParametersServerInstanceType#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersServerInstanceType' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersServerInstanceType' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersServerInstanceType(obj: CfnModulePropsParametersServerInstanceType | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersServerInstanceType(obj: CfnCloudGuardQsModulePropsParametersServerInstanceType | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2280,26 +2280,26 @@ export function toJson_CfnModulePropsParametersServerInstanceType(obj: CfnModule
 /**
  * The Amazon Machine Image ID of a preconfigured web server (e.g. ami-0dc7dc63)
  *
- * @schema CfnModulePropsParametersServerAmi
+ * @schema CfnCloudGuardQsModulePropsParametersServerAmi
  */
-export interface CfnModulePropsParametersServerAmi {
+export interface CfnCloudGuardQsModulePropsParametersServerAmi {
   /**
-   * @schema CfnModulePropsParametersServerAmi#Type
+   * @schema CfnCloudGuardQsModulePropsParametersServerAmi#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersServerAmi#Description
+   * @schema CfnCloudGuardQsModulePropsParametersServerAmi#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersServerAmi' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersServerAmi' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersServerAmi(obj: CfnModulePropsParametersServerAmi | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersServerAmi(obj: CfnCloudGuardQsModulePropsParametersServerAmi | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2313,26 +2313,26 @@ export function toJson_CfnModulePropsParametersServerAmi(obj: CfnModulePropsPara
 /**
  * Set to false to create only public subnets. If false, the CIDR parameters for ALL private subnets will be ignored. Default: true
  *
- * @schema CfnModulePropsParametersCreatePrivateSubnets
+ * @schema CfnCloudGuardQsModulePropsParametersCreatePrivateSubnets
  */
-export interface CfnModulePropsParametersCreatePrivateSubnets {
+export interface CfnCloudGuardQsModulePropsParametersCreatePrivateSubnets {
   /**
-   * @schema CfnModulePropsParametersCreatePrivateSubnets#Type
+   * @schema CfnCloudGuardQsModulePropsParametersCreatePrivateSubnets#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersCreatePrivateSubnets#Description
+   * @schema CfnCloudGuardQsModulePropsParametersCreatePrivateSubnets#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersCreatePrivateSubnets' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersCreatePrivateSubnets' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersCreatePrivateSubnets(obj: CfnModulePropsParametersCreatePrivateSubnets | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersCreatePrivateSubnets(obj: CfnCloudGuardQsModulePropsParametersCreatePrivateSubnets | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2346,26 +2346,26 @@ export function toJson_CfnModulePropsParametersCreatePrivateSubnets(obj: CfnModu
 /**
  * Set true for creating designated subnets for VPC TGW attachments. If false, the CIDR parameters for the TGW subnets will be ignored. Default: false
  *
- * @schema CfnModulePropsParametersCreateTgwSubnets
+ * @schema CfnCloudGuardQsModulePropsParametersCreateTgwSubnets
  */
-export interface CfnModulePropsParametersCreateTgwSubnets {
+export interface CfnCloudGuardQsModulePropsParametersCreateTgwSubnets {
   /**
-   * @schema CfnModulePropsParametersCreateTgwSubnets#Type
+   * @schema CfnCloudGuardQsModulePropsParametersCreateTgwSubnets#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersCreateTgwSubnets#Description
+   * @schema CfnCloudGuardQsModulePropsParametersCreateTgwSubnets#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersCreateTgwSubnets' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersCreateTgwSubnets' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersCreateTgwSubnets(obj: CfnModulePropsParametersCreateTgwSubnets | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersCreateTgwSubnets(obj: CfnCloudGuardQsModulePropsParametersCreateTgwSubnets | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2379,26 +2379,26 @@ export function toJson_CfnModulePropsParametersCreateTgwSubnets(obj: CfnModulePr
 /**
  * CIDR block for TGW subnet 1 located in Availability Zone 1. Default: 10.0.12.0/24
  *
- * @schema CfnModulePropsParametersTgwSubnet1Cidr
+ * @schema CfnCloudGuardQsModulePropsParametersTgwSubnet1Cidr
  */
-export interface CfnModulePropsParametersTgwSubnet1Cidr {
+export interface CfnCloudGuardQsModulePropsParametersTgwSubnet1Cidr {
   /**
-   * @schema CfnModulePropsParametersTgwSubnet1Cidr#Type
+   * @schema CfnCloudGuardQsModulePropsParametersTgwSubnet1Cidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersTgwSubnet1Cidr#Description
+   * @schema CfnCloudGuardQsModulePropsParametersTgwSubnet1Cidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersTgwSubnet1Cidr' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersTgwSubnet1Cidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersTgwSubnet1Cidr(obj: CfnModulePropsParametersTgwSubnet1Cidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersTgwSubnet1Cidr(obj: CfnCloudGuardQsModulePropsParametersTgwSubnet1Cidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2412,26 +2412,26 @@ export function toJson_CfnModulePropsParametersTgwSubnet1Cidr(obj: CfnModuleProp
 /**
  * CIDR block for TGW subnet 2 located in Availability Zone 2. Default: 10.0.22.0/24
  *
- * @schema CfnModulePropsParametersTgwSubnet2Cidr
+ * @schema CfnCloudGuardQsModulePropsParametersTgwSubnet2Cidr
  */
-export interface CfnModulePropsParametersTgwSubnet2Cidr {
+export interface CfnCloudGuardQsModulePropsParametersTgwSubnet2Cidr {
   /**
-   * @schema CfnModulePropsParametersTgwSubnet2Cidr#Type
+   * @schema CfnCloudGuardQsModulePropsParametersTgwSubnet2Cidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersTgwSubnet2Cidr#Description
+   * @schema CfnCloudGuardQsModulePropsParametersTgwSubnet2Cidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersTgwSubnet2Cidr' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersTgwSubnet2Cidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersTgwSubnet2Cidr(obj: CfnModulePropsParametersTgwSubnet2Cidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersTgwSubnet2Cidr(obj: CfnCloudGuardQsModulePropsParametersTgwSubnet2Cidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2445,26 +2445,26 @@ export function toJson_CfnModulePropsParametersTgwSubnet2Cidr(obj: CfnModuleProp
 /**
  * CIDR block for TGW subnet 3 located in Availability Zone 3. Default: 10.0.32.0/24
  *
- * @schema CfnModulePropsParametersTgwSubnet3Cidr
+ * @schema CfnCloudGuardQsModulePropsParametersTgwSubnet3Cidr
  */
-export interface CfnModulePropsParametersTgwSubnet3Cidr {
+export interface CfnCloudGuardQsModulePropsParametersTgwSubnet3Cidr {
   /**
-   * @schema CfnModulePropsParametersTgwSubnet3Cidr#Type
+   * @schema CfnCloudGuardQsModulePropsParametersTgwSubnet3Cidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersTgwSubnet3Cidr#Description
+   * @schema CfnCloudGuardQsModulePropsParametersTgwSubnet3Cidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersTgwSubnet3Cidr' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersTgwSubnet3Cidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersTgwSubnet3Cidr(obj: CfnModulePropsParametersTgwSubnet3Cidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersTgwSubnet3Cidr(obj: CfnCloudGuardQsModulePropsParametersTgwSubnet3Cidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2478,26 +2478,26 @@ export function toJson_CfnModulePropsParametersTgwSubnet3Cidr(obj: CfnModuleProp
 /**
  * CIDR block for TGW subnet 4 located in Availability Zone 4. Default: 10.0.42.0/24
  *
- * @schema CfnModulePropsParametersTgwSubnet4Cidr
+ * @schema CfnCloudGuardQsModulePropsParametersTgwSubnet4Cidr
  */
-export interface CfnModulePropsParametersTgwSubnet4Cidr {
+export interface CfnCloudGuardQsModulePropsParametersTgwSubnet4Cidr {
   /**
-   * @schema CfnModulePropsParametersTgwSubnet4Cidr#Type
+   * @schema CfnCloudGuardQsModulePropsParametersTgwSubnet4Cidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersTgwSubnet4Cidr#Description
+   * @schema CfnCloudGuardQsModulePropsParametersTgwSubnet4Cidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersTgwSubnet4Cidr' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersTgwSubnet4Cidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersTgwSubnet4Cidr(obj: CfnModulePropsParametersTgwSubnet4Cidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersTgwSubnet4Cidr(obj: CfnCloudGuardQsModulePropsParametersTgwSubnet4Cidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2511,26 +2511,26 @@ export function toJson_CfnModulePropsParametersTgwSubnet4Cidr(obj: CfnModuleProp
 /**
  * Port for the ELB. Default: 8080
  *
- * @schema CfnModulePropsParametersElbPort
+ * @schema CfnCloudGuardQsModulePropsParametersElbPort
  */
-export interface CfnModulePropsParametersElbPort {
+export interface CfnCloudGuardQsModulePropsParametersElbPort {
   /**
-   * @schema CfnModulePropsParametersElbPort#Type
+   * @schema CfnCloudGuardQsModulePropsParametersElbPort#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersElbPort#Description
+   * @schema CfnCloudGuardQsModulePropsParametersElbPort#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersElbPort' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersElbPort' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersElbPort(obj: CfnModulePropsParametersElbPort | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersElbPort(obj: CfnCloudGuardQsModulePropsParametersElbPort | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2544,26 +2544,26 @@ export function toJson_CfnModulePropsParametersElbPort(obj: CfnModulePropsParame
 /**
  * Allocate an elastic IP for the Management. Default: true
  *
- * @schema CfnModulePropsParametersAllocatePublicAddress
+ * @schema CfnCloudGuardQsModulePropsParametersAllocatePublicAddress
  */
-export interface CfnModulePropsParametersAllocatePublicAddress {
+export interface CfnCloudGuardQsModulePropsParametersAllocatePublicAddress {
   /**
-   * @schema CfnModulePropsParametersAllocatePublicAddress#Type
+   * @schema CfnCloudGuardQsModulePropsParametersAllocatePublicAddress#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersAllocatePublicAddress#Description
+   * @schema CfnCloudGuardQsModulePropsParametersAllocatePublicAddress#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersAllocatePublicAddress' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersAllocatePublicAddress' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersAllocatePublicAddress(obj: CfnModulePropsParametersAllocatePublicAddress | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersAllocatePublicAddress(obj: CfnCloudGuardQsModulePropsParametersAllocatePublicAddress | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2577,26 +2577,26 @@ export function toJson_CfnModulePropsParametersAllocatePublicAddress(obj: CfnMod
 /**
  * IAM role to attach to the instance profile of the Management Server. Default: Create with read permissions. Allowed values: None (configure later), Use existing (specify an existing IAM role name), Create with assume role permissions (specify an STS role ARN), Create with read permissions, Create with read-write permissions
  *
- * @schema CfnModulePropsParametersManagementPermissions
+ * @schema CfnCloudGuardQsModulePropsParametersManagementPermissions
  */
-export interface CfnModulePropsParametersManagementPermissions {
+export interface CfnCloudGuardQsModulePropsParametersManagementPermissions {
   /**
-   * @schema CfnModulePropsParametersManagementPermissions#Type
+   * @schema CfnCloudGuardQsModulePropsParametersManagementPermissions#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersManagementPermissions#Description
+   * @schema CfnCloudGuardQsModulePropsParametersManagementPermissions#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersManagementPermissions' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersManagementPermissions' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersManagementPermissions(obj: CfnModulePropsParametersManagementPermissions | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersManagementPermissions(obj: CfnCloudGuardQsModulePropsParametersManagementPermissions | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2610,26 +2610,26 @@ export function toJson_CfnModulePropsParametersManagementPermissions(obj: CfnMod
 /**
  * Select 'Over the internet' if any of the gateways you wish to manage are not directly accessed via their private IP address. Default: 'Locally managed'. Allowed values: Locally managed, Over the internet
  *
- * @schema CfnModulePropsParametersGatewayManagement
+ * @schema CfnCloudGuardQsModulePropsParametersGatewayManagement
  */
-export interface CfnModulePropsParametersGatewayManagement {
+export interface CfnCloudGuardQsModulePropsParametersGatewayManagement {
   /**
-   * @schema CfnModulePropsParametersGatewayManagement#Type
+   * @schema CfnCloudGuardQsModulePropsParametersGatewayManagement#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersGatewayManagement#Description
+   * @schema CfnCloudGuardQsModulePropsParametersGatewayManagement#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersGatewayManagement' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersGatewayManagement' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersGatewayManagement(obj: CfnModulePropsParametersGatewayManagement | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersGatewayManagement(obj: CfnCloudGuardQsModulePropsParametersGatewayManagement | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2643,26 +2643,26 @@ export function toJson_CfnModulePropsParametersGatewayManagement(obj: CfnModuleP
 /**
  * Mandatory only if deploying a secondary Management Server, the Secure Internal Communication key creates trusted connections between Check Point components. Choose a random string consisting of at least 8 alphanumeric characters
  *
- * @schema CfnModulePropsParametersManagementSicKey
+ * @schema CfnCloudGuardQsModulePropsParametersManagementSicKey
  */
-export interface CfnModulePropsParametersManagementSicKey {
+export interface CfnCloudGuardQsModulePropsParametersManagementSicKey {
   /**
-   * @schema CfnModulePropsParametersManagementSicKey#Type
+   * @schema CfnCloudGuardQsModulePropsParametersManagementSicKey#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersManagementSicKey#Description
+   * @schema CfnCloudGuardQsModulePropsParametersManagementSicKey#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersManagementSicKey' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersManagementSicKey' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersManagementSicKey(obj: CfnModulePropsParametersManagementSicKey | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersManagementSicKey(obj: CfnCloudGuardQsModulePropsParametersManagementSicKey | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2676,26 +2676,26 @@ export function toJson_CfnModulePropsParametersManagementSicKey(obj: CfnModulePr
 /**
  * A predefined IAM role to attach to the instance profile. Ignored if IAM role is not set to 'Use existing'
  *
- * @schema CfnModulePropsParametersManagementPredefinedRole
+ * @schema CfnCloudGuardQsModulePropsParametersManagementPredefinedRole
  */
-export interface CfnModulePropsParametersManagementPredefinedRole {
+export interface CfnCloudGuardQsModulePropsParametersManagementPredefinedRole {
   /**
-   * @schema CfnModulePropsParametersManagementPredefinedRole#Type
+   * @schema CfnCloudGuardQsModulePropsParametersManagementPredefinedRole#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersManagementPredefinedRole#Description
+   * @schema CfnCloudGuardQsModulePropsParametersManagementPredefinedRole#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersManagementPredefinedRole' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersManagementPredefinedRole' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersManagementPredefinedRole(obj: CfnModulePropsParametersManagementPredefinedRole | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersManagementPredefinedRole(obj: CfnCloudGuardQsModulePropsParametersManagementPredefinedRole | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2709,26 +2709,26 @@ export function toJson_CfnModulePropsParametersManagementPredefinedRole(obj: Cfn
 /**
  * (optional). Default: 169.254.169.123
  *
- * @schema CfnModulePropsParametersNtpPrimary
+ * @schema CfnCloudGuardQsModulePropsParametersNtpPrimary
  */
-export interface CfnModulePropsParametersNtpPrimary {
+export interface CfnCloudGuardQsModulePropsParametersNtpPrimary {
   /**
-   * @schema CfnModulePropsParametersNtpPrimary#Type
+   * @schema CfnCloudGuardQsModulePropsParametersNtpPrimary#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersNtpPrimary#Description
+   * @schema CfnCloudGuardQsModulePropsParametersNtpPrimary#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersNtpPrimary' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersNtpPrimary' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersNtpPrimary(obj: CfnModulePropsParametersNtpPrimary | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersNtpPrimary(obj: CfnCloudGuardQsModulePropsParametersNtpPrimary | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2742,26 +2742,26 @@ export function toJson_CfnModulePropsParametersNtpPrimary(obj: CfnModulePropsPar
 /**
  * (optional). Default: 0.pool.ntp.org
  *
- * @schema CfnModulePropsParametersNtpSecondary
+ * @schema CfnCloudGuardQsModulePropsParametersNtpSecondary
  */
-export interface CfnModulePropsParametersNtpSecondary {
+export interface CfnCloudGuardQsModulePropsParametersNtpSecondary {
   /**
-   * @schema CfnModulePropsParametersNtpSecondary#Type
+   * @schema CfnCloudGuardQsModulePropsParametersNtpSecondary#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersNtpSecondary#Description
+   * @schema CfnCloudGuardQsModulePropsParametersNtpSecondary#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersNtpSecondary' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersNtpSecondary' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersNtpSecondary(obj: CfnModulePropsParametersNtpSecondary | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersNtpSecondary(obj: CfnCloudGuardQsModulePropsParametersNtpSecondary | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2775,26 +2775,26 @@ export function toJson_CfnModulePropsParametersNtpSecondary(obj: CfnModulePropsP
 /**
  * (optional). Default: mgmt-aws
  *
- * @schema CfnModulePropsParametersManagementHostname
+ * @schema CfnCloudGuardQsModulePropsParametersManagementHostname
  */
-export interface CfnModulePropsParametersManagementHostname {
+export interface CfnCloudGuardQsModulePropsParametersManagementHostname {
   /**
-   * @schema CfnModulePropsParametersManagementHostname#Type
+   * @schema CfnCloudGuardQsModulePropsParametersManagementHostname#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersManagementHostname#Description
+   * @schema CfnCloudGuardQsModulePropsParametersManagementHostname#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersManagementHostname' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersManagementHostname' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersManagementHostname(obj: CfnModulePropsParametersManagementHostname | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersManagementHostname(obj: CfnCloudGuardQsModulePropsParametersManagementHostname | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2808,26 +2808,26 @@ export function toJson_CfnModulePropsParametersManagementHostname(obj: CfnModule
 /**
  * Determines if this is the primary Management Server or not. Default: true
  *
- * @schema CfnModulePropsParametersPrimaryManagement
+ * @schema CfnCloudGuardQsModulePropsParametersPrimaryManagement
  */
-export interface CfnModulePropsParametersPrimaryManagement {
+export interface CfnCloudGuardQsModulePropsParametersPrimaryManagement {
   /**
-   * @schema CfnModulePropsParametersPrimaryManagement#Type
+   * @schema CfnCloudGuardQsModulePropsParametersPrimaryManagement#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPrimaryManagement#Description
+   * @schema CfnCloudGuardQsModulePropsParametersPrimaryManagement#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPrimaryManagement' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersPrimaryManagement' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPrimaryManagement(obj: CfnModulePropsParametersPrimaryManagement | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersPrimaryManagement(obj: CfnCloudGuardQsModulePropsParametersPrimaryManagement | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2841,26 +2841,26 @@ export function toJson_CfnModulePropsParametersPrimaryManagement(obj: CfnModuleP
 /**
  * EBS Volume size of the management server
  *
- * @schema CfnModulePropsParametersManagementStackVolumeSize
+ * @schema CfnCloudGuardQsModulePropsParametersManagementStackVolumeSize
  */
-export interface CfnModulePropsParametersManagementStackVolumeSize {
+export interface CfnCloudGuardQsModulePropsParametersManagementStackVolumeSize {
   /**
-   * @schema CfnModulePropsParametersManagementStackVolumeSize#Type
+   * @schema CfnCloudGuardQsModulePropsParametersManagementStackVolumeSize#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersManagementStackVolumeSize#Description
+   * @schema CfnCloudGuardQsModulePropsParametersManagementStackVolumeSize#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersManagementStackVolumeSize' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersManagementStackVolumeSize' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersManagementStackVolumeSize(obj: CfnModulePropsParametersManagementStackVolumeSize | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersManagementStackVolumeSize(obj: CfnCloudGuardQsModulePropsParametersManagementStackVolumeSize | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2874,26 +2874,26 @@ export function toJson_CfnModulePropsParametersManagementStackVolumeSize(obj: Cf
 /**
  * Change the admin shell to enable advanced command line configuration. Default: /etc/cli.sh. Allowed values: /etc/cli.sh, /bin/bash, /bin/csh, /bin/tcsh
  *
- * @schema CfnModulePropsParametersShellManagementStack
+ * @schema CfnCloudGuardQsModulePropsParametersShellManagementStack
  */
-export interface CfnModulePropsParametersShellManagementStack {
+export interface CfnCloudGuardQsModulePropsParametersShellManagementStack {
   /**
-   * @schema CfnModulePropsParametersShellManagementStack#Type
+   * @schema CfnCloudGuardQsModulePropsParametersShellManagementStack#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersShellManagementStack#Description
+   * @schema CfnCloudGuardQsModulePropsParametersShellManagementStack#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersShellManagementStack' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersShellManagementStack' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersShellManagementStack(obj: CfnModulePropsParametersShellManagementStack | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersShellManagementStack(obj: CfnCloudGuardQsModulePropsParametersShellManagementStack | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2907,26 +2907,26 @@ export function toJson_CfnModulePropsParametersShellManagementStack(obj: CfnModu
 /**
  * The Elasitc Load Balancer Type. Default: none. Allowed values: none, internal, internet-facing
  *
- * @schema CfnModulePropsParametersElbType
+ * @schema CfnCloudGuardQsModulePropsParametersElbType
  */
-export interface CfnModulePropsParametersElbType {
+export interface CfnCloudGuardQsModulePropsParametersElbType {
   /**
-   * @schema CfnModulePropsParametersElbType#Type
+   * @schema CfnCloudGuardQsModulePropsParametersElbType#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersElbType#Description
+   * @schema CfnCloudGuardQsModulePropsParametersElbType#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersElbType' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersElbType' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersElbType(obj: CfnModulePropsParametersElbType | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersElbType(obj: CfnCloudGuardQsModulePropsParametersElbType | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2940,26 +2940,26 @@ export function toJson_CfnModulePropsParametersElbType(obj: CfnModulePropsParame
 /**
  * A list of Target Groups to associate with the Auto Scaling group (comma separated list of ARNs, without spaces) (optional)
  *
- * @schema CfnModulePropsParametersGatewaysTargetGroups
+ * @schema CfnCloudGuardQsModulePropsParametersGatewaysTargetGroups
  */
-export interface CfnModulePropsParametersGatewaysTargetGroups {
+export interface CfnCloudGuardQsModulePropsParametersGatewaysTargetGroups {
   /**
-   * @schema CfnModulePropsParametersGatewaysTargetGroups#Type
+   * @schema CfnCloudGuardQsModulePropsParametersGatewaysTargetGroups#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersGatewaysTargetGroups#Description
+   * @schema CfnCloudGuardQsModulePropsParametersGatewaysTargetGroups#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersGatewaysTargetGroups' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersGatewaysTargetGroups' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersGatewaysTargetGroups(obj: CfnModulePropsParametersGatewaysTargetGroups | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersGatewaysTargetGroups(obj: CfnCloudGuardQsModulePropsParametersGatewaysTargetGroups | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2973,26 +2973,26 @@ export function toJson_CfnModulePropsParametersGatewaysTargetGroups(obj: CfnModu
 /**
  * Determines if the gateways are provisioned using their private or public address. Default: private. Allowed values: private, public
  *
- * @schema CfnModulePropsParametersControlGatewayOverPrivateOrPublicAddress
+ * @schema CfnCloudGuardQsModulePropsParametersControlGatewayOverPrivateOrPublicAddress
  */
-export interface CfnModulePropsParametersControlGatewayOverPrivateOrPublicAddress {
+export interface CfnCloudGuardQsModulePropsParametersControlGatewayOverPrivateOrPublicAddress {
   /**
-   * @schema CfnModulePropsParametersControlGatewayOverPrivateOrPublicAddress#Type
+   * @schema CfnCloudGuardQsModulePropsParametersControlGatewayOverPrivateOrPublicAddress#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersControlGatewayOverPrivateOrPublicAddress#Description
+   * @schema CfnCloudGuardQsModulePropsParametersControlGatewayOverPrivateOrPublicAddress#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersControlGatewayOverPrivateOrPublicAddress' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersControlGatewayOverPrivateOrPublicAddress' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersControlGatewayOverPrivateOrPublicAddress(obj: CfnModulePropsParametersControlGatewayOverPrivateOrPublicAddress | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersControlGatewayOverPrivateOrPublicAddress(obj: CfnCloudGuardQsModulePropsParametersControlGatewayOverPrivateOrPublicAddress | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3006,26 +3006,26 @@ export function toJson_CfnModulePropsParametersControlGatewayOverPrivateOrPublic
 /**
  * EBS Volume size of the security gateway server
  *
- * @schema CfnModulePropsParametersSecurityGatewayVolumeSize
+ * @schema CfnCloudGuardQsModulePropsParametersSecurityGatewayVolumeSize
  */
-export interface CfnModulePropsParametersSecurityGatewayVolumeSize {
+export interface CfnCloudGuardQsModulePropsParametersSecurityGatewayVolumeSize {
   /**
-   * @schema CfnModulePropsParametersSecurityGatewayVolumeSize#Type
+   * @schema CfnCloudGuardQsModulePropsParametersSecurityGatewayVolumeSize#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersSecurityGatewayVolumeSize#Description
+   * @schema CfnCloudGuardQsModulePropsParametersSecurityGatewayVolumeSize#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersSecurityGatewayVolumeSize' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersSecurityGatewayVolumeSize' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersSecurityGatewayVolumeSize(obj: CfnModulePropsParametersSecurityGatewayVolumeSize | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersSecurityGatewayVolumeSize(obj: CfnCloudGuardQsModulePropsParametersSecurityGatewayVolumeSize | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3039,26 +3039,26 @@ export function toJson_CfnModulePropsParametersSecurityGatewayVolumeSize(obj: Cf
 /**
  * Allow clients only from this network to communicate with the Web Servers. Default: 0.0.0.0/0
  *
- * @schema CfnModulePropsParametersElbClients
+ * @schema CfnCloudGuardQsModulePropsParametersElbClients
  */
-export interface CfnModulePropsParametersElbClients {
+export interface CfnCloudGuardQsModulePropsParametersElbClients {
   /**
-   * @schema CfnModulePropsParametersElbClients#Type
+   * @schema CfnCloudGuardQsModulePropsParametersElbClients#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersElbClients#Description
+   * @schema CfnCloudGuardQsModulePropsParametersElbClients#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersElbClients' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersElbClients' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersElbClients(obj: CfnModulePropsParametersElbClients | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersElbClients(obj: CfnCloudGuardQsModulePropsParametersElbClients | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3072,26 +3072,26 @@ export function toJson_CfnModulePropsParametersElbClients(obj: CfnModulePropsPar
 /**
  * Change the admin shell to enable advanced command line configuration. Default: /etc/cli.sh. Allowed Values: /etc/cli.sh /bin/bash /bin/csh /bin/tcsh
  *
- * @schema CfnModulePropsParametersShellSecurityGatewayStack
+ * @schema CfnCloudGuardQsModulePropsParametersShellSecurityGatewayStack
  */
-export interface CfnModulePropsParametersShellSecurityGatewayStack {
+export interface CfnCloudGuardQsModulePropsParametersShellSecurityGatewayStack {
   /**
-   * @schema CfnModulePropsParametersShellSecurityGatewayStack#Type
+   * @schema CfnCloudGuardQsModulePropsParametersShellSecurityGatewayStack#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersShellSecurityGatewayStack#Description
+   * @schema CfnCloudGuardQsModulePropsParametersShellSecurityGatewayStack#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersShellSecurityGatewayStack' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersShellSecurityGatewayStack' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersShellSecurityGatewayStack(obj: CfnModulePropsParametersShellSecurityGatewayStack | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersShellSecurityGatewayStack(obj: CfnCloudGuardQsModulePropsParametersShellSecurityGatewayStack | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3105,26 +3105,26 @@ export function toJson_CfnModulePropsParametersShellSecurityGatewayStack(obj: Cf
 /**
  * IAM Permissions for the management server. Default: Create with read permissions. Allowed values: Create with read permissions Create with read-write permissions Create with assume role permissions (specify an STS role ARN)
  *
- * @schema CfnModulePropsParametersPermissions
+ * @schema CfnCloudGuardQsModulePropsParametersPermissions
  */
-export interface CfnModulePropsParametersPermissions {
+export interface CfnCloudGuardQsModulePropsParametersPermissions {
   /**
-   * @schema CfnModulePropsParametersPermissions#Type
+   * @schema CfnCloudGuardQsModulePropsParametersPermissions#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPermissions#Description
+   * @schema CfnCloudGuardQsModulePropsParametersPermissions#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPermissions' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersPermissions' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPermissions(obj: CfnModulePropsParametersPermissions | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersPermissions(obj: CfnCloudGuardQsModulePropsParametersPermissions | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3138,26 +3138,26 @@ export function toJson_CfnModulePropsParametersPermissions(obj: CfnModulePropsPa
 /**
  * The IAM role will be able to assume these STS Roles (comma separated list of ARNs, without spaces)
  *
- * @schema CfnModulePropsParametersStsRoles
+ * @schema CfnCloudGuardQsModulePropsParametersStsRoles
  */
-export interface CfnModulePropsParametersStsRoles {
+export interface CfnCloudGuardQsModulePropsParametersStsRoles {
   /**
-   * @schema CfnModulePropsParametersStsRoles#Type
+   * @schema CfnCloudGuardQsModulePropsParametersStsRoles#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersStsRoles#Description
+   * @schema CfnCloudGuardQsModulePropsParametersStsRoles#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersStsRoles' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersStsRoles' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersStsRoles(obj: CfnModulePropsParametersStsRoles | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersStsRoles(obj: CfnCloudGuardQsModulePropsParametersStsRoles | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3171,26 +3171,26 @@ export function toJson_CfnModulePropsParametersStsRoles(obj: CfnModulePropsParam
 /**
  * A 12 digits number that represents the ID of a trusted account. IAM users in this account will be able assume the IAM role and receive the permissions attached to it.
  *
- * @schema CfnModulePropsParametersTrustedAccount
+ * @schema CfnCloudGuardQsModulePropsParametersTrustedAccount
  */
-export interface CfnModulePropsParametersTrustedAccount {
+export interface CfnCloudGuardQsModulePropsParametersTrustedAccount {
   /**
-   * @schema CfnModulePropsParametersTrustedAccount#Type
+   * @schema CfnCloudGuardQsModulePropsParametersTrustedAccount#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersTrustedAccount#Description
+   * @schema CfnCloudGuardQsModulePropsParametersTrustedAccount#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersTrustedAccount' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersTrustedAccount' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersTrustedAccount(obj: CfnModulePropsParametersTrustedAccount | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersTrustedAccount(obj: CfnCloudGuardQsModulePropsParametersTrustedAccount | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3204,26 +3204,26 @@ export function toJson_CfnModulePropsParametersTrustedAccount(obj: CfnModuleProp
 /**
  * An optional list of Target Groups to associate with the Auto Scaling group (comma separated list of ARNs, without spaces)
  *
- * @schema CfnModulePropsParametersServersTargetGroups
+ * @schema CfnCloudGuardQsModulePropsParametersServersTargetGroups
  */
-export interface CfnModulePropsParametersServersTargetGroups {
+export interface CfnCloudGuardQsModulePropsParametersServersTargetGroups {
   /**
-   * @schema CfnModulePropsParametersServersTargetGroups#Type
+   * @schema CfnCloudGuardQsModulePropsParametersServersTargetGroups#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersServersTargetGroups#Description
+   * @schema CfnCloudGuardQsModulePropsParametersServersTargetGroups#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersServersTargetGroups' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersServersTargetGroups' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersServersTargetGroups(obj: CfnModulePropsParametersServersTargetGroups | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersServersTargetGroups(obj: CfnCloudGuardQsModulePropsParametersServersTargetGroups | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3237,26 +3237,26 @@ export function toJson_CfnModulePropsParametersServersTargetGroups(obj: CfnModul
 /**
  * The ID of Security Group from which access will be allowed to the instances in this Auto Scaling group
  *
- * @schema CfnModulePropsParametersSourceSecurityGroup
+ * @schema CfnCloudGuardQsModulePropsParametersSourceSecurityGroup
  */
-export interface CfnModulePropsParametersSourceSecurityGroup {
+export interface CfnCloudGuardQsModulePropsParametersSourceSecurityGroup {
   /**
-   * @schema CfnModulePropsParametersSourceSecurityGroup#Type
+   * @schema CfnCloudGuardQsModulePropsParametersSourceSecurityGroup#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersSourceSecurityGroup#Description
+   * @schema CfnCloudGuardQsModulePropsParametersSourceSecurityGroup#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersSourceSecurityGroup' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersSourceSecurityGroup' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersSourceSecurityGroup(obj: CfnModulePropsParametersSourceSecurityGroup | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersSourceSecurityGroup(obj: CfnCloudGuardQsModulePropsParametersSourceSecurityGroup | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3270,26 +3270,26 @@ export function toJson_CfnModulePropsParametersSourceSecurityGroup(obj: CfnModul
 /**
  * The minimal number of servers in the Auto Scaling group. Default: 2
  *
- * @schema CfnModulePropsParametersServersMinSize
+ * @schema CfnCloudGuardQsModulePropsParametersServersMinSize
  */
-export interface CfnModulePropsParametersServersMinSize {
+export interface CfnCloudGuardQsModulePropsParametersServersMinSize {
   /**
-   * @schema CfnModulePropsParametersServersMinSize#Type
+   * @schema CfnCloudGuardQsModulePropsParametersServersMinSize#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersServersMinSize#Description
+   * @schema CfnCloudGuardQsModulePropsParametersServersMinSize#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersServersMinSize' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersServersMinSize' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersServersMinSize(obj: CfnModulePropsParametersServersMinSize | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersServersMinSize(obj: CfnCloudGuardQsModulePropsParametersServersMinSize | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3303,26 +3303,26 @@ export function toJson_CfnModulePropsParametersServersMinSize(obj: CfnModuleProp
 /**
  * The maximal number of servers in the Auto Scaling group. Default: 10
  *
- * @schema CfnModulePropsParametersServersMaxSize
+ * @schema CfnCloudGuardQsModulePropsParametersServersMaxSize
  */
-export interface CfnModulePropsParametersServersMaxSize {
+export interface CfnCloudGuardQsModulePropsParametersServersMaxSize {
   /**
-   * @schema CfnModulePropsParametersServersMaxSize#Type
+   * @schema CfnCloudGuardQsModulePropsParametersServersMaxSize#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersServersMaxSize#Description
+   * @schema CfnCloudGuardQsModulePropsParametersServersMaxSize#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersServersMaxSize' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersServersMaxSize' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersServersMaxSize(obj: CfnModulePropsParametersServersMaxSize | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersServersMaxSize(obj: CfnCloudGuardQsModulePropsParametersServersMaxSize | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3336,26 +3336,26 @@ export function toJson_CfnModulePropsParametersServersMaxSize(obj: CfnModuleProp
 /**
  * The servers name tag. Default: Server
  *
- * @schema CfnModulePropsParametersServerName
+ * @schema CfnCloudGuardQsModulePropsParametersServerName
  */
-export interface CfnModulePropsParametersServerName {
+export interface CfnCloudGuardQsModulePropsParametersServerName {
   /**
-   * @schema CfnModulePropsParametersServerName#Type
+   * @schema CfnCloudGuardQsModulePropsParametersServerName#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersServerName#Description
+   * @schema CfnCloudGuardQsModulePropsParametersServerName#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersServerName' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsParametersServerName' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersServerName(obj: CfnModulePropsParametersServerName | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsParametersServerName(obj: CfnCloudGuardQsModulePropsParametersServerName | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3367,26 +3367,26 @@ export function toJson_CfnModulePropsParametersServerName(obj: CfnModulePropsPar
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesVpc
+ * @schema CfnCloudGuardQsModulePropsResourcesVpc
  */
-export interface CfnModulePropsResourcesVpc {
+export interface CfnCloudGuardQsModulePropsResourcesVpc {
   /**
-   * @schema CfnModulePropsResourcesVpc#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesVpc#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesVpc#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesVpc#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesVpc' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesVpc' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesVpc(obj: CfnModulePropsResourcesVpc | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesVpc(obj: CfnCloudGuardQsModulePropsResourcesVpc | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3398,26 +3398,26 @@ export function toJson_CfnModulePropsResourcesVpc(obj: CfnModulePropsResourcesVp
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesInternetGateway
+ * @schema CfnCloudGuardQsModulePropsResourcesInternetGateway
  */
-export interface CfnModulePropsResourcesInternetGateway {
+export interface CfnCloudGuardQsModulePropsResourcesInternetGateway {
   /**
-   * @schema CfnModulePropsResourcesInternetGateway#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesInternetGateway#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesInternetGateway#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesInternetGateway#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesInternetGateway' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesInternetGateway' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesInternetGateway(obj: CfnModulePropsResourcesInternetGateway | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesInternetGateway(obj: CfnCloudGuardQsModulePropsResourcesInternetGateway | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3429,26 +3429,26 @@ export function toJson_CfnModulePropsResourcesInternetGateway(obj: CfnModuleProp
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesVpcGatewayAttachment
+ * @schema CfnCloudGuardQsModulePropsResourcesVpcGatewayAttachment
  */
-export interface CfnModulePropsResourcesVpcGatewayAttachment {
+export interface CfnCloudGuardQsModulePropsResourcesVpcGatewayAttachment {
   /**
-   * @schema CfnModulePropsResourcesVpcGatewayAttachment#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesVpcGatewayAttachment#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesVpcGatewayAttachment#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesVpcGatewayAttachment#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesVpcGatewayAttachment' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesVpcGatewayAttachment' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesVpcGatewayAttachment(obj: CfnModulePropsResourcesVpcGatewayAttachment | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesVpcGatewayAttachment(obj: CfnCloudGuardQsModulePropsResourcesVpcGatewayAttachment | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3460,26 +3460,26 @@ export function toJson_CfnModulePropsResourcesVpcGatewayAttachment(obj: CfnModul
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPublicSubnet1
+ * @schema CfnCloudGuardQsModulePropsResourcesPublicSubnet1
  */
-export interface CfnModulePropsResourcesPublicSubnet1 {
+export interface CfnCloudGuardQsModulePropsResourcesPublicSubnet1 {
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet1#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesPublicSubnet1#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet1#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesPublicSubnet1#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPublicSubnet1' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesPublicSubnet1' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPublicSubnet1(obj: CfnModulePropsResourcesPublicSubnet1 | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesPublicSubnet1(obj: CfnCloudGuardQsModulePropsResourcesPublicSubnet1 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3491,26 +3491,26 @@ export function toJson_CfnModulePropsResourcesPublicSubnet1(obj: CfnModulePropsR
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPublicSubnet2
+ * @schema CfnCloudGuardQsModulePropsResourcesPublicSubnet2
  */
-export interface CfnModulePropsResourcesPublicSubnet2 {
+export interface CfnCloudGuardQsModulePropsResourcesPublicSubnet2 {
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet2#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesPublicSubnet2#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet2#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesPublicSubnet2#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPublicSubnet2' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesPublicSubnet2' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPublicSubnet2(obj: CfnModulePropsResourcesPublicSubnet2 | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesPublicSubnet2(obj: CfnCloudGuardQsModulePropsResourcesPublicSubnet2 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3522,26 +3522,26 @@ export function toJson_CfnModulePropsResourcesPublicSubnet2(obj: CfnModulePropsR
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPublicSubnet3
+ * @schema CfnCloudGuardQsModulePropsResourcesPublicSubnet3
  */
-export interface CfnModulePropsResourcesPublicSubnet3 {
+export interface CfnCloudGuardQsModulePropsResourcesPublicSubnet3 {
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet3#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesPublicSubnet3#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet3#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesPublicSubnet3#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPublicSubnet3' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesPublicSubnet3' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPublicSubnet3(obj: CfnModulePropsResourcesPublicSubnet3 | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesPublicSubnet3(obj: CfnCloudGuardQsModulePropsResourcesPublicSubnet3 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3553,26 +3553,26 @@ export function toJson_CfnModulePropsResourcesPublicSubnet3(obj: CfnModulePropsR
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPublicSubnet4
+ * @schema CfnCloudGuardQsModulePropsResourcesPublicSubnet4
  */
-export interface CfnModulePropsResourcesPublicSubnet4 {
+export interface CfnCloudGuardQsModulePropsResourcesPublicSubnet4 {
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet4#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesPublicSubnet4#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet4#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesPublicSubnet4#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPublicSubnet4' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesPublicSubnet4' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPublicSubnet4(obj: CfnModulePropsResourcesPublicSubnet4 | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesPublicSubnet4(obj: CfnCloudGuardQsModulePropsResourcesPublicSubnet4 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3584,26 +3584,26 @@ export function toJson_CfnModulePropsResourcesPublicSubnet4(obj: CfnModulePropsR
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPublicSubnetRouteTable
+ * @schema CfnCloudGuardQsModulePropsResourcesPublicSubnetRouteTable
  */
-export interface CfnModulePropsResourcesPublicSubnetRouteTable {
+export interface CfnCloudGuardQsModulePropsResourcesPublicSubnetRouteTable {
   /**
-   * @schema CfnModulePropsResourcesPublicSubnetRouteTable#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesPublicSubnetRouteTable#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPublicSubnetRouteTable#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesPublicSubnetRouteTable#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPublicSubnetRouteTable' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesPublicSubnetRouteTable' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPublicSubnetRouteTable(obj: CfnModulePropsResourcesPublicSubnetRouteTable | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesPublicSubnetRouteTable(obj: CfnCloudGuardQsModulePropsResourcesPublicSubnetRouteTable | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3615,26 +3615,26 @@ export function toJson_CfnModulePropsResourcesPublicSubnetRouteTable(obj: CfnMod
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPublicSubnetRoute
+ * @schema CfnCloudGuardQsModulePropsResourcesPublicSubnetRoute
  */
-export interface CfnModulePropsResourcesPublicSubnetRoute {
+export interface CfnCloudGuardQsModulePropsResourcesPublicSubnetRoute {
   /**
-   * @schema CfnModulePropsResourcesPublicSubnetRoute#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesPublicSubnetRoute#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPublicSubnetRoute#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesPublicSubnetRoute#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPublicSubnetRoute' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesPublicSubnetRoute' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPublicSubnetRoute(obj: CfnModulePropsResourcesPublicSubnetRoute | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesPublicSubnetRoute(obj: CfnCloudGuardQsModulePropsResourcesPublicSubnetRoute | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3646,26 +3646,26 @@ export function toJson_CfnModulePropsResourcesPublicSubnetRoute(obj: CfnModulePr
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPublicSubnet1RouteTableAssociation
+ * @schema CfnCloudGuardQsModulePropsResourcesPublicSubnet1RouteTableAssociation
  */
-export interface CfnModulePropsResourcesPublicSubnet1RouteTableAssociation {
+export interface CfnCloudGuardQsModulePropsResourcesPublicSubnet1RouteTableAssociation {
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet1RouteTableAssociation#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesPublicSubnet1RouteTableAssociation#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet1RouteTableAssociation#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesPublicSubnet1RouteTableAssociation#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPublicSubnet1RouteTableAssociation' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesPublicSubnet1RouteTableAssociation' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPublicSubnet1RouteTableAssociation(obj: CfnModulePropsResourcesPublicSubnet1RouteTableAssociation | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesPublicSubnet1RouteTableAssociation(obj: CfnCloudGuardQsModulePropsResourcesPublicSubnet1RouteTableAssociation | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3677,26 +3677,26 @@ export function toJson_CfnModulePropsResourcesPublicSubnet1RouteTableAssociation
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPublicSubnet2RouteTableAssociation
+ * @schema CfnCloudGuardQsModulePropsResourcesPublicSubnet2RouteTableAssociation
  */
-export interface CfnModulePropsResourcesPublicSubnet2RouteTableAssociation {
+export interface CfnCloudGuardQsModulePropsResourcesPublicSubnet2RouteTableAssociation {
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet2RouteTableAssociation#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesPublicSubnet2RouteTableAssociation#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet2RouteTableAssociation#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesPublicSubnet2RouteTableAssociation#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPublicSubnet2RouteTableAssociation' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesPublicSubnet2RouteTableAssociation' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPublicSubnet2RouteTableAssociation(obj: CfnModulePropsResourcesPublicSubnet2RouteTableAssociation | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesPublicSubnet2RouteTableAssociation(obj: CfnCloudGuardQsModulePropsResourcesPublicSubnet2RouteTableAssociation | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3708,26 +3708,26 @@ export function toJson_CfnModulePropsResourcesPublicSubnet2RouteTableAssociation
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPublicSubnet3RouteTableAssociation
+ * @schema CfnCloudGuardQsModulePropsResourcesPublicSubnet3RouteTableAssociation
  */
-export interface CfnModulePropsResourcesPublicSubnet3RouteTableAssociation {
+export interface CfnCloudGuardQsModulePropsResourcesPublicSubnet3RouteTableAssociation {
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet3RouteTableAssociation#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesPublicSubnet3RouteTableAssociation#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet3RouteTableAssociation#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesPublicSubnet3RouteTableAssociation#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPublicSubnet3RouteTableAssociation' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesPublicSubnet3RouteTableAssociation' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPublicSubnet3RouteTableAssociation(obj: CfnModulePropsResourcesPublicSubnet3RouteTableAssociation | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesPublicSubnet3RouteTableAssociation(obj: CfnCloudGuardQsModulePropsResourcesPublicSubnet3RouteTableAssociation | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3739,26 +3739,26 @@ export function toJson_CfnModulePropsResourcesPublicSubnet3RouteTableAssociation
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPublicSubnet4RouteTableAssociation
+ * @schema CfnCloudGuardQsModulePropsResourcesPublicSubnet4RouteTableAssociation
  */
-export interface CfnModulePropsResourcesPublicSubnet4RouteTableAssociation {
+export interface CfnCloudGuardQsModulePropsResourcesPublicSubnet4RouteTableAssociation {
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet4RouteTableAssociation#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesPublicSubnet4RouteTableAssociation#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet4RouteTableAssociation#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesPublicSubnet4RouteTableAssociation#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPublicSubnet4RouteTableAssociation' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesPublicSubnet4RouteTableAssociation' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPublicSubnet4RouteTableAssociation(obj: CfnModulePropsResourcesPublicSubnet4RouteTableAssociation | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesPublicSubnet4RouteTableAssociation(obj: CfnCloudGuardQsModulePropsResourcesPublicSubnet4RouteTableAssociation | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3770,26 +3770,26 @@ export function toJson_CfnModulePropsResourcesPublicSubnet4RouteTableAssociation
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet1
+ * @schema CfnCloudGuardQsModulePropsResourcesPrivateSubnet1
  */
-export interface CfnModulePropsResourcesPrivateSubnet1 {
+export interface CfnCloudGuardQsModulePropsResourcesPrivateSubnet1 {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet1#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesPrivateSubnet1#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet1#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesPrivateSubnet1#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet1' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesPrivateSubnet1' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet1(obj: CfnModulePropsResourcesPrivateSubnet1 | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesPrivateSubnet1(obj: CfnCloudGuardQsModulePropsResourcesPrivateSubnet1 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3801,26 +3801,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet1(obj: CfnModuleProps
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet2
+ * @schema CfnCloudGuardQsModulePropsResourcesPrivateSubnet2
  */
-export interface CfnModulePropsResourcesPrivateSubnet2 {
+export interface CfnCloudGuardQsModulePropsResourcesPrivateSubnet2 {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet2#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesPrivateSubnet2#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet2#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesPrivateSubnet2#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet2' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesPrivateSubnet2' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet2(obj: CfnModulePropsResourcesPrivateSubnet2 | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesPrivateSubnet2(obj: CfnCloudGuardQsModulePropsResourcesPrivateSubnet2 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3832,26 +3832,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet2(obj: CfnModuleProps
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet3
+ * @schema CfnCloudGuardQsModulePropsResourcesPrivateSubnet3
  */
-export interface CfnModulePropsResourcesPrivateSubnet3 {
+export interface CfnCloudGuardQsModulePropsResourcesPrivateSubnet3 {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet3#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesPrivateSubnet3#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet3#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesPrivateSubnet3#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet3' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesPrivateSubnet3' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet3(obj: CfnModulePropsResourcesPrivateSubnet3 | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesPrivateSubnet3(obj: CfnCloudGuardQsModulePropsResourcesPrivateSubnet3 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3863,26 +3863,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet3(obj: CfnModuleProps
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet4
+ * @schema CfnCloudGuardQsModulePropsResourcesPrivateSubnet4
  */
-export interface CfnModulePropsResourcesPrivateSubnet4 {
+export interface CfnCloudGuardQsModulePropsResourcesPrivateSubnet4 {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet4#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesPrivateSubnet4#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet4#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesPrivateSubnet4#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet4' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesPrivateSubnet4' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet4(obj: CfnModulePropsResourcesPrivateSubnet4 | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesPrivateSubnet4(obj: CfnCloudGuardQsModulePropsResourcesPrivateSubnet4 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3894,26 +3894,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet4(obj: CfnModuleProps
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesTgwSubnet1
+ * @schema CfnCloudGuardQsModulePropsResourcesTgwSubnet1
  */
-export interface CfnModulePropsResourcesTgwSubnet1 {
+export interface CfnCloudGuardQsModulePropsResourcesTgwSubnet1 {
   /**
-   * @schema CfnModulePropsResourcesTgwSubnet1#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesTgwSubnet1#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesTgwSubnet1#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesTgwSubnet1#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesTgwSubnet1' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesTgwSubnet1' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesTgwSubnet1(obj: CfnModulePropsResourcesTgwSubnet1 | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesTgwSubnet1(obj: CfnCloudGuardQsModulePropsResourcesTgwSubnet1 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3925,26 +3925,26 @@ export function toJson_CfnModulePropsResourcesTgwSubnet1(obj: CfnModulePropsReso
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesTgwSubnet2
+ * @schema CfnCloudGuardQsModulePropsResourcesTgwSubnet2
  */
-export interface CfnModulePropsResourcesTgwSubnet2 {
+export interface CfnCloudGuardQsModulePropsResourcesTgwSubnet2 {
   /**
-   * @schema CfnModulePropsResourcesTgwSubnet2#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesTgwSubnet2#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesTgwSubnet2#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesTgwSubnet2#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesTgwSubnet2' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesTgwSubnet2' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesTgwSubnet2(obj: CfnModulePropsResourcesTgwSubnet2 | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesTgwSubnet2(obj: CfnCloudGuardQsModulePropsResourcesTgwSubnet2 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3956,26 +3956,26 @@ export function toJson_CfnModulePropsResourcesTgwSubnet2(obj: CfnModulePropsReso
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesTgwSubnet3
+ * @schema CfnCloudGuardQsModulePropsResourcesTgwSubnet3
  */
-export interface CfnModulePropsResourcesTgwSubnet3 {
+export interface CfnCloudGuardQsModulePropsResourcesTgwSubnet3 {
   /**
-   * @schema CfnModulePropsResourcesTgwSubnet3#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesTgwSubnet3#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesTgwSubnet3#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesTgwSubnet3#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesTgwSubnet3' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesTgwSubnet3' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesTgwSubnet3(obj: CfnModulePropsResourcesTgwSubnet3 | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesTgwSubnet3(obj: CfnCloudGuardQsModulePropsResourcesTgwSubnet3 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3987,26 +3987,26 @@ export function toJson_CfnModulePropsResourcesTgwSubnet3(obj: CfnModulePropsReso
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesTgwSubnet4
+ * @schema CfnCloudGuardQsModulePropsResourcesTgwSubnet4
  */
-export interface CfnModulePropsResourcesTgwSubnet4 {
+export interface CfnCloudGuardQsModulePropsResourcesTgwSubnet4 {
   /**
-   * @schema CfnModulePropsResourcesTgwSubnet4#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesTgwSubnet4#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesTgwSubnet4#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesTgwSubnet4#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesTgwSubnet4' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesTgwSubnet4' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesTgwSubnet4(obj: CfnModulePropsResourcesTgwSubnet4 | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesTgwSubnet4(obj: CfnCloudGuardQsModulePropsResourcesTgwSubnet4 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4018,26 +4018,26 @@ export function toJson_CfnModulePropsResourcesTgwSubnet4(obj: CfnModulePropsReso
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesExternalAlbSecurityGroup
+ * @schema CfnCloudGuardQsModulePropsResourcesExternalAlbSecurityGroup
  */
-export interface CfnModulePropsResourcesExternalAlbSecurityGroup {
+export interface CfnCloudGuardQsModulePropsResourcesExternalAlbSecurityGroup {
   /**
-   * @schema CfnModulePropsResourcesExternalAlbSecurityGroup#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesExternalAlbSecurityGroup#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesExternalAlbSecurityGroup#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesExternalAlbSecurityGroup#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesExternalAlbSecurityGroup' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesExternalAlbSecurityGroup' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesExternalAlbSecurityGroup(obj: CfnModulePropsResourcesExternalAlbSecurityGroup | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesExternalAlbSecurityGroup(obj: CfnCloudGuardQsModulePropsResourcesExternalAlbSecurityGroup | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4049,26 +4049,26 @@ export function toJson_CfnModulePropsResourcesExternalAlbSecurityGroup(obj: CfnM
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesExternalLoadBalancer
+ * @schema CfnCloudGuardQsModulePropsResourcesExternalLoadBalancer
  */
-export interface CfnModulePropsResourcesExternalLoadBalancer {
+export interface CfnCloudGuardQsModulePropsResourcesExternalLoadBalancer {
   /**
-   * @schema CfnModulePropsResourcesExternalLoadBalancer#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesExternalLoadBalancer#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesExternalLoadBalancer#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesExternalLoadBalancer#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesExternalLoadBalancer' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesExternalLoadBalancer' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesExternalLoadBalancer(obj: CfnModulePropsResourcesExternalLoadBalancer | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesExternalLoadBalancer(obj: CfnCloudGuardQsModulePropsResourcesExternalLoadBalancer | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4080,26 +4080,26 @@ export function toJson_CfnModulePropsResourcesExternalLoadBalancer(obj: CfnModul
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesExternalLbTargetGroup
+ * @schema CfnCloudGuardQsModulePropsResourcesExternalLbTargetGroup
  */
-export interface CfnModulePropsResourcesExternalLbTargetGroup {
+export interface CfnCloudGuardQsModulePropsResourcesExternalLbTargetGroup {
   /**
-   * @schema CfnModulePropsResourcesExternalLbTargetGroup#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesExternalLbTargetGroup#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesExternalLbTargetGroup#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesExternalLbTargetGroup#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesExternalLbTargetGroup' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesExternalLbTargetGroup' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesExternalLbTargetGroup(obj: CfnModulePropsResourcesExternalLbTargetGroup | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesExternalLbTargetGroup(obj: CfnCloudGuardQsModulePropsResourcesExternalLbTargetGroup | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4111,26 +4111,26 @@ export function toJson_CfnModulePropsResourcesExternalLbTargetGroup(obj: CfnModu
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesExternalLbListener
+ * @schema CfnCloudGuardQsModulePropsResourcesExternalLbListener
  */
-export interface CfnModulePropsResourcesExternalLbListener {
+export interface CfnCloudGuardQsModulePropsResourcesExternalLbListener {
   /**
-   * @schema CfnModulePropsResourcesExternalLbListener#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesExternalLbListener#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesExternalLbListener#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesExternalLbListener#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesExternalLbListener' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesExternalLbListener' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesExternalLbListener(obj: CfnModulePropsResourcesExternalLbListener | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesExternalLbListener(obj: CfnCloudGuardQsModulePropsResourcesExternalLbListener | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4142,26 +4142,26 @@ export function toJson_CfnModulePropsResourcesExternalLbListener(obj: CfnModuleP
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesChkpGatewayRole
+ * @schema CfnCloudGuardQsModulePropsResourcesChkpGatewayRole
  */
-export interface CfnModulePropsResourcesChkpGatewayRole {
+export interface CfnCloudGuardQsModulePropsResourcesChkpGatewayRole {
   /**
-   * @schema CfnModulePropsResourcesChkpGatewayRole#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesChkpGatewayRole#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesChkpGatewayRole#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesChkpGatewayRole#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesChkpGatewayRole' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesChkpGatewayRole' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesChkpGatewayRole(obj: CfnModulePropsResourcesChkpGatewayRole | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesChkpGatewayRole(obj: CfnCloudGuardQsModulePropsResourcesChkpGatewayRole | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4173,26 +4173,26 @@ export function toJson_CfnModulePropsResourcesChkpGatewayRole(obj: CfnModuleProp
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesInstanceProfileSecurityGatewayStack
+ * @schema CfnCloudGuardQsModulePropsResourcesInstanceProfileSecurityGatewayStack
  */
-export interface CfnModulePropsResourcesInstanceProfileSecurityGatewayStack {
+export interface CfnCloudGuardQsModulePropsResourcesInstanceProfileSecurityGatewayStack {
   /**
-   * @schema CfnModulePropsResourcesInstanceProfileSecurityGatewayStack#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesInstanceProfileSecurityGatewayStack#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesInstanceProfileSecurityGatewayStack#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesInstanceProfileSecurityGatewayStack#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesInstanceProfileSecurityGatewayStack' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesInstanceProfileSecurityGatewayStack' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesInstanceProfileSecurityGatewayStack(obj: CfnModulePropsResourcesInstanceProfileSecurityGatewayStack | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesInstanceProfileSecurityGatewayStack(obj: CfnCloudGuardQsModulePropsResourcesInstanceProfileSecurityGatewayStack | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4204,26 +4204,26 @@ export function toJson_CfnModulePropsResourcesInstanceProfileSecurityGatewayStac
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesNotificationTopicSecurityGatewayStack
+ * @schema CfnCloudGuardQsModulePropsResourcesNotificationTopicSecurityGatewayStack
  */
-export interface CfnModulePropsResourcesNotificationTopicSecurityGatewayStack {
+export interface CfnCloudGuardQsModulePropsResourcesNotificationTopicSecurityGatewayStack {
   /**
-   * @schema CfnModulePropsResourcesNotificationTopicSecurityGatewayStack#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesNotificationTopicSecurityGatewayStack#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesNotificationTopicSecurityGatewayStack#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesNotificationTopicSecurityGatewayStack#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesNotificationTopicSecurityGatewayStack' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesNotificationTopicSecurityGatewayStack' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesNotificationTopicSecurityGatewayStack(obj: CfnModulePropsResourcesNotificationTopicSecurityGatewayStack | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesNotificationTopicSecurityGatewayStack(obj: CfnCloudGuardQsModulePropsResourcesNotificationTopicSecurityGatewayStack | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4235,26 +4235,26 @@ export function toJson_CfnModulePropsResourcesNotificationTopicSecurityGatewaySt
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesElasticLoadBalancer
+ * @schema CfnCloudGuardQsModulePropsResourcesElasticLoadBalancer
  */
-export interface CfnModulePropsResourcesElasticLoadBalancer {
+export interface CfnCloudGuardQsModulePropsResourcesElasticLoadBalancer {
   /**
-   * @schema CfnModulePropsResourcesElasticLoadBalancer#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesElasticLoadBalancer#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesElasticLoadBalancer#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesElasticLoadBalancer#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesElasticLoadBalancer' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesElasticLoadBalancer' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesElasticLoadBalancer(obj: CfnModulePropsResourcesElasticLoadBalancer | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesElasticLoadBalancer(obj: CfnCloudGuardQsModulePropsResourcesElasticLoadBalancer | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4266,26 +4266,26 @@ export function toJson_CfnModulePropsResourcesElasticLoadBalancer(obj: CfnModule
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPermissiveSecurityGroup
+ * @schema CfnCloudGuardQsModulePropsResourcesPermissiveSecurityGroup
  */
-export interface CfnModulePropsResourcesPermissiveSecurityGroup {
+export interface CfnCloudGuardQsModulePropsResourcesPermissiveSecurityGroup {
   /**
-   * @schema CfnModulePropsResourcesPermissiveSecurityGroup#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesPermissiveSecurityGroup#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPermissiveSecurityGroup#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesPermissiveSecurityGroup#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPermissiveSecurityGroup' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesPermissiveSecurityGroup' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPermissiveSecurityGroup(obj: CfnModulePropsResourcesPermissiveSecurityGroup | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesPermissiveSecurityGroup(obj: CfnCloudGuardQsModulePropsResourcesPermissiveSecurityGroup | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4297,26 +4297,26 @@ export function toJson_CfnModulePropsResourcesPermissiveSecurityGroup(obj: CfnMo
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesGatewayGroup
+ * @schema CfnCloudGuardQsModulePropsResourcesGatewayGroup
  */
-export interface CfnModulePropsResourcesGatewayGroup {
+export interface CfnCloudGuardQsModulePropsResourcesGatewayGroup {
   /**
-   * @schema CfnModulePropsResourcesGatewayGroup#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesGatewayGroup#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesGatewayGroup#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesGatewayGroup#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesGatewayGroup' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesGatewayGroup' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesGatewayGroup(obj: CfnModulePropsResourcesGatewayGroup | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesGatewayGroup(obj: CfnCloudGuardQsModulePropsResourcesGatewayGroup | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4328,26 +4328,26 @@ export function toJson_CfnModulePropsResourcesGatewayGroup(obj: CfnModulePropsRe
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesGatewayLaunchConfig
+ * @schema CfnCloudGuardQsModulePropsResourcesGatewayLaunchConfig
  */
-export interface CfnModulePropsResourcesGatewayLaunchConfig {
+export interface CfnCloudGuardQsModulePropsResourcesGatewayLaunchConfig {
   /**
-   * @schema CfnModulePropsResourcesGatewayLaunchConfig#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesGatewayLaunchConfig#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesGatewayLaunchConfig#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesGatewayLaunchConfig#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesGatewayLaunchConfig' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesGatewayLaunchConfig' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesGatewayLaunchConfig(obj: CfnModulePropsResourcesGatewayLaunchConfig | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesGatewayLaunchConfig(obj: CfnCloudGuardQsModulePropsResourcesGatewayLaunchConfig | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4359,26 +4359,26 @@ export function toJson_CfnModulePropsResourcesGatewayLaunchConfig(obj: CfnModule
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesGatewayScaleUpPolicy
+ * @schema CfnCloudGuardQsModulePropsResourcesGatewayScaleUpPolicy
  */
-export interface CfnModulePropsResourcesGatewayScaleUpPolicy {
+export interface CfnCloudGuardQsModulePropsResourcesGatewayScaleUpPolicy {
   /**
-   * @schema CfnModulePropsResourcesGatewayScaleUpPolicy#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesGatewayScaleUpPolicy#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesGatewayScaleUpPolicy#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesGatewayScaleUpPolicy#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesGatewayScaleUpPolicy' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesGatewayScaleUpPolicy' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesGatewayScaleUpPolicy(obj: CfnModulePropsResourcesGatewayScaleUpPolicy | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesGatewayScaleUpPolicy(obj: CfnCloudGuardQsModulePropsResourcesGatewayScaleUpPolicy | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4390,26 +4390,26 @@ export function toJson_CfnModulePropsResourcesGatewayScaleUpPolicy(obj: CfnModul
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesGatewayScaleDownPolicy
+ * @schema CfnCloudGuardQsModulePropsResourcesGatewayScaleDownPolicy
  */
-export interface CfnModulePropsResourcesGatewayScaleDownPolicy {
+export interface CfnCloudGuardQsModulePropsResourcesGatewayScaleDownPolicy {
   /**
-   * @schema CfnModulePropsResourcesGatewayScaleDownPolicy#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesGatewayScaleDownPolicy#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesGatewayScaleDownPolicy#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesGatewayScaleDownPolicy#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesGatewayScaleDownPolicy' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesGatewayScaleDownPolicy' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesGatewayScaleDownPolicy(obj: CfnModulePropsResourcesGatewayScaleDownPolicy | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesGatewayScaleDownPolicy(obj: CfnCloudGuardQsModulePropsResourcesGatewayScaleDownPolicy | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4421,26 +4421,26 @@ export function toJson_CfnModulePropsResourcesGatewayScaleDownPolicy(obj: CfnMod
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesCpuAlarmHighSecurityGatewayStack
+ * @schema CfnCloudGuardQsModulePropsResourcesCpuAlarmHighSecurityGatewayStack
  */
-export interface CfnModulePropsResourcesCpuAlarmHighSecurityGatewayStack {
+export interface CfnCloudGuardQsModulePropsResourcesCpuAlarmHighSecurityGatewayStack {
   /**
-   * @schema CfnModulePropsResourcesCpuAlarmHighSecurityGatewayStack#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesCpuAlarmHighSecurityGatewayStack#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesCpuAlarmHighSecurityGatewayStack#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesCpuAlarmHighSecurityGatewayStack#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesCpuAlarmHighSecurityGatewayStack' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesCpuAlarmHighSecurityGatewayStack' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesCpuAlarmHighSecurityGatewayStack(obj: CfnModulePropsResourcesCpuAlarmHighSecurityGatewayStack | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesCpuAlarmHighSecurityGatewayStack(obj: CfnCloudGuardQsModulePropsResourcesCpuAlarmHighSecurityGatewayStack | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4452,26 +4452,26 @@ export function toJson_CfnModulePropsResourcesCpuAlarmHighSecurityGatewayStack(o
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesCpuAlarmLowSecurityGatewayStack
+ * @schema CfnCloudGuardQsModulePropsResourcesCpuAlarmLowSecurityGatewayStack
  */
-export interface CfnModulePropsResourcesCpuAlarmLowSecurityGatewayStack {
+export interface CfnCloudGuardQsModulePropsResourcesCpuAlarmLowSecurityGatewayStack {
   /**
-   * @schema CfnModulePropsResourcesCpuAlarmLowSecurityGatewayStack#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesCpuAlarmLowSecurityGatewayStack#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesCpuAlarmLowSecurityGatewayStack#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesCpuAlarmLowSecurityGatewayStack#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesCpuAlarmLowSecurityGatewayStack' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesCpuAlarmLowSecurityGatewayStack' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesCpuAlarmLowSecurityGatewayStack(obj: CfnModulePropsResourcesCpuAlarmLowSecurityGatewayStack | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesCpuAlarmLowSecurityGatewayStack(obj: CfnCloudGuardQsModulePropsResourcesCpuAlarmLowSecurityGatewayStack | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4483,26 +4483,26 @@ export function toJson_CfnModulePropsResourcesCpuAlarmLowSecurityGatewayStack(ob
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesElbSecurityGroup
+ * @schema CfnCloudGuardQsModulePropsResourcesElbSecurityGroup
  */
-export interface CfnModulePropsResourcesElbSecurityGroup {
+export interface CfnCloudGuardQsModulePropsResourcesElbSecurityGroup {
   /**
-   * @schema CfnModulePropsResourcesElbSecurityGroup#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesElbSecurityGroup#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesElbSecurityGroup#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesElbSecurityGroup#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesElbSecurityGroup' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesElbSecurityGroup' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesElbSecurityGroup(obj: CfnModulePropsResourcesElbSecurityGroup | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesElbSecurityGroup(obj: CfnCloudGuardQsModulePropsResourcesElbSecurityGroup | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4514,26 +4514,26 @@ export function toJson_CfnModulePropsResourcesElbSecurityGroup(obj: CfnModulePro
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesManagementReadyHandle
+ * @schema CfnCloudGuardQsModulePropsResourcesManagementReadyHandle
  */
-export interface CfnModulePropsResourcesManagementReadyHandle {
+export interface CfnCloudGuardQsModulePropsResourcesManagementReadyHandle {
   /**
-   * @schema CfnModulePropsResourcesManagementReadyHandle#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesManagementReadyHandle#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesManagementReadyHandle#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesManagementReadyHandle#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesManagementReadyHandle' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesManagementReadyHandle' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesManagementReadyHandle(obj: CfnModulePropsResourcesManagementReadyHandle | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesManagementReadyHandle(obj: CfnCloudGuardQsModulePropsResourcesManagementReadyHandle | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4545,26 +4545,26 @@ export function toJson_CfnModulePropsResourcesManagementReadyHandle(obj: CfnModu
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesManagementReadyCondition
+ * @schema CfnCloudGuardQsModulePropsResourcesManagementReadyCondition
  */
-export interface CfnModulePropsResourcesManagementReadyCondition {
+export interface CfnCloudGuardQsModulePropsResourcesManagementReadyCondition {
   /**
-   * @schema CfnModulePropsResourcesManagementReadyCondition#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesManagementReadyCondition#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesManagementReadyCondition#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesManagementReadyCondition#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesManagementReadyCondition' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesManagementReadyCondition' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesManagementReadyCondition(obj: CfnModulePropsResourcesManagementReadyCondition | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesManagementReadyCondition(obj: CfnCloudGuardQsModulePropsResourcesManagementReadyCondition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4576,26 +4576,26 @@ export function toJson_CfnModulePropsResourcesManagementReadyCondition(obj: CfnM
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesManagementSecurityGroup
+ * @schema CfnCloudGuardQsModulePropsResourcesManagementSecurityGroup
  */
-export interface CfnModulePropsResourcesManagementSecurityGroup {
+export interface CfnCloudGuardQsModulePropsResourcesManagementSecurityGroup {
   /**
-   * @schema CfnModulePropsResourcesManagementSecurityGroup#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesManagementSecurityGroup#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesManagementSecurityGroup#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesManagementSecurityGroup#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesManagementSecurityGroup' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesManagementSecurityGroup' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesManagementSecurityGroup(obj: CfnModulePropsResourcesManagementSecurityGroup | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesManagementSecurityGroup(obj: CfnCloudGuardQsModulePropsResourcesManagementSecurityGroup | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4607,26 +4607,26 @@ export function toJson_CfnModulePropsResourcesManagementSecurityGroup(obj: CfnMo
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesCmeiamRole
+ * @schema CfnCloudGuardQsModulePropsResourcesCmeiamRole
  */
-export interface CfnModulePropsResourcesCmeiamRole {
+export interface CfnCloudGuardQsModulePropsResourcesCmeiamRole {
   /**
-   * @schema CfnModulePropsResourcesCmeiamRole#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesCmeiamRole#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesCmeiamRole#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesCmeiamRole#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesCmeiamRole' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesCmeiamRole' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesCmeiamRole(obj: CfnModulePropsResourcesCmeiamRole | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesCmeiamRole(obj: CfnCloudGuardQsModulePropsResourcesCmeiamRole | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4638,26 +4638,26 @@ export function toJson_CfnModulePropsResourcesCmeiamRole(obj: CfnModulePropsReso
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesInstanceProfile
+ * @schema CfnCloudGuardQsModulePropsResourcesInstanceProfile
  */
-export interface CfnModulePropsResourcesInstanceProfile {
+export interface CfnCloudGuardQsModulePropsResourcesInstanceProfile {
   /**
-   * @schema CfnModulePropsResourcesInstanceProfile#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesInstanceProfile#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesInstanceProfile#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesInstanceProfile#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesInstanceProfile' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesInstanceProfile' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesInstanceProfile(obj: CfnModulePropsResourcesInstanceProfile | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesInstanceProfile(obj: CfnCloudGuardQsModulePropsResourcesInstanceProfile | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4669,26 +4669,26 @@ export function toJson_CfnModulePropsResourcesInstanceProfile(obj: CfnModuleProp
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesManagementInstance
+ * @schema CfnCloudGuardQsModulePropsResourcesManagementInstance
  */
-export interface CfnModulePropsResourcesManagementInstance {
+export interface CfnCloudGuardQsModulePropsResourcesManagementInstance {
   /**
-   * @schema CfnModulePropsResourcesManagementInstance#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesManagementInstance#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesManagementInstance#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesManagementInstance#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesManagementInstance' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesManagementInstance' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesManagementInstance(obj: CfnModulePropsResourcesManagementInstance | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesManagementInstance(obj: CfnCloudGuardQsModulePropsResourcesManagementInstance | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4700,26 +4700,26 @@ export function toJson_CfnModulePropsResourcesManagementInstance(obj: CfnModuleP
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPublicAddress
+ * @schema CfnCloudGuardQsModulePropsResourcesPublicAddress
  */
-export interface CfnModulePropsResourcesPublicAddress {
+export interface CfnCloudGuardQsModulePropsResourcesPublicAddress {
   /**
-   * @schema CfnModulePropsResourcesPublicAddress#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesPublicAddress#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPublicAddress#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesPublicAddress#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPublicAddress' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesPublicAddress' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPublicAddress(obj: CfnModulePropsResourcesPublicAddress | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesPublicAddress(obj: CfnCloudGuardQsModulePropsResourcesPublicAddress | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4731,26 +4731,26 @@ export function toJson_CfnModulePropsResourcesPublicAddress(obj: CfnModulePropsR
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesAddressAssoc
+ * @schema CfnCloudGuardQsModulePropsResourcesAddressAssoc
  */
-export interface CfnModulePropsResourcesAddressAssoc {
+export interface CfnCloudGuardQsModulePropsResourcesAddressAssoc {
   /**
-   * @schema CfnModulePropsResourcesAddressAssoc#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesAddressAssoc#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesAddressAssoc#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesAddressAssoc#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesAddressAssoc' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesAddressAssoc' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesAddressAssoc(obj: CfnModulePropsResourcesAddressAssoc | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesAddressAssoc(obj: CfnCloudGuardQsModulePropsResourcesAddressAssoc | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4762,26 +4762,26 @@ export function toJson_CfnModulePropsResourcesAddressAssoc(obj: CfnModulePropsRe
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesInternalSecurityGroup
+ * @schema CfnCloudGuardQsModulePropsResourcesInternalSecurityGroup
  */
-export interface CfnModulePropsResourcesInternalSecurityGroup {
+export interface CfnCloudGuardQsModulePropsResourcesInternalSecurityGroup {
   /**
-   * @schema CfnModulePropsResourcesInternalSecurityGroup#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesInternalSecurityGroup#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesInternalSecurityGroup#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesInternalSecurityGroup#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesInternalSecurityGroup' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesInternalSecurityGroup' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesInternalSecurityGroup(obj: CfnModulePropsResourcesInternalSecurityGroup | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesInternalSecurityGroup(obj: CfnCloudGuardQsModulePropsResourcesInternalSecurityGroup | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4793,26 +4793,26 @@ export function toJson_CfnModulePropsResourcesInternalSecurityGroup(obj: CfnModu
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesInternalLbTargetGroup
+ * @schema CfnCloudGuardQsModulePropsResourcesInternalLbTargetGroup
  */
-export interface CfnModulePropsResourcesInternalLbTargetGroup {
+export interface CfnCloudGuardQsModulePropsResourcesInternalLbTargetGroup {
   /**
-   * @schema CfnModulePropsResourcesInternalLbTargetGroup#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesInternalLbTargetGroup#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesInternalLbTargetGroup#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesInternalLbTargetGroup#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesInternalLbTargetGroup' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesInternalLbTargetGroup' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesInternalLbTargetGroup(obj: CfnModulePropsResourcesInternalLbTargetGroup | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesInternalLbTargetGroup(obj: CfnCloudGuardQsModulePropsResourcesInternalLbTargetGroup | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4824,26 +4824,26 @@ export function toJson_CfnModulePropsResourcesInternalLbTargetGroup(obj: CfnModu
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesInternalLoadBalancer
+ * @schema CfnCloudGuardQsModulePropsResourcesInternalLoadBalancer
  */
-export interface CfnModulePropsResourcesInternalLoadBalancer {
+export interface CfnCloudGuardQsModulePropsResourcesInternalLoadBalancer {
   /**
-   * @schema CfnModulePropsResourcesInternalLoadBalancer#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesInternalLoadBalancer#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesInternalLoadBalancer#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesInternalLoadBalancer#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesInternalLoadBalancer' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesInternalLoadBalancer' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesInternalLoadBalancer(obj: CfnModulePropsResourcesInternalLoadBalancer | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesInternalLoadBalancer(obj: CfnCloudGuardQsModulePropsResourcesInternalLoadBalancer | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4855,26 +4855,26 @@ export function toJson_CfnModulePropsResourcesInternalLoadBalancer(obj: CfnModul
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesInternalLbListener
+ * @schema CfnCloudGuardQsModulePropsResourcesInternalLbListener
  */
-export interface CfnModulePropsResourcesInternalLbListener {
+export interface CfnCloudGuardQsModulePropsResourcesInternalLbListener {
   /**
-   * @schema CfnModulePropsResourcesInternalLbListener#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesInternalLbListener#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesInternalLbListener#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesInternalLbListener#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesInternalLbListener' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesInternalLbListener' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesInternalLbListener(obj: CfnModulePropsResourcesInternalLbListener | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesInternalLbListener(obj: CfnCloudGuardQsModulePropsResourcesInternalLbListener | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4886,26 +4886,26 @@ export function toJson_CfnModulePropsResourcesInternalLbListener(obj: CfnModuleP
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesNotificationTopic
+ * @schema CfnCloudGuardQsModulePropsResourcesNotificationTopic
  */
-export interface CfnModulePropsResourcesNotificationTopic {
+export interface CfnCloudGuardQsModulePropsResourcesNotificationTopic {
   /**
-   * @schema CfnModulePropsResourcesNotificationTopic#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesNotificationTopic#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesNotificationTopic#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesNotificationTopic#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesNotificationTopic' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesNotificationTopic' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesNotificationTopic(obj: CfnModulePropsResourcesNotificationTopic | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesNotificationTopic(obj: CfnCloudGuardQsModulePropsResourcesNotificationTopic | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4917,26 +4917,26 @@ export function toJson_CfnModulePropsResourcesNotificationTopic(obj: CfnModulePr
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesServersSecurityGroup
+ * @schema CfnCloudGuardQsModulePropsResourcesServersSecurityGroup
  */
-export interface CfnModulePropsResourcesServersSecurityGroup {
+export interface CfnCloudGuardQsModulePropsResourcesServersSecurityGroup {
   /**
-   * @schema CfnModulePropsResourcesServersSecurityGroup#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesServersSecurityGroup#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesServersSecurityGroup#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesServersSecurityGroup#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesServersSecurityGroup' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesServersSecurityGroup' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesServersSecurityGroup(obj: CfnModulePropsResourcesServersSecurityGroup | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesServersSecurityGroup(obj: CfnCloudGuardQsModulePropsResourcesServersSecurityGroup | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4948,26 +4948,26 @@ export function toJson_CfnModulePropsResourcesServersSecurityGroup(obj: CfnModul
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesServersLaunchConfiguration
+ * @schema CfnCloudGuardQsModulePropsResourcesServersLaunchConfiguration
  */
-export interface CfnModulePropsResourcesServersLaunchConfiguration {
+export interface CfnCloudGuardQsModulePropsResourcesServersLaunchConfiguration {
   /**
-   * @schema CfnModulePropsResourcesServersLaunchConfiguration#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesServersLaunchConfiguration#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesServersLaunchConfiguration#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesServersLaunchConfiguration#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesServersLaunchConfiguration' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesServersLaunchConfiguration' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesServersLaunchConfiguration(obj: CfnModulePropsResourcesServersLaunchConfiguration | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesServersLaunchConfiguration(obj: CfnCloudGuardQsModulePropsResourcesServersLaunchConfiguration | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4979,26 +4979,26 @@ export function toJson_CfnModulePropsResourcesServersLaunchConfiguration(obj: Cf
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesServersGroup
+ * @schema CfnCloudGuardQsModulePropsResourcesServersGroup
  */
-export interface CfnModulePropsResourcesServersGroup {
+export interface CfnCloudGuardQsModulePropsResourcesServersGroup {
   /**
-   * @schema CfnModulePropsResourcesServersGroup#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesServersGroup#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesServersGroup#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesServersGroup#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesServersGroup' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesServersGroup' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesServersGroup(obj: CfnModulePropsResourcesServersGroup | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesServersGroup(obj: CfnCloudGuardQsModulePropsResourcesServersGroup | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -5010,26 +5010,26 @@ export function toJson_CfnModulePropsResourcesServersGroup(obj: CfnModulePropsRe
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesScaleUpPolicy
+ * @schema CfnCloudGuardQsModulePropsResourcesScaleUpPolicy
  */
-export interface CfnModulePropsResourcesScaleUpPolicy {
+export interface CfnCloudGuardQsModulePropsResourcesScaleUpPolicy {
   /**
-   * @schema CfnModulePropsResourcesScaleUpPolicy#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesScaleUpPolicy#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesScaleUpPolicy#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesScaleUpPolicy#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesScaleUpPolicy' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesScaleUpPolicy' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesScaleUpPolicy(obj: CfnModulePropsResourcesScaleUpPolicy | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesScaleUpPolicy(obj: CfnCloudGuardQsModulePropsResourcesScaleUpPolicy | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -5041,26 +5041,26 @@ export function toJson_CfnModulePropsResourcesScaleUpPolicy(obj: CfnModulePropsR
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesScaleDownPolicy
+ * @schema CfnCloudGuardQsModulePropsResourcesScaleDownPolicy
  */
-export interface CfnModulePropsResourcesScaleDownPolicy {
+export interface CfnCloudGuardQsModulePropsResourcesScaleDownPolicy {
   /**
-   * @schema CfnModulePropsResourcesScaleDownPolicy#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesScaleDownPolicy#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesScaleDownPolicy#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesScaleDownPolicy#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesScaleDownPolicy' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesScaleDownPolicy' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesScaleDownPolicy(obj: CfnModulePropsResourcesScaleDownPolicy | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesScaleDownPolicy(obj: CfnCloudGuardQsModulePropsResourcesScaleDownPolicy | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -5072,26 +5072,26 @@ export function toJson_CfnModulePropsResourcesScaleDownPolicy(obj: CfnModuleProp
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesCpuAlarmHigh
+ * @schema CfnCloudGuardQsModulePropsResourcesCpuAlarmHigh
  */
-export interface CfnModulePropsResourcesCpuAlarmHigh {
+export interface CfnCloudGuardQsModulePropsResourcesCpuAlarmHigh {
   /**
-   * @schema CfnModulePropsResourcesCpuAlarmHigh#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesCpuAlarmHigh#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesCpuAlarmHigh#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesCpuAlarmHigh#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesCpuAlarmHigh' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesCpuAlarmHigh' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesCpuAlarmHigh(obj: CfnModulePropsResourcesCpuAlarmHigh | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesCpuAlarmHigh(obj: CfnCloudGuardQsModulePropsResourcesCpuAlarmHigh | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -5103,26 +5103,26 @@ export function toJson_CfnModulePropsResourcesCpuAlarmHigh(obj: CfnModulePropsRe
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesCpuAlarmLow
+ * @schema CfnCloudGuardQsModulePropsResourcesCpuAlarmLow
  */
-export interface CfnModulePropsResourcesCpuAlarmLow {
+export interface CfnCloudGuardQsModulePropsResourcesCpuAlarmLow {
   /**
-   * @schema CfnModulePropsResourcesCpuAlarmLow#Type
+   * @schema CfnCloudGuardQsModulePropsResourcesCpuAlarmLow#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesCpuAlarmLow#Properties
+   * @schema CfnCloudGuardQsModulePropsResourcesCpuAlarmLow#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesCpuAlarmLow' to JSON representation.
+ * Converts an object of type 'CfnCloudGuardQsModulePropsResourcesCpuAlarmLow' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesCpuAlarmLow(obj: CfnModulePropsResourcesCpuAlarmLow | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudGuardQsModulePropsResourcesCpuAlarmLow(obj: CfnCloudGuardQsModulePropsResourcesCpuAlarmLow | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -5141,7 +5141,7 @@ export function toJson_CfnModulePropsResourcesCpuAlarmLow(obj: CfnModulePropsRes
  * @stability external
  * @link http://unknown-url
  */
-export class CfnModule extends cdk.CfnResource {
+export class CfnCloudGuardQsModule extends cdk.CfnResource {
   /**
   * The CloudFormation resource type name for this resource class.
   */
@@ -5150,7 +5150,7 @@ export class CfnModule extends cdk.CfnResource {
   /**
    * Resource props.
    */
-  public readonly props: CfnModuleProps;
+  public readonly props: CfnCloudGuardQsModuleProps;
 
 
   /**
@@ -5160,8 +5160,8 @@ export class CfnModule extends cdk.CfnResource {
    * @param id    - scoped id of the resource
    * @param props - resource properties
    */
-  constructor(scope: cdk.Construct, id: string, props: CfnModuleProps) {
-    super(scope, id, { type: CfnModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnModuleProps(props)! });
+  constructor(scope: cdk.Construct, id: string, props: CfnCloudGuardQsModuleProps) {
+    super(scope, id, { type: CfnCloudGuardQsModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnCloudGuardQsModuleProps(props)! });
 
     this.props = props;
 

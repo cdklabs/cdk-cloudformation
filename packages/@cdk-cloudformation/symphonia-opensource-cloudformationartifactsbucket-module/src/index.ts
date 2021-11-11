@@ -4,24 +4,24 @@ import * as cdk from '@aws-cdk/core';
 /**
  * Schema for Module Fragment of type Symphonia::OpenSource::CloudFormationArtifactsBucket::MODULE
  *
- * @schema CfnModuleProps
+ * @schema CfnCloudFormationArtifactsBucketModuleProps
  */
-export interface CfnModuleProps {
+export interface CfnCloudFormationArtifactsBucketModuleProps {
   /**
-   * @schema CfnModuleProps#Resources
+   * @schema CfnCloudFormationArtifactsBucketModuleProps#Resources
    */
-  readonly resources?: CfnModulePropsResources;
+  readonly resources?: CfnCloudFormationArtifactsBucketModulePropsResources;
 
 }
 
 /**
- * Converts an object of type 'CfnModuleProps' to JSON representation.
+ * Converts an object of type 'CfnCloudFormationArtifactsBucketModuleProps' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModuleProps(obj: CfnModuleProps | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudFormationArtifactsBucketModuleProps(obj: CfnCloudFormationArtifactsBucketModuleProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'Resources': toJson_CfnModulePropsResources(obj.resources),
+    'Resources': toJson_CfnCloudFormationArtifactsBucketModulePropsResources(obj.resources),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -29,24 +29,24 @@ export function toJson_CfnModuleProps(obj: CfnModuleProps | undefined): Record<s
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResources
+ * @schema CfnCloudFormationArtifactsBucketModulePropsResources
  */
-export interface CfnModulePropsResources {
+export interface CfnCloudFormationArtifactsBucketModulePropsResources {
   /**
-   * @schema CfnModulePropsResources#Bucket
+   * @schema CfnCloudFormationArtifactsBucketModulePropsResources#Bucket
    */
-  readonly bucket?: CfnModulePropsResourcesBucket;
+  readonly bucket?: CfnCloudFormationArtifactsBucketModulePropsResourcesBucket;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResources' to JSON representation.
+ * Converts an object of type 'CfnCloudFormationArtifactsBucketModulePropsResources' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResources(obj: CfnModulePropsResources | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudFormationArtifactsBucketModulePropsResources(obj: CfnCloudFormationArtifactsBucketModulePropsResources | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'Bucket': toJson_CfnModulePropsResourcesBucket(obj.bucket),
+    'Bucket': toJson_CfnCloudFormationArtifactsBucketModulePropsResourcesBucket(obj.bucket),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -54,26 +54,26 @@ export function toJson_CfnModulePropsResources(obj: CfnModulePropsResources | un
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesBucket
+ * @schema CfnCloudFormationArtifactsBucketModulePropsResourcesBucket
  */
-export interface CfnModulePropsResourcesBucket {
+export interface CfnCloudFormationArtifactsBucketModulePropsResourcesBucket {
   /**
-   * @schema CfnModulePropsResourcesBucket#Type
+   * @schema CfnCloudFormationArtifactsBucketModulePropsResourcesBucket#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesBucket#Properties
+   * @schema CfnCloudFormationArtifactsBucketModulePropsResourcesBucket#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesBucket' to JSON representation.
+ * Converts an object of type 'CfnCloudFormationArtifactsBucketModulePropsResourcesBucket' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesBucket(obj: CfnModulePropsResourcesBucket | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudFormationArtifactsBucketModulePropsResourcesBucket(obj: CfnCloudFormationArtifactsBucketModulePropsResourcesBucket | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -92,7 +92,7 @@ export function toJson_CfnModulePropsResourcesBucket(obj: CfnModulePropsResource
  * @stability external
  * @link http://unknown-url
  */
-export class CfnModule extends cdk.CfnResource {
+export class CfnCloudFormationArtifactsBucketModule extends cdk.CfnResource {
   /**
   * The CloudFormation resource type name for this resource class.
   */
@@ -101,7 +101,7 @@ export class CfnModule extends cdk.CfnResource {
   /**
    * Resource props.
    */
-  public readonly props: CfnModuleProps;
+  public readonly props: CfnCloudFormationArtifactsBucketModuleProps;
 
 
   /**
@@ -111,8 +111,8 @@ export class CfnModule extends cdk.CfnResource {
    * @param id    - scoped id of the resource
    * @param props - resource properties
    */
-  constructor(scope: cdk.Construct, id: string, props: CfnModuleProps) {
-    super(scope, id, { type: CfnModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnModuleProps(props)! });
+  constructor(scope: cdk.Construct, id: string, props: CfnCloudFormationArtifactsBucketModuleProps) {
+    super(scope, id, { type: CfnCloudFormationArtifactsBucketModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnCloudFormationArtifactsBucketModuleProps(props)! });
 
     this.props = props;
 

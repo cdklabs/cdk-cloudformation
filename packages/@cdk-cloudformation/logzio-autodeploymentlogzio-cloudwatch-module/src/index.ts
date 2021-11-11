@@ -4,30 +4,30 @@ import * as cdk from '@aws-cdk/core';
 /**
  * Schema for Module Fragment of type logzio::autoDeploymentLogzio::CloudWatch::MODULE
  *
- * @schema CfnModuleProps
+ * @schema CfnCloudWatchModuleProps
  */
-export interface CfnModuleProps {
+export interface CfnCloudWatchModuleProps {
   /**
-   * @schema CfnModuleProps#Parameters
+   * @schema CfnCloudWatchModuleProps#Parameters
    */
-  readonly parameters?: CfnModulePropsParameters;
+  readonly parameters?: CfnCloudWatchModulePropsParameters;
 
   /**
-   * @schema CfnModuleProps#Resources
+   * @schema CfnCloudWatchModuleProps#Resources
    */
-  readonly resources?: CfnModulePropsResources;
+  readonly resources?: CfnCloudWatchModulePropsResources;
 
 }
 
 /**
- * Converts an object of type 'CfnModuleProps' to JSON representation.
+ * Converts an object of type 'CfnCloudWatchModuleProps' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModuleProps(obj: CfnModuleProps | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudWatchModuleProps(obj: CfnCloudWatchModuleProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'Parameters': toJson_CfnModulePropsParameters(obj.parameters),
-    'Resources': toJson_CfnModulePropsResources(obj.resources),
+    'Parameters': toJson_CfnCloudWatchModulePropsParameters(obj.parameters),
+    'Resources': toJson_CfnCloudWatchModulePropsResources(obj.resources),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -35,82 +35,82 @@ export function toJson_CfnModuleProps(obj: CfnModuleProps | undefined): Record<s
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParameters
+ * @schema CfnCloudWatchModulePropsParameters
  */
-export interface CfnModulePropsParameters {
+export interface CfnCloudWatchModulePropsParameters {
   /**
    * The Logz.io listener URL fot your region.
    *
-   * @schema CfnModulePropsParameters#LogzioListenerUrl
+   * @schema CfnCloudWatchModulePropsParameters#LogzioListenerUrl
    */
-  readonly logzioListenerUrl?: CfnModulePropsParametersLogzioListenerUrl;
+  readonly logzioListenerUrl?: CfnCloudWatchModulePropsParametersLogzioListenerUrl;
 
   /**
    * Logz.io account token.
    *
-   * @schema CfnModulePropsParameters#LogzioToken
+   * @schema CfnCloudWatchModulePropsParameters#LogzioToken
    */
-  readonly logzioToken?: CfnModulePropsParametersLogzioToken;
+  readonly logzioToken?: CfnCloudWatchModulePropsParametersLogzioToken;
 
   /**
    * The log type you'll use with this Lambda. Please note that you should create a new Lambda for each log type you use. This can be a built-in log type, or your custom log type
    *
-   * @schema CfnModulePropsParameters#LogzioType
+   * @schema CfnCloudWatchModulePropsParameters#LogzioType
    */
-  readonly logzioType?: CfnModulePropsParametersLogzioType;
+  readonly logzioType?: CfnCloudWatchModulePropsParametersLogzioType;
 
   /**
    * JSON or text. If json, the lambda function will attempt to parse the message field as JSON and populate the event data with the parsed fields.
    *
-   * @schema CfnModulePropsParameters#LogzioFormat
+   * @schema CfnCloudWatchModulePropsParameters#LogzioFormat
    */
-  readonly logzioFormat?: CfnModulePropsParametersLogzioFormat;
+  readonly logzioFormat?: CfnCloudWatchModulePropsParametersLogzioFormat;
 
   /**
    * If true, the Lambda will send compressed logs. If false, the Lambda will send uncompressed logs.
    *
-   * @schema CfnModulePropsParameters#LogzioCompress
+   * @schema CfnCloudWatchModulePropsParameters#LogzioCompress
    */
-  readonly logzioCompress?: CfnModulePropsParametersLogzioCompress;
+  readonly logzioCompress?: CfnCloudWatchModulePropsParametersLogzioCompress;
 
   /**
    * By default, we do not send logs of type START, END, REPORT. Choose true to send all log types.
    *
-   * @schema CfnModulePropsParameters#LogzioSendAll
+   * @schema CfnCloudWatchModulePropsParameters#LogzioSendAll
    */
-  readonly logzioSendAll?: CfnModulePropsParametersLogzioSendAll;
+  readonly logzioSendAll?: CfnCloudWatchModulePropsParametersLogzioSendAll;
 
   /**
    * Enriches the CloudWatch events with custom properties at ship time. The format is `key1=value1;key2=value2`. By default is empty.
    *
-   * @schema CfnModulePropsParameters#LogzioEnrich
+   * @schema CfnCloudWatchModulePropsParameters#LogzioEnrich
    */
-  readonly logzioEnrich?: CfnModulePropsParametersLogzioEnrich;
+  readonly logzioEnrich?: CfnCloudWatchModulePropsParametersLogzioEnrich;
 
   /**
    * CloudWatch Log Group name from where you want to send logs.
    *
-   * @schema CfnModulePropsParameters#LogGroup
+   * @schema CfnCloudWatchModulePropsParameters#LogGroup
    */
-  readonly logGroup?: CfnModulePropsParametersLogGroup;
+  readonly logGroup?: CfnCloudWatchModulePropsParametersLogGroup;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParameters' to JSON representation.
+ * Converts an object of type 'CfnCloudWatchModulePropsParameters' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParameters(obj: CfnModulePropsParameters | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudWatchModulePropsParameters(obj: CfnCloudWatchModulePropsParameters | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'LogzioListenerUrl': toJson_CfnModulePropsParametersLogzioListenerUrl(obj.logzioListenerUrl),
-    'LogzioToken': toJson_CfnModulePropsParametersLogzioToken(obj.logzioToken),
-    'LogzioType': toJson_CfnModulePropsParametersLogzioType(obj.logzioType),
-    'LogzioFormat': toJson_CfnModulePropsParametersLogzioFormat(obj.logzioFormat),
-    'LogzioCompress': toJson_CfnModulePropsParametersLogzioCompress(obj.logzioCompress),
-    'LogzioSendAll': toJson_CfnModulePropsParametersLogzioSendAll(obj.logzioSendAll),
-    'LogzioEnrich': toJson_CfnModulePropsParametersLogzioEnrich(obj.logzioEnrich),
-    'LogGroup': toJson_CfnModulePropsParametersLogGroup(obj.logGroup),
+    'LogzioListenerUrl': toJson_CfnCloudWatchModulePropsParametersLogzioListenerUrl(obj.logzioListenerUrl),
+    'LogzioToken': toJson_CfnCloudWatchModulePropsParametersLogzioToken(obj.logzioToken),
+    'LogzioType': toJson_CfnCloudWatchModulePropsParametersLogzioType(obj.logzioType),
+    'LogzioFormat': toJson_CfnCloudWatchModulePropsParametersLogzioFormat(obj.logzioFormat),
+    'LogzioCompress': toJson_CfnCloudWatchModulePropsParametersLogzioCompress(obj.logzioCompress),
+    'LogzioSendAll': toJson_CfnCloudWatchModulePropsParametersLogzioSendAll(obj.logzioSendAll),
+    'LogzioEnrich': toJson_CfnCloudWatchModulePropsParametersLogzioEnrich(obj.logzioEnrich),
+    'LogGroup': toJson_CfnCloudWatchModulePropsParametersLogGroup(obj.logGroup),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -118,42 +118,42 @@ export function toJson_CfnModulePropsParameters(obj: CfnModulePropsParameters | 
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResources
+ * @schema CfnCloudWatchModulePropsResources
  */
-export interface CfnModulePropsResources {
+export interface CfnCloudWatchModulePropsResources {
   /**
-   * @schema CfnModulePropsResources#LambdaPermission
+   * @schema CfnCloudWatchModulePropsResources#LambdaPermission
    */
-  readonly lambdaPermission?: CfnModulePropsResourcesLambdaPermission;
+  readonly lambdaPermission?: CfnCloudWatchModulePropsResourcesLambdaPermission;
 
   /**
-   * @schema CfnModulePropsResources#LogzioSubscriptionFilter
+   * @schema CfnCloudWatchModulePropsResources#LogzioSubscriptionFilter
    */
-  readonly logzioSubscriptionFilter?: CfnModulePropsResourcesLogzioSubscriptionFilter;
+  readonly logzioSubscriptionFilter?: CfnCloudWatchModulePropsResourcesLogzioSubscriptionFilter;
 
   /**
-   * @schema CfnModulePropsResources#lambdaIamRole
+   * @schema CfnCloudWatchModulePropsResources#lambdaIamRole
    */
-  readonly lambdaIamRole?: CfnModulePropsResourcesLambdaIamRole;
+  readonly lambdaIamRole?: CfnCloudWatchModulePropsResourcesLambdaIamRole;
 
   /**
-   * @schema CfnModulePropsResources#LogzioCloudwatchLogsLambda
+   * @schema CfnCloudWatchModulePropsResources#LogzioCloudwatchLogsLambda
    */
-  readonly logzioCloudwatchLogsLambda?: CfnModulePropsResourcesLogzioCloudwatchLogsLambda;
+  readonly logzioCloudwatchLogsLambda?: CfnCloudWatchModulePropsResourcesLogzioCloudwatchLogsLambda;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResources' to JSON representation.
+ * Converts an object of type 'CfnCloudWatchModulePropsResources' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResources(obj: CfnModulePropsResources | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudWatchModulePropsResources(obj: CfnCloudWatchModulePropsResources | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'LambdaPermission': toJson_CfnModulePropsResourcesLambdaPermission(obj.lambdaPermission),
-    'LogzioSubscriptionFilter': toJson_CfnModulePropsResourcesLogzioSubscriptionFilter(obj.logzioSubscriptionFilter),
-    'lambdaIamRole': toJson_CfnModulePropsResourcesLambdaIamRole(obj.lambdaIamRole),
-    'LogzioCloudwatchLogsLambda': toJson_CfnModulePropsResourcesLogzioCloudwatchLogsLambda(obj.logzioCloudwatchLogsLambda),
+    'LambdaPermission': toJson_CfnCloudWatchModulePropsResourcesLambdaPermission(obj.lambdaPermission),
+    'LogzioSubscriptionFilter': toJson_CfnCloudWatchModulePropsResourcesLogzioSubscriptionFilter(obj.logzioSubscriptionFilter),
+    'lambdaIamRole': toJson_CfnCloudWatchModulePropsResourcesLambdaIamRole(obj.lambdaIamRole),
+    'LogzioCloudwatchLogsLambda': toJson_CfnCloudWatchModulePropsResourcesLogzioCloudwatchLogsLambda(obj.logzioCloudwatchLogsLambda),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -163,26 +163,26 @@ export function toJson_CfnModulePropsResources(obj: CfnModulePropsResources | un
 /**
  * The Logz.io listener URL fot your region.
  *
- * @schema CfnModulePropsParametersLogzioListenerUrl
+ * @schema CfnCloudWatchModulePropsParametersLogzioListenerUrl
  */
-export interface CfnModulePropsParametersLogzioListenerUrl {
+export interface CfnCloudWatchModulePropsParametersLogzioListenerUrl {
   /**
-   * @schema CfnModulePropsParametersLogzioListenerUrl#Type
+   * @schema CfnCloudWatchModulePropsParametersLogzioListenerUrl#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersLogzioListenerUrl#Description
+   * @schema CfnCloudWatchModulePropsParametersLogzioListenerUrl#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersLogzioListenerUrl' to JSON representation.
+ * Converts an object of type 'CfnCloudWatchModulePropsParametersLogzioListenerUrl' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersLogzioListenerUrl(obj: CfnModulePropsParametersLogzioListenerUrl | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudWatchModulePropsParametersLogzioListenerUrl(obj: CfnCloudWatchModulePropsParametersLogzioListenerUrl | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -196,26 +196,26 @@ export function toJson_CfnModulePropsParametersLogzioListenerUrl(obj: CfnModuleP
 /**
  * Logz.io account token.
  *
- * @schema CfnModulePropsParametersLogzioToken
+ * @schema CfnCloudWatchModulePropsParametersLogzioToken
  */
-export interface CfnModulePropsParametersLogzioToken {
+export interface CfnCloudWatchModulePropsParametersLogzioToken {
   /**
-   * @schema CfnModulePropsParametersLogzioToken#Type
+   * @schema CfnCloudWatchModulePropsParametersLogzioToken#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersLogzioToken#Description
+   * @schema CfnCloudWatchModulePropsParametersLogzioToken#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersLogzioToken' to JSON representation.
+ * Converts an object of type 'CfnCloudWatchModulePropsParametersLogzioToken' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersLogzioToken(obj: CfnModulePropsParametersLogzioToken | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudWatchModulePropsParametersLogzioToken(obj: CfnCloudWatchModulePropsParametersLogzioToken | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -229,26 +229,26 @@ export function toJson_CfnModulePropsParametersLogzioToken(obj: CfnModulePropsPa
 /**
  * The log type you'll use with this Lambda. Please note that you should create a new Lambda for each log type you use. This can be a built-in log type, or your custom log type
  *
- * @schema CfnModulePropsParametersLogzioType
+ * @schema CfnCloudWatchModulePropsParametersLogzioType
  */
-export interface CfnModulePropsParametersLogzioType {
+export interface CfnCloudWatchModulePropsParametersLogzioType {
   /**
-   * @schema CfnModulePropsParametersLogzioType#Type
+   * @schema CfnCloudWatchModulePropsParametersLogzioType#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersLogzioType#Description
+   * @schema CfnCloudWatchModulePropsParametersLogzioType#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersLogzioType' to JSON representation.
+ * Converts an object of type 'CfnCloudWatchModulePropsParametersLogzioType' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersLogzioType(obj: CfnModulePropsParametersLogzioType | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudWatchModulePropsParametersLogzioType(obj: CfnCloudWatchModulePropsParametersLogzioType | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -262,26 +262,26 @@ export function toJson_CfnModulePropsParametersLogzioType(obj: CfnModulePropsPar
 /**
  * JSON or text. If json, the lambda function will attempt to parse the message field as JSON and populate the event data with the parsed fields.
  *
- * @schema CfnModulePropsParametersLogzioFormat
+ * @schema CfnCloudWatchModulePropsParametersLogzioFormat
  */
-export interface CfnModulePropsParametersLogzioFormat {
+export interface CfnCloudWatchModulePropsParametersLogzioFormat {
   /**
-   * @schema CfnModulePropsParametersLogzioFormat#Type
+   * @schema CfnCloudWatchModulePropsParametersLogzioFormat#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersLogzioFormat#Description
+   * @schema CfnCloudWatchModulePropsParametersLogzioFormat#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersLogzioFormat' to JSON representation.
+ * Converts an object of type 'CfnCloudWatchModulePropsParametersLogzioFormat' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersLogzioFormat(obj: CfnModulePropsParametersLogzioFormat | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudWatchModulePropsParametersLogzioFormat(obj: CfnCloudWatchModulePropsParametersLogzioFormat | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -295,26 +295,26 @@ export function toJson_CfnModulePropsParametersLogzioFormat(obj: CfnModulePropsP
 /**
  * If true, the Lambda will send compressed logs. If false, the Lambda will send uncompressed logs.
  *
- * @schema CfnModulePropsParametersLogzioCompress
+ * @schema CfnCloudWatchModulePropsParametersLogzioCompress
  */
-export interface CfnModulePropsParametersLogzioCompress {
+export interface CfnCloudWatchModulePropsParametersLogzioCompress {
   /**
-   * @schema CfnModulePropsParametersLogzioCompress#Type
+   * @schema CfnCloudWatchModulePropsParametersLogzioCompress#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersLogzioCompress#Description
+   * @schema CfnCloudWatchModulePropsParametersLogzioCompress#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersLogzioCompress' to JSON representation.
+ * Converts an object of type 'CfnCloudWatchModulePropsParametersLogzioCompress' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersLogzioCompress(obj: CfnModulePropsParametersLogzioCompress | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudWatchModulePropsParametersLogzioCompress(obj: CfnCloudWatchModulePropsParametersLogzioCompress | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -328,26 +328,26 @@ export function toJson_CfnModulePropsParametersLogzioCompress(obj: CfnModuleProp
 /**
  * By default, we do not send logs of type START, END, REPORT. Choose true to send all log types.
  *
- * @schema CfnModulePropsParametersLogzioSendAll
+ * @schema CfnCloudWatchModulePropsParametersLogzioSendAll
  */
-export interface CfnModulePropsParametersLogzioSendAll {
+export interface CfnCloudWatchModulePropsParametersLogzioSendAll {
   /**
-   * @schema CfnModulePropsParametersLogzioSendAll#Type
+   * @schema CfnCloudWatchModulePropsParametersLogzioSendAll#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersLogzioSendAll#Description
+   * @schema CfnCloudWatchModulePropsParametersLogzioSendAll#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersLogzioSendAll' to JSON representation.
+ * Converts an object of type 'CfnCloudWatchModulePropsParametersLogzioSendAll' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersLogzioSendAll(obj: CfnModulePropsParametersLogzioSendAll | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudWatchModulePropsParametersLogzioSendAll(obj: CfnCloudWatchModulePropsParametersLogzioSendAll | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -361,26 +361,26 @@ export function toJson_CfnModulePropsParametersLogzioSendAll(obj: CfnModuleProps
 /**
  * Enriches the CloudWatch events with custom properties at ship time. The format is `key1=value1;key2=value2`. By default is empty.
  *
- * @schema CfnModulePropsParametersLogzioEnrich
+ * @schema CfnCloudWatchModulePropsParametersLogzioEnrich
  */
-export interface CfnModulePropsParametersLogzioEnrich {
+export interface CfnCloudWatchModulePropsParametersLogzioEnrich {
   /**
-   * @schema CfnModulePropsParametersLogzioEnrich#Type
+   * @schema CfnCloudWatchModulePropsParametersLogzioEnrich#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersLogzioEnrich#Description
+   * @schema CfnCloudWatchModulePropsParametersLogzioEnrich#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersLogzioEnrich' to JSON representation.
+ * Converts an object of type 'CfnCloudWatchModulePropsParametersLogzioEnrich' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersLogzioEnrich(obj: CfnModulePropsParametersLogzioEnrich | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudWatchModulePropsParametersLogzioEnrich(obj: CfnCloudWatchModulePropsParametersLogzioEnrich | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -394,26 +394,26 @@ export function toJson_CfnModulePropsParametersLogzioEnrich(obj: CfnModulePropsP
 /**
  * CloudWatch Log Group name from where you want to send logs.
  *
- * @schema CfnModulePropsParametersLogGroup
+ * @schema CfnCloudWatchModulePropsParametersLogGroup
  */
-export interface CfnModulePropsParametersLogGroup {
+export interface CfnCloudWatchModulePropsParametersLogGroup {
   /**
-   * @schema CfnModulePropsParametersLogGroup#Type
+   * @schema CfnCloudWatchModulePropsParametersLogGroup#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersLogGroup#Description
+   * @schema CfnCloudWatchModulePropsParametersLogGroup#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersLogGroup' to JSON representation.
+ * Converts an object of type 'CfnCloudWatchModulePropsParametersLogGroup' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersLogGroup(obj: CfnModulePropsParametersLogGroup | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudWatchModulePropsParametersLogGroup(obj: CfnCloudWatchModulePropsParametersLogGroup | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -425,26 +425,26 @@ export function toJson_CfnModulePropsParametersLogGroup(obj: CfnModulePropsParam
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesLambdaPermission
+ * @schema CfnCloudWatchModulePropsResourcesLambdaPermission
  */
-export interface CfnModulePropsResourcesLambdaPermission {
+export interface CfnCloudWatchModulePropsResourcesLambdaPermission {
   /**
-   * @schema CfnModulePropsResourcesLambdaPermission#Type
+   * @schema CfnCloudWatchModulePropsResourcesLambdaPermission#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesLambdaPermission#Properties
+   * @schema CfnCloudWatchModulePropsResourcesLambdaPermission#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesLambdaPermission' to JSON representation.
+ * Converts an object of type 'CfnCloudWatchModulePropsResourcesLambdaPermission' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesLambdaPermission(obj: CfnModulePropsResourcesLambdaPermission | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudWatchModulePropsResourcesLambdaPermission(obj: CfnCloudWatchModulePropsResourcesLambdaPermission | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -456,26 +456,26 @@ export function toJson_CfnModulePropsResourcesLambdaPermission(obj: CfnModulePro
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesLogzioSubscriptionFilter
+ * @schema CfnCloudWatchModulePropsResourcesLogzioSubscriptionFilter
  */
-export interface CfnModulePropsResourcesLogzioSubscriptionFilter {
+export interface CfnCloudWatchModulePropsResourcesLogzioSubscriptionFilter {
   /**
-   * @schema CfnModulePropsResourcesLogzioSubscriptionFilter#Type
+   * @schema CfnCloudWatchModulePropsResourcesLogzioSubscriptionFilter#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesLogzioSubscriptionFilter#Properties
+   * @schema CfnCloudWatchModulePropsResourcesLogzioSubscriptionFilter#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesLogzioSubscriptionFilter' to JSON representation.
+ * Converts an object of type 'CfnCloudWatchModulePropsResourcesLogzioSubscriptionFilter' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesLogzioSubscriptionFilter(obj: CfnModulePropsResourcesLogzioSubscriptionFilter | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudWatchModulePropsResourcesLogzioSubscriptionFilter(obj: CfnCloudWatchModulePropsResourcesLogzioSubscriptionFilter | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -487,26 +487,26 @@ export function toJson_CfnModulePropsResourcesLogzioSubscriptionFilter(obj: CfnM
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesLambdaIamRole
+ * @schema CfnCloudWatchModulePropsResourcesLambdaIamRole
  */
-export interface CfnModulePropsResourcesLambdaIamRole {
+export interface CfnCloudWatchModulePropsResourcesLambdaIamRole {
   /**
-   * @schema CfnModulePropsResourcesLambdaIamRole#Type
+   * @schema CfnCloudWatchModulePropsResourcesLambdaIamRole#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesLambdaIamRole#Properties
+   * @schema CfnCloudWatchModulePropsResourcesLambdaIamRole#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesLambdaIamRole' to JSON representation.
+ * Converts an object of type 'CfnCloudWatchModulePropsResourcesLambdaIamRole' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesLambdaIamRole(obj: CfnModulePropsResourcesLambdaIamRole | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudWatchModulePropsResourcesLambdaIamRole(obj: CfnCloudWatchModulePropsResourcesLambdaIamRole | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -518,26 +518,26 @@ export function toJson_CfnModulePropsResourcesLambdaIamRole(obj: CfnModulePropsR
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesLogzioCloudwatchLogsLambda
+ * @schema CfnCloudWatchModulePropsResourcesLogzioCloudwatchLogsLambda
  */
-export interface CfnModulePropsResourcesLogzioCloudwatchLogsLambda {
+export interface CfnCloudWatchModulePropsResourcesLogzioCloudwatchLogsLambda {
   /**
-   * @schema CfnModulePropsResourcesLogzioCloudwatchLogsLambda#Type
+   * @schema CfnCloudWatchModulePropsResourcesLogzioCloudwatchLogsLambda#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesLogzioCloudwatchLogsLambda#Properties
+   * @schema CfnCloudWatchModulePropsResourcesLogzioCloudwatchLogsLambda#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesLogzioCloudwatchLogsLambda' to JSON representation.
+ * Converts an object of type 'CfnCloudWatchModulePropsResourcesLogzioCloudwatchLogsLambda' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesLogzioCloudwatchLogsLambda(obj: CfnModulePropsResourcesLogzioCloudwatchLogsLambda | undefined): Record<string, any> | undefined {
+export function toJson_CfnCloudWatchModulePropsResourcesLogzioCloudwatchLogsLambda(obj: CfnCloudWatchModulePropsResourcesLogzioCloudwatchLogsLambda | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -556,7 +556,7 @@ export function toJson_CfnModulePropsResourcesLogzioCloudwatchLogsLambda(obj: Cf
  * @stability external
  * @link http://unknown-url
  */
-export class CfnModule extends cdk.CfnResource {
+export class CfnCloudWatchModule extends cdk.CfnResource {
   /**
   * The CloudFormation resource type name for this resource class.
   */
@@ -565,7 +565,7 @@ export class CfnModule extends cdk.CfnResource {
   /**
    * Resource props.
    */
-  public readonly props: CfnModuleProps;
+  public readonly props: CfnCloudWatchModuleProps;
 
 
   /**
@@ -575,8 +575,8 @@ export class CfnModule extends cdk.CfnResource {
    * @param id    - scoped id of the resource
    * @param props - resource properties
    */
-  constructor(scope: cdk.Construct, id: string, props: CfnModuleProps) {
-    super(scope, id, { type: CfnModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnModuleProps(props)! });
+  constructor(scope: cdk.Construct, id: string, props: CfnCloudWatchModuleProps) {
+    super(scope, id, { type: CfnCloudWatchModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnCloudWatchModuleProps(props)! });
 
     this.props = props;
 

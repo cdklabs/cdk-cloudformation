@@ -4,30 +4,30 @@ import * as cdk from '@aws-cdk/core';
 /**
  * Schema for Module Fragment of type Stackery::Open::Bastion::MODULE
  *
- * @schema CfnModuleProps
+ * @schema CfnBastionModuleProps
  */
-export interface CfnModuleProps {
+export interface CfnBastionModuleProps {
   /**
-   * @schema CfnModuleProps#Parameters
+   * @schema CfnBastionModuleProps#Parameters
    */
-  readonly parameters?: CfnModulePropsParameters;
+  readonly parameters?: CfnBastionModulePropsParameters;
 
   /**
-   * @schema CfnModuleProps#Resources
+   * @schema CfnBastionModuleProps#Resources
    */
-  readonly resources?: CfnModulePropsResources;
+  readonly resources?: CfnBastionModulePropsResources;
 
 }
 
 /**
- * Converts an object of type 'CfnModuleProps' to JSON representation.
+ * Converts an object of type 'CfnBastionModuleProps' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModuleProps(obj: CfnModuleProps | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModuleProps(obj: CfnBastionModuleProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'Parameters': toJson_CfnModulePropsParameters(obj.parameters),
-    'Resources': toJson_CfnModulePropsResources(obj.resources),
+    'Parameters': toJson_CfnBastionModulePropsParameters(obj.parameters),
+    'Resources': toJson_CfnBastionModulePropsResources(obj.resources),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -35,42 +35,42 @@ export function toJson_CfnModuleProps(obj: CfnModuleProps | undefined): Record<s
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParameters
+ * @schema CfnBastionModulePropsParameters
  */
-export interface CfnModulePropsParameters {
+export interface CfnBastionModulePropsParameters {
   /**
    * VPC to run bastion server in
    *
-   * @schema CfnModulePropsParameters#VPCId
+   * @schema CfnBastionModulePropsParameters#VPCId
    */
-  readonly vpcId?: CfnModulePropsParametersVpcId;
+  readonly vpcId?: CfnBastionModulePropsParametersVpcId;
 
   /**
    * Subnets to pick from to run a bastion server in
    *
-   * @schema CfnModulePropsParameters#VPCSubnets
+   * @schema CfnBastionModulePropsParameters#VPCSubnets
    */
-  readonly vpcSubnets?: CfnModulePropsParametersVpcSubnets;
+  readonly vpcSubnets?: CfnBastionModulePropsParametersVpcSubnets;
 
   /**
    * EC2 instance class to provision
    *
-   * @schema CfnModulePropsParameters#InstanceClass
+   * @schema CfnBastionModulePropsParameters#InstanceClass
    */
-  readonly instanceClass?: CfnModulePropsParametersInstanceClass;
+  readonly instanceClass?: CfnBastionModulePropsParametersInstanceClass;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParameters' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsParameters' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParameters(obj: CfnModulePropsParameters | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsParameters(obj: CfnBastionModulePropsParameters | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'VPCId': toJson_CfnModulePropsParametersVpcId(obj.vpcId),
-    'VPCSubnets': toJson_CfnModulePropsParametersVpcSubnets(obj.vpcSubnets),
-    'InstanceClass': toJson_CfnModulePropsParametersInstanceClass(obj.instanceClass),
+    'VPCId': toJson_CfnBastionModulePropsParametersVpcId(obj.vpcId),
+    'VPCSubnets': toJson_CfnBastionModulePropsParametersVpcSubnets(obj.vpcSubnets),
+    'InstanceClass': toJson_CfnBastionModulePropsParametersInstanceClass(obj.instanceClass),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -78,66 +78,66 @@ export function toJson_CfnModulePropsParameters(obj: CfnModulePropsParameters | 
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResources
+ * @schema CfnBastionModulePropsResources
  */
-export interface CfnModulePropsResources {
+export interface CfnBastionModulePropsResources {
   /**
-   * @schema CfnModulePropsResources#AutoScalingGroup
+   * @schema CfnBastionModulePropsResources#AutoScalingGroup
    */
-  readonly autoScalingGroup?: CfnModulePropsResourcesAutoScalingGroup;
+  readonly autoScalingGroup?: CfnBastionModulePropsResourcesAutoScalingGroup;
 
   /**
-   * @schema CfnModulePropsResources#IAMRole
+   * @schema CfnBastionModulePropsResources#IAMRole
    */
-  readonly iamRole?: CfnModulePropsResourcesIamRole;
+  readonly iamRole?: CfnBastionModulePropsResourcesIamRole;
 
   /**
-   * @schema CfnModulePropsResources#IAMInstanceProfile
+   * @schema CfnBastionModulePropsResources#IAMInstanceProfile
    */
-  readonly iamInstanceProfile?: CfnModulePropsResourcesIamInstanceProfile;
+  readonly iamInstanceProfile?: CfnBastionModulePropsResourcesIamInstanceProfile;
 
   /**
-   * @schema CfnModulePropsResources#InstancesSecurityGroup
+   * @schema CfnBastionModulePropsResources#InstancesSecurityGroup
    */
-  readonly instancesSecurityGroup?: CfnModulePropsResourcesInstancesSecurityGroup;
+  readonly instancesSecurityGroup?: CfnBastionModulePropsResourcesInstancesSecurityGroup;
 
   /**
-   * @schema CfnModulePropsResources#LaunchConfiguration
+   * @schema CfnBastionModulePropsResources#LaunchConfiguration
    */
-  readonly launchConfiguration?: CfnModulePropsResourcesLaunchConfiguration;
+  readonly launchConfiguration?: CfnBastionModulePropsResourcesLaunchConfiguration;
 
   /**
-   * @schema CfnModulePropsResources#SSMAgentAutoUpdate
+   * @schema CfnBastionModulePropsResources#SSMAgentAutoUpdate
    */
-  readonly ssmAgentAutoUpdate?: CfnModulePropsResourcesSsmAgentAutoUpdate;
+  readonly ssmAgentAutoUpdate?: CfnBastionModulePropsResourcesSsmAgentAutoUpdate;
 
   /**
-   * @schema CfnModulePropsResources#CloudWatchAgentUpdateAndStart
+   * @schema CfnBastionModulePropsResources#CloudWatchAgentUpdateAndStart
    */
-  readonly cloudWatchAgentUpdateAndStart?: CfnModulePropsResourcesCloudWatchAgentUpdateAndStart;
+  readonly cloudWatchAgentUpdateAndStart?: CfnBastionModulePropsResourcesCloudWatchAgentUpdateAndStart;
 
   /**
-   * @schema CfnModulePropsResources#CloudWatchAgentAutoUpdate
+   * @schema CfnBastionModulePropsResources#CloudWatchAgentAutoUpdate
    */
-  readonly cloudWatchAgentAutoUpdate?: CfnModulePropsResourcesCloudWatchAgentAutoUpdate;
+  readonly cloudWatchAgentAutoUpdate?: CfnBastionModulePropsResourcesCloudWatchAgentAutoUpdate;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResources' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsResources' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResources(obj: CfnModulePropsResources | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsResources(obj: CfnBastionModulePropsResources | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'AutoScalingGroup': toJson_CfnModulePropsResourcesAutoScalingGroup(obj.autoScalingGroup),
-    'IAMRole': toJson_CfnModulePropsResourcesIamRole(obj.iamRole),
-    'IAMInstanceProfile': toJson_CfnModulePropsResourcesIamInstanceProfile(obj.iamInstanceProfile),
-    'InstancesSecurityGroup': toJson_CfnModulePropsResourcesInstancesSecurityGroup(obj.instancesSecurityGroup),
-    'LaunchConfiguration': toJson_CfnModulePropsResourcesLaunchConfiguration(obj.launchConfiguration),
-    'SSMAgentAutoUpdate': toJson_CfnModulePropsResourcesSsmAgentAutoUpdate(obj.ssmAgentAutoUpdate),
-    'CloudWatchAgentUpdateAndStart': toJson_CfnModulePropsResourcesCloudWatchAgentUpdateAndStart(obj.cloudWatchAgentUpdateAndStart),
-    'CloudWatchAgentAutoUpdate': toJson_CfnModulePropsResourcesCloudWatchAgentAutoUpdate(obj.cloudWatchAgentAutoUpdate),
+    'AutoScalingGroup': toJson_CfnBastionModulePropsResourcesAutoScalingGroup(obj.autoScalingGroup),
+    'IAMRole': toJson_CfnBastionModulePropsResourcesIamRole(obj.iamRole),
+    'IAMInstanceProfile': toJson_CfnBastionModulePropsResourcesIamInstanceProfile(obj.iamInstanceProfile),
+    'InstancesSecurityGroup': toJson_CfnBastionModulePropsResourcesInstancesSecurityGroup(obj.instancesSecurityGroup),
+    'LaunchConfiguration': toJson_CfnBastionModulePropsResourcesLaunchConfiguration(obj.launchConfiguration),
+    'SSMAgentAutoUpdate': toJson_CfnBastionModulePropsResourcesSsmAgentAutoUpdate(obj.ssmAgentAutoUpdate),
+    'CloudWatchAgentUpdateAndStart': toJson_CfnBastionModulePropsResourcesCloudWatchAgentUpdateAndStart(obj.cloudWatchAgentUpdateAndStart),
+    'CloudWatchAgentAutoUpdate': toJson_CfnBastionModulePropsResourcesCloudWatchAgentAutoUpdate(obj.cloudWatchAgentAutoUpdate),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -147,26 +147,26 @@ export function toJson_CfnModulePropsResources(obj: CfnModulePropsResources | un
 /**
  * VPC to run bastion server in
  *
- * @schema CfnModulePropsParametersVpcId
+ * @schema CfnBastionModulePropsParametersVpcId
  */
-export interface CfnModulePropsParametersVpcId {
+export interface CfnBastionModulePropsParametersVpcId {
   /**
-   * @schema CfnModulePropsParametersVpcId#Type
+   * @schema CfnBastionModulePropsParametersVpcId#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersVpcId#Description
+   * @schema CfnBastionModulePropsParametersVpcId#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersVpcId' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsParametersVpcId' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersVpcId(obj: CfnModulePropsParametersVpcId | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsParametersVpcId(obj: CfnBastionModulePropsParametersVpcId | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -180,26 +180,26 @@ export function toJson_CfnModulePropsParametersVpcId(obj: CfnModulePropsParamete
 /**
  * Subnets to pick from to run a bastion server in
  *
- * @schema CfnModulePropsParametersVpcSubnets
+ * @schema CfnBastionModulePropsParametersVpcSubnets
  */
-export interface CfnModulePropsParametersVpcSubnets {
+export interface CfnBastionModulePropsParametersVpcSubnets {
   /**
-   * @schema CfnModulePropsParametersVpcSubnets#Type
+   * @schema CfnBastionModulePropsParametersVpcSubnets#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersVpcSubnets#Description
+   * @schema CfnBastionModulePropsParametersVpcSubnets#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersVpcSubnets' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsParametersVpcSubnets' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersVpcSubnets(obj: CfnModulePropsParametersVpcSubnets | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsParametersVpcSubnets(obj: CfnBastionModulePropsParametersVpcSubnets | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -213,26 +213,26 @@ export function toJson_CfnModulePropsParametersVpcSubnets(obj: CfnModulePropsPar
 /**
  * EC2 instance class to provision
  *
- * @schema CfnModulePropsParametersInstanceClass
+ * @schema CfnBastionModulePropsParametersInstanceClass
  */
-export interface CfnModulePropsParametersInstanceClass {
+export interface CfnBastionModulePropsParametersInstanceClass {
   /**
-   * @schema CfnModulePropsParametersInstanceClass#Type
+   * @schema CfnBastionModulePropsParametersInstanceClass#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersInstanceClass#Description
+   * @schema CfnBastionModulePropsParametersInstanceClass#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersInstanceClass' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsParametersInstanceClass' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersInstanceClass(obj: CfnModulePropsParametersInstanceClass | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsParametersInstanceClass(obj: CfnBastionModulePropsParametersInstanceClass | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -244,26 +244,26 @@ export function toJson_CfnModulePropsParametersInstanceClass(obj: CfnModuleProps
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesAutoScalingGroup
+ * @schema CfnBastionModulePropsResourcesAutoScalingGroup
  */
-export interface CfnModulePropsResourcesAutoScalingGroup {
+export interface CfnBastionModulePropsResourcesAutoScalingGroup {
   /**
-   * @schema CfnModulePropsResourcesAutoScalingGroup#Type
+   * @schema CfnBastionModulePropsResourcesAutoScalingGroup#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesAutoScalingGroup#Properties
+   * @schema CfnBastionModulePropsResourcesAutoScalingGroup#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesAutoScalingGroup' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsResourcesAutoScalingGroup' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesAutoScalingGroup(obj: CfnModulePropsResourcesAutoScalingGroup | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsResourcesAutoScalingGroup(obj: CfnBastionModulePropsResourcesAutoScalingGroup | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -275,26 +275,26 @@ export function toJson_CfnModulePropsResourcesAutoScalingGroup(obj: CfnModulePro
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesIamRole
+ * @schema CfnBastionModulePropsResourcesIamRole
  */
-export interface CfnModulePropsResourcesIamRole {
+export interface CfnBastionModulePropsResourcesIamRole {
   /**
-   * @schema CfnModulePropsResourcesIamRole#Type
+   * @schema CfnBastionModulePropsResourcesIamRole#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesIamRole#Properties
+   * @schema CfnBastionModulePropsResourcesIamRole#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesIamRole' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsResourcesIamRole' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesIamRole(obj: CfnModulePropsResourcesIamRole | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsResourcesIamRole(obj: CfnBastionModulePropsResourcesIamRole | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -306,26 +306,26 @@ export function toJson_CfnModulePropsResourcesIamRole(obj: CfnModulePropsResourc
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesIamInstanceProfile
+ * @schema CfnBastionModulePropsResourcesIamInstanceProfile
  */
-export interface CfnModulePropsResourcesIamInstanceProfile {
+export interface CfnBastionModulePropsResourcesIamInstanceProfile {
   /**
-   * @schema CfnModulePropsResourcesIamInstanceProfile#Type
+   * @schema CfnBastionModulePropsResourcesIamInstanceProfile#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesIamInstanceProfile#Properties
+   * @schema CfnBastionModulePropsResourcesIamInstanceProfile#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesIamInstanceProfile' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsResourcesIamInstanceProfile' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesIamInstanceProfile(obj: CfnModulePropsResourcesIamInstanceProfile | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsResourcesIamInstanceProfile(obj: CfnBastionModulePropsResourcesIamInstanceProfile | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -337,26 +337,26 @@ export function toJson_CfnModulePropsResourcesIamInstanceProfile(obj: CfnModuleP
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesInstancesSecurityGroup
+ * @schema CfnBastionModulePropsResourcesInstancesSecurityGroup
  */
-export interface CfnModulePropsResourcesInstancesSecurityGroup {
+export interface CfnBastionModulePropsResourcesInstancesSecurityGroup {
   /**
-   * @schema CfnModulePropsResourcesInstancesSecurityGroup#Type
+   * @schema CfnBastionModulePropsResourcesInstancesSecurityGroup#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesInstancesSecurityGroup#Properties
+   * @schema CfnBastionModulePropsResourcesInstancesSecurityGroup#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesInstancesSecurityGroup' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsResourcesInstancesSecurityGroup' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesInstancesSecurityGroup(obj: CfnModulePropsResourcesInstancesSecurityGroup | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsResourcesInstancesSecurityGroup(obj: CfnBastionModulePropsResourcesInstancesSecurityGroup | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -368,26 +368,26 @@ export function toJson_CfnModulePropsResourcesInstancesSecurityGroup(obj: CfnMod
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesLaunchConfiguration
+ * @schema CfnBastionModulePropsResourcesLaunchConfiguration
  */
-export interface CfnModulePropsResourcesLaunchConfiguration {
+export interface CfnBastionModulePropsResourcesLaunchConfiguration {
   /**
-   * @schema CfnModulePropsResourcesLaunchConfiguration#Type
+   * @schema CfnBastionModulePropsResourcesLaunchConfiguration#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesLaunchConfiguration#Properties
+   * @schema CfnBastionModulePropsResourcesLaunchConfiguration#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesLaunchConfiguration' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsResourcesLaunchConfiguration' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesLaunchConfiguration(obj: CfnModulePropsResourcesLaunchConfiguration | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsResourcesLaunchConfiguration(obj: CfnBastionModulePropsResourcesLaunchConfiguration | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -399,26 +399,26 @@ export function toJson_CfnModulePropsResourcesLaunchConfiguration(obj: CfnModule
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesSsmAgentAutoUpdate
+ * @schema CfnBastionModulePropsResourcesSsmAgentAutoUpdate
  */
-export interface CfnModulePropsResourcesSsmAgentAutoUpdate {
+export interface CfnBastionModulePropsResourcesSsmAgentAutoUpdate {
   /**
-   * @schema CfnModulePropsResourcesSsmAgentAutoUpdate#Type
+   * @schema CfnBastionModulePropsResourcesSsmAgentAutoUpdate#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesSsmAgentAutoUpdate#Properties
+   * @schema CfnBastionModulePropsResourcesSsmAgentAutoUpdate#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesSsmAgentAutoUpdate' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsResourcesSsmAgentAutoUpdate' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesSsmAgentAutoUpdate(obj: CfnModulePropsResourcesSsmAgentAutoUpdate | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsResourcesSsmAgentAutoUpdate(obj: CfnBastionModulePropsResourcesSsmAgentAutoUpdate | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -430,26 +430,26 @@ export function toJson_CfnModulePropsResourcesSsmAgentAutoUpdate(obj: CfnModuleP
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesCloudWatchAgentUpdateAndStart
+ * @schema CfnBastionModulePropsResourcesCloudWatchAgentUpdateAndStart
  */
-export interface CfnModulePropsResourcesCloudWatchAgentUpdateAndStart {
+export interface CfnBastionModulePropsResourcesCloudWatchAgentUpdateAndStart {
   /**
-   * @schema CfnModulePropsResourcesCloudWatchAgentUpdateAndStart#Type
+   * @schema CfnBastionModulePropsResourcesCloudWatchAgentUpdateAndStart#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesCloudWatchAgentUpdateAndStart#Properties
+   * @schema CfnBastionModulePropsResourcesCloudWatchAgentUpdateAndStart#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesCloudWatchAgentUpdateAndStart' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsResourcesCloudWatchAgentUpdateAndStart' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesCloudWatchAgentUpdateAndStart(obj: CfnModulePropsResourcesCloudWatchAgentUpdateAndStart | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsResourcesCloudWatchAgentUpdateAndStart(obj: CfnBastionModulePropsResourcesCloudWatchAgentUpdateAndStart | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -461,26 +461,26 @@ export function toJson_CfnModulePropsResourcesCloudWatchAgentUpdateAndStart(obj:
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesCloudWatchAgentAutoUpdate
+ * @schema CfnBastionModulePropsResourcesCloudWatchAgentAutoUpdate
  */
-export interface CfnModulePropsResourcesCloudWatchAgentAutoUpdate {
+export interface CfnBastionModulePropsResourcesCloudWatchAgentAutoUpdate {
   /**
-   * @schema CfnModulePropsResourcesCloudWatchAgentAutoUpdate#Type
+   * @schema CfnBastionModulePropsResourcesCloudWatchAgentAutoUpdate#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesCloudWatchAgentAutoUpdate#Properties
+   * @schema CfnBastionModulePropsResourcesCloudWatchAgentAutoUpdate#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesCloudWatchAgentAutoUpdate' to JSON representation.
+ * Converts an object of type 'CfnBastionModulePropsResourcesCloudWatchAgentAutoUpdate' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesCloudWatchAgentAutoUpdate(obj: CfnModulePropsResourcesCloudWatchAgentAutoUpdate | undefined): Record<string, any> | undefined {
+export function toJson_CfnBastionModulePropsResourcesCloudWatchAgentAutoUpdate(obj: CfnBastionModulePropsResourcesCloudWatchAgentAutoUpdate | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -499,7 +499,7 @@ export function toJson_CfnModulePropsResourcesCloudWatchAgentAutoUpdate(obj: Cfn
  * @stability external
  * @link http://unknown-url
  */
-export class CfnModule extends cdk.CfnResource {
+export class CfnBastionModule extends cdk.CfnResource {
   /**
   * The CloudFormation resource type name for this resource class.
   */
@@ -508,7 +508,7 @@ export class CfnModule extends cdk.CfnResource {
   /**
    * Resource props.
    */
-  public readonly props: CfnModuleProps;
+  public readonly props: CfnBastionModuleProps;
 
 
   /**
@@ -518,8 +518,8 @@ export class CfnModule extends cdk.CfnResource {
    * @param id    - scoped id of the resource
    * @param props - resource properties
    */
-  constructor(scope: cdk.Construct, id: string, props: CfnModuleProps) {
-    super(scope, id, { type: CfnModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnModuleProps(props)! });
+  constructor(scope: cdk.Construct, id: string, props: CfnBastionModuleProps) {
+    super(scope, id, { type: CfnBastionModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnBastionModuleProps(props)! });
 
     this.props = props;
 

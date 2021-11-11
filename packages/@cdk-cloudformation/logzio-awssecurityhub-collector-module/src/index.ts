@@ -4,30 +4,30 @@ import * as cdk from '@aws-cdk/core';
 /**
  * Schema for Module Fragment of type logzio::awsSecurityHub::collector::MODULE
  *
- * @schema CfnModuleProps
+ * @schema CfnCollectorModuleProps
  */
-export interface CfnModuleProps {
+export interface CfnCollectorModuleProps {
   /**
-   * @schema CfnModuleProps#Parameters
+   * @schema CfnCollectorModuleProps#Parameters
    */
-  readonly parameters?: CfnModulePropsParameters;
+  readonly parameters?: CfnCollectorModulePropsParameters;
 
   /**
-   * @schema CfnModuleProps#Resources
+   * @schema CfnCollectorModuleProps#Resources
    */
-  readonly resources?: CfnModulePropsResources;
+  readonly resources?: CfnCollectorModulePropsResources;
 
 }
 
 /**
- * Converts an object of type 'CfnModuleProps' to JSON representation.
+ * Converts an object of type 'CfnCollectorModuleProps' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModuleProps(obj: CfnModuleProps | undefined): Record<string, any> | undefined {
+export function toJson_CfnCollectorModuleProps(obj: CfnCollectorModuleProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'Parameters': toJson_CfnModulePropsParameters(obj.parameters),
-    'Resources': toJson_CfnModulePropsResources(obj.resources),
+    'Parameters': toJson_CfnCollectorModulePropsParameters(obj.parameters),
+    'Resources': toJson_CfnCollectorModulePropsResources(obj.resources),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -35,42 +35,42 @@ export function toJson_CfnModuleProps(obj: CfnModuleProps | undefined): Record<s
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParameters
+ * @schema CfnCollectorModulePropsParameters
  */
-export interface CfnModulePropsParameters {
+export interface CfnCollectorModulePropsParameters {
   /**
    * Your Logz.io operations token
    *
-   * @schema CfnModulePropsParameters#logzioOperationsToken
+   * @schema CfnCollectorModulePropsParameters#logzioOperationsToken
    */
-  readonly logzioOperationsToken?: CfnModulePropsParametersLogzioOperationsToken;
+  readonly logzioOperationsToken?: CfnCollectorModulePropsParametersLogzioOperationsToken;
 
   /**
    * Your Logz.io listener with port 8070/8071. For example https://listener.logz.io:8071
    *
-   * @schema CfnModulePropsParameters#logzioListener
+   * @schema CfnCollectorModulePropsParameters#logzioListener
    */
-  readonly logzioListener?: CfnModulePropsParametersLogzioListener;
+  readonly logzioListener?: CfnCollectorModulePropsParametersLogzioListener;
 
   /**
    * Log level for the function
    *
-   * @schema CfnModulePropsParameters#logzioLogLevel
+   * @schema CfnCollectorModulePropsParameters#logzioLogLevel
    */
-  readonly logzioLogLevel?: CfnModulePropsParametersLogzioLogLevel;
+  readonly logzioLogLevel?: CfnCollectorModulePropsParametersLogzioLogLevel;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParameters' to JSON representation.
+ * Converts an object of type 'CfnCollectorModulePropsParameters' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParameters(obj: CfnModulePropsParameters | undefined): Record<string, any> | undefined {
+export function toJson_CfnCollectorModulePropsParameters(obj: CfnCollectorModulePropsParameters | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'logzioOperationsToken': toJson_CfnModulePropsParametersLogzioOperationsToken(obj.logzioOperationsToken),
-    'logzioListener': toJson_CfnModulePropsParametersLogzioListener(obj.logzioListener),
-    'logzioLogLevel': toJson_CfnModulePropsParametersLogzioLogLevel(obj.logzioLogLevel),
+    'logzioOperationsToken': toJson_CfnCollectorModulePropsParametersLogzioOperationsToken(obj.logzioOperationsToken),
+    'logzioListener': toJson_CfnCollectorModulePropsParametersLogzioListener(obj.logzioListener),
+    'logzioLogLevel': toJson_CfnCollectorModulePropsParametersLogzioLogLevel(obj.logzioLogLevel),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -78,42 +78,42 @@ export function toJson_CfnModulePropsParameters(obj: CfnModulePropsParameters | 
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResources
+ * @schema CfnCollectorModulePropsResources
  */
-export interface CfnModulePropsResources {
+export interface CfnCollectorModulePropsResources {
   /**
-   * @schema CfnModulePropsResources#logzioSecurityHubCollector
+   * @schema CfnCollectorModulePropsResources#logzioSecurityHubCollector
    */
-  readonly logzioSecurityHubCollector?: CfnModulePropsResourcesLogzioSecurityHubCollector;
+  readonly logzioSecurityHubCollector?: CfnCollectorModulePropsResourcesLogzioSecurityHubCollector;
 
   /**
-   * @schema CfnModulePropsResources#eventRule
+   * @schema CfnCollectorModulePropsResources#eventRule
    */
-  readonly eventRule?: CfnModulePropsResourcesEventRule;
+  readonly eventRule?: CfnCollectorModulePropsResourcesEventRule;
 
   /**
-   * @schema CfnModulePropsResources#lambdaPermissions
+   * @schema CfnCollectorModulePropsResources#lambdaPermissions
    */
-  readonly lambdaPermissions?: CfnModulePropsResourcesLambdaPermissions;
+  readonly lambdaPermissions?: CfnCollectorModulePropsResourcesLambdaPermissions;
 
   /**
-   * @schema CfnModulePropsResources#lambdaIamRole
+   * @schema CfnCollectorModulePropsResources#lambdaIamRole
    */
-  readonly lambdaIamRole?: CfnModulePropsResourcesLambdaIamRole;
+  readonly lambdaIamRole?: CfnCollectorModulePropsResourcesLambdaIamRole;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResources' to JSON representation.
+ * Converts an object of type 'CfnCollectorModulePropsResources' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResources(obj: CfnModulePropsResources | undefined): Record<string, any> | undefined {
+export function toJson_CfnCollectorModulePropsResources(obj: CfnCollectorModulePropsResources | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'logzioSecurityHubCollector': toJson_CfnModulePropsResourcesLogzioSecurityHubCollector(obj.logzioSecurityHubCollector),
-    'eventRule': toJson_CfnModulePropsResourcesEventRule(obj.eventRule),
-    'lambdaPermissions': toJson_CfnModulePropsResourcesLambdaPermissions(obj.lambdaPermissions),
-    'lambdaIamRole': toJson_CfnModulePropsResourcesLambdaIamRole(obj.lambdaIamRole),
+    'logzioSecurityHubCollector': toJson_CfnCollectorModulePropsResourcesLogzioSecurityHubCollector(obj.logzioSecurityHubCollector),
+    'eventRule': toJson_CfnCollectorModulePropsResourcesEventRule(obj.eventRule),
+    'lambdaPermissions': toJson_CfnCollectorModulePropsResourcesLambdaPermissions(obj.lambdaPermissions),
+    'lambdaIamRole': toJson_CfnCollectorModulePropsResourcesLambdaIamRole(obj.lambdaIamRole),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -123,26 +123,26 @@ export function toJson_CfnModulePropsResources(obj: CfnModulePropsResources | un
 /**
  * Your Logz.io operations token
  *
- * @schema CfnModulePropsParametersLogzioOperationsToken
+ * @schema CfnCollectorModulePropsParametersLogzioOperationsToken
  */
-export interface CfnModulePropsParametersLogzioOperationsToken {
+export interface CfnCollectorModulePropsParametersLogzioOperationsToken {
   /**
-   * @schema CfnModulePropsParametersLogzioOperationsToken#Type
+   * @schema CfnCollectorModulePropsParametersLogzioOperationsToken#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersLogzioOperationsToken#Description
+   * @schema CfnCollectorModulePropsParametersLogzioOperationsToken#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersLogzioOperationsToken' to JSON representation.
+ * Converts an object of type 'CfnCollectorModulePropsParametersLogzioOperationsToken' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersLogzioOperationsToken(obj: CfnModulePropsParametersLogzioOperationsToken | undefined): Record<string, any> | undefined {
+export function toJson_CfnCollectorModulePropsParametersLogzioOperationsToken(obj: CfnCollectorModulePropsParametersLogzioOperationsToken | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -156,26 +156,26 @@ export function toJson_CfnModulePropsParametersLogzioOperationsToken(obj: CfnMod
 /**
  * Your Logz.io listener with port 8070/8071. For example https://listener.logz.io:8071
  *
- * @schema CfnModulePropsParametersLogzioListener
+ * @schema CfnCollectorModulePropsParametersLogzioListener
  */
-export interface CfnModulePropsParametersLogzioListener {
+export interface CfnCollectorModulePropsParametersLogzioListener {
   /**
-   * @schema CfnModulePropsParametersLogzioListener#Type
+   * @schema CfnCollectorModulePropsParametersLogzioListener#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersLogzioListener#Description
+   * @schema CfnCollectorModulePropsParametersLogzioListener#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersLogzioListener' to JSON representation.
+ * Converts an object of type 'CfnCollectorModulePropsParametersLogzioListener' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersLogzioListener(obj: CfnModulePropsParametersLogzioListener | undefined): Record<string, any> | undefined {
+export function toJson_CfnCollectorModulePropsParametersLogzioListener(obj: CfnCollectorModulePropsParametersLogzioListener | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -189,26 +189,26 @@ export function toJson_CfnModulePropsParametersLogzioListener(obj: CfnModuleProp
 /**
  * Log level for the function
  *
- * @schema CfnModulePropsParametersLogzioLogLevel
+ * @schema CfnCollectorModulePropsParametersLogzioLogLevel
  */
-export interface CfnModulePropsParametersLogzioLogLevel {
+export interface CfnCollectorModulePropsParametersLogzioLogLevel {
   /**
-   * @schema CfnModulePropsParametersLogzioLogLevel#Type
+   * @schema CfnCollectorModulePropsParametersLogzioLogLevel#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersLogzioLogLevel#Description
+   * @schema CfnCollectorModulePropsParametersLogzioLogLevel#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersLogzioLogLevel' to JSON representation.
+ * Converts an object of type 'CfnCollectorModulePropsParametersLogzioLogLevel' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersLogzioLogLevel(obj: CfnModulePropsParametersLogzioLogLevel | undefined): Record<string, any> | undefined {
+export function toJson_CfnCollectorModulePropsParametersLogzioLogLevel(obj: CfnCollectorModulePropsParametersLogzioLogLevel | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -220,26 +220,26 @@ export function toJson_CfnModulePropsParametersLogzioLogLevel(obj: CfnModuleProp
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesLogzioSecurityHubCollector
+ * @schema CfnCollectorModulePropsResourcesLogzioSecurityHubCollector
  */
-export interface CfnModulePropsResourcesLogzioSecurityHubCollector {
+export interface CfnCollectorModulePropsResourcesLogzioSecurityHubCollector {
   /**
-   * @schema CfnModulePropsResourcesLogzioSecurityHubCollector#Type
+   * @schema CfnCollectorModulePropsResourcesLogzioSecurityHubCollector#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesLogzioSecurityHubCollector#Properties
+   * @schema CfnCollectorModulePropsResourcesLogzioSecurityHubCollector#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesLogzioSecurityHubCollector' to JSON representation.
+ * Converts an object of type 'CfnCollectorModulePropsResourcesLogzioSecurityHubCollector' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesLogzioSecurityHubCollector(obj: CfnModulePropsResourcesLogzioSecurityHubCollector | undefined): Record<string, any> | undefined {
+export function toJson_CfnCollectorModulePropsResourcesLogzioSecurityHubCollector(obj: CfnCollectorModulePropsResourcesLogzioSecurityHubCollector | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -251,26 +251,26 @@ export function toJson_CfnModulePropsResourcesLogzioSecurityHubCollector(obj: Cf
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesEventRule
+ * @schema CfnCollectorModulePropsResourcesEventRule
  */
-export interface CfnModulePropsResourcesEventRule {
+export interface CfnCollectorModulePropsResourcesEventRule {
   /**
-   * @schema CfnModulePropsResourcesEventRule#Type
+   * @schema CfnCollectorModulePropsResourcesEventRule#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesEventRule#Properties
+   * @schema CfnCollectorModulePropsResourcesEventRule#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesEventRule' to JSON representation.
+ * Converts an object of type 'CfnCollectorModulePropsResourcesEventRule' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesEventRule(obj: CfnModulePropsResourcesEventRule | undefined): Record<string, any> | undefined {
+export function toJson_CfnCollectorModulePropsResourcesEventRule(obj: CfnCollectorModulePropsResourcesEventRule | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -282,26 +282,26 @@ export function toJson_CfnModulePropsResourcesEventRule(obj: CfnModulePropsResou
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesLambdaPermissions
+ * @schema CfnCollectorModulePropsResourcesLambdaPermissions
  */
-export interface CfnModulePropsResourcesLambdaPermissions {
+export interface CfnCollectorModulePropsResourcesLambdaPermissions {
   /**
-   * @schema CfnModulePropsResourcesLambdaPermissions#Type
+   * @schema CfnCollectorModulePropsResourcesLambdaPermissions#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesLambdaPermissions#Properties
+   * @schema CfnCollectorModulePropsResourcesLambdaPermissions#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesLambdaPermissions' to JSON representation.
+ * Converts an object of type 'CfnCollectorModulePropsResourcesLambdaPermissions' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesLambdaPermissions(obj: CfnModulePropsResourcesLambdaPermissions | undefined): Record<string, any> | undefined {
+export function toJson_CfnCollectorModulePropsResourcesLambdaPermissions(obj: CfnCollectorModulePropsResourcesLambdaPermissions | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -313,26 +313,26 @@ export function toJson_CfnModulePropsResourcesLambdaPermissions(obj: CfnModulePr
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesLambdaIamRole
+ * @schema CfnCollectorModulePropsResourcesLambdaIamRole
  */
-export interface CfnModulePropsResourcesLambdaIamRole {
+export interface CfnCollectorModulePropsResourcesLambdaIamRole {
   /**
-   * @schema CfnModulePropsResourcesLambdaIamRole#Type
+   * @schema CfnCollectorModulePropsResourcesLambdaIamRole#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesLambdaIamRole#Properties
+   * @schema CfnCollectorModulePropsResourcesLambdaIamRole#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesLambdaIamRole' to JSON representation.
+ * Converts an object of type 'CfnCollectorModulePropsResourcesLambdaIamRole' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesLambdaIamRole(obj: CfnModulePropsResourcesLambdaIamRole | undefined): Record<string, any> | undefined {
+export function toJson_CfnCollectorModulePropsResourcesLambdaIamRole(obj: CfnCollectorModulePropsResourcesLambdaIamRole | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -351,7 +351,7 @@ export function toJson_CfnModulePropsResourcesLambdaIamRole(obj: CfnModulePropsR
  * @stability external
  * @link http://unknown-url
  */
-export class CfnModule extends cdk.CfnResource {
+export class CfnCollectorModule extends cdk.CfnResource {
   /**
   * The CloudFormation resource type name for this resource class.
   */
@@ -360,7 +360,7 @@ export class CfnModule extends cdk.CfnResource {
   /**
    * Resource props.
    */
-  public readonly props: CfnModuleProps;
+  public readonly props: CfnCollectorModuleProps;
 
 
   /**
@@ -370,8 +370,8 @@ export class CfnModule extends cdk.CfnResource {
    * @param id    - scoped id of the resource
    * @param props - resource properties
    */
-  constructor(scope: cdk.Construct, id: string, props: CfnModuleProps) {
-    super(scope, id, { type: CfnModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnModuleProps(props)! });
+  constructor(scope: cdk.Construct, id: string, props: CfnCollectorModuleProps) {
+    super(scope, id, { type: CfnCollectorModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnCollectorModuleProps(props)! });
 
     this.props = props;
 

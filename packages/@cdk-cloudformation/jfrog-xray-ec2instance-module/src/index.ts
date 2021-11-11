@@ -4,30 +4,30 @@ import * as cdk from '@aws-cdk/core';
 /**
  * Schema for Module Fragment of type JFrog::Xray::EC2Instance::MODULE
  *
- * @schema CfnModuleProps
+ * @schema CfnEc2InstanceModuleProps
  */
-export interface CfnModuleProps {
+export interface CfnEc2InstanceModuleProps {
   /**
-   * @schema CfnModuleProps#Parameters
+   * @schema CfnEc2InstanceModuleProps#Parameters
    */
-  readonly parameters?: CfnModulePropsParameters;
+  readonly parameters?: CfnEc2InstanceModulePropsParameters;
 
   /**
-   * @schema CfnModuleProps#Resources
+   * @schema CfnEc2InstanceModuleProps#Resources
    */
-  readonly resources?: CfnModulePropsResources;
+  readonly resources?: CfnEc2InstanceModulePropsResources;
 
 }
 
 /**
- * Converts an object of type 'CfnModuleProps' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModuleProps' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModuleProps(obj: CfnModuleProps | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModuleProps(obj: CfnEc2InstanceModuleProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'Parameters': toJson_CfnModulePropsParameters(obj.parameters),
-    'Resources': toJson_CfnModulePropsResources(obj.resources),
+    'Parameters': toJson_CfnEc2InstanceModulePropsParameters(obj.parameters),
+    'Resources': toJson_CfnEc2InstanceModulePropsResources(obj.resources),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -35,202 +35,202 @@ export function toJson_CfnModuleProps(obj: CfnModuleProps | undefined): Record<s
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParameters
+ * @schema CfnEc2InstanceModulePropsParameters
  */
-export interface CfnModulePropsParameters {
+export interface CfnEc2InstanceModulePropsParameters {
   /**
    * Logical Id of the MODULE
    *
-   * @schema CfnModulePropsParameters#LogicalId
+   * @schema CfnEc2InstanceModulePropsParameters#LogicalId
    */
-  readonly logicalId?: CfnModulePropsParametersLogicalId;
+  readonly logicalId?: CfnEc2InstanceModulePropsParametersLogicalId;
 
   /**
    * ID of the private subnet in Availability Zone 2 of your existing VPC (e.g., subnet-z0376dab).
    *
-   * @schema CfnModulePropsParameters#PrivateSubnet2Id
+   * @schema CfnEc2InstanceModulePropsParameters#PrivateSubnet2Id
    */
-  readonly privateSubnet2Id?: CfnModulePropsParametersPrivateSubnet2Id;
+  readonly privateSubnet2Id?: CfnEc2InstanceModulePropsParametersPrivateSubnet2Id;
 
   /**
    * ID of the private subnet in Availability Zone 1 of your existing VPC (e.g., subnet-z0376dab).
    *
-   * @schema CfnModulePropsParameters#PrivateSubnet1Id
+   * @schema CfnEc2InstanceModulePropsParameters#PrivateSubnet1Id
    */
-  readonly privateSubnet1Id?: CfnModulePropsParametersPrivateSubnet1Id;
+  readonly privateSubnet1Id?: CfnEc2InstanceModulePropsParametersPrivateSubnet1Id;
 
   /**
-   * @schema CfnModulePropsParameters#KeyPairName
+   * @schema CfnEc2InstanceModulePropsParameters#KeyPairName
    */
-  readonly keyPairName?: CfnModulePropsParametersKeyPairName;
+  readonly keyPairName?: CfnEc2InstanceModulePropsParametersKeyPairName;
 
   /**
-   * @schema CfnModulePropsParameters#MinScalingNodes
+   * @schema CfnEc2InstanceModulePropsParameters#MinScalingNodes
    */
-  readonly minScalingNodes?: CfnModulePropsParametersMinScalingNodes;
+  readonly minScalingNodes?: CfnEc2InstanceModulePropsParametersMinScalingNodes;
 
   /**
-   * @schema CfnModulePropsParameters#MaxScalingNodes
+   * @schema CfnEc2InstanceModulePropsParameters#MaxScalingNodes
    */
-  readonly maxScalingNodes?: CfnModulePropsParametersMaxScalingNodes;
+  readonly maxScalingNodes?: CfnEc2InstanceModulePropsParametersMaxScalingNodes;
 
   /**
-   * @schema CfnModulePropsParameters#DeploymentTag
+   * @schema CfnEc2InstanceModulePropsParameters#DeploymentTag
    */
-  readonly deploymentTag?: CfnModulePropsParametersDeploymentTag;
+  readonly deploymentTag?: CfnEc2InstanceModulePropsParametersDeploymentTag;
 
   /**
    * JFrog Artifactory product you want to install into an AMI.
    *
-   * @schema CfnModulePropsParameters#ArtifactoryProduct
+   * @schema CfnEc2InstanceModulePropsParameters#ArtifactoryProduct
    */
-  readonly artifactoryProduct?: CfnModulePropsParametersArtifactoryProduct;
+  readonly artifactoryProduct?: CfnEc2InstanceModulePropsParametersArtifactoryProduct;
 
   /**
-   * @schema CfnModulePropsParameters#QsS3BucketName
+   * @schema CfnEc2InstanceModulePropsParameters#QsS3BucketName
    */
-  readonly qsS3BucketName?: CfnModulePropsParametersQsS3BucketName;
+  readonly qsS3BucketName?: CfnEc2InstanceModulePropsParametersQsS3BucketName;
 
   /**
-   * @schema CfnModulePropsParameters#QsS3KeyPrefix
+   * @schema CfnEc2InstanceModulePropsParameters#QsS3KeyPrefix
    */
-  readonly qsS3KeyPrefix?: CfnModulePropsParametersQsS3KeyPrefix;
+  readonly qsS3KeyPrefix?: CfnEc2InstanceModulePropsParametersQsS3KeyPrefix;
 
   /**
-   * @schema CfnModulePropsParameters#QsS3Uri
+   * @schema CfnEc2InstanceModulePropsParameters#QsS3Uri
    */
-  readonly qsS3Uri?: CfnModulePropsParametersQsS3Uri;
+  readonly qsS3Uri?: CfnEc2InstanceModulePropsParametersQsS3Uri;
 
   /**
-   * @schema CfnModulePropsParameters#DatabaseDriver
+   * @schema CfnEc2InstanceModulePropsParameters#DatabaseDriver
    */
-  readonly databaseDriver?: CfnModulePropsParametersDatabaseDriver;
+  readonly databaseDriver?: CfnEc2InstanceModulePropsParametersDatabaseDriver;
 
   /**
-   * @schema CfnModulePropsParameters#DatabaseType
+   * @schema CfnEc2InstanceModulePropsParameters#DatabaseType
    */
-  readonly databaseType?: CfnModulePropsParametersDatabaseType;
+  readonly databaseType?: CfnEc2InstanceModulePropsParametersDatabaseType;
 
   /**
-   * @schema CfnModulePropsParameters#DatabaseUser
+   * @schema CfnEc2InstanceModulePropsParameters#DatabaseUser
    */
-  readonly databaseUser?: CfnModulePropsParametersDatabaseUser;
+  readonly databaseUser?: CfnEc2InstanceModulePropsParametersDatabaseUser;
 
   /**
-   * @schema CfnModulePropsParameters#DatabasePassword
+   * @schema CfnEc2InstanceModulePropsParameters#DatabasePassword
    */
-  readonly databasePassword?: CfnModulePropsParametersDatabasePassword;
+  readonly databasePassword?: CfnEc2InstanceModulePropsParametersDatabasePassword;
 
   /**
-   * @schema CfnModulePropsParameters#MasterKey
+   * @schema CfnEc2InstanceModulePropsParameters#MasterKey
    */
-  readonly masterKey?: CfnModulePropsParametersMasterKey;
+  readonly masterKey?: CfnEc2InstanceModulePropsParametersMasterKey;
 
   /**
-   * @schema CfnModulePropsParameters#ExtraJavaOptions
+   * @schema CfnEc2InstanceModulePropsParameters#ExtraJavaOptions
    */
-  readonly extraJavaOptions?: CfnModulePropsParametersExtraJavaOptions;
+  readonly extraJavaOptions?: CfnEc2InstanceModulePropsParametersExtraJavaOptions;
 
   /**
-   * @schema CfnModulePropsParameters#SecurityGroups
+   * @schema CfnEc2InstanceModulePropsParameters#SecurityGroups
    */
-  readonly securityGroups?: CfnModulePropsParametersSecurityGroups;
+  readonly securityGroups?: CfnEc2InstanceModulePropsParametersSecurityGroups;
 
   /**
-   * @schema CfnModulePropsParameters#XrayHostProfile
+   * @schema CfnEc2InstanceModulePropsParameters#XrayHostProfile
    */
-  readonly xrayHostProfile?: CfnModulePropsParametersXrayHostProfile;
+  readonly xrayHostProfile?: CfnEc2InstanceModulePropsParametersXrayHostProfile;
 
   /**
-   * @schema CfnModulePropsParameters#XrayHostRole
+   * @schema CfnEc2InstanceModulePropsParameters#XrayHostRole
    */
-  readonly xrayHostRole?: CfnModulePropsParametersXrayHostRole;
+  readonly xrayHostRole?: CfnEc2InstanceModulePropsParametersXrayHostRole;
 
   /**
-   * @schema CfnModulePropsParameters#XrayInstanceType
+   * @schema CfnEc2InstanceModulePropsParameters#XrayInstanceType
    */
-  readonly xrayInstanceType?: CfnModulePropsParametersXrayInstanceType;
+  readonly xrayInstanceType?: CfnEc2InstanceModulePropsParametersXrayInstanceType;
 
   /**
-   * @schema CfnModulePropsParameters#JfrogInternalUrl
+   * @schema CfnEc2InstanceModulePropsParameters#JfrogInternalUrl
    */
-  readonly jfrogInternalUrl?: CfnModulePropsParametersJfrogInternalUrl;
+  readonly jfrogInternalUrl?: CfnEc2InstanceModulePropsParametersJfrogInternalUrl;
 
   /**
-   * @schema CfnModulePropsParameters#VolumeSize
+   * @schema CfnEc2InstanceModulePropsParameters#VolumeSize
    */
-  readonly volumeSize?: CfnModulePropsParametersVolumeSize;
+  readonly volumeSize?: CfnEc2InstanceModulePropsParametersVolumeSize;
 
   /**
-   * @schema CfnModulePropsParameters#XrayDatabaseUser
+   * @schema CfnEc2InstanceModulePropsParameters#XrayDatabaseUser
    */
-  readonly xrayDatabaseUser?: CfnModulePropsParametersXrayDatabaseUser;
+  readonly xrayDatabaseUser?: CfnEc2InstanceModulePropsParametersXrayDatabaseUser;
 
   /**
-   * @schema CfnModulePropsParameters#XrayDatabasePassword
+   * @schema CfnEc2InstanceModulePropsParameters#XrayDatabasePassword
    */
-  readonly xrayDatabasePassword?: CfnModulePropsParametersXrayDatabasePassword;
+  readonly xrayDatabasePassword?: CfnEc2InstanceModulePropsParametersXrayDatabasePassword;
 
   /**
-   * @schema CfnModulePropsParameters#XrayMasterDatabaseUrl
+   * @schema CfnEc2InstanceModulePropsParameters#XrayMasterDatabaseUrl
    */
-  readonly xrayMasterDatabaseUrl?: CfnModulePropsParametersXrayMasterDatabaseUrl;
+  readonly xrayMasterDatabaseUrl?: CfnEc2InstanceModulePropsParametersXrayMasterDatabaseUrl;
 
   /**
-   * @schema CfnModulePropsParameters#XrayDatabaseUrl
+   * @schema CfnEc2InstanceModulePropsParameters#XrayDatabaseUrl
    */
-  readonly xrayDatabaseUrl?: CfnModulePropsParametersXrayDatabaseUrl;
+  readonly xrayDatabaseUrl?: CfnEc2InstanceModulePropsParametersXrayDatabaseUrl;
 
   /**
-   * @schema CfnModulePropsParameters#XrayVersion
+   * @schema CfnEc2InstanceModulePropsParameters#XrayVersion
    */
-  readonly xrayVersion?: CfnModulePropsParametersXrayVersion;
+  readonly xrayVersion?: CfnEc2InstanceModulePropsParametersXrayVersion;
 
   /**
    * Directory to store Artifactory data. Can be used to store data (via symlink) in detachable volume
    *
-   * @schema CfnModulePropsParameters#UserDataDirectory
+   * @schema CfnEc2InstanceModulePropsParameters#UserDataDirectory
    */
-  readonly userDataDirectory?: CfnModulePropsParametersUserDataDirectory;
+  readonly userDataDirectory?: CfnEc2InstanceModulePropsParametersUserDataDirectory;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParameters' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsParameters' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParameters(obj: CfnModulePropsParameters | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsParameters(obj: CfnEc2InstanceModulePropsParameters | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'LogicalId': toJson_CfnModulePropsParametersLogicalId(obj.logicalId),
-    'PrivateSubnet2Id': toJson_CfnModulePropsParametersPrivateSubnet2Id(obj.privateSubnet2Id),
-    'PrivateSubnet1Id': toJson_CfnModulePropsParametersPrivateSubnet1Id(obj.privateSubnet1Id),
-    'KeyPairName': toJson_CfnModulePropsParametersKeyPairName(obj.keyPairName),
-    'MinScalingNodes': toJson_CfnModulePropsParametersMinScalingNodes(obj.minScalingNodes),
-    'MaxScalingNodes': toJson_CfnModulePropsParametersMaxScalingNodes(obj.maxScalingNodes),
-    'DeploymentTag': toJson_CfnModulePropsParametersDeploymentTag(obj.deploymentTag),
-    'ArtifactoryProduct': toJson_CfnModulePropsParametersArtifactoryProduct(obj.artifactoryProduct),
-    'QsS3BucketName': toJson_CfnModulePropsParametersQsS3BucketName(obj.qsS3BucketName),
-    'QsS3KeyPrefix': toJson_CfnModulePropsParametersQsS3KeyPrefix(obj.qsS3KeyPrefix),
-    'QsS3Uri': toJson_CfnModulePropsParametersQsS3Uri(obj.qsS3Uri),
-    'DatabaseDriver': toJson_CfnModulePropsParametersDatabaseDriver(obj.databaseDriver),
-    'DatabaseType': toJson_CfnModulePropsParametersDatabaseType(obj.databaseType),
-    'DatabaseUser': toJson_CfnModulePropsParametersDatabaseUser(obj.databaseUser),
-    'DatabasePassword': toJson_CfnModulePropsParametersDatabasePassword(obj.databasePassword),
-    'MasterKey': toJson_CfnModulePropsParametersMasterKey(obj.masterKey),
-    'ExtraJavaOptions': toJson_CfnModulePropsParametersExtraJavaOptions(obj.extraJavaOptions),
-    'SecurityGroups': toJson_CfnModulePropsParametersSecurityGroups(obj.securityGroups),
-    'XrayHostProfile': toJson_CfnModulePropsParametersXrayHostProfile(obj.xrayHostProfile),
-    'XrayHostRole': toJson_CfnModulePropsParametersXrayHostRole(obj.xrayHostRole),
-    'XrayInstanceType': toJson_CfnModulePropsParametersXrayInstanceType(obj.xrayInstanceType),
-    'JfrogInternalUrl': toJson_CfnModulePropsParametersJfrogInternalUrl(obj.jfrogInternalUrl),
-    'VolumeSize': toJson_CfnModulePropsParametersVolumeSize(obj.volumeSize),
-    'XrayDatabaseUser': toJson_CfnModulePropsParametersXrayDatabaseUser(obj.xrayDatabaseUser),
-    'XrayDatabasePassword': toJson_CfnModulePropsParametersXrayDatabasePassword(obj.xrayDatabasePassword),
-    'XrayMasterDatabaseUrl': toJson_CfnModulePropsParametersXrayMasterDatabaseUrl(obj.xrayMasterDatabaseUrl),
-    'XrayDatabaseUrl': toJson_CfnModulePropsParametersXrayDatabaseUrl(obj.xrayDatabaseUrl),
-    'XrayVersion': toJson_CfnModulePropsParametersXrayVersion(obj.xrayVersion),
-    'UserDataDirectory': toJson_CfnModulePropsParametersUserDataDirectory(obj.userDataDirectory),
+    'LogicalId': toJson_CfnEc2InstanceModulePropsParametersLogicalId(obj.logicalId),
+    'PrivateSubnet2Id': toJson_CfnEc2InstanceModulePropsParametersPrivateSubnet2Id(obj.privateSubnet2Id),
+    'PrivateSubnet1Id': toJson_CfnEc2InstanceModulePropsParametersPrivateSubnet1Id(obj.privateSubnet1Id),
+    'KeyPairName': toJson_CfnEc2InstanceModulePropsParametersKeyPairName(obj.keyPairName),
+    'MinScalingNodes': toJson_CfnEc2InstanceModulePropsParametersMinScalingNodes(obj.minScalingNodes),
+    'MaxScalingNodes': toJson_CfnEc2InstanceModulePropsParametersMaxScalingNodes(obj.maxScalingNodes),
+    'DeploymentTag': toJson_CfnEc2InstanceModulePropsParametersDeploymentTag(obj.deploymentTag),
+    'ArtifactoryProduct': toJson_CfnEc2InstanceModulePropsParametersArtifactoryProduct(obj.artifactoryProduct),
+    'QsS3BucketName': toJson_CfnEc2InstanceModulePropsParametersQsS3BucketName(obj.qsS3BucketName),
+    'QsS3KeyPrefix': toJson_CfnEc2InstanceModulePropsParametersQsS3KeyPrefix(obj.qsS3KeyPrefix),
+    'QsS3Uri': toJson_CfnEc2InstanceModulePropsParametersQsS3Uri(obj.qsS3Uri),
+    'DatabaseDriver': toJson_CfnEc2InstanceModulePropsParametersDatabaseDriver(obj.databaseDriver),
+    'DatabaseType': toJson_CfnEc2InstanceModulePropsParametersDatabaseType(obj.databaseType),
+    'DatabaseUser': toJson_CfnEc2InstanceModulePropsParametersDatabaseUser(obj.databaseUser),
+    'DatabasePassword': toJson_CfnEc2InstanceModulePropsParametersDatabasePassword(obj.databasePassword),
+    'MasterKey': toJson_CfnEc2InstanceModulePropsParametersMasterKey(obj.masterKey),
+    'ExtraJavaOptions': toJson_CfnEc2InstanceModulePropsParametersExtraJavaOptions(obj.extraJavaOptions),
+    'SecurityGroups': toJson_CfnEc2InstanceModulePropsParametersSecurityGroups(obj.securityGroups),
+    'XrayHostProfile': toJson_CfnEc2InstanceModulePropsParametersXrayHostProfile(obj.xrayHostProfile),
+    'XrayHostRole': toJson_CfnEc2InstanceModulePropsParametersXrayHostRole(obj.xrayHostRole),
+    'XrayInstanceType': toJson_CfnEc2InstanceModulePropsParametersXrayInstanceType(obj.xrayInstanceType),
+    'JfrogInternalUrl': toJson_CfnEc2InstanceModulePropsParametersJfrogInternalUrl(obj.jfrogInternalUrl),
+    'VolumeSize': toJson_CfnEc2InstanceModulePropsParametersVolumeSize(obj.volumeSize),
+    'XrayDatabaseUser': toJson_CfnEc2InstanceModulePropsParametersXrayDatabaseUser(obj.xrayDatabaseUser),
+    'XrayDatabasePassword': toJson_CfnEc2InstanceModulePropsParametersXrayDatabasePassword(obj.xrayDatabasePassword),
+    'XrayMasterDatabaseUrl': toJson_CfnEc2InstanceModulePropsParametersXrayMasterDatabaseUrl(obj.xrayMasterDatabaseUrl),
+    'XrayDatabaseUrl': toJson_CfnEc2InstanceModulePropsParametersXrayDatabaseUrl(obj.xrayDatabaseUrl),
+    'XrayVersion': toJson_CfnEc2InstanceModulePropsParametersXrayVersion(obj.xrayVersion),
+    'UserDataDirectory': toJson_CfnEc2InstanceModulePropsParametersUserDataDirectory(obj.userDataDirectory),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -238,30 +238,30 @@ export function toJson_CfnModulePropsParameters(obj: CfnModulePropsParameters | 
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResources
+ * @schema CfnEc2InstanceModulePropsResources
  */
-export interface CfnModulePropsResources {
+export interface CfnEc2InstanceModulePropsResources {
   /**
-   * @schema CfnModulePropsResources#XrayScalingGroup
+   * @schema CfnEc2InstanceModulePropsResources#XrayScalingGroup
    */
-  readonly xrayScalingGroup?: CfnModulePropsResourcesXrayScalingGroup;
+  readonly xrayScalingGroup?: CfnEc2InstanceModulePropsResourcesXrayScalingGroup;
 
   /**
-   * @schema CfnModulePropsResources#XrayLaunchConfiguration
+   * @schema CfnEc2InstanceModulePropsResources#XrayLaunchConfiguration
    */
-  readonly xrayLaunchConfiguration?: CfnModulePropsResourcesXrayLaunchConfiguration;
+  readonly xrayLaunchConfiguration?: CfnEc2InstanceModulePropsResourcesXrayLaunchConfiguration;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResources' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsResources' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResources(obj: CfnModulePropsResources | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsResources(obj: CfnEc2InstanceModulePropsResources | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'XrayScalingGroup': toJson_CfnModulePropsResourcesXrayScalingGroup(obj.xrayScalingGroup),
-    'XrayLaunchConfiguration': toJson_CfnModulePropsResourcesXrayLaunchConfiguration(obj.xrayLaunchConfiguration),
+    'XrayScalingGroup': toJson_CfnEc2InstanceModulePropsResourcesXrayScalingGroup(obj.xrayScalingGroup),
+    'XrayLaunchConfiguration': toJson_CfnEc2InstanceModulePropsResourcesXrayLaunchConfiguration(obj.xrayLaunchConfiguration),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -271,26 +271,26 @@ export function toJson_CfnModulePropsResources(obj: CfnModulePropsResources | un
 /**
  * Logical Id of the MODULE
  *
- * @schema CfnModulePropsParametersLogicalId
+ * @schema CfnEc2InstanceModulePropsParametersLogicalId
  */
-export interface CfnModulePropsParametersLogicalId {
+export interface CfnEc2InstanceModulePropsParametersLogicalId {
   /**
-   * @schema CfnModulePropsParametersLogicalId#Type
+   * @schema CfnEc2InstanceModulePropsParametersLogicalId#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersLogicalId#Description
+   * @schema CfnEc2InstanceModulePropsParametersLogicalId#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersLogicalId' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsParametersLogicalId' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersLogicalId(obj: CfnModulePropsParametersLogicalId | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsParametersLogicalId(obj: CfnEc2InstanceModulePropsParametersLogicalId | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -304,26 +304,26 @@ export function toJson_CfnModulePropsParametersLogicalId(obj: CfnModulePropsPara
 /**
  * ID of the private subnet in Availability Zone 2 of your existing VPC (e.g., subnet-z0376dab).
  *
- * @schema CfnModulePropsParametersPrivateSubnet2Id
+ * @schema CfnEc2InstanceModulePropsParametersPrivateSubnet2Id
  */
-export interface CfnModulePropsParametersPrivateSubnet2Id {
+export interface CfnEc2InstanceModulePropsParametersPrivateSubnet2Id {
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet2Id#Type
+   * @schema CfnEc2InstanceModulePropsParametersPrivateSubnet2Id#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet2Id#Description
+   * @schema CfnEc2InstanceModulePropsParametersPrivateSubnet2Id#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPrivateSubnet2Id' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsParametersPrivateSubnet2Id' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPrivateSubnet2Id(obj: CfnModulePropsParametersPrivateSubnet2Id | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsParametersPrivateSubnet2Id(obj: CfnEc2InstanceModulePropsParametersPrivateSubnet2Id | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -337,26 +337,26 @@ export function toJson_CfnModulePropsParametersPrivateSubnet2Id(obj: CfnModulePr
 /**
  * ID of the private subnet in Availability Zone 1 of your existing VPC (e.g., subnet-z0376dab).
  *
- * @schema CfnModulePropsParametersPrivateSubnet1Id
+ * @schema CfnEc2InstanceModulePropsParametersPrivateSubnet1Id
  */
-export interface CfnModulePropsParametersPrivateSubnet1Id {
+export interface CfnEc2InstanceModulePropsParametersPrivateSubnet1Id {
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet1Id#Type
+   * @schema CfnEc2InstanceModulePropsParametersPrivateSubnet1Id#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet1Id#Description
+   * @schema CfnEc2InstanceModulePropsParametersPrivateSubnet1Id#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPrivateSubnet1Id' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsParametersPrivateSubnet1Id' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPrivateSubnet1Id(obj: CfnModulePropsParametersPrivateSubnet1Id | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsParametersPrivateSubnet1Id(obj: CfnEc2InstanceModulePropsParametersPrivateSubnet1Id | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -368,21 +368,21 @@ export function toJson_CfnModulePropsParametersPrivateSubnet1Id(obj: CfnModulePr
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersKeyPairName
+ * @schema CfnEc2InstanceModulePropsParametersKeyPairName
  */
-export interface CfnModulePropsParametersKeyPairName {
+export interface CfnEc2InstanceModulePropsParametersKeyPairName {
   /**
-   * @schema CfnModulePropsParametersKeyPairName#Type
+   * @schema CfnEc2InstanceModulePropsParametersKeyPairName#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersKeyPairName' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsParametersKeyPairName' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersKeyPairName(obj: CfnModulePropsParametersKeyPairName | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsParametersKeyPairName(obj: CfnEc2InstanceModulePropsParametersKeyPairName | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -393,21 +393,21 @@ export function toJson_CfnModulePropsParametersKeyPairName(obj: CfnModulePropsPa
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersMinScalingNodes
+ * @schema CfnEc2InstanceModulePropsParametersMinScalingNodes
  */
-export interface CfnModulePropsParametersMinScalingNodes {
+export interface CfnEc2InstanceModulePropsParametersMinScalingNodes {
   /**
-   * @schema CfnModulePropsParametersMinScalingNodes#Type
+   * @schema CfnEc2InstanceModulePropsParametersMinScalingNodes#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersMinScalingNodes' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsParametersMinScalingNodes' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersMinScalingNodes(obj: CfnModulePropsParametersMinScalingNodes | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsParametersMinScalingNodes(obj: CfnEc2InstanceModulePropsParametersMinScalingNodes | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -418,21 +418,21 @@ export function toJson_CfnModulePropsParametersMinScalingNodes(obj: CfnModulePro
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersMaxScalingNodes
+ * @schema CfnEc2InstanceModulePropsParametersMaxScalingNodes
  */
-export interface CfnModulePropsParametersMaxScalingNodes {
+export interface CfnEc2InstanceModulePropsParametersMaxScalingNodes {
   /**
-   * @schema CfnModulePropsParametersMaxScalingNodes#Type
+   * @schema CfnEc2InstanceModulePropsParametersMaxScalingNodes#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersMaxScalingNodes' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsParametersMaxScalingNodes' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersMaxScalingNodes(obj: CfnModulePropsParametersMaxScalingNodes | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsParametersMaxScalingNodes(obj: CfnEc2InstanceModulePropsParametersMaxScalingNodes | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -443,21 +443,21 @@ export function toJson_CfnModulePropsParametersMaxScalingNodes(obj: CfnModulePro
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersDeploymentTag
+ * @schema CfnEc2InstanceModulePropsParametersDeploymentTag
  */
-export interface CfnModulePropsParametersDeploymentTag {
+export interface CfnEc2InstanceModulePropsParametersDeploymentTag {
   /**
-   * @schema CfnModulePropsParametersDeploymentTag#Type
+   * @schema CfnEc2InstanceModulePropsParametersDeploymentTag#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersDeploymentTag' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsParametersDeploymentTag' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersDeploymentTag(obj: CfnModulePropsParametersDeploymentTag | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsParametersDeploymentTag(obj: CfnEc2InstanceModulePropsParametersDeploymentTag | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -470,26 +470,26 @@ export function toJson_CfnModulePropsParametersDeploymentTag(obj: CfnModuleProps
 /**
  * JFrog Artifactory product you want to install into an AMI.
  *
- * @schema CfnModulePropsParametersArtifactoryProduct
+ * @schema CfnEc2InstanceModulePropsParametersArtifactoryProduct
  */
-export interface CfnModulePropsParametersArtifactoryProduct {
+export interface CfnEc2InstanceModulePropsParametersArtifactoryProduct {
   /**
-   * @schema CfnModulePropsParametersArtifactoryProduct#Type
+   * @schema CfnEc2InstanceModulePropsParametersArtifactoryProduct#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersArtifactoryProduct#Description
+   * @schema CfnEc2InstanceModulePropsParametersArtifactoryProduct#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersArtifactoryProduct' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsParametersArtifactoryProduct' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersArtifactoryProduct(obj: CfnModulePropsParametersArtifactoryProduct | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsParametersArtifactoryProduct(obj: CfnEc2InstanceModulePropsParametersArtifactoryProduct | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -501,21 +501,21 @@ export function toJson_CfnModulePropsParametersArtifactoryProduct(obj: CfnModule
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersQsS3BucketName
+ * @schema CfnEc2InstanceModulePropsParametersQsS3BucketName
  */
-export interface CfnModulePropsParametersQsS3BucketName {
+export interface CfnEc2InstanceModulePropsParametersQsS3BucketName {
   /**
-   * @schema CfnModulePropsParametersQsS3BucketName#Type
+   * @schema CfnEc2InstanceModulePropsParametersQsS3BucketName#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersQsS3BucketName' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsParametersQsS3BucketName' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersQsS3BucketName(obj: CfnModulePropsParametersQsS3BucketName | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsParametersQsS3BucketName(obj: CfnEc2InstanceModulePropsParametersQsS3BucketName | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -526,21 +526,21 @@ export function toJson_CfnModulePropsParametersQsS3BucketName(obj: CfnModuleProp
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersQsS3KeyPrefix
+ * @schema CfnEc2InstanceModulePropsParametersQsS3KeyPrefix
  */
-export interface CfnModulePropsParametersQsS3KeyPrefix {
+export interface CfnEc2InstanceModulePropsParametersQsS3KeyPrefix {
   /**
-   * @schema CfnModulePropsParametersQsS3KeyPrefix#Type
+   * @schema CfnEc2InstanceModulePropsParametersQsS3KeyPrefix#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersQsS3KeyPrefix' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsParametersQsS3KeyPrefix' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersQsS3KeyPrefix(obj: CfnModulePropsParametersQsS3KeyPrefix | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsParametersQsS3KeyPrefix(obj: CfnEc2InstanceModulePropsParametersQsS3KeyPrefix | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -551,21 +551,21 @@ export function toJson_CfnModulePropsParametersQsS3KeyPrefix(obj: CfnModuleProps
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersQsS3Uri
+ * @schema CfnEc2InstanceModulePropsParametersQsS3Uri
  */
-export interface CfnModulePropsParametersQsS3Uri {
+export interface CfnEc2InstanceModulePropsParametersQsS3Uri {
   /**
-   * @schema CfnModulePropsParametersQsS3Uri#Type
+   * @schema CfnEc2InstanceModulePropsParametersQsS3Uri#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersQsS3Uri' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsParametersQsS3Uri' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersQsS3Uri(obj: CfnModulePropsParametersQsS3Uri | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsParametersQsS3Uri(obj: CfnEc2InstanceModulePropsParametersQsS3Uri | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -576,21 +576,21 @@ export function toJson_CfnModulePropsParametersQsS3Uri(obj: CfnModulePropsParame
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersDatabaseDriver
+ * @schema CfnEc2InstanceModulePropsParametersDatabaseDriver
  */
-export interface CfnModulePropsParametersDatabaseDriver {
+export interface CfnEc2InstanceModulePropsParametersDatabaseDriver {
   /**
-   * @schema CfnModulePropsParametersDatabaseDriver#Type
+   * @schema CfnEc2InstanceModulePropsParametersDatabaseDriver#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersDatabaseDriver' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsParametersDatabaseDriver' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersDatabaseDriver(obj: CfnModulePropsParametersDatabaseDriver | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsParametersDatabaseDriver(obj: CfnEc2InstanceModulePropsParametersDatabaseDriver | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -601,21 +601,21 @@ export function toJson_CfnModulePropsParametersDatabaseDriver(obj: CfnModuleProp
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersDatabaseType
+ * @schema CfnEc2InstanceModulePropsParametersDatabaseType
  */
-export interface CfnModulePropsParametersDatabaseType {
+export interface CfnEc2InstanceModulePropsParametersDatabaseType {
   /**
-   * @schema CfnModulePropsParametersDatabaseType#Type
+   * @schema CfnEc2InstanceModulePropsParametersDatabaseType#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersDatabaseType' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsParametersDatabaseType' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersDatabaseType(obj: CfnModulePropsParametersDatabaseType | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsParametersDatabaseType(obj: CfnEc2InstanceModulePropsParametersDatabaseType | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -626,21 +626,21 @@ export function toJson_CfnModulePropsParametersDatabaseType(obj: CfnModulePropsP
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersDatabaseUser
+ * @schema CfnEc2InstanceModulePropsParametersDatabaseUser
  */
-export interface CfnModulePropsParametersDatabaseUser {
+export interface CfnEc2InstanceModulePropsParametersDatabaseUser {
   /**
-   * @schema CfnModulePropsParametersDatabaseUser#Type
+   * @schema CfnEc2InstanceModulePropsParametersDatabaseUser#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersDatabaseUser' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsParametersDatabaseUser' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersDatabaseUser(obj: CfnModulePropsParametersDatabaseUser | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsParametersDatabaseUser(obj: CfnEc2InstanceModulePropsParametersDatabaseUser | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -651,21 +651,21 @@ export function toJson_CfnModulePropsParametersDatabaseUser(obj: CfnModulePropsP
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersDatabasePassword
+ * @schema CfnEc2InstanceModulePropsParametersDatabasePassword
  */
-export interface CfnModulePropsParametersDatabasePassword {
+export interface CfnEc2InstanceModulePropsParametersDatabasePassword {
   /**
-   * @schema CfnModulePropsParametersDatabasePassword#Type
+   * @schema CfnEc2InstanceModulePropsParametersDatabasePassword#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersDatabasePassword' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsParametersDatabasePassword' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersDatabasePassword(obj: CfnModulePropsParametersDatabasePassword | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsParametersDatabasePassword(obj: CfnEc2InstanceModulePropsParametersDatabasePassword | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -676,21 +676,21 @@ export function toJson_CfnModulePropsParametersDatabasePassword(obj: CfnModulePr
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersMasterKey
+ * @schema CfnEc2InstanceModulePropsParametersMasterKey
  */
-export interface CfnModulePropsParametersMasterKey {
+export interface CfnEc2InstanceModulePropsParametersMasterKey {
   /**
-   * @schema CfnModulePropsParametersMasterKey#Type
+   * @schema CfnEc2InstanceModulePropsParametersMasterKey#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersMasterKey' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsParametersMasterKey' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersMasterKey(obj: CfnModulePropsParametersMasterKey | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsParametersMasterKey(obj: CfnEc2InstanceModulePropsParametersMasterKey | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -701,21 +701,21 @@ export function toJson_CfnModulePropsParametersMasterKey(obj: CfnModulePropsPara
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersExtraJavaOptions
+ * @schema CfnEc2InstanceModulePropsParametersExtraJavaOptions
  */
-export interface CfnModulePropsParametersExtraJavaOptions {
+export interface CfnEc2InstanceModulePropsParametersExtraJavaOptions {
   /**
-   * @schema CfnModulePropsParametersExtraJavaOptions#Type
+   * @schema CfnEc2InstanceModulePropsParametersExtraJavaOptions#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersExtraJavaOptions' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsParametersExtraJavaOptions' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersExtraJavaOptions(obj: CfnModulePropsParametersExtraJavaOptions | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsParametersExtraJavaOptions(obj: CfnEc2InstanceModulePropsParametersExtraJavaOptions | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -726,21 +726,21 @@ export function toJson_CfnModulePropsParametersExtraJavaOptions(obj: CfnModulePr
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersSecurityGroups
+ * @schema CfnEc2InstanceModulePropsParametersSecurityGroups
  */
-export interface CfnModulePropsParametersSecurityGroups {
+export interface CfnEc2InstanceModulePropsParametersSecurityGroups {
   /**
-   * @schema CfnModulePropsParametersSecurityGroups#Type
+   * @schema CfnEc2InstanceModulePropsParametersSecurityGroups#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersSecurityGroups' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsParametersSecurityGroups' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersSecurityGroups(obj: CfnModulePropsParametersSecurityGroups | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsParametersSecurityGroups(obj: CfnEc2InstanceModulePropsParametersSecurityGroups | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -751,21 +751,21 @@ export function toJson_CfnModulePropsParametersSecurityGroups(obj: CfnModuleProp
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersXrayHostProfile
+ * @schema CfnEc2InstanceModulePropsParametersXrayHostProfile
  */
-export interface CfnModulePropsParametersXrayHostProfile {
+export interface CfnEc2InstanceModulePropsParametersXrayHostProfile {
   /**
-   * @schema CfnModulePropsParametersXrayHostProfile#Type
+   * @schema CfnEc2InstanceModulePropsParametersXrayHostProfile#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersXrayHostProfile' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsParametersXrayHostProfile' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersXrayHostProfile(obj: CfnModulePropsParametersXrayHostProfile | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsParametersXrayHostProfile(obj: CfnEc2InstanceModulePropsParametersXrayHostProfile | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -776,21 +776,21 @@ export function toJson_CfnModulePropsParametersXrayHostProfile(obj: CfnModulePro
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersXrayHostRole
+ * @schema CfnEc2InstanceModulePropsParametersXrayHostRole
  */
-export interface CfnModulePropsParametersXrayHostRole {
+export interface CfnEc2InstanceModulePropsParametersXrayHostRole {
   /**
-   * @schema CfnModulePropsParametersXrayHostRole#Type
+   * @schema CfnEc2InstanceModulePropsParametersXrayHostRole#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersXrayHostRole' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsParametersXrayHostRole' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersXrayHostRole(obj: CfnModulePropsParametersXrayHostRole | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsParametersXrayHostRole(obj: CfnEc2InstanceModulePropsParametersXrayHostRole | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -801,21 +801,21 @@ export function toJson_CfnModulePropsParametersXrayHostRole(obj: CfnModulePropsP
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersXrayInstanceType
+ * @schema CfnEc2InstanceModulePropsParametersXrayInstanceType
  */
-export interface CfnModulePropsParametersXrayInstanceType {
+export interface CfnEc2InstanceModulePropsParametersXrayInstanceType {
   /**
-   * @schema CfnModulePropsParametersXrayInstanceType#Type
+   * @schema CfnEc2InstanceModulePropsParametersXrayInstanceType#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersXrayInstanceType' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsParametersXrayInstanceType' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersXrayInstanceType(obj: CfnModulePropsParametersXrayInstanceType | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsParametersXrayInstanceType(obj: CfnEc2InstanceModulePropsParametersXrayInstanceType | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -826,21 +826,21 @@ export function toJson_CfnModulePropsParametersXrayInstanceType(obj: CfnModulePr
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersJfrogInternalUrl
+ * @schema CfnEc2InstanceModulePropsParametersJfrogInternalUrl
  */
-export interface CfnModulePropsParametersJfrogInternalUrl {
+export interface CfnEc2InstanceModulePropsParametersJfrogInternalUrl {
   /**
-   * @schema CfnModulePropsParametersJfrogInternalUrl#Type
+   * @schema CfnEc2InstanceModulePropsParametersJfrogInternalUrl#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersJfrogInternalUrl' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsParametersJfrogInternalUrl' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersJfrogInternalUrl(obj: CfnModulePropsParametersJfrogInternalUrl | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsParametersJfrogInternalUrl(obj: CfnEc2InstanceModulePropsParametersJfrogInternalUrl | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -851,21 +851,21 @@ export function toJson_CfnModulePropsParametersJfrogInternalUrl(obj: CfnModulePr
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersVolumeSize
+ * @schema CfnEc2InstanceModulePropsParametersVolumeSize
  */
-export interface CfnModulePropsParametersVolumeSize {
+export interface CfnEc2InstanceModulePropsParametersVolumeSize {
   /**
-   * @schema CfnModulePropsParametersVolumeSize#Type
+   * @schema CfnEc2InstanceModulePropsParametersVolumeSize#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersVolumeSize' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsParametersVolumeSize' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersVolumeSize(obj: CfnModulePropsParametersVolumeSize | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsParametersVolumeSize(obj: CfnEc2InstanceModulePropsParametersVolumeSize | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -876,21 +876,21 @@ export function toJson_CfnModulePropsParametersVolumeSize(obj: CfnModulePropsPar
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersXrayDatabaseUser
+ * @schema CfnEc2InstanceModulePropsParametersXrayDatabaseUser
  */
-export interface CfnModulePropsParametersXrayDatabaseUser {
+export interface CfnEc2InstanceModulePropsParametersXrayDatabaseUser {
   /**
-   * @schema CfnModulePropsParametersXrayDatabaseUser#Type
+   * @schema CfnEc2InstanceModulePropsParametersXrayDatabaseUser#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersXrayDatabaseUser' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsParametersXrayDatabaseUser' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersXrayDatabaseUser(obj: CfnModulePropsParametersXrayDatabaseUser | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsParametersXrayDatabaseUser(obj: CfnEc2InstanceModulePropsParametersXrayDatabaseUser | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -901,21 +901,21 @@ export function toJson_CfnModulePropsParametersXrayDatabaseUser(obj: CfnModulePr
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersXrayDatabasePassword
+ * @schema CfnEc2InstanceModulePropsParametersXrayDatabasePassword
  */
-export interface CfnModulePropsParametersXrayDatabasePassword {
+export interface CfnEc2InstanceModulePropsParametersXrayDatabasePassword {
   /**
-   * @schema CfnModulePropsParametersXrayDatabasePassword#Type
+   * @schema CfnEc2InstanceModulePropsParametersXrayDatabasePassword#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersXrayDatabasePassword' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsParametersXrayDatabasePassword' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersXrayDatabasePassword(obj: CfnModulePropsParametersXrayDatabasePassword | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsParametersXrayDatabasePassword(obj: CfnEc2InstanceModulePropsParametersXrayDatabasePassword | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -926,21 +926,21 @@ export function toJson_CfnModulePropsParametersXrayDatabasePassword(obj: CfnModu
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersXrayMasterDatabaseUrl
+ * @schema CfnEc2InstanceModulePropsParametersXrayMasterDatabaseUrl
  */
-export interface CfnModulePropsParametersXrayMasterDatabaseUrl {
+export interface CfnEc2InstanceModulePropsParametersXrayMasterDatabaseUrl {
   /**
-   * @schema CfnModulePropsParametersXrayMasterDatabaseUrl#Type
+   * @schema CfnEc2InstanceModulePropsParametersXrayMasterDatabaseUrl#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersXrayMasterDatabaseUrl' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsParametersXrayMasterDatabaseUrl' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersXrayMasterDatabaseUrl(obj: CfnModulePropsParametersXrayMasterDatabaseUrl | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsParametersXrayMasterDatabaseUrl(obj: CfnEc2InstanceModulePropsParametersXrayMasterDatabaseUrl | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -951,21 +951,21 @@ export function toJson_CfnModulePropsParametersXrayMasterDatabaseUrl(obj: CfnMod
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersXrayDatabaseUrl
+ * @schema CfnEc2InstanceModulePropsParametersXrayDatabaseUrl
  */
-export interface CfnModulePropsParametersXrayDatabaseUrl {
+export interface CfnEc2InstanceModulePropsParametersXrayDatabaseUrl {
   /**
-   * @schema CfnModulePropsParametersXrayDatabaseUrl#Type
+   * @schema CfnEc2InstanceModulePropsParametersXrayDatabaseUrl#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersXrayDatabaseUrl' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsParametersXrayDatabaseUrl' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersXrayDatabaseUrl(obj: CfnModulePropsParametersXrayDatabaseUrl | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsParametersXrayDatabaseUrl(obj: CfnEc2InstanceModulePropsParametersXrayDatabaseUrl | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -976,21 +976,21 @@ export function toJson_CfnModulePropsParametersXrayDatabaseUrl(obj: CfnModulePro
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersXrayVersion
+ * @schema CfnEc2InstanceModulePropsParametersXrayVersion
  */
-export interface CfnModulePropsParametersXrayVersion {
+export interface CfnEc2InstanceModulePropsParametersXrayVersion {
   /**
-   * @schema CfnModulePropsParametersXrayVersion#Type
+   * @schema CfnEc2InstanceModulePropsParametersXrayVersion#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersXrayVersion' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsParametersXrayVersion' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersXrayVersion(obj: CfnModulePropsParametersXrayVersion | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsParametersXrayVersion(obj: CfnEc2InstanceModulePropsParametersXrayVersion | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1003,26 +1003,26 @@ export function toJson_CfnModulePropsParametersXrayVersion(obj: CfnModulePropsPa
 /**
  * Directory to store Artifactory data. Can be used to store data (via symlink) in detachable volume
  *
- * @schema CfnModulePropsParametersUserDataDirectory
+ * @schema CfnEc2InstanceModulePropsParametersUserDataDirectory
  */
-export interface CfnModulePropsParametersUserDataDirectory {
+export interface CfnEc2InstanceModulePropsParametersUserDataDirectory {
   /**
-   * @schema CfnModulePropsParametersUserDataDirectory#Type
+   * @schema CfnEc2InstanceModulePropsParametersUserDataDirectory#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersUserDataDirectory#Description
+   * @schema CfnEc2InstanceModulePropsParametersUserDataDirectory#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersUserDataDirectory' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsParametersUserDataDirectory' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersUserDataDirectory(obj: CfnModulePropsParametersUserDataDirectory | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsParametersUserDataDirectory(obj: CfnEc2InstanceModulePropsParametersUserDataDirectory | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1034,26 +1034,26 @@ export function toJson_CfnModulePropsParametersUserDataDirectory(obj: CfnModuleP
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesXrayScalingGroup
+ * @schema CfnEc2InstanceModulePropsResourcesXrayScalingGroup
  */
-export interface CfnModulePropsResourcesXrayScalingGroup {
+export interface CfnEc2InstanceModulePropsResourcesXrayScalingGroup {
   /**
-   * @schema CfnModulePropsResourcesXrayScalingGroup#Type
+   * @schema CfnEc2InstanceModulePropsResourcesXrayScalingGroup#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesXrayScalingGroup#Properties
+   * @schema CfnEc2InstanceModulePropsResourcesXrayScalingGroup#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesXrayScalingGroup' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsResourcesXrayScalingGroup' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesXrayScalingGroup(obj: CfnModulePropsResourcesXrayScalingGroup | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsResourcesXrayScalingGroup(obj: CfnEc2InstanceModulePropsResourcesXrayScalingGroup | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1065,26 +1065,26 @@ export function toJson_CfnModulePropsResourcesXrayScalingGroup(obj: CfnModulePro
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesXrayLaunchConfiguration
+ * @schema CfnEc2InstanceModulePropsResourcesXrayLaunchConfiguration
  */
-export interface CfnModulePropsResourcesXrayLaunchConfiguration {
+export interface CfnEc2InstanceModulePropsResourcesXrayLaunchConfiguration {
   /**
-   * @schema CfnModulePropsResourcesXrayLaunchConfiguration#Type
+   * @schema CfnEc2InstanceModulePropsResourcesXrayLaunchConfiguration#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesXrayLaunchConfiguration#Properties
+   * @schema CfnEc2InstanceModulePropsResourcesXrayLaunchConfiguration#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesXrayLaunchConfiguration' to JSON representation.
+ * Converts an object of type 'CfnEc2InstanceModulePropsResourcesXrayLaunchConfiguration' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesXrayLaunchConfiguration(obj: CfnModulePropsResourcesXrayLaunchConfiguration | undefined): Record<string, any> | undefined {
+export function toJson_CfnEc2InstanceModulePropsResourcesXrayLaunchConfiguration(obj: CfnEc2InstanceModulePropsResourcesXrayLaunchConfiguration | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1103,7 +1103,7 @@ export function toJson_CfnModulePropsResourcesXrayLaunchConfiguration(obj: CfnMo
  * @stability external
  * @link http://unknown-url
  */
-export class CfnModule extends cdk.CfnResource {
+export class CfnEc2InstanceModule extends cdk.CfnResource {
   /**
   * The CloudFormation resource type name for this resource class.
   */
@@ -1112,7 +1112,7 @@ export class CfnModule extends cdk.CfnResource {
   /**
    * Resource props.
    */
-  public readonly props: CfnModuleProps;
+  public readonly props: CfnEc2InstanceModuleProps;
 
 
   /**
@@ -1122,8 +1122,8 @@ export class CfnModule extends cdk.CfnResource {
    * @param id    - scoped id of the resource
    * @param props - resource properties
    */
-  constructor(scope: cdk.Construct, id: string, props: CfnModuleProps) {
-    super(scope, id, { type: CfnModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnModuleProps(props)! });
+  constructor(scope: cdk.Construct, id: string, props: CfnEc2InstanceModuleProps) {
+    super(scope, id, { type: CfnEc2InstanceModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnEc2InstanceModuleProps(props)! });
 
     this.props = props;
 

@@ -4,30 +4,30 @@ import * as cdk from '@aws-cdk/core';
 /**
  * Schema for Module Fragment of type JFrog::Artifactory::Core::MODULE
  *
- * @schema CfnModuleProps
+ * @schema CfnCoreModuleProps
  */
-export interface CfnModuleProps {
+export interface CfnCoreModuleProps {
   /**
-   * @schema CfnModuleProps#Parameters
+   * @schema CfnCoreModuleProps#Parameters
    */
-  readonly parameters?: CfnModulePropsParameters;
+  readonly parameters?: CfnCoreModulePropsParameters;
 
   /**
-   * @schema CfnModuleProps#Resources
+   * @schema CfnCoreModuleProps#Resources
    */
-  readonly resources?: CfnModulePropsResources;
+  readonly resources?: CfnCoreModulePropsResources;
 
 }
 
 /**
- * Converts an object of type 'CfnModuleProps' to JSON representation.
+ * Converts an object of type 'CfnCoreModuleProps' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModuleProps(obj: CfnModuleProps | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModuleProps(obj: CfnCoreModuleProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'Parameters': toJson_CfnModulePropsParameters(obj.parameters),
-    'Resources': toJson_CfnModulePropsResources(obj.resources),
+    'Parameters': toJson_CfnCoreModulePropsParameters(obj.parameters),
+    'Resources': toJson_CfnCoreModulePropsResources(obj.resources),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -35,162 +35,162 @@ export function toJson_CfnModuleProps(obj: CfnModuleProps | undefined): Record<s
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParameters
+ * @schema CfnCoreModulePropsParameters
  */
-export interface CfnModulePropsParameters {
+export interface CfnCoreModulePropsParameters {
   /**
    * Availability Zone 1 to use for the subnets in the VPC. Two Availability Zones are used for this deployment.
    *
-   * @schema CfnModulePropsParameters#AvailabilityZone1
+   * @schema CfnCoreModulePropsParameters#AvailabilityZone1
    */
-  readonly availabilityZone1?: CfnModulePropsParametersAvailabilityZone1;
+  readonly availabilityZone1?: CfnCoreModulePropsParametersAvailabilityZone1;
 
   /**
    * Availability Zone 2 to use for the subnets in the VPC. Two Availability Zones are used for this deployment.
    *
-   * @schema CfnModulePropsParameters#AvailabilityZone2
+   * @schema CfnCoreModulePropsParameters#AvailabilityZone2
    */
-  readonly availabilityZone2?: CfnModulePropsParametersAvailabilityZone2;
+  readonly availabilityZone2?: CfnCoreModulePropsParametersAvailabilityZone2;
 
   /**
-   * @schema CfnModulePropsParameters#VpcId
+   * @schema CfnCoreModulePropsParameters#VpcId
    */
-  readonly vpcId?: CfnModulePropsParametersVpcId;
+  readonly vpcId?: CfnCoreModulePropsParametersVpcId;
 
   /**
    * CIDR block for the VPC
    *
-   * @schema CfnModulePropsParameters#VpcCidr
+   * @schema CfnCoreModulePropsParameters#VpcCidr
    */
-  readonly vpcCidr?: CfnModulePropsParametersVpcCidr;
+  readonly vpcCidr?: CfnCoreModulePropsParametersVpcCidr;
 
   /**
-   * @schema CfnModulePropsParameters#PrivateSubnet1Cidr
+   * @schema CfnCoreModulePropsParameters#PrivateSubnet1Cidr
    */
-  readonly privateSubnet1Cidr?: CfnModulePropsParametersPrivateSubnet1Cidr;
+  readonly privateSubnet1Cidr?: CfnCoreModulePropsParametersPrivateSubnet1Cidr;
 
   /**
-   * @schema CfnModulePropsParameters#PrivateSubnet2Cidr
+   * @schema CfnCoreModulePropsParameters#PrivateSubnet2Cidr
    */
-  readonly privateSubnet2Cidr?: CfnModulePropsParametersPrivateSubnet2Cidr;
+  readonly privateSubnet2Cidr?: CfnCoreModulePropsParametersPrivateSubnet2Cidr;
 
   /**
-   * @schema CfnModulePropsParameters#PrivateSubnet3Cidr
+   * @schema CfnCoreModulePropsParameters#PrivateSubnet3Cidr
    */
-  readonly privateSubnet3Cidr?: CfnModulePropsParametersPrivateSubnet3Cidr;
-
-  /**
-   * ID of the private subnet in Availability Zone 1 of your existing VPC (e.g., subnet-z0376dab).
-   *
-   * @schema CfnModulePropsParameters#PrivateSubnet1Id
-   */
-  readonly privateSubnet1Id?: CfnModulePropsParametersPrivateSubnet1Id;
+  readonly privateSubnet3Cidr?: CfnCoreModulePropsParametersPrivateSubnet3Cidr;
 
   /**
    * ID of the private subnet in Availability Zone 1 of your existing VPC (e.g., subnet-z0376dab).
    *
-   * @schema CfnModulePropsParameters#PrivateSubnet2Id
+   * @schema CfnCoreModulePropsParameters#PrivateSubnet1Id
    */
-  readonly privateSubnet2Id?: CfnModulePropsParametersPrivateSubnet2Id;
+  readonly privateSubnet1Id?: CfnCoreModulePropsParametersPrivateSubnet1Id;
 
   /**
-   * @schema CfnModulePropsParameters#DatabaseAllocatedStorage
+   * ID of the private subnet in Availability Zone 1 of your existing VPC (e.g., subnet-z0376dab).
+   *
+   * @schema CfnCoreModulePropsParameters#PrivateSubnet2Id
    */
-  readonly databaseAllocatedStorage?: CfnModulePropsParametersDatabaseAllocatedStorage;
+  readonly privateSubnet2Id?: CfnCoreModulePropsParametersPrivateSubnet2Id;
 
   /**
-   * @schema CfnModulePropsParameters#DatabasePreferredAz
+   * @schema CfnCoreModulePropsParameters#DatabaseAllocatedStorage
    */
-  readonly databasePreferredAz?: CfnModulePropsParametersDatabasePreferredAz;
+  readonly databaseAllocatedStorage?: CfnCoreModulePropsParametersDatabaseAllocatedStorage;
+
+  /**
+   * @schema CfnCoreModulePropsParameters#DatabasePreferredAz
+   */
+  readonly databasePreferredAz?: CfnCoreModulePropsParametersDatabasePreferredAz;
 
   /**
    * Choose false to create an Amazon RDS instance in a single Availability Zone.
    *
-   * @schema CfnModulePropsParameters#MultiAzDatabase
+   * @schema CfnCoreModulePropsParameters#MultiAzDatabase
    */
-  readonly multiAzDatabase?: CfnModulePropsParametersMultiAzDatabase;
+  readonly multiAzDatabase?: CfnCoreModulePropsParametersMultiAzDatabase;
 
   /**
-   * @schema CfnModulePropsParameters#DatabaseEngine
+   * @schema CfnCoreModulePropsParameters#DatabaseEngine
    */
-  readonly databaseEngine?: CfnModulePropsParametersDatabaseEngine;
+  readonly databaseEngine?: CfnCoreModulePropsParametersDatabaseEngine;
 
   /**
-   * @schema CfnModulePropsParameters#DatabaseUser
+   * @schema CfnCoreModulePropsParameters#DatabaseUser
    */
-  readonly databaseUser?: CfnModulePropsParametersDatabaseUser;
+  readonly databaseUser?: CfnCoreModulePropsParametersDatabaseUser;
 
   /**
-   * @schema CfnModulePropsParameters#DatabasePassword
+   * @schema CfnCoreModulePropsParameters#DatabasePassword
    */
-  readonly databasePassword?: CfnModulePropsParametersDatabasePassword;
+  readonly databasePassword?: CfnCoreModulePropsParametersDatabasePassword;
 
   /**
-   * @schema CfnModulePropsParameters#DatabaseInstance
+   * @schema CfnCoreModulePropsParameters#DatabaseInstance
    */
-  readonly databaseInstance?: CfnModulePropsParametersDatabaseInstance;
+  readonly databaseInstance?: CfnCoreModulePropsParametersDatabaseInstance;
 
   /**
-   * @schema CfnModulePropsParameters#DatabaseName
+   * @schema CfnCoreModulePropsParameters#DatabaseName
    */
-  readonly databaseName?: CfnModulePropsParametersDatabaseName;
+  readonly databaseName?: CfnCoreModulePropsParametersDatabaseName;
 
   /**
-   * @schema CfnModulePropsParameters#ArtifactoryProduct
+   * @schema CfnCoreModulePropsParameters#ArtifactoryProduct
    */
-  readonly artifactoryProduct?: CfnModulePropsParametersArtifactoryProduct;
+  readonly artifactoryProduct?: CfnCoreModulePropsParametersArtifactoryProduct;
 
   /**
-   * @schema CfnModulePropsParameters#ReleaseStage
+   * @schema CfnCoreModulePropsParameters#ReleaseStage
    */
-  readonly releaseStage?: CfnModulePropsParametersReleaseStage;
+  readonly releaseStage?: CfnCoreModulePropsParametersReleaseStage;
 
   /**
-   * @schema CfnModulePropsParameters#InstanceType
+   * @schema CfnCoreModulePropsParameters#InstanceType
    */
-  readonly instanceType?: CfnModulePropsParametersInstanceType;
+  readonly instanceType?: CfnCoreModulePropsParametersInstanceType;
 
   /**
-   * @schema CfnModulePropsParameters#ArtifactoryHostRole
+   * @schema CfnCoreModulePropsParameters#ArtifactoryHostRole
    */
-  readonly artifactoryHostRole?: CfnModulePropsParametersArtifactoryHostRole;
+  readonly artifactoryHostRole?: CfnCoreModulePropsParametersArtifactoryHostRole;
 
   /**
-   * @schema CfnModulePropsParameters#EfsSecurityGroup
+   * @schema CfnCoreModulePropsParameters#EfsSecurityGroup
    */
-  readonly efsSecurityGroup?: CfnModulePropsParametersEfsSecurityGroup;
+  readonly efsSecurityGroup?: CfnCoreModulePropsParametersEfsSecurityGroup;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParameters' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsParameters' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParameters(obj: CfnModulePropsParameters | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsParameters(obj: CfnCoreModulePropsParameters | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'AvailabilityZone1': toJson_CfnModulePropsParametersAvailabilityZone1(obj.availabilityZone1),
-    'AvailabilityZone2': toJson_CfnModulePropsParametersAvailabilityZone2(obj.availabilityZone2),
-    'VpcId': toJson_CfnModulePropsParametersVpcId(obj.vpcId),
-    'VpcCidr': toJson_CfnModulePropsParametersVpcCidr(obj.vpcCidr),
-    'PrivateSubnet1Cidr': toJson_CfnModulePropsParametersPrivateSubnet1Cidr(obj.privateSubnet1Cidr),
-    'PrivateSubnet2Cidr': toJson_CfnModulePropsParametersPrivateSubnet2Cidr(obj.privateSubnet2Cidr),
-    'PrivateSubnet3Cidr': toJson_CfnModulePropsParametersPrivateSubnet3Cidr(obj.privateSubnet3Cidr),
-    'PrivateSubnet1Id': toJson_CfnModulePropsParametersPrivateSubnet1Id(obj.privateSubnet1Id),
-    'PrivateSubnet2Id': toJson_CfnModulePropsParametersPrivateSubnet2Id(obj.privateSubnet2Id),
-    'DatabaseAllocatedStorage': toJson_CfnModulePropsParametersDatabaseAllocatedStorage(obj.databaseAllocatedStorage),
-    'DatabasePreferredAz': toJson_CfnModulePropsParametersDatabasePreferredAz(obj.databasePreferredAz),
-    'MultiAzDatabase': toJson_CfnModulePropsParametersMultiAzDatabase(obj.multiAzDatabase),
-    'DatabaseEngine': toJson_CfnModulePropsParametersDatabaseEngine(obj.databaseEngine),
-    'DatabaseUser': toJson_CfnModulePropsParametersDatabaseUser(obj.databaseUser),
-    'DatabasePassword': toJson_CfnModulePropsParametersDatabasePassword(obj.databasePassword),
-    'DatabaseInstance': toJson_CfnModulePropsParametersDatabaseInstance(obj.databaseInstance),
-    'DatabaseName': toJson_CfnModulePropsParametersDatabaseName(obj.databaseName),
-    'ArtifactoryProduct': toJson_CfnModulePropsParametersArtifactoryProduct(obj.artifactoryProduct),
-    'ReleaseStage': toJson_CfnModulePropsParametersReleaseStage(obj.releaseStage),
-    'InstanceType': toJson_CfnModulePropsParametersInstanceType(obj.instanceType),
-    'ArtifactoryHostRole': toJson_CfnModulePropsParametersArtifactoryHostRole(obj.artifactoryHostRole),
-    'EfsSecurityGroup': toJson_CfnModulePropsParametersEfsSecurityGroup(obj.efsSecurityGroup),
+    'AvailabilityZone1': toJson_CfnCoreModulePropsParametersAvailabilityZone1(obj.availabilityZone1),
+    'AvailabilityZone2': toJson_CfnCoreModulePropsParametersAvailabilityZone2(obj.availabilityZone2),
+    'VpcId': toJson_CfnCoreModulePropsParametersVpcId(obj.vpcId),
+    'VpcCidr': toJson_CfnCoreModulePropsParametersVpcCidr(obj.vpcCidr),
+    'PrivateSubnet1Cidr': toJson_CfnCoreModulePropsParametersPrivateSubnet1Cidr(obj.privateSubnet1Cidr),
+    'PrivateSubnet2Cidr': toJson_CfnCoreModulePropsParametersPrivateSubnet2Cidr(obj.privateSubnet2Cidr),
+    'PrivateSubnet3Cidr': toJson_CfnCoreModulePropsParametersPrivateSubnet3Cidr(obj.privateSubnet3Cidr),
+    'PrivateSubnet1Id': toJson_CfnCoreModulePropsParametersPrivateSubnet1Id(obj.privateSubnet1Id),
+    'PrivateSubnet2Id': toJson_CfnCoreModulePropsParametersPrivateSubnet2Id(obj.privateSubnet2Id),
+    'DatabaseAllocatedStorage': toJson_CfnCoreModulePropsParametersDatabaseAllocatedStorage(obj.databaseAllocatedStorage),
+    'DatabasePreferredAz': toJson_CfnCoreModulePropsParametersDatabasePreferredAz(obj.databasePreferredAz),
+    'MultiAzDatabase': toJson_CfnCoreModulePropsParametersMultiAzDatabase(obj.multiAzDatabase),
+    'DatabaseEngine': toJson_CfnCoreModulePropsParametersDatabaseEngine(obj.databaseEngine),
+    'DatabaseUser': toJson_CfnCoreModulePropsParametersDatabaseUser(obj.databaseUser),
+    'DatabasePassword': toJson_CfnCoreModulePropsParametersDatabasePassword(obj.databasePassword),
+    'DatabaseInstance': toJson_CfnCoreModulePropsParametersDatabaseInstance(obj.databaseInstance),
+    'DatabaseName': toJson_CfnCoreModulePropsParametersDatabaseName(obj.databaseName),
+    'ArtifactoryProduct': toJson_CfnCoreModulePropsParametersArtifactoryProduct(obj.artifactoryProduct),
+    'ReleaseStage': toJson_CfnCoreModulePropsParametersReleaseStage(obj.releaseStage),
+    'InstanceType': toJson_CfnCoreModulePropsParametersInstanceType(obj.instanceType),
+    'ArtifactoryHostRole': toJson_CfnCoreModulePropsParametersArtifactoryHostRole(obj.artifactoryHostRole),
+    'EfsSecurityGroup': toJson_CfnCoreModulePropsParametersEfsSecurityGroup(obj.efsSecurityGroup),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -198,66 +198,66 @@ export function toJson_CfnModulePropsParameters(obj: CfnModulePropsParameters | 
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResources
+ * @schema CfnCoreModulePropsResources
  */
-export interface CfnModulePropsResources {
+export interface CfnCoreModulePropsResources {
   /**
-   * @schema CfnModulePropsResources#ArtifactoryDatabaseSubnetGroup
+   * @schema CfnCoreModulePropsResources#ArtifactoryDatabaseSubnetGroup
    */
-  readonly artifactoryDatabaseSubnetGroup?: CfnModulePropsResourcesArtifactoryDatabaseSubnetGroup;
+  readonly artifactoryDatabaseSubnetGroup?: CfnCoreModulePropsResourcesArtifactoryDatabaseSubnetGroup;
 
   /**
-   * @schema CfnModulePropsResources#ArtifactoryDatabase
+   * @schema CfnCoreModulePropsResources#ArtifactoryDatabase
    */
-  readonly artifactoryDatabase?: CfnModulePropsResourcesArtifactoryDatabase;
+  readonly artifactoryDatabase?: CfnCoreModulePropsResourcesArtifactoryDatabase;
 
   /**
-   * @schema CfnModulePropsResources#ArtifactoryDatabaseSG
+   * @schema CfnCoreModulePropsResources#ArtifactoryDatabaseSG
    */
-  readonly artifactoryDatabaseSg?: CfnModulePropsResourcesArtifactoryDatabaseSg;
+  readonly artifactoryDatabaseSg?: CfnCoreModulePropsResourcesArtifactoryDatabaseSg;
 
   /**
-   * @schema CfnModulePropsResources#ArtifactoryS3Bucket
+   * @schema CfnCoreModulePropsResources#ArtifactoryS3Bucket
    */
-  readonly artifactoryS3Bucket?: CfnModulePropsResourcesArtifactoryS3Bucket;
+  readonly artifactoryS3Bucket?: CfnCoreModulePropsResourcesArtifactoryS3Bucket;
 
   /**
-   * @schema CfnModulePropsResources#ArtifactoryS3IAMPolicy
+   * @schema CfnCoreModulePropsResources#ArtifactoryS3IAMPolicy
    */
-  readonly artifactoryS3IamPolicy?: CfnModulePropsResourcesArtifactoryS3IamPolicy;
+  readonly artifactoryS3IamPolicy?: CfnCoreModulePropsResourcesArtifactoryS3IamPolicy;
 
   /**
-   * @schema CfnModulePropsResources#ArtifactoryEfsFileSystem
+   * @schema CfnCoreModulePropsResources#ArtifactoryEfsFileSystem
    */
-  readonly artifactoryEfsFileSystem?: CfnModulePropsResourcesArtifactoryEfsFileSystem;
+  readonly artifactoryEfsFileSystem?: CfnCoreModulePropsResourcesArtifactoryEfsFileSystem;
 
   /**
-   * @schema CfnModulePropsResources#ArtifactoryEfsMountTarget1
+   * @schema CfnCoreModulePropsResources#ArtifactoryEfsMountTarget1
    */
-  readonly artifactoryEfsMountTarget1?: CfnModulePropsResourcesArtifactoryEfsMountTarget1;
+  readonly artifactoryEfsMountTarget1?: CfnCoreModulePropsResourcesArtifactoryEfsMountTarget1;
 
   /**
-   * @schema CfnModulePropsResources#ArtifactoryEfsMountTarget2
+   * @schema CfnCoreModulePropsResources#ArtifactoryEfsMountTarget2
    */
-  readonly artifactoryEfsMountTarget2?: CfnModulePropsResourcesArtifactoryEfsMountTarget2;
+  readonly artifactoryEfsMountTarget2?: CfnCoreModulePropsResourcesArtifactoryEfsMountTarget2;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResources' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsResources' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResources(obj: CfnModulePropsResources | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsResources(obj: CfnCoreModulePropsResources | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'ArtifactoryDatabaseSubnetGroup': toJson_CfnModulePropsResourcesArtifactoryDatabaseSubnetGroup(obj.artifactoryDatabaseSubnetGroup),
-    'ArtifactoryDatabase': toJson_CfnModulePropsResourcesArtifactoryDatabase(obj.artifactoryDatabase),
-    'ArtifactoryDatabaseSG': toJson_CfnModulePropsResourcesArtifactoryDatabaseSg(obj.artifactoryDatabaseSg),
-    'ArtifactoryS3Bucket': toJson_CfnModulePropsResourcesArtifactoryS3Bucket(obj.artifactoryS3Bucket),
-    'ArtifactoryS3IAMPolicy': toJson_CfnModulePropsResourcesArtifactoryS3IamPolicy(obj.artifactoryS3IamPolicy),
-    'ArtifactoryEfsFileSystem': toJson_CfnModulePropsResourcesArtifactoryEfsFileSystem(obj.artifactoryEfsFileSystem),
-    'ArtifactoryEfsMountTarget1': toJson_CfnModulePropsResourcesArtifactoryEfsMountTarget1(obj.artifactoryEfsMountTarget1),
-    'ArtifactoryEfsMountTarget2': toJson_CfnModulePropsResourcesArtifactoryEfsMountTarget2(obj.artifactoryEfsMountTarget2),
+    'ArtifactoryDatabaseSubnetGroup': toJson_CfnCoreModulePropsResourcesArtifactoryDatabaseSubnetGroup(obj.artifactoryDatabaseSubnetGroup),
+    'ArtifactoryDatabase': toJson_CfnCoreModulePropsResourcesArtifactoryDatabase(obj.artifactoryDatabase),
+    'ArtifactoryDatabaseSG': toJson_CfnCoreModulePropsResourcesArtifactoryDatabaseSg(obj.artifactoryDatabaseSg),
+    'ArtifactoryS3Bucket': toJson_CfnCoreModulePropsResourcesArtifactoryS3Bucket(obj.artifactoryS3Bucket),
+    'ArtifactoryS3IAMPolicy': toJson_CfnCoreModulePropsResourcesArtifactoryS3IamPolicy(obj.artifactoryS3IamPolicy),
+    'ArtifactoryEfsFileSystem': toJson_CfnCoreModulePropsResourcesArtifactoryEfsFileSystem(obj.artifactoryEfsFileSystem),
+    'ArtifactoryEfsMountTarget1': toJson_CfnCoreModulePropsResourcesArtifactoryEfsMountTarget1(obj.artifactoryEfsMountTarget1),
+    'ArtifactoryEfsMountTarget2': toJson_CfnCoreModulePropsResourcesArtifactoryEfsMountTarget2(obj.artifactoryEfsMountTarget2),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -267,26 +267,26 @@ export function toJson_CfnModulePropsResources(obj: CfnModulePropsResources | un
 /**
  * Availability Zone 1 to use for the subnets in the VPC. Two Availability Zones are used for this deployment.
  *
- * @schema CfnModulePropsParametersAvailabilityZone1
+ * @schema CfnCoreModulePropsParametersAvailabilityZone1
  */
-export interface CfnModulePropsParametersAvailabilityZone1 {
+export interface CfnCoreModulePropsParametersAvailabilityZone1 {
   /**
-   * @schema CfnModulePropsParametersAvailabilityZone1#Type
+   * @schema CfnCoreModulePropsParametersAvailabilityZone1#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersAvailabilityZone1#Description
+   * @schema CfnCoreModulePropsParametersAvailabilityZone1#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersAvailabilityZone1' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsParametersAvailabilityZone1' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersAvailabilityZone1(obj: CfnModulePropsParametersAvailabilityZone1 | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsParametersAvailabilityZone1(obj: CfnCoreModulePropsParametersAvailabilityZone1 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -300,26 +300,26 @@ export function toJson_CfnModulePropsParametersAvailabilityZone1(obj: CfnModuleP
 /**
  * Availability Zone 2 to use for the subnets in the VPC. Two Availability Zones are used for this deployment.
  *
- * @schema CfnModulePropsParametersAvailabilityZone2
+ * @schema CfnCoreModulePropsParametersAvailabilityZone2
  */
-export interface CfnModulePropsParametersAvailabilityZone2 {
+export interface CfnCoreModulePropsParametersAvailabilityZone2 {
   /**
-   * @schema CfnModulePropsParametersAvailabilityZone2#Type
+   * @schema CfnCoreModulePropsParametersAvailabilityZone2#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersAvailabilityZone2#Description
+   * @schema CfnCoreModulePropsParametersAvailabilityZone2#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersAvailabilityZone2' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsParametersAvailabilityZone2' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersAvailabilityZone2(obj: CfnModulePropsParametersAvailabilityZone2 | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsParametersAvailabilityZone2(obj: CfnCoreModulePropsParametersAvailabilityZone2 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -331,21 +331,21 @@ export function toJson_CfnModulePropsParametersAvailabilityZone2(obj: CfnModuleP
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersVpcId
+ * @schema CfnCoreModulePropsParametersVpcId
  */
-export interface CfnModulePropsParametersVpcId {
+export interface CfnCoreModulePropsParametersVpcId {
   /**
-   * @schema CfnModulePropsParametersVpcId#Type
+   * @schema CfnCoreModulePropsParametersVpcId#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersVpcId' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsParametersVpcId' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersVpcId(obj: CfnModulePropsParametersVpcId | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsParametersVpcId(obj: CfnCoreModulePropsParametersVpcId | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -358,26 +358,26 @@ export function toJson_CfnModulePropsParametersVpcId(obj: CfnModulePropsParamete
 /**
  * CIDR block for the VPC
  *
- * @schema CfnModulePropsParametersVpcCidr
+ * @schema CfnCoreModulePropsParametersVpcCidr
  */
-export interface CfnModulePropsParametersVpcCidr {
+export interface CfnCoreModulePropsParametersVpcCidr {
   /**
-   * @schema CfnModulePropsParametersVpcCidr#Type
+   * @schema CfnCoreModulePropsParametersVpcCidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersVpcCidr#Description
+   * @schema CfnCoreModulePropsParametersVpcCidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersVpcCidr' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsParametersVpcCidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersVpcCidr(obj: CfnModulePropsParametersVpcCidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsParametersVpcCidr(obj: CfnCoreModulePropsParametersVpcCidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -389,21 +389,21 @@ export function toJson_CfnModulePropsParametersVpcCidr(obj: CfnModulePropsParame
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersPrivateSubnet1Cidr
+ * @schema CfnCoreModulePropsParametersPrivateSubnet1Cidr
  */
-export interface CfnModulePropsParametersPrivateSubnet1Cidr {
+export interface CfnCoreModulePropsParametersPrivateSubnet1Cidr {
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet1Cidr#Type
+   * @schema CfnCoreModulePropsParametersPrivateSubnet1Cidr#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPrivateSubnet1Cidr' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsParametersPrivateSubnet1Cidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPrivateSubnet1Cidr(obj: CfnModulePropsParametersPrivateSubnet1Cidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsParametersPrivateSubnet1Cidr(obj: CfnCoreModulePropsParametersPrivateSubnet1Cidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -414,21 +414,21 @@ export function toJson_CfnModulePropsParametersPrivateSubnet1Cidr(obj: CfnModule
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersPrivateSubnet2Cidr
+ * @schema CfnCoreModulePropsParametersPrivateSubnet2Cidr
  */
-export interface CfnModulePropsParametersPrivateSubnet2Cidr {
+export interface CfnCoreModulePropsParametersPrivateSubnet2Cidr {
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet2Cidr#Type
+   * @schema CfnCoreModulePropsParametersPrivateSubnet2Cidr#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPrivateSubnet2Cidr' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsParametersPrivateSubnet2Cidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPrivateSubnet2Cidr(obj: CfnModulePropsParametersPrivateSubnet2Cidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsParametersPrivateSubnet2Cidr(obj: CfnCoreModulePropsParametersPrivateSubnet2Cidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -439,21 +439,21 @@ export function toJson_CfnModulePropsParametersPrivateSubnet2Cidr(obj: CfnModule
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersPrivateSubnet3Cidr
+ * @schema CfnCoreModulePropsParametersPrivateSubnet3Cidr
  */
-export interface CfnModulePropsParametersPrivateSubnet3Cidr {
+export interface CfnCoreModulePropsParametersPrivateSubnet3Cidr {
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet3Cidr#Type
+   * @schema CfnCoreModulePropsParametersPrivateSubnet3Cidr#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPrivateSubnet3Cidr' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsParametersPrivateSubnet3Cidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPrivateSubnet3Cidr(obj: CfnModulePropsParametersPrivateSubnet3Cidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsParametersPrivateSubnet3Cidr(obj: CfnCoreModulePropsParametersPrivateSubnet3Cidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -466,26 +466,26 @@ export function toJson_CfnModulePropsParametersPrivateSubnet3Cidr(obj: CfnModule
 /**
  * ID of the private subnet in Availability Zone 1 of your existing VPC (e.g., subnet-z0376dab).
  *
- * @schema CfnModulePropsParametersPrivateSubnet1Id
+ * @schema CfnCoreModulePropsParametersPrivateSubnet1Id
  */
-export interface CfnModulePropsParametersPrivateSubnet1Id {
+export interface CfnCoreModulePropsParametersPrivateSubnet1Id {
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet1Id#Type
+   * @schema CfnCoreModulePropsParametersPrivateSubnet1Id#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet1Id#Description
+   * @schema CfnCoreModulePropsParametersPrivateSubnet1Id#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPrivateSubnet1Id' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsParametersPrivateSubnet1Id' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPrivateSubnet1Id(obj: CfnModulePropsParametersPrivateSubnet1Id | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsParametersPrivateSubnet1Id(obj: CfnCoreModulePropsParametersPrivateSubnet1Id | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -499,26 +499,26 @@ export function toJson_CfnModulePropsParametersPrivateSubnet1Id(obj: CfnModulePr
 /**
  * ID of the private subnet in Availability Zone 1 of your existing VPC (e.g., subnet-z0376dab).
  *
- * @schema CfnModulePropsParametersPrivateSubnet2Id
+ * @schema CfnCoreModulePropsParametersPrivateSubnet2Id
  */
-export interface CfnModulePropsParametersPrivateSubnet2Id {
+export interface CfnCoreModulePropsParametersPrivateSubnet2Id {
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet2Id#Type
+   * @schema CfnCoreModulePropsParametersPrivateSubnet2Id#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet2Id#Description
+   * @schema CfnCoreModulePropsParametersPrivateSubnet2Id#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPrivateSubnet2Id' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsParametersPrivateSubnet2Id' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPrivateSubnet2Id(obj: CfnModulePropsParametersPrivateSubnet2Id | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsParametersPrivateSubnet2Id(obj: CfnCoreModulePropsParametersPrivateSubnet2Id | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -530,21 +530,21 @@ export function toJson_CfnModulePropsParametersPrivateSubnet2Id(obj: CfnModulePr
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersDatabaseAllocatedStorage
+ * @schema CfnCoreModulePropsParametersDatabaseAllocatedStorage
  */
-export interface CfnModulePropsParametersDatabaseAllocatedStorage {
+export interface CfnCoreModulePropsParametersDatabaseAllocatedStorage {
   /**
-   * @schema CfnModulePropsParametersDatabaseAllocatedStorage#Type
+   * @schema CfnCoreModulePropsParametersDatabaseAllocatedStorage#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersDatabaseAllocatedStorage' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsParametersDatabaseAllocatedStorage' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersDatabaseAllocatedStorage(obj: CfnModulePropsParametersDatabaseAllocatedStorage | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsParametersDatabaseAllocatedStorage(obj: CfnCoreModulePropsParametersDatabaseAllocatedStorage | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -555,21 +555,21 @@ export function toJson_CfnModulePropsParametersDatabaseAllocatedStorage(obj: Cfn
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersDatabasePreferredAz
+ * @schema CfnCoreModulePropsParametersDatabasePreferredAz
  */
-export interface CfnModulePropsParametersDatabasePreferredAz {
+export interface CfnCoreModulePropsParametersDatabasePreferredAz {
   /**
-   * @schema CfnModulePropsParametersDatabasePreferredAz#Type
+   * @schema CfnCoreModulePropsParametersDatabasePreferredAz#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersDatabasePreferredAz' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsParametersDatabasePreferredAz' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersDatabasePreferredAz(obj: CfnModulePropsParametersDatabasePreferredAz | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsParametersDatabasePreferredAz(obj: CfnCoreModulePropsParametersDatabasePreferredAz | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -582,26 +582,26 @@ export function toJson_CfnModulePropsParametersDatabasePreferredAz(obj: CfnModul
 /**
  * Choose false to create an Amazon RDS instance in a single Availability Zone.
  *
- * @schema CfnModulePropsParametersMultiAzDatabase
+ * @schema CfnCoreModulePropsParametersMultiAzDatabase
  */
-export interface CfnModulePropsParametersMultiAzDatabase {
+export interface CfnCoreModulePropsParametersMultiAzDatabase {
   /**
-   * @schema CfnModulePropsParametersMultiAzDatabase#Type
+   * @schema CfnCoreModulePropsParametersMultiAzDatabase#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersMultiAzDatabase#Description
+   * @schema CfnCoreModulePropsParametersMultiAzDatabase#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersMultiAzDatabase' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsParametersMultiAzDatabase' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersMultiAzDatabase(obj: CfnModulePropsParametersMultiAzDatabase | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsParametersMultiAzDatabase(obj: CfnCoreModulePropsParametersMultiAzDatabase | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -613,21 +613,21 @@ export function toJson_CfnModulePropsParametersMultiAzDatabase(obj: CfnModulePro
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersDatabaseEngine
+ * @schema CfnCoreModulePropsParametersDatabaseEngine
  */
-export interface CfnModulePropsParametersDatabaseEngine {
+export interface CfnCoreModulePropsParametersDatabaseEngine {
   /**
-   * @schema CfnModulePropsParametersDatabaseEngine#Type
+   * @schema CfnCoreModulePropsParametersDatabaseEngine#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersDatabaseEngine' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsParametersDatabaseEngine' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersDatabaseEngine(obj: CfnModulePropsParametersDatabaseEngine | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsParametersDatabaseEngine(obj: CfnCoreModulePropsParametersDatabaseEngine | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -638,21 +638,21 @@ export function toJson_CfnModulePropsParametersDatabaseEngine(obj: CfnModuleProp
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersDatabaseUser
+ * @schema CfnCoreModulePropsParametersDatabaseUser
  */
-export interface CfnModulePropsParametersDatabaseUser {
+export interface CfnCoreModulePropsParametersDatabaseUser {
   /**
-   * @schema CfnModulePropsParametersDatabaseUser#Type
+   * @schema CfnCoreModulePropsParametersDatabaseUser#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersDatabaseUser' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsParametersDatabaseUser' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersDatabaseUser(obj: CfnModulePropsParametersDatabaseUser | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsParametersDatabaseUser(obj: CfnCoreModulePropsParametersDatabaseUser | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -663,21 +663,21 @@ export function toJson_CfnModulePropsParametersDatabaseUser(obj: CfnModulePropsP
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersDatabasePassword
+ * @schema CfnCoreModulePropsParametersDatabasePassword
  */
-export interface CfnModulePropsParametersDatabasePassword {
+export interface CfnCoreModulePropsParametersDatabasePassword {
   /**
-   * @schema CfnModulePropsParametersDatabasePassword#Type
+   * @schema CfnCoreModulePropsParametersDatabasePassword#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersDatabasePassword' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsParametersDatabasePassword' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersDatabasePassword(obj: CfnModulePropsParametersDatabasePassword | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsParametersDatabasePassword(obj: CfnCoreModulePropsParametersDatabasePassword | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -688,21 +688,21 @@ export function toJson_CfnModulePropsParametersDatabasePassword(obj: CfnModulePr
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersDatabaseInstance
+ * @schema CfnCoreModulePropsParametersDatabaseInstance
  */
-export interface CfnModulePropsParametersDatabaseInstance {
+export interface CfnCoreModulePropsParametersDatabaseInstance {
   /**
-   * @schema CfnModulePropsParametersDatabaseInstance#Type
+   * @schema CfnCoreModulePropsParametersDatabaseInstance#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersDatabaseInstance' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsParametersDatabaseInstance' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersDatabaseInstance(obj: CfnModulePropsParametersDatabaseInstance | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsParametersDatabaseInstance(obj: CfnCoreModulePropsParametersDatabaseInstance | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -713,21 +713,21 @@ export function toJson_CfnModulePropsParametersDatabaseInstance(obj: CfnModulePr
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersDatabaseName
+ * @schema CfnCoreModulePropsParametersDatabaseName
  */
-export interface CfnModulePropsParametersDatabaseName {
+export interface CfnCoreModulePropsParametersDatabaseName {
   /**
-   * @schema CfnModulePropsParametersDatabaseName#Type
+   * @schema CfnCoreModulePropsParametersDatabaseName#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersDatabaseName' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsParametersDatabaseName' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersDatabaseName(obj: CfnModulePropsParametersDatabaseName | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsParametersDatabaseName(obj: CfnCoreModulePropsParametersDatabaseName | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -738,21 +738,21 @@ export function toJson_CfnModulePropsParametersDatabaseName(obj: CfnModulePropsP
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersArtifactoryProduct
+ * @schema CfnCoreModulePropsParametersArtifactoryProduct
  */
-export interface CfnModulePropsParametersArtifactoryProduct {
+export interface CfnCoreModulePropsParametersArtifactoryProduct {
   /**
-   * @schema CfnModulePropsParametersArtifactoryProduct#Type
+   * @schema CfnCoreModulePropsParametersArtifactoryProduct#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersArtifactoryProduct' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsParametersArtifactoryProduct' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersArtifactoryProduct(obj: CfnModulePropsParametersArtifactoryProduct | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsParametersArtifactoryProduct(obj: CfnCoreModulePropsParametersArtifactoryProduct | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -763,21 +763,21 @@ export function toJson_CfnModulePropsParametersArtifactoryProduct(obj: CfnModule
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersReleaseStage
+ * @schema CfnCoreModulePropsParametersReleaseStage
  */
-export interface CfnModulePropsParametersReleaseStage {
+export interface CfnCoreModulePropsParametersReleaseStage {
   /**
-   * @schema CfnModulePropsParametersReleaseStage#Type
+   * @schema CfnCoreModulePropsParametersReleaseStage#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersReleaseStage' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsParametersReleaseStage' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersReleaseStage(obj: CfnModulePropsParametersReleaseStage | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsParametersReleaseStage(obj: CfnCoreModulePropsParametersReleaseStage | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -788,21 +788,21 @@ export function toJson_CfnModulePropsParametersReleaseStage(obj: CfnModulePropsP
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersInstanceType
+ * @schema CfnCoreModulePropsParametersInstanceType
  */
-export interface CfnModulePropsParametersInstanceType {
+export interface CfnCoreModulePropsParametersInstanceType {
   /**
-   * @schema CfnModulePropsParametersInstanceType#Type
+   * @schema CfnCoreModulePropsParametersInstanceType#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersInstanceType' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsParametersInstanceType' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersInstanceType(obj: CfnModulePropsParametersInstanceType | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsParametersInstanceType(obj: CfnCoreModulePropsParametersInstanceType | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -813,21 +813,21 @@ export function toJson_CfnModulePropsParametersInstanceType(obj: CfnModulePropsP
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersArtifactoryHostRole
+ * @schema CfnCoreModulePropsParametersArtifactoryHostRole
  */
-export interface CfnModulePropsParametersArtifactoryHostRole {
+export interface CfnCoreModulePropsParametersArtifactoryHostRole {
   /**
-   * @schema CfnModulePropsParametersArtifactoryHostRole#Type
+   * @schema CfnCoreModulePropsParametersArtifactoryHostRole#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersArtifactoryHostRole' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsParametersArtifactoryHostRole' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersArtifactoryHostRole(obj: CfnModulePropsParametersArtifactoryHostRole | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsParametersArtifactoryHostRole(obj: CfnCoreModulePropsParametersArtifactoryHostRole | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -838,21 +838,21 @@ export function toJson_CfnModulePropsParametersArtifactoryHostRole(obj: CfnModul
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParametersEfsSecurityGroup
+ * @schema CfnCoreModulePropsParametersEfsSecurityGroup
  */
-export interface CfnModulePropsParametersEfsSecurityGroup {
+export interface CfnCoreModulePropsParametersEfsSecurityGroup {
   /**
-   * @schema CfnModulePropsParametersEfsSecurityGroup#Type
+   * @schema CfnCoreModulePropsParametersEfsSecurityGroup#Type
    */
   readonly type: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersEfsSecurityGroup' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsParametersEfsSecurityGroup' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersEfsSecurityGroup(obj: CfnModulePropsParametersEfsSecurityGroup | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsParametersEfsSecurityGroup(obj: CfnCoreModulePropsParametersEfsSecurityGroup | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -863,26 +863,26 @@ export function toJson_CfnModulePropsParametersEfsSecurityGroup(obj: CfnModulePr
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesArtifactoryDatabaseSubnetGroup
+ * @schema CfnCoreModulePropsResourcesArtifactoryDatabaseSubnetGroup
  */
-export interface CfnModulePropsResourcesArtifactoryDatabaseSubnetGroup {
+export interface CfnCoreModulePropsResourcesArtifactoryDatabaseSubnetGroup {
   /**
-   * @schema CfnModulePropsResourcesArtifactoryDatabaseSubnetGroup#Type
+   * @schema CfnCoreModulePropsResourcesArtifactoryDatabaseSubnetGroup#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesArtifactoryDatabaseSubnetGroup#Properties
+   * @schema CfnCoreModulePropsResourcesArtifactoryDatabaseSubnetGroup#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesArtifactoryDatabaseSubnetGroup' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsResourcesArtifactoryDatabaseSubnetGroup' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesArtifactoryDatabaseSubnetGroup(obj: CfnModulePropsResourcesArtifactoryDatabaseSubnetGroup | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsResourcesArtifactoryDatabaseSubnetGroup(obj: CfnCoreModulePropsResourcesArtifactoryDatabaseSubnetGroup | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -894,26 +894,26 @@ export function toJson_CfnModulePropsResourcesArtifactoryDatabaseSubnetGroup(obj
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesArtifactoryDatabase
+ * @schema CfnCoreModulePropsResourcesArtifactoryDatabase
  */
-export interface CfnModulePropsResourcesArtifactoryDatabase {
+export interface CfnCoreModulePropsResourcesArtifactoryDatabase {
   /**
-   * @schema CfnModulePropsResourcesArtifactoryDatabase#Type
+   * @schema CfnCoreModulePropsResourcesArtifactoryDatabase#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesArtifactoryDatabase#Properties
+   * @schema CfnCoreModulePropsResourcesArtifactoryDatabase#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesArtifactoryDatabase' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsResourcesArtifactoryDatabase' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesArtifactoryDatabase(obj: CfnModulePropsResourcesArtifactoryDatabase | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsResourcesArtifactoryDatabase(obj: CfnCoreModulePropsResourcesArtifactoryDatabase | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -925,26 +925,26 @@ export function toJson_CfnModulePropsResourcesArtifactoryDatabase(obj: CfnModule
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesArtifactoryDatabaseSg
+ * @schema CfnCoreModulePropsResourcesArtifactoryDatabaseSg
  */
-export interface CfnModulePropsResourcesArtifactoryDatabaseSg {
+export interface CfnCoreModulePropsResourcesArtifactoryDatabaseSg {
   /**
-   * @schema CfnModulePropsResourcesArtifactoryDatabaseSg#Type
+   * @schema CfnCoreModulePropsResourcesArtifactoryDatabaseSg#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesArtifactoryDatabaseSg#Properties
+   * @schema CfnCoreModulePropsResourcesArtifactoryDatabaseSg#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesArtifactoryDatabaseSg' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsResourcesArtifactoryDatabaseSg' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesArtifactoryDatabaseSg(obj: CfnModulePropsResourcesArtifactoryDatabaseSg | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsResourcesArtifactoryDatabaseSg(obj: CfnCoreModulePropsResourcesArtifactoryDatabaseSg | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -956,26 +956,26 @@ export function toJson_CfnModulePropsResourcesArtifactoryDatabaseSg(obj: CfnModu
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesArtifactoryS3Bucket
+ * @schema CfnCoreModulePropsResourcesArtifactoryS3Bucket
  */
-export interface CfnModulePropsResourcesArtifactoryS3Bucket {
+export interface CfnCoreModulePropsResourcesArtifactoryS3Bucket {
   /**
-   * @schema CfnModulePropsResourcesArtifactoryS3Bucket#Type
+   * @schema CfnCoreModulePropsResourcesArtifactoryS3Bucket#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesArtifactoryS3Bucket#Properties
+   * @schema CfnCoreModulePropsResourcesArtifactoryS3Bucket#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesArtifactoryS3Bucket' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsResourcesArtifactoryS3Bucket' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesArtifactoryS3Bucket(obj: CfnModulePropsResourcesArtifactoryS3Bucket | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsResourcesArtifactoryS3Bucket(obj: CfnCoreModulePropsResourcesArtifactoryS3Bucket | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -987,26 +987,26 @@ export function toJson_CfnModulePropsResourcesArtifactoryS3Bucket(obj: CfnModule
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesArtifactoryS3IamPolicy
+ * @schema CfnCoreModulePropsResourcesArtifactoryS3IamPolicy
  */
-export interface CfnModulePropsResourcesArtifactoryS3IamPolicy {
+export interface CfnCoreModulePropsResourcesArtifactoryS3IamPolicy {
   /**
-   * @schema CfnModulePropsResourcesArtifactoryS3IamPolicy#Type
+   * @schema CfnCoreModulePropsResourcesArtifactoryS3IamPolicy#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesArtifactoryS3IamPolicy#Properties
+   * @schema CfnCoreModulePropsResourcesArtifactoryS3IamPolicy#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesArtifactoryS3IamPolicy' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsResourcesArtifactoryS3IamPolicy' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesArtifactoryS3IamPolicy(obj: CfnModulePropsResourcesArtifactoryS3IamPolicy | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsResourcesArtifactoryS3IamPolicy(obj: CfnCoreModulePropsResourcesArtifactoryS3IamPolicy | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1018,26 +1018,26 @@ export function toJson_CfnModulePropsResourcesArtifactoryS3IamPolicy(obj: CfnMod
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesArtifactoryEfsFileSystem
+ * @schema CfnCoreModulePropsResourcesArtifactoryEfsFileSystem
  */
-export interface CfnModulePropsResourcesArtifactoryEfsFileSystem {
+export interface CfnCoreModulePropsResourcesArtifactoryEfsFileSystem {
   /**
-   * @schema CfnModulePropsResourcesArtifactoryEfsFileSystem#Type
+   * @schema CfnCoreModulePropsResourcesArtifactoryEfsFileSystem#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesArtifactoryEfsFileSystem#Properties
+   * @schema CfnCoreModulePropsResourcesArtifactoryEfsFileSystem#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesArtifactoryEfsFileSystem' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsResourcesArtifactoryEfsFileSystem' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesArtifactoryEfsFileSystem(obj: CfnModulePropsResourcesArtifactoryEfsFileSystem | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsResourcesArtifactoryEfsFileSystem(obj: CfnCoreModulePropsResourcesArtifactoryEfsFileSystem | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1049,26 +1049,26 @@ export function toJson_CfnModulePropsResourcesArtifactoryEfsFileSystem(obj: CfnM
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesArtifactoryEfsMountTarget1
+ * @schema CfnCoreModulePropsResourcesArtifactoryEfsMountTarget1
  */
-export interface CfnModulePropsResourcesArtifactoryEfsMountTarget1 {
+export interface CfnCoreModulePropsResourcesArtifactoryEfsMountTarget1 {
   /**
-   * @schema CfnModulePropsResourcesArtifactoryEfsMountTarget1#Type
+   * @schema CfnCoreModulePropsResourcesArtifactoryEfsMountTarget1#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesArtifactoryEfsMountTarget1#Properties
+   * @schema CfnCoreModulePropsResourcesArtifactoryEfsMountTarget1#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesArtifactoryEfsMountTarget1' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsResourcesArtifactoryEfsMountTarget1' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesArtifactoryEfsMountTarget1(obj: CfnModulePropsResourcesArtifactoryEfsMountTarget1 | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsResourcesArtifactoryEfsMountTarget1(obj: CfnCoreModulePropsResourcesArtifactoryEfsMountTarget1 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1080,26 +1080,26 @@ export function toJson_CfnModulePropsResourcesArtifactoryEfsMountTarget1(obj: Cf
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesArtifactoryEfsMountTarget2
+ * @schema CfnCoreModulePropsResourcesArtifactoryEfsMountTarget2
  */
-export interface CfnModulePropsResourcesArtifactoryEfsMountTarget2 {
+export interface CfnCoreModulePropsResourcesArtifactoryEfsMountTarget2 {
   /**
-   * @schema CfnModulePropsResourcesArtifactoryEfsMountTarget2#Type
+   * @schema CfnCoreModulePropsResourcesArtifactoryEfsMountTarget2#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesArtifactoryEfsMountTarget2#Properties
+   * @schema CfnCoreModulePropsResourcesArtifactoryEfsMountTarget2#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesArtifactoryEfsMountTarget2' to JSON representation.
+ * Converts an object of type 'CfnCoreModulePropsResourcesArtifactoryEfsMountTarget2' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesArtifactoryEfsMountTarget2(obj: CfnModulePropsResourcesArtifactoryEfsMountTarget2 | undefined): Record<string, any> | undefined {
+export function toJson_CfnCoreModulePropsResourcesArtifactoryEfsMountTarget2(obj: CfnCoreModulePropsResourcesArtifactoryEfsMountTarget2 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1118,7 +1118,7 @@ export function toJson_CfnModulePropsResourcesArtifactoryEfsMountTarget2(obj: Cf
  * @stability external
  * @link http://unknown-url
  */
-export class CfnModule extends cdk.CfnResource {
+export class CfnCoreModule extends cdk.CfnResource {
   /**
   * The CloudFormation resource type name for this resource class.
   */
@@ -1127,7 +1127,7 @@ export class CfnModule extends cdk.CfnResource {
   /**
    * Resource props.
    */
-  public readonly props: CfnModuleProps;
+  public readonly props: CfnCoreModuleProps;
 
 
   /**
@@ -1137,8 +1137,8 @@ export class CfnModule extends cdk.CfnResource {
    * @param id    - scoped id of the resource
    * @param props - resource properties
    */
-  constructor(scope: cdk.Construct, id: string, props: CfnModuleProps) {
-    super(scope, id, { type: CfnModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnModuleProps(props)! });
+  constructor(scope: cdk.Construct, id: string, props: CfnCoreModuleProps) {
+    super(scope, id, { type: CfnCoreModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnCoreModuleProps(props)! });
 
     this.props = props;
 

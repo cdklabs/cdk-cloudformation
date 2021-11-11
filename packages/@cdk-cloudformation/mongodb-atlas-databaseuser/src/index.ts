@@ -4,84 +4,84 @@ import * as cdk from '@aws-cdk/core';
 /**
  * The databaseUsers resource lets you retrieve, create and modify the MongoDB users in your cluster. Each user has a set of roles that provide access to the project’s databases. A user’s roles apply to all the clusters in the project: if two clusters have a products database and a user has a role granting read access on the products database, the user has that access on both clusters.
  *
- * @schema CfnDatabaseuserProps
+ * @schema CfnDatabaseUserProps
  */
-export interface CfnDatabaseuserProps {
+export interface CfnDatabaseUserProps {
   /**
    * If this value is set, the new database user authenticates with AWS IAM credentials.
    *
-   * @schema CfnDatabaseuserProps#AWSIAMType
+   * @schema CfnDatabaseUserProps#AWSIAMType
    */
-  readonly awsiamType?: CfnDatabaseuserPropsAwsiamType;
+  readonly awsiamType?: CfnDatabaseUserPropsAwsiamType;
 
   /**
-   * @schema CfnDatabaseuserProps#ApiKeys
+   * @schema CfnDatabaseUserProps#ApiKeys
    */
   readonly apiKeys?: ApiKeyDefinition;
 
   /**
    * The user’s authentication database. A user must provide both a username and authentication database to log into MongoDB. In Atlas deployments of MongoDB, the authentication database is always the admin database.
    *
-   * @schema CfnDatabaseuserProps#DatabaseName
+   * @schema CfnDatabaseUserProps#DatabaseName
    */
   readonly databaseName: string;
 
   /**
    * Array containing key-value pairs that tag and categorize the database user.
    *
-   * @schema CfnDatabaseuserProps#Labels
+   * @schema CfnDatabaseUserProps#Labels
    */
   readonly labels?: LabelDefinition[];
 
   /**
    * Method by which the provided username is authenticated. If no value is given, Atlas uses the default value of NONE.
    *
-   * @schema CfnDatabaseuserProps#LdapAuthType
+   * @schema CfnDatabaseUserProps#LdapAuthType
    */
-  readonly ldapAuthType?: CfnDatabaseuserPropsLdapAuthType;
+  readonly ldapAuthType?: CfnDatabaseUserPropsLdapAuthType;
 
   /**
    * The user’s password. This field is not included in the entity returned from the server.
    *
-   * @schema CfnDatabaseuserProps#Password
+   * @schema CfnDatabaseUserProps#Password
    */
   readonly password?: string;
 
   /**
    * Unique identifier of the Atlas project to which the user belongs.
    *
-   * @schema CfnDatabaseuserProps#ProjectId
+   * @schema CfnDatabaseUserProps#ProjectId
    */
   readonly projectId: string;
 
   /**
    * Array of this user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well.
    *
-   * @schema CfnDatabaseuserProps#Roles
+   * @schema CfnDatabaseUserProps#Roles
    */
   readonly roles: RoleDefinition[];
 
   /**
    * Array of clusters and Atlas Data Lakes that this user has access to. If omitted, Atlas grants the user access to all the clusters and Atlas Data Lakes in the project by default.
    *
-   * @schema CfnDatabaseuserProps#Scopes
+   * @schema CfnDatabaseUserProps#Scopes
    */
   readonly scopes?: ScopeDefinition[];
 
   /**
    * Username for authenticating to MongoDB.
    *
-   * @schema CfnDatabaseuserProps#Username
+   * @schema CfnDatabaseUserProps#Username
    */
   readonly username: string;
 
 }
 
 /**
- * Converts an object of type 'CfnDatabaseuserProps' to JSON representation.
+ * Converts an object of type 'CfnDatabaseUserProps' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnDatabaseuserProps(obj: CfnDatabaseuserProps | undefined): Record<string, any> | undefined {
+export function toJson_CfnDatabaseUserProps(obj: CfnDatabaseUserProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'AWSIAMType': obj.awsiamType,
@@ -103,9 +103,9 @@ export function toJson_CfnDatabaseuserProps(obj: CfnDatabaseuserProps | undefine
 /**
  * If this value is set, the new database user authenticates with AWS IAM credentials.
  *
- * @schema CfnDatabaseuserPropsAwsiamType
+ * @schema CfnDatabaseUserPropsAwsiamType
  */
-export enum CfnDatabaseuserPropsAwsiamType {
+export enum CfnDatabaseUserPropsAwsiamType {
   /** NONE */
   NONE = 'NONE',
   /** USER */
@@ -179,9 +179,9 @@ export function toJson_LabelDefinition(obj: LabelDefinition | undefined): Record
 /**
  * Method by which the provided username is authenticated. If no value is given, Atlas uses the default value of NONE.
  *
- * @schema CfnDatabaseuserPropsLdapAuthType
+ * @schema CfnDatabaseUserPropsLdapAuthType
  */
-export enum CfnDatabaseuserPropsLdapAuthType {
+export enum CfnDatabaseUserPropsLdapAuthType {
   /** NONE */
   NONE = 'NONE',
   /** USER */
@@ -276,7 +276,7 @@ export enum ScopeDefinitionType {
  * @stability external
  * @link http://unknown-url
  */
-export class CfnDatabaseuser extends cdk.CfnResource {
+export class CfnDatabaseUser extends cdk.CfnResource {
   /**
   * The CloudFormation resource type name for this resource class.
   */
@@ -285,7 +285,7 @@ export class CfnDatabaseuser extends cdk.CfnResource {
   /**
    * Resource props.
    */
-  public readonly props: CfnDatabaseuserProps;
+  public readonly props: CfnDatabaseUserProps;
 
   /**
    * Attribute `MongoDB::Atlas::DatabaseUser.UserCFNIdentifier`
@@ -300,8 +300,8 @@ export class CfnDatabaseuser extends cdk.CfnResource {
    * @param id    - scoped id of the resource
    * @param props - resource properties
    */
-  constructor(scope: cdk.Construct, id: string, props: CfnDatabaseuserProps) {
-    super(scope, id, { type: CfnDatabaseuser.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnDatabaseuserProps(props)! });
+  constructor(scope: cdk.Construct, id: string, props: CfnDatabaseUserProps) {
+    super(scope, id, { type: CfnDatabaseUser.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnDatabaseUserProps(props)! });
 
     this.props = props;
 

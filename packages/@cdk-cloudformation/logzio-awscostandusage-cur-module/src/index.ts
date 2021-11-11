@@ -4,30 +4,30 @@ import * as cdk from '@aws-cdk/core';
 /**
  * Schema for Module Fragment of type Logzio::awsCostAndUsage::cur::MODULE
  *
- * @schema CfnModuleProps
+ * @schema CfnCurModuleProps
  */
-export interface CfnModuleProps {
+export interface CfnCurModuleProps {
   /**
-   * @schema CfnModuleProps#Parameters
+   * @schema CfnCurModuleProps#Parameters
    */
-  readonly parameters?: CfnModulePropsParameters;
+  readonly parameters?: CfnCurModulePropsParameters;
 
   /**
-   * @schema CfnModuleProps#Resources
+   * @schema CfnCurModuleProps#Resources
    */
-  readonly resources?: CfnModulePropsResources;
+  readonly resources?: CfnCurModulePropsResources;
 
 }
 
 /**
- * Converts an object of type 'CfnModuleProps' to JSON representation.
+ * Converts an object of type 'CfnCurModuleProps' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModuleProps(obj: CfnModuleProps | undefined): Record<string, any> | undefined {
+export function toJson_CfnCurModuleProps(obj: CfnCurModuleProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'Parameters': toJson_CfnModulePropsParameters(obj.parameters),
-    'Resources': toJson_CfnModulePropsResources(obj.resources),
+    'Parameters': toJson_CfnCurModulePropsParameters(obj.parameters),
+    'Resources': toJson_CfnCurModulePropsResources(obj.resources),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -35,98 +35,98 @@ export function toJson_CfnModuleProps(obj: CfnModuleProps | undefined): Record<s
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParameters
+ * @schema CfnCurModulePropsParameters
  */
-export interface CfnModulePropsParameters {
+export interface CfnCurModulePropsParameters {
   /**
    * The name for the bucket which will contain the report files. The bucket name must contain only lowercase letters, numbers, periods (.), and dashes (-), and must follow Amazon S3 bucket restrictions and limitations.
    *
-   * @schema CfnModulePropsParameters#S3BucketName
+   * @schema CfnCurModulePropsParameters#S3BucketName
    */
-  readonly s3BucketName?: CfnModulePropsParametersS3BucketName;
+  readonly s3BucketName?: CfnCurModulePropsParametersS3BucketName;
 
   /**
    * The name of report that you want to create. The name must be unique, is case sensitive and can't include spaces.
    *
-   * @schema CfnModulePropsParameters#ReportName
+   * @schema CfnCurModulePropsParameters#ReportName
    */
-  readonly reportName?: CfnModulePropsParametersReportName;
+  readonly reportName?: CfnCurModulePropsParametersReportName;
 
   /**
    * The prefix that AWS adds to the report name when AWS delivers the report. Your prefix can't include spaces.
    *
-   * @schema CfnModulePropsParameters#ReportPrefix
+   * @schema CfnCurModulePropsParameters#ReportPrefix
    */
-  readonly reportPrefix?: CfnModulePropsParametersReportPrefix;
+  readonly reportPrefix?: CfnCurModulePropsParametersReportPrefix;
 
   /**
    * The granularity of the line items in the report. (Enabling hourly reports does not mean that a new report is generated every hour. It means that data in the report is aggregated with a granularity of one hour.)
    *
-   * @schema CfnModulePropsParameters#ReportTimeUnit
+   * @schema CfnCurModulePropsParameters#ReportTimeUnit
    */
-  readonly reportTimeUnit?: CfnModulePropsParametersReportTimeUnit;
+  readonly reportTimeUnit?: CfnCurModulePropsParametersReportTimeUnit;
 
   /**
    * Choose INCLUDE if you want AWS to include additional details about individual resources IDs in the report (This might significantly increase report size and might affect performance. AWS Lambda can run for up to 15 minutes with up to 10240 MB, and the process time for the whole file must end within this timeframe.), or DON'T INCLUDE otherwise.
    *
-   * @schema CfnModulePropsParameters#ReportAdditionalSchemaElements
+   * @schema CfnCurModulePropsParameters#ReportAdditionalSchemaElements
    */
-  readonly reportAdditionalSchemaElements?: CfnModulePropsParametersReportAdditionalSchemaElements;
+  readonly reportAdditionalSchemaElements?: CfnCurModulePropsParametersReportAdditionalSchemaElements;
 
   /**
    * The Logz.io listener URL fot your region. (For more details, see the regions page:  https://docs.logz.io/user-guide/accounts/account-region.html)
    *
-   * @schema CfnModulePropsParameters#LogzioURL
+   * @schema CfnCurModulePropsParameters#LogzioURL
    */
-  readonly logzioUrl?: CfnModulePropsParametersLogzioUrl;
+  readonly logzioUrl?: CfnCurModulePropsParametersLogzioUrl;
 
   /**
    * Your Logz.io logs token. (Can be retrieved from the Manage Token page.)
    *
-   * @schema CfnModulePropsParameters#LogzioToken
+   * @schema CfnCurModulePropsParameters#LogzioToken
    */
-  readonly logzioToken?: CfnModulePropsParametersLogzioToken;
+  readonly logzioToken?: CfnCurModulePropsParametersLogzioToken;
 
   /**
    * The amount of memory available to the function at runtime. Increasing the function memory also increases its CPU allocation. The value can be multiple of 1 MB. Minimum value is 128 MB and Maximum value is 10240 MB. We recommend to start with 1024 MB.
    *
-   * @schema CfnModulePropsParameters#LambdaMemorySize
+   * @schema CfnCurModulePropsParameters#LambdaMemorySize
    */
-  readonly lambdaMemorySize?: CfnModulePropsParametersLambdaMemorySize;
+  readonly lambdaMemorySize?: CfnCurModulePropsParametersLambdaMemorySize;
 
   /**
    * The amount of time that Lambda allows a function to run before stopping it. Minimum value is 1 second and Maximum value is 900 seconds. We recommend to start with 300 seconds (5 minutes).
    *
-   * @schema CfnModulePropsParameters#LambdaTimeout
+   * @schema CfnCurModulePropsParameters#LambdaTimeout
    */
-  readonly lambdaTimeout?: CfnModulePropsParametersLambdaTimeout;
+  readonly lambdaTimeout?: CfnCurModulePropsParametersLambdaTimeout;
 
   /**
    * The scheduling expression that determines when and how often the Lambda function runs. We recommend to start with 10 hour rate.
    *
-   * @schema CfnModulePropsParameters#CloudWatchEventScheduleExpression
+   * @schema CfnCurModulePropsParameters#CloudWatchEventScheduleExpression
    */
-  readonly cloudWatchEventScheduleExpression?: CfnModulePropsParametersCloudWatchEventScheduleExpression;
+  readonly cloudWatchEventScheduleExpression?: CfnCurModulePropsParametersCloudWatchEventScheduleExpression;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParameters' to JSON representation.
+ * Converts an object of type 'CfnCurModulePropsParameters' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParameters(obj: CfnModulePropsParameters | undefined): Record<string, any> | undefined {
+export function toJson_CfnCurModulePropsParameters(obj: CfnCurModulePropsParameters | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'S3BucketName': toJson_CfnModulePropsParametersS3BucketName(obj.s3BucketName),
-    'ReportName': toJson_CfnModulePropsParametersReportName(obj.reportName),
-    'ReportPrefix': toJson_CfnModulePropsParametersReportPrefix(obj.reportPrefix),
-    'ReportTimeUnit': toJson_CfnModulePropsParametersReportTimeUnit(obj.reportTimeUnit),
-    'ReportAdditionalSchemaElements': toJson_CfnModulePropsParametersReportAdditionalSchemaElements(obj.reportAdditionalSchemaElements),
-    'LogzioURL': toJson_CfnModulePropsParametersLogzioUrl(obj.logzioUrl),
-    'LogzioToken': toJson_CfnModulePropsParametersLogzioToken(obj.logzioToken),
-    'LambdaMemorySize': toJson_CfnModulePropsParametersLambdaMemorySize(obj.lambdaMemorySize),
-    'LambdaTimeout': toJson_CfnModulePropsParametersLambdaTimeout(obj.lambdaTimeout),
-    'CloudWatchEventScheduleExpression': toJson_CfnModulePropsParametersCloudWatchEventScheduleExpression(obj.cloudWatchEventScheduleExpression),
+    'S3BucketName': toJson_CfnCurModulePropsParametersS3BucketName(obj.s3BucketName),
+    'ReportName': toJson_CfnCurModulePropsParametersReportName(obj.reportName),
+    'ReportPrefix': toJson_CfnCurModulePropsParametersReportPrefix(obj.reportPrefix),
+    'ReportTimeUnit': toJson_CfnCurModulePropsParametersReportTimeUnit(obj.reportTimeUnit),
+    'ReportAdditionalSchemaElements': toJson_CfnCurModulePropsParametersReportAdditionalSchemaElements(obj.reportAdditionalSchemaElements),
+    'LogzioURL': toJson_CfnCurModulePropsParametersLogzioUrl(obj.logzioUrl),
+    'LogzioToken': toJson_CfnCurModulePropsParametersLogzioToken(obj.logzioToken),
+    'LambdaMemorySize': toJson_CfnCurModulePropsParametersLambdaMemorySize(obj.lambdaMemorySize),
+    'LambdaTimeout': toJson_CfnCurModulePropsParametersLambdaTimeout(obj.lambdaTimeout),
+    'CloudWatchEventScheduleExpression': toJson_CfnCurModulePropsParametersCloudWatchEventScheduleExpression(obj.cloudWatchEventScheduleExpression),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -134,60 +134,60 @@ export function toJson_CfnModulePropsParameters(obj: CfnModulePropsParameters | 
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResources
+ * @schema CfnCurModulePropsResources
  */
-export interface CfnModulePropsResources {
+export interface CfnCurModulePropsResources {
   /**
-   * @schema CfnModulePropsResources#CUR
+   * @schema CfnCurModulePropsResources#CUR
    */
-  readonly cur?: CfnModulePropsResourcesCur;
+  readonly cur?: CfnCurModulePropsResourcesCur;
 
   /**
-   * @schema CfnModulePropsResources#S3BucketPolicy
+   * @schema CfnCurModulePropsResources#S3BucketPolicy
    */
-  readonly s3BucketPolicy?: CfnModulePropsResourcesS3BucketPolicy;
+  readonly s3BucketPolicy?: CfnCurModulePropsResourcesS3BucketPolicy;
 
   /**
-   * @schema CfnModulePropsResources#S3Bucket
+   * @schema CfnCurModulePropsResources#S3Bucket
    */
-  readonly s3Bucket?: CfnModulePropsResourcesS3Bucket;
+  readonly s3Bucket?: CfnCurModulePropsResourcesS3Bucket;
 
   /**
-   * @schema CfnModulePropsResources#LambdaFunction
+   * @schema CfnCurModulePropsResources#LambdaFunction
    */
-  readonly lambdaFunction?: CfnModulePropsResourcesLambdaFunction;
+  readonly lambdaFunction?: CfnCurModulePropsResourcesLambdaFunction;
 
   /**
-   * @schema CfnModulePropsResources#IAMRole
+   * @schema CfnCurModulePropsResources#IAMRole
    */
-  readonly iamRole?: CfnModulePropsResourcesIamRole;
+  readonly iamRole?: CfnCurModulePropsResourcesIamRole;
 
   /**
-   * @schema CfnModulePropsResources#EventRule
+   * @schema CfnCurModulePropsResources#EventRule
    */
-  readonly eventRule?: CfnModulePropsResourcesEventRule;
+  readonly eventRule?: CfnCurModulePropsResourcesEventRule;
 
   /**
-   * @schema CfnModulePropsResources#LambdaPermission
+   * @schema CfnCurModulePropsResources#LambdaPermission
    */
-  readonly lambdaPermission?: CfnModulePropsResourcesLambdaPermission;
+  readonly lambdaPermission?: CfnCurModulePropsResourcesLambdaPermission;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResources' to JSON representation.
+ * Converts an object of type 'CfnCurModulePropsResources' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResources(obj: CfnModulePropsResources | undefined): Record<string, any> | undefined {
+export function toJson_CfnCurModulePropsResources(obj: CfnCurModulePropsResources | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'CUR': toJson_CfnModulePropsResourcesCur(obj.cur),
-    'S3BucketPolicy': toJson_CfnModulePropsResourcesS3BucketPolicy(obj.s3BucketPolicy),
-    'S3Bucket': toJson_CfnModulePropsResourcesS3Bucket(obj.s3Bucket),
-    'LambdaFunction': toJson_CfnModulePropsResourcesLambdaFunction(obj.lambdaFunction),
-    'IAMRole': toJson_CfnModulePropsResourcesIamRole(obj.iamRole),
-    'EventRule': toJson_CfnModulePropsResourcesEventRule(obj.eventRule),
-    'LambdaPermission': toJson_CfnModulePropsResourcesLambdaPermission(obj.lambdaPermission),
+    'CUR': toJson_CfnCurModulePropsResourcesCur(obj.cur),
+    'S3BucketPolicy': toJson_CfnCurModulePropsResourcesS3BucketPolicy(obj.s3BucketPolicy),
+    'S3Bucket': toJson_CfnCurModulePropsResourcesS3Bucket(obj.s3Bucket),
+    'LambdaFunction': toJson_CfnCurModulePropsResourcesLambdaFunction(obj.lambdaFunction),
+    'IAMRole': toJson_CfnCurModulePropsResourcesIamRole(obj.iamRole),
+    'EventRule': toJson_CfnCurModulePropsResourcesEventRule(obj.eventRule),
+    'LambdaPermission': toJson_CfnCurModulePropsResourcesLambdaPermission(obj.lambdaPermission),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -197,26 +197,26 @@ export function toJson_CfnModulePropsResources(obj: CfnModulePropsResources | un
 /**
  * The name for the bucket which will contain the report files. The bucket name must contain only lowercase letters, numbers, periods (.), and dashes (-), and must follow Amazon S3 bucket restrictions and limitations.
  *
- * @schema CfnModulePropsParametersS3BucketName
+ * @schema CfnCurModulePropsParametersS3BucketName
  */
-export interface CfnModulePropsParametersS3BucketName {
+export interface CfnCurModulePropsParametersS3BucketName {
   /**
-   * @schema CfnModulePropsParametersS3BucketName#Type
+   * @schema CfnCurModulePropsParametersS3BucketName#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersS3BucketName#Description
+   * @schema CfnCurModulePropsParametersS3BucketName#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersS3BucketName' to JSON representation.
+ * Converts an object of type 'CfnCurModulePropsParametersS3BucketName' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersS3BucketName(obj: CfnModulePropsParametersS3BucketName | undefined): Record<string, any> | undefined {
+export function toJson_CfnCurModulePropsParametersS3BucketName(obj: CfnCurModulePropsParametersS3BucketName | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -230,26 +230,26 @@ export function toJson_CfnModulePropsParametersS3BucketName(obj: CfnModulePropsP
 /**
  * The name of report that you want to create. The name must be unique, is case sensitive and can't include spaces.
  *
- * @schema CfnModulePropsParametersReportName
+ * @schema CfnCurModulePropsParametersReportName
  */
-export interface CfnModulePropsParametersReportName {
+export interface CfnCurModulePropsParametersReportName {
   /**
-   * @schema CfnModulePropsParametersReportName#Type
+   * @schema CfnCurModulePropsParametersReportName#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersReportName#Description
+   * @schema CfnCurModulePropsParametersReportName#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersReportName' to JSON representation.
+ * Converts an object of type 'CfnCurModulePropsParametersReportName' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersReportName(obj: CfnModulePropsParametersReportName | undefined): Record<string, any> | undefined {
+export function toJson_CfnCurModulePropsParametersReportName(obj: CfnCurModulePropsParametersReportName | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -263,26 +263,26 @@ export function toJson_CfnModulePropsParametersReportName(obj: CfnModulePropsPar
 /**
  * The prefix that AWS adds to the report name when AWS delivers the report. Your prefix can't include spaces.
  *
- * @schema CfnModulePropsParametersReportPrefix
+ * @schema CfnCurModulePropsParametersReportPrefix
  */
-export interface CfnModulePropsParametersReportPrefix {
+export interface CfnCurModulePropsParametersReportPrefix {
   /**
-   * @schema CfnModulePropsParametersReportPrefix#Type
+   * @schema CfnCurModulePropsParametersReportPrefix#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersReportPrefix#Description
+   * @schema CfnCurModulePropsParametersReportPrefix#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersReportPrefix' to JSON representation.
+ * Converts an object of type 'CfnCurModulePropsParametersReportPrefix' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersReportPrefix(obj: CfnModulePropsParametersReportPrefix | undefined): Record<string, any> | undefined {
+export function toJson_CfnCurModulePropsParametersReportPrefix(obj: CfnCurModulePropsParametersReportPrefix | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -296,26 +296,26 @@ export function toJson_CfnModulePropsParametersReportPrefix(obj: CfnModulePropsP
 /**
  * The granularity of the line items in the report. (Enabling hourly reports does not mean that a new report is generated every hour. It means that data in the report is aggregated with a granularity of one hour.)
  *
- * @schema CfnModulePropsParametersReportTimeUnit
+ * @schema CfnCurModulePropsParametersReportTimeUnit
  */
-export interface CfnModulePropsParametersReportTimeUnit {
+export interface CfnCurModulePropsParametersReportTimeUnit {
   /**
-   * @schema CfnModulePropsParametersReportTimeUnit#Type
+   * @schema CfnCurModulePropsParametersReportTimeUnit#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersReportTimeUnit#Description
+   * @schema CfnCurModulePropsParametersReportTimeUnit#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersReportTimeUnit' to JSON representation.
+ * Converts an object of type 'CfnCurModulePropsParametersReportTimeUnit' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersReportTimeUnit(obj: CfnModulePropsParametersReportTimeUnit | undefined): Record<string, any> | undefined {
+export function toJson_CfnCurModulePropsParametersReportTimeUnit(obj: CfnCurModulePropsParametersReportTimeUnit | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -329,26 +329,26 @@ export function toJson_CfnModulePropsParametersReportTimeUnit(obj: CfnModuleProp
 /**
  * Choose INCLUDE if you want AWS to include additional details about individual resources IDs in the report (This might significantly increase report size and might affect performance. AWS Lambda can run for up to 15 minutes with up to 10240 MB, and the process time for the whole file must end within this timeframe.), or DON'T INCLUDE otherwise.
  *
- * @schema CfnModulePropsParametersReportAdditionalSchemaElements
+ * @schema CfnCurModulePropsParametersReportAdditionalSchemaElements
  */
-export interface CfnModulePropsParametersReportAdditionalSchemaElements {
+export interface CfnCurModulePropsParametersReportAdditionalSchemaElements {
   /**
-   * @schema CfnModulePropsParametersReportAdditionalSchemaElements#Type
+   * @schema CfnCurModulePropsParametersReportAdditionalSchemaElements#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersReportAdditionalSchemaElements#Description
+   * @schema CfnCurModulePropsParametersReportAdditionalSchemaElements#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersReportAdditionalSchemaElements' to JSON representation.
+ * Converts an object of type 'CfnCurModulePropsParametersReportAdditionalSchemaElements' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersReportAdditionalSchemaElements(obj: CfnModulePropsParametersReportAdditionalSchemaElements | undefined): Record<string, any> | undefined {
+export function toJson_CfnCurModulePropsParametersReportAdditionalSchemaElements(obj: CfnCurModulePropsParametersReportAdditionalSchemaElements | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -362,26 +362,26 @@ export function toJson_CfnModulePropsParametersReportAdditionalSchemaElements(ob
 /**
  * The Logz.io listener URL fot your region. (For more details, see the regions page:  https://docs.logz.io/user-guide/accounts/account-region.html)
  *
- * @schema CfnModulePropsParametersLogzioUrl
+ * @schema CfnCurModulePropsParametersLogzioUrl
  */
-export interface CfnModulePropsParametersLogzioUrl {
+export interface CfnCurModulePropsParametersLogzioUrl {
   /**
-   * @schema CfnModulePropsParametersLogzioUrl#Type
+   * @schema CfnCurModulePropsParametersLogzioUrl#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersLogzioUrl#Description
+   * @schema CfnCurModulePropsParametersLogzioUrl#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersLogzioUrl' to JSON representation.
+ * Converts an object of type 'CfnCurModulePropsParametersLogzioUrl' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersLogzioUrl(obj: CfnModulePropsParametersLogzioUrl | undefined): Record<string, any> | undefined {
+export function toJson_CfnCurModulePropsParametersLogzioUrl(obj: CfnCurModulePropsParametersLogzioUrl | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -395,26 +395,26 @@ export function toJson_CfnModulePropsParametersLogzioUrl(obj: CfnModulePropsPara
 /**
  * Your Logz.io logs token. (Can be retrieved from the Manage Token page.)
  *
- * @schema CfnModulePropsParametersLogzioToken
+ * @schema CfnCurModulePropsParametersLogzioToken
  */
-export interface CfnModulePropsParametersLogzioToken {
+export interface CfnCurModulePropsParametersLogzioToken {
   /**
-   * @schema CfnModulePropsParametersLogzioToken#Type
+   * @schema CfnCurModulePropsParametersLogzioToken#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersLogzioToken#Description
+   * @schema CfnCurModulePropsParametersLogzioToken#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersLogzioToken' to JSON representation.
+ * Converts an object of type 'CfnCurModulePropsParametersLogzioToken' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersLogzioToken(obj: CfnModulePropsParametersLogzioToken | undefined): Record<string, any> | undefined {
+export function toJson_CfnCurModulePropsParametersLogzioToken(obj: CfnCurModulePropsParametersLogzioToken | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -428,26 +428,26 @@ export function toJson_CfnModulePropsParametersLogzioToken(obj: CfnModulePropsPa
 /**
  * The amount of memory available to the function at runtime. Increasing the function memory also increases its CPU allocation. The value can be multiple of 1 MB. Minimum value is 128 MB and Maximum value is 10240 MB. We recommend to start with 1024 MB.
  *
- * @schema CfnModulePropsParametersLambdaMemorySize
+ * @schema CfnCurModulePropsParametersLambdaMemorySize
  */
-export interface CfnModulePropsParametersLambdaMemorySize {
+export interface CfnCurModulePropsParametersLambdaMemorySize {
   /**
-   * @schema CfnModulePropsParametersLambdaMemorySize#Type
+   * @schema CfnCurModulePropsParametersLambdaMemorySize#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersLambdaMemorySize#Description
+   * @schema CfnCurModulePropsParametersLambdaMemorySize#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersLambdaMemorySize' to JSON representation.
+ * Converts an object of type 'CfnCurModulePropsParametersLambdaMemorySize' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersLambdaMemorySize(obj: CfnModulePropsParametersLambdaMemorySize | undefined): Record<string, any> | undefined {
+export function toJson_CfnCurModulePropsParametersLambdaMemorySize(obj: CfnCurModulePropsParametersLambdaMemorySize | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -461,26 +461,26 @@ export function toJson_CfnModulePropsParametersLambdaMemorySize(obj: CfnModulePr
 /**
  * The amount of time that Lambda allows a function to run before stopping it. Minimum value is 1 second and Maximum value is 900 seconds. We recommend to start with 300 seconds (5 minutes).
  *
- * @schema CfnModulePropsParametersLambdaTimeout
+ * @schema CfnCurModulePropsParametersLambdaTimeout
  */
-export interface CfnModulePropsParametersLambdaTimeout {
+export interface CfnCurModulePropsParametersLambdaTimeout {
   /**
-   * @schema CfnModulePropsParametersLambdaTimeout#Type
+   * @schema CfnCurModulePropsParametersLambdaTimeout#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersLambdaTimeout#Description
+   * @schema CfnCurModulePropsParametersLambdaTimeout#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersLambdaTimeout' to JSON representation.
+ * Converts an object of type 'CfnCurModulePropsParametersLambdaTimeout' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersLambdaTimeout(obj: CfnModulePropsParametersLambdaTimeout | undefined): Record<string, any> | undefined {
+export function toJson_CfnCurModulePropsParametersLambdaTimeout(obj: CfnCurModulePropsParametersLambdaTimeout | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -494,26 +494,26 @@ export function toJson_CfnModulePropsParametersLambdaTimeout(obj: CfnModuleProps
 /**
  * The scheduling expression that determines when and how often the Lambda function runs. We recommend to start with 10 hour rate.
  *
- * @schema CfnModulePropsParametersCloudWatchEventScheduleExpression
+ * @schema CfnCurModulePropsParametersCloudWatchEventScheduleExpression
  */
-export interface CfnModulePropsParametersCloudWatchEventScheduleExpression {
+export interface CfnCurModulePropsParametersCloudWatchEventScheduleExpression {
   /**
-   * @schema CfnModulePropsParametersCloudWatchEventScheduleExpression#Type
+   * @schema CfnCurModulePropsParametersCloudWatchEventScheduleExpression#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersCloudWatchEventScheduleExpression#Description
+   * @schema CfnCurModulePropsParametersCloudWatchEventScheduleExpression#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersCloudWatchEventScheduleExpression' to JSON representation.
+ * Converts an object of type 'CfnCurModulePropsParametersCloudWatchEventScheduleExpression' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersCloudWatchEventScheduleExpression(obj: CfnModulePropsParametersCloudWatchEventScheduleExpression | undefined): Record<string, any> | undefined {
+export function toJson_CfnCurModulePropsParametersCloudWatchEventScheduleExpression(obj: CfnCurModulePropsParametersCloudWatchEventScheduleExpression | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -525,26 +525,26 @@ export function toJson_CfnModulePropsParametersCloudWatchEventScheduleExpression
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesCur
+ * @schema CfnCurModulePropsResourcesCur
  */
-export interface CfnModulePropsResourcesCur {
+export interface CfnCurModulePropsResourcesCur {
   /**
-   * @schema CfnModulePropsResourcesCur#Type
+   * @schema CfnCurModulePropsResourcesCur#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesCur#Properties
+   * @schema CfnCurModulePropsResourcesCur#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesCur' to JSON representation.
+ * Converts an object of type 'CfnCurModulePropsResourcesCur' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesCur(obj: CfnModulePropsResourcesCur | undefined): Record<string, any> | undefined {
+export function toJson_CfnCurModulePropsResourcesCur(obj: CfnCurModulePropsResourcesCur | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -556,26 +556,26 @@ export function toJson_CfnModulePropsResourcesCur(obj: CfnModulePropsResourcesCu
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesS3BucketPolicy
+ * @schema CfnCurModulePropsResourcesS3BucketPolicy
  */
-export interface CfnModulePropsResourcesS3BucketPolicy {
+export interface CfnCurModulePropsResourcesS3BucketPolicy {
   /**
-   * @schema CfnModulePropsResourcesS3BucketPolicy#Type
+   * @schema CfnCurModulePropsResourcesS3BucketPolicy#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesS3BucketPolicy#Properties
+   * @schema CfnCurModulePropsResourcesS3BucketPolicy#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesS3BucketPolicy' to JSON representation.
+ * Converts an object of type 'CfnCurModulePropsResourcesS3BucketPolicy' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesS3BucketPolicy(obj: CfnModulePropsResourcesS3BucketPolicy | undefined): Record<string, any> | undefined {
+export function toJson_CfnCurModulePropsResourcesS3BucketPolicy(obj: CfnCurModulePropsResourcesS3BucketPolicy | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -587,26 +587,26 @@ export function toJson_CfnModulePropsResourcesS3BucketPolicy(obj: CfnModuleProps
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesS3Bucket
+ * @schema CfnCurModulePropsResourcesS3Bucket
  */
-export interface CfnModulePropsResourcesS3Bucket {
+export interface CfnCurModulePropsResourcesS3Bucket {
   /**
-   * @schema CfnModulePropsResourcesS3Bucket#Type
+   * @schema CfnCurModulePropsResourcesS3Bucket#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesS3Bucket#Properties
+   * @schema CfnCurModulePropsResourcesS3Bucket#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesS3Bucket' to JSON representation.
+ * Converts an object of type 'CfnCurModulePropsResourcesS3Bucket' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesS3Bucket(obj: CfnModulePropsResourcesS3Bucket | undefined): Record<string, any> | undefined {
+export function toJson_CfnCurModulePropsResourcesS3Bucket(obj: CfnCurModulePropsResourcesS3Bucket | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -618,26 +618,26 @@ export function toJson_CfnModulePropsResourcesS3Bucket(obj: CfnModulePropsResour
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesLambdaFunction
+ * @schema CfnCurModulePropsResourcesLambdaFunction
  */
-export interface CfnModulePropsResourcesLambdaFunction {
+export interface CfnCurModulePropsResourcesLambdaFunction {
   /**
-   * @schema CfnModulePropsResourcesLambdaFunction#Type
+   * @schema CfnCurModulePropsResourcesLambdaFunction#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesLambdaFunction#Properties
+   * @schema CfnCurModulePropsResourcesLambdaFunction#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesLambdaFunction' to JSON representation.
+ * Converts an object of type 'CfnCurModulePropsResourcesLambdaFunction' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesLambdaFunction(obj: CfnModulePropsResourcesLambdaFunction | undefined): Record<string, any> | undefined {
+export function toJson_CfnCurModulePropsResourcesLambdaFunction(obj: CfnCurModulePropsResourcesLambdaFunction | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -649,26 +649,26 @@ export function toJson_CfnModulePropsResourcesLambdaFunction(obj: CfnModuleProps
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesIamRole
+ * @schema CfnCurModulePropsResourcesIamRole
  */
-export interface CfnModulePropsResourcesIamRole {
+export interface CfnCurModulePropsResourcesIamRole {
   /**
-   * @schema CfnModulePropsResourcesIamRole#Type
+   * @schema CfnCurModulePropsResourcesIamRole#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesIamRole#Properties
+   * @schema CfnCurModulePropsResourcesIamRole#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesIamRole' to JSON representation.
+ * Converts an object of type 'CfnCurModulePropsResourcesIamRole' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesIamRole(obj: CfnModulePropsResourcesIamRole | undefined): Record<string, any> | undefined {
+export function toJson_CfnCurModulePropsResourcesIamRole(obj: CfnCurModulePropsResourcesIamRole | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -680,26 +680,26 @@ export function toJson_CfnModulePropsResourcesIamRole(obj: CfnModulePropsResourc
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesEventRule
+ * @schema CfnCurModulePropsResourcesEventRule
  */
-export interface CfnModulePropsResourcesEventRule {
+export interface CfnCurModulePropsResourcesEventRule {
   /**
-   * @schema CfnModulePropsResourcesEventRule#Type
+   * @schema CfnCurModulePropsResourcesEventRule#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesEventRule#Properties
+   * @schema CfnCurModulePropsResourcesEventRule#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesEventRule' to JSON representation.
+ * Converts an object of type 'CfnCurModulePropsResourcesEventRule' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesEventRule(obj: CfnModulePropsResourcesEventRule | undefined): Record<string, any> | undefined {
+export function toJson_CfnCurModulePropsResourcesEventRule(obj: CfnCurModulePropsResourcesEventRule | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -711,26 +711,26 @@ export function toJson_CfnModulePropsResourcesEventRule(obj: CfnModulePropsResou
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesLambdaPermission
+ * @schema CfnCurModulePropsResourcesLambdaPermission
  */
-export interface CfnModulePropsResourcesLambdaPermission {
+export interface CfnCurModulePropsResourcesLambdaPermission {
   /**
-   * @schema CfnModulePropsResourcesLambdaPermission#Type
+   * @schema CfnCurModulePropsResourcesLambdaPermission#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesLambdaPermission#Properties
+   * @schema CfnCurModulePropsResourcesLambdaPermission#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesLambdaPermission' to JSON representation.
+ * Converts an object of type 'CfnCurModulePropsResourcesLambdaPermission' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesLambdaPermission(obj: CfnModulePropsResourcesLambdaPermission | undefined): Record<string, any> | undefined {
+export function toJson_CfnCurModulePropsResourcesLambdaPermission(obj: CfnCurModulePropsResourcesLambdaPermission | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -749,7 +749,7 @@ export function toJson_CfnModulePropsResourcesLambdaPermission(obj: CfnModulePro
  * @stability external
  * @link http://unknown-url
  */
-export class CfnModule extends cdk.CfnResource {
+export class CfnCurModule extends cdk.CfnResource {
   /**
   * The CloudFormation resource type name for this resource class.
   */
@@ -758,7 +758,7 @@ export class CfnModule extends cdk.CfnResource {
   /**
    * Resource props.
    */
-  public readonly props: CfnModuleProps;
+  public readonly props: CfnCurModuleProps;
 
 
   /**
@@ -768,8 +768,8 @@ export class CfnModule extends cdk.CfnResource {
    * @param id    - scoped id of the resource
    * @param props - resource properties
    */
-  constructor(scope: cdk.Construct, id: string, props: CfnModuleProps) {
-    super(scope, id, { type: CfnModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnModuleProps(props)! });
+  constructor(scope: cdk.Construct, id: string, props: CfnCurModuleProps) {
+    super(scope, id, { type: CfnCurModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnCurModuleProps(props)! });
 
     this.props = props;
 

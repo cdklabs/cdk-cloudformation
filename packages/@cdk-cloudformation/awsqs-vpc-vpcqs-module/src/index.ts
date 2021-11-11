@@ -4,30 +4,30 @@ import * as cdk from '@aws-cdk/core';
 /**
  * Schema for Module Fragment of type AWSQS::VPC::VPCQS::MODULE
  *
- * @schema CfnModuleProps
+ * @schema CfnVpcqsModuleProps
  */
-export interface CfnModuleProps {
+export interface CfnVpcqsModuleProps {
   /**
-   * @schema CfnModuleProps#Parameters
+   * @schema CfnVpcqsModuleProps#Parameters
    */
-  readonly parameters?: CfnModulePropsParameters;
+  readonly parameters?: CfnVpcqsModulePropsParameters;
 
   /**
-   * @schema CfnModuleProps#Resources
+   * @schema CfnVpcqsModuleProps#Resources
    */
-  readonly resources?: CfnModulePropsResources;
+  readonly resources?: CfnVpcqsModulePropsResources;
 
 }
 
 /**
- * Converts an object of type 'CfnModuleProps' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModuleProps' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModuleProps(obj: CfnModuleProps | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModuleProps(obj: CfnVpcqsModuleProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'Parameters': toJson_CfnModulePropsParameters(obj.parameters),
-    'Resources': toJson_CfnModulePropsResources(obj.resources),
+    'Parameters': toJson_CfnVpcqsModulePropsParameters(obj.parameters),
+    'Resources': toJson_CfnVpcqsModulePropsResources(obj.resources),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -35,298 +35,298 @@ export function toJson_CfnModuleProps(obj: CfnModuleProps | undefined): Record<s
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParameters
+ * @schema CfnVpcqsModulePropsParameters
  */
-export interface CfnModulePropsParameters {
+export interface CfnVpcqsModulePropsParameters {
   /**
    * List of Availability Zones to use for the subnets in the VPC. Note: The logical order is preserved.
    *
-   * @schema CfnModulePropsParameters#AvailabilityZones
+   * @schema CfnVpcqsModulePropsParameters#AvailabilityZones
    */
-  readonly availabilityZones?: CfnModulePropsParametersAvailabilityZones;
+  readonly availabilityZones?: CfnVpcqsModulePropsParametersAvailabilityZones;
 
   /**
    * Set to true to create a network ACL protected subnet in each Availability Zone. If false, the CIDR parameters for those subnets will be ignored. If true, it also requires that the 'Create private subnets' parameter is also true to have any effect.
    *
-   * @schema CfnModulePropsParameters#CreateAdditionalPrivateSubnets
+   * @schema CfnVpcqsModulePropsParameters#CreateAdditionalPrivateSubnets
    */
-  readonly createAdditionalPrivateSubnets?: CfnModulePropsParametersCreateAdditionalPrivateSubnets;
+  readonly createAdditionalPrivateSubnets?: CfnVpcqsModulePropsParametersCreateAdditionalPrivateSubnets;
 
   /**
    * Set to false when creating only private subnets. If True, both CreatePublicSubnets and CreatePrivateSubnets must also be true.
    *
-   * @schema CfnModulePropsParameters#CreateNATGateways
+   * @schema CfnVpcqsModulePropsParameters#CreateNATGateways
    */
-  readonly createNatGateways?: CfnModulePropsParametersCreateNatGateways;
+  readonly createNatGateways?: CfnVpcqsModulePropsParametersCreateNatGateways;
 
   /**
    * Set to false to create only private subnets. If false, CreatePrivateSubnets must be True and the CIDR parameters for ALL public subnets will be ignored
    *
-   * @schema CfnModulePropsParameters#CreatePublicSubnets
+   * @schema CfnVpcqsModulePropsParameters#CreatePublicSubnets
    */
-  readonly createPublicSubnets?: CfnModulePropsParametersCreatePublicSubnets;
+  readonly createPublicSubnets?: CfnVpcqsModulePropsParametersCreatePublicSubnets;
 
   /**
    * Set to false to create only public subnets. If false, the CIDR parameters for ALL private subnets will be ignored.
    *
-   * @schema CfnModulePropsParameters#CreatePrivateSubnets
+   * @schema CfnVpcqsModulePropsParameters#CreatePrivateSubnets
    */
-  readonly createPrivateSubnets?: CfnModulePropsParametersCreatePrivateSubnets;
+  readonly createPrivateSubnets?: CfnVpcqsModulePropsParametersCreatePrivateSubnets;
 
   /**
    * Set to true to create VPC flow logs for the VPC and publish them to CloudWatch. If false, VPC flow logs will not be created.
    *
-   * @schema CfnModulePropsParameters#CreateVPCFlowLogsToCloudWatch
+   * @schema CfnVpcqsModulePropsParameters#CreateVPCFlowLogsToCloudWatch
    */
-  readonly createVpcFlowLogsToCloudWatch?: CfnModulePropsParametersCreateVpcFlowLogsToCloudWatch;
+  readonly createVpcFlowLogsToCloudWatch?: CfnVpcqsModulePropsParametersCreateVpcFlowLogsToCloudWatch;
 
   /**
    * Number of Availability Zones to use in the VPC. This must match your selections in the list of Availability Zones parameter.
    *
-   * @schema CfnModulePropsParameters#NumberOfAZs
+   * @schema CfnVpcqsModulePropsParameters#NumberOfAZs
    */
-  readonly numberOfAZs?: CfnModulePropsParametersNumberOfAZs;
+  readonly numberOfAZs?: CfnVpcqsModulePropsParametersNumberOfAZs;
 
   /**
    * CIDR block for private subnet 1A located in Availability Zone 1
    *
-   * @schema CfnModulePropsParameters#PrivateSubnet1ACIDR
+   * @schema CfnVpcqsModulePropsParameters#PrivateSubnet1ACIDR
    */
-  readonly privateSubnet1Acidr?: CfnModulePropsParametersPrivateSubnet1Acidr;
+  readonly privateSubnet1Acidr?: CfnVpcqsModulePropsParametersPrivateSubnet1Acidr;
 
   /**
    * CIDR block for private subnet 1B with dedicated network ACL located in Availability Zone 1
    *
-   * @schema CfnModulePropsParameters#PrivateSubnet1BCIDR
+   * @schema CfnVpcqsModulePropsParameters#PrivateSubnet1BCIDR
    */
-  readonly privateSubnet1Bcidr?: CfnModulePropsParametersPrivateSubnet1Bcidr;
+  readonly privateSubnet1Bcidr?: CfnVpcqsModulePropsParametersPrivateSubnet1Bcidr;
 
   /**
    * CIDR block for private subnet 2A located in Availability Zone 2
    *
-   * @schema CfnModulePropsParameters#PrivateSubnet2ACIDR
+   * @schema CfnVpcqsModulePropsParameters#PrivateSubnet2ACIDR
    */
-  readonly privateSubnet2Acidr?: CfnModulePropsParametersPrivateSubnet2Acidr;
+  readonly privateSubnet2Acidr?: CfnVpcqsModulePropsParametersPrivateSubnet2Acidr;
 
   /**
    * CIDR block for private subnet 2B with dedicated network ACL located in Availability Zone 2
    *
-   * @schema CfnModulePropsParameters#PrivateSubnet2BCIDR
+   * @schema CfnVpcqsModulePropsParameters#PrivateSubnet2BCIDR
    */
-  readonly privateSubnet2Bcidr?: CfnModulePropsParametersPrivateSubnet2Bcidr;
+  readonly privateSubnet2Bcidr?: CfnVpcqsModulePropsParametersPrivateSubnet2Bcidr;
 
   /**
    * CIDR block for private subnet 3A located in Availability Zone 3
    *
-   * @schema CfnModulePropsParameters#PrivateSubnet3ACIDR
+   * @schema CfnVpcqsModulePropsParameters#PrivateSubnet3ACIDR
    */
-  readonly privateSubnet3Acidr?: CfnModulePropsParametersPrivateSubnet3Acidr;
+  readonly privateSubnet3Acidr?: CfnVpcqsModulePropsParametersPrivateSubnet3Acidr;
 
   /**
    * CIDR block for private subnet 3B with dedicated network ACL located in Availability Zone 3
    *
-   * @schema CfnModulePropsParameters#PrivateSubnet3BCIDR
+   * @schema CfnVpcqsModulePropsParameters#PrivateSubnet3BCIDR
    */
-  readonly privateSubnet3Bcidr?: CfnModulePropsParametersPrivateSubnet3Bcidr;
+  readonly privateSubnet3Bcidr?: CfnVpcqsModulePropsParametersPrivateSubnet3Bcidr;
 
   /**
    * CIDR block for private subnet 4A located in Availability Zone 4
    *
-   * @schema CfnModulePropsParameters#PrivateSubnet4ACIDR
+   * @schema CfnVpcqsModulePropsParameters#PrivateSubnet4ACIDR
    */
-  readonly privateSubnet4Acidr?: CfnModulePropsParametersPrivateSubnet4Acidr;
+  readonly privateSubnet4Acidr?: CfnVpcqsModulePropsParametersPrivateSubnet4Acidr;
 
   /**
    * CIDR block for private subnet 4B with dedicated network ACL located in Availability Zone 4
    *
-   * @schema CfnModulePropsParameters#PrivateSubnet4BCIDR
+   * @schema CfnVpcqsModulePropsParameters#PrivateSubnet4BCIDR
    */
-  readonly privateSubnet4Bcidr?: CfnModulePropsParametersPrivateSubnet4Bcidr;
+  readonly privateSubnet4Bcidr?: CfnVpcqsModulePropsParametersPrivateSubnet4Bcidr;
 
   /**
    * tag to add to private subnets A, in format Key=Value (Optional)
    *
-   * @schema CfnModulePropsParameters#PrivateSubnetATag1
+   * @schema CfnVpcqsModulePropsParameters#PrivateSubnetATag1
    */
-  readonly privateSubnetATag1?: CfnModulePropsParametersPrivateSubnetATag1;
+  readonly privateSubnetATag1?: CfnVpcqsModulePropsParametersPrivateSubnetATag1;
 
   /**
    * tag to add to private subnets A, in format Key=Value (Optional)
    *
-   * @schema CfnModulePropsParameters#PrivateSubnetATag2
+   * @schema CfnVpcqsModulePropsParameters#PrivateSubnetATag2
    */
-  readonly privateSubnetATag2?: CfnModulePropsParametersPrivateSubnetATag2;
+  readonly privateSubnetATag2?: CfnVpcqsModulePropsParametersPrivateSubnetATag2;
 
   /**
    * tag to add to private subnets A, in format Key=Value (Optional)
    *
-   * @schema CfnModulePropsParameters#PrivateSubnetATag3
+   * @schema CfnVpcqsModulePropsParameters#PrivateSubnetATag3
    */
-  readonly privateSubnetATag3?: CfnModulePropsParametersPrivateSubnetATag3;
+  readonly privateSubnetATag3?: CfnVpcqsModulePropsParametersPrivateSubnetATag3;
 
   /**
    * tag to add to private subnets B, in format Key=Value (Optional)
    *
-   * @schema CfnModulePropsParameters#PrivateSubnetBTag1
+   * @schema CfnVpcqsModulePropsParameters#PrivateSubnetBTag1
    */
-  readonly privateSubnetBTag1?: CfnModulePropsParametersPrivateSubnetBTag1;
+  readonly privateSubnetBTag1?: CfnVpcqsModulePropsParametersPrivateSubnetBTag1;
 
   /**
    * tag to add to private subnets B, in format Key=Value (Optional)
    *
-   * @schema CfnModulePropsParameters#PrivateSubnetBTag2
+   * @schema CfnVpcqsModulePropsParameters#PrivateSubnetBTag2
    */
-  readonly privateSubnetBTag2?: CfnModulePropsParametersPrivateSubnetBTag2;
+  readonly privateSubnetBTag2?: CfnVpcqsModulePropsParametersPrivateSubnetBTag2;
 
   /**
    * tag to add to private subnets B, in format Key=Value (Optional)
    *
-   * @schema CfnModulePropsParameters#PrivateSubnetBTag3
+   * @schema CfnVpcqsModulePropsParameters#PrivateSubnetBTag3
    */
-  readonly privateSubnetBTag3?: CfnModulePropsParametersPrivateSubnetBTag3;
+  readonly privateSubnetBTag3?: CfnVpcqsModulePropsParametersPrivateSubnetBTag3;
 
   /**
    * CIDR block for the public DMZ subnet 1 located in Availability Zone 1
    *
-   * @schema CfnModulePropsParameters#PublicSubnet1CIDR
+   * @schema CfnVpcqsModulePropsParameters#PublicSubnet1CIDR
    */
-  readonly publicSubnet1Cidr?: CfnModulePropsParametersPublicSubnet1Cidr;
+  readonly publicSubnet1Cidr?: CfnVpcqsModulePropsParametersPublicSubnet1Cidr;
 
   /**
    * CIDR block for the public DMZ subnet 2 located in Availability Zone 2
    *
-   * @schema CfnModulePropsParameters#PublicSubnet2CIDR
+   * @schema CfnVpcqsModulePropsParameters#PublicSubnet2CIDR
    */
-  readonly publicSubnet2Cidr?: CfnModulePropsParametersPublicSubnet2Cidr;
+  readonly publicSubnet2Cidr?: CfnVpcqsModulePropsParametersPublicSubnet2Cidr;
 
   /**
    * CIDR block for the public DMZ subnet 3 located in Availability Zone 3
    *
-   * @schema CfnModulePropsParameters#PublicSubnet3CIDR
+   * @schema CfnVpcqsModulePropsParameters#PublicSubnet3CIDR
    */
-  readonly publicSubnet3Cidr?: CfnModulePropsParametersPublicSubnet3Cidr;
+  readonly publicSubnet3Cidr?: CfnVpcqsModulePropsParametersPublicSubnet3Cidr;
 
   /**
    * CIDR block for the public DMZ subnet 4 located in Availability Zone 4
    *
-   * @schema CfnModulePropsParameters#PublicSubnet4CIDR
+   * @schema CfnVpcqsModulePropsParameters#PublicSubnet4CIDR
    */
-  readonly publicSubnet4Cidr?: CfnModulePropsParametersPublicSubnet4Cidr;
+  readonly publicSubnet4Cidr?: CfnVpcqsModulePropsParametersPublicSubnet4Cidr;
 
   /**
    * tag to add to public subnets, in format Key=Value (Optional)
    *
-   * @schema CfnModulePropsParameters#PublicSubnetTag1
+   * @schema CfnVpcqsModulePropsParameters#PublicSubnetTag1
    */
-  readonly publicSubnetTag1?: CfnModulePropsParametersPublicSubnetTag1;
+  readonly publicSubnetTag1?: CfnVpcqsModulePropsParametersPublicSubnetTag1;
 
   /**
    * tag to add to public subnets, in format Key=Value (Optional)
    *
-   * @schema CfnModulePropsParameters#PublicSubnetTag2
+   * @schema CfnVpcqsModulePropsParameters#PublicSubnetTag2
    */
-  readonly publicSubnetTag2?: CfnModulePropsParametersPublicSubnetTag2;
+  readonly publicSubnetTag2?: CfnVpcqsModulePropsParametersPublicSubnetTag2;
 
   /**
    * tag to add to public subnets, in format Key=Value (Optional)
    *
-   * @schema CfnModulePropsParameters#PublicSubnetTag3
+   * @schema CfnVpcqsModulePropsParameters#PublicSubnetTag3
    */
-  readonly publicSubnetTag3?: CfnModulePropsParametersPublicSubnetTag3;
+  readonly publicSubnetTag3?: CfnVpcqsModulePropsParametersPublicSubnetTag3;
 
   /**
    * CIDR block for the VPC
    *
-   * @schema CfnModulePropsParameters#VPCCIDR
+   * @schema CfnVpcqsModulePropsParameters#VPCCIDR
    */
-  readonly vpccidr?: CfnModulePropsParametersVpccidr;
+  readonly vpccidr?: CfnVpcqsModulePropsParametersVpccidr;
 
   /**
    * (Optional) KMS Key ARN to use for encrypting the VPC flow logs data. If empty, encryption is enabled with CloudWatch Logs managing the server-side encryption keys.
    *
-   * @schema CfnModulePropsParameters#VPCFlowLogsCloudWatchKMSKey
+   * @schema CfnVpcqsModulePropsParameters#VPCFlowLogsCloudWatchKMSKey
    */
-  readonly vpcFlowLogsCloudWatchKmsKey?: CfnModulePropsParametersVpcFlowLogsCloudWatchKmsKey;
+  readonly vpcFlowLogsCloudWatchKmsKey?: CfnVpcqsModulePropsParametersVpcFlowLogsCloudWatchKmsKey;
 
   /**
    * The fields to include in the flow log record, in the order in which they should appear. Specify the fields using the ${field-id} format, separated by spaces. Using the Default Format as the default value.
    *
-   * @schema CfnModulePropsParameters#VPCFlowLogsLogFormat
+   * @schema CfnVpcqsModulePropsParameters#VPCFlowLogsLogFormat
    */
-  readonly vpcFlowLogsLogFormat?: CfnModulePropsParametersVpcFlowLogsLogFormat;
+  readonly vpcFlowLogsLogFormat?: CfnVpcqsModulePropsParametersVpcFlowLogsLogFormat;
 
   /**
    * Number of days to retain the VPC Flow Logs in CloudWatch
    *
-   * @schema CfnModulePropsParameters#VPCFlowLogsLogGroupRetention
+   * @schema CfnVpcqsModulePropsParameters#VPCFlowLogsLogGroupRetention
    */
-  readonly vpcFlowLogsLogGroupRetention?: CfnModulePropsParametersVpcFlowLogsLogGroupRetention;
+  readonly vpcFlowLogsLogGroupRetention?: CfnVpcqsModulePropsParametersVpcFlowLogsLogGroupRetention;
 
   /**
    * The maximum interval of time during which a flow of packets is captured and aggregated into a flow log record. You can specify 60 seconds (1 minute) or 600 seconds (10 minutes).
    *
-   * @schema CfnModulePropsParameters#VPCFlowLogsMaxAggregationInterval
+   * @schema CfnVpcqsModulePropsParameters#VPCFlowLogsMaxAggregationInterval
    */
-  readonly vpcFlowLogsMaxAggregationInterval?: CfnModulePropsParametersVpcFlowLogsMaxAggregationInterval;
+  readonly vpcFlowLogsMaxAggregationInterval?: CfnVpcqsModulePropsParametersVpcFlowLogsMaxAggregationInterval;
 
   /**
    * The type of traffic to log. You can log traffic that the resource accepts or rejects, or all traffic.
    *
-   * @schema CfnModulePropsParameters#VPCFlowLogsTrafficType
+   * @schema CfnVpcqsModulePropsParameters#VPCFlowLogsTrafficType
    */
-  readonly vpcFlowLogsTrafficType?: CfnModulePropsParametersVpcFlowLogsTrafficType;
+  readonly vpcFlowLogsTrafficType?: CfnVpcqsModulePropsParametersVpcFlowLogsTrafficType;
 
   /**
    * The allowed tenancy of instances launched into the VPC
    *
-   * @schema CfnModulePropsParameters#VPCTenancy
+   * @schema CfnVpcqsModulePropsParameters#VPCTenancy
    */
-  readonly vpcTenancy?: CfnModulePropsParametersVpcTenancy;
+  readonly vpcTenancy?: CfnVpcqsModulePropsParametersVpcTenancy;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParameters' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParameters' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParameters(obj: CfnModulePropsParameters | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParameters(obj: CfnVpcqsModulePropsParameters | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'AvailabilityZones': toJson_CfnModulePropsParametersAvailabilityZones(obj.availabilityZones),
-    'CreateAdditionalPrivateSubnets': toJson_CfnModulePropsParametersCreateAdditionalPrivateSubnets(obj.createAdditionalPrivateSubnets),
-    'CreateNATGateways': toJson_CfnModulePropsParametersCreateNatGateways(obj.createNatGateways),
-    'CreatePublicSubnets': toJson_CfnModulePropsParametersCreatePublicSubnets(obj.createPublicSubnets),
-    'CreatePrivateSubnets': toJson_CfnModulePropsParametersCreatePrivateSubnets(obj.createPrivateSubnets),
-    'CreateVPCFlowLogsToCloudWatch': toJson_CfnModulePropsParametersCreateVpcFlowLogsToCloudWatch(obj.createVpcFlowLogsToCloudWatch),
-    'NumberOfAZs': toJson_CfnModulePropsParametersNumberOfAZs(obj.numberOfAZs),
-    'PrivateSubnet1ACIDR': toJson_CfnModulePropsParametersPrivateSubnet1Acidr(obj.privateSubnet1Acidr),
-    'PrivateSubnet1BCIDR': toJson_CfnModulePropsParametersPrivateSubnet1Bcidr(obj.privateSubnet1Bcidr),
-    'PrivateSubnet2ACIDR': toJson_CfnModulePropsParametersPrivateSubnet2Acidr(obj.privateSubnet2Acidr),
-    'PrivateSubnet2BCIDR': toJson_CfnModulePropsParametersPrivateSubnet2Bcidr(obj.privateSubnet2Bcidr),
-    'PrivateSubnet3ACIDR': toJson_CfnModulePropsParametersPrivateSubnet3Acidr(obj.privateSubnet3Acidr),
-    'PrivateSubnet3BCIDR': toJson_CfnModulePropsParametersPrivateSubnet3Bcidr(obj.privateSubnet3Bcidr),
-    'PrivateSubnet4ACIDR': toJson_CfnModulePropsParametersPrivateSubnet4Acidr(obj.privateSubnet4Acidr),
-    'PrivateSubnet4BCIDR': toJson_CfnModulePropsParametersPrivateSubnet4Bcidr(obj.privateSubnet4Bcidr),
-    'PrivateSubnetATag1': toJson_CfnModulePropsParametersPrivateSubnetATag1(obj.privateSubnetATag1),
-    'PrivateSubnetATag2': toJson_CfnModulePropsParametersPrivateSubnetATag2(obj.privateSubnetATag2),
-    'PrivateSubnetATag3': toJson_CfnModulePropsParametersPrivateSubnetATag3(obj.privateSubnetATag3),
-    'PrivateSubnetBTag1': toJson_CfnModulePropsParametersPrivateSubnetBTag1(obj.privateSubnetBTag1),
-    'PrivateSubnetBTag2': toJson_CfnModulePropsParametersPrivateSubnetBTag2(obj.privateSubnetBTag2),
-    'PrivateSubnetBTag3': toJson_CfnModulePropsParametersPrivateSubnetBTag3(obj.privateSubnetBTag3),
-    'PublicSubnet1CIDR': toJson_CfnModulePropsParametersPublicSubnet1Cidr(obj.publicSubnet1Cidr),
-    'PublicSubnet2CIDR': toJson_CfnModulePropsParametersPublicSubnet2Cidr(obj.publicSubnet2Cidr),
-    'PublicSubnet3CIDR': toJson_CfnModulePropsParametersPublicSubnet3Cidr(obj.publicSubnet3Cidr),
-    'PublicSubnet4CIDR': toJson_CfnModulePropsParametersPublicSubnet4Cidr(obj.publicSubnet4Cidr),
-    'PublicSubnetTag1': toJson_CfnModulePropsParametersPublicSubnetTag1(obj.publicSubnetTag1),
-    'PublicSubnetTag2': toJson_CfnModulePropsParametersPublicSubnetTag2(obj.publicSubnetTag2),
-    'PublicSubnetTag3': toJson_CfnModulePropsParametersPublicSubnetTag3(obj.publicSubnetTag3),
-    'VPCCIDR': toJson_CfnModulePropsParametersVpccidr(obj.vpccidr),
-    'VPCFlowLogsCloudWatchKMSKey': toJson_CfnModulePropsParametersVpcFlowLogsCloudWatchKmsKey(obj.vpcFlowLogsCloudWatchKmsKey),
-    'VPCFlowLogsLogFormat': toJson_CfnModulePropsParametersVpcFlowLogsLogFormat(obj.vpcFlowLogsLogFormat),
-    'VPCFlowLogsLogGroupRetention': toJson_CfnModulePropsParametersVpcFlowLogsLogGroupRetention(obj.vpcFlowLogsLogGroupRetention),
-    'VPCFlowLogsMaxAggregationInterval': toJson_CfnModulePropsParametersVpcFlowLogsMaxAggregationInterval(obj.vpcFlowLogsMaxAggregationInterval),
-    'VPCFlowLogsTrafficType': toJson_CfnModulePropsParametersVpcFlowLogsTrafficType(obj.vpcFlowLogsTrafficType),
-    'VPCTenancy': toJson_CfnModulePropsParametersVpcTenancy(obj.vpcTenancy),
+    'AvailabilityZones': toJson_CfnVpcqsModulePropsParametersAvailabilityZones(obj.availabilityZones),
+    'CreateAdditionalPrivateSubnets': toJson_CfnVpcqsModulePropsParametersCreateAdditionalPrivateSubnets(obj.createAdditionalPrivateSubnets),
+    'CreateNATGateways': toJson_CfnVpcqsModulePropsParametersCreateNatGateways(obj.createNatGateways),
+    'CreatePublicSubnets': toJson_CfnVpcqsModulePropsParametersCreatePublicSubnets(obj.createPublicSubnets),
+    'CreatePrivateSubnets': toJson_CfnVpcqsModulePropsParametersCreatePrivateSubnets(obj.createPrivateSubnets),
+    'CreateVPCFlowLogsToCloudWatch': toJson_CfnVpcqsModulePropsParametersCreateVpcFlowLogsToCloudWatch(obj.createVpcFlowLogsToCloudWatch),
+    'NumberOfAZs': toJson_CfnVpcqsModulePropsParametersNumberOfAZs(obj.numberOfAZs),
+    'PrivateSubnet1ACIDR': toJson_CfnVpcqsModulePropsParametersPrivateSubnet1Acidr(obj.privateSubnet1Acidr),
+    'PrivateSubnet1BCIDR': toJson_CfnVpcqsModulePropsParametersPrivateSubnet1Bcidr(obj.privateSubnet1Bcidr),
+    'PrivateSubnet2ACIDR': toJson_CfnVpcqsModulePropsParametersPrivateSubnet2Acidr(obj.privateSubnet2Acidr),
+    'PrivateSubnet2BCIDR': toJson_CfnVpcqsModulePropsParametersPrivateSubnet2Bcidr(obj.privateSubnet2Bcidr),
+    'PrivateSubnet3ACIDR': toJson_CfnVpcqsModulePropsParametersPrivateSubnet3Acidr(obj.privateSubnet3Acidr),
+    'PrivateSubnet3BCIDR': toJson_CfnVpcqsModulePropsParametersPrivateSubnet3Bcidr(obj.privateSubnet3Bcidr),
+    'PrivateSubnet4ACIDR': toJson_CfnVpcqsModulePropsParametersPrivateSubnet4Acidr(obj.privateSubnet4Acidr),
+    'PrivateSubnet4BCIDR': toJson_CfnVpcqsModulePropsParametersPrivateSubnet4Bcidr(obj.privateSubnet4Bcidr),
+    'PrivateSubnetATag1': toJson_CfnVpcqsModulePropsParametersPrivateSubnetATag1(obj.privateSubnetATag1),
+    'PrivateSubnetATag2': toJson_CfnVpcqsModulePropsParametersPrivateSubnetATag2(obj.privateSubnetATag2),
+    'PrivateSubnetATag3': toJson_CfnVpcqsModulePropsParametersPrivateSubnetATag3(obj.privateSubnetATag3),
+    'PrivateSubnetBTag1': toJson_CfnVpcqsModulePropsParametersPrivateSubnetBTag1(obj.privateSubnetBTag1),
+    'PrivateSubnetBTag2': toJson_CfnVpcqsModulePropsParametersPrivateSubnetBTag2(obj.privateSubnetBTag2),
+    'PrivateSubnetBTag3': toJson_CfnVpcqsModulePropsParametersPrivateSubnetBTag3(obj.privateSubnetBTag3),
+    'PublicSubnet1CIDR': toJson_CfnVpcqsModulePropsParametersPublicSubnet1Cidr(obj.publicSubnet1Cidr),
+    'PublicSubnet2CIDR': toJson_CfnVpcqsModulePropsParametersPublicSubnet2Cidr(obj.publicSubnet2Cidr),
+    'PublicSubnet3CIDR': toJson_CfnVpcqsModulePropsParametersPublicSubnet3Cidr(obj.publicSubnet3Cidr),
+    'PublicSubnet4CIDR': toJson_CfnVpcqsModulePropsParametersPublicSubnet4Cidr(obj.publicSubnet4Cidr),
+    'PublicSubnetTag1': toJson_CfnVpcqsModulePropsParametersPublicSubnetTag1(obj.publicSubnetTag1),
+    'PublicSubnetTag2': toJson_CfnVpcqsModulePropsParametersPublicSubnetTag2(obj.publicSubnetTag2),
+    'PublicSubnetTag3': toJson_CfnVpcqsModulePropsParametersPublicSubnetTag3(obj.publicSubnetTag3),
+    'VPCCIDR': toJson_CfnVpcqsModulePropsParametersVpccidr(obj.vpccidr),
+    'VPCFlowLogsCloudWatchKMSKey': toJson_CfnVpcqsModulePropsParametersVpcFlowLogsCloudWatchKmsKey(obj.vpcFlowLogsCloudWatchKmsKey),
+    'VPCFlowLogsLogFormat': toJson_CfnVpcqsModulePropsParametersVpcFlowLogsLogFormat(obj.vpcFlowLogsLogFormat),
+    'VPCFlowLogsLogGroupRetention': toJson_CfnVpcqsModulePropsParametersVpcFlowLogsLogGroupRetention(obj.vpcFlowLogsLogGroupRetention),
+    'VPCFlowLogsMaxAggregationInterval': toJson_CfnVpcqsModulePropsParametersVpcFlowLogsMaxAggregationInterval(obj.vpcFlowLogsMaxAggregationInterval),
+    'VPCFlowLogsTrafficType': toJson_CfnVpcqsModulePropsParametersVpcFlowLogsTrafficType(obj.vpcFlowLogsTrafficType),
+    'VPCTenancy': toJson_CfnVpcqsModulePropsParametersVpcTenancy(obj.vpcTenancy),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -334,468 +334,468 @@ export function toJson_CfnModulePropsParameters(obj: CfnModulePropsParameters | 
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResources
+ * @schema CfnVpcqsModulePropsResources
  */
-export interface CfnModulePropsResources {
+export interface CfnVpcqsModulePropsResources {
   /**
-   * @schema CfnModulePropsResources#DHCPOptions
+   * @schema CfnVpcqsModulePropsResources#DHCPOptions
    */
-  readonly dhcpOptions?: CfnModulePropsResourcesDhcpOptions;
+  readonly dhcpOptions?: CfnVpcqsModulePropsResourcesDhcpOptions;
 
   /**
-   * @schema CfnModulePropsResources#VPC
+   * @schema CfnVpcqsModulePropsResources#VPC
    */
-  readonly vpc?: CfnModulePropsResourcesVpc;
+  readonly vpc?: CfnVpcqsModulePropsResourcesVpc;
 
   /**
-   * @schema CfnModulePropsResources#VPCDHCPOptionsAssociation
+   * @schema CfnVpcqsModulePropsResources#VPCDHCPOptionsAssociation
    */
-  readonly vpcdhcpOptionsAssociation?: CfnModulePropsResourcesVpcdhcpOptionsAssociation;
+  readonly vpcdhcpOptionsAssociation?: CfnVpcqsModulePropsResourcesVpcdhcpOptionsAssociation;
 
   /**
-   * @schema CfnModulePropsResources#InternetGateway
+   * @schema CfnVpcqsModulePropsResources#InternetGateway
    */
-  readonly internetGateway?: CfnModulePropsResourcesInternetGateway;
+  readonly internetGateway?: CfnVpcqsModulePropsResourcesInternetGateway;
 
   /**
-   * @schema CfnModulePropsResources#VPCGatewayAttachment
+   * @schema CfnVpcqsModulePropsResources#VPCGatewayAttachment
    */
-  readonly vpcGatewayAttachment?: CfnModulePropsResourcesVpcGatewayAttachment;
+  readonly vpcGatewayAttachment?: CfnVpcqsModulePropsResourcesVpcGatewayAttachment;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet1A
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet1A
    */
-  readonly privateSubnet1A?: CfnModulePropsResourcesPrivateSubnet1A;
+  readonly privateSubnet1A?: CfnVpcqsModulePropsResourcesPrivateSubnet1A;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet1B
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet1B
    */
-  readonly privateSubnet1B?: CfnModulePropsResourcesPrivateSubnet1B;
+  readonly privateSubnet1B?: CfnVpcqsModulePropsResourcesPrivateSubnet1B;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet2A
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet2A
    */
-  readonly privateSubnet2A?: CfnModulePropsResourcesPrivateSubnet2A;
+  readonly privateSubnet2A?: CfnVpcqsModulePropsResourcesPrivateSubnet2A;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet2B
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet2B
    */
-  readonly privateSubnet2B?: CfnModulePropsResourcesPrivateSubnet2B;
+  readonly privateSubnet2B?: CfnVpcqsModulePropsResourcesPrivateSubnet2B;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet3A
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet3A
    */
-  readonly privateSubnet3A?: CfnModulePropsResourcesPrivateSubnet3A;
+  readonly privateSubnet3A?: CfnVpcqsModulePropsResourcesPrivateSubnet3A;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet3B
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet3B
    */
-  readonly privateSubnet3B?: CfnModulePropsResourcesPrivateSubnet3B;
+  readonly privateSubnet3B?: CfnVpcqsModulePropsResourcesPrivateSubnet3B;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet4A
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet4A
    */
-  readonly privateSubnet4A?: CfnModulePropsResourcesPrivateSubnet4A;
+  readonly privateSubnet4A?: CfnVpcqsModulePropsResourcesPrivateSubnet4A;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet4B
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet4B
    */
-  readonly privateSubnet4B?: CfnModulePropsResourcesPrivateSubnet4B;
+  readonly privateSubnet4B?: CfnVpcqsModulePropsResourcesPrivateSubnet4B;
 
   /**
-   * @schema CfnModulePropsResources#PublicSubnet1
+   * @schema CfnVpcqsModulePropsResources#PublicSubnet1
    */
-  readonly publicSubnet1?: CfnModulePropsResourcesPublicSubnet1;
+  readonly publicSubnet1?: CfnVpcqsModulePropsResourcesPublicSubnet1;
 
   /**
-   * @schema CfnModulePropsResources#PublicSubnet2
+   * @schema CfnVpcqsModulePropsResources#PublicSubnet2
    */
-  readonly publicSubnet2?: CfnModulePropsResourcesPublicSubnet2;
+  readonly publicSubnet2?: CfnVpcqsModulePropsResourcesPublicSubnet2;
 
   /**
-   * @schema CfnModulePropsResources#PublicSubnet3
+   * @schema CfnVpcqsModulePropsResources#PublicSubnet3
    */
-  readonly publicSubnet3?: CfnModulePropsResourcesPublicSubnet3;
+  readonly publicSubnet3?: CfnVpcqsModulePropsResourcesPublicSubnet3;
 
   /**
-   * @schema CfnModulePropsResources#PublicSubnet4
+   * @schema CfnVpcqsModulePropsResources#PublicSubnet4
    */
-  readonly publicSubnet4?: CfnModulePropsResourcesPublicSubnet4;
+  readonly publicSubnet4?: CfnVpcqsModulePropsResourcesPublicSubnet4;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet1ARouteTable
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet1ARouteTable
    */
-  readonly privateSubnet1ARouteTable?: CfnModulePropsResourcesPrivateSubnet1ARouteTable;
+  readonly privateSubnet1ARouteTable?: CfnVpcqsModulePropsResourcesPrivateSubnet1ARouteTable;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet1ARoute
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet1ARoute
    */
-  readonly privateSubnet1ARoute?: CfnModulePropsResourcesPrivateSubnet1ARoute;
+  readonly privateSubnet1ARoute?: CfnVpcqsModulePropsResourcesPrivateSubnet1ARoute;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet1ARouteTableAssociation
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet1ARouteTableAssociation
    */
-  readonly privateSubnet1ARouteTableAssociation?: CfnModulePropsResourcesPrivateSubnet1ARouteTableAssociation;
+  readonly privateSubnet1ARouteTableAssociation?: CfnVpcqsModulePropsResourcesPrivateSubnet1ARouteTableAssociation;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet2ARouteTable
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet2ARouteTable
    */
-  readonly privateSubnet2ARouteTable?: CfnModulePropsResourcesPrivateSubnet2ARouteTable;
+  readonly privateSubnet2ARouteTable?: CfnVpcqsModulePropsResourcesPrivateSubnet2ARouteTable;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet2ARoute
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet2ARoute
    */
-  readonly privateSubnet2ARoute?: CfnModulePropsResourcesPrivateSubnet2ARoute;
+  readonly privateSubnet2ARoute?: CfnVpcqsModulePropsResourcesPrivateSubnet2ARoute;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet2ARouteTableAssociation
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet2ARouteTableAssociation
    */
-  readonly privateSubnet2ARouteTableAssociation?: CfnModulePropsResourcesPrivateSubnet2ARouteTableAssociation;
+  readonly privateSubnet2ARouteTableAssociation?: CfnVpcqsModulePropsResourcesPrivateSubnet2ARouteTableAssociation;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet3ARouteTable
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet3ARouteTable
    */
-  readonly privateSubnet3ARouteTable?: CfnModulePropsResourcesPrivateSubnet3ARouteTable;
+  readonly privateSubnet3ARouteTable?: CfnVpcqsModulePropsResourcesPrivateSubnet3ARouteTable;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet3ARoute
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet3ARoute
    */
-  readonly privateSubnet3ARoute?: CfnModulePropsResourcesPrivateSubnet3ARoute;
+  readonly privateSubnet3ARoute?: CfnVpcqsModulePropsResourcesPrivateSubnet3ARoute;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet3ARouteTableAssociation
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet3ARouteTableAssociation
    */
-  readonly privateSubnet3ARouteTableAssociation?: CfnModulePropsResourcesPrivateSubnet3ARouteTableAssociation;
+  readonly privateSubnet3ARouteTableAssociation?: CfnVpcqsModulePropsResourcesPrivateSubnet3ARouteTableAssociation;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet4ARouteTable
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet4ARouteTable
    */
-  readonly privateSubnet4ARouteTable?: CfnModulePropsResourcesPrivateSubnet4ARouteTable;
+  readonly privateSubnet4ARouteTable?: CfnVpcqsModulePropsResourcesPrivateSubnet4ARouteTable;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet4ARoute
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet4ARoute
    */
-  readonly privateSubnet4ARoute?: CfnModulePropsResourcesPrivateSubnet4ARoute;
+  readonly privateSubnet4ARoute?: CfnVpcqsModulePropsResourcesPrivateSubnet4ARoute;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet4ARouteTableAssociation
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet4ARouteTableAssociation
    */
-  readonly privateSubnet4ARouteTableAssociation?: CfnModulePropsResourcesPrivateSubnet4ARouteTableAssociation;
+  readonly privateSubnet4ARouteTableAssociation?: CfnVpcqsModulePropsResourcesPrivateSubnet4ARouteTableAssociation;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet1BRouteTable
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet1BRouteTable
    */
-  readonly privateSubnet1BRouteTable?: CfnModulePropsResourcesPrivateSubnet1BRouteTable;
+  readonly privateSubnet1BRouteTable?: CfnVpcqsModulePropsResourcesPrivateSubnet1BRouteTable;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet1BRoute
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet1BRoute
    */
-  readonly privateSubnet1BRoute?: CfnModulePropsResourcesPrivateSubnet1BRoute;
+  readonly privateSubnet1BRoute?: CfnVpcqsModulePropsResourcesPrivateSubnet1BRoute;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet1BRouteTableAssociation
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet1BRouteTableAssociation
    */
-  readonly privateSubnet1BRouteTableAssociation?: CfnModulePropsResourcesPrivateSubnet1BRouteTableAssociation;
+  readonly privateSubnet1BRouteTableAssociation?: CfnVpcqsModulePropsResourcesPrivateSubnet1BRouteTableAssociation;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet1BNetworkAcl
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet1BNetworkAcl
    */
-  readonly privateSubnet1BNetworkAcl?: CfnModulePropsResourcesPrivateSubnet1BNetworkAcl;
+  readonly privateSubnet1BNetworkAcl?: CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAcl;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet1BNetworkAclEntryInbound
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet1BNetworkAclEntryInbound
    */
-  readonly privateSubnet1BNetworkAclEntryInbound?: CfnModulePropsResourcesPrivateSubnet1BNetworkAclEntryInbound;
+  readonly privateSubnet1BNetworkAclEntryInbound?: CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAclEntryInbound;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet1BNetworkAclEntryOutbound
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet1BNetworkAclEntryOutbound
    */
-  readonly privateSubnet1BNetworkAclEntryOutbound?: CfnModulePropsResourcesPrivateSubnet1BNetworkAclEntryOutbound;
+  readonly privateSubnet1BNetworkAclEntryOutbound?: CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAclEntryOutbound;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet1BNetworkAclAssociation
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet1BNetworkAclAssociation
    */
-  readonly privateSubnet1BNetworkAclAssociation?: CfnModulePropsResourcesPrivateSubnet1BNetworkAclAssociation;
+  readonly privateSubnet1BNetworkAclAssociation?: CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAclAssociation;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet2BRouteTable
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet2BRouteTable
    */
-  readonly privateSubnet2BRouteTable?: CfnModulePropsResourcesPrivateSubnet2BRouteTable;
+  readonly privateSubnet2BRouteTable?: CfnVpcqsModulePropsResourcesPrivateSubnet2BRouteTable;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet2BRoute
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet2BRoute
    */
-  readonly privateSubnet2BRoute?: CfnModulePropsResourcesPrivateSubnet2BRoute;
+  readonly privateSubnet2BRoute?: CfnVpcqsModulePropsResourcesPrivateSubnet2BRoute;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet2BRouteTableAssociation
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet2BRouteTableAssociation
    */
-  readonly privateSubnet2BRouteTableAssociation?: CfnModulePropsResourcesPrivateSubnet2BRouteTableAssociation;
+  readonly privateSubnet2BRouteTableAssociation?: CfnVpcqsModulePropsResourcesPrivateSubnet2BRouteTableAssociation;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet2BNetworkAcl
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet2BNetworkAcl
    */
-  readonly privateSubnet2BNetworkAcl?: CfnModulePropsResourcesPrivateSubnet2BNetworkAcl;
+  readonly privateSubnet2BNetworkAcl?: CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAcl;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet2BNetworkAclEntryInbound
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet2BNetworkAclEntryInbound
    */
-  readonly privateSubnet2BNetworkAclEntryInbound?: CfnModulePropsResourcesPrivateSubnet2BNetworkAclEntryInbound;
+  readonly privateSubnet2BNetworkAclEntryInbound?: CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAclEntryInbound;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet2BNetworkAclEntryOutbound
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet2BNetworkAclEntryOutbound
    */
-  readonly privateSubnet2BNetworkAclEntryOutbound?: CfnModulePropsResourcesPrivateSubnet2BNetworkAclEntryOutbound;
+  readonly privateSubnet2BNetworkAclEntryOutbound?: CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAclEntryOutbound;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet2BNetworkAclAssociation
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet2BNetworkAclAssociation
    */
-  readonly privateSubnet2BNetworkAclAssociation?: CfnModulePropsResourcesPrivateSubnet2BNetworkAclAssociation;
+  readonly privateSubnet2BNetworkAclAssociation?: CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAclAssociation;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet3BRouteTable
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet3BRouteTable
    */
-  readonly privateSubnet3BRouteTable?: CfnModulePropsResourcesPrivateSubnet3BRouteTable;
+  readonly privateSubnet3BRouteTable?: CfnVpcqsModulePropsResourcesPrivateSubnet3BRouteTable;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet3BRoute
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet3BRoute
    */
-  readonly privateSubnet3BRoute?: CfnModulePropsResourcesPrivateSubnet3BRoute;
+  readonly privateSubnet3BRoute?: CfnVpcqsModulePropsResourcesPrivateSubnet3BRoute;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet3BRouteTableAssociation
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet3BRouteTableAssociation
    */
-  readonly privateSubnet3BRouteTableAssociation?: CfnModulePropsResourcesPrivateSubnet3BRouteTableAssociation;
+  readonly privateSubnet3BRouteTableAssociation?: CfnVpcqsModulePropsResourcesPrivateSubnet3BRouteTableAssociation;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet3BNetworkAcl
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet3BNetworkAcl
    */
-  readonly privateSubnet3BNetworkAcl?: CfnModulePropsResourcesPrivateSubnet3BNetworkAcl;
+  readonly privateSubnet3BNetworkAcl?: CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAcl;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet3BNetworkAclEntryInbound
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet3BNetworkAclEntryInbound
    */
-  readonly privateSubnet3BNetworkAclEntryInbound?: CfnModulePropsResourcesPrivateSubnet3BNetworkAclEntryInbound;
+  readonly privateSubnet3BNetworkAclEntryInbound?: CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAclEntryInbound;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet3BNetworkAclEntryOutbound
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet3BNetworkAclEntryOutbound
    */
-  readonly privateSubnet3BNetworkAclEntryOutbound?: CfnModulePropsResourcesPrivateSubnet3BNetworkAclEntryOutbound;
+  readonly privateSubnet3BNetworkAclEntryOutbound?: CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAclEntryOutbound;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet3BNetworkAclAssociation
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet3BNetworkAclAssociation
    */
-  readonly privateSubnet3BNetworkAclAssociation?: CfnModulePropsResourcesPrivateSubnet3BNetworkAclAssociation;
+  readonly privateSubnet3BNetworkAclAssociation?: CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAclAssociation;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet4BRouteTable
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet4BRouteTable
    */
-  readonly privateSubnet4BRouteTable?: CfnModulePropsResourcesPrivateSubnet4BRouteTable;
+  readonly privateSubnet4BRouteTable?: CfnVpcqsModulePropsResourcesPrivateSubnet4BRouteTable;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet4BRoute
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet4BRoute
    */
-  readonly privateSubnet4BRoute?: CfnModulePropsResourcesPrivateSubnet4BRoute;
+  readonly privateSubnet4BRoute?: CfnVpcqsModulePropsResourcesPrivateSubnet4BRoute;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet4BRouteTableAssociation
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet4BRouteTableAssociation
    */
-  readonly privateSubnet4BRouteTableAssociation?: CfnModulePropsResourcesPrivateSubnet4BRouteTableAssociation;
+  readonly privateSubnet4BRouteTableAssociation?: CfnVpcqsModulePropsResourcesPrivateSubnet4BRouteTableAssociation;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet4BNetworkAcl
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet4BNetworkAcl
    */
-  readonly privateSubnet4BNetworkAcl?: CfnModulePropsResourcesPrivateSubnet4BNetworkAcl;
+  readonly privateSubnet4BNetworkAcl?: CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAcl;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet4BNetworkAclEntryInbound
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet4BNetworkAclEntryInbound
    */
-  readonly privateSubnet4BNetworkAclEntryInbound?: CfnModulePropsResourcesPrivateSubnet4BNetworkAclEntryInbound;
+  readonly privateSubnet4BNetworkAclEntryInbound?: CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAclEntryInbound;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet4BNetworkAclEntryOutbound
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet4BNetworkAclEntryOutbound
    */
-  readonly privateSubnet4BNetworkAclEntryOutbound?: CfnModulePropsResourcesPrivateSubnet4BNetworkAclEntryOutbound;
+  readonly privateSubnet4BNetworkAclEntryOutbound?: CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAclEntryOutbound;
 
   /**
-   * @schema CfnModulePropsResources#PrivateSubnet4BNetworkAclAssociation
+   * @schema CfnVpcqsModulePropsResources#PrivateSubnet4BNetworkAclAssociation
    */
-  readonly privateSubnet4BNetworkAclAssociation?: CfnModulePropsResourcesPrivateSubnet4BNetworkAclAssociation;
+  readonly privateSubnet4BNetworkAclAssociation?: CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAclAssociation;
 
   /**
-   * @schema CfnModulePropsResources#PublicSubnetRouteTable
+   * @schema CfnVpcqsModulePropsResources#PublicSubnetRouteTable
    */
-  readonly publicSubnetRouteTable?: CfnModulePropsResourcesPublicSubnetRouteTable;
+  readonly publicSubnetRouteTable?: CfnVpcqsModulePropsResourcesPublicSubnetRouteTable;
 
   /**
-   * @schema CfnModulePropsResources#PublicSubnetRoute
+   * @schema CfnVpcqsModulePropsResources#PublicSubnetRoute
    */
-  readonly publicSubnetRoute?: CfnModulePropsResourcesPublicSubnetRoute;
+  readonly publicSubnetRoute?: CfnVpcqsModulePropsResourcesPublicSubnetRoute;
 
   /**
-   * @schema CfnModulePropsResources#PublicSubnet1RouteTableAssociation
+   * @schema CfnVpcqsModulePropsResources#PublicSubnet1RouteTableAssociation
    */
-  readonly publicSubnet1RouteTableAssociation?: CfnModulePropsResourcesPublicSubnet1RouteTableAssociation;
+  readonly publicSubnet1RouteTableAssociation?: CfnVpcqsModulePropsResourcesPublicSubnet1RouteTableAssociation;
 
   /**
-   * @schema CfnModulePropsResources#PublicSubnet2RouteTableAssociation
+   * @schema CfnVpcqsModulePropsResources#PublicSubnet2RouteTableAssociation
    */
-  readonly publicSubnet2RouteTableAssociation?: CfnModulePropsResourcesPublicSubnet2RouteTableAssociation;
+  readonly publicSubnet2RouteTableAssociation?: CfnVpcqsModulePropsResourcesPublicSubnet2RouteTableAssociation;
 
   /**
-   * @schema CfnModulePropsResources#PublicSubnet3RouteTableAssociation
+   * @schema CfnVpcqsModulePropsResources#PublicSubnet3RouteTableAssociation
    */
-  readonly publicSubnet3RouteTableAssociation?: CfnModulePropsResourcesPublicSubnet3RouteTableAssociation;
+  readonly publicSubnet3RouteTableAssociation?: CfnVpcqsModulePropsResourcesPublicSubnet3RouteTableAssociation;
 
   /**
-   * @schema CfnModulePropsResources#PublicSubnet4RouteTableAssociation
+   * @schema CfnVpcqsModulePropsResources#PublicSubnet4RouteTableAssociation
    */
-  readonly publicSubnet4RouteTableAssociation?: CfnModulePropsResourcesPublicSubnet4RouteTableAssociation;
+  readonly publicSubnet4RouteTableAssociation?: CfnVpcqsModulePropsResourcesPublicSubnet4RouteTableAssociation;
 
   /**
-   * @schema CfnModulePropsResources#NAT1EIP
+   * @schema CfnVpcqsModulePropsResources#NAT1EIP
    */
-  readonly nat1Eip?: CfnModulePropsResourcesNat1Eip;
+  readonly nat1Eip?: CfnVpcqsModulePropsResourcesNat1Eip;
 
   /**
-   * @schema CfnModulePropsResources#NAT2EIP
+   * @schema CfnVpcqsModulePropsResources#NAT2EIP
    */
-  readonly nat2Eip?: CfnModulePropsResourcesNat2Eip;
+  readonly nat2Eip?: CfnVpcqsModulePropsResourcesNat2Eip;
 
   /**
-   * @schema CfnModulePropsResources#NAT3EIP
+   * @schema CfnVpcqsModulePropsResources#NAT3EIP
    */
-  readonly nat3Eip?: CfnModulePropsResourcesNat3Eip;
+  readonly nat3Eip?: CfnVpcqsModulePropsResourcesNat3Eip;
 
   /**
-   * @schema CfnModulePropsResources#NAT4EIP
+   * @schema CfnVpcqsModulePropsResources#NAT4EIP
    */
-  readonly nat4Eip?: CfnModulePropsResourcesNat4Eip;
+  readonly nat4Eip?: CfnVpcqsModulePropsResourcesNat4Eip;
 
   /**
-   * @schema CfnModulePropsResources#NATGateway1
+   * @schema CfnVpcqsModulePropsResources#NATGateway1
    */
-  readonly natGateway1?: CfnModulePropsResourcesNatGateway1;
+  readonly natGateway1?: CfnVpcqsModulePropsResourcesNatGateway1;
 
   /**
-   * @schema CfnModulePropsResources#NATGateway2
+   * @schema CfnVpcqsModulePropsResources#NATGateway2
    */
-  readonly natGateway2?: CfnModulePropsResourcesNatGateway2;
+  readonly natGateway2?: CfnVpcqsModulePropsResourcesNatGateway2;
 
   /**
-   * @schema CfnModulePropsResources#NATGateway3
+   * @schema CfnVpcqsModulePropsResources#NATGateway3
    */
-  readonly natGateway3?: CfnModulePropsResourcesNatGateway3;
+  readonly natGateway3?: CfnVpcqsModulePropsResourcesNatGateway3;
 
   /**
-   * @schema CfnModulePropsResources#NATGateway4
+   * @schema CfnVpcqsModulePropsResources#NATGateway4
    */
-  readonly natGateway4?: CfnModulePropsResourcesNatGateway4;
+  readonly natGateway4?: CfnVpcqsModulePropsResourcesNatGateway4;
 
   /**
-   * @schema CfnModulePropsResources#S3VPCEndpoint
+   * @schema CfnVpcqsModulePropsResources#S3VPCEndpoint
    */
-  readonly s3VpcEndpoint?: CfnModulePropsResourcesS3VpcEndpoint;
+  readonly s3VpcEndpoint?: CfnVpcqsModulePropsResourcesS3VpcEndpoint;
 
   /**
-   * @schema CfnModulePropsResources#VPCFlowLogsRole
+   * @schema CfnVpcqsModulePropsResources#VPCFlowLogsRole
    */
-  readonly vpcFlowLogsRole?: CfnModulePropsResourcesVpcFlowLogsRole;
+  readonly vpcFlowLogsRole?: CfnVpcqsModulePropsResourcesVpcFlowLogsRole;
 
   /**
-   * @schema CfnModulePropsResources#VPCFlowLogsLogGroup
+   * @schema CfnVpcqsModulePropsResources#VPCFlowLogsLogGroup
    */
-  readonly vpcFlowLogsLogGroup?: CfnModulePropsResourcesVpcFlowLogsLogGroup;
+  readonly vpcFlowLogsLogGroup?: CfnVpcqsModulePropsResourcesVpcFlowLogsLogGroup;
 
   /**
-   * @schema CfnModulePropsResources#VPCFlowLogsToCloudWatch
+   * @schema CfnVpcqsModulePropsResources#VPCFlowLogsToCloudWatch
    */
-  readonly vpcFlowLogsToCloudWatch?: CfnModulePropsResourcesVpcFlowLogsToCloudWatch;
+  readonly vpcFlowLogsToCloudWatch?: CfnVpcqsModulePropsResourcesVpcFlowLogsToCloudWatch;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResources' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResources' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResources(obj: CfnModulePropsResources | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResources(obj: CfnVpcqsModulePropsResources | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'DHCPOptions': toJson_CfnModulePropsResourcesDhcpOptions(obj.dhcpOptions),
-    'VPC': toJson_CfnModulePropsResourcesVpc(obj.vpc),
-    'VPCDHCPOptionsAssociation': toJson_CfnModulePropsResourcesVpcdhcpOptionsAssociation(obj.vpcdhcpOptionsAssociation),
-    'InternetGateway': toJson_CfnModulePropsResourcesInternetGateway(obj.internetGateway),
-    'VPCGatewayAttachment': toJson_CfnModulePropsResourcesVpcGatewayAttachment(obj.vpcGatewayAttachment),
-    'PrivateSubnet1A': toJson_CfnModulePropsResourcesPrivateSubnet1A(obj.privateSubnet1A),
-    'PrivateSubnet1B': toJson_CfnModulePropsResourcesPrivateSubnet1B(obj.privateSubnet1B),
-    'PrivateSubnet2A': toJson_CfnModulePropsResourcesPrivateSubnet2A(obj.privateSubnet2A),
-    'PrivateSubnet2B': toJson_CfnModulePropsResourcesPrivateSubnet2B(obj.privateSubnet2B),
-    'PrivateSubnet3A': toJson_CfnModulePropsResourcesPrivateSubnet3A(obj.privateSubnet3A),
-    'PrivateSubnet3B': toJson_CfnModulePropsResourcesPrivateSubnet3B(obj.privateSubnet3B),
-    'PrivateSubnet4A': toJson_CfnModulePropsResourcesPrivateSubnet4A(obj.privateSubnet4A),
-    'PrivateSubnet4B': toJson_CfnModulePropsResourcesPrivateSubnet4B(obj.privateSubnet4B),
-    'PublicSubnet1': toJson_CfnModulePropsResourcesPublicSubnet1(obj.publicSubnet1),
-    'PublicSubnet2': toJson_CfnModulePropsResourcesPublicSubnet2(obj.publicSubnet2),
-    'PublicSubnet3': toJson_CfnModulePropsResourcesPublicSubnet3(obj.publicSubnet3),
-    'PublicSubnet4': toJson_CfnModulePropsResourcesPublicSubnet4(obj.publicSubnet4),
-    'PrivateSubnet1ARouteTable': toJson_CfnModulePropsResourcesPrivateSubnet1ARouteTable(obj.privateSubnet1ARouteTable),
-    'PrivateSubnet1ARoute': toJson_CfnModulePropsResourcesPrivateSubnet1ARoute(obj.privateSubnet1ARoute),
-    'PrivateSubnet1ARouteTableAssociation': toJson_CfnModulePropsResourcesPrivateSubnet1ARouteTableAssociation(obj.privateSubnet1ARouteTableAssociation),
-    'PrivateSubnet2ARouteTable': toJson_CfnModulePropsResourcesPrivateSubnet2ARouteTable(obj.privateSubnet2ARouteTable),
-    'PrivateSubnet2ARoute': toJson_CfnModulePropsResourcesPrivateSubnet2ARoute(obj.privateSubnet2ARoute),
-    'PrivateSubnet2ARouteTableAssociation': toJson_CfnModulePropsResourcesPrivateSubnet2ARouteTableAssociation(obj.privateSubnet2ARouteTableAssociation),
-    'PrivateSubnet3ARouteTable': toJson_CfnModulePropsResourcesPrivateSubnet3ARouteTable(obj.privateSubnet3ARouteTable),
-    'PrivateSubnet3ARoute': toJson_CfnModulePropsResourcesPrivateSubnet3ARoute(obj.privateSubnet3ARoute),
-    'PrivateSubnet3ARouteTableAssociation': toJson_CfnModulePropsResourcesPrivateSubnet3ARouteTableAssociation(obj.privateSubnet3ARouteTableAssociation),
-    'PrivateSubnet4ARouteTable': toJson_CfnModulePropsResourcesPrivateSubnet4ARouteTable(obj.privateSubnet4ARouteTable),
-    'PrivateSubnet4ARoute': toJson_CfnModulePropsResourcesPrivateSubnet4ARoute(obj.privateSubnet4ARoute),
-    'PrivateSubnet4ARouteTableAssociation': toJson_CfnModulePropsResourcesPrivateSubnet4ARouteTableAssociation(obj.privateSubnet4ARouteTableAssociation),
-    'PrivateSubnet1BRouteTable': toJson_CfnModulePropsResourcesPrivateSubnet1BRouteTable(obj.privateSubnet1BRouteTable),
-    'PrivateSubnet1BRoute': toJson_CfnModulePropsResourcesPrivateSubnet1BRoute(obj.privateSubnet1BRoute),
-    'PrivateSubnet1BRouteTableAssociation': toJson_CfnModulePropsResourcesPrivateSubnet1BRouteTableAssociation(obj.privateSubnet1BRouteTableAssociation),
-    'PrivateSubnet1BNetworkAcl': toJson_CfnModulePropsResourcesPrivateSubnet1BNetworkAcl(obj.privateSubnet1BNetworkAcl),
-    'PrivateSubnet1BNetworkAclEntryInbound': toJson_CfnModulePropsResourcesPrivateSubnet1BNetworkAclEntryInbound(obj.privateSubnet1BNetworkAclEntryInbound),
-    'PrivateSubnet1BNetworkAclEntryOutbound': toJson_CfnModulePropsResourcesPrivateSubnet1BNetworkAclEntryOutbound(obj.privateSubnet1BNetworkAclEntryOutbound),
-    'PrivateSubnet1BNetworkAclAssociation': toJson_CfnModulePropsResourcesPrivateSubnet1BNetworkAclAssociation(obj.privateSubnet1BNetworkAclAssociation),
-    'PrivateSubnet2BRouteTable': toJson_CfnModulePropsResourcesPrivateSubnet2BRouteTable(obj.privateSubnet2BRouteTable),
-    'PrivateSubnet2BRoute': toJson_CfnModulePropsResourcesPrivateSubnet2BRoute(obj.privateSubnet2BRoute),
-    'PrivateSubnet2BRouteTableAssociation': toJson_CfnModulePropsResourcesPrivateSubnet2BRouteTableAssociation(obj.privateSubnet2BRouteTableAssociation),
-    'PrivateSubnet2BNetworkAcl': toJson_CfnModulePropsResourcesPrivateSubnet2BNetworkAcl(obj.privateSubnet2BNetworkAcl),
-    'PrivateSubnet2BNetworkAclEntryInbound': toJson_CfnModulePropsResourcesPrivateSubnet2BNetworkAclEntryInbound(obj.privateSubnet2BNetworkAclEntryInbound),
-    'PrivateSubnet2BNetworkAclEntryOutbound': toJson_CfnModulePropsResourcesPrivateSubnet2BNetworkAclEntryOutbound(obj.privateSubnet2BNetworkAclEntryOutbound),
-    'PrivateSubnet2BNetworkAclAssociation': toJson_CfnModulePropsResourcesPrivateSubnet2BNetworkAclAssociation(obj.privateSubnet2BNetworkAclAssociation),
-    'PrivateSubnet3BRouteTable': toJson_CfnModulePropsResourcesPrivateSubnet3BRouteTable(obj.privateSubnet3BRouteTable),
-    'PrivateSubnet3BRoute': toJson_CfnModulePropsResourcesPrivateSubnet3BRoute(obj.privateSubnet3BRoute),
-    'PrivateSubnet3BRouteTableAssociation': toJson_CfnModulePropsResourcesPrivateSubnet3BRouteTableAssociation(obj.privateSubnet3BRouteTableAssociation),
-    'PrivateSubnet3BNetworkAcl': toJson_CfnModulePropsResourcesPrivateSubnet3BNetworkAcl(obj.privateSubnet3BNetworkAcl),
-    'PrivateSubnet3BNetworkAclEntryInbound': toJson_CfnModulePropsResourcesPrivateSubnet3BNetworkAclEntryInbound(obj.privateSubnet3BNetworkAclEntryInbound),
-    'PrivateSubnet3BNetworkAclEntryOutbound': toJson_CfnModulePropsResourcesPrivateSubnet3BNetworkAclEntryOutbound(obj.privateSubnet3BNetworkAclEntryOutbound),
-    'PrivateSubnet3BNetworkAclAssociation': toJson_CfnModulePropsResourcesPrivateSubnet3BNetworkAclAssociation(obj.privateSubnet3BNetworkAclAssociation),
-    'PrivateSubnet4BRouteTable': toJson_CfnModulePropsResourcesPrivateSubnet4BRouteTable(obj.privateSubnet4BRouteTable),
-    'PrivateSubnet4BRoute': toJson_CfnModulePropsResourcesPrivateSubnet4BRoute(obj.privateSubnet4BRoute),
-    'PrivateSubnet4BRouteTableAssociation': toJson_CfnModulePropsResourcesPrivateSubnet4BRouteTableAssociation(obj.privateSubnet4BRouteTableAssociation),
-    'PrivateSubnet4BNetworkAcl': toJson_CfnModulePropsResourcesPrivateSubnet4BNetworkAcl(obj.privateSubnet4BNetworkAcl),
-    'PrivateSubnet4BNetworkAclEntryInbound': toJson_CfnModulePropsResourcesPrivateSubnet4BNetworkAclEntryInbound(obj.privateSubnet4BNetworkAclEntryInbound),
-    'PrivateSubnet4BNetworkAclEntryOutbound': toJson_CfnModulePropsResourcesPrivateSubnet4BNetworkAclEntryOutbound(obj.privateSubnet4BNetworkAclEntryOutbound),
-    'PrivateSubnet4BNetworkAclAssociation': toJson_CfnModulePropsResourcesPrivateSubnet4BNetworkAclAssociation(obj.privateSubnet4BNetworkAclAssociation),
-    'PublicSubnetRouteTable': toJson_CfnModulePropsResourcesPublicSubnetRouteTable(obj.publicSubnetRouteTable),
-    'PublicSubnetRoute': toJson_CfnModulePropsResourcesPublicSubnetRoute(obj.publicSubnetRoute),
-    'PublicSubnet1RouteTableAssociation': toJson_CfnModulePropsResourcesPublicSubnet1RouteTableAssociation(obj.publicSubnet1RouteTableAssociation),
-    'PublicSubnet2RouteTableAssociation': toJson_CfnModulePropsResourcesPublicSubnet2RouteTableAssociation(obj.publicSubnet2RouteTableAssociation),
-    'PublicSubnet3RouteTableAssociation': toJson_CfnModulePropsResourcesPublicSubnet3RouteTableAssociation(obj.publicSubnet3RouteTableAssociation),
-    'PublicSubnet4RouteTableAssociation': toJson_CfnModulePropsResourcesPublicSubnet4RouteTableAssociation(obj.publicSubnet4RouteTableAssociation),
-    'NAT1EIP': toJson_CfnModulePropsResourcesNat1Eip(obj.nat1Eip),
-    'NAT2EIP': toJson_CfnModulePropsResourcesNat2Eip(obj.nat2Eip),
-    'NAT3EIP': toJson_CfnModulePropsResourcesNat3Eip(obj.nat3Eip),
-    'NAT4EIP': toJson_CfnModulePropsResourcesNat4Eip(obj.nat4Eip),
-    'NATGateway1': toJson_CfnModulePropsResourcesNatGateway1(obj.natGateway1),
-    'NATGateway2': toJson_CfnModulePropsResourcesNatGateway2(obj.natGateway2),
-    'NATGateway3': toJson_CfnModulePropsResourcesNatGateway3(obj.natGateway3),
-    'NATGateway4': toJson_CfnModulePropsResourcesNatGateway4(obj.natGateway4),
-    'S3VPCEndpoint': toJson_CfnModulePropsResourcesS3VpcEndpoint(obj.s3VpcEndpoint),
-    'VPCFlowLogsRole': toJson_CfnModulePropsResourcesVpcFlowLogsRole(obj.vpcFlowLogsRole),
-    'VPCFlowLogsLogGroup': toJson_CfnModulePropsResourcesVpcFlowLogsLogGroup(obj.vpcFlowLogsLogGroup),
-    'VPCFlowLogsToCloudWatch': toJson_CfnModulePropsResourcesVpcFlowLogsToCloudWatch(obj.vpcFlowLogsToCloudWatch),
+    'DHCPOptions': toJson_CfnVpcqsModulePropsResourcesDhcpOptions(obj.dhcpOptions),
+    'VPC': toJson_CfnVpcqsModulePropsResourcesVpc(obj.vpc),
+    'VPCDHCPOptionsAssociation': toJson_CfnVpcqsModulePropsResourcesVpcdhcpOptionsAssociation(obj.vpcdhcpOptionsAssociation),
+    'InternetGateway': toJson_CfnVpcqsModulePropsResourcesInternetGateway(obj.internetGateway),
+    'VPCGatewayAttachment': toJson_CfnVpcqsModulePropsResourcesVpcGatewayAttachment(obj.vpcGatewayAttachment),
+    'PrivateSubnet1A': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet1A(obj.privateSubnet1A),
+    'PrivateSubnet1B': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet1B(obj.privateSubnet1B),
+    'PrivateSubnet2A': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet2A(obj.privateSubnet2A),
+    'PrivateSubnet2B': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet2B(obj.privateSubnet2B),
+    'PrivateSubnet3A': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet3A(obj.privateSubnet3A),
+    'PrivateSubnet3B': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet3B(obj.privateSubnet3B),
+    'PrivateSubnet4A': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet4A(obj.privateSubnet4A),
+    'PrivateSubnet4B': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet4B(obj.privateSubnet4B),
+    'PublicSubnet1': toJson_CfnVpcqsModulePropsResourcesPublicSubnet1(obj.publicSubnet1),
+    'PublicSubnet2': toJson_CfnVpcqsModulePropsResourcesPublicSubnet2(obj.publicSubnet2),
+    'PublicSubnet3': toJson_CfnVpcqsModulePropsResourcesPublicSubnet3(obj.publicSubnet3),
+    'PublicSubnet4': toJson_CfnVpcqsModulePropsResourcesPublicSubnet4(obj.publicSubnet4),
+    'PrivateSubnet1ARouteTable': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet1ARouteTable(obj.privateSubnet1ARouteTable),
+    'PrivateSubnet1ARoute': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet1ARoute(obj.privateSubnet1ARoute),
+    'PrivateSubnet1ARouteTableAssociation': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet1ARouteTableAssociation(obj.privateSubnet1ARouteTableAssociation),
+    'PrivateSubnet2ARouteTable': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet2ARouteTable(obj.privateSubnet2ARouteTable),
+    'PrivateSubnet2ARoute': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet2ARoute(obj.privateSubnet2ARoute),
+    'PrivateSubnet2ARouteTableAssociation': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet2ARouteTableAssociation(obj.privateSubnet2ARouteTableAssociation),
+    'PrivateSubnet3ARouteTable': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet3ARouteTable(obj.privateSubnet3ARouteTable),
+    'PrivateSubnet3ARoute': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet3ARoute(obj.privateSubnet3ARoute),
+    'PrivateSubnet3ARouteTableAssociation': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet3ARouteTableAssociation(obj.privateSubnet3ARouteTableAssociation),
+    'PrivateSubnet4ARouteTable': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet4ARouteTable(obj.privateSubnet4ARouteTable),
+    'PrivateSubnet4ARoute': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet4ARoute(obj.privateSubnet4ARoute),
+    'PrivateSubnet4ARouteTableAssociation': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet4ARouteTableAssociation(obj.privateSubnet4ARouteTableAssociation),
+    'PrivateSubnet1BRouteTable': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet1BRouteTable(obj.privateSubnet1BRouteTable),
+    'PrivateSubnet1BRoute': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet1BRoute(obj.privateSubnet1BRoute),
+    'PrivateSubnet1BRouteTableAssociation': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet1BRouteTableAssociation(obj.privateSubnet1BRouteTableAssociation),
+    'PrivateSubnet1BNetworkAcl': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAcl(obj.privateSubnet1BNetworkAcl),
+    'PrivateSubnet1BNetworkAclEntryInbound': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAclEntryInbound(obj.privateSubnet1BNetworkAclEntryInbound),
+    'PrivateSubnet1BNetworkAclEntryOutbound': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAclEntryOutbound(obj.privateSubnet1BNetworkAclEntryOutbound),
+    'PrivateSubnet1BNetworkAclAssociation': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAclAssociation(obj.privateSubnet1BNetworkAclAssociation),
+    'PrivateSubnet2BRouteTable': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet2BRouteTable(obj.privateSubnet2BRouteTable),
+    'PrivateSubnet2BRoute': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet2BRoute(obj.privateSubnet2BRoute),
+    'PrivateSubnet2BRouteTableAssociation': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet2BRouteTableAssociation(obj.privateSubnet2BRouteTableAssociation),
+    'PrivateSubnet2BNetworkAcl': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAcl(obj.privateSubnet2BNetworkAcl),
+    'PrivateSubnet2BNetworkAclEntryInbound': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAclEntryInbound(obj.privateSubnet2BNetworkAclEntryInbound),
+    'PrivateSubnet2BNetworkAclEntryOutbound': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAclEntryOutbound(obj.privateSubnet2BNetworkAclEntryOutbound),
+    'PrivateSubnet2BNetworkAclAssociation': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAclAssociation(obj.privateSubnet2BNetworkAclAssociation),
+    'PrivateSubnet3BRouteTable': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet3BRouteTable(obj.privateSubnet3BRouteTable),
+    'PrivateSubnet3BRoute': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet3BRoute(obj.privateSubnet3BRoute),
+    'PrivateSubnet3BRouteTableAssociation': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet3BRouteTableAssociation(obj.privateSubnet3BRouteTableAssociation),
+    'PrivateSubnet3BNetworkAcl': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAcl(obj.privateSubnet3BNetworkAcl),
+    'PrivateSubnet3BNetworkAclEntryInbound': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAclEntryInbound(obj.privateSubnet3BNetworkAclEntryInbound),
+    'PrivateSubnet3BNetworkAclEntryOutbound': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAclEntryOutbound(obj.privateSubnet3BNetworkAclEntryOutbound),
+    'PrivateSubnet3BNetworkAclAssociation': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAclAssociation(obj.privateSubnet3BNetworkAclAssociation),
+    'PrivateSubnet4BRouteTable': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet4BRouteTable(obj.privateSubnet4BRouteTable),
+    'PrivateSubnet4BRoute': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet4BRoute(obj.privateSubnet4BRoute),
+    'PrivateSubnet4BRouteTableAssociation': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet4BRouteTableAssociation(obj.privateSubnet4BRouteTableAssociation),
+    'PrivateSubnet4BNetworkAcl': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAcl(obj.privateSubnet4BNetworkAcl),
+    'PrivateSubnet4BNetworkAclEntryInbound': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAclEntryInbound(obj.privateSubnet4BNetworkAclEntryInbound),
+    'PrivateSubnet4BNetworkAclEntryOutbound': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAclEntryOutbound(obj.privateSubnet4BNetworkAclEntryOutbound),
+    'PrivateSubnet4BNetworkAclAssociation': toJson_CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAclAssociation(obj.privateSubnet4BNetworkAclAssociation),
+    'PublicSubnetRouteTable': toJson_CfnVpcqsModulePropsResourcesPublicSubnetRouteTable(obj.publicSubnetRouteTable),
+    'PublicSubnetRoute': toJson_CfnVpcqsModulePropsResourcesPublicSubnetRoute(obj.publicSubnetRoute),
+    'PublicSubnet1RouteTableAssociation': toJson_CfnVpcqsModulePropsResourcesPublicSubnet1RouteTableAssociation(obj.publicSubnet1RouteTableAssociation),
+    'PublicSubnet2RouteTableAssociation': toJson_CfnVpcqsModulePropsResourcesPublicSubnet2RouteTableAssociation(obj.publicSubnet2RouteTableAssociation),
+    'PublicSubnet3RouteTableAssociation': toJson_CfnVpcqsModulePropsResourcesPublicSubnet3RouteTableAssociation(obj.publicSubnet3RouteTableAssociation),
+    'PublicSubnet4RouteTableAssociation': toJson_CfnVpcqsModulePropsResourcesPublicSubnet4RouteTableAssociation(obj.publicSubnet4RouteTableAssociation),
+    'NAT1EIP': toJson_CfnVpcqsModulePropsResourcesNat1Eip(obj.nat1Eip),
+    'NAT2EIP': toJson_CfnVpcqsModulePropsResourcesNat2Eip(obj.nat2Eip),
+    'NAT3EIP': toJson_CfnVpcqsModulePropsResourcesNat3Eip(obj.nat3Eip),
+    'NAT4EIP': toJson_CfnVpcqsModulePropsResourcesNat4Eip(obj.nat4Eip),
+    'NATGateway1': toJson_CfnVpcqsModulePropsResourcesNatGateway1(obj.natGateway1),
+    'NATGateway2': toJson_CfnVpcqsModulePropsResourcesNatGateway2(obj.natGateway2),
+    'NATGateway3': toJson_CfnVpcqsModulePropsResourcesNatGateway3(obj.natGateway3),
+    'NATGateway4': toJson_CfnVpcqsModulePropsResourcesNatGateway4(obj.natGateway4),
+    'S3VPCEndpoint': toJson_CfnVpcqsModulePropsResourcesS3VpcEndpoint(obj.s3VpcEndpoint),
+    'VPCFlowLogsRole': toJson_CfnVpcqsModulePropsResourcesVpcFlowLogsRole(obj.vpcFlowLogsRole),
+    'VPCFlowLogsLogGroup': toJson_CfnVpcqsModulePropsResourcesVpcFlowLogsLogGroup(obj.vpcFlowLogsLogGroup),
+    'VPCFlowLogsToCloudWatch': toJson_CfnVpcqsModulePropsResourcesVpcFlowLogsToCloudWatch(obj.vpcFlowLogsToCloudWatch),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -805,26 +805,26 @@ export function toJson_CfnModulePropsResources(obj: CfnModulePropsResources | un
 /**
  * List of Availability Zones to use for the subnets in the VPC. Note: The logical order is preserved.
  *
- * @schema CfnModulePropsParametersAvailabilityZones
+ * @schema CfnVpcqsModulePropsParametersAvailabilityZones
  */
-export interface CfnModulePropsParametersAvailabilityZones {
+export interface CfnVpcqsModulePropsParametersAvailabilityZones {
   /**
-   * @schema CfnModulePropsParametersAvailabilityZones#Type
+   * @schema CfnVpcqsModulePropsParametersAvailabilityZones#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersAvailabilityZones#Description
+   * @schema CfnVpcqsModulePropsParametersAvailabilityZones#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersAvailabilityZones' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersAvailabilityZones' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersAvailabilityZones(obj: CfnModulePropsParametersAvailabilityZones | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersAvailabilityZones(obj: CfnVpcqsModulePropsParametersAvailabilityZones | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -838,26 +838,26 @@ export function toJson_CfnModulePropsParametersAvailabilityZones(obj: CfnModuleP
 /**
  * Set to true to create a network ACL protected subnet in each Availability Zone. If false, the CIDR parameters for those subnets will be ignored. If true, it also requires that the 'Create private subnets' parameter is also true to have any effect.
  *
- * @schema CfnModulePropsParametersCreateAdditionalPrivateSubnets
+ * @schema CfnVpcqsModulePropsParametersCreateAdditionalPrivateSubnets
  */
-export interface CfnModulePropsParametersCreateAdditionalPrivateSubnets {
+export interface CfnVpcqsModulePropsParametersCreateAdditionalPrivateSubnets {
   /**
-   * @schema CfnModulePropsParametersCreateAdditionalPrivateSubnets#Type
+   * @schema CfnVpcqsModulePropsParametersCreateAdditionalPrivateSubnets#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersCreateAdditionalPrivateSubnets#Description
+   * @schema CfnVpcqsModulePropsParametersCreateAdditionalPrivateSubnets#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersCreateAdditionalPrivateSubnets' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersCreateAdditionalPrivateSubnets' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersCreateAdditionalPrivateSubnets(obj: CfnModulePropsParametersCreateAdditionalPrivateSubnets | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersCreateAdditionalPrivateSubnets(obj: CfnVpcqsModulePropsParametersCreateAdditionalPrivateSubnets | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -871,26 +871,26 @@ export function toJson_CfnModulePropsParametersCreateAdditionalPrivateSubnets(ob
 /**
  * Set to false when creating only private subnets. If True, both CreatePublicSubnets and CreatePrivateSubnets must also be true.
  *
- * @schema CfnModulePropsParametersCreateNatGateways
+ * @schema CfnVpcqsModulePropsParametersCreateNatGateways
  */
-export interface CfnModulePropsParametersCreateNatGateways {
+export interface CfnVpcqsModulePropsParametersCreateNatGateways {
   /**
-   * @schema CfnModulePropsParametersCreateNatGateways#Type
+   * @schema CfnVpcqsModulePropsParametersCreateNatGateways#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersCreateNatGateways#Description
+   * @schema CfnVpcqsModulePropsParametersCreateNatGateways#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersCreateNatGateways' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersCreateNatGateways' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersCreateNatGateways(obj: CfnModulePropsParametersCreateNatGateways | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersCreateNatGateways(obj: CfnVpcqsModulePropsParametersCreateNatGateways | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -904,26 +904,26 @@ export function toJson_CfnModulePropsParametersCreateNatGateways(obj: CfnModuleP
 /**
  * Set to false to create only private subnets. If false, CreatePrivateSubnets must be True and the CIDR parameters for ALL public subnets will be ignored
  *
- * @schema CfnModulePropsParametersCreatePublicSubnets
+ * @schema CfnVpcqsModulePropsParametersCreatePublicSubnets
  */
-export interface CfnModulePropsParametersCreatePublicSubnets {
+export interface CfnVpcqsModulePropsParametersCreatePublicSubnets {
   /**
-   * @schema CfnModulePropsParametersCreatePublicSubnets#Type
+   * @schema CfnVpcqsModulePropsParametersCreatePublicSubnets#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersCreatePublicSubnets#Description
+   * @schema CfnVpcqsModulePropsParametersCreatePublicSubnets#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersCreatePublicSubnets' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersCreatePublicSubnets' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersCreatePublicSubnets(obj: CfnModulePropsParametersCreatePublicSubnets | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersCreatePublicSubnets(obj: CfnVpcqsModulePropsParametersCreatePublicSubnets | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -937,26 +937,26 @@ export function toJson_CfnModulePropsParametersCreatePublicSubnets(obj: CfnModul
 /**
  * Set to false to create only public subnets. If false, the CIDR parameters for ALL private subnets will be ignored.
  *
- * @schema CfnModulePropsParametersCreatePrivateSubnets
+ * @schema CfnVpcqsModulePropsParametersCreatePrivateSubnets
  */
-export interface CfnModulePropsParametersCreatePrivateSubnets {
+export interface CfnVpcqsModulePropsParametersCreatePrivateSubnets {
   /**
-   * @schema CfnModulePropsParametersCreatePrivateSubnets#Type
+   * @schema CfnVpcqsModulePropsParametersCreatePrivateSubnets#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersCreatePrivateSubnets#Description
+   * @schema CfnVpcqsModulePropsParametersCreatePrivateSubnets#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersCreatePrivateSubnets' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersCreatePrivateSubnets' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersCreatePrivateSubnets(obj: CfnModulePropsParametersCreatePrivateSubnets | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersCreatePrivateSubnets(obj: CfnVpcqsModulePropsParametersCreatePrivateSubnets | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -970,26 +970,26 @@ export function toJson_CfnModulePropsParametersCreatePrivateSubnets(obj: CfnModu
 /**
  * Set to true to create VPC flow logs for the VPC and publish them to CloudWatch. If false, VPC flow logs will not be created.
  *
- * @schema CfnModulePropsParametersCreateVpcFlowLogsToCloudWatch
+ * @schema CfnVpcqsModulePropsParametersCreateVpcFlowLogsToCloudWatch
  */
-export interface CfnModulePropsParametersCreateVpcFlowLogsToCloudWatch {
+export interface CfnVpcqsModulePropsParametersCreateVpcFlowLogsToCloudWatch {
   /**
-   * @schema CfnModulePropsParametersCreateVpcFlowLogsToCloudWatch#Type
+   * @schema CfnVpcqsModulePropsParametersCreateVpcFlowLogsToCloudWatch#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersCreateVpcFlowLogsToCloudWatch#Description
+   * @schema CfnVpcqsModulePropsParametersCreateVpcFlowLogsToCloudWatch#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersCreateVpcFlowLogsToCloudWatch' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersCreateVpcFlowLogsToCloudWatch' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersCreateVpcFlowLogsToCloudWatch(obj: CfnModulePropsParametersCreateVpcFlowLogsToCloudWatch | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersCreateVpcFlowLogsToCloudWatch(obj: CfnVpcqsModulePropsParametersCreateVpcFlowLogsToCloudWatch | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1003,26 +1003,26 @@ export function toJson_CfnModulePropsParametersCreateVpcFlowLogsToCloudWatch(obj
 /**
  * Number of Availability Zones to use in the VPC. This must match your selections in the list of Availability Zones parameter.
  *
- * @schema CfnModulePropsParametersNumberOfAZs
+ * @schema CfnVpcqsModulePropsParametersNumberOfAZs
  */
-export interface CfnModulePropsParametersNumberOfAZs {
+export interface CfnVpcqsModulePropsParametersNumberOfAZs {
   /**
-   * @schema CfnModulePropsParametersNumberOfAZs#Type
+   * @schema CfnVpcqsModulePropsParametersNumberOfAZs#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersNumberOfAZs#Description
+   * @schema CfnVpcqsModulePropsParametersNumberOfAZs#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersNumberOfAZs' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersNumberOfAZs' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersNumberOfAZs(obj: CfnModulePropsParametersNumberOfAZs | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersNumberOfAZs(obj: CfnVpcqsModulePropsParametersNumberOfAZs | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1036,26 +1036,26 @@ export function toJson_CfnModulePropsParametersNumberOfAZs(obj: CfnModulePropsPa
 /**
  * CIDR block for private subnet 1A located in Availability Zone 1
  *
- * @schema CfnModulePropsParametersPrivateSubnet1Acidr
+ * @schema CfnVpcqsModulePropsParametersPrivateSubnet1Acidr
  */
-export interface CfnModulePropsParametersPrivateSubnet1Acidr {
+export interface CfnVpcqsModulePropsParametersPrivateSubnet1Acidr {
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet1Acidr#Type
+   * @schema CfnVpcqsModulePropsParametersPrivateSubnet1Acidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet1Acidr#Description
+   * @schema CfnVpcqsModulePropsParametersPrivateSubnet1Acidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPrivateSubnet1Acidr' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersPrivateSubnet1Acidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPrivateSubnet1Acidr(obj: CfnModulePropsParametersPrivateSubnet1Acidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersPrivateSubnet1Acidr(obj: CfnVpcqsModulePropsParametersPrivateSubnet1Acidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1069,26 +1069,26 @@ export function toJson_CfnModulePropsParametersPrivateSubnet1Acidr(obj: CfnModul
 /**
  * CIDR block for private subnet 1B with dedicated network ACL located in Availability Zone 1
  *
- * @schema CfnModulePropsParametersPrivateSubnet1Bcidr
+ * @schema CfnVpcqsModulePropsParametersPrivateSubnet1Bcidr
  */
-export interface CfnModulePropsParametersPrivateSubnet1Bcidr {
+export interface CfnVpcqsModulePropsParametersPrivateSubnet1Bcidr {
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet1Bcidr#Type
+   * @schema CfnVpcqsModulePropsParametersPrivateSubnet1Bcidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet1Bcidr#Description
+   * @schema CfnVpcqsModulePropsParametersPrivateSubnet1Bcidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPrivateSubnet1Bcidr' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersPrivateSubnet1Bcidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPrivateSubnet1Bcidr(obj: CfnModulePropsParametersPrivateSubnet1Bcidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersPrivateSubnet1Bcidr(obj: CfnVpcqsModulePropsParametersPrivateSubnet1Bcidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1102,26 +1102,26 @@ export function toJson_CfnModulePropsParametersPrivateSubnet1Bcidr(obj: CfnModul
 /**
  * CIDR block for private subnet 2A located in Availability Zone 2
  *
- * @schema CfnModulePropsParametersPrivateSubnet2Acidr
+ * @schema CfnVpcqsModulePropsParametersPrivateSubnet2Acidr
  */
-export interface CfnModulePropsParametersPrivateSubnet2Acidr {
+export interface CfnVpcqsModulePropsParametersPrivateSubnet2Acidr {
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet2Acidr#Type
+   * @schema CfnVpcqsModulePropsParametersPrivateSubnet2Acidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet2Acidr#Description
+   * @schema CfnVpcqsModulePropsParametersPrivateSubnet2Acidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPrivateSubnet2Acidr' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersPrivateSubnet2Acidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPrivateSubnet2Acidr(obj: CfnModulePropsParametersPrivateSubnet2Acidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersPrivateSubnet2Acidr(obj: CfnVpcqsModulePropsParametersPrivateSubnet2Acidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1135,26 +1135,26 @@ export function toJson_CfnModulePropsParametersPrivateSubnet2Acidr(obj: CfnModul
 /**
  * CIDR block for private subnet 2B with dedicated network ACL located in Availability Zone 2
  *
- * @schema CfnModulePropsParametersPrivateSubnet2Bcidr
+ * @schema CfnVpcqsModulePropsParametersPrivateSubnet2Bcidr
  */
-export interface CfnModulePropsParametersPrivateSubnet2Bcidr {
+export interface CfnVpcqsModulePropsParametersPrivateSubnet2Bcidr {
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet2Bcidr#Type
+   * @schema CfnVpcqsModulePropsParametersPrivateSubnet2Bcidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet2Bcidr#Description
+   * @schema CfnVpcqsModulePropsParametersPrivateSubnet2Bcidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPrivateSubnet2Bcidr' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersPrivateSubnet2Bcidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPrivateSubnet2Bcidr(obj: CfnModulePropsParametersPrivateSubnet2Bcidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersPrivateSubnet2Bcidr(obj: CfnVpcqsModulePropsParametersPrivateSubnet2Bcidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1168,26 +1168,26 @@ export function toJson_CfnModulePropsParametersPrivateSubnet2Bcidr(obj: CfnModul
 /**
  * CIDR block for private subnet 3A located in Availability Zone 3
  *
- * @schema CfnModulePropsParametersPrivateSubnet3Acidr
+ * @schema CfnVpcqsModulePropsParametersPrivateSubnet3Acidr
  */
-export interface CfnModulePropsParametersPrivateSubnet3Acidr {
+export interface CfnVpcqsModulePropsParametersPrivateSubnet3Acidr {
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet3Acidr#Type
+   * @schema CfnVpcqsModulePropsParametersPrivateSubnet3Acidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet3Acidr#Description
+   * @schema CfnVpcqsModulePropsParametersPrivateSubnet3Acidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPrivateSubnet3Acidr' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersPrivateSubnet3Acidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPrivateSubnet3Acidr(obj: CfnModulePropsParametersPrivateSubnet3Acidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersPrivateSubnet3Acidr(obj: CfnVpcqsModulePropsParametersPrivateSubnet3Acidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1201,26 +1201,26 @@ export function toJson_CfnModulePropsParametersPrivateSubnet3Acidr(obj: CfnModul
 /**
  * CIDR block for private subnet 3B with dedicated network ACL located in Availability Zone 3
  *
- * @schema CfnModulePropsParametersPrivateSubnet3Bcidr
+ * @schema CfnVpcqsModulePropsParametersPrivateSubnet3Bcidr
  */
-export interface CfnModulePropsParametersPrivateSubnet3Bcidr {
+export interface CfnVpcqsModulePropsParametersPrivateSubnet3Bcidr {
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet3Bcidr#Type
+   * @schema CfnVpcqsModulePropsParametersPrivateSubnet3Bcidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet3Bcidr#Description
+   * @schema CfnVpcqsModulePropsParametersPrivateSubnet3Bcidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPrivateSubnet3Bcidr' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersPrivateSubnet3Bcidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPrivateSubnet3Bcidr(obj: CfnModulePropsParametersPrivateSubnet3Bcidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersPrivateSubnet3Bcidr(obj: CfnVpcqsModulePropsParametersPrivateSubnet3Bcidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1234,26 +1234,26 @@ export function toJson_CfnModulePropsParametersPrivateSubnet3Bcidr(obj: CfnModul
 /**
  * CIDR block for private subnet 4A located in Availability Zone 4
  *
- * @schema CfnModulePropsParametersPrivateSubnet4Acidr
+ * @schema CfnVpcqsModulePropsParametersPrivateSubnet4Acidr
  */
-export interface CfnModulePropsParametersPrivateSubnet4Acidr {
+export interface CfnVpcqsModulePropsParametersPrivateSubnet4Acidr {
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet4Acidr#Type
+   * @schema CfnVpcqsModulePropsParametersPrivateSubnet4Acidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet4Acidr#Description
+   * @schema CfnVpcqsModulePropsParametersPrivateSubnet4Acidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPrivateSubnet4Acidr' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersPrivateSubnet4Acidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPrivateSubnet4Acidr(obj: CfnModulePropsParametersPrivateSubnet4Acidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersPrivateSubnet4Acidr(obj: CfnVpcqsModulePropsParametersPrivateSubnet4Acidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1267,26 +1267,26 @@ export function toJson_CfnModulePropsParametersPrivateSubnet4Acidr(obj: CfnModul
 /**
  * CIDR block for private subnet 4B with dedicated network ACL located in Availability Zone 4
  *
- * @schema CfnModulePropsParametersPrivateSubnet4Bcidr
+ * @schema CfnVpcqsModulePropsParametersPrivateSubnet4Bcidr
  */
-export interface CfnModulePropsParametersPrivateSubnet4Bcidr {
+export interface CfnVpcqsModulePropsParametersPrivateSubnet4Bcidr {
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet4Bcidr#Type
+   * @schema CfnVpcqsModulePropsParametersPrivateSubnet4Bcidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet4Bcidr#Description
+   * @schema CfnVpcqsModulePropsParametersPrivateSubnet4Bcidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPrivateSubnet4Bcidr' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersPrivateSubnet4Bcidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPrivateSubnet4Bcidr(obj: CfnModulePropsParametersPrivateSubnet4Bcidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersPrivateSubnet4Bcidr(obj: CfnVpcqsModulePropsParametersPrivateSubnet4Bcidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1300,26 +1300,26 @@ export function toJson_CfnModulePropsParametersPrivateSubnet4Bcidr(obj: CfnModul
 /**
  * tag to add to private subnets A, in format Key=Value (Optional)
  *
- * @schema CfnModulePropsParametersPrivateSubnetATag1
+ * @schema CfnVpcqsModulePropsParametersPrivateSubnetATag1
  */
-export interface CfnModulePropsParametersPrivateSubnetATag1 {
+export interface CfnVpcqsModulePropsParametersPrivateSubnetATag1 {
   /**
-   * @schema CfnModulePropsParametersPrivateSubnetATag1#Type
+   * @schema CfnVpcqsModulePropsParametersPrivateSubnetATag1#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPrivateSubnetATag1#Description
+   * @schema CfnVpcqsModulePropsParametersPrivateSubnetATag1#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPrivateSubnetATag1' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersPrivateSubnetATag1' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPrivateSubnetATag1(obj: CfnModulePropsParametersPrivateSubnetATag1 | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersPrivateSubnetATag1(obj: CfnVpcqsModulePropsParametersPrivateSubnetATag1 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1333,26 +1333,26 @@ export function toJson_CfnModulePropsParametersPrivateSubnetATag1(obj: CfnModule
 /**
  * tag to add to private subnets A, in format Key=Value (Optional)
  *
- * @schema CfnModulePropsParametersPrivateSubnetATag2
+ * @schema CfnVpcqsModulePropsParametersPrivateSubnetATag2
  */
-export interface CfnModulePropsParametersPrivateSubnetATag2 {
+export interface CfnVpcqsModulePropsParametersPrivateSubnetATag2 {
   /**
-   * @schema CfnModulePropsParametersPrivateSubnetATag2#Type
+   * @schema CfnVpcqsModulePropsParametersPrivateSubnetATag2#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPrivateSubnetATag2#Description
+   * @schema CfnVpcqsModulePropsParametersPrivateSubnetATag2#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPrivateSubnetATag2' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersPrivateSubnetATag2' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPrivateSubnetATag2(obj: CfnModulePropsParametersPrivateSubnetATag2 | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersPrivateSubnetATag2(obj: CfnVpcqsModulePropsParametersPrivateSubnetATag2 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1366,26 +1366,26 @@ export function toJson_CfnModulePropsParametersPrivateSubnetATag2(obj: CfnModule
 /**
  * tag to add to private subnets A, in format Key=Value (Optional)
  *
- * @schema CfnModulePropsParametersPrivateSubnetATag3
+ * @schema CfnVpcqsModulePropsParametersPrivateSubnetATag3
  */
-export interface CfnModulePropsParametersPrivateSubnetATag3 {
+export interface CfnVpcqsModulePropsParametersPrivateSubnetATag3 {
   /**
-   * @schema CfnModulePropsParametersPrivateSubnetATag3#Type
+   * @schema CfnVpcqsModulePropsParametersPrivateSubnetATag3#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPrivateSubnetATag3#Description
+   * @schema CfnVpcqsModulePropsParametersPrivateSubnetATag3#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPrivateSubnetATag3' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersPrivateSubnetATag3' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPrivateSubnetATag3(obj: CfnModulePropsParametersPrivateSubnetATag3 | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersPrivateSubnetATag3(obj: CfnVpcqsModulePropsParametersPrivateSubnetATag3 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1399,26 +1399,26 @@ export function toJson_CfnModulePropsParametersPrivateSubnetATag3(obj: CfnModule
 /**
  * tag to add to private subnets B, in format Key=Value (Optional)
  *
- * @schema CfnModulePropsParametersPrivateSubnetBTag1
+ * @schema CfnVpcqsModulePropsParametersPrivateSubnetBTag1
  */
-export interface CfnModulePropsParametersPrivateSubnetBTag1 {
+export interface CfnVpcqsModulePropsParametersPrivateSubnetBTag1 {
   /**
-   * @schema CfnModulePropsParametersPrivateSubnetBTag1#Type
+   * @schema CfnVpcqsModulePropsParametersPrivateSubnetBTag1#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPrivateSubnetBTag1#Description
+   * @schema CfnVpcqsModulePropsParametersPrivateSubnetBTag1#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPrivateSubnetBTag1' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersPrivateSubnetBTag1' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPrivateSubnetBTag1(obj: CfnModulePropsParametersPrivateSubnetBTag1 | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersPrivateSubnetBTag1(obj: CfnVpcqsModulePropsParametersPrivateSubnetBTag1 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1432,26 +1432,26 @@ export function toJson_CfnModulePropsParametersPrivateSubnetBTag1(obj: CfnModule
 /**
  * tag to add to private subnets B, in format Key=Value (Optional)
  *
- * @schema CfnModulePropsParametersPrivateSubnetBTag2
+ * @schema CfnVpcqsModulePropsParametersPrivateSubnetBTag2
  */
-export interface CfnModulePropsParametersPrivateSubnetBTag2 {
+export interface CfnVpcqsModulePropsParametersPrivateSubnetBTag2 {
   /**
-   * @schema CfnModulePropsParametersPrivateSubnetBTag2#Type
+   * @schema CfnVpcqsModulePropsParametersPrivateSubnetBTag2#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPrivateSubnetBTag2#Description
+   * @schema CfnVpcqsModulePropsParametersPrivateSubnetBTag2#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPrivateSubnetBTag2' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersPrivateSubnetBTag2' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPrivateSubnetBTag2(obj: CfnModulePropsParametersPrivateSubnetBTag2 | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersPrivateSubnetBTag2(obj: CfnVpcqsModulePropsParametersPrivateSubnetBTag2 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1465,26 +1465,26 @@ export function toJson_CfnModulePropsParametersPrivateSubnetBTag2(obj: CfnModule
 /**
  * tag to add to private subnets B, in format Key=Value (Optional)
  *
- * @schema CfnModulePropsParametersPrivateSubnetBTag3
+ * @schema CfnVpcqsModulePropsParametersPrivateSubnetBTag3
  */
-export interface CfnModulePropsParametersPrivateSubnetBTag3 {
+export interface CfnVpcqsModulePropsParametersPrivateSubnetBTag3 {
   /**
-   * @schema CfnModulePropsParametersPrivateSubnetBTag3#Type
+   * @schema CfnVpcqsModulePropsParametersPrivateSubnetBTag3#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPrivateSubnetBTag3#Description
+   * @schema CfnVpcqsModulePropsParametersPrivateSubnetBTag3#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPrivateSubnetBTag3' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersPrivateSubnetBTag3' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPrivateSubnetBTag3(obj: CfnModulePropsParametersPrivateSubnetBTag3 | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersPrivateSubnetBTag3(obj: CfnVpcqsModulePropsParametersPrivateSubnetBTag3 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1498,26 +1498,26 @@ export function toJson_CfnModulePropsParametersPrivateSubnetBTag3(obj: CfnModule
 /**
  * CIDR block for the public DMZ subnet 1 located in Availability Zone 1
  *
- * @schema CfnModulePropsParametersPublicSubnet1Cidr
+ * @schema CfnVpcqsModulePropsParametersPublicSubnet1Cidr
  */
-export interface CfnModulePropsParametersPublicSubnet1Cidr {
+export interface CfnVpcqsModulePropsParametersPublicSubnet1Cidr {
   /**
-   * @schema CfnModulePropsParametersPublicSubnet1Cidr#Type
+   * @schema CfnVpcqsModulePropsParametersPublicSubnet1Cidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPublicSubnet1Cidr#Description
+   * @schema CfnVpcqsModulePropsParametersPublicSubnet1Cidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPublicSubnet1Cidr' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersPublicSubnet1Cidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPublicSubnet1Cidr(obj: CfnModulePropsParametersPublicSubnet1Cidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersPublicSubnet1Cidr(obj: CfnVpcqsModulePropsParametersPublicSubnet1Cidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1531,26 +1531,26 @@ export function toJson_CfnModulePropsParametersPublicSubnet1Cidr(obj: CfnModuleP
 /**
  * CIDR block for the public DMZ subnet 2 located in Availability Zone 2
  *
- * @schema CfnModulePropsParametersPublicSubnet2Cidr
+ * @schema CfnVpcqsModulePropsParametersPublicSubnet2Cidr
  */
-export interface CfnModulePropsParametersPublicSubnet2Cidr {
+export interface CfnVpcqsModulePropsParametersPublicSubnet2Cidr {
   /**
-   * @schema CfnModulePropsParametersPublicSubnet2Cidr#Type
+   * @schema CfnVpcqsModulePropsParametersPublicSubnet2Cidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPublicSubnet2Cidr#Description
+   * @schema CfnVpcqsModulePropsParametersPublicSubnet2Cidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPublicSubnet2Cidr' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersPublicSubnet2Cidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPublicSubnet2Cidr(obj: CfnModulePropsParametersPublicSubnet2Cidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersPublicSubnet2Cidr(obj: CfnVpcqsModulePropsParametersPublicSubnet2Cidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1564,26 +1564,26 @@ export function toJson_CfnModulePropsParametersPublicSubnet2Cidr(obj: CfnModuleP
 /**
  * CIDR block for the public DMZ subnet 3 located in Availability Zone 3
  *
- * @schema CfnModulePropsParametersPublicSubnet3Cidr
+ * @schema CfnVpcqsModulePropsParametersPublicSubnet3Cidr
  */
-export interface CfnModulePropsParametersPublicSubnet3Cidr {
+export interface CfnVpcqsModulePropsParametersPublicSubnet3Cidr {
   /**
-   * @schema CfnModulePropsParametersPublicSubnet3Cidr#Type
+   * @schema CfnVpcqsModulePropsParametersPublicSubnet3Cidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPublicSubnet3Cidr#Description
+   * @schema CfnVpcqsModulePropsParametersPublicSubnet3Cidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPublicSubnet3Cidr' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersPublicSubnet3Cidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPublicSubnet3Cidr(obj: CfnModulePropsParametersPublicSubnet3Cidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersPublicSubnet3Cidr(obj: CfnVpcqsModulePropsParametersPublicSubnet3Cidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1597,26 +1597,26 @@ export function toJson_CfnModulePropsParametersPublicSubnet3Cidr(obj: CfnModuleP
 /**
  * CIDR block for the public DMZ subnet 4 located in Availability Zone 4
  *
- * @schema CfnModulePropsParametersPublicSubnet4Cidr
+ * @schema CfnVpcqsModulePropsParametersPublicSubnet4Cidr
  */
-export interface CfnModulePropsParametersPublicSubnet4Cidr {
+export interface CfnVpcqsModulePropsParametersPublicSubnet4Cidr {
   /**
-   * @schema CfnModulePropsParametersPublicSubnet4Cidr#Type
+   * @schema CfnVpcqsModulePropsParametersPublicSubnet4Cidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPublicSubnet4Cidr#Description
+   * @schema CfnVpcqsModulePropsParametersPublicSubnet4Cidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPublicSubnet4Cidr' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersPublicSubnet4Cidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPublicSubnet4Cidr(obj: CfnModulePropsParametersPublicSubnet4Cidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersPublicSubnet4Cidr(obj: CfnVpcqsModulePropsParametersPublicSubnet4Cidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1630,26 +1630,26 @@ export function toJson_CfnModulePropsParametersPublicSubnet4Cidr(obj: CfnModuleP
 /**
  * tag to add to public subnets, in format Key=Value (Optional)
  *
- * @schema CfnModulePropsParametersPublicSubnetTag1
+ * @schema CfnVpcqsModulePropsParametersPublicSubnetTag1
  */
-export interface CfnModulePropsParametersPublicSubnetTag1 {
+export interface CfnVpcqsModulePropsParametersPublicSubnetTag1 {
   /**
-   * @schema CfnModulePropsParametersPublicSubnetTag1#Type
+   * @schema CfnVpcqsModulePropsParametersPublicSubnetTag1#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPublicSubnetTag1#Description
+   * @schema CfnVpcqsModulePropsParametersPublicSubnetTag1#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPublicSubnetTag1' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersPublicSubnetTag1' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPublicSubnetTag1(obj: CfnModulePropsParametersPublicSubnetTag1 | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersPublicSubnetTag1(obj: CfnVpcqsModulePropsParametersPublicSubnetTag1 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1663,26 +1663,26 @@ export function toJson_CfnModulePropsParametersPublicSubnetTag1(obj: CfnModulePr
 /**
  * tag to add to public subnets, in format Key=Value (Optional)
  *
- * @schema CfnModulePropsParametersPublicSubnetTag2
+ * @schema CfnVpcqsModulePropsParametersPublicSubnetTag2
  */
-export interface CfnModulePropsParametersPublicSubnetTag2 {
+export interface CfnVpcqsModulePropsParametersPublicSubnetTag2 {
   /**
-   * @schema CfnModulePropsParametersPublicSubnetTag2#Type
+   * @schema CfnVpcqsModulePropsParametersPublicSubnetTag2#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPublicSubnetTag2#Description
+   * @schema CfnVpcqsModulePropsParametersPublicSubnetTag2#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPublicSubnetTag2' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersPublicSubnetTag2' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPublicSubnetTag2(obj: CfnModulePropsParametersPublicSubnetTag2 | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersPublicSubnetTag2(obj: CfnVpcqsModulePropsParametersPublicSubnetTag2 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1696,26 +1696,26 @@ export function toJson_CfnModulePropsParametersPublicSubnetTag2(obj: CfnModulePr
 /**
  * tag to add to public subnets, in format Key=Value (Optional)
  *
- * @schema CfnModulePropsParametersPublicSubnetTag3
+ * @schema CfnVpcqsModulePropsParametersPublicSubnetTag3
  */
-export interface CfnModulePropsParametersPublicSubnetTag3 {
+export interface CfnVpcqsModulePropsParametersPublicSubnetTag3 {
   /**
-   * @schema CfnModulePropsParametersPublicSubnetTag3#Type
+   * @schema CfnVpcqsModulePropsParametersPublicSubnetTag3#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPublicSubnetTag3#Description
+   * @schema CfnVpcqsModulePropsParametersPublicSubnetTag3#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPublicSubnetTag3' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersPublicSubnetTag3' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPublicSubnetTag3(obj: CfnModulePropsParametersPublicSubnetTag3 | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersPublicSubnetTag3(obj: CfnVpcqsModulePropsParametersPublicSubnetTag3 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1729,26 +1729,26 @@ export function toJson_CfnModulePropsParametersPublicSubnetTag3(obj: CfnModulePr
 /**
  * CIDR block for the VPC
  *
- * @schema CfnModulePropsParametersVpccidr
+ * @schema CfnVpcqsModulePropsParametersVpccidr
  */
-export interface CfnModulePropsParametersVpccidr {
+export interface CfnVpcqsModulePropsParametersVpccidr {
   /**
-   * @schema CfnModulePropsParametersVpccidr#Type
+   * @schema CfnVpcqsModulePropsParametersVpccidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersVpccidr#Description
+   * @schema CfnVpcqsModulePropsParametersVpccidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersVpccidr' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersVpccidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersVpccidr(obj: CfnModulePropsParametersVpccidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersVpccidr(obj: CfnVpcqsModulePropsParametersVpccidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1762,26 +1762,26 @@ export function toJson_CfnModulePropsParametersVpccidr(obj: CfnModulePropsParame
 /**
  * (Optional) KMS Key ARN to use for encrypting the VPC flow logs data. If empty, encryption is enabled with CloudWatch Logs managing the server-side encryption keys.
  *
- * @schema CfnModulePropsParametersVpcFlowLogsCloudWatchKmsKey
+ * @schema CfnVpcqsModulePropsParametersVpcFlowLogsCloudWatchKmsKey
  */
-export interface CfnModulePropsParametersVpcFlowLogsCloudWatchKmsKey {
+export interface CfnVpcqsModulePropsParametersVpcFlowLogsCloudWatchKmsKey {
   /**
-   * @schema CfnModulePropsParametersVpcFlowLogsCloudWatchKmsKey#Type
+   * @schema CfnVpcqsModulePropsParametersVpcFlowLogsCloudWatchKmsKey#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersVpcFlowLogsCloudWatchKmsKey#Description
+   * @schema CfnVpcqsModulePropsParametersVpcFlowLogsCloudWatchKmsKey#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersVpcFlowLogsCloudWatchKmsKey' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersVpcFlowLogsCloudWatchKmsKey' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersVpcFlowLogsCloudWatchKmsKey(obj: CfnModulePropsParametersVpcFlowLogsCloudWatchKmsKey | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersVpcFlowLogsCloudWatchKmsKey(obj: CfnVpcqsModulePropsParametersVpcFlowLogsCloudWatchKmsKey | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1795,26 +1795,26 @@ export function toJson_CfnModulePropsParametersVpcFlowLogsCloudWatchKmsKey(obj: 
 /**
  * The fields to include in the flow log record, in the order in which they should appear. Specify the fields using the ${field-id} format, separated by spaces. Using the Default Format as the default value.
  *
- * @schema CfnModulePropsParametersVpcFlowLogsLogFormat
+ * @schema CfnVpcqsModulePropsParametersVpcFlowLogsLogFormat
  */
-export interface CfnModulePropsParametersVpcFlowLogsLogFormat {
+export interface CfnVpcqsModulePropsParametersVpcFlowLogsLogFormat {
   /**
-   * @schema CfnModulePropsParametersVpcFlowLogsLogFormat#Type
+   * @schema CfnVpcqsModulePropsParametersVpcFlowLogsLogFormat#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersVpcFlowLogsLogFormat#Description
+   * @schema CfnVpcqsModulePropsParametersVpcFlowLogsLogFormat#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersVpcFlowLogsLogFormat' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersVpcFlowLogsLogFormat' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersVpcFlowLogsLogFormat(obj: CfnModulePropsParametersVpcFlowLogsLogFormat | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersVpcFlowLogsLogFormat(obj: CfnVpcqsModulePropsParametersVpcFlowLogsLogFormat | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1828,26 +1828,26 @@ export function toJson_CfnModulePropsParametersVpcFlowLogsLogFormat(obj: CfnModu
 /**
  * Number of days to retain the VPC Flow Logs in CloudWatch
  *
- * @schema CfnModulePropsParametersVpcFlowLogsLogGroupRetention
+ * @schema CfnVpcqsModulePropsParametersVpcFlowLogsLogGroupRetention
  */
-export interface CfnModulePropsParametersVpcFlowLogsLogGroupRetention {
+export interface CfnVpcqsModulePropsParametersVpcFlowLogsLogGroupRetention {
   /**
-   * @schema CfnModulePropsParametersVpcFlowLogsLogGroupRetention#Type
+   * @schema CfnVpcqsModulePropsParametersVpcFlowLogsLogGroupRetention#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersVpcFlowLogsLogGroupRetention#Description
+   * @schema CfnVpcqsModulePropsParametersVpcFlowLogsLogGroupRetention#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersVpcFlowLogsLogGroupRetention' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersVpcFlowLogsLogGroupRetention' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersVpcFlowLogsLogGroupRetention(obj: CfnModulePropsParametersVpcFlowLogsLogGroupRetention | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersVpcFlowLogsLogGroupRetention(obj: CfnVpcqsModulePropsParametersVpcFlowLogsLogGroupRetention | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1861,26 +1861,26 @@ export function toJson_CfnModulePropsParametersVpcFlowLogsLogGroupRetention(obj:
 /**
  * The maximum interval of time during which a flow of packets is captured and aggregated into a flow log record. You can specify 60 seconds (1 minute) or 600 seconds (10 minutes).
  *
- * @schema CfnModulePropsParametersVpcFlowLogsMaxAggregationInterval
+ * @schema CfnVpcqsModulePropsParametersVpcFlowLogsMaxAggregationInterval
  */
-export interface CfnModulePropsParametersVpcFlowLogsMaxAggregationInterval {
+export interface CfnVpcqsModulePropsParametersVpcFlowLogsMaxAggregationInterval {
   /**
-   * @schema CfnModulePropsParametersVpcFlowLogsMaxAggregationInterval#Type
+   * @schema CfnVpcqsModulePropsParametersVpcFlowLogsMaxAggregationInterval#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersVpcFlowLogsMaxAggregationInterval#Description
+   * @schema CfnVpcqsModulePropsParametersVpcFlowLogsMaxAggregationInterval#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersVpcFlowLogsMaxAggregationInterval' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersVpcFlowLogsMaxAggregationInterval' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersVpcFlowLogsMaxAggregationInterval(obj: CfnModulePropsParametersVpcFlowLogsMaxAggregationInterval | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersVpcFlowLogsMaxAggregationInterval(obj: CfnVpcqsModulePropsParametersVpcFlowLogsMaxAggregationInterval | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1894,26 +1894,26 @@ export function toJson_CfnModulePropsParametersVpcFlowLogsMaxAggregationInterval
 /**
  * The type of traffic to log. You can log traffic that the resource accepts or rejects, or all traffic.
  *
- * @schema CfnModulePropsParametersVpcFlowLogsTrafficType
+ * @schema CfnVpcqsModulePropsParametersVpcFlowLogsTrafficType
  */
-export interface CfnModulePropsParametersVpcFlowLogsTrafficType {
+export interface CfnVpcqsModulePropsParametersVpcFlowLogsTrafficType {
   /**
-   * @schema CfnModulePropsParametersVpcFlowLogsTrafficType#Type
+   * @schema CfnVpcqsModulePropsParametersVpcFlowLogsTrafficType#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersVpcFlowLogsTrafficType#Description
+   * @schema CfnVpcqsModulePropsParametersVpcFlowLogsTrafficType#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersVpcFlowLogsTrafficType' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersVpcFlowLogsTrafficType' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersVpcFlowLogsTrafficType(obj: CfnModulePropsParametersVpcFlowLogsTrafficType | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersVpcFlowLogsTrafficType(obj: CfnVpcqsModulePropsParametersVpcFlowLogsTrafficType | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1927,26 +1927,26 @@ export function toJson_CfnModulePropsParametersVpcFlowLogsTrafficType(obj: CfnMo
 /**
  * The allowed tenancy of instances launched into the VPC
  *
- * @schema CfnModulePropsParametersVpcTenancy
+ * @schema CfnVpcqsModulePropsParametersVpcTenancy
  */
-export interface CfnModulePropsParametersVpcTenancy {
+export interface CfnVpcqsModulePropsParametersVpcTenancy {
   /**
-   * @schema CfnModulePropsParametersVpcTenancy#Type
+   * @schema CfnVpcqsModulePropsParametersVpcTenancy#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersVpcTenancy#Description
+   * @schema CfnVpcqsModulePropsParametersVpcTenancy#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersVpcTenancy' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsParametersVpcTenancy' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersVpcTenancy(obj: CfnModulePropsParametersVpcTenancy | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsParametersVpcTenancy(obj: CfnVpcqsModulePropsParametersVpcTenancy | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1958,26 +1958,26 @@ export function toJson_CfnModulePropsParametersVpcTenancy(obj: CfnModulePropsPar
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesDhcpOptions
+ * @schema CfnVpcqsModulePropsResourcesDhcpOptions
  */
-export interface CfnModulePropsResourcesDhcpOptions {
+export interface CfnVpcqsModulePropsResourcesDhcpOptions {
   /**
-   * @schema CfnModulePropsResourcesDhcpOptions#Type
+   * @schema CfnVpcqsModulePropsResourcesDhcpOptions#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesDhcpOptions#Properties
+   * @schema CfnVpcqsModulePropsResourcesDhcpOptions#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesDhcpOptions' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesDhcpOptions' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesDhcpOptions(obj: CfnModulePropsResourcesDhcpOptions | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesDhcpOptions(obj: CfnVpcqsModulePropsResourcesDhcpOptions | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1989,26 +1989,26 @@ export function toJson_CfnModulePropsResourcesDhcpOptions(obj: CfnModulePropsRes
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesVpc
+ * @schema CfnVpcqsModulePropsResourcesVpc
  */
-export interface CfnModulePropsResourcesVpc {
+export interface CfnVpcqsModulePropsResourcesVpc {
   /**
-   * @schema CfnModulePropsResourcesVpc#Type
+   * @schema CfnVpcqsModulePropsResourcesVpc#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesVpc#Properties
+   * @schema CfnVpcqsModulePropsResourcesVpc#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesVpc' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesVpc' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesVpc(obj: CfnModulePropsResourcesVpc | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesVpc(obj: CfnVpcqsModulePropsResourcesVpc | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2020,26 +2020,26 @@ export function toJson_CfnModulePropsResourcesVpc(obj: CfnModulePropsResourcesVp
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesVpcdhcpOptionsAssociation
+ * @schema CfnVpcqsModulePropsResourcesVpcdhcpOptionsAssociation
  */
-export interface CfnModulePropsResourcesVpcdhcpOptionsAssociation {
+export interface CfnVpcqsModulePropsResourcesVpcdhcpOptionsAssociation {
   /**
-   * @schema CfnModulePropsResourcesVpcdhcpOptionsAssociation#Type
+   * @schema CfnVpcqsModulePropsResourcesVpcdhcpOptionsAssociation#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesVpcdhcpOptionsAssociation#Properties
+   * @schema CfnVpcqsModulePropsResourcesVpcdhcpOptionsAssociation#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesVpcdhcpOptionsAssociation' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesVpcdhcpOptionsAssociation' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesVpcdhcpOptionsAssociation(obj: CfnModulePropsResourcesVpcdhcpOptionsAssociation | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesVpcdhcpOptionsAssociation(obj: CfnVpcqsModulePropsResourcesVpcdhcpOptionsAssociation | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2051,26 +2051,26 @@ export function toJson_CfnModulePropsResourcesVpcdhcpOptionsAssociation(obj: Cfn
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesInternetGateway
+ * @schema CfnVpcqsModulePropsResourcesInternetGateway
  */
-export interface CfnModulePropsResourcesInternetGateway {
+export interface CfnVpcqsModulePropsResourcesInternetGateway {
   /**
-   * @schema CfnModulePropsResourcesInternetGateway#Type
+   * @schema CfnVpcqsModulePropsResourcesInternetGateway#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesInternetGateway#Properties
+   * @schema CfnVpcqsModulePropsResourcesInternetGateway#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesInternetGateway' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesInternetGateway' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesInternetGateway(obj: CfnModulePropsResourcesInternetGateway | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesInternetGateway(obj: CfnVpcqsModulePropsResourcesInternetGateway | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2082,26 +2082,26 @@ export function toJson_CfnModulePropsResourcesInternetGateway(obj: CfnModuleProp
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesVpcGatewayAttachment
+ * @schema CfnVpcqsModulePropsResourcesVpcGatewayAttachment
  */
-export interface CfnModulePropsResourcesVpcGatewayAttachment {
+export interface CfnVpcqsModulePropsResourcesVpcGatewayAttachment {
   /**
-   * @schema CfnModulePropsResourcesVpcGatewayAttachment#Type
+   * @schema CfnVpcqsModulePropsResourcesVpcGatewayAttachment#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesVpcGatewayAttachment#Properties
+   * @schema CfnVpcqsModulePropsResourcesVpcGatewayAttachment#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesVpcGatewayAttachment' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesVpcGatewayAttachment' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesVpcGatewayAttachment(obj: CfnModulePropsResourcesVpcGatewayAttachment | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesVpcGatewayAttachment(obj: CfnVpcqsModulePropsResourcesVpcGatewayAttachment | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2113,26 +2113,26 @@ export function toJson_CfnModulePropsResourcesVpcGatewayAttachment(obj: CfnModul
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet1A
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1A
  */
-export interface CfnModulePropsResourcesPrivateSubnet1A {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet1A {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet1A#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1A#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet1A#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1A#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet1A' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet1A' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet1A(obj: CfnModulePropsResourcesPrivateSubnet1A | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet1A(obj: CfnVpcqsModulePropsResourcesPrivateSubnet1A | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2144,26 +2144,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet1A(obj: CfnModuleProp
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet1B
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1B
  */
-export interface CfnModulePropsResourcesPrivateSubnet1B {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet1B {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet1B#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1B#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet1B#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1B#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet1B' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet1B' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet1B(obj: CfnModulePropsResourcesPrivateSubnet1B | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet1B(obj: CfnVpcqsModulePropsResourcesPrivateSubnet1B | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2175,26 +2175,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet1B(obj: CfnModuleProp
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet2A
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2A
  */
-export interface CfnModulePropsResourcesPrivateSubnet2A {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet2A {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet2A#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2A#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet2A#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2A#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet2A' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet2A' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet2A(obj: CfnModulePropsResourcesPrivateSubnet2A | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet2A(obj: CfnVpcqsModulePropsResourcesPrivateSubnet2A | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2206,26 +2206,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet2A(obj: CfnModuleProp
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet2B
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2B
  */
-export interface CfnModulePropsResourcesPrivateSubnet2B {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet2B {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet2B#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2B#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet2B#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2B#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet2B' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet2B' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet2B(obj: CfnModulePropsResourcesPrivateSubnet2B | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet2B(obj: CfnVpcqsModulePropsResourcesPrivateSubnet2B | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2237,26 +2237,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet2B(obj: CfnModuleProp
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet3A
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3A
  */
-export interface CfnModulePropsResourcesPrivateSubnet3A {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet3A {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet3A#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3A#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet3A#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3A#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet3A' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet3A' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet3A(obj: CfnModulePropsResourcesPrivateSubnet3A | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet3A(obj: CfnVpcqsModulePropsResourcesPrivateSubnet3A | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2268,26 +2268,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet3A(obj: CfnModuleProp
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet3B
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3B
  */
-export interface CfnModulePropsResourcesPrivateSubnet3B {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet3B {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet3B#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3B#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet3B#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3B#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet3B' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet3B' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet3B(obj: CfnModulePropsResourcesPrivateSubnet3B | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet3B(obj: CfnVpcqsModulePropsResourcesPrivateSubnet3B | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2299,26 +2299,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet3B(obj: CfnModuleProp
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet4A
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4A
  */
-export interface CfnModulePropsResourcesPrivateSubnet4A {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet4A {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet4A#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4A#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet4A#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4A#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet4A' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet4A' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet4A(obj: CfnModulePropsResourcesPrivateSubnet4A | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet4A(obj: CfnVpcqsModulePropsResourcesPrivateSubnet4A | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2330,26 +2330,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet4A(obj: CfnModuleProp
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet4B
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4B
  */
-export interface CfnModulePropsResourcesPrivateSubnet4B {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet4B {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet4B#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4B#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet4B#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4B#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet4B' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet4B' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet4B(obj: CfnModulePropsResourcesPrivateSubnet4B | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet4B(obj: CfnVpcqsModulePropsResourcesPrivateSubnet4B | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2361,26 +2361,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet4B(obj: CfnModuleProp
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPublicSubnet1
+ * @schema CfnVpcqsModulePropsResourcesPublicSubnet1
  */
-export interface CfnModulePropsResourcesPublicSubnet1 {
+export interface CfnVpcqsModulePropsResourcesPublicSubnet1 {
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet1#Type
+   * @schema CfnVpcqsModulePropsResourcesPublicSubnet1#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet1#Properties
+   * @schema CfnVpcqsModulePropsResourcesPublicSubnet1#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPublicSubnet1' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPublicSubnet1' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPublicSubnet1(obj: CfnModulePropsResourcesPublicSubnet1 | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPublicSubnet1(obj: CfnVpcqsModulePropsResourcesPublicSubnet1 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2392,26 +2392,26 @@ export function toJson_CfnModulePropsResourcesPublicSubnet1(obj: CfnModulePropsR
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPublicSubnet2
+ * @schema CfnVpcqsModulePropsResourcesPublicSubnet2
  */
-export interface CfnModulePropsResourcesPublicSubnet2 {
+export interface CfnVpcqsModulePropsResourcesPublicSubnet2 {
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet2#Type
+   * @schema CfnVpcqsModulePropsResourcesPublicSubnet2#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet2#Properties
+   * @schema CfnVpcqsModulePropsResourcesPublicSubnet2#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPublicSubnet2' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPublicSubnet2' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPublicSubnet2(obj: CfnModulePropsResourcesPublicSubnet2 | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPublicSubnet2(obj: CfnVpcqsModulePropsResourcesPublicSubnet2 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2423,26 +2423,26 @@ export function toJson_CfnModulePropsResourcesPublicSubnet2(obj: CfnModulePropsR
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPublicSubnet3
+ * @schema CfnVpcqsModulePropsResourcesPublicSubnet3
  */
-export interface CfnModulePropsResourcesPublicSubnet3 {
+export interface CfnVpcqsModulePropsResourcesPublicSubnet3 {
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet3#Type
+   * @schema CfnVpcqsModulePropsResourcesPublicSubnet3#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet3#Properties
+   * @schema CfnVpcqsModulePropsResourcesPublicSubnet3#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPublicSubnet3' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPublicSubnet3' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPublicSubnet3(obj: CfnModulePropsResourcesPublicSubnet3 | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPublicSubnet3(obj: CfnVpcqsModulePropsResourcesPublicSubnet3 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2454,26 +2454,26 @@ export function toJson_CfnModulePropsResourcesPublicSubnet3(obj: CfnModulePropsR
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPublicSubnet4
+ * @schema CfnVpcqsModulePropsResourcesPublicSubnet4
  */
-export interface CfnModulePropsResourcesPublicSubnet4 {
+export interface CfnVpcqsModulePropsResourcesPublicSubnet4 {
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet4#Type
+   * @schema CfnVpcqsModulePropsResourcesPublicSubnet4#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet4#Properties
+   * @schema CfnVpcqsModulePropsResourcesPublicSubnet4#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPublicSubnet4' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPublicSubnet4' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPublicSubnet4(obj: CfnModulePropsResourcesPublicSubnet4 | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPublicSubnet4(obj: CfnVpcqsModulePropsResourcesPublicSubnet4 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2485,26 +2485,26 @@ export function toJson_CfnModulePropsResourcesPublicSubnet4(obj: CfnModulePropsR
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet1ARouteTable
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1ARouteTable
  */
-export interface CfnModulePropsResourcesPrivateSubnet1ARouteTable {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet1ARouteTable {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet1ARouteTable#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1ARouteTable#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet1ARouteTable#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1ARouteTable#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet1ARouteTable' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet1ARouteTable' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet1ARouteTable(obj: CfnModulePropsResourcesPrivateSubnet1ARouteTable | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet1ARouteTable(obj: CfnVpcqsModulePropsResourcesPrivateSubnet1ARouteTable | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2516,26 +2516,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet1ARouteTable(obj: Cfn
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet1ARoute
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1ARoute
  */
-export interface CfnModulePropsResourcesPrivateSubnet1ARoute {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet1ARoute {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet1ARoute#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1ARoute#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet1ARoute#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1ARoute#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet1ARoute' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet1ARoute' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet1ARoute(obj: CfnModulePropsResourcesPrivateSubnet1ARoute | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet1ARoute(obj: CfnVpcqsModulePropsResourcesPrivateSubnet1ARoute | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2547,26 +2547,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet1ARoute(obj: CfnModul
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet1ARouteTableAssociation
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1ARouteTableAssociation
  */
-export interface CfnModulePropsResourcesPrivateSubnet1ARouteTableAssociation {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet1ARouteTableAssociation {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet1ARouteTableAssociation#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1ARouteTableAssociation#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet1ARouteTableAssociation#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1ARouteTableAssociation#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet1ARouteTableAssociation' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet1ARouteTableAssociation' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet1ARouteTableAssociation(obj: CfnModulePropsResourcesPrivateSubnet1ARouteTableAssociation | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet1ARouteTableAssociation(obj: CfnVpcqsModulePropsResourcesPrivateSubnet1ARouteTableAssociation | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2578,26 +2578,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet1ARouteTableAssociati
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet2ARouteTable
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2ARouteTable
  */
-export interface CfnModulePropsResourcesPrivateSubnet2ARouteTable {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet2ARouteTable {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet2ARouteTable#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2ARouteTable#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet2ARouteTable#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2ARouteTable#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet2ARouteTable' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet2ARouteTable' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet2ARouteTable(obj: CfnModulePropsResourcesPrivateSubnet2ARouteTable | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet2ARouteTable(obj: CfnVpcqsModulePropsResourcesPrivateSubnet2ARouteTable | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2609,26 +2609,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet2ARouteTable(obj: Cfn
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet2ARoute
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2ARoute
  */
-export interface CfnModulePropsResourcesPrivateSubnet2ARoute {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet2ARoute {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet2ARoute#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2ARoute#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet2ARoute#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2ARoute#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet2ARoute' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet2ARoute' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet2ARoute(obj: CfnModulePropsResourcesPrivateSubnet2ARoute | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet2ARoute(obj: CfnVpcqsModulePropsResourcesPrivateSubnet2ARoute | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2640,26 +2640,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet2ARoute(obj: CfnModul
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet2ARouteTableAssociation
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2ARouteTableAssociation
  */
-export interface CfnModulePropsResourcesPrivateSubnet2ARouteTableAssociation {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet2ARouteTableAssociation {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet2ARouteTableAssociation#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2ARouteTableAssociation#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet2ARouteTableAssociation#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2ARouteTableAssociation#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet2ARouteTableAssociation' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet2ARouteTableAssociation' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet2ARouteTableAssociation(obj: CfnModulePropsResourcesPrivateSubnet2ARouteTableAssociation | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet2ARouteTableAssociation(obj: CfnVpcqsModulePropsResourcesPrivateSubnet2ARouteTableAssociation | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2671,26 +2671,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet2ARouteTableAssociati
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet3ARouteTable
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3ARouteTable
  */
-export interface CfnModulePropsResourcesPrivateSubnet3ARouteTable {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet3ARouteTable {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet3ARouteTable#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3ARouteTable#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet3ARouteTable#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3ARouteTable#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet3ARouteTable' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet3ARouteTable' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet3ARouteTable(obj: CfnModulePropsResourcesPrivateSubnet3ARouteTable | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet3ARouteTable(obj: CfnVpcqsModulePropsResourcesPrivateSubnet3ARouteTable | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2702,26 +2702,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet3ARouteTable(obj: Cfn
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet3ARoute
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3ARoute
  */
-export interface CfnModulePropsResourcesPrivateSubnet3ARoute {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet3ARoute {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet3ARoute#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3ARoute#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet3ARoute#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3ARoute#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet3ARoute' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet3ARoute' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet3ARoute(obj: CfnModulePropsResourcesPrivateSubnet3ARoute | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet3ARoute(obj: CfnVpcqsModulePropsResourcesPrivateSubnet3ARoute | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2733,26 +2733,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet3ARoute(obj: CfnModul
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet3ARouteTableAssociation
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3ARouteTableAssociation
  */
-export interface CfnModulePropsResourcesPrivateSubnet3ARouteTableAssociation {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet3ARouteTableAssociation {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet3ARouteTableAssociation#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3ARouteTableAssociation#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet3ARouteTableAssociation#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3ARouteTableAssociation#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet3ARouteTableAssociation' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet3ARouteTableAssociation' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet3ARouteTableAssociation(obj: CfnModulePropsResourcesPrivateSubnet3ARouteTableAssociation | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet3ARouteTableAssociation(obj: CfnVpcqsModulePropsResourcesPrivateSubnet3ARouteTableAssociation | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2764,26 +2764,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet3ARouteTableAssociati
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet4ARouteTable
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4ARouteTable
  */
-export interface CfnModulePropsResourcesPrivateSubnet4ARouteTable {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet4ARouteTable {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet4ARouteTable#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4ARouteTable#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet4ARouteTable#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4ARouteTable#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet4ARouteTable' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet4ARouteTable' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet4ARouteTable(obj: CfnModulePropsResourcesPrivateSubnet4ARouteTable | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet4ARouteTable(obj: CfnVpcqsModulePropsResourcesPrivateSubnet4ARouteTable | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2795,26 +2795,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet4ARouteTable(obj: Cfn
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet4ARoute
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4ARoute
  */
-export interface CfnModulePropsResourcesPrivateSubnet4ARoute {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet4ARoute {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet4ARoute#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4ARoute#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet4ARoute#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4ARoute#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet4ARoute' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet4ARoute' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet4ARoute(obj: CfnModulePropsResourcesPrivateSubnet4ARoute | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet4ARoute(obj: CfnVpcqsModulePropsResourcesPrivateSubnet4ARoute | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2826,26 +2826,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet4ARoute(obj: CfnModul
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet4ARouteTableAssociation
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4ARouteTableAssociation
  */
-export interface CfnModulePropsResourcesPrivateSubnet4ARouteTableAssociation {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet4ARouteTableAssociation {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet4ARouteTableAssociation#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4ARouteTableAssociation#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet4ARouteTableAssociation#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4ARouteTableAssociation#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet4ARouteTableAssociation' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet4ARouteTableAssociation' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet4ARouteTableAssociation(obj: CfnModulePropsResourcesPrivateSubnet4ARouteTableAssociation | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet4ARouteTableAssociation(obj: CfnVpcqsModulePropsResourcesPrivateSubnet4ARouteTableAssociation | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2857,26 +2857,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet4ARouteTableAssociati
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet1BRouteTable
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1BRouteTable
  */
-export interface CfnModulePropsResourcesPrivateSubnet1BRouteTable {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet1BRouteTable {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet1BRouteTable#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1BRouteTable#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet1BRouteTable#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1BRouteTable#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet1BRouteTable' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet1BRouteTable' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet1BRouteTable(obj: CfnModulePropsResourcesPrivateSubnet1BRouteTable | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet1BRouteTable(obj: CfnVpcqsModulePropsResourcesPrivateSubnet1BRouteTable | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2888,26 +2888,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet1BRouteTable(obj: Cfn
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet1BRoute
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1BRoute
  */
-export interface CfnModulePropsResourcesPrivateSubnet1BRoute {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet1BRoute {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet1BRoute#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1BRoute#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet1BRoute#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1BRoute#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet1BRoute' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet1BRoute' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet1BRoute(obj: CfnModulePropsResourcesPrivateSubnet1BRoute | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet1BRoute(obj: CfnVpcqsModulePropsResourcesPrivateSubnet1BRoute | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2919,26 +2919,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet1BRoute(obj: CfnModul
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet1BRouteTableAssociation
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1BRouteTableAssociation
  */
-export interface CfnModulePropsResourcesPrivateSubnet1BRouteTableAssociation {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet1BRouteTableAssociation {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet1BRouteTableAssociation#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1BRouteTableAssociation#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet1BRouteTableAssociation#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1BRouteTableAssociation#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet1BRouteTableAssociation' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet1BRouteTableAssociation' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet1BRouteTableAssociation(obj: CfnModulePropsResourcesPrivateSubnet1BRouteTableAssociation | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet1BRouteTableAssociation(obj: CfnVpcqsModulePropsResourcesPrivateSubnet1BRouteTableAssociation | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2950,26 +2950,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet1BRouteTableAssociati
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet1BNetworkAcl
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAcl
  */
-export interface CfnModulePropsResourcesPrivateSubnet1BNetworkAcl {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAcl {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet1BNetworkAcl#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAcl#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet1BNetworkAcl#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAcl#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet1BNetworkAcl' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAcl' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet1BNetworkAcl(obj: CfnModulePropsResourcesPrivateSubnet1BNetworkAcl | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAcl(obj: CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAcl | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2981,26 +2981,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet1BNetworkAcl(obj: Cfn
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet1BNetworkAclEntryInbound
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAclEntryInbound
  */
-export interface CfnModulePropsResourcesPrivateSubnet1BNetworkAclEntryInbound {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAclEntryInbound {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet1BNetworkAclEntryInbound#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAclEntryInbound#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet1BNetworkAclEntryInbound#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAclEntryInbound#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet1BNetworkAclEntryInbound' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAclEntryInbound' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet1BNetworkAclEntryInbound(obj: CfnModulePropsResourcesPrivateSubnet1BNetworkAclEntryInbound | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAclEntryInbound(obj: CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAclEntryInbound | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3012,26 +3012,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet1BNetworkAclEntryInbo
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet1BNetworkAclEntryOutbound
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAclEntryOutbound
  */
-export interface CfnModulePropsResourcesPrivateSubnet1BNetworkAclEntryOutbound {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAclEntryOutbound {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet1BNetworkAclEntryOutbound#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAclEntryOutbound#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet1BNetworkAclEntryOutbound#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAclEntryOutbound#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet1BNetworkAclEntryOutbound' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAclEntryOutbound' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet1BNetworkAclEntryOutbound(obj: CfnModulePropsResourcesPrivateSubnet1BNetworkAclEntryOutbound | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAclEntryOutbound(obj: CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAclEntryOutbound | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3043,26 +3043,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet1BNetworkAclEntryOutb
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet1BNetworkAclAssociation
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAclAssociation
  */
-export interface CfnModulePropsResourcesPrivateSubnet1BNetworkAclAssociation {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAclAssociation {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet1BNetworkAclAssociation#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAclAssociation#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet1BNetworkAclAssociation#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAclAssociation#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet1BNetworkAclAssociation' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAclAssociation' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet1BNetworkAclAssociation(obj: CfnModulePropsResourcesPrivateSubnet1BNetworkAclAssociation | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAclAssociation(obj: CfnVpcqsModulePropsResourcesPrivateSubnet1BNetworkAclAssociation | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3074,26 +3074,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet1BNetworkAclAssociati
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet2BRouteTable
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2BRouteTable
  */
-export interface CfnModulePropsResourcesPrivateSubnet2BRouteTable {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet2BRouteTable {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet2BRouteTable#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2BRouteTable#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet2BRouteTable#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2BRouteTable#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet2BRouteTable' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet2BRouteTable' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet2BRouteTable(obj: CfnModulePropsResourcesPrivateSubnet2BRouteTable | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet2BRouteTable(obj: CfnVpcqsModulePropsResourcesPrivateSubnet2BRouteTable | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3105,26 +3105,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet2BRouteTable(obj: Cfn
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet2BRoute
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2BRoute
  */
-export interface CfnModulePropsResourcesPrivateSubnet2BRoute {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet2BRoute {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet2BRoute#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2BRoute#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet2BRoute#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2BRoute#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet2BRoute' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet2BRoute' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet2BRoute(obj: CfnModulePropsResourcesPrivateSubnet2BRoute | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet2BRoute(obj: CfnVpcqsModulePropsResourcesPrivateSubnet2BRoute | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3136,26 +3136,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet2BRoute(obj: CfnModul
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet2BRouteTableAssociation
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2BRouteTableAssociation
  */
-export interface CfnModulePropsResourcesPrivateSubnet2BRouteTableAssociation {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet2BRouteTableAssociation {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet2BRouteTableAssociation#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2BRouteTableAssociation#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet2BRouteTableAssociation#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2BRouteTableAssociation#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet2BRouteTableAssociation' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet2BRouteTableAssociation' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet2BRouteTableAssociation(obj: CfnModulePropsResourcesPrivateSubnet2BRouteTableAssociation | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet2BRouteTableAssociation(obj: CfnVpcqsModulePropsResourcesPrivateSubnet2BRouteTableAssociation | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3167,26 +3167,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet2BRouteTableAssociati
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet2BNetworkAcl
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAcl
  */
-export interface CfnModulePropsResourcesPrivateSubnet2BNetworkAcl {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAcl {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet2BNetworkAcl#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAcl#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet2BNetworkAcl#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAcl#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet2BNetworkAcl' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAcl' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet2BNetworkAcl(obj: CfnModulePropsResourcesPrivateSubnet2BNetworkAcl | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAcl(obj: CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAcl | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3198,26 +3198,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet2BNetworkAcl(obj: Cfn
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet2BNetworkAclEntryInbound
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAclEntryInbound
  */
-export interface CfnModulePropsResourcesPrivateSubnet2BNetworkAclEntryInbound {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAclEntryInbound {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet2BNetworkAclEntryInbound#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAclEntryInbound#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet2BNetworkAclEntryInbound#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAclEntryInbound#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet2BNetworkAclEntryInbound' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAclEntryInbound' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet2BNetworkAclEntryInbound(obj: CfnModulePropsResourcesPrivateSubnet2BNetworkAclEntryInbound | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAclEntryInbound(obj: CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAclEntryInbound | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3229,26 +3229,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet2BNetworkAclEntryInbo
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet2BNetworkAclEntryOutbound
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAclEntryOutbound
  */
-export interface CfnModulePropsResourcesPrivateSubnet2BNetworkAclEntryOutbound {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAclEntryOutbound {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet2BNetworkAclEntryOutbound#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAclEntryOutbound#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet2BNetworkAclEntryOutbound#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAclEntryOutbound#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet2BNetworkAclEntryOutbound' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAclEntryOutbound' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet2BNetworkAclEntryOutbound(obj: CfnModulePropsResourcesPrivateSubnet2BNetworkAclEntryOutbound | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAclEntryOutbound(obj: CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAclEntryOutbound | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3260,26 +3260,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet2BNetworkAclEntryOutb
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet2BNetworkAclAssociation
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAclAssociation
  */
-export interface CfnModulePropsResourcesPrivateSubnet2BNetworkAclAssociation {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAclAssociation {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet2BNetworkAclAssociation#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAclAssociation#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet2BNetworkAclAssociation#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAclAssociation#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet2BNetworkAclAssociation' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAclAssociation' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet2BNetworkAclAssociation(obj: CfnModulePropsResourcesPrivateSubnet2BNetworkAclAssociation | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAclAssociation(obj: CfnVpcqsModulePropsResourcesPrivateSubnet2BNetworkAclAssociation | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3291,26 +3291,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet2BNetworkAclAssociati
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet3BRouteTable
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3BRouteTable
  */
-export interface CfnModulePropsResourcesPrivateSubnet3BRouteTable {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet3BRouteTable {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet3BRouteTable#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3BRouteTable#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet3BRouteTable#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3BRouteTable#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet3BRouteTable' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet3BRouteTable' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet3BRouteTable(obj: CfnModulePropsResourcesPrivateSubnet3BRouteTable | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet3BRouteTable(obj: CfnVpcqsModulePropsResourcesPrivateSubnet3BRouteTable | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3322,26 +3322,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet3BRouteTable(obj: Cfn
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet3BRoute
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3BRoute
  */
-export interface CfnModulePropsResourcesPrivateSubnet3BRoute {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet3BRoute {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet3BRoute#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3BRoute#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet3BRoute#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3BRoute#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet3BRoute' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet3BRoute' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet3BRoute(obj: CfnModulePropsResourcesPrivateSubnet3BRoute | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet3BRoute(obj: CfnVpcqsModulePropsResourcesPrivateSubnet3BRoute | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3353,26 +3353,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet3BRoute(obj: CfnModul
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet3BRouteTableAssociation
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3BRouteTableAssociation
  */
-export interface CfnModulePropsResourcesPrivateSubnet3BRouteTableAssociation {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet3BRouteTableAssociation {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet3BRouteTableAssociation#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3BRouteTableAssociation#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet3BRouteTableAssociation#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3BRouteTableAssociation#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet3BRouteTableAssociation' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet3BRouteTableAssociation' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet3BRouteTableAssociation(obj: CfnModulePropsResourcesPrivateSubnet3BRouteTableAssociation | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet3BRouteTableAssociation(obj: CfnVpcqsModulePropsResourcesPrivateSubnet3BRouteTableAssociation | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3384,26 +3384,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet3BRouteTableAssociati
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet3BNetworkAcl
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAcl
  */
-export interface CfnModulePropsResourcesPrivateSubnet3BNetworkAcl {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAcl {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet3BNetworkAcl#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAcl#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet3BNetworkAcl#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAcl#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet3BNetworkAcl' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAcl' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet3BNetworkAcl(obj: CfnModulePropsResourcesPrivateSubnet3BNetworkAcl | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAcl(obj: CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAcl | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3415,26 +3415,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet3BNetworkAcl(obj: Cfn
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet3BNetworkAclEntryInbound
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAclEntryInbound
  */
-export interface CfnModulePropsResourcesPrivateSubnet3BNetworkAclEntryInbound {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAclEntryInbound {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet3BNetworkAclEntryInbound#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAclEntryInbound#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet3BNetworkAclEntryInbound#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAclEntryInbound#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet3BNetworkAclEntryInbound' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAclEntryInbound' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet3BNetworkAclEntryInbound(obj: CfnModulePropsResourcesPrivateSubnet3BNetworkAclEntryInbound | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAclEntryInbound(obj: CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAclEntryInbound | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3446,26 +3446,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet3BNetworkAclEntryInbo
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet3BNetworkAclEntryOutbound
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAclEntryOutbound
  */
-export interface CfnModulePropsResourcesPrivateSubnet3BNetworkAclEntryOutbound {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAclEntryOutbound {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet3BNetworkAclEntryOutbound#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAclEntryOutbound#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet3BNetworkAclEntryOutbound#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAclEntryOutbound#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet3BNetworkAclEntryOutbound' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAclEntryOutbound' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet3BNetworkAclEntryOutbound(obj: CfnModulePropsResourcesPrivateSubnet3BNetworkAclEntryOutbound | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAclEntryOutbound(obj: CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAclEntryOutbound | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3477,26 +3477,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet3BNetworkAclEntryOutb
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet3BNetworkAclAssociation
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAclAssociation
  */
-export interface CfnModulePropsResourcesPrivateSubnet3BNetworkAclAssociation {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAclAssociation {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet3BNetworkAclAssociation#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAclAssociation#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet3BNetworkAclAssociation#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAclAssociation#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet3BNetworkAclAssociation' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAclAssociation' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet3BNetworkAclAssociation(obj: CfnModulePropsResourcesPrivateSubnet3BNetworkAclAssociation | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAclAssociation(obj: CfnVpcqsModulePropsResourcesPrivateSubnet3BNetworkAclAssociation | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3508,26 +3508,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet3BNetworkAclAssociati
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet4BRouteTable
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4BRouteTable
  */
-export interface CfnModulePropsResourcesPrivateSubnet4BRouteTable {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet4BRouteTable {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet4BRouteTable#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4BRouteTable#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet4BRouteTable#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4BRouteTable#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet4BRouteTable' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet4BRouteTable' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet4BRouteTable(obj: CfnModulePropsResourcesPrivateSubnet4BRouteTable | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet4BRouteTable(obj: CfnVpcqsModulePropsResourcesPrivateSubnet4BRouteTable | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3539,26 +3539,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet4BRouteTable(obj: Cfn
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet4BRoute
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4BRoute
  */
-export interface CfnModulePropsResourcesPrivateSubnet4BRoute {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet4BRoute {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet4BRoute#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4BRoute#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet4BRoute#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4BRoute#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet4BRoute' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet4BRoute' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet4BRoute(obj: CfnModulePropsResourcesPrivateSubnet4BRoute | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet4BRoute(obj: CfnVpcqsModulePropsResourcesPrivateSubnet4BRoute | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3570,26 +3570,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet4BRoute(obj: CfnModul
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet4BRouteTableAssociation
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4BRouteTableAssociation
  */
-export interface CfnModulePropsResourcesPrivateSubnet4BRouteTableAssociation {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet4BRouteTableAssociation {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet4BRouteTableAssociation#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4BRouteTableAssociation#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet4BRouteTableAssociation#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4BRouteTableAssociation#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet4BRouteTableAssociation' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet4BRouteTableAssociation' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet4BRouteTableAssociation(obj: CfnModulePropsResourcesPrivateSubnet4BRouteTableAssociation | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet4BRouteTableAssociation(obj: CfnVpcqsModulePropsResourcesPrivateSubnet4BRouteTableAssociation | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3601,26 +3601,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet4BRouteTableAssociati
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet4BNetworkAcl
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAcl
  */
-export interface CfnModulePropsResourcesPrivateSubnet4BNetworkAcl {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAcl {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet4BNetworkAcl#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAcl#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet4BNetworkAcl#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAcl#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet4BNetworkAcl' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAcl' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet4BNetworkAcl(obj: CfnModulePropsResourcesPrivateSubnet4BNetworkAcl | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAcl(obj: CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAcl | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3632,26 +3632,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet4BNetworkAcl(obj: Cfn
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet4BNetworkAclEntryInbound
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAclEntryInbound
  */
-export interface CfnModulePropsResourcesPrivateSubnet4BNetworkAclEntryInbound {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAclEntryInbound {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet4BNetworkAclEntryInbound#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAclEntryInbound#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet4BNetworkAclEntryInbound#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAclEntryInbound#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet4BNetworkAclEntryInbound' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAclEntryInbound' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet4BNetworkAclEntryInbound(obj: CfnModulePropsResourcesPrivateSubnet4BNetworkAclEntryInbound | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAclEntryInbound(obj: CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAclEntryInbound | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3663,26 +3663,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet4BNetworkAclEntryInbo
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet4BNetworkAclEntryOutbound
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAclEntryOutbound
  */
-export interface CfnModulePropsResourcesPrivateSubnet4BNetworkAclEntryOutbound {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAclEntryOutbound {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet4BNetworkAclEntryOutbound#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAclEntryOutbound#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet4BNetworkAclEntryOutbound#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAclEntryOutbound#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet4BNetworkAclEntryOutbound' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAclEntryOutbound' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet4BNetworkAclEntryOutbound(obj: CfnModulePropsResourcesPrivateSubnet4BNetworkAclEntryOutbound | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAclEntryOutbound(obj: CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAclEntryOutbound | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3694,26 +3694,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet4BNetworkAclEntryOutb
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPrivateSubnet4BNetworkAclAssociation
+ * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAclAssociation
  */
-export interface CfnModulePropsResourcesPrivateSubnet4BNetworkAclAssociation {
+export interface CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAclAssociation {
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet4BNetworkAclAssociation#Type
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAclAssociation#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPrivateSubnet4BNetworkAclAssociation#Properties
+   * @schema CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAclAssociation#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPrivateSubnet4BNetworkAclAssociation' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAclAssociation' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPrivateSubnet4BNetworkAclAssociation(obj: CfnModulePropsResourcesPrivateSubnet4BNetworkAclAssociation | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAclAssociation(obj: CfnVpcqsModulePropsResourcesPrivateSubnet4BNetworkAclAssociation | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3725,26 +3725,26 @@ export function toJson_CfnModulePropsResourcesPrivateSubnet4BNetworkAclAssociati
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPublicSubnetRouteTable
+ * @schema CfnVpcqsModulePropsResourcesPublicSubnetRouteTable
  */
-export interface CfnModulePropsResourcesPublicSubnetRouteTable {
+export interface CfnVpcqsModulePropsResourcesPublicSubnetRouteTable {
   /**
-   * @schema CfnModulePropsResourcesPublicSubnetRouteTable#Type
+   * @schema CfnVpcqsModulePropsResourcesPublicSubnetRouteTable#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPublicSubnetRouteTable#Properties
+   * @schema CfnVpcqsModulePropsResourcesPublicSubnetRouteTable#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPublicSubnetRouteTable' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPublicSubnetRouteTable' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPublicSubnetRouteTable(obj: CfnModulePropsResourcesPublicSubnetRouteTable | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPublicSubnetRouteTable(obj: CfnVpcqsModulePropsResourcesPublicSubnetRouteTable | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3756,26 +3756,26 @@ export function toJson_CfnModulePropsResourcesPublicSubnetRouteTable(obj: CfnMod
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPublicSubnetRoute
+ * @schema CfnVpcqsModulePropsResourcesPublicSubnetRoute
  */
-export interface CfnModulePropsResourcesPublicSubnetRoute {
+export interface CfnVpcqsModulePropsResourcesPublicSubnetRoute {
   /**
-   * @schema CfnModulePropsResourcesPublicSubnetRoute#Type
+   * @schema CfnVpcqsModulePropsResourcesPublicSubnetRoute#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPublicSubnetRoute#Properties
+   * @schema CfnVpcqsModulePropsResourcesPublicSubnetRoute#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPublicSubnetRoute' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPublicSubnetRoute' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPublicSubnetRoute(obj: CfnModulePropsResourcesPublicSubnetRoute | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPublicSubnetRoute(obj: CfnVpcqsModulePropsResourcesPublicSubnetRoute | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3787,26 +3787,26 @@ export function toJson_CfnModulePropsResourcesPublicSubnetRoute(obj: CfnModulePr
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPublicSubnet1RouteTableAssociation
+ * @schema CfnVpcqsModulePropsResourcesPublicSubnet1RouteTableAssociation
  */
-export interface CfnModulePropsResourcesPublicSubnet1RouteTableAssociation {
+export interface CfnVpcqsModulePropsResourcesPublicSubnet1RouteTableAssociation {
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet1RouteTableAssociation#Type
+   * @schema CfnVpcqsModulePropsResourcesPublicSubnet1RouteTableAssociation#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet1RouteTableAssociation#Properties
+   * @schema CfnVpcqsModulePropsResourcesPublicSubnet1RouteTableAssociation#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPublicSubnet1RouteTableAssociation' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPublicSubnet1RouteTableAssociation' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPublicSubnet1RouteTableAssociation(obj: CfnModulePropsResourcesPublicSubnet1RouteTableAssociation | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPublicSubnet1RouteTableAssociation(obj: CfnVpcqsModulePropsResourcesPublicSubnet1RouteTableAssociation | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3818,26 +3818,26 @@ export function toJson_CfnModulePropsResourcesPublicSubnet1RouteTableAssociation
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPublicSubnet2RouteTableAssociation
+ * @schema CfnVpcqsModulePropsResourcesPublicSubnet2RouteTableAssociation
  */
-export interface CfnModulePropsResourcesPublicSubnet2RouteTableAssociation {
+export interface CfnVpcqsModulePropsResourcesPublicSubnet2RouteTableAssociation {
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet2RouteTableAssociation#Type
+   * @schema CfnVpcqsModulePropsResourcesPublicSubnet2RouteTableAssociation#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet2RouteTableAssociation#Properties
+   * @schema CfnVpcqsModulePropsResourcesPublicSubnet2RouteTableAssociation#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPublicSubnet2RouteTableAssociation' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPublicSubnet2RouteTableAssociation' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPublicSubnet2RouteTableAssociation(obj: CfnModulePropsResourcesPublicSubnet2RouteTableAssociation | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPublicSubnet2RouteTableAssociation(obj: CfnVpcqsModulePropsResourcesPublicSubnet2RouteTableAssociation | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3849,26 +3849,26 @@ export function toJson_CfnModulePropsResourcesPublicSubnet2RouteTableAssociation
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPublicSubnet3RouteTableAssociation
+ * @schema CfnVpcqsModulePropsResourcesPublicSubnet3RouteTableAssociation
  */
-export interface CfnModulePropsResourcesPublicSubnet3RouteTableAssociation {
+export interface CfnVpcqsModulePropsResourcesPublicSubnet3RouteTableAssociation {
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet3RouteTableAssociation#Type
+   * @schema CfnVpcqsModulePropsResourcesPublicSubnet3RouteTableAssociation#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet3RouteTableAssociation#Properties
+   * @schema CfnVpcqsModulePropsResourcesPublicSubnet3RouteTableAssociation#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPublicSubnet3RouteTableAssociation' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPublicSubnet3RouteTableAssociation' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPublicSubnet3RouteTableAssociation(obj: CfnModulePropsResourcesPublicSubnet3RouteTableAssociation | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPublicSubnet3RouteTableAssociation(obj: CfnVpcqsModulePropsResourcesPublicSubnet3RouteTableAssociation | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3880,26 +3880,26 @@ export function toJson_CfnModulePropsResourcesPublicSubnet3RouteTableAssociation
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesPublicSubnet4RouteTableAssociation
+ * @schema CfnVpcqsModulePropsResourcesPublicSubnet4RouteTableAssociation
  */
-export interface CfnModulePropsResourcesPublicSubnet4RouteTableAssociation {
+export interface CfnVpcqsModulePropsResourcesPublicSubnet4RouteTableAssociation {
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet4RouteTableAssociation#Type
+   * @schema CfnVpcqsModulePropsResourcesPublicSubnet4RouteTableAssociation#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesPublicSubnet4RouteTableAssociation#Properties
+   * @schema CfnVpcqsModulePropsResourcesPublicSubnet4RouteTableAssociation#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesPublicSubnet4RouteTableAssociation' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesPublicSubnet4RouteTableAssociation' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesPublicSubnet4RouteTableAssociation(obj: CfnModulePropsResourcesPublicSubnet4RouteTableAssociation | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesPublicSubnet4RouteTableAssociation(obj: CfnVpcqsModulePropsResourcesPublicSubnet4RouteTableAssociation | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3911,26 +3911,26 @@ export function toJson_CfnModulePropsResourcesPublicSubnet4RouteTableAssociation
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesNat1Eip
+ * @schema CfnVpcqsModulePropsResourcesNat1Eip
  */
-export interface CfnModulePropsResourcesNat1Eip {
+export interface CfnVpcqsModulePropsResourcesNat1Eip {
   /**
-   * @schema CfnModulePropsResourcesNat1Eip#Type
+   * @schema CfnVpcqsModulePropsResourcesNat1Eip#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesNat1Eip#Properties
+   * @schema CfnVpcqsModulePropsResourcesNat1Eip#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesNat1Eip' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesNat1Eip' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesNat1Eip(obj: CfnModulePropsResourcesNat1Eip | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesNat1Eip(obj: CfnVpcqsModulePropsResourcesNat1Eip | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3942,26 +3942,26 @@ export function toJson_CfnModulePropsResourcesNat1Eip(obj: CfnModulePropsResourc
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesNat2Eip
+ * @schema CfnVpcqsModulePropsResourcesNat2Eip
  */
-export interface CfnModulePropsResourcesNat2Eip {
+export interface CfnVpcqsModulePropsResourcesNat2Eip {
   /**
-   * @schema CfnModulePropsResourcesNat2Eip#Type
+   * @schema CfnVpcqsModulePropsResourcesNat2Eip#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesNat2Eip#Properties
+   * @schema CfnVpcqsModulePropsResourcesNat2Eip#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesNat2Eip' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesNat2Eip' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesNat2Eip(obj: CfnModulePropsResourcesNat2Eip | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesNat2Eip(obj: CfnVpcqsModulePropsResourcesNat2Eip | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -3973,26 +3973,26 @@ export function toJson_CfnModulePropsResourcesNat2Eip(obj: CfnModulePropsResourc
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesNat3Eip
+ * @schema CfnVpcqsModulePropsResourcesNat3Eip
  */
-export interface CfnModulePropsResourcesNat3Eip {
+export interface CfnVpcqsModulePropsResourcesNat3Eip {
   /**
-   * @schema CfnModulePropsResourcesNat3Eip#Type
+   * @schema CfnVpcqsModulePropsResourcesNat3Eip#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesNat3Eip#Properties
+   * @schema CfnVpcqsModulePropsResourcesNat3Eip#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesNat3Eip' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesNat3Eip' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesNat3Eip(obj: CfnModulePropsResourcesNat3Eip | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesNat3Eip(obj: CfnVpcqsModulePropsResourcesNat3Eip | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4004,26 +4004,26 @@ export function toJson_CfnModulePropsResourcesNat3Eip(obj: CfnModulePropsResourc
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesNat4Eip
+ * @schema CfnVpcqsModulePropsResourcesNat4Eip
  */
-export interface CfnModulePropsResourcesNat4Eip {
+export interface CfnVpcqsModulePropsResourcesNat4Eip {
   /**
-   * @schema CfnModulePropsResourcesNat4Eip#Type
+   * @schema CfnVpcqsModulePropsResourcesNat4Eip#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesNat4Eip#Properties
+   * @schema CfnVpcqsModulePropsResourcesNat4Eip#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesNat4Eip' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesNat4Eip' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesNat4Eip(obj: CfnModulePropsResourcesNat4Eip | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesNat4Eip(obj: CfnVpcqsModulePropsResourcesNat4Eip | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4035,26 +4035,26 @@ export function toJson_CfnModulePropsResourcesNat4Eip(obj: CfnModulePropsResourc
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesNatGateway1
+ * @schema CfnVpcqsModulePropsResourcesNatGateway1
  */
-export interface CfnModulePropsResourcesNatGateway1 {
+export interface CfnVpcqsModulePropsResourcesNatGateway1 {
   /**
-   * @schema CfnModulePropsResourcesNatGateway1#Type
+   * @schema CfnVpcqsModulePropsResourcesNatGateway1#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesNatGateway1#Properties
+   * @schema CfnVpcqsModulePropsResourcesNatGateway1#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesNatGateway1' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesNatGateway1' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesNatGateway1(obj: CfnModulePropsResourcesNatGateway1 | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesNatGateway1(obj: CfnVpcqsModulePropsResourcesNatGateway1 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4066,26 +4066,26 @@ export function toJson_CfnModulePropsResourcesNatGateway1(obj: CfnModulePropsRes
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesNatGateway2
+ * @schema CfnVpcqsModulePropsResourcesNatGateway2
  */
-export interface CfnModulePropsResourcesNatGateway2 {
+export interface CfnVpcqsModulePropsResourcesNatGateway2 {
   /**
-   * @schema CfnModulePropsResourcesNatGateway2#Type
+   * @schema CfnVpcqsModulePropsResourcesNatGateway2#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesNatGateway2#Properties
+   * @schema CfnVpcqsModulePropsResourcesNatGateway2#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesNatGateway2' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesNatGateway2' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesNatGateway2(obj: CfnModulePropsResourcesNatGateway2 | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesNatGateway2(obj: CfnVpcqsModulePropsResourcesNatGateway2 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4097,26 +4097,26 @@ export function toJson_CfnModulePropsResourcesNatGateway2(obj: CfnModulePropsRes
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesNatGateway3
+ * @schema CfnVpcqsModulePropsResourcesNatGateway3
  */
-export interface CfnModulePropsResourcesNatGateway3 {
+export interface CfnVpcqsModulePropsResourcesNatGateway3 {
   /**
-   * @schema CfnModulePropsResourcesNatGateway3#Type
+   * @schema CfnVpcqsModulePropsResourcesNatGateway3#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesNatGateway3#Properties
+   * @schema CfnVpcqsModulePropsResourcesNatGateway3#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesNatGateway3' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesNatGateway3' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesNatGateway3(obj: CfnModulePropsResourcesNatGateway3 | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesNatGateway3(obj: CfnVpcqsModulePropsResourcesNatGateway3 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4128,26 +4128,26 @@ export function toJson_CfnModulePropsResourcesNatGateway3(obj: CfnModulePropsRes
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesNatGateway4
+ * @schema CfnVpcqsModulePropsResourcesNatGateway4
  */
-export interface CfnModulePropsResourcesNatGateway4 {
+export interface CfnVpcqsModulePropsResourcesNatGateway4 {
   /**
-   * @schema CfnModulePropsResourcesNatGateway4#Type
+   * @schema CfnVpcqsModulePropsResourcesNatGateway4#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesNatGateway4#Properties
+   * @schema CfnVpcqsModulePropsResourcesNatGateway4#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesNatGateway4' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesNatGateway4' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesNatGateway4(obj: CfnModulePropsResourcesNatGateway4 | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesNatGateway4(obj: CfnVpcqsModulePropsResourcesNatGateway4 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4159,26 +4159,26 @@ export function toJson_CfnModulePropsResourcesNatGateway4(obj: CfnModulePropsRes
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesS3VpcEndpoint
+ * @schema CfnVpcqsModulePropsResourcesS3VpcEndpoint
  */
-export interface CfnModulePropsResourcesS3VpcEndpoint {
+export interface CfnVpcqsModulePropsResourcesS3VpcEndpoint {
   /**
-   * @schema CfnModulePropsResourcesS3VpcEndpoint#Type
+   * @schema CfnVpcqsModulePropsResourcesS3VpcEndpoint#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesS3VpcEndpoint#Properties
+   * @schema CfnVpcqsModulePropsResourcesS3VpcEndpoint#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesS3VpcEndpoint' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesS3VpcEndpoint' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesS3VpcEndpoint(obj: CfnModulePropsResourcesS3VpcEndpoint | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesS3VpcEndpoint(obj: CfnVpcqsModulePropsResourcesS3VpcEndpoint | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4190,26 +4190,26 @@ export function toJson_CfnModulePropsResourcesS3VpcEndpoint(obj: CfnModulePropsR
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesVpcFlowLogsRole
+ * @schema CfnVpcqsModulePropsResourcesVpcFlowLogsRole
  */
-export interface CfnModulePropsResourcesVpcFlowLogsRole {
+export interface CfnVpcqsModulePropsResourcesVpcFlowLogsRole {
   /**
-   * @schema CfnModulePropsResourcesVpcFlowLogsRole#Type
+   * @schema CfnVpcqsModulePropsResourcesVpcFlowLogsRole#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesVpcFlowLogsRole#Properties
+   * @schema CfnVpcqsModulePropsResourcesVpcFlowLogsRole#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesVpcFlowLogsRole' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesVpcFlowLogsRole' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesVpcFlowLogsRole(obj: CfnModulePropsResourcesVpcFlowLogsRole | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesVpcFlowLogsRole(obj: CfnVpcqsModulePropsResourcesVpcFlowLogsRole | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4221,26 +4221,26 @@ export function toJson_CfnModulePropsResourcesVpcFlowLogsRole(obj: CfnModuleProp
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesVpcFlowLogsLogGroup
+ * @schema CfnVpcqsModulePropsResourcesVpcFlowLogsLogGroup
  */
-export interface CfnModulePropsResourcesVpcFlowLogsLogGroup {
+export interface CfnVpcqsModulePropsResourcesVpcFlowLogsLogGroup {
   /**
-   * @schema CfnModulePropsResourcesVpcFlowLogsLogGroup#Type
+   * @schema CfnVpcqsModulePropsResourcesVpcFlowLogsLogGroup#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesVpcFlowLogsLogGroup#Properties
+   * @schema CfnVpcqsModulePropsResourcesVpcFlowLogsLogGroup#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesVpcFlowLogsLogGroup' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesVpcFlowLogsLogGroup' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesVpcFlowLogsLogGroup(obj: CfnModulePropsResourcesVpcFlowLogsLogGroup | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesVpcFlowLogsLogGroup(obj: CfnVpcqsModulePropsResourcesVpcFlowLogsLogGroup | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4252,26 +4252,26 @@ export function toJson_CfnModulePropsResourcesVpcFlowLogsLogGroup(obj: CfnModule
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesVpcFlowLogsToCloudWatch
+ * @schema CfnVpcqsModulePropsResourcesVpcFlowLogsToCloudWatch
  */
-export interface CfnModulePropsResourcesVpcFlowLogsToCloudWatch {
+export interface CfnVpcqsModulePropsResourcesVpcFlowLogsToCloudWatch {
   /**
-   * @schema CfnModulePropsResourcesVpcFlowLogsToCloudWatch#Type
+   * @schema CfnVpcqsModulePropsResourcesVpcFlowLogsToCloudWatch#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesVpcFlowLogsToCloudWatch#Properties
+   * @schema CfnVpcqsModulePropsResourcesVpcFlowLogsToCloudWatch#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesVpcFlowLogsToCloudWatch' to JSON representation.
+ * Converts an object of type 'CfnVpcqsModulePropsResourcesVpcFlowLogsToCloudWatch' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesVpcFlowLogsToCloudWatch(obj: CfnModulePropsResourcesVpcFlowLogsToCloudWatch | undefined): Record<string, any> | undefined {
+export function toJson_CfnVpcqsModulePropsResourcesVpcFlowLogsToCloudWatch(obj: CfnVpcqsModulePropsResourcesVpcFlowLogsToCloudWatch | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -4290,7 +4290,7 @@ export function toJson_CfnModulePropsResourcesVpcFlowLogsToCloudWatch(obj: CfnMo
  * @stability external
  * @link http://unknown-url
  */
-export class CfnModule extends cdk.CfnResource {
+export class CfnVpcqsModule extends cdk.CfnResource {
   /**
   * The CloudFormation resource type name for this resource class.
   */
@@ -4299,7 +4299,7 @@ export class CfnModule extends cdk.CfnResource {
   /**
    * Resource props.
    */
-  public readonly props: CfnModuleProps;
+  public readonly props: CfnVpcqsModuleProps;
 
 
   /**
@@ -4309,8 +4309,8 @@ export class CfnModule extends cdk.CfnResource {
    * @param id    - scoped id of the resource
    * @param props - resource properties
    */
-  constructor(scope: cdk.Construct, id: string, props: CfnModuleProps) {
-    super(scope, id, { type: CfnModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnModuleProps(props)! });
+  constructor(scope: cdk.Construct, id: string, props: CfnVpcqsModuleProps) {
+    super(scope, id, { type: CfnVpcqsModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnVpcqsModuleProps(props)! });
 
     this.props = props;
 

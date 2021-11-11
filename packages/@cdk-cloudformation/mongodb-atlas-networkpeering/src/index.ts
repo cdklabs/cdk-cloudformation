@@ -4,77 +4,77 @@ import * as cdk from '@aws-cdk/core';
 /**
  * This resource allows to create, read, update and delete a network peering
  *
- * @schema CfnNetworkpeeringProps
+ * @schema CfnNetworkPeeringProps
  */
-export interface CfnNetworkpeeringProps {
+export interface CfnNetworkPeeringProps {
   /**
    * The unique identifier of the project.
    *
-   * @schema CfnNetworkpeeringProps#ProjectId
+   * @schema CfnNetworkPeeringProps#ProjectId
    */
   readonly projectId: string;
 
   /**
    * Unique identifier of the Atlas VPC container for the AWS region.
    *
-   * @schema CfnNetworkpeeringProps#ContainerId
+   * @schema CfnNetworkPeeringProps#ContainerId
    */
   readonly containerId?: string;
 
   /**
    * AWS region where the peer VPC resides. Returns null if the region is the same region in which the Atlas VPC resides.
    *
-   * @schema CfnNetworkpeeringProps#AccepterRegionName
+   * @schema CfnNetworkPeeringProps#AccepterRegionName
    */
   readonly accepterRegionName?: string;
 
   /**
    * AWS account ID of the owner of the peer VPC.
    *
-   * @schema CfnNetworkpeeringProps#AwsAccountId
+   * @schema CfnNetworkPeeringProps#AwsAccountId
    */
   readonly awsAccountId?: string;
 
   /**
    * The name of the provider
    *
-   * @schema CfnNetworkpeeringProps#ProviderName
+   * @schema CfnNetworkPeeringProps#ProviderName
    */
   readonly providerName?: string;
 
   /**
    * Peer VPC CIDR block or subnet.
    *
-   * @schema CfnNetworkpeeringProps#RouteTableCIDRBlock
+   * @schema CfnNetworkPeeringProps#RouteTableCIDRBlock
    */
   readonly routeTableCidrBlock?: string;
 
   /**
    * Unique identifier of the peer VPC.
    *
-   * @schema CfnNetworkpeeringProps#VpcId
+   * @schema CfnNetworkPeeringProps#VpcId
    */
   readonly vpcId: string;
 
   /**
    * Unique identifier for the peering connection.
    *
-   * @schema CfnNetworkpeeringProps#ConnectionId
+   * @schema CfnNetworkPeeringProps#ConnectionId
    */
   readonly connectionId?: string;
 
   /**
-   * @schema CfnNetworkpeeringProps#ApiKeys
+   * @schema CfnNetworkPeeringProps#ApiKeys
    */
   readonly apiKeys: ApiKeyDefinition;
 
 }
 
 /**
- * Converts an object of type 'CfnNetworkpeeringProps' to JSON representation.
+ * Converts an object of type 'CfnNetworkPeeringProps' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnNetworkpeeringProps(obj: CfnNetworkpeeringProps | undefined): Record<string, any> | undefined {
+export function toJson_CfnNetworkPeeringProps(obj: CfnNetworkPeeringProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'ProjectId': obj.projectId,
@@ -131,7 +131,7 @@ export function toJson_ApiKeyDefinition(obj: ApiKeyDefinition | undefined): Reco
  * @stability external
  * @link http://unknown-url
  */
-export class CfnNetworkpeering extends cdk.CfnResource {
+export class CfnNetworkPeering extends cdk.CfnResource {
   /**
   * The CloudFormation resource type name for this resource class.
   */
@@ -140,7 +140,7 @@ export class CfnNetworkpeering extends cdk.CfnResource {
   /**
    * Resource props.
    */
-  public readonly props: CfnNetworkpeeringProps;
+  public readonly props: CfnNetworkPeeringProps;
 
   /**
    * Attribute `MongoDB::Atlas::NetworkPeering.Id`
@@ -165,8 +165,8 @@ export class CfnNetworkpeering extends cdk.CfnResource {
    * @param id    - scoped id of the resource
    * @param props - resource properties
    */
-  constructor(scope: cdk.Construct, id: string, props: CfnNetworkpeeringProps) {
-    super(scope, id, { type: CfnNetworkpeering.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnNetworkpeeringProps(props)! });
+  constructor(scope: cdk.Construct, id: string, props: CfnNetworkPeeringProps) {
+    super(scope, id, { type: CfnNetworkPeering.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnNetworkPeeringProps(props)! });
 
     this.props = props;
 

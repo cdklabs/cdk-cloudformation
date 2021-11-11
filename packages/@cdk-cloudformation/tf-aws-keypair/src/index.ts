@@ -12,49 +12,49 @@ import * as cdk from '@aws-cdk/core';
  * * Base64 encoded DER format
  * * SSH public key file format as specified in RFC4716
  *
- * @schema CfnKeypairProps
+ * @schema CfnKeyPairProps
  */
-export interface CfnKeypairProps {
+export interface CfnKeyPairProps {
   /**
    * The name for the key pair.
    *
-   * @schema CfnKeypairProps#KeyName
+   * @schema CfnKeyPairProps#KeyName
    */
   readonly keyName?: string;
 
   /**
    * Creates a unique name beginning with the specified prefix. Conflicts with `key_name`.
    *
-   * @schema CfnKeypairProps#KeyNamePrefix
+   * @schema CfnKeyPairProps#KeyNamePrefix
    */
   readonly keyNamePrefix?: string;
 
   /**
    * The public key material.
    *
-   * @schema CfnKeypairProps#PublicKey
+   * @schema CfnKeyPairProps#PublicKey
    */
   readonly publicKey: string;
 
   /**
    * Key-value map of resource tags. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
    *
-   * @schema CfnKeypairProps#Tags
+   * @schema CfnKeyPairProps#Tags
    */
   readonly tags?: TagsDefinition[];
 
   /**
-   * @schema CfnKeypairProps#TagsAll
+   * @schema CfnKeyPairProps#TagsAll
    */
   readonly tagsAll?: TagsAllDefinition[];
 
 }
 
 /**
- * Converts an object of type 'CfnKeypairProps' to JSON representation.
+ * Converts an object of type 'CfnKeyPairProps' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnKeypairProps(obj: CfnKeypairProps | undefined): Record<string, any> | undefined {
+export function toJson_CfnKeyPairProps(obj: CfnKeyPairProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'KeyName': obj.keyName,
@@ -138,7 +138,7 @@ export function toJson_TagsAllDefinition(obj: TagsAllDefinition | undefined): Re
  * @stability external
  * @link https://github.com/iann0036/cfn-tf-custom-types.git
  */
-export class CfnKeypair extends cdk.CfnResource {
+export class CfnKeyPair extends cdk.CfnResource {
   /**
   * The CloudFormation resource type name for this resource class.
   */
@@ -147,7 +147,7 @@ export class CfnKeypair extends cdk.CfnResource {
   /**
    * Resource props.
    */
-  public readonly props: CfnKeypairProps;
+  public readonly props: CfnKeyPairProps;
 
   /**
    * Attribute `TF::AWS::KeyPair.tfcfnid`
@@ -182,8 +182,8 @@ export class CfnKeypair extends cdk.CfnResource {
    * @param id    - scoped id of the resource
    * @param props - resource properties
    */
-  constructor(scope: cdk.Construct, id: string, props: CfnKeypairProps) {
-    super(scope, id, { type: CfnKeypair.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnKeypairProps(props)! });
+  constructor(scope: cdk.Construct, id: string, props: CfnKeyPairProps) {
+    super(scope, id, { type: CfnKeyPair.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnKeyPairProps(props)! });
 
     this.props = props;
 

@@ -4,30 +4,30 @@ import * as cdk from '@aws-cdk/core';
 /**
  * Schema for Module Fragment of type JFrog::Artifactory::NewVpc::MODULE
  *
- * @schema CfnModuleProps
+ * @schema CfnNewVpcModuleProps
  */
-export interface CfnModuleProps {
+export interface CfnNewVpcModuleProps {
   /**
-   * @schema CfnModuleProps#Parameters
+   * @schema CfnNewVpcModuleProps#Parameters
    */
-  readonly parameters?: CfnModulePropsParameters;
+  readonly parameters?: CfnNewVpcModulePropsParameters;
 
   /**
-   * @schema CfnModuleProps#Resources
+   * @schema CfnNewVpcModuleProps#Resources
    */
-  readonly resources?: CfnModulePropsResources;
+  readonly resources?: CfnNewVpcModulePropsResources;
 
 }
 
 /**
- * Converts an object of type 'CfnModuleProps' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModuleProps' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModuleProps(obj: CfnModuleProps | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModuleProps(obj: CfnNewVpcModuleProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'Parameters': toJson_CfnModulePropsParameters(obj.parameters),
-    'Resources': toJson_CfnModulePropsResources(obj.resources),
+    'Parameters': toJson_CfnNewVpcModulePropsParameters(obj.parameters),
+    'Resources': toJson_CfnNewVpcModulePropsResources(obj.resources),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -35,386 +35,386 @@ export function toJson_CfnModuleProps(obj: CfnModuleProps | undefined): Record<s
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParameters
+ * @schema CfnNewVpcModulePropsParameters
  */
-export interface CfnModulePropsParameters {
+export interface CfnNewVpcModulePropsParameters {
   /**
    * Logical Id of the MODULE
    *
-   * @schema CfnModulePropsParameters#LogicalId
+   * @schema CfnNewVpcModulePropsParameters#LogicalId
    */
-  readonly logicalId?: CfnModulePropsParametersLogicalId;
+  readonly logicalId?: CfnNewVpcModulePropsParametersLogicalId;
 
   /**
    * If set to true, a bastion host will be created.
    *
-   * @schema CfnModulePropsParameters#EnableBastion
+   * @schema CfnNewVpcModulePropsParameters#EnableBastion
    */
-  readonly enableBastion?: CfnModulePropsParametersEnableBastion;
+  readonly enableBastion?: CfnNewVpcModulePropsParametersEnableBastion;
 
   /**
    * CIDR block for the VPC.
    *
-   * @schema CfnModulePropsParameters#VpcCidr
+   * @schema CfnNewVpcModulePropsParameters#VpcCidr
    */
-  readonly vpcCidr?: CfnModulePropsParametersVpcCidr;
+  readonly vpcCidr?: CfnNewVpcModulePropsParametersVpcCidr;
 
   /**
    * Availability Zone 1 to use for the subnets in the VPC. Two Availability Zones are used for this deployment.
    *
-   * @schema CfnModulePropsParameters#AvailabilityZone1
+   * @schema CfnNewVpcModulePropsParameters#AvailabilityZone1
    */
-  readonly availabilityZone1?: CfnModulePropsParametersAvailabilityZone1;
+  readonly availabilityZone1?: CfnNewVpcModulePropsParametersAvailabilityZone1;
 
   /**
    * Availability Zone 2 to use for the subnets in the VPC. Two Availability Zones are used for this deployment.
    *
-   * @schema CfnModulePropsParameters#AvailabilityZone2
+   * @schema CfnNewVpcModulePropsParameters#AvailabilityZone2
    */
-  readonly availabilityZone2?: CfnModulePropsParametersAvailabilityZone2;
+  readonly availabilityZone2?: CfnNewVpcModulePropsParametersAvailabilityZone2;
 
   /**
    * Name of an existing key pair, which allows you to connect securely to your instance after it launches. This is the key pair you created in your preferred Region.
    *
-   * @schema CfnModulePropsParameters#KeyPairName
+   * @schema CfnNewVpcModulePropsParameters#KeyPairName
    */
-  readonly keyPairName?: CfnModulePropsParametersKeyPairName;
+  readonly keyPairName?: CfnNewVpcModulePropsParametersKeyPairName;
 
   /**
    * CIDR block for private subnet 1 located in Availability Zone 1.
    *
-   * @schema CfnModulePropsParameters#PrivateSubnet1Cidr
+   * @schema CfnNewVpcModulePropsParameters#PrivateSubnet1Cidr
    */
-  readonly privateSubnet1Cidr?: CfnModulePropsParametersPrivateSubnet1Cidr;
+  readonly privateSubnet1Cidr?: CfnNewVpcModulePropsParametersPrivateSubnet1Cidr;
 
   /**
    * CIDR block for private subnet 2 located in Availability Zone 2.
    *
-   * @schema CfnModulePropsParameters#PrivateSubnet2Cidr
+   * @schema CfnNewVpcModulePropsParameters#PrivateSubnet2Cidr
    */
-  readonly privateSubnet2Cidr?: CfnModulePropsParametersPrivateSubnet2Cidr;
+  readonly privateSubnet2Cidr?: CfnNewVpcModulePropsParametersPrivateSubnet2Cidr;
 
   /**
    * CIDR block for the public (DMZ) subnet 1 located in Availability Zone 1.
    *
-   * @schema CfnModulePropsParameters#PublicSubnet1Cidr
+   * @schema CfnNewVpcModulePropsParameters#PublicSubnet1Cidr
    */
-  readonly publicSubnet1Cidr?: CfnModulePropsParametersPublicSubnet1Cidr;
+  readonly publicSubnet1Cidr?: CfnNewVpcModulePropsParametersPublicSubnet1Cidr;
 
   /**
    * CIDR block for the public (DMZ) subnet 2 located in Availability Zone 2.
    *
-   * @schema CfnModulePropsParameters#PublicSubnet2Cidr
+   * @schema CfnNewVpcModulePropsParameters#PublicSubnet2Cidr
    */
-  readonly publicSubnet2Cidr?: CfnModulePropsParametersPublicSubnet2Cidr;
+  readonly publicSubnet2Cidr?: CfnNewVpcModulePropsParametersPublicSubnet2Cidr;
 
   /**
    * CIDR IP range permitted to access Artifactory. It is recommended that you set this value to a trusted IP range. For example, you may want to limit software access to your corporate network.
    *
-   * @schema CfnModulePropsParameters#AccessCidr
+   * @schema CfnNewVpcModulePropsParameters#AccessCidr
    */
-  readonly accessCidr?: CfnModulePropsParametersAccessCidr;
+  readonly accessCidr?: CfnNewVpcModulePropsParametersAccessCidr;
 
   /**
    * Remote CIDR range that allows you to connect to the bastion instance by using SSH. It is recommended that you set this value to a trusted IP range. For example, you may want to grant specific ranges from within your corporate network that use the SSH protocol.
    *
-   * @schema CfnModulePropsParameters#RemoteAccessCidr
+   * @schema CfnNewVpcModulePropsParameters#RemoteAccessCidr
    */
-  readonly remoteAccessCidr?: CfnModulePropsParametersRemoteAccessCidr;
+  readonly remoteAccessCidr?: CfnNewVpcModulePropsParametersRemoteAccessCidr;
 
   /**
    * Size of the bastion instances.
    *
-   * @schema CfnModulePropsParameters#BastionInstanceType
+   * @schema CfnNewVpcModulePropsParameters#BastionInstanceType
    */
-  readonly bastionInstanceType?: CfnModulePropsParametersBastionInstanceType;
+  readonly bastionInstanceType?: CfnNewVpcModulePropsParametersBastionInstanceType;
 
   /**
    * Size of the root volume in the bastion instances.
    *
-   * @schema CfnModulePropsParameters#BastionRootVolumeSize
+   * @schema CfnNewVpcModulePropsParameters#BastionRootVolumeSize
    */
-  readonly bastionRootVolumeSize?: CfnModulePropsParametersBastionRootVolumeSize;
+  readonly bastionRootVolumeSize?: CfnNewVpcModulePropsParametersBastionRootVolumeSize;
 
   /**
    * Choose whether to enable TCP forwarding via bootstrapping of the bastion instance.
    *
-   * @schema CfnModulePropsParameters#BastionEnableTcpForwarding
+   * @schema CfnNewVpcModulePropsParameters#BastionEnableTcpForwarding
    */
-  readonly bastionEnableTcpForwarding?: CfnModulePropsParametersBastionEnableTcpForwarding;
+  readonly bastionEnableTcpForwarding?: CfnNewVpcModulePropsParametersBastionEnableTcpForwarding;
 
   /**
    * Choose true to enable X11 via bootstrapping of the bastion host. Setting this value to true enables X Windows over SSH. X11 forwarding can be useful, but it is also a security risk, so it's recommended that you keep the default (false) setting.
    *
-   * @schema CfnModulePropsParameters#BastionEnableX11Forwarding
+   * @schema CfnNewVpcModulePropsParameters#BastionEnableX11Forwarding
    */
-  readonly bastionEnableX11Forwarding?: CfnModulePropsParametersBastionEnableX11Forwarding;
+  readonly bastionEnableX11Forwarding?: CfnNewVpcModulePropsParametersBastionEnableX11Forwarding;
 
   /**
    * Linux distribution for the Amazon Machine Image (AMI) to be used for the bastion instances.
    *
-   * @schema CfnModulePropsParameters#BastionOs
+   * @schema CfnNewVpcModulePropsParameters#BastionOs
    */
-  readonly bastionOs?: CfnModulePropsParametersBastionOs;
+  readonly bastionOs?: CfnNewVpcModulePropsParametersBastionOs;
 
   /**
    * Number of bastion instances to create.
    *
-   * @schema CfnModulePropsParameters#NumBastionHosts
+   * @schema CfnNewVpcModulePropsParameters#NumBastionHosts
    */
-  readonly numBastionHosts?: CfnModulePropsParametersNumBastionHosts;
+  readonly numBastionHosts?: CfnNewVpcModulePropsParametersNumBastionHosts;
 
   /**
    * Size in gigabytes of available storage (min 10GB). The Quick Start creates an Amazon Elastic Block Store (Amazon EBS) volumes of this size.
    *
-   * @schema CfnModulePropsParameters#VolumeSize
+   * @schema CfnNewVpcModulePropsParameters#VolumeSize
    */
-  readonly volumeSize?: CfnModulePropsParametersVolumeSize;
+  readonly volumeSize?: CfnNewVpcModulePropsParametersVolumeSize;
 
   /**
    * EC2 instance type for the Artifactory instances.
    *
-   * @schema CfnModulePropsParameters#InstanceType
+   * @schema CfnNewVpcModulePropsParameters#InstanceType
    */
-  readonly instanceType?: CfnModulePropsParametersInstanceType;
+  readonly instanceType?: CfnNewVpcModulePropsParametersInstanceType;
 
   /**
    * Number of secondary Artifactory servers to complete your HA deployment. To align with Artifactory best practices, the minimum number is two, and the maximum is seven. Do not select more instances than you have licenses for.
    *
-   * @schema CfnModulePropsParameters#NumberOfSecondary
+   * @schema CfnNewVpcModulePropsParameters#NumberOfSecondary
    */
-  readonly numberOfSecondary?: CfnModulePropsParametersNumberOfSecondary;
+  readonly numberOfSecondary?: CfnNewVpcModulePropsParametersNumberOfSecondary;
 
   /**
    * JFrog Artifactory product you want to install into an AMI.
    *
-   * @schema CfnModulePropsParameters#ArtifactoryProduct
+   * @schema CfnNewVpcModulePropsParameters#ArtifactoryProduct
    */
-  readonly artifactoryProduct?: CfnModulePropsParametersArtifactoryProduct;
+  readonly artifactoryProduct?: CfnNewVpcModulePropsParametersArtifactoryProduct;
 
   /**
    * Version of Artifactory that you want to deploy into the Quick Start. To select the correct version, see the release notes at https://www.jfrog.com/confluence/display/RTF/Release+Notes.
    *
-   * @schema CfnModulePropsParameters#ArtifactoryVersion
+   * @schema CfnNewVpcModulePropsParameters#ArtifactoryVersion
    */
-  readonly artifactoryVersion?: CfnModulePropsParametersArtifactoryVersion;
+  readonly artifactoryVersion?: CfnNewVpcModulePropsParametersArtifactoryVersion;
 
   /**
    * Secret name created in AWS Secrets Manager, which contains the Artifactory licenses.
    *
-   * @schema CfnModulePropsParameters#SmLicenseName
+   * @schema CfnNewVpcModulePropsParameters#SmLicenseName
    */
-  readonly smLicenseName?: CfnModulePropsParametersSmLicenseName;
+  readonly smLicenseName?: CfnNewVpcModulePropsParametersSmLicenseName;
 
   /**
    * Secret name created in AWS Secrets Manager, which contains the SSL certificate and certificate key.
    *
-   * @schema CfnModulePropsParameters#SmCertName
+   * @schema CfnNewVpcModulePropsParameters#SmCertName
    */
-  readonly smCertName?: CfnModulePropsParametersSmCertName;
+  readonly smCertName?: CfnNewVpcModulePropsParametersSmCertName;
 
   /**
    * Name of your Artifactory server. Ensure that this matches your certificate.
    *
-   * @schema CfnModulePropsParameters#ArtifactoryServerName
+   * @schema CfnNewVpcModulePropsParameters#ArtifactoryServerName
    */
-  readonly artifactoryServerName?: CfnModulePropsParametersArtifactoryServerName;
+  readonly artifactoryServerName?: CfnNewVpcModulePropsParametersArtifactoryServerName;
 
   /**
    * Master key for the Artifactory cluster. Generate a master key by using the command '$openssl rand -hex 16'.
    *
-   * @schema CfnModulePropsParameters#MasterKey
+   * @schema CfnNewVpcModulePropsParameters#MasterKey
    */
-  readonly masterKey?: CfnModulePropsParametersMasterKey;
+  readonly masterKey?: CfnNewVpcModulePropsParametersMasterKey;
 
   /**
    * Set Java options to pass to the JVM for Artifactory. For more information, see the Artifactory system requirements at https://www.jfrog.com/confluence/display/RTF/System+Requirements#SystemRequirements-RecommendedHardware. Do not add Xms or Xmx settings without disabling DefaultJavaMemSettings.
    *
-   * @schema CfnModulePropsParameters#ExtraJavaOptions
+   * @schema CfnNewVpcModulePropsParameters#ExtraJavaOptions
    */
-  readonly extraJavaOptions?: CfnModulePropsParametersExtraJavaOptions;
+  readonly extraJavaOptions?: CfnNewVpcModulePropsParametersExtraJavaOptions;
 
   /**
    * Choose false to overwrite the standard memory-calculation options to pass to the Artifactory JVM. If you plan to overwrite them, ensure they are added to the ExtraJavaOptions to prevent the stack provision from failing.
    *
-   * @schema CfnModulePropsParameters#DefaultJavaMemSettings
+   * @schema CfnNewVpcModulePropsParameters#DefaultJavaMemSettings
    */
-  readonly defaultJavaMemSettings?: CfnModulePropsParametersDefaultJavaMemSettings;
+  readonly defaultJavaMemSettings?: CfnNewVpcModulePropsParametersDefaultJavaMemSettings;
 
   /**
    * Name of your database instance. The name must be unique across all instances owned by your AWS account in the current Region. The database instance identifier is case-insensitive, but it's stored in lowercase (as in "mydbinstance").
    *
-   * @schema CfnModulePropsParameters#DatabaseName
+   * @schema CfnNewVpcModulePropsParameters#DatabaseName
    */
-  readonly databaseName?: CfnModulePropsParametersDatabaseName;
+  readonly databaseName?: CfnNewVpcModulePropsParametersDatabaseName;
 
   /**
    * Database engine that you want to run.
    *
-   * @schema CfnModulePropsParameters#DatabaseEngine
+   * @schema CfnNewVpcModulePropsParameters#DatabaseEngine
    */
-  readonly databaseEngine?: CfnModulePropsParametersDatabaseEngine;
+  readonly databaseEngine?: CfnNewVpcModulePropsParametersDatabaseEngine;
 
   /**
    * Login ID for the master user of your database instance.
    *
-   * @schema CfnModulePropsParameters#DatabaseUser
+   * @schema CfnNewVpcModulePropsParameters#DatabaseUser
    */
-  readonly databaseUser?: CfnModulePropsParametersDatabaseUser;
+  readonly databaseUser?: CfnNewVpcModulePropsParametersDatabaseUser;
 
   /**
    * Password for the Artifactory database user.
    *
-   * @schema CfnModulePropsParameters#DatabasePassword
+   * @schema CfnNewVpcModulePropsParameters#DatabasePassword
    */
-  readonly databasePassword?: CfnModulePropsParametersDatabasePassword;
+  readonly databasePassword?: CfnNewVpcModulePropsParametersDatabasePassword;
 
   /**
    * Size of the database to be deployed as part of the Quick Start.
    *
-   * @schema CfnModulePropsParameters#DatabaseInstance
+   * @schema CfnNewVpcModulePropsParameters#DatabaseInstance
    */
-  readonly databaseInstance?: CfnModulePropsParametersDatabaseInstance;
+  readonly databaseInstance?: CfnNewVpcModulePropsParametersDatabaseInstance;
 
   /**
    * Size in gigabytes of available storage for the database instance.
    *
-   * @schema CfnModulePropsParameters#DatabaseAllocatedStorage
+   * @schema CfnNewVpcModulePropsParameters#DatabaseAllocatedStorage
    */
-  readonly databaseAllocatedStorage?: CfnModulePropsParametersDatabaseAllocatedStorage;
+  readonly databaseAllocatedStorage?: CfnNewVpcModulePropsParametersDatabaseAllocatedStorage;
 
   /**
    * Preferred availability zone for Amazon RDS primary instance
    *
-   * @schema CfnModulePropsParameters#DatabasePreferredAz
+   * @schema CfnNewVpcModulePropsParameters#DatabasePreferredAz
    */
-  readonly databasePreferredAz?: CfnModulePropsParametersDatabasePreferredAz;
+  readonly databasePreferredAz?: CfnNewVpcModulePropsParametersDatabasePreferredAz;
 
   /**
    * Choose false to create an Amazon RDS instance in a single Availability Zone.
    *
-   * @schema CfnModulePropsParameters#MultiAzDatabase
+   * @schema CfnNewVpcModulePropsParameters#MultiAzDatabase
    */
-  readonly multiAzDatabase?: CfnModulePropsParametersMultiAzDatabase;
+  readonly multiAzDatabase?: CfnNewVpcModulePropsParametersMultiAzDatabase;
 
   /**
    * S3 bucket name for the Quick Start assets. This string can include numbers, lowercase letters, and hyphens (-). It cannot start or end with a hyphen (-).
    *
-   * @schema CfnModulePropsParameters#QsS3BucketName
+   * @schema CfnNewVpcModulePropsParameters#QsS3BucketName
    */
-  readonly qsS3BucketName?: CfnModulePropsParametersQsS3BucketName;
+  readonly qsS3BucketName?: CfnNewVpcModulePropsParametersQsS3BucketName;
 
   /**
    * S3 key prefix for the Quick Start assets. Quick Start key prefix can include numbers, lowercase letters, uppercase letters, hyphens (-), and forward slash (/).
    *
-   * @schema CfnModulePropsParameters#QsS3KeyPrefix
+   * @schema CfnNewVpcModulePropsParameters#QsS3KeyPrefix
    */
-  readonly qsS3KeyPrefix?: CfnModulePropsParametersQsS3KeyPrefix;
+  readonly qsS3KeyPrefix?: CfnNewVpcModulePropsParametersQsS3KeyPrefix;
 
   /**
    * AWS Region where the Quick Start S3 bucket (QSS3BucketName) is hosted. If you use your own bucket, you must specify your own value.
    *
-   * @schema CfnModulePropsParameters#QsS3BucketRegion
+   * @schema CfnNewVpcModulePropsParameters#QsS3BucketRegion
    */
-  readonly qsS3BucketRegion?: CfnModulePropsParametersQsS3BucketRegion;
+  readonly qsS3BucketRegion?: CfnNewVpcModulePropsParametersQsS3BucketRegion;
 
   /**
    * Choose true to install JFrog Xray instance(s).
    *
-   * @schema CfnModulePropsParameters#InstallXray
+   * @schema CfnNewVpcModulePropsParameters#InstallXray
    */
-  readonly installXray?: CfnModulePropsParametersInstallXray;
+  readonly installXray?: CfnNewVpcModulePropsParametersInstallXray;
 
   /**
    * The version of Xray that you want to deploy into the Quick Start.
    *
-   * @schema CfnModulePropsParameters#XrayVersion
+   * @schema CfnNewVpcModulePropsParameters#XrayVersion
    */
-  readonly xrayVersion?: CfnModulePropsParametersXrayVersion;
+  readonly xrayVersion?: CfnNewVpcModulePropsParametersXrayVersion;
 
   /**
    * The number of Xray instances servers to complete your HA deployment. The minimum number is one; the maximum is seven. Do not select more than instances than you have licenses for.
    *
-   * @schema CfnModulePropsParameters#XrayNumberOfInstances
+   * @schema CfnNewVpcModulePropsParameters#XrayNumberOfInstances
    */
-  readonly xrayNumberOfInstances?: CfnModulePropsParametersXrayNumberOfInstances;
+  readonly xrayNumberOfInstances?: CfnNewVpcModulePropsParametersXrayNumberOfInstances;
 
   /**
    * The EC2 instance type for the Xray instances.
    *
-   * @schema CfnModulePropsParameters#XrayInstanceType
+   * @schema CfnNewVpcModulePropsParameters#XrayInstanceType
    */
-  readonly xrayInstanceType?: CfnModulePropsParametersXrayInstanceType;
+  readonly xrayInstanceType?: CfnNewVpcModulePropsParametersXrayInstanceType;
 
   /**
    * The login ID for the Xray database user.
    *
-   * @schema CfnModulePropsParameters#XrayDatabaseUser
+   * @schema CfnNewVpcModulePropsParameters#XrayDatabaseUser
    */
-  readonly xrayDatabaseUser?: CfnModulePropsParametersXrayDatabaseUser;
+  readonly xrayDatabaseUser?: CfnNewVpcModulePropsParametersXrayDatabaseUser;
 
   /**
    * The password for the Xray database user.
    *
-   * @schema CfnModulePropsParameters#XrayDatabasePassword
+   * @schema CfnNewVpcModulePropsParameters#XrayDatabasePassword
    */
-  readonly xrayDatabasePassword?: CfnModulePropsParametersXrayDatabasePassword;
+  readonly xrayDatabasePassword?: CfnNewVpcModulePropsParametersXrayDatabasePassword;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParameters' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParameters' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParameters(obj: CfnModulePropsParameters | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParameters(obj: CfnNewVpcModulePropsParameters | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'LogicalId': toJson_CfnModulePropsParametersLogicalId(obj.logicalId),
-    'EnableBastion': toJson_CfnModulePropsParametersEnableBastion(obj.enableBastion),
-    'VpcCidr': toJson_CfnModulePropsParametersVpcCidr(obj.vpcCidr),
-    'AvailabilityZone1': toJson_CfnModulePropsParametersAvailabilityZone1(obj.availabilityZone1),
-    'AvailabilityZone2': toJson_CfnModulePropsParametersAvailabilityZone2(obj.availabilityZone2),
-    'KeyPairName': toJson_CfnModulePropsParametersKeyPairName(obj.keyPairName),
-    'PrivateSubnet1Cidr': toJson_CfnModulePropsParametersPrivateSubnet1Cidr(obj.privateSubnet1Cidr),
-    'PrivateSubnet2Cidr': toJson_CfnModulePropsParametersPrivateSubnet2Cidr(obj.privateSubnet2Cidr),
-    'PublicSubnet1Cidr': toJson_CfnModulePropsParametersPublicSubnet1Cidr(obj.publicSubnet1Cidr),
-    'PublicSubnet2Cidr': toJson_CfnModulePropsParametersPublicSubnet2Cidr(obj.publicSubnet2Cidr),
-    'AccessCidr': toJson_CfnModulePropsParametersAccessCidr(obj.accessCidr),
-    'RemoteAccessCidr': toJson_CfnModulePropsParametersRemoteAccessCidr(obj.remoteAccessCidr),
-    'BastionInstanceType': toJson_CfnModulePropsParametersBastionInstanceType(obj.bastionInstanceType),
-    'BastionRootVolumeSize': toJson_CfnModulePropsParametersBastionRootVolumeSize(obj.bastionRootVolumeSize),
-    'BastionEnableTcpForwarding': toJson_CfnModulePropsParametersBastionEnableTcpForwarding(obj.bastionEnableTcpForwarding),
-    'BastionEnableX11Forwarding': toJson_CfnModulePropsParametersBastionEnableX11Forwarding(obj.bastionEnableX11Forwarding),
-    'BastionOs': toJson_CfnModulePropsParametersBastionOs(obj.bastionOs),
-    'NumBastionHosts': toJson_CfnModulePropsParametersNumBastionHosts(obj.numBastionHosts),
-    'VolumeSize': toJson_CfnModulePropsParametersVolumeSize(obj.volumeSize),
-    'InstanceType': toJson_CfnModulePropsParametersInstanceType(obj.instanceType),
-    'NumberOfSecondary': toJson_CfnModulePropsParametersNumberOfSecondary(obj.numberOfSecondary),
-    'ArtifactoryProduct': toJson_CfnModulePropsParametersArtifactoryProduct(obj.artifactoryProduct),
-    'ArtifactoryVersion': toJson_CfnModulePropsParametersArtifactoryVersion(obj.artifactoryVersion),
-    'SmLicenseName': toJson_CfnModulePropsParametersSmLicenseName(obj.smLicenseName),
-    'SmCertName': toJson_CfnModulePropsParametersSmCertName(obj.smCertName),
-    'ArtifactoryServerName': toJson_CfnModulePropsParametersArtifactoryServerName(obj.artifactoryServerName),
-    'MasterKey': toJson_CfnModulePropsParametersMasterKey(obj.masterKey),
-    'ExtraJavaOptions': toJson_CfnModulePropsParametersExtraJavaOptions(obj.extraJavaOptions),
-    'DefaultJavaMemSettings': toJson_CfnModulePropsParametersDefaultJavaMemSettings(obj.defaultJavaMemSettings),
-    'DatabaseName': toJson_CfnModulePropsParametersDatabaseName(obj.databaseName),
-    'DatabaseEngine': toJson_CfnModulePropsParametersDatabaseEngine(obj.databaseEngine),
-    'DatabaseUser': toJson_CfnModulePropsParametersDatabaseUser(obj.databaseUser),
-    'DatabasePassword': toJson_CfnModulePropsParametersDatabasePassword(obj.databasePassword),
-    'DatabaseInstance': toJson_CfnModulePropsParametersDatabaseInstance(obj.databaseInstance),
-    'DatabaseAllocatedStorage': toJson_CfnModulePropsParametersDatabaseAllocatedStorage(obj.databaseAllocatedStorage),
-    'DatabasePreferredAz': toJson_CfnModulePropsParametersDatabasePreferredAz(obj.databasePreferredAz),
-    'MultiAzDatabase': toJson_CfnModulePropsParametersMultiAzDatabase(obj.multiAzDatabase),
-    'QsS3BucketName': toJson_CfnModulePropsParametersQsS3BucketName(obj.qsS3BucketName),
-    'QsS3KeyPrefix': toJson_CfnModulePropsParametersQsS3KeyPrefix(obj.qsS3KeyPrefix),
-    'QsS3BucketRegion': toJson_CfnModulePropsParametersQsS3BucketRegion(obj.qsS3BucketRegion),
-    'InstallXray': toJson_CfnModulePropsParametersInstallXray(obj.installXray),
-    'XrayVersion': toJson_CfnModulePropsParametersXrayVersion(obj.xrayVersion),
-    'XrayNumberOfInstances': toJson_CfnModulePropsParametersXrayNumberOfInstances(obj.xrayNumberOfInstances),
-    'XrayInstanceType': toJson_CfnModulePropsParametersXrayInstanceType(obj.xrayInstanceType),
-    'XrayDatabaseUser': toJson_CfnModulePropsParametersXrayDatabaseUser(obj.xrayDatabaseUser),
-    'XrayDatabasePassword': toJson_CfnModulePropsParametersXrayDatabasePassword(obj.xrayDatabasePassword),
+    'LogicalId': toJson_CfnNewVpcModulePropsParametersLogicalId(obj.logicalId),
+    'EnableBastion': toJson_CfnNewVpcModulePropsParametersEnableBastion(obj.enableBastion),
+    'VpcCidr': toJson_CfnNewVpcModulePropsParametersVpcCidr(obj.vpcCidr),
+    'AvailabilityZone1': toJson_CfnNewVpcModulePropsParametersAvailabilityZone1(obj.availabilityZone1),
+    'AvailabilityZone2': toJson_CfnNewVpcModulePropsParametersAvailabilityZone2(obj.availabilityZone2),
+    'KeyPairName': toJson_CfnNewVpcModulePropsParametersKeyPairName(obj.keyPairName),
+    'PrivateSubnet1Cidr': toJson_CfnNewVpcModulePropsParametersPrivateSubnet1Cidr(obj.privateSubnet1Cidr),
+    'PrivateSubnet2Cidr': toJson_CfnNewVpcModulePropsParametersPrivateSubnet2Cidr(obj.privateSubnet2Cidr),
+    'PublicSubnet1Cidr': toJson_CfnNewVpcModulePropsParametersPublicSubnet1Cidr(obj.publicSubnet1Cidr),
+    'PublicSubnet2Cidr': toJson_CfnNewVpcModulePropsParametersPublicSubnet2Cidr(obj.publicSubnet2Cidr),
+    'AccessCidr': toJson_CfnNewVpcModulePropsParametersAccessCidr(obj.accessCidr),
+    'RemoteAccessCidr': toJson_CfnNewVpcModulePropsParametersRemoteAccessCidr(obj.remoteAccessCidr),
+    'BastionInstanceType': toJson_CfnNewVpcModulePropsParametersBastionInstanceType(obj.bastionInstanceType),
+    'BastionRootVolumeSize': toJson_CfnNewVpcModulePropsParametersBastionRootVolumeSize(obj.bastionRootVolumeSize),
+    'BastionEnableTcpForwarding': toJson_CfnNewVpcModulePropsParametersBastionEnableTcpForwarding(obj.bastionEnableTcpForwarding),
+    'BastionEnableX11Forwarding': toJson_CfnNewVpcModulePropsParametersBastionEnableX11Forwarding(obj.bastionEnableX11Forwarding),
+    'BastionOs': toJson_CfnNewVpcModulePropsParametersBastionOs(obj.bastionOs),
+    'NumBastionHosts': toJson_CfnNewVpcModulePropsParametersNumBastionHosts(obj.numBastionHosts),
+    'VolumeSize': toJson_CfnNewVpcModulePropsParametersVolumeSize(obj.volumeSize),
+    'InstanceType': toJson_CfnNewVpcModulePropsParametersInstanceType(obj.instanceType),
+    'NumberOfSecondary': toJson_CfnNewVpcModulePropsParametersNumberOfSecondary(obj.numberOfSecondary),
+    'ArtifactoryProduct': toJson_CfnNewVpcModulePropsParametersArtifactoryProduct(obj.artifactoryProduct),
+    'ArtifactoryVersion': toJson_CfnNewVpcModulePropsParametersArtifactoryVersion(obj.artifactoryVersion),
+    'SmLicenseName': toJson_CfnNewVpcModulePropsParametersSmLicenseName(obj.smLicenseName),
+    'SmCertName': toJson_CfnNewVpcModulePropsParametersSmCertName(obj.smCertName),
+    'ArtifactoryServerName': toJson_CfnNewVpcModulePropsParametersArtifactoryServerName(obj.artifactoryServerName),
+    'MasterKey': toJson_CfnNewVpcModulePropsParametersMasterKey(obj.masterKey),
+    'ExtraJavaOptions': toJson_CfnNewVpcModulePropsParametersExtraJavaOptions(obj.extraJavaOptions),
+    'DefaultJavaMemSettings': toJson_CfnNewVpcModulePropsParametersDefaultJavaMemSettings(obj.defaultJavaMemSettings),
+    'DatabaseName': toJson_CfnNewVpcModulePropsParametersDatabaseName(obj.databaseName),
+    'DatabaseEngine': toJson_CfnNewVpcModulePropsParametersDatabaseEngine(obj.databaseEngine),
+    'DatabaseUser': toJson_CfnNewVpcModulePropsParametersDatabaseUser(obj.databaseUser),
+    'DatabasePassword': toJson_CfnNewVpcModulePropsParametersDatabasePassword(obj.databasePassword),
+    'DatabaseInstance': toJson_CfnNewVpcModulePropsParametersDatabaseInstance(obj.databaseInstance),
+    'DatabaseAllocatedStorage': toJson_CfnNewVpcModulePropsParametersDatabaseAllocatedStorage(obj.databaseAllocatedStorage),
+    'DatabasePreferredAz': toJson_CfnNewVpcModulePropsParametersDatabasePreferredAz(obj.databasePreferredAz),
+    'MultiAzDatabase': toJson_CfnNewVpcModulePropsParametersMultiAzDatabase(obj.multiAzDatabase),
+    'QsS3BucketName': toJson_CfnNewVpcModulePropsParametersQsS3BucketName(obj.qsS3BucketName),
+    'QsS3KeyPrefix': toJson_CfnNewVpcModulePropsParametersQsS3KeyPrefix(obj.qsS3KeyPrefix),
+    'QsS3BucketRegion': toJson_CfnNewVpcModulePropsParametersQsS3BucketRegion(obj.qsS3BucketRegion),
+    'InstallXray': toJson_CfnNewVpcModulePropsParametersInstallXray(obj.installXray),
+    'XrayVersion': toJson_CfnNewVpcModulePropsParametersXrayVersion(obj.xrayVersion),
+    'XrayNumberOfInstances': toJson_CfnNewVpcModulePropsParametersXrayNumberOfInstances(obj.xrayNumberOfInstances),
+    'XrayInstanceType': toJson_CfnNewVpcModulePropsParametersXrayInstanceType(obj.xrayInstanceType),
+    'XrayDatabaseUser': toJson_CfnNewVpcModulePropsParametersXrayDatabaseUser(obj.xrayDatabaseUser),
+    'XrayDatabasePassword': toJson_CfnNewVpcModulePropsParametersXrayDatabasePassword(obj.xrayDatabasePassword),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -422,30 +422,30 @@ export function toJson_CfnModulePropsParameters(obj: CfnModulePropsParameters | 
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResources
+ * @schema CfnNewVpcModulePropsResources
  */
-export interface CfnModulePropsResources {
+export interface CfnNewVpcModulePropsResources {
   /**
-   * @schema CfnModulePropsResources#ArtifactoryVpcStack
+   * @schema CfnNewVpcModulePropsResources#ArtifactoryVpcStack
    */
-  readonly artifactoryVpcStack?: CfnModulePropsResourcesArtifactoryVpcStack;
+  readonly artifactoryVpcStack?: CfnNewVpcModulePropsResourcesArtifactoryVpcStack;
 
   /**
-   * @schema CfnModulePropsResources#ArtifactoryExistingVpcStack
+   * @schema CfnNewVpcModulePropsResources#ArtifactoryExistingVpcStack
    */
-  readonly artifactoryExistingVpcStack?: CfnModulePropsResourcesArtifactoryExistingVpcStack;
+  readonly artifactoryExistingVpcStack?: CfnNewVpcModulePropsResourcesArtifactoryExistingVpcStack;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResources' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsResources' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResources(obj: CfnModulePropsResources | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsResources(obj: CfnNewVpcModulePropsResources | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'ArtifactoryVpcStack': toJson_CfnModulePropsResourcesArtifactoryVpcStack(obj.artifactoryVpcStack),
-    'ArtifactoryExistingVpcStack': toJson_CfnModulePropsResourcesArtifactoryExistingVpcStack(obj.artifactoryExistingVpcStack),
+    'ArtifactoryVpcStack': toJson_CfnNewVpcModulePropsResourcesArtifactoryVpcStack(obj.artifactoryVpcStack),
+    'ArtifactoryExistingVpcStack': toJson_CfnNewVpcModulePropsResourcesArtifactoryExistingVpcStack(obj.artifactoryExistingVpcStack),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -455,26 +455,26 @@ export function toJson_CfnModulePropsResources(obj: CfnModulePropsResources | un
 /**
  * Logical Id of the MODULE
  *
- * @schema CfnModulePropsParametersLogicalId
+ * @schema CfnNewVpcModulePropsParametersLogicalId
  */
-export interface CfnModulePropsParametersLogicalId {
+export interface CfnNewVpcModulePropsParametersLogicalId {
   /**
-   * @schema CfnModulePropsParametersLogicalId#Type
+   * @schema CfnNewVpcModulePropsParametersLogicalId#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersLogicalId#Description
+   * @schema CfnNewVpcModulePropsParametersLogicalId#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersLogicalId' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersLogicalId' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersLogicalId(obj: CfnModulePropsParametersLogicalId | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersLogicalId(obj: CfnNewVpcModulePropsParametersLogicalId | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -488,26 +488,26 @@ export function toJson_CfnModulePropsParametersLogicalId(obj: CfnModulePropsPara
 /**
  * If set to true, a bastion host will be created.
  *
- * @schema CfnModulePropsParametersEnableBastion
+ * @schema CfnNewVpcModulePropsParametersEnableBastion
  */
-export interface CfnModulePropsParametersEnableBastion {
+export interface CfnNewVpcModulePropsParametersEnableBastion {
   /**
-   * @schema CfnModulePropsParametersEnableBastion#Type
+   * @schema CfnNewVpcModulePropsParametersEnableBastion#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersEnableBastion#Description
+   * @schema CfnNewVpcModulePropsParametersEnableBastion#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersEnableBastion' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersEnableBastion' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersEnableBastion(obj: CfnModulePropsParametersEnableBastion | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersEnableBastion(obj: CfnNewVpcModulePropsParametersEnableBastion | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -521,26 +521,26 @@ export function toJson_CfnModulePropsParametersEnableBastion(obj: CfnModuleProps
 /**
  * CIDR block for the VPC.
  *
- * @schema CfnModulePropsParametersVpcCidr
+ * @schema CfnNewVpcModulePropsParametersVpcCidr
  */
-export interface CfnModulePropsParametersVpcCidr {
+export interface CfnNewVpcModulePropsParametersVpcCidr {
   /**
-   * @schema CfnModulePropsParametersVpcCidr#Type
+   * @schema CfnNewVpcModulePropsParametersVpcCidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersVpcCidr#Description
+   * @schema CfnNewVpcModulePropsParametersVpcCidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersVpcCidr' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersVpcCidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersVpcCidr(obj: CfnModulePropsParametersVpcCidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersVpcCidr(obj: CfnNewVpcModulePropsParametersVpcCidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -554,26 +554,26 @@ export function toJson_CfnModulePropsParametersVpcCidr(obj: CfnModulePropsParame
 /**
  * Availability Zone 1 to use for the subnets in the VPC. Two Availability Zones are used for this deployment.
  *
- * @schema CfnModulePropsParametersAvailabilityZone1
+ * @schema CfnNewVpcModulePropsParametersAvailabilityZone1
  */
-export interface CfnModulePropsParametersAvailabilityZone1 {
+export interface CfnNewVpcModulePropsParametersAvailabilityZone1 {
   /**
-   * @schema CfnModulePropsParametersAvailabilityZone1#Type
+   * @schema CfnNewVpcModulePropsParametersAvailabilityZone1#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersAvailabilityZone1#Description
+   * @schema CfnNewVpcModulePropsParametersAvailabilityZone1#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersAvailabilityZone1' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersAvailabilityZone1' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersAvailabilityZone1(obj: CfnModulePropsParametersAvailabilityZone1 | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersAvailabilityZone1(obj: CfnNewVpcModulePropsParametersAvailabilityZone1 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -587,26 +587,26 @@ export function toJson_CfnModulePropsParametersAvailabilityZone1(obj: CfnModuleP
 /**
  * Availability Zone 2 to use for the subnets in the VPC. Two Availability Zones are used for this deployment.
  *
- * @schema CfnModulePropsParametersAvailabilityZone2
+ * @schema CfnNewVpcModulePropsParametersAvailabilityZone2
  */
-export interface CfnModulePropsParametersAvailabilityZone2 {
+export interface CfnNewVpcModulePropsParametersAvailabilityZone2 {
   /**
-   * @schema CfnModulePropsParametersAvailabilityZone2#Type
+   * @schema CfnNewVpcModulePropsParametersAvailabilityZone2#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersAvailabilityZone2#Description
+   * @schema CfnNewVpcModulePropsParametersAvailabilityZone2#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersAvailabilityZone2' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersAvailabilityZone2' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersAvailabilityZone2(obj: CfnModulePropsParametersAvailabilityZone2 | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersAvailabilityZone2(obj: CfnNewVpcModulePropsParametersAvailabilityZone2 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -620,26 +620,26 @@ export function toJson_CfnModulePropsParametersAvailabilityZone2(obj: CfnModuleP
 /**
  * Name of an existing key pair, which allows you to connect securely to your instance after it launches. This is the key pair you created in your preferred Region.
  *
- * @schema CfnModulePropsParametersKeyPairName
+ * @schema CfnNewVpcModulePropsParametersKeyPairName
  */
-export interface CfnModulePropsParametersKeyPairName {
+export interface CfnNewVpcModulePropsParametersKeyPairName {
   /**
-   * @schema CfnModulePropsParametersKeyPairName#Type
+   * @schema CfnNewVpcModulePropsParametersKeyPairName#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersKeyPairName#Description
+   * @schema CfnNewVpcModulePropsParametersKeyPairName#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersKeyPairName' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersKeyPairName' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersKeyPairName(obj: CfnModulePropsParametersKeyPairName | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersKeyPairName(obj: CfnNewVpcModulePropsParametersKeyPairName | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -653,26 +653,26 @@ export function toJson_CfnModulePropsParametersKeyPairName(obj: CfnModulePropsPa
 /**
  * CIDR block for private subnet 1 located in Availability Zone 1.
  *
- * @schema CfnModulePropsParametersPrivateSubnet1Cidr
+ * @schema CfnNewVpcModulePropsParametersPrivateSubnet1Cidr
  */
-export interface CfnModulePropsParametersPrivateSubnet1Cidr {
+export interface CfnNewVpcModulePropsParametersPrivateSubnet1Cidr {
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet1Cidr#Type
+   * @schema CfnNewVpcModulePropsParametersPrivateSubnet1Cidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet1Cidr#Description
+   * @schema CfnNewVpcModulePropsParametersPrivateSubnet1Cidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPrivateSubnet1Cidr' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersPrivateSubnet1Cidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPrivateSubnet1Cidr(obj: CfnModulePropsParametersPrivateSubnet1Cidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersPrivateSubnet1Cidr(obj: CfnNewVpcModulePropsParametersPrivateSubnet1Cidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -686,26 +686,26 @@ export function toJson_CfnModulePropsParametersPrivateSubnet1Cidr(obj: CfnModule
 /**
  * CIDR block for private subnet 2 located in Availability Zone 2.
  *
- * @schema CfnModulePropsParametersPrivateSubnet2Cidr
+ * @schema CfnNewVpcModulePropsParametersPrivateSubnet2Cidr
  */
-export interface CfnModulePropsParametersPrivateSubnet2Cidr {
+export interface CfnNewVpcModulePropsParametersPrivateSubnet2Cidr {
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet2Cidr#Type
+   * @schema CfnNewVpcModulePropsParametersPrivateSubnet2Cidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPrivateSubnet2Cidr#Description
+   * @schema CfnNewVpcModulePropsParametersPrivateSubnet2Cidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPrivateSubnet2Cidr' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersPrivateSubnet2Cidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPrivateSubnet2Cidr(obj: CfnModulePropsParametersPrivateSubnet2Cidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersPrivateSubnet2Cidr(obj: CfnNewVpcModulePropsParametersPrivateSubnet2Cidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -719,26 +719,26 @@ export function toJson_CfnModulePropsParametersPrivateSubnet2Cidr(obj: CfnModule
 /**
  * CIDR block for the public (DMZ) subnet 1 located in Availability Zone 1.
  *
- * @schema CfnModulePropsParametersPublicSubnet1Cidr
+ * @schema CfnNewVpcModulePropsParametersPublicSubnet1Cidr
  */
-export interface CfnModulePropsParametersPublicSubnet1Cidr {
+export interface CfnNewVpcModulePropsParametersPublicSubnet1Cidr {
   /**
-   * @schema CfnModulePropsParametersPublicSubnet1Cidr#Type
+   * @schema CfnNewVpcModulePropsParametersPublicSubnet1Cidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPublicSubnet1Cidr#Description
+   * @schema CfnNewVpcModulePropsParametersPublicSubnet1Cidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPublicSubnet1Cidr' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersPublicSubnet1Cidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPublicSubnet1Cidr(obj: CfnModulePropsParametersPublicSubnet1Cidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersPublicSubnet1Cidr(obj: CfnNewVpcModulePropsParametersPublicSubnet1Cidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -752,26 +752,26 @@ export function toJson_CfnModulePropsParametersPublicSubnet1Cidr(obj: CfnModuleP
 /**
  * CIDR block for the public (DMZ) subnet 2 located in Availability Zone 2.
  *
- * @schema CfnModulePropsParametersPublicSubnet2Cidr
+ * @schema CfnNewVpcModulePropsParametersPublicSubnet2Cidr
  */
-export interface CfnModulePropsParametersPublicSubnet2Cidr {
+export interface CfnNewVpcModulePropsParametersPublicSubnet2Cidr {
   /**
-   * @schema CfnModulePropsParametersPublicSubnet2Cidr#Type
+   * @schema CfnNewVpcModulePropsParametersPublicSubnet2Cidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersPublicSubnet2Cidr#Description
+   * @schema CfnNewVpcModulePropsParametersPublicSubnet2Cidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersPublicSubnet2Cidr' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersPublicSubnet2Cidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersPublicSubnet2Cidr(obj: CfnModulePropsParametersPublicSubnet2Cidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersPublicSubnet2Cidr(obj: CfnNewVpcModulePropsParametersPublicSubnet2Cidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -785,26 +785,26 @@ export function toJson_CfnModulePropsParametersPublicSubnet2Cidr(obj: CfnModuleP
 /**
  * CIDR IP range permitted to access Artifactory. It is recommended that you set this value to a trusted IP range. For example, you may want to limit software access to your corporate network.
  *
- * @schema CfnModulePropsParametersAccessCidr
+ * @schema CfnNewVpcModulePropsParametersAccessCidr
  */
-export interface CfnModulePropsParametersAccessCidr {
+export interface CfnNewVpcModulePropsParametersAccessCidr {
   /**
-   * @schema CfnModulePropsParametersAccessCidr#Type
+   * @schema CfnNewVpcModulePropsParametersAccessCidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersAccessCidr#Description
+   * @schema CfnNewVpcModulePropsParametersAccessCidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersAccessCidr' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersAccessCidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersAccessCidr(obj: CfnModulePropsParametersAccessCidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersAccessCidr(obj: CfnNewVpcModulePropsParametersAccessCidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -818,26 +818,26 @@ export function toJson_CfnModulePropsParametersAccessCidr(obj: CfnModulePropsPar
 /**
  * Remote CIDR range that allows you to connect to the bastion instance by using SSH. It is recommended that you set this value to a trusted IP range. For example, you may want to grant specific ranges from within your corporate network that use the SSH protocol.
  *
- * @schema CfnModulePropsParametersRemoteAccessCidr
+ * @schema CfnNewVpcModulePropsParametersRemoteAccessCidr
  */
-export interface CfnModulePropsParametersRemoteAccessCidr {
+export interface CfnNewVpcModulePropsParametersRemoteAccessCidr {
   /**
-   * @schema CfnModulePropsParametersRemoteAccessCidr#Type
+   * @schema CfnNewVpcModulePropsParametersRemoteAccessCidr#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersRemoteAccessCidr#Description
+   * @schema CfnNewVpcModulePropsParametersRemoteAccessCidr#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersRemoteAccessCidr' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersRemoteAccessCidr' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersRemoteAccessCidr(obj: CfnModulePropsParametersRemoteAccessCidr | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersRemoteAccessCidr(obj: CfnNewVpcModulePropsParametersRemoteAccessCidr | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -851,26 +851,26 @@ export function toJson_CfnModulePropsParametersRemoteAccessCidr(obj: CfnModulePr
 /**
  * Size of the bastion instances.
  *
- * @schema CfnModulePropsParametersBastionInstanceType
+ * @schema CfnNewVpcModulePropsParametersBastionInstanceType
  */
-export interface CfnModulePropsParametersBastionInstanceType {
+export interface CfnNewVpcModulePropsParametersBastionInstanceType {
   /**
-   * @schema CfnModulePropsParametersBastionInstanceType#Type
+   * @schema CfnNewVpcModulePropsParametersBastionInstanceType#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersBastionInstanceType#Description
+   * @schema CfnNewVpcModulePropsParametersBastionInstanceType#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersBastionInstanceType' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersBastionInstanceType' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersBastionInstanceType(obj: CfnModulePropsParametersBastionInstanceType | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersBastionInstanceType(obj: CfnNewVpcModulePropsParametersBastionInstanceType | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -884,26 +884,26 @@ export function toJson_CfnModulePropsParametersBastionInstanceType(obj: CfnModul
 /**
  * Size of the root volume in the bastion instances.
  *
- * @schema CfnModulePropsParametersBastionRootVolumeSize
+ * @schema CfnNewVpcModulePropsParametersBastionRootVolumeSize
  */
-export interface CfnModulePropsParametersBastionRootVolumeSize {
+export interface CfnNewVpcModulePropsParametersBastionRootVolumeSize {
   /**
-   * @schema CfnModulePropsParametersBastionRootVolumeSize#Type
+   * @schema CfnNewVpcModulePropsParametersBastionRootVolumeSize#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersBastionRootVolumeSize#Description
+   * @schema CfnNewVpcModulePropsParametersBastionRootVolumeSize#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersBastionRootVolumeSize' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersBastionRootVolumeSize' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersBastionRootVolumeSize(obj: CfnModulePropsParametersBastionRootVolumeSize | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersBastionRootVolumeSize(obj: CfnNewVpcModulePropsParametersBastionRootVolumeSize | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -917,26 +917,26 @@ export function toJson_CfnModulePropsParametersBastionRootVolumeSize(obj: CfnMod
 /**
  * Choose whether to enable TCP forwarding via bootstrapping of the bastion instance.
  *
- * @schema CfnModulePropsParametersBastionEnableTcpForwarding
+ * @schema CfnNewVpcModulePropsParametersBastionEnableTcpForwarding
  */
-export interface CfnModulePropsParametersBastionEnableTcpForwarding {
+export interface CfnNewVpcModulePropsParametersBastionEnableTcpForwarding {
   /**
-   * @schema CfnModulePropsParametersBastionEnableTcpForwarding#Type
+   * @schema CfnNewVpcModulePropsParametersBastionEnableTcpForwarding#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersBastionEnableTcpForwarding#Description
+   * @schema CfnNewVpcModulePropsParametersBastionEnableTcpForwarding#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersBastionEnableTcpForwarding' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersBastionEnableTcpForwarding' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersBastionEnableTcpForwarding(obj: CfnModulePropsParametersBastionEnableTcpForwarding | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersBastionEnableTcpForwarding(obj: CfnNewVpcModulePropsParametersBastionEnableTcpForwarding | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -950,26 +950,26 @@ export function toJson_CfnModulePropsParametersBastionEnableTcpForwarding(obj: C
 /**
  * Choose true to enable X11 via bootstrapping of the bastion host. Setting this value to true enables X Windows over SSH. X11 forwarding can be useful, but it is also a security risk, so it's recommended that you keep the default (false) setting.
  *
- * @schema CfnModulePropsParametersBastionEnableX11Forwarding
+ * @schema CfnNewVpcModulePropsParametersBastionEnableX11Forwarding
  */
-export interface CfnModulePropsParametersBastionEnableX11Forwarding {
+export interface CfnNewVpcModulePropsParametersBastionEnableX11Forwarding {
   /**
-   * @schema CfnModulePropsParametersBastionEnableX11Forwarding#Type
+   * @schema CfnNewVpcModulePropsParametersBastionEnableX11Forwarding#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersBastionEnableX11Forwarding#Description
+   * @schema CfnNewVpcModulePropsParametersBastionEnableX11Forwarding#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersBastionEnableX11Forwarding' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersBastionEnableX11Forwarding' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersBastionEnableX11Forwarding(obj: CfnModulePropsParametersBastionEnableX11Forwarding | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersBastionEnableX11Forwarding(obj: CfnNewVpcModulePropsParametersBastionEnableX11Forwarding | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -983,26 +983,26 @@ export function toJson_CfnModulePropsParametersBastionEnableX11Forwarding(obj: C
 /**
  * Linux distribution for the Amazon Machine Image (AMI) to be used for the bastion instances.
  *
- * @schema CfnModulePropsParametersBastionOs
+ * @schema CfnNewVpcModulePropsParametersBastionOs
  */
-export interface CfnModulePropsParametersBastionOs {
+export interface CfnNewVpcModulePropsParametersBastionOs {
   /**
-   * @schema CfnModulePropsParametersBastionOs#Type
+   * @schema CfnNewVpcModulePropsParametersBastionOs#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersBastionOs#Description
+   * @schema CfnNewVpcModulePropsParametersBastionOs#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersBastionOs' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersBastionOs' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersBastionOs(obj: CfnModulePropsParametersBastionOs | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersBastionOs(obj: CfnNewVpcModulePropsParametersBastionOs | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1016,26 +1016,26 @@ export function toJson_CfnModulePropsParametersBastionOs(obj: CfnModulePropsPara
 /**
  * Number of bastion instances to create.
  *
- * @schema CfnModulePropsParametersNumBastionHosts
+ * @schema CfnNewVpcModulePropsParametersNumBastionHosts
  */
-export interface CfnModulePropsParametersNumBastionHosts {
+export interface CfnNewVpcModulePropsParametersNumBastionHosts {
   /**
-   * @schema CfnModulePropsParametersNumBastionHosts#Type
+   * @schema CfnNewVpcModulePropsParametersNumBastionHosts#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersNumBastionHosts#Description
+   * @schema CfnNewVpcModulePropsParametersNumBastionHosts#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersNumBastionHosts' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersNumBastionHosts' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersNumBastionHosts(obj: CfnModulePropsParametersNumBastionHosts | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersNumBastionHosts(obj: CfnNewVpcModulePropsParametersNumBastionHosts | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1049,26 +1049,26 @@ export function toJson_CfnModulePropsParametersNumBastionHosts(obj: CfnModulePro
 /**
  * Size in gigabytes of available storage (min 10GB). The Quick Start creates an Amazon Elastic Block Store (Amazon EBS) volumes of this size.
  *
- * @schema CfnModulePropsParametersVolumeSize
+ * @schema CfnNewVpcModulePropsParametersVolumeSize
  */
-export interface CfnModulePropsParametersVolumeSize {
+export interface CfnNewVpcModulePropsParametersVolumeSize {
   /**
-   * @schema CfnModulePropsParametersVolumeSize#Type
+   * @schema CfnNewVpcModulePropsParametersVolumeSize#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersVolumeSize#Description
+   * @schema CfnNewVpcModulePropsParametersVolumeSize#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersVolumeSize' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersVolumeSize' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersVolumeSize(obj: CfnModulePropsParametersVolumeSize | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersVolumeSize(obj: CfnNewVpcModulePropsParametersVolumeSize | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1082,26 +1082,26 @@ export function toJson_CfnModulePropsParametersVolumeSize(obj: CfnModulePropsPar
 /**
  * EC2 instance type for the Artifactory instances.
  *
- * @schema CfnModulePropsParametersInstanceType
+ * @schema CfnNewVpcModulePropsParametersInstanceType
  */
-export interface CfnModulePropsParametersInstanceType {
+export interface CfnNewVpcModulePropsParametersInstanceType {
   /**
-   * @schema CfnModulePropsParametersInstanceType#Type
+   * @schema CfnNewVpcModulePropsParametersInstanceType#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersInstanceType#Description
+   * @schema CfnNewVpcModulePropsParametersInstanceType#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersInstanceType' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersInstanceType' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersInstanceType(obj: CfnModulePropsParametersInstanceType | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersInstanceType(obj: CfnNewVpcModulePropsParametersInstanceType | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1115,26 +1115,26 @@ export function toJson_CfnModulePropsParametersInstanceType(obj: CfnModulePropsP
 /**
  * Number of secondary Artifactory servers to complete your HA deployment. To align with Artifactory best practices, the minimum number is two, and the maximum is seven. Do not select more instances than you have licenses for.
  *
- * @schema CfnModulePropsParametersNumberOfSecondary
+ * @schema CfnNewVpcModulePropsParametersNumberOfSecondary
  */
-export interface CfnModulePropsParametersNumberOfSecondary {
+export interface CfnNewVpcModulePropsParametersNumberOfSecondary {
   /**
-   * @schema CfnModulePropsParametersNumberOfSecondary#Type
+   * @schema CfnNewVpcModulePropsParametersNumberOfSecondary#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersNumberOfSecondary#Description
+   * @schema CfnNewVpcModulePropsParametersNumberOfSecondary#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersNumberOfSecondary' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersNumberOfSecondary' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersNumberOfSecondary(obj: CfnModulePropsParametersNumberOfSecondary | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersNumberOfSecondary(obj: CfnNewVpcModulePropsParametersNumberOfSecondary | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1148,26 +1148,26 @@ export function toJson_CfnModulePropsParametersNumberOfSecondary(obj: CfnModuleP
 /**
  * JFrog Artifactory product you want to install into an AMI.
  *
- * @schema CfnModulePropsParametersArtifactoryProduct
+ * @schema CfnNewVpcModulePropsParametersArtifactoryProduct
  */
-export interface CfnModulePropsParametersArtifactoryProduct {
+export interface CfnNewVpcModulePropsParametersArtifactoryProduct {
   /**
-   * @schema CfnModulePropsParametersArtifactoryProduct#Type
+   * @schema CfnNewVpcModulePropsParametersArtifactoryProduct#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersArtifactoryProduct#Description
+   * @schema CfnNewVpcModulePropsParametersArtifactoryProduct#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersArtifactoryProduct' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersArtifactoryProduct' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersArtifactoryProduct(obj: CfnModulePropsParametersArtifactoryProduct | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersArtifactoryProduct(obj: CfnNewVpcModulePropsParametersArtifactoryProduct | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1181,26 +1181,26 @@ export function toJson_CfnModulePropsParametersArtifactoryProduct(obj: CfnModule
 /**
  * Version of Artifactory that you want to deploy into the Quick Start. To select the correct version, see the release notes at https://www.jfrog.com/confluence/display/RTF/Release+Notes.
  *
- * @schema CfnModulePropsParametersArtifactoryVersion
+ * @schema CfnNewVpcModulePropsParametersArtifactoryVersion
  */
-export interface CfnModulePropsParametersArtifactoryVersion {
+export interface CfnNewVpcModulePropsParametersArtifactoryVersion {
   /**
-   * @schema CfnModulePropsParametersArtifactoryVersion#Type
+   * @schema CfnNewVpcModulePropsParametersArtifactoryVersion#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersArtifactoryVersion#Description
+   * @schema CfnNewVpcModulePropsParametersArtifactoryVersion#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersArtifactoryVersion' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersArtifactoryVersion' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersArtifactoryVersion(obj: CfnModulePropsParametersArtifactoryVersion | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersArtifactoryVersion(obj: CfnNewVpcModulePropsParametersArtifactoryVersion | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1214,26 +1214,26 @@ export function toJson_CfnModulePropsParametersArtifactoryVersion(obj: CfnModule
 /**
  * Secret name created in AWS Secrets Manager, which contains the Artifactory licenses.
  *
- * @schema CfnModulePropsParametersSmLicenseName
+ * @schema CfnNewVpcModulePropsParametersSmLicenseName
  */
-export interface CfnModulePropsParametersSmLicenseName {
+export interface CfnNewVpcModulePropsParametersSmLicenseName {
   /**
-   * @schema CfnModulePropsParametersSmLicenseName#Type
+   * @schema CfnNewVpcModulePropsParametersSmLicenseName#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersSmLicenseName#Description
+   * @schema CfnNewVpcModulePropsParametersSmLicenseName#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersSmLicenseName' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersSmLicenseName' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersSmLicenseName(obj: CfnModulePropsParametersSmLicenseName | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersSmLicenseName(obj: CfnNewVpcModulePropsParametersSmLicenseName | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1247,26 +1247,26 @@ export function toJson_CfnModulePropsParametersSmLicenseName(obj: CfnModuleProps
 /**
  * Secret name created in AWS Secrets Manager, which contains the SSL certificate and certificate key.
  *
- * @schema CfnModulePropsParametersSmCertName
+ * @schema CfnNewVpcModulePropsParametersSmCertName
  */
-export interface CfnModulePropsParametersSmCertName {
+export interface CfnNewVpcModulePropsParametersSmCertName {
   /**
-   * @schema CfnModulePropsParametersSmCertName#Type
+   * @schema CfnNewVpcModulePropsParametersSmCertName#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersSmCertName#Description
+   * @schema CfnNewVpcModulePropsParametersSmCertName#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersSmCertName' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersSmCertName' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersSmCertName(obj: CfnModulePropsParametersSmCertName | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersSmCertName(obj: CfnNewVpcModulePropsParametersSmCertName | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1280,26 +1280,26 @@ export function toJson_CfnModulePropsParametersSmCertName(obj: CfnModulePropsPar
 /**
  * Name of your Artifactory server. Ensure that this matches your certificate.
  *
- * @schema CfnModulePropsParametersArtifactoryServerName
+ * @schema CfnNewVpcModulePropsParametersArtifactoryServerName
  */
-export interface CfnModulePropsParametersArtifactoryServerName {
+export interface CfnNewVpcModulePropsParametersArtifactoryServerName {
   /**
-   * @schema CfnModulePropsParametersArtifactoryServerName#Type
+   * @schema CfnNewVpcModulePropsParametersArtifactoryServerName#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersArtifactoryServerName#Description
+   * @schema CfnNewVpcModulePropsParametersArtifactoryServerName#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersArtifactoryServerName' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersArtifactoryServerName' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersArtifactoryServerName(obj: CfnModulePropsParametersArtifactoryServerName | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersArtifactoryServerName(obj: CfnNewVpcModulePropsParametersArtifactoryServerName | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1313,26 +1313,26 @@ export function toJson_CfnModulePropsParametersArtifactoryServerName(obj: CfnMod
 /**
  * Master key for the Artifactory cluster. Generate a master key by using the command '$openssl rand -hex 16'.
  *
- * @schema CfnModulePropsParametersMasterKey
+ * @schema CfnNewVpcModulePropsParametersMasterKey
  */
-export interface CfnModulePropsParametersMasterKey {
+export interface CfnNewVpcModulePropsParametersMasterKey {
   /**
-   * @schema CfnModulePropsParametersMasterKey#Type
+   * @schema CfnNewVpcModulePropsParametersMasterKey#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersMasterKey#Description
+   * @schema CfnNewVpcModulePropsParametersMasterKey#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersMasterKey' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersMasterKey' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersMasterKey(obj: CfnModulePropsParametersMasterKey | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersMasterKey(obj: CfnNewVpcModulePropsParametersMasterKey | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1346,26 +1346,26 @@ export function toJson_CfnModulePropsParametersMasterKey(obj: CfnModulePropsPara
 /**
  * Set Java options to pass to the JVM for Artifactory. For more information, see the Artifactory system requirements at https://www.jfrog.com/confluence/display/RTF/System+Requirements#SystemRequirements-RecommendedHardware. Do not add Xms or Xmx settings without disabling DefaultJavaMemSettings.
  *
- * @schema CfnModulePropsParametersExtraJavaOptions
+ * @schema CfnNewVpcModulePropsParametersExtraJavaOptions
  */
-export interface CfnModulePropsParametersExtraJavaOptions {
+export interface CfnNewVpcModulePropsParametersExtraJavaOptions {
   /**
-   * @schema CfnModulePropsParametersExtraJavaOptions#Type
+   * @schema CfnNewVpcModulePropsParametersExtraJavaOptions#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersExtraJavaOptions#Description
+   * @schema CfnNewVpcModulePropsParametersExtraJavaOptions#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersExtraJavaOptions' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersExtraJavaOptions' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersExtraJavaOptions(obj: CfnModulePropsParametersExtraJavaOptions | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersExtraJavaOptions(obj: CfnNewVpcModulePropsParametersExtraJavaOptions | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1379,26 +1379,26 @@ export function toJson_CfnModulePropsParametersExtraJavaOptions(obj: CfnModulePr
 /**
  * Choose false to overwrite the standard memory-calculation options to pass to the Artifactory JVM. If you plan to overwrite them, ensure they are added to the ExtraJavaOptions to prevent the stack provision from failing.
  *
- * @schema CfnModulePropsParametersDefaultJavaMemSettings
+ * @schema CfnNewVpcModulePropsParametersDefaultJavaMemSettings
  */
-export interface CfnModulePropsParametersDefaultJavaMemSettings {
+export interface CfnNewVpcModulePropsParametersDefaultJavaMemSettings {
   /**
-   * @schema CfnModulePropsParametersDefaultJavaMemSettings#Type
+   * @schema CfnNewVpcModulePropsParametersDefaultJavaMemSettings#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersDefaultJavaMemSettings#Description
+   * @schema CfnNewVpcModulePropsParametersDefaultJavaMemSettings#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersDefaultJavaMemSettings' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersDefaultJavaMemSettings' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersDefaultJavaMemSettings(obj: CfnModulePropsParametersDefaultJavaMemSettings | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersDefaultJavaMemSettings(obj: CfnNewVpcModulePropsParametersDefaultJavaMemSettings | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1412,26 +1412,26 @@ export function toJson_CfnModulePropsParametersDefaultJavaMemSettings(obj: CfnMo
 /**
  * Name of your database instance. The name must be unique across all instances owned by your AWS account in the current Region. The database instance identifier is case-insensitive, but it's stored in lowercase (as in "mydbinstance").
  *
- * @schema CfnModulePropsParametersDatabaseName
+ * @schema CfnNewVpcModulePropsParametersDatabaseName
  */
-export interface CfnModulePropsParametersDatabaseName {
+export interface CfnNewVpcModulePropsParametersDatabaseName {
   /**
-   * @schema CfnModulePropsParametersDatabaseName#Type
+   * @schema CfnNewVpcModulePropsParametersDatabaseName#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersDatabaseName#Description
+   * @schema CfnNewVpcModulePropsParametersDatabaseName#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersDatabaseName' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersDatabaseName' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersDatabaseName(obj: CfnModulePropsParametersDatabaseName | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersDatabaseName(obj: CfnNewVpcModulePropsParametersDatabaseName | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1445,26 +1445,26 @@ export function toJson_CfnModulePropsParametersDatabaseName(obj: CfnModulePropsP
 /**
  * Database engine that you want to run.
  *
- * @schema CfnModulePropsParametersDatabaseEngine
+ * @schema CfnNewVpcModulePropsParametersDatabaseEngine
  */
-export interface CfnModulePropsParametersDatabaseEngine {
+export interface CfnNewVpcModulePropsParametersDatabaseEngine {
   /**
-   * @schema CfnModulePropsParametersDatabaseEngine#Type
+   * @schema CfnNewVpcModulePropsParametersDatabaseEngine#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersDatabaseEngine#Description
+   * @schema CfnNewVpcModulePropsParametersDatabaseEngine#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersDatabaseEngine' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersDatabaseEngine' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersDatabaseEngine(obj: CfnModulePropsParametersDatabaseEngine | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersDatabaseEngine(obj: CfnNewVpcModulePropsParametersDatabaseEngine | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1478,26 +1478,26 @@ export function toJson_CfnModulePropsParametersDatabaseEngine(obj: CfnModuleProp
 /**
  * Login ID for the master user of your database instance.
  *
- * @schema CfnModulePropsParametersDatabaseUser
+ * @schema CfnNewVpcModulePropsParametersDatabaseUser
  */
-export interface CfnModulePropsParametersDatabaseUser {
+export interface CfnNewVpcModulePropsParametersDatabaseUser {
   /**
-   * @schema CfnModulePropsParametersDatabaseUser#Type
+   * @schema CfnNewVpcModulePropsParametersDatabaseUser#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersDatabaseUser#Description
+   * @schema CfnNewVpcModulePropsParametersDatabaseUser#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersDatabaseUser' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersDatabaseUser' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersDatabaseUser(obj: CfnModulePropsParametersDatabaseUser | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersDatabaseUser(obj: CfnNewVpcModulePropsParametersDatabaseUser | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1511,26 +1511,26 @@ export function toJson_CfnModulePropsParametersDatabaseUser(obj: CfnModulePropsP
 /**
  * Password for the Artifactory database user.
  *
- * @schema CfnModulePropsParametersDatabasePassword
+ * @schema CfnNewVpcModulePropsParametersDatabasePassword
  */
-export interface CfnModulePropsParametersDatabasePassword {
+export interface CfnNewVpcModulePropsParametersDatabasePassword {
   /**
-   * @schema CfnModulePropsParametersDatabasePassword#Type
+   * @schema CfnNewVpcModulePropsParametersDatabasePassword#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersDatabasePassword#Description
+   * @schema CfnNewVpcModulePropsParametersDatabasePassword#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersDatabasePassword' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersDatabasePassword' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersDatabasePassword(obj: CfnModulePropsParametersDatabasePassword | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersDatabasePassword(obj: CfnNewVpcModulePropsParametersDatabasePassword | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1544,26 +1544,26 @@ export function toJson_CfnModulePropsParametersDatabasePassword(obj: CfnModulePr
 /**
  * Size of the database to be deployed as part of the Quick Start.
  *
- * @schema CfnModulePropsParametersDatabaseInstance
+ * @schema CfnNewVpcModulePropsParametersDatabaseInstance
  */
-export interface CfnModulePropsParametersDatabaseInstance {
+export interface CfnNewVpcModulePropsParametersDatabaseInstance {
   /**
-   * @schema CfnModulePropsParametersDatabaseInstance#Type
+   * @schema CfnNewVpcModulePropsParametersDatabaseInstance#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersDatabaseInstance#Description
+   * @schema CfnNewVpcModulePropsParametersDatabaseInstance#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersDatabaseInstance' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersDatabaseInstance' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersDatabaseInstance(obj: CfnModulePropsParametersDatabaseInstance | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersDatabaseInstance(obj: CfnNewVpcModulePropsParametersDatabaseInstance | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1577,26 +1577,26 @@ export function toJson_CfnModulePropsParametersDatabaseInstance(obj: CfnModulePr
 /**
  * Size in gigabytes of available storage for the database instance.
  *
- * @schema CfnModulePropsParametersDatabaseAllocatedStorage
+ * @schema CfnNewVpcModulePropsParametersDatabaseAllocatedStorage
  */
-export interface CfnModulePropsParametersDatabaseAllocatedStorage {
+export interface CfnNewVpcModulePropsParametersDatabaseAllocatedStorage {
   /**
-   * @schema CfnModulePropsParametersDatabaseAllocatedStorage#Type
+   * @schema CfnNewVpcModulePropsParametersDatabaseAllocatedStorage#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersDatabaseAllocatedStorage#Description
+   * @schema CfnNewVpcModulePropsParametersDatabaseAllocatedStorage#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersDatabaseAllocatedStorage' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersDatabaseAllocatedStorage' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersDatabaseAllocatedStorage(obj: CfnModulePropsParametersDatabaseAllocatedStorage | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersDatabaseAllocatedStorage(obj: CfnNewVpcModulePropsParametersDatabaseAllocatedStorage | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1610,26 +1610,26 @@ export function toJson_CfnModulePropsParametersDatabaseAllocatedStorage(obj: Cfn
 /**
  * Preferred availability zone for Amazon RDS primary instance
  *
- * @schema CfnModulePropsParametersDatabasePreferredAz
+ * @schema CfnNewVpcModulePropsParametersDatabasePreferredAz
  */
-export interface CfnModulePropsParametersDatabasePreferredAz {
+export interface CfnNewVpcModulePropsParametersDatabasePreferredAz {
   /**
-   * @schema CfnModulePropsParametersDatabasePreferredAz#Type
+   * @schema CfnNewVpcModulePropsParametersDatabasePreferredAz#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersDatabasePreferredAz#Description
+   * @schema CfnNewVpcModulePropsParametersDatabasePreferredAz#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersDatabasePreferredAz' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersDatabasePreferredAz' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersDatabasePreferredAz(obj: CfnModulePropsParametersDatabasePreferredAz | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersDatabasePreferredAz(obj: CfnNewVpcModulePropsParametersDatabasePreferredAz | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1643,26 +1643,26 @@ export function toJson_CfnModulePropsParametersDatabasePreferredAz(obj: CfnModul
 /**
  * Choose false to create an Amazon RDS instance in a single Availability Zone.
  *
- * @schema CfnModulePropsParametersMultiAzDatabase
+ * @schema CfnNewVpcModulePropsParametersMultiAzDatabase
  */
-export interface CfnModulePropsParametersMultiAzDatabase {
+export interface CfnNewVpcModulePropsParametersMultiAzDatabase {
   /**
-   * @schema CfnModulePropsParametersMultiAzDatabase#Type
+   * @schema CfnNewVpcModulePropsParametersMultiAzDatabase#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersMultiAzDatabase#Description
+   * @schema CfnNewVpcModulePropsParametersMultiAzDatabase#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersMultiAzDatabase' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersMultiAzDatabase' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersMultiAzDatabase(obj: CfnModulePropsParametersMultiAzDatabase | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersMultiAzDatabase(obj: CfnNewVpcModulePropsParametersMultiAzDatabase | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1676,26 +1676,26 @@ export function toJson_CfnModulePropsParametersMultiAzDatabase(obj: CfnModulePro
 /**
  * S3 bucket name for the Quick Start assets. This string can include numbers, lowercase letters, and hyphens (-). It cannot start or end with a hyphen (-).
  *
- * @schema CfnModulePropsParametersQsS3BucketName
+ * @schema CfnNewVpcModulePropsParametersQsS3BucketName
  */
-export interface CfnModulePropsParametersQsS3BucketName {
+export interface CfnNewVpcModulePropsParametersQsS3BucketName {
   /**
-   * @schema CfnModulePropsParametersQsS3BucketName#Type
+   * @schema CfnNewVpcModulePropsParametersQsS3BucketName#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersQsS3BucketName#Description
+   * @schema CfnNewVpcModulePropsParametersQsS3BucketName#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersQsS3BucketName' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersQsS3BucketName' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersQsS3BucketName(obj: CfnModulePropsParametersQsS3BucketName | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersQsS3BucketName(obj: CfnNewVpcModulePropsParametersQsS3BucketName | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1709,26 +1709,26 @@ export function toJson_CfnModulePropsParametersQsS3BucketName(obj: CfnModuleProp
 /**
  * S3 key prefix for the Quick Start assets. Quick Start key prefix can include numbers, lowercase letters, uppercase letters, hyphens (-), and forward slash (/).
  *
- * @schema CfnModulePropsParametersQsS3KeyPrefix
+ * @schema CfnNewVpcModulePropsParametersQsS3KeyPrefix
  */
-export interface CfnModulePropsParametersQsS3KeyPrefix {
+export interface CfnNewVpcModulePropsParametersQsS3KeyPrefix {
   /**
-   * @schema CfnModulePropsParametersQsS3KeyPrefix#Type
+   * @schema CfnNewVpcModulePropsParametersQsS3KeyPrefix#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersQsS3KeyPrefix#Description
+   * @schema CfnNewVpcModulePropsParametersQsS3KeyPrefix#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersQsS3KeyPrefix' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersQsS3KeyPrefix' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersQsS3KeyPrefix(obj: CfnModulePropsParametersQsS3KeyPrefix | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersQsS3KeyPrefix(obj: CfnNewVpcModulePropsParametersQsS3KeyPrefix | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1742,26 +1742,26 @@ export function toJson_CfnModulePropsParametersQsS3KeyPrefix(obj: CfnModuleProps
 /**
  * AWS Region where the Quick Start S3 bucket (QSS3BucketName) is hosted. If you use your own bucket, you must specify your own value.
  *
- * @schema CfnModulePropsParametersQsS3BucketRegion
+ * @schema CfnNewVpcModulePropsParametersQsS3BucketRegion
  */
-export interface CfnModulePropsParametersQsS3BucketRegion {
+export interface CfnNewVpcModulePropsParametersQsS3BucketRegion {
   /**
-   * @schema CfnModulePropsParametersQsS3BucketRegion#Type
+   * @schema CfnNewVpcModulePropsParametersQsS3BucketRegion#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersQsS3BucketRegion#Description
+   * @schema CfnNewVpcModulePropsParametersQsS3BucketRegion#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersQsS3BucketRegion' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersQsS3BucketRegion' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersQsS3BucketRegion(obj: CfnModulePropsParametersQsS3BucketRegion | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersQsS3BucketRegion(obj: CfnNewVpcModulePropsParametersQsS3BucketRegion | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1775,26 +1775,26 @@ export function toJson_CfnModulePropsParametersQsS3BucketRegion(obj: CfnModulePr
 /**
  * Choose true to install JFrog Xray instance(s).
  *
- * @schema CfnModulePropsParametersInstallXray
+ * @schema CfnNewVpcModulePropsParametersInstallXray
  */
-export interface CfnModulePropsParametersInstallXray {
+export interface CfnNewVpcModulePropsParametersInstallXray {
   /**
-   * @schema CfnModulePropsParametersInstallXray#Type
+   * @schema CfnNewVpcModulePropsParametersInstallXray#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersInstallXray#Description
+   * @schema CfnNewVpcModulePropsParametersInstallXray#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersInstallXray' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersInstallXray' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersInstallXray(obj: CfnModulePropsParametersInstallXray | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersInstallXray(obj: CfnNewVpcModulePropsParametersInstallXray | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1808,26 +1808,26 @@ export function toJson_CfnModulePropsParametersInstallXray(obj: CfnModulePropsPa
 /**
  * The version of Xray that you want to deploy into the Quick Start.
  *
- * @schema CfnModulePropsParametersXrayVersion
+ * @schema CfnNewVpcModulePropsParametersXrayVersion
  */
-export interface CfnModulePropsParametersXrayVersion {
+export interface CfnNewVpcModulePropsParametersXrayVersion {
   /**
-   * @schema CfnModulePropsParametersXrayVersion#Type
+   * @schema CfnNewVpcModulePropsParametersXrayVersion#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersXrayVersion#Description
+   * @schema CfnNewVpcModulePropsParametersXrayVersion#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersXrayVersion' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersXrayVersion' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersXrayVersion(obj: CfnModulePropsParametersXrayVersion | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersXrayVersion(obj: CfnNewVpcModulePropsParametersXrayVersion | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1841,26 +1841,26 @@ export function toJson_CfnModulePropsParametersXrayVersion(obj: CfnModulePropsPa
 /**
  * The number of Xray instances servers to complete your HA deployment. The minimum number is one; the maximum is seven. Do not select more than instances than you have licenses for.
  *
- * @schema CfnModulePropsParametersXrayNumberOfInstances
+ * @schema CfnNewVpcModulePropsParametersXrayNumberOfInstances
  */
-export interface CfnModulePropsParametersXrayNumberOfInstances {
+export interface CfnNewVpcModulePropsParametersXrayNumberOfInstances {
   /**
-   * @schema CfnModulePropsParametersXrayNumberOfInstances#Type
+   * @schema CfnNewVpcModulePropsParametersXrayNumberOfInstances#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersXrayNumberOfInstances#Description
+   * @schema CfnNewVpcModulePropsParametersXrayNumberOfInstances#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersXrayNumberOfInstances' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersXrayNumberOfInstances' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersXrayNumberOfInstances(obj: CfnModulePropsParametersXrayNumberOfInstances | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersXrayNumberOfInstances(obj: CfnNewVpcModulePropsParametersXrayNumberOfInstances | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1874,26 +1874,26 @@ export function toJson_CfnModulePropsParametersXrayNumberOfInstances(obj: CfnMod
 /**
  * The EC2 instance type for the Xray instances.
  *
- * @schema CfnModulePropsParametersXrayInstanceType
+ * @schema CfnNewVpcModulePropsParametersXrayInstanceType
  */
-export interface CfnModulePropsParametersXrayInstanceType {
+export interface CfnNewVpcModulePropsParametersXrayInstanceType {
   /**
-   * @schema CfnModulePropsParametersXrayInstanceType#Type
+   * @schema CfnNewVpcModulePropsParametersXrayInstanceType#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersXrayInstanceType#Description
+   * @schema CfnNewVpcModulePropsParametersXrayInstanceType#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersXrayInstanceType' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersXrayInstanceType' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersXrayInstanceType(obj: CfnModulePropsParametersXrayInstanceType | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersXrayInstanceType(obj: CfnNewVpcModulePropsParametersXrayInstanceType | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1907,26 +1907,26 @@ export function toJson_CfnModulePropsParametersXrayInstanceType(obj: CfnModulePr
 /**
  * The login ID for the Xray database user.
  *
- * @schema CfnModulePropsParametersXrayDatabaseUser
+ * @schema CfnNewVpcModulePropsParametersXrayDatabaseUser
  */
-export interface CfnModulePropsParametersXrayDatabaseUser {
+export interface CfnNewVpcModulePropsParametersXrayDatabaseUser {
   /**
-   * @schema CfnModulePropsParametersXrayDatabaseUser#Type
+   * @schema CfnNewVpcModulePropsParametersXrayDatabaseUser#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersXrayDatabaseUser#Description
+   * @schema CfnNewVpcModulePropsParametersXrayDatabaseUser#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersXrayDatabaseUser' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersXrayDatabaseUser' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersXrayDatabaseUser(obj: CfnModulePropsParametersXrayDatabaseUser | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersXrayDatabaseUser(obj: CfnNewVpcModulePropsParametersXrayDatabaseUser | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1940,26 +1940,26 @@ export function toJson_CfnModulePropsParametersXrayDatabaseUser(obj: CfnModulePr
 /**
  * The password for the Xray database user.
  *
- * @schema CfnModulePropsParametersXrayDatabasePassword
+ * @schema CfnNewVpcModulePropsParametersXrayDatabasePassword
  */
-export interface CfnModulePropsParametersXrayDatabasePassword {
+export interface CfnNewVpcModulePropsParametersXrayDatabasePassword {
   /**
-   * @schema CfnModulePropsParametersXrayDatabasePassword#Type
+   * @schema CfnNewVpcModulePropsParametersXrayDatabasePassword#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersXrayDatabasePassword#Description
+   * @schema CfnNewVpcModulePropsParametersXrayDatabasePassword#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersXrayDatabasePassword' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsParametersXrayDatabasePassword' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersXrayDatabasePassword(obj: CfnModulePropsParametersXrayDatabasePassword | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsParametersXrayDatabasePassword(obj: CfnNewVpcModulePropsParametersXrayDatabasePassword | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -1971,26 +1971,26 @@ export function toJson_CfnModulePropsParametersXrayDatabasePassword(obj: CfnModu
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesArtifactoryVpcStack
+ * @schema CfnNewVpcModulePropsResourcesArtifactoryVpcStack
  */
-export interface CfnModulePropsResourcesArtifactoryVpcStack {
+export interface CfnNewVpcModulePropsResourcesArtifactoryVpcStack {
   /**
-   * @schema CfnModulePropsResourcesArtifactoryVpcStack#Type
+   * @schema CfnNewVpcModulePropsResourcesArtifactoryVpcStack#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesArtifactoryVpcStack#Properties
+   * @schema CfnNewVpcModulePropsResourcesArtifactoryVpcStack#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesArtifactoryVpcStack' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsResourcesArtifactoryVpcStack' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesArtifactoryVpcStack(obj: CfnModulePropsResourcesArtifactoryVpcStack | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsResourcesArtifactoryVpcStack(obj: CfnNewVpcModulePropsResourcesArtifactoryVpcStack | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2002,26 +2002,26 @@ export function toJson_CfnModulePropsResourcesArtifactoryVpcStack(obj: CfnModule
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesArtifactoryExistingVpcStack
+ * @schema CfnNewVpcModulePropsResourcesArtifactoryExistingVpcStack
  */
-export interface CfnModulePropsResourcesArtifactoryExistingVpcStack {
+export interface CfnNewVpcModulePropsResourcesArtifactoryExistingVpcStack {
   /**
-   * @schema CfnModulePropsResourcesArtifactoryExistingVpcStack#Type
+   * @schema CfnNewVpcModulePropsResourcesArtifactoryExistingVpcStack#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesArtifactoryExistingVpcStack#Properties
+   * @schema CfnNewVpcModulePropsResourcesArtifactoryExistingVpcStack#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesArtifactoryExistingVpcStack' to JSON representation.
+ * Converts an object of type 'CfnNewVpcModulePropsResourcesArtifactoryExistingVpcStack' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesArtifactoryExistingVpcStack(obj: CfnModulePropsResourcesArtifactoryExistingVpcStack | undefined): Record<string, any> | undefined {
+export function toJson_CfnNewVpcModulePropsResourcesArtifactoryExistingVpcStack(obj: CfnNewVpcModulePropsResourcesArtifactoryExistingVpcStack | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -2040,7 +2040,7 @@ export function toJson_CfnModulePropsResourcesArtifactoryExistingVpcStack(obj: C
  * @stability external
  * @link http://unknown-url
  */
-export class CfnModule extends cdk.CfnResource {
+export class CfnNewVpcModule extends cdk.CfnResource {
   /**
   * The CloudFormation resource type name for this resource class.
   */
@@ -2049,7 +2049,7 @@ export class CfnModule extends cdk.CfnResource {
   /**
    * Resource props.
    */
-  public readonly props: CfnModuleProps;
+  public readonly props: CfnNewVpcModuleProps;
 
 
   /**
@@ -2059,8 +2059,8 @@ export class CfnModule extends cdk.CfnResource {
    * @param id    - scoped id of the resource
    * @param props - resource properties
    */
-  constructor(scope: cdk.Construct, id: string, props: CfnModuleProps) {
-    super(scope, id, { type: CfnModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnModuleProps(props)! });
+  constructor(scope: cdk.Construct, id: string, props: CfnNewVpcModuleProps) {
+    super(scope, id, { type: CfnNewVpcModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnNewVpcModuleProps(props)! });
 
     this.props = props;
 

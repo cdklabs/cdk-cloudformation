@@ -4,30 +4,30 @@ import * as cdk from '@aws-cdk/core';
 /**
  * Schema for Module Fragment of type Logzio::KinesisShipper::KinesisShipper::MODULE
  *
- * @schema CfnModuleProps
+ * @schema CfnKinesisShipperModuleProps
  */
-export interface CfnModuleProps {
+export interface CfnKinesisShipperModuleProps {
   /**
-   * @schema CfnModuleProps#Parameters
+   * @schema CfnKinesisShipperModuleProps#Parameters
    */
-  readonly parameters?: CfnModulePropsParameters;
+  readonly parameters?: CfnKinesisShipperModulePropsParameters;
 
   /**
-   * @schema CfnModuleProps#Resources
+   * @schema CfnKinesisShipperModuleProps#Resources
    */
-  readonly resources?: CfnModulePropsResources;
+  readonly resources?: CfnKinesisShipperModulePropsResources;
 
 }
 
 /**
- * Converts an object of type 'CfnModuleProps' to JSON representation.
+ * Converts an object of type 'CfnKinesisShipperModuleProps' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModuleProps(obj: CfnModuleProps | undefined): Record<string, any> | undefined {
+export function toJson_CfnKinesisShipperModuleProps(obj: CfnKinesisShipperModuleProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'Parameters': toJson_CfnModulePropsParameters(obj.parameters),
-    'Resources': toJson_CfnModulePropsResources(obj.resources),
+    'Parameters': toJson_CfnKinesisShipperModulePropsParameters(obj.parameters),
+    'Resources': toJson_CfnKinesisShipperModulePropsResources(obj.resources),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -35,98 +35,98 @@ export function toJson_CfnModuleProps(obj: CfnModuleProps | undefined): Record<s
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParameters
+ * @schema CfnKinesisShipperModulePropsParameters
  */
-export interface CfnModulePropsParameters {
+export interface CfnKinesisShipperModulePropsParameters {
   /**
    * The token of the account you want to ship to. Can be found at https://app.logz.io/#/dashboard/settings/general
    *
-   * @schema CfnModulePropsParameters#LogzioTOKEN
+   * @schema CfnKinesisShipperModulePropsParameters#LogzioTOKEN
    */
-  readonly logzioToken?: CfnModulePropsParametersLogzioToken;
+  readonly logzioToken?: CfnKinesisShipperModulePropsParametersLogzioToken;
 
   /**
    * json or text. If json, the lambda function will attempt to parse the message field as JSON and populate the event data with the parsed fields.
    *
-   * @schema CfnModulePropsParameters#LogzioFORMAT
+   * @schema CfnKinesisShipperModulePropsParameters#LogzioFORMAT
    */
-  readonly logzioFormat?: CfnModulePropsParametersLogzioFormat;
+  readonly logzioFormat?: CfnKinesisShipperModulePropsParametersLogzioFormat;
 
   /**
    * Two-letter region code, or blank for US East (Northern Virginia). This determines your listener URL (where you're shipping the logs to) and API URL. You can find your region code in the Regions and URLs at https://docs.logz.io/user-guide/accounts/account-region.html#regions-and-urls table
    *
-   * @schema CfnModulePropsParameters#LogzioREGION
+   * @schema CfnKinesisShipperModulePropsParameters#LogzioREGION
    */
-  readonly logzioRegion?: CfnModulePropsParametersLogzioRegion;
+  readonly logzioRegion?: CfnKinesisShipperModulePropsParametersLogzioRegion;
 
   /**
    * If true, the Lambda will send compressed logs. If false, the Lambda will send uncompressed logs.
    *
-   * @schema CfnModulePropsParameters#LogzioCOMPRESS
+   * @schema CfnKinesisShipperModulePropsParameters#LogzioCOMPRESS
    */
-  readonly logzioCompress?: CfnModulePropsParametersLogzioCompress;
+  readonly logzioCompress?: CfnKinesisShipperModulePropsParametersLogzioCompress;
 
   /**
    * Set this ENV variable to split the a record into multiple logs based on a field containing an array of messages. For more information see https://github.com/logzio/logzio_aws_serverless/blob/master/python3/kinesis/parse-json-array.md. Note: This option would work only if you set FORMAT to json.
    *
-   * @schema CfnModulePropsParameters#LogzioMessagesArray
+   * @schema CfnKinesisShipperModulePropsParameters#LogzioMessagesArray
    */
-  readonly logzioMessagesArray?: CfnModulePropsParametersLogzioMessagesArray;
+  readonly logzioMessagesArray?: CfnKinesisShipperModulePropsParametersLogzioMessagesArray;
 
   /**
    * The largest number of records that will be read from your stream at once.
    *
-   * @schema CfnModulePropsParameters#KinesisStreamBatchSize
+   * @schema CfnKinesisShipperModulePropsParameters#KinesisStreamBatchSize
    */
-  readonly kinesisStreamBatchSize?: CfnModulePropsParametersKinesisStreamBatchSize;
+  readonly kinesisStreamBatchSize?: CfnKinesisShipperModulePropsParametersKinesisStreamBatchSize;
 
   /**
    * Deprecated. Use LogzioREGION instead
    *
-   * @schema CfnModulePropsParameters#LogzioURL
+   * @schema CfnKinesisShipperModulePropsParameters#LogzioURL
    */
-  readonly logzioUrl?: CfnModulePropsParametersLogzioUrl;
+  readonly logzioUrl?: CfnKinesisShipperModulePropsParametersLogzioUrl;
 
   /**
    * The position in the stream to start reading from. For more information, see ShardIteratorType in the Amazon Kinesis API Reference.
    *
-   * @schema CfnModulePropsParameters#KinesisStreamStartingPosition
+   * @schema CfnKinesisShipperModulePropsParameters#KinesisStreamStartingPosition
    */
-  readonly kinesisStreamStartingPosition?: CfnModulePropsParametersKinesisStreamStartingPosition;
+  readonly kinesisStreamStartingPosition?: CfnKinesisShipperModulePropsParametersKinesisStreamStartingPosition;
 
   /**
    * The log type you'll use with this Lambda. Please note that you should create a new Lambda for each log type you use. This can be a built-in log type, or your custom log type
    *
-   * @schema CfnModulePropsParameters#LogzioTYPE
+   * @schema CfnKinesisShipperModulePropsParameters#LogzioTYPE
    */
-  readonly logzioType?: CfnModulePropsParametersLogzioType;
+  readonly logzioType?: CfnKinesisShipperModulePropsParametersLogzioType;
 
   /**
    * Enter a Kinesis stream to listen for updates on.
    *
-   * @schema CfnModulePropsParameters#KinesisStream
+   * @schema CfnKinesisShipperModulePropsParameters#KinesisStream
    */
-  readonly kinesisStream?: CfnModulePropsParametersKinesisStream;
+  readonly kinesisStream?: CfnKinesisShipperModulePropsParametersKinesisStream;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParameters' to JSON representation.
+ * Converts an object of type 'CfnKinesisShipperModulePropsParameters' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParameters(obj: CfnModulePropsParameters | undefined): Record<string, any> | undefined {
+export function toJson_CfnKinesisShipperModulePropsParameters(obj: CfnKinesisShipperModulePropsParameters | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'LogzioTOKEN': toJson_CfnModulePropsParametersLogzioToken(obj.logzioToken),
-    'LogzioFORMAT': toJson_CfnModulePropsParametersLogzioFormat(obj.logzioFormat),
-    'LogzioREGION': toJson_CfnModulePropsParametersLogzioRegion(obj.logzioRegion),
-    'LogzioCOMPRESS': toJson_CfnModulePropsParametersLogzioCompress(obj.logzioCompress),
-    'LogzioMessagesArray': toJson_CfnModulePropsParametersLogzioMessagesArray(obj.logzioMessagesArray),
-    'KinesisStreamBatchSize': toJson_CfnModulePropsParametersKinesisStreamBatchSize(obj.kinesisStreamBatchSize),
-    'LogzioURL': toJson_CfnModulePropsParametersLogzioUrl(obj.logzioUrl),
-    'KinesisStreamStartingPosition': toJson_CfnModulePropsParametersKinesisStreamStartingPosition(obj.kinesisStreamStartingPosition),
-    'LogzioTYPE': toJson_CfnModulePropsParametersLogzioType(obj.logzioType),
-    'KinesisStream': toJson_CfnModulePropsParametersKinesisStream(obj.kinesisStream),
+    'LogzioTOKEN': toJson_CfnKinesisShipperModulePropsParametersLogzioToken(obj.logzioToken),
+    'LogzioFORMAT': toJson_CfnKinesisShipperModulePropsParametersLogzioFormat(obj.logzioFormat),
+    'LogzioREGION': toJson_CfnKinesisShipperModulePropsParametersLogzioRegion(obj.logzioRegion),
+    'LogzioCOMPRESS': toJson_CfnKinesisShipperModulePropsParametersLogzioCompress(obj.logzioCompress),
+    'LogzioMessagesArray': toJson_CfnKinesisShipperModulePropsParametersLogzioMessagesArray(obj.logzioMessagesArray),
+    'KinesisStreamBatchSize': toJson_CfnKinesisShipperModulePropsParametersKinesisStreamBatchSize(obj.kinesisStreamBatchSize),
+    'LogzioURL': toJson_CfnKinesisShipperModulePropsParametersLogzioUrl(obj.logzioUrl),
+    'KinesisStreamStartingPosition': toJson_CfnKinesisShipperModulePropsParametersKinesisStreamStartingPosition(obj.kinesisStreamStartingPosition),
+    'LogzioTYPE': toJson_CfnKinesisShipperModulePropsParametersLogzioType(obj.logzioType),
+    'KinesisStream': toJson_CfnKinesisShipperModulePropsParametersKinesisStream(obj.kinesisStream),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -134,36 +134,36 @@ export function toJson_CfnModulePropsParameters(obj: CfnModulePropsParameters | 
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResources
+ * @schema CfnKinesisShipperModulePropsResources
  */
-export interface CfnModulePropsResources {
+export interface CfnKinesisShipperModulePropsResources {
   /**
-   * @schema CfnModulePropsResources#LogzioKinesisLambda
+   * @schema CfnKinesisShipperModulePropsResources#LogzioKinesisLambda
    */
-  readonly logzioKinesisLambda?: CfnModulePropsResourcesLogzioKinesisLambda;
+  readonly logzioKinesisLambda?: CfnKinesisShipperModulePropsResourcesLogzioKinesisLambda;
 
   /**
-   * @schema CfnModulePropsResources#LogzioKinesisLambdaRole
+   * @schema CfnKinesisShipperModulePropsResources#LogzioKinesisLambdaRole
    */
-  readonly logzioKinesisLambdaRole?: CfnModulePropsResourcesLogzioKinesisLambdaRole;
+  readonly logzioKinesisLambdaRole?: CfnKinesisShipperModulePropsResourcesLogzioKinesisLambdaRole;
 
   /**
-   * @schema CfnModulePropsResources#LogzioKinesisLambdaKinesisStream
+   * @schema CfnKinesisShipperModulePropsResources#LogzioKinesisLambdaKinesisStream
    */
-  readonly logzioKinesisLambdaKinesisStream?: CfnModulePropsResourcesLogzioKinesisLambdaKinesisStream;
+  readonly logzioKinesisLambdaKinesisStream?: CfnKinesisShipperModulePropsResourcesLogzioKinesisLambdaKinesisStream;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResources' to JSON representation.
+ * Converts an object of type 'CfnKinesisShipperModulePropsResources' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResources(obj: CfnModulePropsResources | undefined): Record<string, any> | undefined {
+export function toJson_CfnKinesisShipperModulePropsResources(obj: CfnKinesisShipperModulePropsResources | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'LogzioKinesisLambda': toJson_CfnModulePropsResourcesLogzioKinesisLambda(obj.logzioKinesisLambda),
-    'LogzioKinesisLambdaRole': toJson_CfnModulePropsResourcesLogzioKinesisLambdaRole(obj.logzioKinesisLambdaRole),
-    'LogzioKinesisLambdaKinesisStream': toJson_CfnModulePropsResourcesLogzioKinesisLambdaKinesisStream(obj.logzioKinesisLambdaKinesisStream),
+    'LogzioKinesisLambda': toJson_CfnKinesisShipperModulePropsResourcesLogzioKinesisLambda(obj.logzioKinesisLambda),
+    'LogzioKinesisLambdaRole': toJson_CfnKinesisShipperModulePropsResourcesLogzioKinesisLambdaRole(obj.logzioKinesisLambdaRole),
+    'LogzioKinesisLambdaKinesisStream': toJson_CfnKinesisShipperModulePropsResourcesLogzioKinesisLambdaKinesisStream(obj.logzioKinesisLambdaKinesisStream),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -173,26 +173,26 @@ export function toJson_CfnModulePropsResources(obj: CfnModulePropsResources | un
 /**
  * The token of the account you want to ship to. Can be found at https://app.logz.io/#/dashboard/settings/general
  *
- * @schema CfnModulePropsParametersLogzioToken
+ * @schema CfnKinesisShipperModulePropsParametersLogzioToken
  */
-export interface CfnModulePropsParametersLogzioToken {
+export interface CfnKinesisShipperModulePropsParametersLogzioToken {
   /**
-   * @schema CfnModulePropsParametersLogzioToken#Type
+   * @schema CfnKinesisShipperModulePropsParametersLogzioToken#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersLogzioToken#Description
+   * @schema CfnKinesisShipperModulePropsParametersLogzioToken#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersLogzioToken' to JSON representation.
+ * Converts an object of type 'CfnKinesisShipperModulePropsParametersLogzioToken' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersLogzioToken(obj: CfnModulePropsParametersLogzioToken | undefined): Record<string, any> | undefined {
+export function toJson_CfnKinesisShipperModulePropsParametersLogzioToken(obj: CfnKinesisShipperModulePropsParametersLogzioToken | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -206,26 +206,26 @@ export function toJson_CfnModulePropsParametersLogzioToken(obj: CfnModulePropsPa
 /**
  * json or text. If json, the lambda function will attempt to parse the message field as JSON and populate the event data with the parsed fields.
  *
- * @schema CfnModulePropsParametersLogzioFormat
+ * @schema CfnKinesisShipperModulePropsParametersLogzioFormat
  */
-export interface CfnModulePropsParametersLogzioFormat {
+export interface CfnKinesisShipperModulePropsParametersLogzioFormat {
   /**
-   * @schema CfnModulePropsParametersLogzioFormat#Type
+   * @schema CfnKinesisShipperModulePropsParametersLogzioFormat#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersLogzioFormat#Description
+   * @schema CfnKinesisShipperModulePropsParametersLogzioFormat#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersLogzioFormat' to JSON representation.
+ * Converts an object of type 'CfnKinesisShipperModulePropsParametersLogzioFormat' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersLogzioFormat(obj: CfnModulePropsParametersLogzioFormat | undefined): Record<string, any> | undefined {
+export function toJson_CfnKinesisShipperModulePropsParametersLogzioFormat(obj: CfnKinesisShipperModulePropsParametersLogzioFormat | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -239,26 +239,26 @@ export function toJson_CfnModulePropsParametersLogzioFormat(obj: CfnModulePropsP
 /**
  * Two-letter region code, or blank for US East (Northern Virginia). This determines your listener URL (where you're shipping the logs to) and API URL. You can find your region code in the Regions and URLs at https://docs.logz.io/user-guide/accounts/account-region.html#regions-and-urls table
  *
- * @schema CfnModulePropsParametersLogzioRegion
+ * @schema CfnKinesisShipperModulePropsParametersLogzioRegion
  */
-export interface CfnModulePropsParametersLogzioRegion {
+export interface CfnKinesisShipperModulePropsParametersLogzioRegion {
   /**
-   * @schema CfnModulePropsParametersLogzioRegion#Type
+   * @schema CfnKinesisShipperModulePropsParametersLogzioRegion#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersLogzioRegion#Description
+   * @schema CfnKinesisShipperModulePropsParametersLogzioRegion#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersLogzioRegion' to JSON representation.
+ * Converts an object of type 'CfnKinesisShipperModulePropsParametersLogzioRegion' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersLogzioRegion(obj: CfnModulePropsParametersLogzioRegion | undefined): Record<string, any> | undefined {
+export function toJson_CfnKinesisShipperModulePropsParametersLogzioRegion(obj: CfnKinesisShipperModulePropsParametersLogzioRegion | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -272,26 +272,26 @@ export function toJson_CfnModulePropsParametersLogzioRegion(obj: CfnModulePropsP
 /**
  * If true, the Lambda will send compressed logs. If false, the Lambda will send uncompressed logs.
  *
- * @schema CfnModulePropsParametersLogzioCompress
+ * @schema CfnKinesisShipperModulePropsParametersLogzioCompress
  */
-export interface CfnModulePropsParametersLogzioCompress {
+export interface CfnKinesisShipperModulePropsParametersLogzioCompress {
   /**
-   * @schema CfnModulePropsParametersLogzioCompress#Type
+   * @schema CfnKinesisShipperModulePropsParametersLogzioCompress#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersLogzioCompress#Description
+   * @schema CfnKinesisShipperModulePropsParametersLogzioCompress#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersLogzioCompress' to JSON representation.
+ * Converts an object of type 'CfnKinesisShipperModulePropsParametersLogzioCompress' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersLogzioCompress(obj: CfnModulePropsParametersLogzioCompress | undefined): Record<string, any> | undefined {
+export function toJson_CfnKinesisShipperModulePropsParametersLogzioCompress(obj: CfnKinesisShipperModulePropsParametersLogzioCompress | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -305,26 +305,26 @@ export function toJson_CfnModulePropsParametersLogzioCompress(obj: CfnModuleProp
 /**
  * Set this ENV variable to split the a record into multiple logs based on a field containing an array of messages. For more information see https://github.com/logzio/logzio_aws_serverless/blob/master/python3/kinesis/parse-json-array.md. Note: This option would work only if you set FORMAT to json.
  *
- * @schema CfnModulePropsParametersLogzioMessagesArray
+ * @schema CfnKinesisShipperModulePropsParametersLogzioMessagesArray
  */
-export interface CfnModulePropsParametersLogzioMessagesArray {
+export interface CfnKinesisShipperModulePropsParametersLogzioMessagesArray {
   /**
-   * @schema CfnModulePropsParametersLogzioMessagesArray#Type
+   * @schema CfnKinesisShipperModulePropsParametersLogzioMessagesArray#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersLogzioMessagesArray#Description
+   * @schema CfnKinesisShipperModulePropsParametersLogzioMessagesArray#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersLogzioMessagesArray' to JSON representation.
+ * Converts an object of type 'CfnKinesisShipperModulePropsParametersLogzioMessagesArray' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersLogzioMessagesArray(obj: CfnModulePropsParametersLogzioMessagesArray | undefined): Record<string, any> | undefined {
+export function toJson_CfnKinesisShipperModulePropsParametersLogzioMessagesArray(obj: CfnKinesisShipperModulePropsParametersLogzioMessagesArray | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -338,26 +338,26 @@ export function toJson_CfnModulePropsParametersLogzioMessagesArray(obj: CfnModul
 /**
  * The largest number of records that will be read from your stream at once.
  *
- * @schema CfnModulePropsParametersKinesisStreamBatchSize
+ * @schema CfnKinesisShipperModulePropsParametersKinesisStreamBatchSize
  */
-export interface CfnModulePropsParametersKinesisStreamBatchSize {
+export interface CfnKinesisShipperModulePropsParametersKinesisStreamBatchSize {
   /**
-   * @schema CfnModulePropsParametersKinesisStreamBatchSize#Type
+   * @schema CfnKinesisShipperModulePropsParametersKinesisStreamBatchSize#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersKinesisStreamBatchSize#Description
+   * @schema CfnKinesisShipperModulePropsParametersKinesisStreamBatchSize#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersKinesisStreamBatchSize' to JSON representation.
+ * Converts an object of type 'CfnKinesisShipperModulePropsParametersKinesisStreamBatchSize' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersKinesisStreamBatchSize(obj: CfnModulePropsParametersKinesisStreamBatchSize | undefined): Record<string, any> | undefined {
+export function toJson_CfnKinesisShipperModulePropsParametersKinesisStreamBatchSize(obj: CfnKinesisShipperModulePropsParametersKinesisStreamBatchSize | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -371,26 +371,26 @@ export function toJson_CfnModulePropsParametersKinesisStreamBatchSize(obj: CfnMo
 /**
  * Deprecated. Use LogzioREGION instead
  *
- * @schema CfnModulePropsParametersLogzioUrl
+ * @schema CfnKinesisShipperModulePropsParametersLogzioUrl
  */
-export interface CfnModulePropsParametersLogzioUrl {
+export interface CfnKinesisShipperModulePropsParametersLogzioUrl {
   /**
-   * @schema CfnModulePropsParametersLogzioUrl#Type
+   * @schema CfnKinesisShipperModulePropsParametersLogzioUrl#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersLogzioUrl#Description
+   * @schema CfnKinesisShipperModulePropsParametersLogzioUrl#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersLogzioUrl' to JSON representation.
+ * Converts an object of type 'CfnKinesisShipperModulePropsParametersLogzioUrl' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersLogzioUrl(obj: CfnModulePropsParametersLogzioUrl | undefined): Record<string, any> | undefined {
+export function toJson_CfnKinesisShipperModulePropsParametersLogzioUrl(obj: CfnKinesisShipperModulePropsParametersLogzioUrl | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -404,26 +404,26 @@ export function toJson_CfnModulePropsParametersLogzioUrl(obj: CfnModulePropsPara
 /**
  * The position in the stream to start reading from. For more information, see ShardIteratorType in the Amazon Kinesis API Reference.
  *
- * @schema CfnModulePropsParametersKinesisStreamStartingPosition
+ * @schema CfnKinesisShipperModulePropsParametersKinesisStreamStartingPosition
  */
-export interface CfnModulePropsParametersKinesisStreamStartingPosition {
+export interface CfnKinesisShipperModulePropsParametersKinesisStreamStartingPosition {
   /**
-   * @schema CfnModulePropsParametersKinesisStreamStartingPosition#Type
+   * @schema CfnKinesisShipperModulePropsParametersKinesisStreamStartingPosition#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersKinesisStreamStartingPosition#Description
+   * @schema CfnKinesisShipperModulePropsParametersKinesisStreamStartingPosition#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersKinesisStreamStartingPosition' to JSON representation.
+ * Converts an object of type 'CfnKinesisShipperModulePropsParametersKinesisStreamStartingPosition' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersKinesisStreamStartingPosition(obj: CfnModulePropsParametersKinesisStreamStartingPosition | undefined): Record<string, any> | undefined {
+export function toJson_CfnKinesisShipperModulePropsParametersKinesisStreamStartingPosition(obj: CfnKinesisShipperModulePropsParametersKinesisStreamStartingPosition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -437,26 +437,26 @@ export function toJson_CfnModulePropsParametersKinesisStreamStartingPosition(obj
 /**
  * The log type you'll use with this Lambda. Please note that you should create a new Lambda for each log type you use. This can be a built-in log type, or your custom log type
  *
- * @schema CfnModulePropsParametersLogzioType
+ * @schema CfnKinesisShipperModulePropsParametersLogzioType
  */
-export interface CfnModulePropsParametersLogzioType {
+export interface CfnKinesisShipperModulePropsParametersLogzioType {
   /**
-   * @schema CfnModulePropsParametersLogzioType#Type
+   * @schema CfnKinesisShipperModulePropsParametersLogzioType#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersLogzioType#Description
+   * @schema CfnKinesisShipperModulePropsParametersLogzioType#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersLogzioType' to JSON representation.
+ * Converts an object of type 'CfnKinesisShipperModulePropsParametersLogzioType' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersLogzioType(obj: CfnModulePropsParametersLogzioType | undefined): Record<string, any> | undefined {
+export function toJson_CfnKinesisShipperModulePropsParametersLogzioType(obj: CfnKinesisShipperModulePropsParametersLogzioType | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -470,26 +470,26 @@ export function toJson_CfnModulePropsParametersLogzioType(obj: CfnModulePropsPar
 /**
  * Enter a Kinesis stream to listen for updates on.
  *
- * @schema CfnModulePropsParametersKinesisStream
+ * @schema CfnKinesisShipperModulePropsParametersKinesisStream
  */
-export interface CfnModulePropsParametersKinesisStream {
+export interface CfnKinesisShipperModulePropsParametersKinesisStream {
   /**
-   * @schema CfnModulePropsParametersKinesisStream#Type
+   * @schema CfnKinesisShipperModulePropsParametersKinesisStream#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersKinesisStream#Description
+   * @schema CfnKinesisShipperModulePropsParametersKinesisStream#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersKinesisStream' to JSON representation.
+ * Converts an object of type 'CfnKinesisShipperModulePropsParametersKinesisStream' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersKinesisStream(obj: CfnModulePropsParametersKinesisStream | undefined): Record<string, any> | undefined {
+export function toJson_CfnKinesisShipperModulePropsParametersKinesisStream(obj: CfnKinesisShipperModulePropsParametersKinesisStream | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -501,26 +501,26 @@ export function toJson_CfnModulePropsParametersKinesisStream(obj: CfnModuleProps
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesLogzioKinesisLambda
+ * @schema CfnKinesisShipperModulePropsResourcesLogzioKinesisLambda
  */
-export interface CfnModulePropsResourcesLogzioKinesisLambda {
+export interface CfnKinesisShipperModulePropsResourcesLogzioKinesisLambda {
   /**
-   * @schema CfnModulePropsResourcesLogzioKinesisLambda#Type
+   * @schema CfnKinesisShipperModulePropsResourcesLogzioKinesisLambda#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesLogzioKinesisLambda#Properties
+   * @schema CfnKinesisShipperModulePropsResourcesLogzioKinesisLambda#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesLogzioKinesisLambda' to JSON representation.
+ * Converts an object of type 'CfnKinesisShipperModulePropsResourcesLogzioKinesisLambda' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesLogzioKinesisLambda(obj: CfnModulePropsResourcesLogzioKinesisLambda | undefined): Record<string, any> | undefined {
+export function toJson_CfnKinesisShipperModulePropsResourcesLogzioKinesisLambda(obj: CfnKinesisShipperModulePropsResourcesLogzioKinesisLambda | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -532,26 +532,26 @@ export function toJson_CfnModulePropsResourcesLogzioKinesisLambda(obj: CfnModule
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesLogzioKinesisLambdaRole
+ * @schema CfnKinesisShipperModulePropsResourcesLogzioKinesisLambdaRole
  */
-export interface CfnModulePropsResourcesLogzioKinesisLambdaRole {
+export interface CfnKinesisShipperModulePropsResourcesLogzioKinesisLambdaRole {
   /**
-   * @schema CfnModulePropsResourcesLogzioKinesisLambdaRole#Type
+   * @schema CfnKinesisShipperModulePropsResourcesLogzioKinesisLambdaRole#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesLogzioKinesisLambdaRole#Properties
+   * @schema CfnKinesisShipperModulePropsResourcesLogzioKinesisLambdaRole#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesLogzioKinesisLambdaRole' to JSON representation.
+ * Converts an object of type 'CfnKinesisShipperModulePropsResourcesLogzioKinesisLambdaRole' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesLogzioKinesisLambdaRole(obj: CfnModulePropsResourcesLogzioKinesisLambdaRole | undefined): Record<string, any> | undefined {
+export function toJson_CfnKinesisShipperModulePropsResourcesLogzioKinesisLambdaRole(obj: CfnKinesisShipperModulePropsResourcesLogzioKinesisLambdaRole | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -563,26 +563,26 @@ export function toJson_CfnModulePropsResourcesLogzioKinesisLambdaRole(obj: CfnMo
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesLogzioKinesisLambdaKinesisStream
+ * @schema CfnKinesisShipperModulePropsResourcesLogzioKinesisLambdaKinesisStream
  */
-export interface CfnModulePropsResourcesLogzioKinesisLambdaKinesisStream {
+export interface CfnKinesisShipperModulePropsResourcesLogzioKinesisLambdaKinesisStream {
   /**
-   * @schema CfnModulePropsResourcesLogzioKinesisLambdaKinesisStream#Type
+   * @schema CfnKinesisShipperModulePropsResourcesLogzioKinesisLambdaKinesisStream#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesLogzioKinesisLambdaKinesisStream#Properties
+   * @schema CfnKinesisShipperModulePropsResourcesLogzioKinesisLambdaKinesisStream#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesLogzioKinesisLambdaKinesisStream' to JSON representation.
+ * Converts an object of type 'CfnKinesisShipperModulePropsResourcesLogzioKinesisLambdaKinesisStream' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesLogzioKinesisLambdaKinesisStream(obj: CfnModulePropsResourcesLogzioKinesisLambdaKinesisStream | undefined): Record<string, any> | undefined {
+export function toJson_CfnKinesisShipperModulePropsResourcesLogzioKinesisLambdaKinesisStream(obj: CfnKinesisShipperModulePropsResourcesLogzioKinesisLambdaKinesisStream | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -601,7 +601,7 @@ export function toJson_CfnModulePropsResourcesLogzioKinesisLambdaKinesisStream(o
  * @stability external
  * @link http://unknown-url
  */
-export class CfnModule extends cdk.CfnResource {
+export class CfnKinesisShipperModule extends cdk.CfnResource {
   /**
   * The CloudFormation resource type name for this resource class.
   */
@@ -610,7 +610,7 @@ export class CfnModule extends cdk.CfnResource {
   /**
    * Resource props.
    */
-  public readonly props: CfnModuleProps;
+  public readonly props: CfnKinesisShipperModuleProps;
 
 
   /**
@@ -620,8 +620,8 @@ export class CfnModule extends cdk.CfnResource {
    * @param id    - scoped id of the resource
    * @param props - resource properties
    */
-  constructor(scope: cdk.Construct, id: string, props: CfnModuleProps) {
-    super(scope, id, { type: CfnModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnModuleProps(props)! });
+  constructor(scope: cdk.Construct, id: string, props: CfnKinesisShipperModuleProps) {
+    super(scope, id, { type: CfnKinesisShipperModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnKinesisShipperModuleProps(props)! });
 
     this.props = props;
 

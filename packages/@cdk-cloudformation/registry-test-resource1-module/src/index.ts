@@ -4,30 +4,30 @@ import * as cdk from '@aws-cdk/core';
 /**
  * Schema for Module Fragment of type REGISTRY::TEST::RESOURCE::MODULE
  *
- * @schema CfnModuleProps
+ * @schema CfnResource1ModuleProps
  */
-export interface CfnModuleProps {
+export interface CfnResource1ModuleProps {
   /**
-   * @schema CfnModuleProps#Parameters
+   * @schema CfnResource1ModuleProps#Parameters
    */
-  readonly parameters?: CfnModulePropsParameters;
+  readonly parameters?: CfnResource1ModulePropsParameters;
 
   /**
-   * @schema CfnModuleProps#Resources
+   * @schema CfnResource1ModuleProps#Resources
    */
-  readonly resources?: CfnModulePropsResources;
+  readonly resources?: CfnResource1ModulePropsResources;
 
 }
 
 /**
- * Converts an object of type 'CfnModuleProps' to JSON representation.
+ * Converts an object of type 'CfnResource1ModuleProps' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModuleProps(obj: CfnModuleProps | undefined): Record<string, any> | undefined {
+export function toJson_CfnResource1ModuleProps(obj: CfnResource1ModuleProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'Parameters': toJson_CfnModulePropsParameters(obj.parameters),
-    'Resources': toJson_CfnModulePropsResources(obj.resources),
+    'Parameters': toJson_CfnResource1ModulePropsParameters(obj.parameters),
+    'Resources': toJson_CfnResource1ModulePropsResources(obj.resources),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -35,26 +35,26 @@ export function toJson_CfnModuleProps(obj: CfnModuleProps | undefined): Record<s
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsParameters
+ * @schema CfnResource1ModulePropsParameters
  */
-export interface CfnModulePropsParameters {
+export interface CfnResource1ModulePropsParameters {
   /**
    * Name for the bucket
    *
-   * @schema CfnModulePropsParameters#BucketName
+   * @schema CfnResource1ModulePropsParameters#BucketName
    */
-  readonly bucketName?: CfnModulePropsParametersBucketName;
+  readonly bucketName?: CfnResource1ModulePropsParametersBucketName;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParameters' to JSON representation.
+ * Converts an object of type 'CfnResource1ModulePropsParameters' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParameters(obj: CfnModulePropsParameters | undefined): Record<string, any> | undefined {
+export function toJson_CfnResource1ModulePropsParameters(obj: CfnResource1ModulePropsParameters | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'BucketName': toJson_CfnModulePropsParametersBucketName(obj.bucketName),
+    'BucketName': toJson_CfnResource1ModulePropsParametersBucketName(obj.bucketName),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -62,24 +62,24 @@ export function toJson_CfnModulePropsParameters(obj: CfnModulePropsParameters | 
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResources
+ * @schema CfnResource1ModulePropsResources
  */
-export interface CfnModulePropsResources {
+export interface CfnResource1ModulePropsResources {
   /**
-   * @schema CfnModulePropsResources#S3Bucket
+   * @schema CfnResource1ModulePropsResources#S3Bucket
    */
-  readonly s3Bucket?: CfnModulePropsResourcesS3Bucket;
+  readonly s3Bucket?: CfnResource1ModulePropsResourcesS3Bucket;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResources' to JSON representation.
+ * Converts an object of type 'CfnResource1ModulePropsResources' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResources(obj: CfnModulePropsResources | undefined): Record<string, any> | undefined {
+export function toJson_CfnResource1ModulePropsResources(obj: CfnResource1ModulePropsResources | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'S3Bucket': toJson_CfnModulePropsResourcesS3Bucket(obj.s3Bucket),
+    'S3Bucket': toJson_CfnResource1ModulePropsResourcesS3Bucket(obj.s3Bucket),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -89,26 +89,26 @@ export function toJson_CfnModulePropsResources(obj: CfnModulePropsResources | un
 /**
  * Name for the bucket
  *
- * @schema CfnModulePropsParametersBucketName
+ * @schema CfnResource1ModulePropsParametersBucketName
  */
-export interface CfnModulePropsParametersBucketName {
+export interface CfnResource1ModulePropsParametersBucketName {
   /**
-   * @schema CfnModulePropsParametersBucketName#Type
+   * @schema CfnResource1ModulePropsParametersBucketName#Type
    */
   readonly type: string;
 
   /**
-   * @schema CfnModulePropsParametersBucketName#Description
+   * @schema CfnResource1ModulePropsParametersBucketName#Description
    */
   readonly description: string;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsParametersBucketName' to JSON representation.
+ * Converts an object of type 'CfnResource1ModulePropsParametersBucketName' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsParametersBucketName(obj: CfnModulePropsParametersBucketName | undefined): Record<string, any> | undefined {
+export function toJson_CfnResource1ModulePropsParametersBucketName(obj: CfnResource1ModulePropsParametersBucketName | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -120,26 +120,26 @@ export function toJson_CfnModulePropsParametersBucketName(obj: CfnModulePropsPar
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnModulePropsResourcesS3Bucket
+ * @schema CfnResource1ModulePropsResourcesS3Bucket
  */
-export interface CfnModulePropsResourcesS3Bucket {
+export interface CfnResource1ModulePropsResourcesS3Bucket {
   /**
-   * @schema CfnModulePropsResourcesS3Bucket#Type
+   * @schema CfnResource1ModulePropsResourcesS3Bucket#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnModulePropsResourcesS3Bucket#Properties
+   * @schema CfnResource1ModulePropsResourcesS3Bucket#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnModulePropsResourcesS3Bucket' to JSON representation.
+ * Converts an object of type 'CfnResource1ModulePropsResourcesS3Bucket' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnModulePropsResourcesS3Bucket(obj: CfnModulePropsResourcesS3Bucket | undefined): Record<string, any> | undefined {
+export function toJson_CfnResource1ModulePropsResourcesS3Bucket(obj: CfnResource1ModulePropsResourcesS3Bucket | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,
@@ -158,7 +158,7 @@ export function toJson_CfnModulePropsResourcesS3Bucket(obj: CfnModulePropsResour
  * @stability external
  * @link http://unknown-url
  */
-export class CfnModule extends cdk.CfnResource {
+export class CfnResource1Module extends cdk.CfnResource {
   /**
   * The CloudFormation resource type name for this resource class.
   */
@@ -167,7 +167,7 @@ export class CfnModule extends cdk.CfnResource {
   /**
    * Resource props.
    */
-  public readonly props: CfnModuleProps;
+  public readonly props: CfnResource1ModuleProps;
 
 
   /**
@@ -177,8 +177,8 @@ export class CfnModule extends cdk.CfnResource {
    * @param id    - scoped id of the resource
    * @param props - resource properties
    */
-  constructor(scope: cdk.Construct, id: string, props: CfnModuleProps) {
-    super(scope, id, { type: CfnModule.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnModuleProps(props)! });
+  constructor(scope: cdk.Construct, id: string, props: CfnResource1ModuleProps) {
+    super(scope, id, { type: CfnResource1Module.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnResource1ModuleProps(props)! });
 
     this.props = props;
 

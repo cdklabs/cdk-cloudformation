@@ -4,77 +4,77 @@ import * as cdk from '@aws-cdk/core';
 /**
  * Provides a S3 bucket object resource.
  *
- * @schema CfnS3bucketobjectProps
+ * @schema CfnS3BucketObjectProps
  */
-export interface CfnS3bucketobjectProps {
+export interface CfnS3BucketObjectProps {
   /**
    * The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, `bucket-owner-read`, and `bucket-owner-full-control`. Defaults to `private`.
    *
    * @default private`.
-   * @schema CfnS3bucketobjectProps#Acl
+   * @schema CfnS3BucketObjectProps#Acl
    */
   readonly acl?: string;
 
   /**
    * The name of the bucket to put the file in. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified.
    *
-   * @schema CfnS3bucketobjectProps#Bucket
+   * @schema CfnS3BucketObjectProps#Bucket
    */
   readonly bucket: string;
 
   /**
    * Whether or not to use [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html) for SSE-KMS.
    *
-   * @schema CfnS3bucketobjectProps#BucketKeyEnabled
+   * @schema CfnS3BucketObjectProps#BucketKeyEnabled
    */
   readonly bucketKeyEnabled?: boolean;
 
   /**
    * Specifies caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
    *
-   * @schema CfnS3bucketobjectProps#CacheControl
+   * @schema CfnS3BucketObjectProps#CacheControl
    */
   readonly cacheControl?: string;
 
   /**
    * Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.
    *
-   * @schema CfnS3bucketobjectProps#Content
+   * @schema CfnS3BucketObjectProps#Content
    */
   readonly content?: string;
 
   /**
    * Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for small content such as the result of the `gzipbase64` function with small text strings. For larger objects, use `source` to stream the content from a disk file.
    *
-   * @schema CfnS3bucketobjectProps#ContentBase64
+   * @schema CfnS3BucketObjectProps#ContentBase64
    */
   readonly contentBase64?: string;
 
   /**
    * Specifies presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
    *
-   * @schema CfnS3bucketobjectProps#ContentDisposition
+   * @schema CfnS3BucketObjectProps#ContentDisposition
    */
   readonly contentDisposition?: string;
 
   /**
    * Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
    *
-   * @schema CfnS3bucketobjectProps#ContentEncoding
+   * @schema CfnS3BucketObjectProps#ContentEncoding
    */
   readonly contentEncoding?: string;
 
   /**
    * The language the content is in e.g. en-US or en-GB.
    *
-   * @schema CfnS3bucketobjectProps#ContentLanguage
+   * @schema CfnS3BucketObjectProps#ContentLanguage
    */
   readonly contentLanguage?: string;
 
   /**
    * A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
    *
-   * @schema CfnS3bucketobjectProps#ContentType
+   * @schema CfnS3BucketObjectProps#ContentType
    */
   readonly contentType?: string;
 
@@ -82,7 +82,7 @@ export interface CfnS3bucketobjectProps {
    * Used to trigger updates. The only meaningful value is `${filemd5("path/to/file")}` (Terraform 0.11.12 or later) or `${md5(file("path/to/file"))}` (Terraform 0.11.11 or earlier).
    * This attribute is not compatible with KMS encryption, `kms_key_id` or `server_side_encryption = "aws:kms"`.
    *
-   * @schema CfnS3bucketobjectProps#Etag
+   * @schema CfnS3BucketObjectProps#Etag
    */
   readonly etag?: string;
 
@@ -91,14 +91,14 @@ export interface CfnS3bucketobjectProps {
    * Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
    *
    * @default false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
-   * @schema CfnS3bucketobjectProps#ForceDestroy
+   * @schema CfnS3BucketObjectProps#ForceDestroy
    */
   readonly forceDestroy?: boolean;
 
   /**
    * The name of the object once it is in the bucket.
    *
-   * @schema CfnS3bucketobjectProps#Key
+   * @schema CfnS3BucketObjectProps#Key
    */
   readonly key: string;
 
@@ -107,49 +107,49 @@ export interface CfnS3bucketobjectProps {
    * `aws_kms_key` resource, use the `arn` attribute. If referencing the `aws_kms_alias` data source or resource, use the `target_key_arn` attribute. Terraform will only perform drift detection if a configuration value
    * is provided.
    *
-   * @schema CfnS3bucketobjectProps#KmsKeyId
+   * @schema CfnS3BucketObjectProps#KmsKeyId
    */
   readonly kmsKeyId?: string;
 
   /**
    * A map of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
    *
-   * @schema CfnS3bucketobjectProps#Metadata
+   * @schema CfnS3BucketObjectProps#Metadata
    */
   readonly metadata?: MetadataDefinition[];
 
   /**
    * The [legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds) status that you want to apply to the specified object. Valid values are `ON` and `OFF`.
    *
-   * @schema CfnS3bucketobjectProps#ObjectLockLegalHoldStatus
+   * @schema CfnS3BucketObjectProps#ObjectLockLegalHoldStatus
    */
   readonly objectLockLegalHoldStatus?: string;
 
   /**
    * The object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) that you want to apply to this object. Valid values are `GOVERNANCE` and `COMPLIANCE`.
    *
-   * @schema CfnS3bucketobjectProps#ObjectLockMode
+   * @schema CfnS3BucketObjectProps#ObjectLockMode
    */
   readonly objectLockMode?: string;
 
   /**
    * The date and time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), when this object's object lock will [expire](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods).
    *
-   * @schema CfnS3bucketobjectProps#ObjectLockRetainUntilDate
+   * @schema CfnS3BucketObjectProps#ObjectLockRetainUntilDate
    */
   readonly objectLockRetainUntilDate?: string;
 
   /**
    * Specifies server-side encryption of the object in S3. Valid values are "`AES256`" and "`aws:kms`".
    *
-   * @schema CfnS3bucketobjectProps#ServerSideEncryption
+   * @schema CfnS3BucketObjectProps#ServerSideEncryption
    */
   readonly serverSideEncryption?: string;
 
   /**
    * The path to a file that will be read and uploaded as raw bytes for the object content.
    *
-   * @schema CfnS3bucketobjectProps#Source
+   * @schema CfnS3BucketObjectProps#Source
    */
   readonly source?: string;
 
@@ -158,36 +158,36 @@ export interface CfnS3bucketobjectProps {
    * for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA`", "`INTELLIGENT_TIERING`", "`GLACIER`", "`DEEP_ARCHIVE`", or "`STANDARD_IA`". Defaults to "`STANDARD`".
    *
    * @default STANDARD`".
-   * @schema CfnS3bucketobjectProps#StorageClass
+   * @schema CfnS3BucketObjectProps#StorageClass
    */
   readonly storageClass?: string;
 
   /**
    * A map of tags to assign to the object. If configured with a provider [`default_tags` configuration block](/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
    *
-   * @schema CfnS3bucketobjectProps#Tags
+   * @schema CfnS3BucketObjectProps#Tags
    */
   readonly tags?: TagsDefinition[];
 
   /**
-   * @schema CfnS3bucketobjectProps#TagsAll
+   * @schema CfnS3BucketObjectProps#TagsAll
    */
   readonly tagsAll?: TagsAllDefinition[];
 
   /**
    * Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
    *
-   * @schema CfnS3bucketobjectProps#WebsiteRedirect
+   * @schema CfnS3BucketObjectProps#WebsiteRedirect
    */
   readonly websiteRedirect?: string;
 
 }
 
 /**
- * Converts an object of type 'CfnS3bucketobjectProps' to JSON representation.
+ * Converts an object of type 'CfnS3BucketObjectProps' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnS3bucketobjectProps(obj: CfnS3bucketobjectProps | undefined): Record<string, any> | undefined {
+export function toJson_CfnS3BucketObjectProps(obj: CfnS3BucketObjectProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Acl': obj.acl,
@@ -321,7 +321,7 @@ export function toJson_TagsAllDefinition(obj: TagsAllDefinition | undefined): Re
  * @stability external
  * @link https://github.com/iann0036/cfn-tf-custom-types.git
  */
-export class CfnS3bucketobject extends cdk.CfnResource {
+export class CfnS3BucketObject extends cdk.CfnResource {
   /**
   * The CloudFormation resource type name for this resource class.
   */
@@ -330,7 +330,7 @@ export class CfnS3bucketobject extends cdk.CfnResource {
   /**
    * Resource props.
    */
-  public readonly props: CfnS3bucketobjectProps;
+  public readonly props: CfnS3BucketObjectProps;
 
   /**
    * Attribute `TF::AWS::S3BucketObject.tfcfnid`
@@ -355,8 +355,8 @@ export class CfnS3bucketobject extends cdk.CfnResource {
    * @param id    - scoped id of the resource
    * @param props - resource properties
    */
-  constructor(scope: cdk.Construct, id: string, props: CfnS3bucketobjectProps) {
-    super(scope, id, { type: CfnS3bucketobject.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnS3bucketobjectProps(props)! });
+  constructor(scope: cdk.Construct, id: string, props: CfnS3BucketObjectProps) {
+    super(scope, id, { type: CfnS3BucketObject.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnS3BucketObjectProps(props)! });
 
     this.props = props;
 

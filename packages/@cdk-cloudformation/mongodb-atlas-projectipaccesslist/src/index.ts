@@ -4,40 +4,40 @@ import * as cdk from '@aws-cdk/core';
 /**
  * An example resource schema demonstrating some basic constructs and validation rules.
  *
- * @schema CfnProjectipaccesslistProps
+ * @schema CfnProjectIpAccessListProps
  */
-export interface CfnProjectipaccesslistProps {
+export interface CfnProjectIpAccessListProps {
   /**
-   * @schema CfnProjectipaccesslistProps#AccessList
+   * @schema CfnProjectIpAccessListProps#AccessList
    */
   readonly accessList: AccessListDefinition[];
 
   /**
-   * @schema CfnProjectipaccesslistProps#ApiKeys
+   * @schema CfnProjectIpAccessListProps#ApiKeys
    */
   readonly apiKeys: ApiKeyDefinition;
 
   /**
    * The unique identifier for the project to which you want to add one or more ip access list entries.
    *
-   * @schema CfnProjectipaccesslistProps#ProjectId
+   * @schema CfnProjectIpAccessListProps#ProjectId
    */
   readonly projectId: string;
 
   /**
    * The unique identifier for the Project ip access list rules.
    *
-   * @schema CfnProjectipaccesslistProps#TotalCount
+   * @schema CfnProjectIpAccessListProps#TotalCount
    */
   readonly totalCount?: number;
 
 }
 
 /**
- * Converts an object of type 'CfnProjectipaccesslistProps' to JSON representation.
+ * Converts an object of type 'CfnProjectIpAccessListProps' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnProjectipaccesslistProps(obj: CfnProjectipaccesslistProps | undefined): Record<string, any> | undefined {
+export function toJson_CfnProjectIpAccessListProps(obj: CfnProjectIpAccessListProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'AccessList': obj.accessList?.map(y => toJson_AccessListDefinition(y)),
@@ -148,7 +148,7 @@ export function toJson_ApiKeyDefinition(obj: ApiKeyDefinition | undefined): Reco
  * @stability external
  * @link https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git
  */
-export class CfnProjectipaccesslist extends cdk.CfnResource {
+export class CfnProjectIpAccessList extends cdk.CfnResource {
   /**
   * The CloudFormation resource type name for this resource class.
   */
@@ -157,7 +157,7 @@ export class CfnProjectipaccesslist extends cdk.CfnResource {
   /**
    * Resource props.
    */
-  public readonly props: CfnProjectipaccesslistProps;
+  public readonly props: CfnProjectIpAccessListProps;
 
   /**
    * Attribute `MongoDB::Atlas::ProjectIpAccessList.Id`
@@ -172,8 +172,8 @@ export class CfnProjectipaccesslist extends cdk.CfnResource {
    * @param id    - scoped id of the resource
    * @param props - resource properties
    */
-  constructor(scope: cdk.Construct, id: string, props: CfnProjectipaccesslistProps) {
-    super(scope, id, { type: CfnProjectipaccesslist.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnProjectipaccesslistProps(props)! });
+  constructor(scope: cdk.Construct, id: string, props: CfnProjectIpAccessListProps) {
+    super(scope, id, { type: CfnProjectIpAccessList.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnProjectIpAccessListProps(props)! });
 
     this.props = props;
 

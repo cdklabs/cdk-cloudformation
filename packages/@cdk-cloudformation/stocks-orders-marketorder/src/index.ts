@@ -4,37 +4,37 @@ import * as cdk from '@aws-cdk/core';
 /**
  * A market order is a request to buy or sell a security at the currently available market price. The order to buy a security will be submitted on resource creation and the security will be sold (or the unfilled order cancelled) on resource deletion. Supported exchanges are AMEX, ARCA, BATS, NYSE, NASDAQ and NYSEARCA.
  *
- * @schema CfnMarketorderProps
+ * @schema CfnMarketOrderProps
  */
-export interface CfnMarketorderProps {
+export interface CfnMarketOrderProps {
   /**
    * The number of shares to buy.
    *
-   * @schema CfnMarketorderProps#Quantity
+   * @schema CfnMarketOrderProps#Quantity
    */
   readonly quantity: number;
 
   /**
    * The stock symbol to buy.
    *
-   * @schema CfnMarketorderProps#Symbol
+   * @schema CfnMarketOrderProps#Symbol
    */
   readonly symbol: string;
 
   /**
    * A fields for notes about the order. This field may also be used to force a resource update in order to retrieve the latest market value of the position.
    *
-   * @schema CfnMarketorderProps#Notes
+   * @schema CfnMarketOrderProps#Notes
    */
   readonly notes?: string;
 
 }
 
 /**
- * Converts an object of type 'CfnMarketorderProps' to JSON representation.
+ * Converts an object of type 'CfnMarketOrderProps' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnMarketorderProps(obj: CfnMarketorderProps | undefined): Record<string, any> | undefined {
+export function toJson_CfnMarketOrderProps(obj: CfnMarketOrderProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Quantity': obj.quantity,
@@ -54,7 +54,7 @@ export function toJson_CfnMarketorderProps(obj: CfnMarketorderProps | undefined)
  * @stability external
  * @link https://github.com/iann0036/cfn-types/tree/master/stocks-orders-marketorder
  */
-export class CfnMarketorder extends cdk.CfnResource {
+export class CfnMarketOrder extends cdk.CfnResource {
   /**
   * The CloudFormation resource type name for this resource class.
   */
@@ -63,7 +63,7 @@ export class CfnMarketorder extends cdk.CfnResource {
   /**
    * Resource props.
    */
-  public readonly props: CfnMarketorderProps;
+  public readonly props: CfnMarketOrderProps;
 
   /**
    * Attribute `Stocks::Orders::MarketOrder.Id`
@@ -98,8 +98,8 @@ export class CfnMarketorder extends cdk.CfnResource {
    * @param id    - scoped id of the resource
    * @param props - resource properties
    */
-  constructor(scope: cdk.Construct, id: string, props: CfnMarketorderProps) {
-    super(scope, id, { type: CfnMarketorder.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnMarketorderProps(props)! });
+  constructor(scope: cdk.Construct, id: string, props: CfnMarketOrderProps) {
+    super(scope, id, { type: CfnMarketOrder.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnMarketOrderProps(props)! });
 
     this.props = props;
 

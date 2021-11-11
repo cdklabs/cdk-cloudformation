@@ -4,93 +4,93 @@ import * as cdk from '@aws-cdk/core';
 /**
  * A resource provider for Aqua Enterprise KubeEnforcer.
  *
- * @schema CfnKubeenforcerProps
+ * @schema CfnKubeEnforcerProps
  */
-export interface CfnKubeenforcerProps {
+export interface CfnKubeEnforcerProps {
   /**
    * EKS cluster name
    *
-   * @schema CfnKubeenforcerProps#ClusterID
+   * @schema CfnKubeEnforcerProps#ClusterID
    */
   readonly clusterId?: string;
 
   /**
    * Secrets Manager ARN for kubeconfig file
    *
-   * @schema CfnKubeenforcerProps#KubeConfig
+   * @schema CfnKubeEnforcerProps#KubeConfig
    */
   readonly kubeConfig?: string;
 
   /**
    * IAM to use with EKS cluster authentication, if not resource execution role will be used
    *
-   * @schema CfnKubeenforcerProps#RoleArn
+   * @schema CfnKubeEnforcerProps#RoleArn
    */
   readonly roleArn?: string;
 
   /**
    * Namespace to use with helm. Created if doesn't exist and default will be used if not provided
    *
-   * @schema CfnKubeenforcerProps#Namespace
+   * @schema CfnKubeEnforcerProps#Namespace
    */
   readonly namespace?: string;
 
   /**
    * Name for the helm release
    *
-   * @schema CfnKubeenforcerProps#Name
+   * @schema CfnKubeEnforcerProps#Name
    */
   readonly name?: string;
 
   /**
    * Custom Values can optionally be specified
    *
-   * @schema CfnKubeenforcerProps#Values
+   * @schema CfnKubeEnforcerProps#Values
    */
   readonly values?: any;
 
   /**
    * String representation of a values.yaml file
    *
-   * @schema CfnKubeenforcerProps#ValueYaml
+   * @schema CfnKubeEnforcerProps#ValueYaml
    */
   readonly valueYaml?: string;
 
   /**
    * Version can be specified, if not latest will be used
    *
-   * @schema CfnKubeenforcerProps#Version
+   * @schema CfnKubeEnforcerProps#Version
    */
   readonly version?: string;
 
   /**
    * Custom Value Yaml file can optionally be specified
    *
-   * @schema CfnKubeenforcerProps#ValueOverrideURL
+   * @schema CfnKubeEnforcerProps#ValueOverrideURL
    */
   readonly valueOverrideUrl?: string;
 
   /**
    * Timeout for resource provider. Default 60 mins
    *
-   * @schema CfnKubeenforcerProps#TimeOut
+   * @schema CfnKubeEnforcerProps#TimeOut
    */
   readonly timeOut?: number;
 
   /**
    * For network connectivity to Cluster inside VPC
    *
-   * @schema CfnKubeenforcerProps#VPCConfiguration
+   * @schema CfnKubeEnforcerProps#VPCConfiguration
    */
-  readonly vpcConfiguration?: CfnKubeenforcerPropsVpcConfiguration;
+  readonly vpcConfiguration?: CfnKubeEnforcerPropsVpcConfiguration;
 
 }
 
 /**
- * Converts an object of type 'CfnKubeenforcerProps' to JSON representation.
+ * Converts an object of type 'CfnKubeEnforcerProps' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnKubeenforcerProps(obj: CfnKubeenforcerProps | undefined): Record<string, any> | undefined {
+export function toJson_CfnKubeEnforcerProps(obj: CfnKubeEnforcerProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'ClusterID': obj.clusterId,
@@ -103,7 +103,7 @@ export function toJson_CfnKubeenforcerProps(obj: CfnKubeenforcerProps | undefine
     'Version': obj.version,
     'ValueOverrideURL': obj.valueOverrideUrl,
     'TimeOut': obj.timeOut,
-    'VPCConfiguration': toJson_CfnKubeenforcerPropsVpcConfiguration(obj.vpcConfiguration),
+    'VPCConfiguration': toJson_CfnKubeEnforcerPropsVpcConfiguration(obj.vpcConfiguration),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -113,30 +113,30 @@ export function toJson_CfnKubeenforcerProps(obj: CfnKubeenforcerProps | undefine
 /**
  * For network connectivity to Cluster inside VPC
  *
- * @schema CfnKubeenforcerPropsVpcConfiguration
+ * @schema CfnKubeEnforcerPropsVpcConfiguration
  */
-export interface CfnKubeenforcerPropsVpcConfiguration {
+export interface CfnKubeEnforcerPropsVpcConfiguration {
   /**
    * Specify one or more security groups
    *
-   * @schema CfnKubeenforcerPropsVpcConfiguration#SecurityGroupIds
+   * @schema CfnKubeEnforcerPropsVpcConfiguration#SecurityGroupIds
    */
   readonly securityGroupIds?: string[];
 
   /**
    * Specify one or more subnets
    *
-   * @schema CfnKubeenforcerPropsVpcConfiguration#SubnetIds
+   * @schema CfnKubeEnforcerPropsVpcConfiguration#SubnetIds
    */
   readonly subnetIds?: string[];
 
 }
 
 /**
- * Converts an object of type 'CfnKubeenforcerPropsVpcConfiguration' to JSON representation.
+ * Converts an object of type 'CfnKubeEnforcerPropsVpcConfiguration' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnKubeenforcerPropsVpcConfiguration(obj: CfnKubeenforcerPropsVpcConfiguration | undefined): Record<string, any> | undefined {
+export function toJson_CfnKubeEnforcerPropsVpcConfiguration(obj: CfnKubeEnforcerPropsVpcConfiguration | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'SecurityGroupIds': obj.securityGroupIds?.map(y => y),
@@ -155,7 +155,7 @@ export function toJson_CfnKubeenforcerPropsVpcConfiguration(obj: CfnKubeenforcer
  * @stability external
  * @link https://github.com/aquasecurity/aqua-helm.git
  */
-export class CfnKubeenforcer extends cdk.CfnResource {
+export class CfnKubeEnforcer extends cdk.CfnResource {
   /**
   * The CloudFormation resource type name for this resource class.
   */
@@ -164,7 +164,7 @@ export class CfnKubeenforcer extends cdk.CfnResource {
   /**
    * Resource props.
    */
-  public readonly props: CfnKubeenforcerProps;
+  public readonly props: CfnKubeEnforcerProps;
 
   /**
    * Attribute `Aqua::Enterprise::KubeEnforcer.ID`
@@ -179,8 +179,8 @@ export class CfnKubeenforcer extends cdk.CfnResource {
    * @param id    - scoped id of the resource
    * @param props - resource properties
    */
-  constructor(scope: cdk.Construct, id: string, props: CfnKubeenforcerProps) {
-    super(scope, id, { type: CfnKubeenforcer.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnKubeenforcerProps(props)! });
+  constructor(scope: cdk.Construct, id: string, props: CfnKubeEnforcerProps) {
+    super(scope, id, { type: CfnKubeEnforcer.CFN_RESOURCE_TYPE_NAME, properties: toJson_CfnKubeEnforcerProps(props)! });
 
     this.props = props;
 

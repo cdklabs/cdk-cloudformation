@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/logzio-awssecurityhub-collector-module",
   "description": "Schema for Module Fragment of type logzio::awsSecurityHub::collector::MODULE",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.3",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -15,7 +15,13 @@
     "cfn",
     "extensions",
     "constructs",
-    "cfn-resources"
+    "cfn-resources",
+    "cloudformation-registry",
+    "l1",
+    "logzio",
+    "awssecurityhub",
+    "collector",
+    "module"
   ],
   "repository": {
     "type": "git",

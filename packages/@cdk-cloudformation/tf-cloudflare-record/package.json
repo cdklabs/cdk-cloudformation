@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/tf-cloudflare-record",
   "description": "Provides a Cloudflare record resource.",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.3",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -15,7 +15,12 @@
     "cfn",
     "extensions",
     "constructs",
-    "cfn-resources"
+    "cfn-resources",
+    "cloudformation-registry",
+    "l1",
+    "tf",
+    "cloudflare",
+    "record"
   ],
   "homepage": "https://github.com/iann0036/cfn-tf-custom-types/blob/docs/resources/cloudflare/TF-Cloudflare-Record/docs/README.md",
   "repository": {

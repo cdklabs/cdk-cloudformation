@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/logzio-autodeploymentlogzio-cloudwatch-module",
   "description": "Schema for Module Fragment of type logzio::autoDeploymentLogzio::CloudWatch::MODULE",
-  "version": "2.0.0-alpha.1",
+  "version": "2.0.0-alpha.3",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -15,7 +15,13 @@
     "cfn",
     "extensions",
     "constructs",
-    "cfn-resources"
+    "cfn-resources",
+    "cloudformation-registry",
+    "l1",
+    "logzio",
+    "autodeploymentlogzio",
+    "cloudwatch",
+    "module"
   ],
   "repository": {
     "type": "git",

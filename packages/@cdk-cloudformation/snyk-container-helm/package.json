@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/snyk-container-helm",
   "description": "Snyk integrates with Amazon EKS, enabling you to import and test your running workloads and identify vulnerabilities in their associated images and configurations that might make those workloads less secure. Once imported, Snyk continues to monitor those workloads, identifying additional security issues as new images are deployed and the workload configuration changes.",
-  "version": "1.2.0-alpha.1",
+  "version": "1.2.0-alpha.3",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -15,7 +15,12 @@
     "cfn",
     "extensions",
     "constructs",
-    "cfn-resources"
+    "cfn-resources",
+    "cloudformation-registry",
+    "l1",
+    "snyk",
+    "container",
+    "helm"
   ],
   "homepage": "https://github.com/snyk/aws-cloudformation-resource-providers/blob/main/snyk-container-helm/README.md",
   "repository": {

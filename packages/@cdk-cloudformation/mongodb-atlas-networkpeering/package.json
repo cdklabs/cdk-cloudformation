@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/mongodb-atlas-networkpeering",
   "description": "This resource allows to create, read, update and delete a network peering",
-  "version": "1.2.0-alpha.1",
+  "version": "1.2.0-alpha.3",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -15,7 +15,12 @@
     "cfn",
     "extensions",
     "constructs",
-    "cfn-resources"
+    "cfn-resources",
+    "cloudformation-registry",
+    "l1",
+    "mongodb",
+    "atlas",
+    "networkpeering"
   ],
   "repository": {
     "type": "git",

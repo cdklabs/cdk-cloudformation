@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/mongodb-atlas-databaseuser",
   "description": "The databaseUsers resource lets you retrieve, create and modify the MongoDB users in your cluster. Each user has a set of roles that provide access to the project?s databases. A user?s roles apply to all the clusters in the project: if two clusters have a products database and a user has a role granting read access on the products database, the user has that access on both clusters.",
-  "version": "1.3.0-alpha.1",
+  "version": "1.3.0-alpha.3",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -15,7 +15,12 @@
     "cfn",
     "extensions",
     "constructs",
-    "cfn-resources"
+    "cfn-resources",
+    "cloudformation-registry",
+    "l1",
+    "mongodb",
+    "atlas",
+    "databaseuser"
   ],
   "repository": {
     "type": "git",

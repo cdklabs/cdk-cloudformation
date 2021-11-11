@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/trendmicro-cloudonecontainer-helm",
   "description": "Deploys Trend Micro Cloud One Container Security into EKS clusters using helm.",
-  "version": "1.2.0-alpha.1",
+  "version": "1.2.0-alpha.3",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -15,7 +15,12 @@
     "cfn",
     "extensions",
     "constructs",
-    "cfn-resources"
+    "cfn-resources",
+    "cloudformation-registry",
+    "l1",
+    "trendmicro",
+    "cloudonecontainer",
+    "helm"
   ],
   "homepage": "https://github.com/trendmicro/cloudone-container-security-helm/blob/master/README.md",
   "repository": {

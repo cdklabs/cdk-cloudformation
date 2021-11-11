@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/datadog-monitors-monitor",
   "description": "Datadog Monitor 4.0.0",
-  "version": "4.0.0-alpha.1",
+  "version": "4.0.0-alpha.3",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -15,7 +15,12 @@
     "cfn",
     "extensions",
     "constructs",
-    "cfn-resources"
+    "cfn-resources",
+    "cloudformation-registry",
+    "l1",
+    "datadog",
+    "monitors",
+    "monitor"
   ],
   "repository": {
     "type": "git",

@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/atlassian-opsgenie-user",
   "description": "Opsgenie User",
-  "version": "1.0.1-alpha.1",
+  "version": "1.0.1-alpha.3",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -15,7 +15,12 @@
     "cfn",
     "extensions",
     "constructs",
-    "cfn-resources"
+    "cfn-resources",
+    "cloudformation-registry",
+    "l1",
+    "atlassian",
+    "opsgenie",
+    "user"
   ],
   "homepage": "https://github.com/opsgenie/opsgenie-cloudformation-resources",
   "repository": {

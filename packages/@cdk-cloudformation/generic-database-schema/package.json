@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/generic-database-schema",
   "description": "Uses the Aurora Data API to execute SQL and enforce a schema within a database cluster. Currently only supports Aurora Postgres.",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.3",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -15,7 +15,12 @@
     "cfn",
     "extensions",
     "constructs",
-    "cfn-resources"
+    "cfn-resources",
+    "cloudformation-registry",
+    "l1",
+    "generic",
+    "database",
+    "schema"
   ],
   "homepage": "https://github.com/iann0036/cfn-types/tree/master/generic-database-schema",
   "repository": {

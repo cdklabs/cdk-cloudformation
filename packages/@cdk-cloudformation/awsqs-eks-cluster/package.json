@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/awsqs-eks-cluster",
   "description": "A resource that creates Amazon Elastic Kubernetes Service (Amazon EKS) clusters.",
-  "version": "1.12.0-alpha.1",
+  "version": "1.12.0-alpha.3",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -15,7 +15,12 @@
     "cfn",
     "extensions",
     "constructs",
-    "cfn-resources"
+    "cfn-resources",
+    "cloudformation-registry",
+    "l1",
+    "awsqs",
+    "eks",
+    "cluster"
   ],
   "homepage": "https://github.com/aws-quickstart/quickstart-amazon-eks-cluster-resource-provider/blob/main/README.md",
   "repository": {

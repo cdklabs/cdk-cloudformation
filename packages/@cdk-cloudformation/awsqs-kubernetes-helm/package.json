@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/awsqs-kubernetes-helm",
   "description": "A resource provider for managing helm.",
-  "version": "1.11.0-alpha.1",
+  "version": "1.11.0-alpha.3",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -15,7 +15,12 @@
     "cfn",
     "extensions",
     "constructs",
-    "cfn-resources"
+    "cfn-resources",
+    "cloudformation-registry",
+    "l1",
+    "awsqs",
+    "kubernetes",
+    "helm"
   ],
   "homepage": "https://github.com/aws-quickstart/quickstart-helm-resource-provider/blob/main/README.md",
   "repository": {

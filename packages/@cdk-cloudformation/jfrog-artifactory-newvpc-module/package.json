@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/jfrog-artifactory-newvpc-module",
   "description": "Schema for Module Fragment of type JFrog::Artifactory::NewVpc::MODULE",
-  "version": "1.8.0-alpha.1",
+  "version": "1.8.0-alpha.3",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -15,7 +15,13 @@
     "cfn",
     "extensions",
     "constructs",
-    "cfn-resources"
+    "cfn-resources",
+    "cloudformation-registry",
+    "l1",
+    "jfrog",
+    "artifactory",
+    "newvpc",
+    "module"
   ],
   "repository": {
     "type": "git",

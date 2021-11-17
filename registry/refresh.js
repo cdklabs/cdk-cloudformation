@@ -21,6 +21,7 @@ async function main() {
       }
 
       const filename = await saveTypeInfo(type);
+      await sleep(1000); // sleep to avoid throttling
       console.log(filename);
     }
 
@@ -37,38 +38,10 @@ async function saveTypeInfo(type) {
   return filename;
 }
 
+async function sleep(ms) {
+  return new Promise(ok => setTimeout(ok, ms));
+}
+
 main().catch(e => {
   console.log(e);
 });
-
-// export function listCloudFormationTypes(): CloudFormationType[] {
-//   const results = new Array<CloudFormationType>();
-//   let nextToken = undefined;
-
-//   do {
-//     const args = [
-//       'cloudformation',
-//       'list-types',
-//       '--output', 'json',
-//       '--visibility', 'PUBLIC',
-//       '--region', REGION,
-//     ];
-
-//     if (nextToken) {
-//       args.push('--next-token', nextToken);
-//     }
-
-//     const result = spawnSync('aws', args);
-//     if (result.status !== 0) {
-//       throw new Error(`Failed to list CloudFormation types: ${result.stderr.toString()}`);
-//     }
-
-//     const response = JSON.parse(result.stdout.toString());
-
-//     nextToken = response.NextToken;
-
-//     results.push(...response.TypeSummaries);
-//   } while (nextToken);
-
-//   return results.filter(type => !shouldExclude(type.TypeArn));
-// }

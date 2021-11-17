@@ -59,6 +59,18 @@ export class UpdateRegistry extends Component {
           },
           { run: 'yarn install' },
           { run: this.project.runTaskCommand(task) },
+
+          // create a pull request
+          {
+            uses: 'actions/create-pull-request@v3',
+            with: {
+              'title': 'feat: cloudformation registry update',
+              'commit-message': 'feat: cloudformation registry update',
+              'branch': 'automation/update-registry',
+              'committer': 'GitHub Automation <noreply@github.com>',
+              'labels': 'auto-approve',
+            },
+          },
         ],
       },
     });

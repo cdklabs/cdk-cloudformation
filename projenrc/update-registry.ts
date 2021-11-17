@@ -62,7 +62,7 @@ export class UpdateRegistry extends Component {
 
           // create a pull request
           {
-            uses: 'actions/create-pull-request@v3',
+            uses: 'peter-evans/create-pull-request@v3',
             with: {
               'title': 'feat: cloudformation registry update',
               'commit-message': 'feat: cloudformation registry update',

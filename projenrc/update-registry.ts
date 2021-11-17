@@ -39,6 +39,9 @@ export class UpdateRegistry extends Component {
     }));
 
     const workflow = project.github?.addWorkflow('update-registry');
+    workflow?.on({
+      workflowDispatch: {},
+    });
     workflow?.addJobs({
       update: {
         permissions: {

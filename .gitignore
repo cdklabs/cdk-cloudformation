@@ -240,5 +240,7 @@ junit.xml
 /packages/@cdk-cloudformation/trendmicro-cloudonecontainer-helm/dist/
 /packages/@cdk-cloudformation/trendmicro-cloudonecontainer-helm/lib/
 !/.github/workflows/release-trendmicro-cloudonecontainer-helm.yml
+/.awscdk/
+!/.github/workflows/update-registry.yml
 !/.github/workflows/release.yml
 !/.github/workflows/upgrade-main.yml

@@ -68,6 +68,7 @@
     "build:tf-random-uuid": "npx projen build:tf-random-uuid",
     "build:trendmicro-cloudonecontainer-helm": "npx projen build:trendmicro-cloudonecontainer-helm",
     "bump": "npx projen bump",
+    "cdk-deploy:github-connect": "npx projen cdk-deploy:github-connect",
     "clobber": "npx projen clobber",
     "compile": "npx projen compile",
     "compile:alexa-ask-skill": "npx projen compile:alexa-ask-skill",
@@ -218,11 +219,14 @@
     "projen": "npx projen"
   },
   "devDependencies": {
+    "@aws-cdk/aws-iam": "^1.132.0",
     "@aws-cdk/core": "^1.132.0",
     "@types/jest": "^27.0.2",
     "@types/node": "^14.17.0",
     "@typescript-eslint/eslint-plugin": "^5.3.1",
     "@typescript-eslint/parser": "^5.3.1",
+    "aws-cdk": "^1.132.0",
+    "aws-cdk-github-oidc": "^0.0.21",
     "aws-sdk": "^2.1026.0",
     "case": "^1.6.3",
     "cdk-import": "^0.2.6",

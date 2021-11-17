@@ -18,6 +18,9 @@ project.addDevDeps('constructs');
 project.addDevDeps('@aws-cdk/core');
 project.addDevDeps('jsii');
 project.addDevDeps('jsii-pacmak');
+project.addDevDeps('@aws-cdk/core');
+project.addDevDeps('@aws-cdk/aws-iam');
+project.addDevDeps('aws-cdk-github-oidc');
 
 // the root is not really a library:x
 project.compileTask.reset();

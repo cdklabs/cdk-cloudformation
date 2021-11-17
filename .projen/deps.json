@@ -1,6 +1,10 @@
 {
   "dependencies": [
     {
+      "name": "@aws-cdk/aws-iam",
+      "type": "build"
+    },
+    {
       "name": "@aws-cdk/core",
       "type": "build"
     },
@@ -19,6 +23,14 @@
     },
     {
       "name": "@typescript-eslint/parser",
+      "type": "build"
+    },
+    {
+      "name": "aws-cdk",
+      "type": "build"
+    },
+    {
+      "name": "aws-cdk-github-oidc",
       "type": "build"
     },
     {

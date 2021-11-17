@@ -72,6 +72,7 @@
 /.github/workflows/release-trendmicro-cloudonecontainer-helm.yml                        	linguist-generated
 /.github/workflows/release.yml                                                          	linguist-generated
 /.github/workflows/stale.yml                                                            	linguist-generated
+/.github/workflows/update-registry.yml                                                  	linguist-generated
 /.github/workflows/upgrade-main.yml                                                     	linguist-generated
 /.gitignore                                                                             	linguist-generated
 /.mergify.yml                                                                           	linguist-generated

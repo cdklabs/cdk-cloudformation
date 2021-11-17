@@ -820,6 +820,17 @@
       ],
       "condition": "! git log --oneline -1 | grep -q \"chore(release):\""
     },
+    "cdk-deploy:github-connect": {
+      "name": "cdk-deploy:github-connect",
+      "steps": [
+        {
+          "exec": "cdk bootstrap aws://037840909260/us-east-1"
+        },
+        {
+          "exec": "cdk deploy --app .awscdk/github-connect"
+        }
+      ]
+    },
     "clobber": {
       "name": "clobber",
       "description": "hard resets to HEAD of origin and cleans the local repo",
@@ -2303,7 +2314,7 @@
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade @aws-cdk/core @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser aws-sdk case cdk-import constructs eslint eslint-import-resolver-node eslint-import-resolver-typescript eslint-plugin-import jest jest-junit jsii jsii-pacmak json-schema npm-check-updates standard-version ts-jest ts-node typescript"
+          "exec": "yarn upgrade @aws-cdk/aws-iam @aws-cdk/core @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser aws-cdk aws-cdk-github-oidc aws-sdk case cdk-import constructs eslint eslint-import-resolver-node eslint-import-resolver-typescript eslint-plugin-import jest jest-junit jsii jsii-pacmak json-schema npm-check-updates standard-version ts-jest ts-node typescript"
         },
         {
           "exec": "npx projen"

@@ -20,7 +20,6 @@ export class UpdateRegistry extends Component {
 
     const stack = infra.stack;
 
-    const externalId = 'cdk-cloudformation-update-registry';
     const roleName = 'github-cdklabs-cdk-cloudformation';
     const provider = new GithubActionsIdentityProvider(stack, 'GithubActionsIdentityProvider');
     const role = new GithubActionsRole(stack, 'GithubActionsRole', {
@@ -29,7 +28,6 @@ export class UpdateRegistry extends Component {
       repo: 'cdk-cloudformation',
       provider: provider,
       description: 'Allows cdklabs/cdk-cloudformation to query the CloudFormation registry',
-      externalIds: [externalId],
       filter: 'ref:refs/heads/main',
     });
 
@@ -52,12 +50,11 @@ export class UpdateRegistry extends Component {
         steps: [
           { uses: 'actions/checkout@v2' },
           {
-            uses: 'aws-actions/configure-aws-credentials@fcd8bb1e0a3c9d2a0687615ee31d34d8aea18a96',
+            uses: 'aws-actions/configure-aws-credentials@master',
             with: {
               'role-to-assume': `arn:aws:iam::${infra.stack.account}:role/${roleName}`,
               'aws-region': infra.stack.region,
               'role-session-name': 'github-automation',
-              'role-external-id': externalId,
             },
           },
           { run: 'yarn install' },

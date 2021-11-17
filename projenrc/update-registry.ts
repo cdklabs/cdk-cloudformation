@@ -52,7 +52,7 @@ export class UpdateRegistry extends Component {
         steps: [
           { uses: 'actions/checkout@v2' },
           {
-            uses: 'aws-actions/configure-aws-credentials@v1',
+            uses: 'aws-actions/configure-aws-credentials@fcd8bb1e0a3c9d2a0687615ee31d34d8aea18a96',
             with: {
               'role-to-assume': `arn:aws:iam::${infra.stack.account}:role/${roleName}`,
               'aws-region': infra.stack.region,

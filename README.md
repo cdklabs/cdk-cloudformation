@@ -46,8 +46,9 @@ that version from your package manager.
 
 <!--STATUS-BEGIN-->
 
-Release status for 63 libraries:
+Release status for 65 libraries:
 
+* [![alexa-ask-skill](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-alexa-ask-skill.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-alexa-ask-skill.yml)
 * [![aqua-enterprise-enforcer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml)
 * [![aqua-enterprise-kubeenforcer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-kubeenforcer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-kubeenforcer.yml)
 * [![aqua-enterprise-scanner](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-scanner.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-scanner.yml)
@@ -89,6 +90,7 @@ Release status for 63 libraries:
 * [![mongodb-atlas-networkpeering](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mongodb-atlas-networkpeering.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mongodb-atlas-networkpeering.yml)
 * [![mongodb-atlas-project](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mongodb-atlas-project.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mongodb-atlas-project.yml)
 * [![mongodb-atlas-projectipaccesslist](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mongodb-atlas-projectipaccesslist.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mongodb-atlas-projectipaccesslist.yml)
+* [![registry-test-resource1-module](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-registry-test-resource1-module.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-registry-test-resource1-module.yml)
 * [![snyk-container-helm](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-snyk-container-helm.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-snyk-container-helm.yml)
 * [![splunk-enterprise-quickstart-module](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-splunk-enterprise-quickstart-module.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-splunk-enterprise-quickstart-module.yml)
 * [![spot-elastigroup-group](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-spot-elastigroup-group.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-spot-elastigroup-group.yml)

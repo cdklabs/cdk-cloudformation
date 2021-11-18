@@ -24,18 +24,6 @@
         }
       ]
     },
-    "build:alexa-ask-skill": {
-      "name": "build:alexa-ask-skill",
-      "description": "build alexa-ask-skill",
-      "steps": [
-        {
-          "spawn": "compile:alexa-ask-skill"
-        },
-        {
-          "spawn": "package:alexa-ask-skill"
-        }
-      ]
-    },
     "build:aqua-enterprise-enforcer": {
       "name": "build:aqua-enterprise-enforcer",
       "description": "build aqua-enterprise-enforcer",
@@ -528,18 +516,6 @@
         }
       ]
     },
-    "build:registry-test-resource1-module": {
-      "name": "build:registry-test-resource1-module",
-      "description": "build registry-test-resource1-module",
-      "steps": [
-        {
-          "spawn": "compile:registry-test-resource1-module"
-        },
-        {
-          "spawn": "package:registry-test-resource1-module"
-        }
-      ]
-    },
     "build:snyk-container-helm": {
       "name": "build:snyk-container-helm",
       "description": "build snyk-container-helm",
@@ -866,16 +842,6 @@
     "compile": {
       "name": "compile",
       "description": "Only compile"
-    },
-    "compile:alexa-ask-skill": {
-      "name": "compile:alexa-ask-skill",
-      "description": "compile alexa-ask-skill with JSII",
-      "steps": [
-        {
-          "exec": "jsii"
-        }
-      ],
-      "cwd": "packages/@cdk-cloudformation/alexa-ask-skill"
     },
     "compile:aqua-enterprise-enforcer": {
       "name": "compile:aqua-enterprise-enforcer",
@@ -1287,16 +1253,6 @@
       ],
       "cwd": "packages/@cdk-cloudformation/mongodb-atlas-projectipaccesslist"
     },
-    "compile:registry-test-resource1-module": {
-      "name": "compile:registry-test-resource1-module",
-      "description": "compile registry-test-resource1-module with JSII",
-      "steps": [
-        {
-          "exec": "jsii"
-        }
-      ],
-      "cwd": "packages/@cdk-cloudformation/registry-test-resource1-module"
-    },
     "compile:snyk-container-helm": {
       "name": "compile:snyk-container-helm",
       "description": "compile snyk-container-helm with JSII",
@@ -1538,16 +1494,6 @@
     "package": {
       "name": "package",
       "description": "Creates the distribution package"
-    },
-    "package:alexa-ask-skill": {
-      "name": "package:alexa-ask-skill",
-      "description": "produce multi-language packaging for alexa-ask-skill",
-      "steps": [
-        {
-          "exec": "jsii-pacmak"
-        }
-      ],
-      "cwd": "packages/@cdk-cloudformation/alexa-ask-skill"
     },
     "package:aqua-enterprise-enforcer": {
       "name": "package:aqua-enterprise-enforcer",
@@ -1958,16 +1904,6 @@
         }
       ],
       "cwd": "packages/@cdk-cloudformation/mongodb-atlas-projectipaccesslist"
-    },
-    "package:registry-test-resource1-module": {
-      "name": "package:registry-test-resource1-module",
-      "description": "produce multi-language packaging for registry-test-resource1-module",
-      "steps": [
-        {
-          "exec": "jsii-pacmak"
-        }
-      ],
-      "cwd": "packages/@cdk-cloudformation/registry-test-resource1-module"
     },
     "package:snyk-container-helm": {
       "name": "package:snyk-container-helm",

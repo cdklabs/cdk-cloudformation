@@ -47,16 +47,6 @@ jobs:
           }}/actions/runs/${{ github.run_id }}/cancel
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  alexa-ask-skill:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-    steps:
-      - uses: actions/checkout@v2
-      - run: yarn install
-      - run: yarn build:alexa-ask-skill
-    container:
-      image: jsii/superchain:1-buster-slim
   aqua-enterprise-enforcer:
     runs-on: ubuntu-latest
     permissions:
@@ -465,16 +455,6 @@ jobs:
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:mongodb-atlas-projectipaccesslist
-    container:
-      image: jsii/superchain:1-buster-slim
-  registry-test-resource1-module:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-    steps:
-      - uses: actions/checkout@v2
-      - run: yarn install
-      - run: yarn build:registry-test-resource1-module
     container:
       image: jsii/superchain:1-buster-slim
   snyk-container-helm:

@@ -39,6 +39,8 @@ project.addExcludeFromCleanup('packages/**');
 const projects = generatePackages(project, {
   excludeTypes: [
     'TF::Akamai::DnsRecord', // https://github.com/cdklabs/cdk-cloudformation-types/runs/4131637186
+    'Alexa::ASK::Skill',
+    'REGISTRY::TEST::RESOURCE1::MODULE',
   ],
   dir: packagesDir,
   scope: scope,

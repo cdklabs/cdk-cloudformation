@@ -1,11 +1,11 @@
 import { readFileSync } from 'fs';
 import { join } from 'path';
-import { TypeScriptProject } from 'projen';
+import { typescript } from 'projen';
 import { Testing } from 'projen/lib/testing';
 import { CloudFormationTypeProject } from '../projenrc/type-package';
 
 test('CloudFormationTypeProject', () => {
-  const root = new TypeScriptProject({
+  const root = new typescript.TypeScriptProject({
     name: 'test',
     defaultReleaseBranch: 'main',
   });

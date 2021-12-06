@@ -1,7 +1,6 @@
 import { join } from 'path';
 import { App, Stack } from '@aws-cdk/core';
-import { Component, Project } from 'projen';
-import { DependencyType } from 'projen/lib/deps';
+import { DependencyType, Component, Project } from 'projen';
 
 export interface AwsInfrastructureProps {
   readonly name: string;

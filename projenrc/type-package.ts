@@ -3,7 +3,7 @@ import { dirname, join } from 'path';
 import type { CloudFormation } from 'aws-sdk';
 import * as caseutil from 'case';
 import { CfnResourceGenerator } from 'cdk-import/lib/cfn-resource-generator';
-import { Component, JsonFile, License, Project, TypeScriptProject } from 'projen';
+import { Component, JsonFile, License, Project, typescript } from 'projen';
 import { TaskWorkflow } from 'projen/lib/github';
 import { JobPermission } from 'projen/lib/github/workflows-model';
 import { Publisher } from 'projen/lib/release';
@@ -45,7 +45,7 @@ export class CloudFormationTypeProject extends Component {
 
   public readonly statusBadge: string;
 
-  constructor(parent: TypeScriptProject, options: TypePackageOptions) {
+  constructor(parent: typescript.TypeScriptProject, options: TypePackageOptions) {
     super(parent);
 
     const typeName = options.type.TypeName!;
@@ -240,7 +240,7 @@ export class CloudFormationTypeProject extends Component {
     publisher.publishToPyPi();
     // publisher.publishToGo();
 
-    releaseWorkflow.addJobs(publisher.render());
+    releaseWorkflow.addJobs(publisher.renderJobs());
 
     // used in the main README to list the release status of all packages
     this.statusBadge = `[![${typeNameKebab}](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/${releaseWorkflow.name}.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/${releaseWorkflow.name}.yml)`;

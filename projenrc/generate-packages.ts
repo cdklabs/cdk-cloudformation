@@ -1,7 +1,7 @@
 import { readdirSync, readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
 import type { CloudFormation } from 'aws-sdk';
-import { TypeScriptProject } from 'projen';
+import { typescript } from 'projen';
 import { CloudFormationTypeProject } from './type-package';
 
 // this directory includes the type description for all registry types
@@ -25,7 +25,7 @@ export interface GeneratePackagesOptions {
   readonly prerelease?: string;
 }
 
-export function generatePackages(root: TypeScriptProject, options: GeneratePackagesOptions): CloudFormationTypeProject[] {
+export function generatePackages(root: typescript.TypeScriptProject, options: GeneratePackagesOptions): CloudFormationTypeProject[] {
   const types: CloudFormation.DescribeTypeOutput[] = readdirSync(TYPE_DESCRIPTIONS).map(file => {
     return JSON.parse(readFileSync(join(TYPE_DESCRIPTIONS, file), 'utf8'));
   });
@@ -53,7 +53,7 @@ export function generatePackages(root: TypeScriptProject, options: GeneratePacka
   return projects;
 }
 
-export function updateReadme(root: TypeScriptProject, projects: CloudFormationTypeProject[]) {
+export function updateReadme(root: typescript.TypeScriptProject, projects: CloudFormationTypeProject[]) {
   const statusMarkdown = new Array<string>();
   for (const p of projects) {
     statusMarkdown.push(`* ${p.statusBadge}`);

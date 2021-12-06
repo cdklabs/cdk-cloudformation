@@ -1,11 +1,11 @@
 import { PolicyStatement } from '@aws-cdk/aws-iam';
 import { GithubActionsIdentityProvider, GithubActionsRole } from 'aws-cdk-github-oidc';
-import { Component, TypeScriptProject } from 'projen';
+import { Component, typescript } from 'projen';
 import { JobPermission } from 'projen/lib/github/workflows-model';
 import { AwsInfrastructure } from './aws-infrastructure';
 
 export class UpdateRegistry extends Component {
-  constructor(project: TypeScriptProject) {
+  constructor(project: typescript.TypeScriptProject) {
     super(project);
 
     const task = project.addTask('update-registry', {

@@ -1,8 +1,8 @@
-import { TypeScriptProject } from 'projen';
+import { typescript } from 'projen';
 import { generatePackages, updateReadme } from './projenrc/generate-packages';
 import { UpdateRegistry } from './projenrc/update-registry';
 
-const project = new TypeScriptProject({
+const project = new typescript.TypeScriptProject({
   defaultReleaseBranch: 'main',
   name: 'cdk-cloudformation-types',
   projenrcTs: true,

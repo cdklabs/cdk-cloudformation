@@ -40,6 +40,10 @@ const projects = generatePackages(project, {
   excludeTypes: [
     'TF::Akamai::DnsRecord', // https://github.com/cdklabs/cdk-cloudformation-types/runs/4131637186
   ],
+  deprecateTypes: {
+    ['Alexa::ASK::Skill']: 'This package is deprecated. Please use @aws-cdk/alexa-ask instead',
+    ['REGISTRY::TEST::RESOURCE1::MODULE']: 'This package is deprecated',
+  },
   dir: packagesDir,
   scope: scope,
   prerelease: 'alpha.4',

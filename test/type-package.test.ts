@@ -57,3 +57,65 @@ test('CloudFormationTypeProject', () => {
     },
   });
 });
+
+test('CloudFormationTypeProject with deprecation', () => {
+  const root = new typescript.TypeScriptProject({
+    name: 'test',
+    defaultReleaseBranch: 'main',
+  });
+
+  const typedef = JSON.parse(readFileSync(join(__dirname, '../registry/types/tf-random-uuid.json'), 'utf-8'));
+
+  new CloudFormationTypeProject(root, {
+    packagesDir: 'my-packages',
+    deprecated: true,
+    deprecateMessage: 'this package is deprecated',
+    type: typedef,
+  });
+
+  const snapshot = Testing.synth(root);
+  const keys = Object.keys(snapshot).filter(key => key.startsWith('my-packages/'));
+  expect(keys).toStrictEqual([
+    'my-packages/@cdk-cloudformation/tf-random-uuid/.gitignore',
+    'my-packages/@cdk-cloudformation/tf-random-uuid/.projen/tasks.json',
+    'my-packages/@cdk-cloudformation/tf-random-uuid/LICENSE',
+    'my-packages/@cdk-cloudformation/tf-random-uuid/package.json',
+    'my-packages/@cdk-cloudformation/tf-random-uuid/README.md',
+    'my-packages/@cdk-cloudformation/tf-random-uuid/src/index.ts',
+  ]);
+
+  const workflowKeys = Object.keys(snapshot).filter(key => key.startsWith('.github/workflows/'));
+  expect(workflowKeys).not.toContain('.github/workflows/release-tf-random-uuid.yml');
+  expect(workflowKeys).toContain('.github/workflows/deprecate-tf-random-uuid.yml');
+});
+
+test('CloudFormationTypeProject with undeprecation', () => {
+  const root = new typescript.TypeScriptProject({
+    name: 'test',
+    defaultReleaseBranch: 'main',
+  });
+
+  const typedef = JSON.parse(readFileSync(join(__dirname, '../registry/types/tf-random-uuid.json'), 'utf-8'));
+
+  new CloudFormationTypeProject(root, {
+    packagesDir: 'my-packages',
+    deprecated: true,
+    deprecateMessage: '',
+    type: typedef,
+  });
+
+  const snapshot = Testing.synth(root);
+  const keys = Object.keys(snapshot).filter(key => key.startsWith('my-packages/'));
+  expect(keys).toStrictEqual([
+    'my-packages/@cdk-cloudformation/tf-random-uuid/.gitignore',
+    'my-packages/@cdk-cloudformation/tf-random-uuid/.projen/tasks.json',
+    'my-packages/@cdk-cloudformation/tf-random-uuid/LICENSE',
+    'my-packages/@cdk-cloudformation/tf-random-uuid/package.json',
+    'my-packages/@cdk-cloudformation/tf-random-uuid/README.md',
+    'my-packages/@cdk-cloudformation/tf-random-uuid/src/index.ts',
+  ]);
+
+  const workflowKeys = Object.keys(snapshot).filter(key => key.startsWith('.github/workflows/'));
+  expect(workflowKeys).toContain('.github/workflows/release-tf-random-uuid.yml');
+  expect(workflowKeys).toContain('.github/workflows/deprecate-tf-random-uuid.yml');
+});

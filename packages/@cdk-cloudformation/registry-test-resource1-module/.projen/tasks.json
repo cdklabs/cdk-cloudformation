@@ -41,62 +41,6 @@
       "name": "pre-compile",
       "description": "Prepare the project for compilation"
     },
-    "publish:maven": {
-      "name": "publish:maven",
-      "description": "Publish this package to Maven Central",
-      "env": {
-        "MAVEN_ENDPOINT": "https://s01.oss.sonatype.org"
-      },
-      "requiredEnv": [
-        "MAVEN_GPG_PRIVATE_KEY",
-        "MAVEN_GPG_PRIVATE_KEY_PASSPHRASE",
-        "MAVEN_PASSWORD",
-        "MAVEN_USERNAME",
-        "MAVEN_STAGING_PROFILE_ID"
-      ],
-      "steps": [
-        {
-          "exec": "npx -p jsii-release@latest jsii-release-maven"
-        }
-      ]
-    },
-    "publish:npm": {
-      "name": "publish:npm",
-      "description": "Publish this package to npm",
-      "requiredEnv": [
-        "NPM_TOKEN"
-      ],
-      "steps": [
-        {
-          "exec": "npx -p jsii-release@latest jsii-release-npm"
-        }
-      ]
-    },
-    "publish:nuget": {
-      "name": "publish:nuget",
-      "description": "Publish this package to NuGet Gallery",
-      "requiredEnv": [
-        "NUGET_API_KEY"
-      ],
-      "steps": [
-        {
-          "exec": "npx -p jsii-release@latest jsii-release-nuget"
-        }
-      ]
-    },
-    "publish:pypi": {
-      "name": "publish:pypi",
-      "description": "Publish this package to PyPI",
-      "requiredEnv": [
-        "TWINE_USERNAME",
-        "TWINE_PASSWORD"
-      ],
-      "steps": [
-        {
-          "exec": "npx -p jsii-release@latest jsii-release-pypi"
-        }
-      ]
-    },
     "test": {
       "name": "test",
       "description": "Run tests"

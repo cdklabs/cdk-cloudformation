@@ -7,17 +7,14 @@ export interface ReadmeOptions {
   readonly typeName: string;
   readonly kebabName: string;
   readonly type: CloudFormation.DescribeTypeOutput;
-  /**
-   *
-   * @default - false
-   */
-  readonly deprecated?: boolean;
 
   /**
+   * The message to add to the deprecation disclaimer
+   * if the type is being deprecated
    *
-   * @default - undefined
+   * @default - not deprecated/no message added
    */
-  readonly deprecateMessage?: string;
+  readonly deprecatedMessage?: string;
 }
 
 export class Readme extends Component {
@@ -40,12 +37,12 @@ export class Readme extends Component {
     readme.push('[AWS CloudFormation Registry]: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html');
     readme.push('');
 
-    if (options.deprecated) {
+    if (options.deprecatedMessage) {
       readme.push('---');
       readme.push('');
       readme.push('![Deprecated](https://img.shields.io/badge/deprecated-critical.svg?style=for-the-badge)');
       readme.push('');
-      readme.push(`> ${options.deprecateMessage}`);
+      readme.push(`> ${options.deprecatedMessage}`);
       readme.push('');
       readme.push('---');
     }

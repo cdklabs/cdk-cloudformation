@@ -2,6 +2,7 @@ import { readdirSync, readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
 import type { CloudFormation } from 'aws-sdk';
 import { typescript } from 'projen';
+import { deprecatedTypes } from './deprecated-types';
 import { CloudFormationTypeProject } from './type-package';
 
 // this directory includes the type description for all registry types
@@ -20,14 +21,6 @@ export interface GeneratePackagesOptions {
   readonly excludeTypes?: string[];
 
   /**
-   * List of type names (e.g. `Alexa::ASK::Skill`) to deprecate
-   * with corresponding deprecation message
-   *
-   * @default - undefined
-   */
-  readonly deprecateTypes?: { [key: string]: string };
-
-  /**
    * Pre-release tag to use.
    */
   readonly prerelease?: string;
@@ -41,8 +34,7 @@ export function generatePackages(root: typescript.TypeScriptProject, options: Ge
   const excludes = options.excludeTypes ?? [];
   const shouldExclude = (type: CloudFormation.DescribeTypeOutput) => type.TypeName && excludes.includes(type.TypeName);
 
-  const deprecate = options.deprecateTypes ? Object.keys(options.deprecateTypes) : [];
-  const shouldDeprecate = (type: CloudFormation.DescribeTypeOutput) => type.TypeName && deprecate.includes(type.TypeName);
+  const shouldDeprecate = (type: CloudFormation.DescribeTypeOutput) => type.TypeName && type.TypeName in deprecatedTypes;
 
   const projects = new Array<CloudFormationTypeProject>();
 
@@ -56,8 +48,7 @@ export function generatePackages(root: typescript.TypeScriptProject, options: Ge
       packagesDir: options.dir,
       type: type,
       prerelease: options.prerelease,
-      deprecated: shouldDeprecate(type) ? true : false,
-      deprecateMessage: options.deprecateTypes ? options.deprecateTypes[type.TypeName!] : undefined,
+      readmeDeprecatedMessage: shouldDeprecate(type) ? deprecatedTypes[type.TypeName!] : undefined,
     });
 
     projects.push(p);

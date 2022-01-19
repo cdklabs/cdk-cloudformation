@@ -36,16 +36,12 @@ export interface TypePackageOptions {
   readonly prerelease?: string;
 
   /**
+   * The message to add to the README.md if this
+   * type is deprecated
    *
-   * @default - false
+   * @default - not deprecated/no message added
    */
-  readonly deprecated?: boolean;
-
-  /**
-   *
-   * @default - undefined
-   */
-  readonly deprecateMessage?: string;
+  readonly readmeDeprecatedMessage?: string;
 }
 
 /**
@@ -64,9 +60,6 @@ export class CloudFormationTypeProject extends Component {
     const typeNameKebab = caseutil.kebab(typeName);
     const typeNameSnake = caseutil.snake(typeName);
     const typeNamePascal = caseutil.pascal(typeName);
-
-    // this is set later
-    this.statusBadge = '';
 
     const npmScope = '@cdk-cloudformation';
 
@@ -96,8 +89,7 @@ export class CloudFormationTypeProject extends Component {
       typeName: typeName,
       npmName: npmName,
       kebabName: typeNameKebab,
-      deprecated: options.deprecated,
-      deprecateMessage: options.deprecateMessage,
+      deprecatedMessage: options.readmeDeprecatedMessage,
     });
 
     if (!options.type.LatestPublicVersion) {
@@ -116,6 +108,7 @@ export class CloudFormationTypeProject extends Component {
         name: npmName,
         description: description.split('\n')[0], // only first line
         version: version,
+        deprecated: options.readmeDeprecatedMessage ? true : undefined,
         author: {
           name: 'Amazon Web Services',
           url: 'https://aws.amazon.com',
@@ -180,130 +173,87 @@ export class CloudFormationTypeProject extends Component {
     project.addGitIgnore('/tsconfig.json'); // <-- created by JSII
     project.addGitIgnore('/dist/');
 
-    if (options.deprecated) {
-      if (options.deprecateMessage === undefined) {
-        throw new Error('deprecateMessage must be provided if deprecated is true');
-      }
-      const deprecateTask = parent.addTask(`deprecate:${typeNameKebab}`, {
-        description: `deprecate ${typeNameKebab}`,
-        exec: `npm deprecate @cdk-cloudformation/${typeNameKebab} "${options.deprecateMessage}"`,
-      });
-      const deprecateWorkflow = new TaskWorkflow(parent.github!, {
-        triggers: {
-          push: {
-            branches: ['main'],
-          },
-        },
-        name: `deprecate-${typeNameKebab}`,
-        task: deprecateTask,
-        env: {
-          NPM_REGISTRY: 'registry.npmjs.org',
-          NPM_CONFIG_REGISTRY: 'https://registry.npmjs.org',
-        },
-        preBuildSteps: [
-          { run: 'echo "//${{ env.NPM_REGISTRY }}/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc' },
-        ],
-        permissions: {
-          contents: JobPermission.READ,
-        },
+    const compileTask = parent.addTask(`compile:${typeNameKebab}`, {
+      description: `compile ${typeNameKebab} with JSII`,
+      exec: 'jsii',
+      cwd: outdir,
+    });
+
+    const packageTask = parent.addTask(`package:${typeNameKebab}`, {
+      description: `produce multi-language packaging for ${typeNameKebab}`,
+      exec: 'jsii-pacmak',
+      cwd: outdir,
+    });
+
+    const buildTask = parent.addTask(`build:${typeNameKebab}`, {
+      description: `build ${typeNameKebab}`,
+    });
+
+    buildTask.spawn(compileTask);
+    buildTask.spawn(packageTask);
+
+    parent.gitignore.addPatterns(`/${outdir}/dist/`);
+    parent.gitignore.addPatterns(`/${outdir}/lib/`);
+
+    parent.buildWorkflow?.addJobs({
+      [typeNameKebab]: {
+        runsOn: 'ubuntu-latest',
         container: {
           image: 'jsii/superchain:1-buster-slim',
         },
-      });
-
-      this.statusBadge = `[![${typeNameKebab} (deprecated)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/${deprecateWorkflow.name}.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/${deprecateWorkflow.name}.yml)`;
-    }
-
-    // this handles two seprate cases
-    // 1. If we for some reason want to undeprecate a package we can provide an empty string for the depecation message
-    //   in which case npm will undeprecate. In this case we want to run both the deprecation workflow and the
-    //   publish workflow for the type
-    //
-    // 2. We are not deprecating
-    if ((options.deprecated && options.deprecateMessage === '') || !options.deprecated) {
-      const compileTask = parent.addTask(`compile:${typeNameKebab}`, {
-        description: `compile ${typeNameKebab} with JSII`,
-        exec: 'jsii',
-        cwd: outdir,
-      });
-
-      const packageTask = parent.addTask(`package:${typeNameKebab}`, {
-        description: `produce multi-language packaging for ${typeNameKebab}`,
-        exec: 'jsii-pacmak',
-        cwd: outdir,
-      });
-
-      const buildTask = parent.addTask(`build:${typeNameKebab}`, {
-        description: `build ${typeNameKebab}`,
-      });
-
-      buildTask.spawn(compileTask);
-      buildTask.spawn(packageTask);
-
-      parent.gitignore.addPatterns(`/${outdir}/dist/`);
-      parent.gitignore.addPatterns(`/${outdir}/lib/`);
-
-      parent.buildWorkflow?.addJobs({
-        [typeNameKebab]: {
-          runsOn: 'ubuntu-latest',
-          container: {
-            image: 'jsii/superchain:1-buster-slim',
-          },
-          permissions: {
-            contents: JobPermission.READ,
-          },
-          steps: [
-            { uses: 'actions/checkout@v2' },
-            { run: 'yarn install' },
-            { run: `yarn ${buildTask.name}` },
-          ],
+        permissions: {
+          contents: JobPermission.READ,
         },
-      });
-
-      // create a release workflow for this package
-      const artifactDir = 'dist';
-      const releaseWorkflow = new TaskWorkflow(parent.github!, {
-        triggers: {
-          push: {
-            branches: ['main'],
-          },
-        },
-        name: `release-${typeNameKebab}`,
-        task: buildTask,
-        preBuildSteps: [
+        steps: [
+          { uses: 'actions/checkout@v2' },
           { run: 'yarn install' },
+          { run: `yarn ${buildTask.name}` },
         ],
-        postBuildSteps: [
-          { run: `mv ${outdir}/dist .` },
-        ],
-        permissions: {
-          contents: JobPermission.READ,
+      },
+    });
+
+    // create a release workflow for this package
+    const artifactDir = 'dist';
+    const releaseWorkflow = new TaskWorkflow(parent.github!, {
+      triggers: {
+        push: {
+          branches: ['main'],
         },
-        artifactsDirectory: artifactDir,
-        container: {
-          image: 'jsii/superchain:1-buster-slim',
-        },
-      });
+      },
+      name: `release-${typeNameKebab}`,
+      task: buildTask,
+      preBuildSteps: [
+        { run: 'yarn install' },
+      ],
+      postBuildSteps: [
+        { run: `mv ${outdir}/dist .` },
+      ],
+      permissions: {
+        contents: JobPermission.READ,
+      },
+      artifactsDirectory: artifactDir,
+      container: {
+        image: 'jsii/superchain:1-buster-slim',
+      },
+    });
 
-      const publisher = new Publisher(project, {
-        artifactName: artifactDir,
-        buildJobId: releaseWorkflow.jobId,
-      });
+    const publisher = new Publisher(project, {
+      artifactName: artifactDir,
+      buildJobId: releaseWorkflow.jobId,
+    });
 
-      publisher.publishToNpm();
-      publisher.publishToMaven({
-        mavenEndpoint: 'https://s01.oss.sonatype.org', // cdklabs endpoint
-      });
-      publisher.publishToNuget();
-      publisher.publishToPyPi();
-      // publisher.publishToGo();
+    publisher.publishToNpm();
+    publisher.publishToMaven({
+      mavenEndpoint: 'https://s01.oss.sonatype.org', // cdklabs endpoint
+    });
+    publisher.publishToNuget();
+    publisher.publishToPyPi();
+    // publisher.publishToGo();
 
-      releaseWorkflow.addJobs(publisher.renderJobs());
-
-      this.statusBadge = `[![${typeNameKebab}](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/${releaseWorkflow.name}.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/${releaseWorkflow.name}.yml)`;
-    }
+    releaseWorkflow.addJobs(publisher.renderJobs());
 
     // used in the main README to list the release status of all packages
+    this.statusBadge = `[![${typeNameKebab}](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/${releaseWorkflow.name}.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/${releaseWorkflow.name}.yml)`;
 
     this.subproject = project;
   }

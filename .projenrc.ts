@@ -1,6 +1,7 @@
 import { typescript } from 'projen';
 import { generatePackages, updateReadme } from './projenrc/generate-packages';
 import { UpdateRegistry } from './projenrc/update-registry';
+import { DeprecatedTypes } from './projenrc/deprecated-types';
 
 const project = new typescript.TypeScriptProject({
   defaultReleaseBranch: 'main',
@@ -48,5 +49,6 @@ const projects = generatePackages(project, {
 updateReadme(project, projects);
 
 new UpdateRegistry(project);
+new DeprecatedTypes(project);
 
 project.synth();

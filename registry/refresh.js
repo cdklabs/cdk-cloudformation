@@ -3,7 +3,7 @@ const aws = require('aws-sdk');
 const fs = require('fs/promises');
 const { join } = require('path');
 const caseutil = require('case');
-import { deprecatedTypes } from '../projenrc/deprecated-types';
+const deprecatedTypes = require('../deprecated-types.json');
 
 const outdir = join(__dirname, 'types');
 

@@ -57,3 +57,24 @@ test('CloudFormationTypeProject', () => {
     },
   });
 });
+
+test('CloudFormationTypeProject with deprecation', () => {
+  const root = new typescript.TypeScriptProject({
+    name: 'test',
+    defaultReleaseBranch: 'main',
+  });
+
+  const typedef = JSON.parse(readFileSync(join(__dirname, '../registry/types/registry-test-resource1-module.json'), 'utf-8'));
+
+  new CloudFormationTypeProject(root, {
+    packagesDir: 'my-packages',
+    type: typedef,
+    readmeDeprecatedMessage: 'this project is deprecated',
+  });
+
+  const snapshot = Testing.synth(root);
+  const pkgJson = snapshot['my-packages/@cdk-cloudformation/registry-test-resource1-module/package.json'];
+  const readme = snapshot['my-packages/@cdk-cloudformation/registry-test-resource1-module/README.md'];
+  expect(readme).toEqual(expect.stringMatching(/.*this project is deprecated.*/));
+  expect(pkgJson.deprecated).toStrictEqual(true);
+});

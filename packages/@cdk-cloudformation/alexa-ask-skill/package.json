@@ -2,6 +2,7 @@
   "name": "@cdk-cloudformation/alexa-ask-skill",
   "description": "Constructs for Alexa::ASK::Skill",
   "version": "0.0.0-alpha.4",
+  "deprecated": true,
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

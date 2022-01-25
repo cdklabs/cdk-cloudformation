@@ -4,6 +4,9 @@ import type { CloudFormation } from 'aws-sdk';
 import { typescript } from 'projen';
 import { CloudFormationTypeProject } from './type-package';
 
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const deprecatedTypes = require('../deprecated-types.json').deprecatedTypes;
+
 // this directory includes the type description for all registry types
 // it is updated by calling `yarn update-registry`
 const TYPE_DESCRIPTIONS = join(__dirname, '..', 'registry', 'types');
@@ -33,6 +36,8 @@ export function generatePackages(root: typescript.TypeScriptProject, options: Ge
   const excludes = options.excludeTypes ?? [];
   const shouldExclude = (type: CloudFormation.DescribeTypeOutput) => type.TypeName && excludes.includes(type.TypeName);
 
+  const shouldDeprecate = (type: CloudFormation.DescribeTypeOutput) => type.TypeName && type.TypeName in deprecatedTypes;
+
   const projects = new Array<CloudFormationTypeProject>();
 
   for (const type of types) {
@@ -45,6 +50,7 @@ export function generatePackages(root: typescript.TypeScriptProject, options: Ge
       packagesDir: options.dir,
       type: type,
       prerelease: options.prerelease,
+      readmeDeprecatedMessage: shouldDeprecate(type) ? deprecatedTypes[type.TypeName!] : undefined,
     });
 
     projects.push(p);

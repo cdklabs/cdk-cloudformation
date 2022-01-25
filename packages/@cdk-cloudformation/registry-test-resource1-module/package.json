@@ -2,6 +2,7 @@
   "name": "@cdk-cloudformation/registry-test-resource1-module",
   "description": "Schema for Module Fragment of type REGISTRY::TEST::RESOURCE::MODULE",
   "version": "1.5.0-alpha.4",
+  "deprecated": true,
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

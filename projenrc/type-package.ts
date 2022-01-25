@@ -34,6 +34,14 @@ export interface TypePackageOptions {
    * @default - no pre-release tag
    */
   readonly prerelease?: string;
+
+  /**
+   * The message to add to the README.md if this
+   * type is deprecated
+   *
+   * @default - not deprecated/no message added
+   */
+  readonly readmeDeprecatedMessage?: string;
 }
 
 /**
@@ -81,6 +89,7 @@ export class CloudFormationTypeProject extends Component {
       typeName: typeName,
       npmName: npmName,
       kebabName: typeNameKebab,
+      deprecatedMessage: options.readmeDeprecatedMessage,
     });
 
     if (!options.type.LatestPublicVersion) {
@@ -99,6 +108,7 @@ export class CloudFormationTypeProject extends Component {
         name: npmName,
         description: description.split('\n')[0], // only first line
         version: version,
+        deprecated: options.readmeDeprecatedMessage ? true : undefined,
         author: {
           name: 'Amazon Web Services',
           url: 'https://aws.amazon.com',
@@ -244,7 +254,6 @@ export class CloudFormationTypeProject extends Component {
 
     // used in the main README to list the release status of all packages
     this.statusBadge = `[![${typeNameKebab}](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/${releaseWorkflow.name}.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/${releaseWorkflow.name}.yml)`;
-
 
     this.subproject = project;
   }

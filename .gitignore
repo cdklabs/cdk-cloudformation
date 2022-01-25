@@ -244,4 +244,5 @@ junit.xml
 !/.github/workflows/release-trendmicro-cloudonecontainer-helm.yml
 /.awscdk/
 !/.github/workflows/update-registry.yml
+!/deprecated-types.json
 !/.github/workflows/upgrade-main.yml

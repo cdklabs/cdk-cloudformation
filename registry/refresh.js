@@ -3,6 +3,7 @@ const aws = require('aws-sdk');
 const fs = require('fs/promises');
 const { join } = require('path');
 const caseutil = require('case');
+const deprecatedTypes = require('../deprecated-types.json');
 
 const outdir = join(__dirname, 'types');
 
@@ -15,8 +16,8 @@ async function main() {
   do {
     const response = await cfn.listTypes({ Visibility: 'PUBLIC', NextToken: nextToken }).promise();
     for (const type of response.TypeSummaries ?? []) {
-      // skip 1st party
-      if (type.TypeName.startsWith('AWS::')) {
+      // skip 1st party and any deprecated types
+      if (type.TypeName.startsWith('AWS::') || type.TypeName in deprecatedTypes) {
         continue;
       }
 

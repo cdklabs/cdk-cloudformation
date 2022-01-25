@@ -81,6 +81,7 @@
 /.projen/**                                                                             	linguist-generated
 /.projen/deps.json                                                                      	linguist-generated
 /.projen/tasks.json                                                                     	linguist-generated
+/deprecated-types.json                                                                  	linguist-generated
 /LICENSE                                                                                	linguist-generated
 /package.json                                                                           	linguist-generated
 /README.md                                                                              	linguist-generated

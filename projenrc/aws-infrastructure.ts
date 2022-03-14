@@ -1,5 +1,5 @@
 import { join } from 'path';
-import { App, Stack } from '@aws-cdk/core';
+import { App, Stack } from 'aws-cdk-lib';
 import { DependencyType, Component, Project } from 'projen';
 
 export interface AwsInfrastructureProps {
@@ -37,8 +37,7 @@ export class AwsInfrastructure extends Component {
       env: { account: options.account, region: options.region },
     });
 
-    project.deps.addDependency('@aws-cdk/core', DependencyType.BUILD);
-    project.deps.addDependency('aws-cdk', DependencyType.BUILD);
+    project.deps.addDependency('aws-cdk-lib', DependencyType.BUILD);
 
     const deploy = project.addTask(`cdk-deploy:${options.name}`);
     deploy.exec(`cdk bootstrap aws://${options.account}/${options.region}`);

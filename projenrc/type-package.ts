@@ -199,7 +199,7 @@ export class CloudFormationTypeProject extends Component {
       [typeNameKebab]: {
         runsOn: 'ubuntu-latest',
         container: {
-          image: 'jsii/superchain:1-buster-slim',
+          image: 'jsii/superchain:1-buster-slim-node14',
         },
         permissions: {
           contents: JobPermission.READ,

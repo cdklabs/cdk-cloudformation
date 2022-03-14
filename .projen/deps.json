@@ -1,10 +1,6 @@
 {
   "dependencies": [
     {
-      "name": "@aws-cdk/core",
-      "type": "build"
-    },
-    {
       "name": "@types/jest",
       "type": "build"
     },
@@ -21,10 +17,6 @@
     {
       "name": "@typescript-eslint/parser",
       "version": "^5",
-      "type": "build"
-    },
-    {
-      "name": "aws-cdk",
       "type": "build"
     },
     {

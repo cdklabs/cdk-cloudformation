@@ -1,10 +1,6 @@
 {
   "dependencies": [
     {
-      "name": "@aws-cdk/aws-iam",
-      "type": "build"
-    },
-    {
       "name": "@aws-cdk/core",
       "type": "build"
     },
@@ -33,6 +29,11 @@
     },
     {
       "name": "aws-cdk-github-oidc",
+      "version": "^2.2.0",
+      "type": "build"
+    },
+    {
+      "name": "aws-cdk-lib",
       "type": "build"
     },
     {
@@ -45,10 +46,12 @@
     },
     {
       "name": "cdk-import",
+      "version": "^0.2.112",
       "type": "build"
     },
     {
       "name": "constructs",
+      "version": "^10.0.5",
       "type": "build"
     },
     {

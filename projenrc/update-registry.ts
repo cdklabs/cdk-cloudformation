@@ -1,5 +1,5 @@
-import { PolicyStatement } from '@aws-cdk/aws-iam';
 import { GithubActionsIdentityProvider, GithubActionsRole } from 'aws-cdk-github-oidc';
+import { PolicyStatement } from 'aws-cdk-lib/aws-iam';
 import { Component, typescript } from 'projen';
 import { JobPermission } from 'projen/lib/github/workflows-model';
 import { AwsInfrastructure } from './aws-infrastructure';

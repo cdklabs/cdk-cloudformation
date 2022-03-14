@@ -12,16 +12,14 @@ const project = new typescript.TypeScriptProject({
 
 project.package.addField('private', true);
 
-project.addDevDeps('cdk-import');
+project.addDevDeps('cdk-import@^0.2.112');
 project.addDevDeps('case');
 project.addDevDeps('aws-sdk');
-project.addDevDeps('constructs');
-project.addDevDeps('@aws-cdk/core');
+project.addDevDeps('constructs@^10.0.5');
+project.addDevDeps('aws-cdk-lib');
 project.addDevDeps('jsii');
 project.addDevDeps('jsii-pacmak');
-project.addDevDeps('@aws-cdk/core');
-project.addDevDeps('@aws-cdk/aws-iam');
-project.addDevDeps('aws-cdk-github-oidc');
+project.addDevDeps('aws-cdk-github-oidc@^2.2.0');
 
 // the root is not really a library:x
 project.compileTask.reset();
@@ -43,7 +41,7 @@ const projects = generatePackages(project, {
   ],
   dir: packagesDir,
   scope: scope,
-  prerelease: 'alpha.4',
+  prerelease: 'alpha.5',
 });
 
 updateReadme(project, projects);

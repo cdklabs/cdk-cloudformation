@@ -10,7 +10,7 @@ import { Publisher } from 'projen/lib/release';
 import { Readme } from './readme';
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
-const CDK_VERSION = require('@aws-cdk/core/package.json').version;
+const CDK_VERSION = require('aws-cdk-lib/package.json').version;
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const CONSTRUCTS_VERSION = require('constructs/package.json').version;
 
@@ -156,11 +156,11 @@ export class CloudFormationTypeProject extends Component {
           },
         },
         peerDependencies: {
-          '@aws-cdk/core': `^${CDK_VERSION}`,
+          'aws-cdk-lib': `^${CDK_VERSION}`,
           'constructs': `^${CONSTRUCTS_VERSION}`,
         },
         devDependencies: {
-          '@aws-cdk/core': CDK_VERSION,
+          'aws-cdk-lib': CDK_VERSION,
           'constructs': CONSTRUCTS_VERSION,
         },
         license: spdx,

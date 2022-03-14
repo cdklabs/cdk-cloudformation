@@ -233,7 +233,7 @@ export class CloudFormationTypeProject extends Component {
       },
       artifactsDirectory: artifactDir,
       container: {
-        image: 'jsii/superchain:1-buster-slim',
+        image: 'jsii/superchain:1-buster-slim-node14',
       },
     });
 

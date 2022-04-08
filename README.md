@@ -20,7 +20,7 @@ For example, to use the `TF::Random::String` type in TypeScript:
 Install the module:
 
 ```sh
-npm install @cdk-cloudformation-types/tf-random-string
+npm install @cdk-cloudformation/tf-random-string
 ```
 
 Import the construct to your code and add it to your app like any other

@@ -27,7 +27,7 @@ Import the construct to your code and add it to your app like any other
 construct:
 
 ```typescript
-import { CfnString } from '@cdk-cloudformation-types/tf-random-string';
+import { CfnString } from '@cdk-cloudformation/tf-random-string';
 
 new CfnString(this, 'MyString', {
   length: 100,

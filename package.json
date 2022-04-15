@@ -1,5 +1,5 @@
 {
-  "name": "cdk-cloudformation-types",
+  "name": "cdk-cloudformation",
   "scripts": {
     "build": "npx projen build",
     "build:alexa-ask-skill": "npx projen build:alexa-ask-skill",

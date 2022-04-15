@@ -1,11 +1,11 @@
 import { typescript } from 'projen';
+import { DeprecatedTypes } from './projenrc/deprecated-types';
 import { generatePackages, updateReadme } from './projenrc/generate-packages';
 import { UpdateRegistry } from './projenrc/update-registry';
-import { DeprecatedTypes } from './projenrc/deprecated-types';
 
 const project = new typescript.TypeScriptProject({
   defaultReleaseBranch: 'main',
-  name: 'cdk-cloudformation-types',
+  name: 'cdk-cloudformation',
   projenrcTs: true,
   sampleCode: false,
 });
@@ -37,7 +37,7 @@ project.addExcludeFromCleanup('packages/**');
 
 const projects = generatePackages(project, {
   excludeTypes: [
-    'TF::Akamai::DnsRecord', // https://github.com/cdklabs/cdk-cloudformation-types/runs/4131637186
+    'TF::Akamai::DnsRecord', // https://github.com/cdklabs/cdk-cloudformation/runs/4131637186
   ],
   dir: packagesDir,
   scope: scope,

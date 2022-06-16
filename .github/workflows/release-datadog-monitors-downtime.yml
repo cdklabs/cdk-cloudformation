@@ -29,7 +29,7 @@ jobs:
           name: dist
           path: dist
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   release_npm:
     name: Publish to npm
     needs: build

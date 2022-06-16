@@ -25,6 +25,8 @@ project.addDevDeps('aws-cdk-github-oidc@^2.2.0');
 project.compileTask.reset();
 project.packageTask.reset();
 
+project.preCompileTask.exec('dotnet --version');
+
 const packagesDir = 'packages';
 const scope = '@cdk-cloudformation';
 

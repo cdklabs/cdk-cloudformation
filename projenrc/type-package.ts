@@ -195,21 +195,19 @@ export class CloudFormationTypeProject extends Component {
     parent.gitignore.addPatterns(`/${outdir}/dist/`);
     parent.gitignore.addPatterns(`/${outdir}/lib/`);
 
-    parent.buildWorkflow?.addJobs({
-      [typeNameKebab]: {
-        runsOn: 'ubuntu-latest',
-        container: {
-          image: 'jsii/superchain:1-buster-slim-node14',
-        },
-        permissions: {
-          contents: JobPermission.READ,
-        },
-        steps: [
-          { uses: 'actions/checkout@v2' },
-          { run: 'yarn install' },
-          { run: `yarn ${buildTask.name}` },
-        ],
+    parent.buildWorkflow?.addPostBuildJob(typeNameKebab, {
+      runsOn: ['ubuntu-latest'],
+      container: {
+        image: 'jsii/superchain:1-buster-slim-nightly',
       },
+      permissions: {
+        contents: JobPermission.READ,
+      },
+      steps: [
+        { uses: 'actions/checkout@v2' },
+        { run: 'yarn install' },
+        { run: `yarn ${buildTask.name}` },
+      ],
     });
 
     // create a release workflow for this package
@@ -233,7 +231,7 @@ export class CloudFormationTypeProject extends Component {
       },
       artifactsDirectory: artifactDir,
       container: {
-        image: 'jsii/superchain:1-buster-slim-node14',
+        image: 'jsii/superchain:1-buster-slim-nightly',
       },
     });
 
@@ -250,7 +248,7 @@ export class CloudFormationTypeProject extends Component {
     publisher.publishToPyPi();
     // publisher.publishToGo();
 
-    releaseWorkflow.addJobs(publisher.renderJobs());
+    releaseWorkflow.addJobs(publisher._renderJobsForBranch('main', {}));
 
     // used in the main README to list the release status of all packages
     this.statusBadge = `[![${typeNameKebab}](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/${releaseWorkflow.name}.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/${releaseWorkflow.name}.yml)`;

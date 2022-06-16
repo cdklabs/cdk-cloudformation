@@ -8,692 +8,1174 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      checks: write
       contents: write
-      actions: write
+    outputs:
+      self_mutation_happened: ${{ steps.self_mutation.outputs.self_mutation_happened }}
     env:
       CI: "true"
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.head.ref }}
           repository: ${{ github.event.pull_request.head.repo.full_name }}
+      - name: Install dependencies
+        run: yarn install --check-files
+      - name: build
+        run: npx projen build
+      - id: self_mutation
+        name: Find mutations
+        run: |-
+          git add .
+          git diff --staged --patch --exit-code > .repo.patch || echo "::set-output name=self_mutation_happened::true"
+      - if: steps.self_mutation.outputs.self_mutation_happened
+        name: Upload patch
+        uses: actions/upload-artifact@v2
+        with:
+          name: .repo.patch
+          path: .repo.patch
+      - name: Fail build on mutation
+        if: steps.self_mutation.outputs.self_mutation_happened
+        run: |-
+          echo "::error::Files were changed during build (see build log). If this was triggered from a fork, you will need to update your branch."
+          cat .repo.patch
+          exit 1
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2.1.1
+        with:
+          name: build-artifact
+          path: dist
+  self-mutation:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    if: always() && needs.build.outputs.self_mutation_happened && !(github.event.pull_request.head.repo.full_name != github.repository)
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PROJEN_GITHUB_TOKEN }}
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+      - name: Download patch
+        uses: actions/download-artifact@v3
+        with:
+          name: .repo.patch
+          path: ${{ runner.temp }}
+      - name: Apply patch
+        run: '[ -s ${{ runner.temp }}/.repo.patch ] && git apply ${{ runner.temp }}/.repo.patch || echo "Empty patch. Skipping."'
       - name: Set git identity
         run: |-
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-      - name: Install dependencies
-        run: yarn install --check-files --frozen-lockfile
-      - name: build
-        run: npx projen build
-      - name: Check for changes
-        id: git_diff
-        run: git diff --exit-code || echo "::set-output name=has_changes::true"
-      - if: steps.git_diff.outputs.has_changes
-        name: Commit and push changes (if changed)
-        run: 'git add . && git commit -m "chore: self mutation" && git push origin
-          HEAD:${{ github.event.pull_request.head.ref }}'
-      - if: steps.git_diff.outputs.has_changes
-        name: Update status check (if changed)
-        run: gh api -X POST /repos/${{ github.event.pull_request.head.repo.full_name
-          }}/check-runs -F name="build" -F head_sha="$(git rev-parse HEAD)" -F
-          status="completed" -F conclusion="success"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - if: steps.git_diff.outputs.has_changes
-        name: Cancel workflow (if changed)
-        run: gh api -X POST /repos/${{ github.event.pull_request.head.repo.full_name
-          }}/actions/runs/${{ github.run_id }}/cancel
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Push changes
+        run: |2-
+            git add .
+            git commit -s -m "chore: self mutation"
+            git push origin HEAD:${{ github.event.pull_request.head.ref }}
   alexa-ask-skill:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:alexa-ask-skill
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   aqua-enterprise-enforcer:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:aqua-enterprise-enforcer
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   aqua-enterprise-kubeenforcer:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:aqua-enterprise-kubeenforcer
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   aqua-enterprise-scanner:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:aqua-enterprise-scanner
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   aqua-enterprise-server:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:aqua-enterprise-server
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   atlassian-opsgenie-integration:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:atlassian-opsgenie-integration
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   atlassian-opsgenie-team:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:atlassian-opsgenie-team
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   atlassian-opsgenie-user:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:atlassian-opsgenie-user
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   awsqs-checkpoint-cloudguardqs-module:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:awsqs-checkpoint-cloudguardqs-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   awsqs-ec2-linuxbastionqs-module:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:awsqs-ec2-linuxbastionqs-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   awsqs-eks-cluster:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:awsqs-eks-cluster
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   awsqs-iridium-cloudconnectqs-module:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:awsqs-iridium-cloudconnectqs-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   awsqs-kubernetes-get:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:awsqs-kubernetes-get
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   awsqs-kubernetes-helm:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:awsqs-kubernetes-helm
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   awsqs-kubernetes-resource:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:awsqs-kubernetes-resource
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   awsqs-vpc-vpcqs-module:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:awsqs-vpc-vpcqs-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   datadog-dashboards-dashboard:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:datadog-dashboards-dashboard
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   datadog-integrations-aws:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:datadog-integrations-aws
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   datadog-monitors-downtime:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:datadog-monitors-downtime
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   datadog-monitors-monitor:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:datadog-monitors-monitor
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   datadog-slos-slo:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:datadog-slos-slo
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   fireeye-cloudintegrations-cloudwatch:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:fireeye-cloudintegrations-cloudwatch
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   generic-database-schema:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:generic-database-schema
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   generic-transcribe-vocabulary:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:generic-transcribe-vocabulary
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   gremlin-agent-helm:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:gremlin-agent-helm
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   jfrog-artifactory-core-module:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:jfrog-artifactory-core-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   jfrog-artifactory-ec2instance-module:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:jfrog-artifactory-ec2instance-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   jfrog-artifactory-existingvpc-module:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:jfrog-artifactory-existingvpc-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   jfrog-artifactory-newvpc-module:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:jfrog-artifactory-newvpc-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   jfrog-linux-bastion-module:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:jfrog-linux-bastion-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   jfrog-vpc-multiaz-module:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:jfrog-vpc-multiaz-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   jfrog-xray-ec2instance-module:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:jfrog-xray-ec2instance-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   logzio-autodeploymentlogzio-cloudwatch-module:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:logzio-autodeploymentlogzio-cloudwatch-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   logzio-awscostandusage-cur-module:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:logzio-awscostandusage-cur-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   logzio-awssecurityhub-collector-module:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:logzio-awssecurityhub-collector-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   logzio-kinesisshipper-kinesisshipper-module:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:logzio-kinesisshipper-kinesisshipper-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   logzio-myservice-myname-module:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:logzio-myservice-myname-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   mongodb-atlas-cluster:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:mongodb-atlas-cluster
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   mongodb-atlas-databaseuser:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:mongodb-atlas-databaseuser
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   mongodb-atlas-networkpeering:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:mongodb-atlas-networkpeering
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   mongodb-atlas-project:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:mongodb-atlas-project
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   mongodb-atlas-projectipaccesslist:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:mongodb-atlas-projectipaccesslist
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   registry-test-resource1-module:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:registry-test-resource1-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   snyk-container-helm:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:snyk-container-helm
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   splunk-enterprise-quickstart-module:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:splunk-enterprise-quickstart-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   spot-elastigroup-group:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:spot-elastigroup-group
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   stackery-open-bastion-module:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:stackery-open-bastion-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   stocks-orders-marketorder:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:stocks-orders-marketorder
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   symphonia-opensource-cloudformationartifactsbucket-module:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:symphonia-opensource-cloudformationartifactsbucket-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   sysdig-helm-agent:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:sysdig-helm-agent
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   tf-ad-computer:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:tf-ad-computer
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   tf-ad-user:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:tf-ad-user
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   tf-aws-keypair:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:tf-aws-keypair
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   tf-aws-s3bucket:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:tf-aws-s3bucket
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   tf-aws-s3bucketobject:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:tf-aws-s3bucketobject
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   tf-azuread-application:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:tf-azuread-application
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   tf-azuread-user:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:tf-azuread-user
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   tf-cloudflare-record:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:tf-cloudflare-record
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   tf-digitalocean-droplet:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:tf-digitalocean-droplet
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   tf-github-repository:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:tf-github-repository
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   tf-google-storagebucket:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:tf-google-storagebucket
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   tf-pagerduty-service:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:tf-pagerduty-service
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   tf-random-string:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:tf-random-string
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   tf-random-uuid:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:tf-random-uuid
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly
   trendmicro-cloudonecontainer-helm:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    if: "! needs.build.outputs.self_mutation_happened"
     steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: dist
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build:trendmicro-cloudonecontainer-helm
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-nightly

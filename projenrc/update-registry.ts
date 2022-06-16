@@ -40,39 +40,37 @@ export class UpdateRegistry extends Component {
     workflow?.on({
       workflowDispatch: {},
     });
-    workflow?.addJobs({
-      update: {
-        permissions: {
-          'id-token': JobPermission.WRITE,
-          'contents': JobPermission.WRITE,
-        } as any,
-        runsOn: 'ubuntu-latest',
-        steps: [
-          { uses: 'actions/checkout@v2' },
-          {
-            uses: 'aws-actions/configure-aws-credentials@master',
-            with: {
-              'role-to-assume': `arn:aws:iam::${infra.stack.account}:role/${roleName}`,
-              'aws-region': infra.stack.region,
-              'role-session-name': 'github-automation',
-            },
+    workflow?.addJob('update', {
+      permissions: {
+        'id-token': JobPermission.WRITE,
+        'contents': JobPermission.WRITE,
+      } as any,
+      runsOn: ['ubuntu-latest'],
+      steps: [
+        { uses: 'actions/checkout@v2' },
+        {
+          uses: 'aws-actions/configure-aws-credentials@master',
+          with: {
+            'role-to-assume': `arn:aws:iam::${infra.stack.account}:role/${roleName}`,
+            'aws-region': infra.stack.region,
+            'role-session-name': 'github-automation',
           },
-          { run: 'yarn install' },
-          { run: this.project.runTaskCommand(task) },
+        },
+        { run: 'yarn install' },
+        { run: this.project.runTaskCommand(task) },
 
-          // create a pull request
-          {
-            uses: 'peter-evans/create-pull-request@v3',
-            with: {
-              'title': 'feat: cloudformation registry update',
-              'commit-message': 'feat: cloudformation registry update',
-              'branch': 'automation/update-registry',
-              'committer': 'GitHub Automation <noreply@github.com>',
-              'labels': 'auto-approve',
-            },
+        // create a pull request
+        {
+          uses: 'peter-evans/create-pull-request@v3',
+          with: {
+            'title': 'feat: cloudformation registry update',
+            'commit-message': 'feat: cloudformation registry update',
+            'branch': 'automation/update-registry',
+            'committer': 'GitHub Automation <noreply@github.com>',
+            'labels': 'auto-approve',
           },
-        ],
-      },
+        },
+      ],
     });
   }
 }

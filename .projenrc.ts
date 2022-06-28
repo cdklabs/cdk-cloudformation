@@ -32,6 +32,10 @@ project.package.addField('private', true);
 project.package.addField('workspaces', {
   packages: [`${packagesDir}/${scope}/*`],
 });
+project.package.addField('resolutions', {
+  // Newer @types package doesn't work with old TypeScript
+  '@types/prettier': '2.4.4',
+});
 
 project.addExcludeFromCleanup('packages/**');
 

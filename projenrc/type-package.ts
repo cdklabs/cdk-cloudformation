@@ -199,7 +199,7 @@ export class CloudFormationTypeProject extends Component {
       [typeNameKebab]: {
         runsOn: 'ubuntu-latest',
         container: {
-          image: 'jsii/superchain:1-buster-slim-nightly',
+          image: 'jsii/superchain:1-buster-slim-node14',
         },
         permissions: {
           contents: JobPermission.READ,
@@ -233,7 +233,7 @@ export class CloudFormationTypeProject extends Component {
       },
       artifactsDirectory: artifactDir,
       container: {
-        image: 'jsii/superchain:1-buster-slim-nightly',
+        image: 'jsii/superchain:1-buster-slim-node14',
       },
     });
 

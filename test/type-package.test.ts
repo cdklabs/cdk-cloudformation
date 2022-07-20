@@ -13,6 +13,7 @@ test('CloudFormationTypeProject', () => {
   const typedef = JSON.parse(readFileSync(join(__dirname, '../registry/types/tf-random-uuid.json'), 'utf-8'));
 
   new CloudFormationTypeProject(root, {
+    buildWorkflow: root.github!.addWorkflow('test-workflow'),
     packagesDir: 'my-packages',
     type: typedef,
   });
@@ -21,6 +22,7 @@ test('CloudFormationTypeProject', () => {
   const keys = Object.keys(snapshot).filter(key => key.startsWith('my-packages/'));
   expect(keys).toStrictEqual([
     'my-packages/@cdk-cloudformation/tf-random-uuid/.gitignore',
+    'my-packages/@cdk-cloudformation/tf-random-uuid/.projen/files.json',
     'my-packages/@cdk-cloudformation/tf-random-uuid/.projen/tasks.json',
     'my-packages/@cdk-cloudformation/tf-random-uuid/LICENSE',
     'my-packages/@cdk-cloudformation/tf-random-uuid/package.json',
@@ -68,6 +70,7 @@ test('CloudFormationTypeProject with deprecation', () => {
 
   new CloudFormationTypeProject(root, {
     packagesDir: 'my-packages',
+    buildWorkflow: root.github!.addWorkflow('test-workflow'),
     type: typedef,
     readmeDeprecatedMessage: 'this project is deprecated',
   });

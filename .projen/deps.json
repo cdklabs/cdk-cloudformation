@@ -6,7 +6,7 @@
     },
     {
       "name": "@types/node",
-      "version": "^14.17.0",
+      "version": "^14",
       "type": "build"
     },
     {
@@ -86,7 +86,7 @@
     },
     {
       "name": "npm-check-updates",
-      "version": "^11",
+      "version": "^15",
       "type": "build"
     },
     {
@@ -104,7 +104,7 @@
     },
     {
       "name": "ts-node",
-      "version": "^9",
+      "version": "^10",
       "type": "build"
     },
     {

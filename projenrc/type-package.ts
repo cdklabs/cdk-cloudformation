@@ -4,7 +4,7 @@ import type { CloudFormation } from 'aws-sdk';
 import * as caseutil from 'case';
 import { CfnResourceGenerator } from 'cdk-import/lib/cfn-resource-generator';
 import { Component, JsonFile, License, Project, typescript } from 'projen';
-import { TaskWorkflow } from 'projen/lib/github';
+import { GithubWorkflow, TaskWorkflow } from 'projen/lib/github';
 import { JobPermission } from 'projen/lib/github/workflows-model';
 import { Publisher } from 'projen/lib/release';
 import { Readme } from './readme';
@@ -27,6 +27,11 @@ export interface TypePackageOptions {
    * CloudFormation type information.
    */
   readonly type: CloudFormation.DescribeTypeOutput;
+
+  /**
+   * The GitHub workflow that builds all the individual projects
+   */
+  readonly buildWorkflow: GithubWorkflow;
 
   /**
    * A pre-release tag to use in the version.
@@ -195,22 +200,21 @@ export class CloudFormationTypeProject extends Component {
     parent.gitignore.addPatterns(`/${outdir}/dist/`);
     parent.gitignore.addPatterns(`/${outdir}/lib/`);
 
-    parent.buildWorkflow?.addJobs({
-      [typeNameKebab]: {
-        runsOn: 'ubuntu-latest',
-        container: {
-          image: 'jsii/superchain:1-buster-slim-node14',
-        },
-        permissions: {
-          contents: JobPermission.READ,
-        },
-        steps: [
-          { uses: 'actions/checkout@v2' },
-          { run: 'yarn install' },
-          { run: `yarn ${buildTask.name}` },
-        ],
+    options.buildWorkflow.addJob(typeNameKebab, {
+      runsOn: ['ubuntu-latest'],
+      container: {
+        image: 'jsii/superchain:1-buster-slim-node14',
       },
+      permissions: {
+        contents: JobPermission.READ,
+      },
+      steps: [
+        { uses: 'actions/checkout@v3' },
+        { run: 'yarn install' },
+        { run: `yarn ${buildTask.name}` },
+      ],
     });
+    parent.autoMerge?.addConditions(`status-success=${typeNameKebab}`);
 
     // create a release workflow for this package
     const artifactDir = 'dist';
@@ -250,7 +254,7 @@ export class CloudFormationTypeProject extends Component {
     publisher.publishToPyPi();
     // publisher.publishToGo();
 
-    releaseWorkflow.addJobs(publisher.renderJobs());
+    releaseWorkflow.addJobs(publisher._renderJobsForBranch('main', { }));
 
     // used in the main README to list the release status of all packages
     this.statusBadge = `[![${typeNameKebab}](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/${releaseWorkflow.name}.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/${releaseWorkflow.name}.yml)`;

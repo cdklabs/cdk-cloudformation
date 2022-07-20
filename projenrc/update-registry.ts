@@ -46,7 +46,7 @@ export class UpdateRegistry extends Component {
           'id-token': JobPermission.WRITE,
           'contents': JobPermission.WRITE,
         } as any,
-        runsOn: 'ubuntu-latest',
+        runsOn: ['ubuntu-latest'],
         steps: [
           { uses: 'actions/checkout@v2' },
           {

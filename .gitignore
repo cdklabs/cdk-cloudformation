@@ -48,6 +48,7 @@ junit.xml
 /lib
 /dist/
 !/.eslintrc.json
+!/.github/workflows/build-individual.yml
 /packages/@cdk-cloudformation/alexa-ask-skill/dist/
 /packages/@cdk-cloudformation/alexa-ask-skill/lib/
 !/.github/workflows/release-alexa-ask-skill.yml

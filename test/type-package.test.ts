@@ -13,6 +13,7 @@ test('CloudFormationTypeProject', () => {
   const typedef = JSON.parse(readFileSync(join(__dirname, '../registry/types/tf-random-uuid.json'), 'utf-8'));
 
   new CloudFormationTypeProject(root, {
+    buildWorkflow: root.github!.addWorkflow('test-workflow'),
     packagesDir: 'my-packages',
     type: typedef,
   });
@@ -69,6 +70,7 @@ test('CloudFormationTypeProject with deprecation', () => {
 
   new CloudFormationTypeProject(root, {
     packagesDir: 'my-packages',
+    buildWorkflow: root.github!.addWorkflow('test-workflow'),
     type: typedef,
     readmeDeprecatedMessage: 'this project is deprecated',
   });

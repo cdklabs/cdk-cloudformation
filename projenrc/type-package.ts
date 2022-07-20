@@ -4,7 +4,7 @@ import type { CloudFormation } from 'aws-sdk';
 import * as caseutil from 'case';
 import { CfnResourceGenerator } from 'cdk-import/lib/cfn-resource-generator';
 import { Component, JsonFile, License, Project, typescript } from 'projen';
-import { TaskWorkflow } from 'projen/lib/github';
+import { GithubWorkflow, TaskWorkflow } from 'projen/lib/github';
 import { JobPermission } from 'projen/lib/github/workflows-model';
 import { Publisher } from 'projen/lib/release';
 import { Readme } from './readme';
@@ -27,6 +27,11 @@ export interface TypePackageOptions {
    * CloudFormation type information.
    */
   readonly type: CloudFormation.DescribeTypeOutput;
+
+  /**
+   * The GitHub workflow that builds all the individual projects
+   */
+  readonly buildWorkflow: GithubWorkflow;
 
   /**
    * A pre-release tag to use in the version.
@@ -195,7 +200,7 @@ export class CloudFormationTypeProject extends Component {
     parent.gitignore.addPatterns(`/${outdir}/dist/`);
     parent.gitignore.addPatterns(`/${outdir}/lib/`);
 
-    parent.buildWorkflow?.addPostBuildJob(typeNameKebab, {
+    options.buildWorkflow.addJob(typeNameKebab, {
       runsOn: ['ubuntu-latest'],
       container: {
         image: 'jsii/superchain:1-buster-slim-node14',
@@ -209,6 +214,7 @@ export class CloudFormationTypeProject extends Component {
         { run: `yarn ${buildTask.name}` },
       ],
     });
+    parent.autoMerge?.addConditions(`status-success=${typeNameKebab}`);
 
     // create a release workflow for this package
     const artifactDir = 'dist';

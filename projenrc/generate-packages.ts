@@ -33,6 +33,10 @@ export function generatePackages(root: typescript.TypeScriptProject, options: Ge
     return JSON.parse(readFileSync(join(TYPE_DESCRIPTIONS, file), 'utf8'));
   });
   const buildIndividalWorkflow = root.github!.addWorkflow('build-individual');
+  buildIndividalWorkflow.on({
+    pullRequest: {},
+    workflowDispatch: {},
+  });
   const excludes = options.excludeTypes ?? [];
   const shouldExclude = (type: CloudFormation.DescribeTypeOutput) => type.TypeName && excludes.includes(type.TypeName);
 

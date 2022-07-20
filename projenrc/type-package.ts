@@ -4,7 +4,9 @@ import type { CloudFormation } from 'aws-sdk';
 import * as caseutil from 'case';
 import { CfnResourceGenerator } from 'cdk-import/lib/cfn-resource-generator';
 import { Component, JsonFile, License, Project, typescript } from 'projen';
-import { GithubWorkflow, TaskWorkflow } from 'projen/lib/github';
+import { GithubWorkflow } from 'projen/lib/github';
+import { DEFAULT_GITHUB_ACTIONS_USER } from 'projen/lib/github/constants';
+import { WorkflowActions } from 'projen/lib/github/workflow-actions';
 import { JobPermission } from 'projen/lib/github/workflows-model';
 import { Publisher } from 'projen/lib/release';
 import { Readme } from './readme';
@@ -218,32 +220,56 @@ export class CloudFormationTypeProject extends Component {
 
     // create a release workflow for this package
     const artifactDir = 'dist';
-    const releaseWorkflow = new TaskWorkflow(parent.github!, {
-      triggers: {
-        push: {
-          branches: ['main'],
-        },
+    const releaseWorkflow = parent.github!.addWorkflow(`release-${typeNameKebab}`);
+    releaseWorkflow.on({
+      push: {
+        branches: ['main'],
       },
-      name: `release-${typeNameKebab}`,
-      task: buildTask,
-      preBuildSteps: [
-        { run: 'yarn install' },
-      ],
-      postBuildSteps: [
-        { run: `mv ${outdir}/dist .` },
-      ],
-      permissions: {
-        contents: JobPermission.READ,
-      },
-      artifactsDirectory: artifactDir,
+    });
+    releaseWorkflow.addJob('build', {
+      runsOn: ['ubuntu-latest'],
       container: {
         image: 'jsii/superchain:1-buster-slim-node14',
       },
+      permissions: {
+        contents: JobPermission.READ,
+      },
+      steps: [
+        // check out sources.
+        {
+          name: 'Checkout',
+          uses: 'actions/checkout@v3',
+        },
+
+        // sets git identity so we can push later
+        ...WorkflowActions.setGitIdentity(DEFAULT_GITHUB_ACTIONS_USER),
+
+        { run: 'yarn install' },
+
+        // run the main build task
+        {
+          name: buildTask.name,
+          run: parent.runTaskCommand(buildTask),
+        },
+
+        { run: `mv ${outdir}/dist .` },
+        {
+          name: 'Upload artifact',
+          uses: 'actions/upload-artifact@v2.1.1',
+          // Setting to always will ensure that this step will run even if
+          // the previous ones have failed (e.g. coverage report, internal logs, etc)
+          if: 'always()',
+          with: {
+            name: 'build-artifact',
+            path: 'dist',
+          },
+        },
+      ],
     });
 
     const publisher = new Publisher(project, {
       artifactName: artifactDir,
-      buildJobId: releaseWorkflow.jobId,
+      buildJobId: 'build',
     });
 
     publisher.publishToNpm();

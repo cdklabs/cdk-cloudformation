@@ -76,7 +76,7 @@ jobs:
           branch: github-actions/upgrade-main
           title: "chore(deps): upgrade dependencies"
           labels: auto-approve
-          body: >-
+          body: |-
             Upgrades project dependencies. See details in [workflow run].
 
             [Workflow Run]: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}

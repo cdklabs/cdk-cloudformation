@@ -5,7 +5,6 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch: {}
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -26,7 +25,7 @@ jobs:
         uses: actions/upload-artifact@v2.1.1
         if: always()
         with:
-          name: dist
+          name: build-artifact
           path: dist
     container:
       image: jsii/superchain:1-buster-slim-node14

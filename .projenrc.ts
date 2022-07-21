@@ -8,6 +8,11 @@ const project = new typescript.TypeScriptProject({
   name: 'cdk-cloudformation',
   projenrcTs: true,
   sampleCode: false,
+  autoApproveOptions: {
+    allowedUsernames: ['cdklabs-automation'],
+    secret: 'GITHUB_SECRET',
+  },
+  autoApproveUpgrades: true,
 });
 
 project.package.addField('private', true);

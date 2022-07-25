@@ -10,7 +10,7 @@ const project = new typescript.TypeScriptProject({
   sampleCode: false,
   autoApproveOptions: {
     allowedUsernames: ['cdklabs-automation'],
-    secret: 'GITHUB_SECRET',
+    secret: 'PROJEN_GITHUB_TOKEN',
   },
   autoApproveUpgrades: true,
 });

@@ -1553,16 +1553,16 @@ case@1.6.3, case@^1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-import@^0.2.112:
-  version "0.2.293"
-  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.293.tgz#c67619e7a03ba002909fc37f63192a72f794c3de"
-  integrity sha512-n/m7WWfA1hzm3wY4gyZNK6cVaeuWqr2yjl07WZog36FyFt/iEvGW1Kmlzr7/qJXLT1R4gFO+1BjP2k58CZ8Gmg==
+  version "0.2.294"
+  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.294.tgz#b44d9352891498430beef8a31f33cb23475d144a"
+  integrity sha512-WV4s0zLryRd+qNbBbzb0pOswZA29uRslKi1NbXY/1DLxxHTCZRD5JUcdOZTqtm/9WXHxbRlgpryjhmzgw+uyUg==
   dependencies:
     aws-cdk-lib "^2.42.0"
     aws-sdk "^2.1218.0"
     case "^1.6.3"
     constructs "^10"
-    jsii-srcmak "^0.1.677"
-    json2jsii "^0.3.124"
+    jsii-srcmak "^0.1.678"
+    json2jsii "^0.3.125"
     minimist "^1.2.6"
     minimist-subcommand "^3.0.2"
     proxy-agent "^5.0.0"
@@ -4110,10 +4110,10 @@ jsii-rosetta@^1.67.0:
     workerpool "^6.2.1"
     yargs "^16.2.0"
 
-jsii-srcmak@^0.1.677:
-  version "0.1.678"
-  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.678.tgz#107833e204268197a06bb3eab7caf3f4bca064d5"
-  integrity sha512-ADtRQtWdZFimYyV+mrSdPQ/nSqerDNjwVxoaa0L8XQLEQpaBAVzpF/Gm6r1b4YCh33DcKSuRW9vkGWtE1dVgmg==
+jsii-srcmak@^0.1.678:
+  version "0.1.679"
+  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.679.tgz#a15add8966da2286cdffd92ba35fb96d4e668690"
+  integrity sha512-RojB5VQ50ghFxKQB8XSuFaDvu0J1MY8NNhXDVhFdIETaPLqhlyDIjQog4LETIUAwqMmlsDSjdUmLJ1YvfvjU9g==
   dependencies:
     fs-extra "^9.1.0"
     jsii "^1.67.0"
@@ -4187,10 +4187,10 @@ json-stringify-safe@^5.0.1:
   resolved "https://registry.yarnpkg.com/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
   integrity sha512-ZClg6AaYvamvYEE82d3Iyd3vSSIjQ+odgjaTzRuO3s7toCdFKczob2i0zCh7JE8kWn17yvAWhUVxvqGwUalsRA==
 
-json2jsii@^0.3.124:
-  version "0.3.125"
-  resolved "https://registry.yarnpkg.com/json2jsii/-/json2jsii-0.3.125.tgz#5957f67c551f607fa6fa13c1b215459be4998b05"
-  integrity sha512-fUkkv1r/t3TD6rt93//kuO2ZNhI14ibinEmMBKWKy57/3rKatZBVPLg/o584/d0EIAHLUbBCFDhhK9PgOpTqkQ==
+json2jsii@^0.3.125:
+  version "0.3.126"
+  resolved "https://registry.yarnpkg.com/json2jsii/-/json2jsii-0.3.126.tgz#6d92f801727857848d1829ca2b949b8f3e65ed7e"
+  integrity sha512-TuU0Yr5bJ9znpYANkhv/ZCOnkYGno7r2dPzXsNOwR9YiPTZiV+ncJ2DjZ7MPho2OLXJ0IxbHaSrFQl93GA1yJw==
   dependencies:
     camelcase "^6.3.0"
     json-schema "^0.4.0"

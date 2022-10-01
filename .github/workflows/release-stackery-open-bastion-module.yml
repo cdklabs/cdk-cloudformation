@@ -44,6 +44,8 @@ jobs:
         with:
           name: build-artifact
           path: dist
+      - name: Restore build artifact permissions
+        run: cd dist && setfacl --restore=permissions-backup.acl
       - name: Release
         run: npx -p publib@latest publib-npm
         env:
@@ -68,6 +70,8 @@ jobs:
         with:
           name: build-artifact
           path: dist
+      - name: Restore build artifact permissions
+        run: cd dist && setfacl --restore=permissions-backup.acl
       - name: Release
         run: npx -p publib@latest publib-maven
         env:
@@ -95,6 +99,8 @@ jobs:
         with:
           name: build-artifact
           path: dist
+      - name: Restore build artifact permissions
+        run: cd dist && setfacl --restore=permissions-backup.acl
       - name: Release
         run: npx -p publib@latest publib-nuget
         env:
@@ -117,6 +123,8 @@ jobs:
         with:
           name: build-artifact
           path: dist
+      - name: Restore build artifact permissions
+        run: cd dist && setfacl --restore=permissions-backup.acl
       - name: Release
         run: npx -p publib@latest publib-pypi
         env:

@@ -224,7 +224,7 @@
     "@typescript-eslint/parser": "^5",
     "aws-cdk-github-oidc": "^2.2.0",
     "aws-cdk-lib": "^2.50.0",
-    "aws-sdk": "^2.1253.0",
+    "aws-sdk": "^2.1255.0",
     "case": "^1.6.3",
     "cdk-import": "^0.2.112",
     "constructs": "^10.0.5",
@@ -238,11 +238,11 @@
     "jsii-pacmak": "^1.71.0",
     "json-schema": "^0.4.0",
     "npm-check-updates": "^16",
-    "projen": "^0.65.21",
+    "projen": "^0.65.23",
     "standard-version": "^9",
     "ts-jest": "^27.1.5",
     "ts-node": "^10",
-    "typescript": "~4.8.4"
+    "typescript": "~4.9.3"
   },
   "main": "lib/index.js",
   "license": "Apache-2.0",

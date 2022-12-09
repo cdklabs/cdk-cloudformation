@@ -55,7 +55,10 @@
     },
     "tsc": {
       "outDir": "lib",
-      "rootDir": "src"
+      "rootDir": "src",
+      "types": [
+        "node"
+      ]
     }
   },
   "peerDependencies": {

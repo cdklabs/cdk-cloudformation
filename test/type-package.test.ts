@@ -56,6 +56,7 @@ test('CloudFormationTypeProject', () => {
     tsc: {
       outDir: 'lib',
       rootDir: 'src',
+      types: ['node'],
     },
   });
 });

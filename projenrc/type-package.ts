@@ -160,6 +160,7 @@ export class CloudFormationTypeProject extends Component {
           tsc: {
             outDir: 'lib',
             rootDir: 'src',
+            types: ['node'],
           },
         },
         peerDependencies: {

@@ -39,7 +39,7 @@ export class UpdateRegistry extends Component {
     const workflow = project.github?.addWorkflow('update-registry');
     workflow?.on({
       workflowDispatch: {},
-      schedule: [{cron: "0 6 * * MON"}],
+      schedule: [{ cron: '0 6 * * MON' }],
     });
     workflow?.addJobs({
       update: {

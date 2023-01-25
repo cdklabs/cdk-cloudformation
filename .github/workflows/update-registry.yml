@@ -3,6 +3,8 @@
 name: update-registry
 on:
   workflow_dispatch: {}
+  schedule:
+    - cron: 0 11 * * MON
 jobs:
   update:
     runs-on: ubuntu-latest

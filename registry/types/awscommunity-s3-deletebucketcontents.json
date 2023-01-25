@@ -1,0 +1,16 @@
+{
+  "Arn": "arn:aws:cloudformation:us-east-1::type/resource/c830e97710da0c9954d80ba8df021e5439e7134b/AwsCommunity-S3-DeleteBucketContents",
+  "Type": "RESOURCE",
+  "TypeName": "AwsCommunity::S3::DeleteBucketContents",
+  "Description": "An experimental extension that deletes all contents of the referenced bucket when the stack is deleted. Use with caution!",
+  "Schema": "{\n    \"typeName\": \"AwsCommunity::S3::DeleteBucketContents\",\n    \"description\": \"An experimental extension that deletes all contents of the referenced bucket when the stack is deleted. Use with caution!\",\n    \"sourceUrl\": \"https://github.com/aws-cloudformation/community-registry-extensions.git\",\n    \"definitions\": { },\n    \"properties\": {\n        \"BucketName\": {\n            \"description\": \"The name of the bucket\",\n            \"type\": \"string\"\n        }\n    },\n    \"additionalProperties\": false,\n    \"tagging\": {\n        \"taggable\": false\n    },\n    \"required\": [\n        \"BucketName\"\n    ],\n    \"createOnlyProperties\": [\n        \"/properties/BucketName\"\n    ],\n    \"primaryIdentifier\": [\n        \"/properties/BucketName\"\n    ],\n    \"handlers\": {\n        \"create\": {\n            \"permissions\": [\n                \"s3:ListBucket\",\n                \"s3:GetBucketTagging\",\n                \"s3:PutBucketTagging\"\n            ]\n        },\n        \"read\": {\n            \"permissions\": [\n                \"s3:ListBucket\",\n                \"s3:GetBucketTagging\"\n            ]\n        },\n        \"delete\": {\n            \"permissions\": [\n                \"s3:DeleteObject\",\n                \"s3:ListBucket\",\n                \"s3:ListBucketVersions\",\n                \"s3:GetBucketTagging\",\n                \"s3:PutBucketTagging\"\n            ]\n        }\n    }\n}\n",
+  "ProvisioningType": "IMMUTABLE",
+  "DeprecatedStatus": "LIVE",
+  "RequiredActivatedTypes": [],
+  "Visibility": "PUBLIC",
+  "SourceUrl": "https://github.com/aws-cloudformation/community-registry-extensions.git",
+  "TimeCreated": "2022-11-10T22:54:01.883Z",
+  "PublisherId": "c830e97710da0c9954d80ba8df021e5439e7134b",
+  "LatestPublicVersion": "1.6.0",
+  "IsActivated": false
+}

@@ -1,0 +1,14 @@
+{
+  "Arn": "arn:aws:cloudformation:us-east-1::type/module/1f3a049eb4a792395c6609688da1c941f63d5698/FreyrAIM-Spider-ECS-MODULE",
+  "Type": "MODULE",
+  "TypeName": "FreyrAIM::Spider::ECS::MODULE",
+  "Description": "Schema for Module Fragment of type FreyrAIM::Spider::ECS::MODULE",
+  "Schema": "{\r\n    \"typeName\": \"FreyrAIM::Spider::ECS::MODULE\",\r\n    \"description\": \"Schema for Module Fragment of type FreyrAIM::Spider::ECS::MODULE\",\r\n    \"properties\": {\r\n        \"Parameters\": {\r\n            \"type\": \"object\",\r\n            \"properties\": {\r\n                \"EnvName\": {\r\n                    \"type\": \"object\",\r\n                    \"properties\": {\r\n                        \"Type\": {\r\n                            \"type\": \"string\"\r\n                        },\r\n                        \"Description\": {\r\n                            \"type\": \"string\"\r\n                        }\r\n                    },\r\n                    \"required\": [\r\n                        \"Type\",\r\n                        \"Description\"\r\n                    ],\r\n                    \"description\": \"The environment name \"\r\n                }\r\n            }\r\n        },\r\n        \"Resources\": {\r\n            \"properties\": {\r\n                \"TaskDefinition\": {\r\n                    \"type\": \"object\",\r\n                    \"properties\": {\r\n                        \"Type\": {\r\n                            \"type\": \"string\",\r\n                            \"const\": \"AWS::ECS::TaskDefinition\"\r\n                        },\r\n                        \"Properties\": {\r\n                            \"type\": \"object\"\r\n                        }\r\n                    }\r\n                },\r\n                \"Cluster\": {\r\n                    \"type\": \"object\",\r\n                    \"properties\": {\r\n                        \"Type\": {\r\n                            \"type\": \"string\",\r\n                            \"const\": \"AWS::ECS::Cluster\"\r\n                        },\r\n                        \"Properties\": {\r\n                            \"type\": \"object\"\r\n                        }\r\n                    }\r\n                }\r\n            },\r\n            \"type\": \"object\",\r\n            \"additionalProperties\": false\r\n        }\r\n    },\r\n    \"additionalProperties\": true\r\n}\r\n",
+  "DeprecatedStatus": "LIVE",
+  "RequiredActivatedTypes": [],
+  "Visibility": "PUBLIC",
+  "TimeCreated": "2022-07-04T07:49:43.444Z",
+  "PublisherId": "1f3a049eb4a792395c6609688da1c941f63d5698",
+  "LatestPublicVersion": "1.0.0",
+  "IsActivated": false
+}

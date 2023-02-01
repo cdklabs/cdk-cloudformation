@@ -1,0 +1,15 @@
+{
+  "Arn": "arn:aws:cloudformation:us-east-1::type/resource/bb989456c78c398a858fef18f2ca1bfc1fbba082/MongoDB-Atlas-CloudBackupSnapshotExportBucket",
+  "Type": "RESOURCE",
+  "TypeName": "MongoDB::Atlas::CloudBackupSnapshotExportBucket",
+  "Description": "The exportBuckets resource allows you to grant Atlas access to the specified bucket for exporting backup snapshots.",
+  "Schema": "{\n  \"typeName\": \"MongoDB::Atlas::CloudBackupSnapshotExportBucket\",\n  \"description\": \"The exportBuckets resource allows you to grant Atlas access to the specified bucket for exporting backup snapshots.\",\n  \"additionalProperties\": false,\n  \"definitions\": {\n    \"apiKeyDefinition\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"PrivateKey\": {\n          \"type\": \"string\"\n        },\n        \"PublicKey\": {\n          \"type\": \"string\"\n        }\n      },\n      \"additionalProperties\": false\n    }\n  },\n  \"properties\": {\n    \"ApiKeys\": {\n      \"$ref\": \"#/definitions/apiKeyDefinition\"\n    },\n    \"BucketName\": {\n      \"type\": \"string\",\n      \"description\": \"Human-readable label that identifies the AWS bucket that the role is authorized to access.\"\n    },\n    \"GroupId\": {\n      \"type\": \"string\",\n      \"description\": \"Unique 24-hexadecimal digit string that identifies your project.\",\n      \"maxLength\": 24,\n      \"minLength\": 24,\n      \"pattern\": \"^([a-f0-9]{24})$\"\n    },\n    \"IamRoleID\": {\n      \"type\": \"string\",\n      \"description\": \"Unique 24-hexadecimal character string that identifies the AWS IAM role that MongoDB Cloud uses to access the AWS S3 bucket.\",\n      \"maxLength\": 24,\n      \"minLength\": 24,\n      \"pattern\": \"^([a-f0-9]{24})$\"\n    },\n    \"Id\": {\n      \"type\": \"string\",\n      \"description\": \"Unique 24-hexadecimal character string that identifies the Amazon Web Services (AWS) Simple Storage Service (S3) export bucket.\",\n      \"maxLength\": 24,\n      \"minLength\": 24,\n      \"pattern\": \"^([a-f0-9]{24})$\"\n    }\n  },\n  \"required\": [\n    \"GroupId\",\n    \"IamRoleID\",\n    \"BucketName\",\n    \"ApiKeys\"\n  ],\n  \"readOnlyProperties\": [\n    \"/properties/Id\"\n  ],\n  \"primaryIdentifier\": [\n    \"/properties/Id\"\n  ],\n  \"handlers\": {\n    \"create\": {\n      \"permissions\": []\n    },\n    \"read\": {\n      \"permissions\": []\n    },\n    \"list\": {\n      \"permissions\": []\n    },\n    \"delete\": {\n      \"permissions\": []\n    }\n  }\n}\n",
+  "ProvisioningType": "IMMUTABLE",
+  "DeprecatedStatus": "LIVE",
+  "RequiredActivatedTypes": [],
+  "Visibility": "PUBLIC",
+  "TimeCreated": "2022-12-28T20:53:41.218Z",
+  "PublisherId": "bb989456c78c398a858fef18f2ca1bfc1fbba082",
+  "LatestPublicVersion": "1.0.0",
+  "IsActivated": false
+}

@@ -1,0 +1,16 @@
+{
+  "Arn": "arn:aws:cloudformation:us-east-1::type/resource/bb989456c78c398a858fef18f2ca1bfc1fbba082/MongoDB-Atlas-Auditing",
+  "Type": "RESOURCE",
+  "TypeName": "MongoDB::Atlas::Auditing",
+  "Description": "Returns and edits database auditing settings for MongoDB Cloud projects.",
+  "Schema": "{\n    \"typeName\":\"MongoDB::Atlas::Auditing\",\n    \"description\":\"Returns and edits database auditing settings for MongoDB Cloud projects.\",\n    \"sourceUrl\":\"https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git\",\n    \"definitions\":{\n        \"apiKeyDefinition\":{\n            \"type\":\"object\",\n            \"properties\":{\n                \"PrivateKey\":{\n                    \"type\":\"string\"\n                },\n                \"PublicKey\":{\n                    \"type\":\"string\"\n                }\n            },\n            \"additionalProperties\":false\n        }\n    },\n    \"properties\":{\n        \"ApiKeys\":{\n            \"$ref\":\"#/definitions/apiKeyDefinition\"\n        },\n        \"AuditAuthorizationSuccess\":{\n            \"type\":\"boolean\",\n            \"description\":\"Flag that indicates whether someone set auditing to track successful authentications. This only applies to the `\\\"atype\\\" : \\\"authCheck\\\"` audit filter. Setting this parameter to `true` degrades cluster performance.\"\n        },\n        \"AuditFilter\":{\n            \"type\":\"string\",\n            \"description\":\"JSON document that specifies which events to record. Escape any characters that may prevent parsing, such as single or double quotes, using a backslash (`\\\\`), for more information about audit filters refer to https://www.mongodb.com/docs/manual/tutorial/configure-audit-filters/.\"\n        },\n        \"ConfigurationType\":{\n            \"type\":\"string\",\n            \"description\":\"Human-readable label that displays how to configure the audit filter.\",\n            \"enum\":[\n                \"FILTER_BUILDER\",\n                \"FILTER_JSON\",\n                \"NONE\"\n            ]\n        },\n        \"GroupId\":{\n            \"type\":\"string\",\n            \"description\":\"Unique 24-hexadecimal digit string that identifies your project.\",\n            \"maxLength\":24,\n            \"minLength\":24,\n            \"pattern\":\"^([a-f0-9]{24})$\"\n        }\n    },\n    \"additionalProperties\":false,\n    \"required\":[\n        \"ApiKeys\",\n        \"GroupId\"\n    ],\n    \"primaryIdentifier\":[\n        \"/properties/GroupId\"\n    ],\n    \"createOnlyProperties\":[\n        \"/properties/GroupId\"\n    ],\n    \"handlers\":{\n        \"create\":{\n            \"permissions\":[\n\n            ]\n        },\n        \"read\":{\n            \"permissions\":[\n\n            ]\n        },\n        \"update\":{\n            \"permissions\":[\n\n            ]\n        },\n        \"delete\":{\n            \"permissions\":[\n\n            ]\n        }\n    }\n}",
+  "ProvisioningType": "FULLY_MUTABLE",
+  "DeprecatedStatus": "LIVE",
+  "RequiredActivatedTypes": [],
+  "Visibility": "PUBLIC",
+  "SourceUrl": "https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git",
+  "TimeCreated": "2022-12-19T20:50:42.505Z",
+  "PublisherId": "bb989456c78c398a858fef18f2ca1bfc1fbba082",
+  "LatestPublicVersion": "1.0.0",
+  "IsActivated": false
+}

@@ -51,7 +51,7 @@ export class UpdateRegistry extends Component {
         steps: [
           { uses: 'actions/checkout@v2' },
           {
-            uses: 'aws-actions/configure-aws-credentials@master',
+            uses: 'aws-actions/configure-aws-credentials@v1-node16',
             with: {
               'role-to-assume': `arn:aws:iam::${infra.stack.account}:role/${roleName}`,
               'aws-region': infra.stack.region,

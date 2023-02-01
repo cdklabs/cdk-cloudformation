@@ -14,13 +14,6 @@ export interface CfnMonitorProps {
   readonly creator?: Creator;
 
   /**
-   * ID of the monitor
-   *
-   * @schema CfnMonitorProps#Id
-   */
-  readonly id?: number;
-
-  /**
    * A message to include with notifications for the monitor
    *
    * @schema CfnMonitorProps#Message
@@ -79,7 +72,6 @@ export function toJson_CfnMonitorProps(obj: CfnMonitorProps | undefined): Record
   if (obj === undefined) { return undefined; }
   const result = {
     'Creator': toJson_Creator(obj.creator),
-    'Id': obj.id,
     'Message': obj.message,
     'Name': obj.name,
     'Tags': obj.tags?.map(y => y),
@@ -430,6 +422,11 @@ export class CfnMonitor extends cdk.CfnResource {
    */
   public readonly attrModified: string;
   /**
+   * Attribute `Datadog::Monitors::Monitor.Id`
+   * @link http://unknown-url
+   */
+  public readonly attrId: number;
+  /**
    * Attribute `Datadog::Monitors::Monitor.Deleted`
    * @link http://unknown-url
    */
@@ -453,6 +450,7 @@ export class CfnMonitor extends cdk.CfnResource {
     this.props = props;
 
     this.attrModified = cdk.Token.asString(this.getAtt('Modified'));
+    this.attrId = cdk.Token.asNumber(this.getAtt('Id'));
     this.attrDeleted = cdk.Token.asString(this.getAtt('Deleted'));
     this.attrCreated = cdk.Token.asString(this.getAtt('Created'));
   }

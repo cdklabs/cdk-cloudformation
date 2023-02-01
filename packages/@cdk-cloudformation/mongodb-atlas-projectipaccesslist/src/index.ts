@@ -25,13 +25,6 @@ export interface CfnProjectIpAccessListProps {
    */
   readonly projectId: string;
 
-  /**
-   * The unique identifier for the Project ip access list rules.
-   *
-   * @schema CfnProjectIpAccessListProps#TotalCount
-   */
-  readonly totalCount?: number;
-
 }
 
 /**
@@ -44,7 +37,6 @@ export function toJson_CfnProjectIpAccessListProps(obj: CfnProjectIpAccessListPr
     'AccessList': obj.accessList?.map(y => toJson_AccessListDefinition(y)),
     'ApiKeys': toJson_ApiKeyDefinition(obj.apiKeys),
     'ProjectId': obj.projectId,
-    'TotalCount': obj.totalCount,
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -165,6 +157,11 @@ export class CfnProjectIpAccessList extends cdk.CfnResource {
    * @link https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git
    */
   public readonly attrId: string;
+  /**
+   * Attribute `MongoDB::Atlas::ProjectIpAccessList.TotalCount`
+   * @link https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git
+   */
+  public readonly attrTotalCount: number;
 
   /**
    * Create a new `MongoDB::Atlas::ProjectIpAccessList`.
@@ -179,5 +176,6 @@ export class CfnProjectIpAccessList extends cdk.CfnResource {
     this.props = props;
 
     this.attrId = cdk.Token.asString(this.getAtt('Id'));
+    this.attrTotalCount = cdk.Token.asNumber(this.getAtt('TotalCount'));
   }
 }

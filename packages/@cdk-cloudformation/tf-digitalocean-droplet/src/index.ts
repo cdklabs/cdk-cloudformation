@@ -35,11 +35,6 @@ export interface CfnDropletProps {
   readonly ipv6?: boolean;
 
   /**
-   * @schema CfnDropletProps#Locked
-   */
-  readonly locked?: boolean;
-
-  /**
    * Boolean controlling whether monitoring agent is installed.
    * Defaults to false.
    *
@@ -137,7 +132,6 @@ export function toJson_CfnDropletProps(obj: CfnDropletProps | undefined): Record
     'Backups': obj.backups,
     'Image': obj.image,
     'Ipv6': obj.ipv6,
-    'Locked': obj.locked,
     'Monitoring': obj.monitoring,
     'Name': obj.name,
     'PrivateNetworking': obj.privateNetworking,
@@ -210,6 +204,11 @@ export class CfnDroplet extends cdk.CfnResource {
    */
   public readonly attrIpv6Address: string;
   /**
+   * Attribute `TF::DigitalOcean::Droplet.Locked`
+   * @link https://github.com/iann0036/cfn-tf-custom-types.git
+   */
+  public readonly attrLocked: cdk.IResolvable;
+  /**
    * Attribute `TF::DigitalOcean::Droplet.Memory`
    * @link https://github.com/iann0036/cfn-tf-custom-types.git
    */
@@ -259,6 +258,7 @@ export class CfnDroplet extends cdk.CfnResource {
     this.attrIpv4Address = cdk.Token.asString(this.getAtt('Ipv4Address'));
     this.attrIpv4AddressPrivate = cdk.Token.asString(this.getAtt('Ipv4AddressPrivate'));
     this.attrIpv6Address = cdk.Token.asString(this.getAtt('Ipv6Address'));
+    this.attrLocked = this.getAtt('Locked');
     this.attrMemory = cdk.Token.asNumber(this.getAtt('Memory'));
     this.attrPriceHourly = cdk.Token.asNumber(this.getAtt('PriceHourly'));
     this.attrPriceMonthly = cdk.Token.asNumber(this.getAtt('PriceMonthly'));

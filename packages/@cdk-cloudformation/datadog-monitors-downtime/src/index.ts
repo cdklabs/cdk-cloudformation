@@ -9,27 +9,6 @@ import * as constructs from 'constructs';
  */
 export interface CfnDowntimeProps {
   /**
-   * Whether or not this downtime is currently active
-   *
-   * @schema CfnDowntimeProps#Active
-   */
-  readonly active?: boolean;
-
-  /**
-   * POSIX Timestamp of cancellation of this downtime (null if not canceled)
-   *
-   * @schema CfnDowntimeProps#Canceled
-   */
-  readonly canceled?: number;
-
-  /**
-   * Id of the user who created this downtime
-   *
-   * @schema CfnDowntimeProps#CreatorId
-   */
-  readonly creatorId?: number;
-
-  /**
    * Whether or not this downtime is disabled
    *
    * @schema CfnDowntimeProps#Disabled
@@ -37,25 +16,11 @@ export interface CfnDowntimeProps {
   readonly disabled?: boolean;
 
   /**
-   * Type of this downtime
-   *
-   * @schema CfnDowntimeProps#DowntimeType
-   */
-  readonly downtimeType?: number;
-
-  /**
    * POSIX timestamp to end the downtime. If not provided, the downtime is in effect indefinitely (i.e. until you cancel it).
    *
    * @schema CfnDowntimeProps#End
    */
   readonly end?: number;
-
-  /**
-   * Id of this downtime
-   *
-   * @schema CfnDowntimeProps#Id
-   */
-  readonly id?: number;
 
   /**
    * Message on the downtime
@@ -79,13 +44,6 @@ export interface CfnDowntimeProps {
   readonly monitorTags?: string[];
 
   /**
-   * The ID of the parent downtime to this one
-   *
-   * @schema CfnDowntimeProps#ParentId
-   */
-  readonly parentId?: number;
-
-  /**
    * The scope(s) to which the downtime applies
    *
    * @schema CfnDowntimeProps#Scope
@@ -106,13 +64,6 @@ export interface CfnDowntimeProps {
    */
   readonly timezone?: string;
 
-  /**
-   * Id of the user who updated this downtime
-   *
-   * @schema CfnDowntimeProps#UpdaterId
-   */
-  readonly updaterId?: number;
-
 }
 
 /**
@@ -122,21 +73,14 @@ export interface CfnDowntimeProps {
 export function toJson_CfnDowntimeProps(obj: CfnDowntimeProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'Active': obj.active,
-    'Canceled': obj.canceled,
-    'CreatorId': obj.creatorId,
     'Disabled': obj.disabled,
-    'DowntimeType': obj.downtimeType,
     'End': obj.end,
-    'Id': obj.id,
     'Message': obj.message,
     'MonitorId': obj.monitorId,
     'MonitorTags': obj.monitorTags?.map(y => y),
-    'ParentId': obj.parentId,
     'Scope': obj.scope?.map(y => y),
     'Start': obj.start,
     'Timezone': obj.timezone,
-    'UpdaterId': obj.updaterId,
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -162,6 +106,41 @@ export class CfnDowntime extends cdk.CfnResource {
    */
   public readonly props: CfnDowntimeProps;
 
+  /**
+   * Attribute `Datadog::Monitors::Downtime.Active`
+   * @link http://unknown-url
+   */
+  public readonly attrActive: cdk.IResolvable;
+  /**
+   * Attribute `Datadog::Monitors::Downtime.Canceled`
+   * @link http://unknown-url
+   */
+  public readonly attrCanceled: number;
+  /**
+   * Attribute `Datadog::Monitors::Downtime.CreatorId`
+   * @link http://unknown-url
+   */
+  public readonly attrCreatorId: number;
+  /**
+   * Attribute `Datadog::Monitors::Downtime.DowntimeType`
+   * @link http://unknown-url
+   */
+  public readonly attrDowntimeType: number;
+  /**
+   * Attribute `Datadog::Monitors::Downtime.Id`
+   * @link http://unknown-url
+   */
+  public readonly attrId: number;
+  /**
+   * Attribute `Datadog::Monitors::Downtime.ParentId`
+   * @link http://unknown-url
+   */
+  public readonly attrParentId: number;
+  /**
+   * Attribute `Datadog::Monitors::Downtime.UpdaterId`
+   * @link http://unknown-url
+   */
+  public readonly attrUpdaterId: number;
 
   /**
    * Create a new `Datadog::Monitors::Downtime`.
@@ -175,5 +154,12 @@ export class CfnDowntime extends cdk.CfnResource {
 
     this.props = props;
 
+    this.attrActive = this.getAtt('Active');
+    this.attrCanceled = cdk.Token.asNumber(this.getAtt('Canceled'));
+    this.attrCreatorId = cdk.Token.asNumber(this.getAtt('CreatorId'));
+    this.attrDowntimeType = cdk.Token.asNumber(this.getAtt('DowntimeType'));
+    this.attrId = cdk.Token.asNumber(this.getAtt('Id'));
+    this.attrParentId = cdk.Token.asNumber(this.getAtt('ParentId'));
+    this.attrUpdaterId = cdk.Token.asNumber(this.getAtt('UpdaterId'));
   }
 }

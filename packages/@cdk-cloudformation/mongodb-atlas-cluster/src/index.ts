@@ -94,13 +94,6 @@ export interface CfnClusterProps {
   readonly numShards?: number;
 
   /**
-   * Flag that indicates whether the cluster is paused or not.
-   *
-   * @schema CfnClusterProps#Paused
-   */
-  readonly paused?: boolean;
-
-  /**
    * Flag that indicates if the cluster uses Point-in-Time backups. If set to true, providerBackupEnabled must also be set to true.
    *
    * @schema CfnClusterProps#PitEnabled
@@ -155,7 +148,6 @@ export function toJson_CfnClusterProps(obj: CfnClusterProps | undefined): Record
     'MongoDBMajorVersion': obj.mongoDbMajorVersion,
     'Name': obj.name,
     'NumShards': obj.numShards,
-    'Paused': obj.paused,
     'PitEnabled': obj.pitEnabled,
     'ProviderBackupEnabled': obj.providerBackupEnabled,
     'ProviderSettings': toJson_CfnClusterPropsProviderSettings(obj.providerSettings),
@@ -582,6 +574,11 @@ export class CfnCluster extends cdk.CfnResource {
    */
   public readonly attrSrvAddress: string;
   /**
+   * Attribute `MongoDB::Atlas::Cluster.Paused`
+   * @link http://unknown-url
+   */
+  public readonly attrPaused: cdk.IResolvable;
+  /**
    * Attribute `MongoDB::Atlas::Cluster.MongoDBVersion`
    * @link http://unknown-url
    */
@@ -621,6 +618,7 @@ export class CfnCluster extends cdk.CfnResource {
 
     this.attrStateName = cdk.Token.asString(this.getAtt('StateName'));
     this.attrSrvAddress = cdk.Token.asString(this.getAtt('SrvAddress'));
+    this.attrPaused = this.getAtt('Paused');
     this.attrMongoDBVersion = cdk.Token.asString(this.getAtt('MongoDBVersion'));
     this.attrMongoURI = cdk.Token.asString(this.getAtt('MongoURI'));
     this.attrMongoURIUpdated = cdk.Token.asString(this.getAtt('MongoURIUpdated'));

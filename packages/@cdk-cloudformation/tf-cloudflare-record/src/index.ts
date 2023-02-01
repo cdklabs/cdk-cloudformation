@@ -35,11 +35,6 @@ export interface CfnRecordProps {
   readonly priority?: number;
 
   /**
-   * @schema CfnRecordProps#Proxiable
-   */
-  readonly proxiable?: boolean;
-
-  /**
    * Whether the record gets Cloudflare's origin protection; defaults to `false`.
    *
    * @schema CfnRecordProps#Proxied
@@ -92,7 +87,6 @@ export function toJson_CfnRecordProps(obj: CfnRecordProps | undefined): Record<s
     'Metadata': obj.metadata?.map(y => toJson_MetadataDefinition(y)),
     'Name': obj.name,
     'Priority': obj.priority,
-    'Proxiable': obj.proxiable,
     'Proxied': obj.proxied,
     'Ttl': obj.ttl,
     'Type': obj.type,
@@ -242,6 +236,11 @@ export class CfnRecord extends cdk.CfnResource {
    * @link https://github.com/iann0036/cfn-tf-custom-types.git
    */
   public readonly attrModifiedOn: string;
+  /**
+   * Attribute `TF::Cloudflare::Record.Proxiable`
+   * @link https://github.com/iann0036/cfn-tf-custom-types.git
+   */
+  public readonly attrProxiable: cdk.IResolvable;
 
   /**
    * Create a new `TF::Cloudflare::Record`.
@@ -260,5 +259,6 @@ export class CfnRecord extends cdk.CfnResource {
     this.attrHostname = cdk.Token.asString(this.getAtt('Hostname'));
     this.attrId = cdk.Token.asString(this.getAtt('Id'));
     this.attrModifiedOn = cdk.Token.asString(this.getAtt('ModifiedOn'));
+    this.attrProxiable = this.getAtt('Proxiable');
   }
 }

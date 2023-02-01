@@ -49,7 +49,7 @@ export class UpdateRegistry extends Component {
         } as any,
         runsOn: ['ubuntu-latest'],
         steps: [
-          { uses: 'actions/checkout@v2' },
+          { uses: 'actions/checkout@v3' },
           {
             uses: 'aws-actions/configure-aws-credentials@v1-node16',
             with: {
@@ -63,7 +63,7 @@ export class UpdateRegistry extends Component {
 
           // create a pull request
           {
-            uses: 'peter-evans/create-pull-request@v3',
+            uses: 'peter-evans/create-pull-request@v4',
             with: {
               'title': 'feat: cloudformation registry update',
               'commit-message': 'feat: cloudformation registry update',

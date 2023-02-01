@@ -16,11 +16,6 @@ export interface CfnRecordProps {
   readonly data?: DataDefinition[];
 
   /**
-   * @schema CfnRecordProps#Metadata
-   */
-  readonly metadata?: MetadataDefinition[];
-
-  /**
    * The name of the record.
    *
    * @schema CfnRecordProps#Name
@@ -89,7 +84,6 @@ export function toJson_CfnRecordProps(obj: CfnRecordProps | undefined): Record<s
   if (obj === undefined) { return undefined; }
   const result = {
     'Data': obj.data?.map(y => toJson_DataDefinition(y)),
-    'Metadata': obj.metadata?.map(y => toJson_MetadataDefinition(y)),
     'Name': obj.name,
     'Priority': obj.priority,
     'Proxiable': obj.proxiable,
@@ -126,37 +120,6 @@ export interface DataDefinition {
  */
 /* eslint-disable max-len, quote-props */
 export function toJson_DataDefinition(obj: DataDefinition | undefined): Record<string, any> | undefined {
-  if (obj === undefined) { return undefined; }
-  const result = {
-    'MapKey': obj.mapKey,
-    'MapValue': obj.mapValue,
-  };
-  // filter undefined values
-  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
-}
-/* eslint-enable max-len, quote-props */
-
-/**
- * @schema MetadataDefinition
- */
-export interface MetadataDefinition {
-  /**
-   * @schema MetadataDefinition#MapKey
-   */
-  readonly mapKey: string;
-
-  /**
-   * @schema MetadataDefinition#MapValue
-   */
-  readonly mapValue: string;
-
-}
-
-/**
- * Converts an object of type 'MetadataDefinition' to JSON representation.
- */
-/* eslint-disable max-len, quote-props */
-export function toJson_MetadataDefinition(obj: MetadataDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'MapKey': obj.mapKey,
@@ -238,6 +201,11 @@ export class CfnRecord extends cdk.CfnResource {
    */
   public readonly attrId: string;
   /**
+   * Attribute `TF::Cloudflare::Record.Metadata`
+   * @link https://github.com/iann0036/cfn-tf-custom-types.git
+   */
+  public readonly attrMetadata: MetadataDefinition[];
+  /**
    * Attribute `TF::Cloudflare::Record.ModifiedOn`
    * @link https://github.com/iann0036/cfn-tf-custom-types.git
    */
@@ -259,6 +227,7 @@ export class CfnRecord extends cdk.CfnResource {
     this.attrCreatedOn = cdk.Token.asString(this.getAtt('CreatedOn'));
     this.attrHostname = cdk.Token.asString(this.getAtt('Hostname'));
     this.attrId = cdk.Token.asString(this.getAtt('Id'));
+    this.attrMetadata = this.getAtt('Metadata');
     this.attrModifiedOn = cdk.Token.asString(this.getAtt('ModifiedOn'));
   }
 }

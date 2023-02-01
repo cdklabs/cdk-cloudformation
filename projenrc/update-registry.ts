@@ -49,9 +49,9 @@ export class UpdateRegistry extends Component {
         } as any,
         runsOn: ['ubuntu-latest'],
         steps: [
-          { uses: 'actions/checkout@v2' },
+          { uses: 'actions/checkout@v3' },
           {
-            uses: 'aws-actions/configure-aws-credentials@master',
+            uses: 'aws-actions/configure-aws-credentials@v1-node16',
             with: {
               'role-to-assume': `arn:aws:iam::${infra.stack.account}:role/${roleName}`,
               'aws-region': infra.stack.region,
@@ -63,8 +63,9 @@ export class UpdateRegistry extends Component {
 
           // create a pull request
           {
-            uses: 'peter-evans/create-pull-request@v3',
+            uses: 'peter-evans/create-pull-request@v4',
             with: {
+              'token': '${{ secrets.PROJEN_GITHUB_TOKEN }}',
               'title': 'feat: cloudformation registry update',
               'commit-message': 'feat: cloudformation registry update',
               'branch': 'automation/update-registry',

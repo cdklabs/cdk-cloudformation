@@ -23,13 +23,6 @@ export interface CfnProjectProps {
   readonly orgId: string;
 
   /**
-   * The number of Atlas clusters deployed in the project.
-   *
-   * @schema CfnProjectProps#ClusterCount
-   */
-  readonly clusterCount?: number;
-
-  /**
    * @schema CfnProjectProps#ApiKeys
    */
   readonly apiKeys?: ApiKeyDefinition;
@@ -45,7 +38,6 @@ export function toJson_CfnProjectProps(obj: CfnProjectProps | undefined): Record
   const result = {
     'Name': obj.name,
     'OrgId': obj.orgId,
-    'ClusterCount': obj.clusterCount,
     'ApiKeys': toJson_ApiKeyDefinition(obj.apiKeys),
   };
   // filter undefined values
@@ -113,6 +105,11 @@ export class CfnProject extends cdk.CfnResource {
    * @link http://unknown-url
    */
   public readonly attrCreated: string;
+  /**
+   * Attribute `MongoDB::Atlas::Project.ClusterCount`
+   * @link http://unknown-url
+   */
+  public readonly attrClusterCount: number;
 
   /**
    * Create a new `MongoDB::Atlas::Project`.
@@ -128,5 +125,6 @@ export class CfnProject extends cdk.CfnResource {
 
     this.attrId = cdk.Token.asString(this.getAtt('Id'));
     this.attrCreated = cdk.Token.asString(this.getAtt('Created'));
+    this.attrClusterCount = cdk.Token.asNumber(this.getAtt('ClusterCount'));
   }
 }

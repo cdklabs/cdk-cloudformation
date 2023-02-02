@@ -46,6 +46,7 @@ export const types: DeprecatedTypeOptions[] = [
 ];
 export const prefixes: DeprecatedTypePrefixOptions[] = [
   { typePrefix: 'MongoDB::Atlas::', deprecationMessage: 'This package is deprecated. Please use the respective `@mongodbatlas-awscdk/*` scoped package instead' },
+  { typePrefix: 'MongoDb::Atlas::', deprecationMessage: 'This package is deprecated. Please use the respective `@mongodbatlas-awscdk/*` scoped package instead' },
 ];
 
 

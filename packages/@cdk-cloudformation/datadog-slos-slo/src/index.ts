@@ -233,9 +233,9 @@ export function toJson_Threshold(obj: Threshold | undefined): Record<string, any
  */
 export enum CfnSloPropsType {
   /** monitor */
-  MONITOR = 'monitor',
+  MONITOR = "monitor",
   /** metric */
-  METRIC = 'metric',
+  METRIC = "metric",
 }
 
 /**
@@ -245,11 +245,11 @@ export enum CfnSloPropsType {
  */
 export enum ThresholdTimeframe {
   /** 7d */
-  VALUE_7D = '7d',
+  VALUE_7D = "7d",
   /** 30d */
-  VALUE_30D = '30d',
+  VALUE_30D = "30d",
   /** 90d */
-  VALUE_90D = '90d',
+  VALUE_90D = "90d",
 }
 
 

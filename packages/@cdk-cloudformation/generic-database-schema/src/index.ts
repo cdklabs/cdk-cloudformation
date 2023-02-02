@@ -180,9 +180,9 @@ export function toJson_User(obj: User | undefined): Record<string, any> | undefi
  */
 export enum CfnSchemaPropsSqlIdempotency {
   /** IDEMPOTENT */
-  IDEMPOTENT = 'IDEMPOTENT',
+  IDEMPOTENT = "IDEMPOTENT",
   /** RUN_ONCE */
-  RUN_ONCE = 'RUN_ONCE',
+  RUN_ONCE = "RUN_ONCE",
 }
 
 /**

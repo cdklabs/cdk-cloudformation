@@ -282,25 +282,25 @@ export function toJson_MonitorOptions(obj: MonitorOptions | undefined): Record<s
  */
 export enum CfnMonitorPropsType {
   /** composite */
-  COMPOSITE = 'composite',
+  COMPOSITE = "composite",
   /** event alert */
-  EVENT_ALERT = 'event alert',
+  EVENT_ALERT = "event alert",
   /** log alert */
-  LOG_ALERT = 'log alert',
+  LOG_ALERT = "log alert",
   /** metric alert */
-  METRIC_ALERT = 'metric alert',
+  METRIC_ALERT = "metric alert",
   /** process alert */
-  PROCESS_ALERT = 'process alert',
+  PROCESS_ALERT = "process alert",
   /** query alert */
-  QUERY_ALERT = 'query alert',
+  QUERY_ALERT = "query alert",
   /** service check */
-  SERVICE_CHECK = 'service check',
+  SERVICE_CHECK = "service check",
   /** synthetics alert */
-  SYNTHETICS_ALERT = 'synthetics alert',
+  SYNTHETICS_ALERT = "synthetics alert",
   /** trace-analytics alert */
-  TRACE_ANALYTICS_ALERT = 'trace-analytics alert',
+  TRACE_ANALYTICS_ALERT = "trace-analytics alert",
   /** slo alert */
-  SLO_ALERT = 'slo alert',
+  SLO_ALERT = "slo alert",
 }
 
 /**

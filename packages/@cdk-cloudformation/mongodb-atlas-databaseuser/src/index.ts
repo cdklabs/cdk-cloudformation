@@ -108,11 +108,11 @@ export function toJson_CfnDatabaseUserProps(obj: CfnDatabaseUserProps | undefine
  */
 export enum CfnDatabaseUserPropsAwsiamType {
   /** NONE */
-  NONE = 'NONE',
+  NONE = "NONE",
   /** USER */
-  USER = 'USER',
+  USER = "USER",
   /** ROLE */
-  ROLE = 'ROLE',
+  ROLE = "ROLE",
 }
 
 /**
@@ -184,11 +184,11 @@ export function toJson_LabelDefinition(obj: LabelDefinition | undefined): Record
  */
 export enum CfnDatabaseUserPropsLdapAuthType {
   /** NONE */
-  NONE = 'NONE',
+  NONE = "NONE",
   /** USER */
-  USER = 'USER',
+  USER = "USER",
   /** GROUP */
-  GROUP = 'GROUP',
+  GROUP = "GROUP",
 }
 
 /**
@@ -264,9 +264,9 @@ export function toJson_ScopeDefinition(obj: ScopeDefinition | undefined): Record
  */
 export enum ScopeDefinitionType {
   /** CLUSTER */
-  CLUSTER = 'CLUSTER',
+  CLUSTER = "CLUSTER",
   /** DATA_LAKE */
-  DATA_LAKE = 'DATA_LAKE',
+  DATA_LAKE = "DATA_LAKE",
 }
 
 

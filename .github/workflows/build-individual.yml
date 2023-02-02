@@ -85,6 +85,26 @@ jobs:
       - run: yarn build:atlassian-opsgenie-user
     container:
       image: jsii/superchain:1-buster-slim-node14
+  awscommunity-account-alternatecontact:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:awscommunity-account-alternatecontact
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  awscommunity-s3-deletebucketcontents:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:awscommunity-s3-deletebucketcontents
+    container:
+      image: jsii/superchain:1-buster-slim-node14
   awsqs-checkpoint-cloudguardqs-module:
     runs-on: ubuntu-latest
     permissions:
@@ -165,6 +185,296 @@ jobs:
       - run: yarn build:awsqs-vpc-vpcqs-module
     container:
       image: jsii/superchain:1-buster-slim-node14
+  awssamples-ec2imageidcheckssm-hook:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:awssamples-ec2imageidcheckssm-hook
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  awssamples-ec2ssmsmonly-hook:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:awssamples-ec2ssmsmonly-hook
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  awssamples-ec2volumeencryptionkms-hook:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:awssamples-ec2volumeencryptionkms-hook
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  awssamples-efsencrypt-hook:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:awssamples-efsencrypt-hook
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  awssamples-eksclusterlogging-hook:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:awssamples-eksclusterlogging-hook
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  awssamples-eksclusterpublicapi-hook:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:awssamples-eksclusterpublicapi-hook
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  awssamples-fsxwindowsonly-hook:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:awssamples-fsxwindowsonly-hook
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  awssamples-iampoliciesrequiremfa-hook:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:awssamples-iampoliciesrequiremfa-hook
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  awssamples-iampolicydoesnotgiveadmin-hook:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:awssamples-iampolicydoesnotgiveadmin-hook
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  awssamples-iamprincipalboundary-hook:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:awssamples-iamprincipalboundary-hook
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  awssamples-iamusershavepolicy-hook:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:awssamples-iamusershavepolicy-hook
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  awssamples-noip6-hook:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:awssamples-noip6-hook
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  awssamples-rdsencrypt-hook:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:awssamples-rdsencrypt-hook
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  awssamples-s3blockpublicaccess-hook:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:awssamples-s3blockpublicaccess-hook
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  awssamples-s3bucketencrypt-hook:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:awssamples-s3bucketencrypt-hook
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  awssamples-s3bucketloggingcompliance-hook:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:awssamples-s3bucketloggingcompliance-hook
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  awssamples-s3bucketloggingenabled-hook:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:awssamples-s3bucketloggingenabled-hook
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  awssamples-securitygroupopeningress-hook:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:awssamples-securitygroupopeningress-hook
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  awssamples-sqsnonpublic-hook:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:awssamples-sqsnonpublic-hook
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  awssamples-sqspolicyencryption-hook:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:awssamples-sqspolicyencryption-hook
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  bigid-datasource-dynamodb:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:bigid-datasource-dynamodb
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  bigid-datasource-s3:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:bigid-datasource-s3
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  cloudflare-dns-record:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:cloudflare-dns-record
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  cloudflare-loadbalancer-loadbalancer:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:cloudflare-loadbalancer-loadbalancer
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  cloudflare-loadbalancer-monitor:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:cloudflare-loadbalancer-monitor
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  cloudflare-loadbalancer-pool:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:cloudflare-loadbalancer-pool
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  confluentcloud-iam-serviceaccount:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:confluentcloud-iam-serviceaccount
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  databricks-clusters-cluster:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:databricks-clusters-cluster
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  databricks-clusters-job:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:databricks-clusters-job
+    container:
+      image: jsii/superchain:1-buster-slim-node14
   datadog-dashboards-dashboard:
     runs-on: ubuntu-latest
     permissions:
@@ -215,6 +525,106 @@ jobs:
       - run: yarn build:datadog-slos-slo
     container:
       image: jsii/superchain:1-buster-slim-node14
+  dynatrace-configuration-dashboard:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:dynatrace-configuration-dashboard
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  dynatrace-environment-servicelevelobjective:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:dynatrace-environment-servicelevelobjective
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  dynatrace-environment-syntheticlocation:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:dynatrace-environment-syntheticlocation
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  dynatrace-environment-syntheticmonitor:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:dynatrace-environment-syntheticmonitor
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  fastly-dictionary-dictionary:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:fastly-dictionary-dictionary
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  fastly-dictionary-dictionaryitem:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:fastly-dictionary-dictionaryitem
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  fastly-services-backend:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:fastly-services-backend
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  fastly-services-domain:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:fastly-services-domain
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  fastly-services-healthcheck:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:fastly-services-healthcheck
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  fastly-services-service:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:fastly-services-service
+    container:
+      image: jsii/superchain:1-buster-slim-node14
   fireeye-cloudintegrations-cloudwatch:
     runs-on: ubuntu-latest
     permissions:
@@ -223,6 +633,116 @@ jobs:
       - uses: actions/checkout@v3
       - run: yarn install
       - run: yarn build:fireeye-cloudintegrations-cloudwatch
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  freyraim-impactapi-apigateway-module:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:freyraim-impactapi-apigateway-module
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  freyraim-impactapi-apihandle-module:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:freyraim-impactapi-apihandle-module
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  freyraim-impactapi-ec2instance-module:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:freyraim-impactapi-ec2instance-module
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  freyraim-impactapi-lambdafunction-module:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:freyraim-impactapi-lambdafunction-module
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  freyraim-impactapi-loadbalancer-module:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:freyraim-impactapi-loadbalancer-module
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  freyraim-spider-cloudfront-module:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:freyraim-spider-cloudfront-module
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  freyraim-spider-ec2instance-module:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:freyraim-spider-ec2instance-module
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  freyraim-spider-ecs-module:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:freyraim-spider-ecs-module
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  freyraim-spider-loadbalancer-module:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:freyraim-spider-loadbalancer-module
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  freyraim-spider-postgresql-module:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:freyraim-spider-postgresql-module
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  freyraim-spider-s3bucket-module:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:freyraim-spider-s3bucket-module
     container:
       image: jsii/superchain:1-buster-slim-node14
   generic-database-schema:
@@ -235,6 +755,16 @@ jobs:
       - run: yarn build:generic-database-schema
     container:
       image: jsii/superchain:1-buster-slim-node14
+  generic-secretsprotection-hook:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:generic-secretsprotection-hook
+    container:
+      image: jsii/superchain:1-buster-slim-node14
   generic-transcribe-vocabulary:
     runs-on: ubuntu-latest
     permissions:
@@ -243,6 +773,166 @@ jobs:
       - uses: actions/checkout@v3
       - run: yarn install
       - run: yarn build:generic-transcribe-vocabulary
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  github-git-tag:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:github-git-tag
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  github-organizations-membership:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:github-organizations-membership
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  github-repositories-collaborator:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:github-repositories-collaborator
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  github-repositories-repository:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:github-repositories-repository
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  github-repositories-webhook:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:github-repositories-webhook
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  github-teams-membership:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:github-teams-membership
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  github-teams-repositoryaccess:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:github-teams-repositoryaccess
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  github-teams-team:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:github-teams-team
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  gitlab-code-tag:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:gitlab-code-tag
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  gitlab-groups-group:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:gitlab-groups-group
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  gitlab-groups-groupaccesstogroup:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:gitlab-groups-groupaccesstogroup
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  gitlab-groups-usermemberofgroup:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:gitlab-groups-usermemberofgroup
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  gitlab-projects-accesstoken:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:gitlab-projects-accesstoken
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  gitlab-projects-groupaccesstoproject:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:gitlab-projects-groupaccesstoproject
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  gitlab-projects-project:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:gitlab-projects-project
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  gitlab-projects-usermemberofproject:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:gitlab-projects-usermemberofproject
     container:
       image: jsii/superchain:1-buster-slim-node14
   gremlin-agent-helm:
@@ -325,6 +1015,16 @@ jobs:
       - run: yarn build:jfrog-xray-ec2instance-module
     container:
       image: jsii/superchain:1-buster-slim-node14
+  karte-eventbridge-documentdb-module:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:karte-eventbridge-documentdb-module
+    container:
+      image: jsii/superchain:1-buster-slim-node14
   logzio-autodeploymentlogzio-cloudwatch-module:
     runs-on: ubuntu-latest
     permissions:
@@ -373,6 +1073,16 @@ jobs:
       - uses: actions/checkout@v3
       - run: yarn install
       - run: yarn build:logzio-myservice-myname-module
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  mongodb-atlas-awsiamdatabaseuser:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:mongodb-atlas-awsiamdatabaseuser
     container:
       image: jsii/superchain:1-buster-slim-node14
   mongodb-atlas-cluster:
@@ -425,6 +1135,196 @@ jobs:
       - run: yarn build:mongodb-atlas-projectipaccesslist
     container:
       image: jsii/superchain:1-buster-slim-node14
+  newrelic-cloudformation-dashboards:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:newrelic-cloudformation-dashboards
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  newrelic-cloudformation-tagging:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:newrelic-cloudformation-tagging
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  newrelic-cloudformation-workloads:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:newrelic-cloudformation-workloads
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  newrelic-observability-dashboards:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:newrelic-observability-dashboards
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  newrelic-observability-workloads:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:newrelic-observability-workloads
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  okta-application-application:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:okta-application-application
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  okta-group-group:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:okta-group-group
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  okta-group-groupapplicationassociation:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:okta-group-groupapplicationassociation
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  okta-group-membership:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:okta-group-membership
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  okta-policy-policy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:okta-policy-policy
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  org-test-sample-module:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:org-test-sample-module
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  pagerduty-escalationpolicies-escalationpolicy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:pagerduty-escalationpolicies-escalationpolicy
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  pagerduty-responseplays-responseplay:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:pagerduty-responseplays-responseplay
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  pagerduty-schedules-schedule:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:pagerduty-schedules-schedule
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  pagerduty-teams-membership:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:pagerduty-teams-membership
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  pagerduty-teams-team:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:pagerduty-teams-team
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  pagerduty-users-user:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:pagerduty-users-user
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  paloaltonetworks-cloudngfw-ngfw:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:paloaltonetworks-cloudngfw-ngfw
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  paloaltonetworks-cloudngfw-rulestack:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:paloaltonetworks-cloudngfw-rulestack
+    container:
+      image: jsii/superchain:1-buster-slim-node14
   registry-test-resource1-module:
     runs-on: ubuntu-latest
     permissions:
@@ -433,6 +1333,116 @@ jobs:
       - uses: actions/checkout@v3
       - run: yarn install
       - run: yarn build:registry-test-resource1-module
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  rollbar-notifications-rule:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:rollbar-notifications-rule
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  rollbar-projects-accesstoken:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:rollbar-projects-accesstoken
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  rollbar-projects-project:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:rollbar-projects-project
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  rollbar-teams-membership:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:rollbar-teams-membership
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  rollbar-teams-team:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:rollbar-teams-team
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  snowflake-database-database:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:snowflake-database-database
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  snowflake-database-grant:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:snowflake-database-grant
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  snowflake-role-grant:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:snowflake-role-grant
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  snowflake-role-role:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:snowflake-role-role
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  snowflake-user-user:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:snowflake-user-user
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  snowflake-warehouse-grant:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:snowflake-warehouse-grant
     container:
       image: jsii/superchain:1-buster-slim-node14
   snyk-container-helm:
@@ -653,5 +1663,15 @@ jobs:
       - uses: actions/checkout@v3
       - run: yarn install
       - run: yarn build:trendmicro-cloudonecontainer-helm
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  zmk-iam-lambdabasicrole-module:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:zmk-iam-lambdabasicrole-module
     container:
       image: jsii/superchain:1-buster-slim-node14

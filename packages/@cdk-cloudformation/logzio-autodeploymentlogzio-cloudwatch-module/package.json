@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/logzio-autodeploymentlogzio-cloudwatch-module",
   "description": "Schema for Module Fragment of type logzio::autoDeploymentLogzio::CloudWatch::MODULE",
-  "version": "2.0.0-alpha.5",
+  "version": "2.2.0-alpha.5",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

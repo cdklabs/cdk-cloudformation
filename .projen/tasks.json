@@ -120,6 +120,30 @@
         }
       ]
     },
+    "build:awscommunity-account-alternatecontact": {
+      "name": "build:awscommunity-account-alternatecontact",
+      "description": "build awscommunity-account-alternatecontact",
+      "steps": [
+        {
+          "spawn": "compile:awscommunity-account-alternatecontact"
+        },
+        {
+          "spawn": "package:awscommunity-account-alternatecontact"
+        }
+      ]
+    },
+    "build:awscommunity-s3-deletebucketcontents": {
+      "name": "build:awscommunity-s3-deletebucketcontents",
+      "description": "build awscommunity-s3-deletebucketcontents",
+      "steps": [
+        {
+          "spawn": "compile:awscommunity-s3-deletebucketcontents"
+        },
+        {
+          "spawn": "package:awscommunity-s3-deletebucketcontents"
+        }
+      ]
+    },
     "build:awsqs-checkpoint-cloudguardqs-module": {
       "name": "build:awsqs-checkpoint-cloudguardqs-module",
       "description": "build awsqs-checkpoint-cloudguardqs-module",
@@ -216,6 +240,354 @@
         }
       ]
     },
+    "build:awssamples-ec2imageidcheckssm-hook": {
+      "name": "build:awssamples-ec2imageidcheckssm-hook",
+      "description": "build awssamples-ec2imageidcheckssm-hook",
+      "steps": [
+        {
+          "spawn": "compile:awssamples-ec2imageidcheckssm-hook"
+        },
+        {
+          "spawn": "package:awssamples-ec2imageidcheckssm-hook"
+        }
+      ]
+    },
+    "build:awssamples-ec2ssmsmonly-hook": {
+      "name": "build:awssamples-ec2ssmsmonly-hook",
+      "description": "build awssamples-ec2ssmsmonly-hook",
+      "steps": [
+        {
+          "spawn": "compile:awssamples-ec2ssmsmonly-hook"
+        },
+        {
+          "spawn": "package:awssamples-ec2ssmsmonly-hook"
+        }
+      ]
+    },
+    "build:awssamples-ec2volumeencryptionkms-hook": {
+      "name": "build:awssamples-ec2volumeencryptionkms-hook",
+      "description": "build awssamples-ec2volumeencryptionkms-hook",
+      "steps": [
+        {
+          "spawn": "compile:awssamples-ec2volumeencryptionkms-hook"
+        },
+        {
+          "spawn": "package:awssamples-ec2volumeencryptionkms-hook"
+        }
+      ]
+    },
+    "build:awssamples-efsencrypt-hook": {
+      "name": "build:awssamples-efsencrypt-hook",
+      "description": "build awssamples-efsencrypt-hook",
+      "steps": [
+        {
+          "spawn": "compile:awssamples-efsencrypt-hook"
+        },
+        {
+          "spawn": "package:awssamples-efsencrypt-hook"
+        }
+      ]
+    },
+    "build:awssamples-eksclusterlogging-hook": {
+      "name": "build:awssamples-eksclusterlogging-hook",
+      "description": "build awssamples-eksclusterlogging-hook",
+      "steps": [
+        {
+          "spawn": "compile:awssamples-eksclusterlogging-hook"
+        },
+        {
+          "spawn": "package:awssamples-eksclusterlogging-hook"
+        }
+      ]
+    },
+    "build:awssamples-eksclusterpublicapi-hook": {
+      "name": "build:awssamples-eksclusterpublicapi-hook",
+      "description": "build awssamples-eksclusterpublicapi-hook",
+      "steps": [
+        {
+          "spawn": "compile:awssamples-eksclusterpublicapi-hook"
+        },
+        {
+          "spawn": "package:awssamples-eksclusterpublicapi-hook"
+        }
+      ]
+    },
+    "build:awssamples-fsxwindowsonly-hook": {
+      "name": "build:awssamples-fsxwindowsonly-hook",
+      "description": "build awssamples-fsxwindowsonly-hook",
+      "steps": [
+        {
+          "spawn": "compile:awssamples-fsxwindowsonly-hook"
+        },
+        {
+          "spawn": "package:awssamples-fsxwindowsonly-hook"
+        }
+      ]
+    },
+    "build:awssamples-iampoliciesrequiremfa-hook": {
+      "name": "build:awssamples-iampoliciesrequiremfa-hook",
+      "description": "build awssamples-iampoliciesrequiremfa-hook",
+      "steps": [
+        {
+          "spawn": "compile:awssamples-iampoliciesrequiremfa-hook"
+        },
+        {
+          "spawn": "package:awssamples-iampoliciesrequiremfa-hook"
+        }
+      ]
+    },
+    "build:awssamples-iampolicydoesnotgiveadmin-hook": {
+      "name": "build:awssamples-iampolicydoesnotgiveadmin-hook",
+      "description": "build awssamples-iampolicydoesnotgiveadmin-hook",
+      "steps": [
+        {
+          "spawn": "compile:awssamples-iampolicydoesnotgiveadmin-hook"
+        },
+        {
+          "spawn": "package:awssamples-iampolicydoesnotgiveadmin-hook"
+        }
+      ]
+    },
+    "build:awssamples-iamprincipalboundary-hook": {
+      "name": "build:awssamples-iamprincipalboundary-hook",
+      "description": "build awssamples-iamprincipalboundary-hook",
+      "steps": [
+        {
+          "spawn": "compile:awssamples-iamprincipalboundary-hook"
+        },
+        {
+          "spawn": "package:awssamples-iamprincipalboundary-hook"
+        }
+      ]
+    },
+    "build:awssamples-iamusershavepolicy-hook": {
+      "name": "build:awssamples-iamusershavepolicy-hook",
+      "description": "build awssamples-iamusershavepolicy-hook",
+      "steps": [
+        {
+          "spawn": "compile:awssamples-iamusershavepolicy-hook"
+        },
+        {
+          "spawn": "package:awssamples-iamusershavepolicy-hook"
+        }
+      ]
+    },
+    "build:awssamples-noip6-hook": {
+      "name": "build:awssamples-noip6-hook",
+      "description": "build awssamples-noip6-hook",
+      "steps": [
+        {
+          "spawn": "compile:awssamples-noip6-hook"
+        },
+        {
+          "spawn": "package:awssamples-noip6-hook"
+        }
+      ]
+    },
+    "build:awssamples-rdsencrypt-hook": {
+      "name": "build:awssamples-rdsencrypt-hook",
+      "description": "build awssamples-rdsencrypt-hook",
+      "steps": [
+        {
+          "spawn": "compile:awssamples-rdsencrypt-hook"
+        },
+        {
+          "spawn": "package:awssamples-rdsencrypt-hook"
+        }
+      ]
+    },
+    "build:awssamples-s3blockpublicaccess-hook": {
+      "name": "build:awssamples-s3blockpublicaccess-hook",
+      "description": "build awssamples-s3blockpublicaccess-hook",
+      "steps": [
+        {
+          "spawn": "compile:awssamples-s3blockpublicaccess-hook"
+        },
+        {
+          "spawn": "package:awssamples-s3blockpublicaccess-hook"
+        }
+      ]
+    },
+    "build:awssamples-s3bucketencrypt-hook": {
+      "name": "build:awssamples-s3bucketencrypt-hook",
+      "description": "build awssamples-s3bucketencrypt-hook",
+      "steps": [
+        {
+          "spawn": "compile:awssamples-s3bucketencrypt-hook"
+        },
+        {
+          "spawn": "package:awssamples-s3bucketencrypt-hook"
+        }
+      ]
+    },
+    "build:awssamples-s3bucketloggingcompliance-hook": {
+      "name": "build:awssamples-s3bucketloggingcompliance-hook",
+      "description": "build awssamples-s3bucketloggingcompliance-hook",
+      "steps": [
+        {
+          "spawn": "compile:awssamples-s3bucketloggingcompliance-hook"
+        },
+        {
+          "spawn": "package:awssamples-s3bucketloggingcompliance-hook"
+        }
+      ]
+    },
+    "build:awssamples-s3bucketloggingenabled-hook": {
+      "name": "build:awssamples-s3bucketloggingenabled-hook",
+      "description": "build awssamples-s3bucketloggingenabled-hook",
+      "steps": [
+        {
+          "spawn": "compile:awssamples-s3bucketloggingenabled-hook"
+        },
+        {
+          "spawn": "package:awssamples-s3bucketloggingenabled-hook"
+        }
+      ]
+    },
+    "build:awssamples-securitygroupopeningress-hook": {
+      "name": "build:awssamples-securitygroupopeningress-hook",
+      "description": "build awssamples-securitygroupopeningress-hook",
+      "steps": [
+        {
+          "spawn": "compile:awssamples-securitygroupopeningress-hook"
+        },
+        {
+          "spawn": "package:awssamples-securitygroupopeningress-hook"
+        }
+      ]
+    },
+    "build:awssamples-sqsnonpublic-hook": {
+      "name": "build:awssamples-sqsnonpublic-hook",
+      "description": "build awssamples-sqsnonpublic-hook",
+      "steps": [
+        {
+          "spawn": "compile:awssamples-sqsnonpublic-hook"
+        },
+        {
+          "spawn": "package:awssamples-sqsnonpublic-hook"
+        }
+      ]
+    },
+    "build:awssamples-sqspolicyencryption-hook": {
+      "name": "build:awssamples-sqspolicyencryption-hook",
+      "description": "build awssamples-sqspolicyencryption-hook",
+      "steps": [
+        {
+          "spawn": "compile:awssamples-sqspolicyencryption-hook"
+        },
+        {
+          "spawn": "package:awssamples-sqspolicyencryption-hook"
+        }
+      ]
+    },
+    "build:bigid-datasource-dynamodb": {
+      "name": "build:bigid-datasource-dynamodb",
+      "description": "build bigid-datasource-dynamodb",
+      "steps": [
+        {
+          "spawn": "compile:bigid-datasource-dynamodb"
+        },
+        {
+          "spawn": "package:bigid-datasource-dynamodb"
+        }
+      ]
+    },
+    "build:bigid-datasource-s3": {
+      "name": "build:bigid-datasource-s3",
+      "description": "build bigid-datasource-s3",
+      "steps": [
+        {
+          "spawn": "compile:bigid-datasource-s3"
+        },
+        {
+          "spawn": "package:bigid-datasource-s3"
+        }
+      ]
+    },
+    "build:cloudflare-dns-record": {
+      "name": "build:cloudflare-dns-record",
+      "description": "build cloudflare-dns-record",
+      "steps": [
+        {
+          "spawn": "compile:cloudflare-dns-record"
+        },
+        {
+          "spawn": "package:cloudflare-dns-record"
+        }
+      ]
+    },
+    "build:cloudflare-loadbalancer-loadbalancer": {
+      "name": "build:cloudflare-loadbalancer-loadbalancer",
+      "description": "build cloudflare-loadbalancer-loadbalancer",
+      "steps": [
+        {
+          "spawn": "compile:cloudflare-loadbalancer-loadbalancer"
+        },
+        {
+          "spawn": "package:cloudflare-loadbalancer-loadbalancer"
+        }
+      ]
+    },
+    "build:cloudflare-loadbalancer-monitor": {
+      "name": "build:cloudflare-loadbalancer-monitor",
+      "description": "build cloudflare-loadbalancer-monitor",
+      "steps": [
+        {
+          "spawn": "compile:cloudflare-loadbalancer-monitor"
+        },
+        {
+          "spawn": "package:cloudflare-loadbalancer-monitor"
+        }
+      ]
+    },
+    "build:cloudflare-loadbalancer-pool": {
+      "name": "build:cloudflare-loadbalancer-pool",
+      "description": "build cloudflare-loadbalancer-pool",
+      "steps": [
+        {
+          "spawn": "compile:cloudflare-loadbalancer-pool"
+        },
+        {
+          "spawn": "package:cloudflare-loadbalancer-pool"
+        }
+      ]
+    },
+    "build:confluentcloud-iam-serviceaccount": {
+      "name": "build:confluentcloud-iam-serviceaccount",
+      "description": "build confluentcloud-iam-serviceaccount",
+      "steps": [
+        {
+          "spawn": "compile:confluentcloud-iam-serviceaccount"
+        },
+        {
+          "spawn": "package:confluentcloud-iam-serviceaccount"
+        }
+      ]
+    },
+    "build:databricks-clusters-cluster": {
+      "name": "build:databricks-clusters-cluster",
+      "description": "build databricks-clusters-cluster",
+      "steps": [
+        {
+          "spawn": "compile:databricks-clusters-cluster"
+        },
+        {
+          "spawn": "package:databricks-clusters-cluster"
+        }
+      ]
+    },
+    "build:databricks-clusters-job": {
+      "name": "build:databricks-clusters-job",
+      "description": "build databricks-clusters-job",
+      "steps": [
+        {
+          "spawn": "compile:databricks-clusters-job"
+        },
+        {
+          "spawn": "package:databricks-clusters-job"
+        }
+      ]
+    },
     "build:datadog-dashboards-dashboard": {
       "name": "build:datadog-dashboards-dashboard",
       "description": "build datadog-dashboards-dashboard",
@@ -276,6 +648,126 @@
         }
       ]
     },
+    "build:dynatrace-configuration-dashboard": {
+      "name": "build:dynatrace-configuration-dashboard",
+      "description": "build dynatrace-configuration-dashboard",
+      "steps": [
+        {
+          "spawn": "compile:dynatrace-configuration-dashboard"
+        },
+        {
+          "spawn": "package:dynatrace-configuration-dashboard"
+        }
+      ]
+    },
+    "build:dynatrace-environment-servicelevelobjective": {
+      "name": "build:dynatrace-environment-servicelevelobjective",
+      "description": "build dynatrace-environment-servicelevelobjective",
+      "steps": [
+        {
+          "spawn": "compile:dynatrace-environment-servicelevelobjective"
+        },
+        {
+          "spawn": "package:dynatrace-environment-servicelevelobjective"
+        }
+      ]
+    },
+    "build:dynatrace-environment-syntheticlocation": {
+      "name": "build:dynatrace-environment-syntheticlocation",
+      "description": "build dynatrace-environment-syntheticlocation",
+      "steps": [
+        {
+          "spawn": "compile:dynatrace-environment-syntheticlocation"
+        },
+        {
+          "spawn": "package:dynatrace-environment-syntheticlocation"
+        }
+      ]
+    },
+    "build:dynatrace-environment-syntheticmonitor": {
+      "name": "build:dynatrace-environment-syntheticmonitor",
+      "description": "build dynatrace-environment-syntheticmonitor",
+      "steps": [
+        {
+          "spawn": "compile:dynatrace-environment-syntheticmonitor"
+        },
+        {
+          "spawn": "package:dynatrace-environment-syntheticmonitor"
+        }
+      ]
+    },
+    "build:fastly-dictionary-dictionary": {
+      "name": "build:fastly-dictionary-dictionary",
+      "description": "build fastly-dictionary-dictionary",
+      "steps": [
+        {
+          "spawn": "compile:fastly-dictionary-dictionary"
+        },
+        {
+          "spawn": "package:fastly-dictionary-dictionary"
+        }
+      ]
+    },
+    "build:fastly-dictionary-dictionaryitem": {
+      "name": "build:fastly-dictionary-dictionaryitem",
+      "description": "build fastly-dictionary-dictionaryitem",
+      "steps": [
+        {
+          "spawn": "compile:fastly-dictionary-dictionaryitem"
+        },
+        {
+          "spawn": "package:fastly-dictionary-dictionaryitem"
+        }
+      ]
+    },
+    "build:fastly-services-backend": {
+      "name": "build:fastly-services-backend",
+      "description": "build fastly-services-backend",
+      "steps": [
+        {
+          "spawn": "compile:fastly-services-backend"
+        },
+        {
+          "spawn": "package:fastly-services-backend"
+        }
+      ]
+    },
+    "build:fastly-services-domain": {
+      "name": "build:fastly-services-domain",
+      "description": "build fastly-services-domain",
+      "steps": [
+        {
+          "spawn": "compile:fastly-services-domain"
+        },
+        {
+          "spawn": "package:fastly-services-domain"
+        }
+      ]
+    },
+    "build:fastly-services-healthcheck": {
+      "name": "build:fastly-services-healthcheck",
+      "description": "build fastly-services-healthcheck",
+      "steps": [
+        {
+          "spawn": "compile:fastly-services-healthcheck"
+        },
+        {
+          "spawn": "package:fastly-services-healthcheck"
+        }
+      ]
+    },
+    "build:fastly-services-service": {
+      "name": "build:fastly-services-service",
+      "description": "build fastly-services-service",
+      "steps": [
+        {
+          "spawn": "compile:fastly-services-service"
+        },
+        {
+          "spawn": "package:fastly-services-service"
+        }
+      ]
+    },
     "build:fireeye-cloudintegrations-cloudwatch": {
       "name": "build:fireeye-cloudintegrations-cloudwatch",
       "description": "build fireeye-cloudintegrations-cloudwatch",
@@ -285,6 +777,138 @@
         },
         {
           "spawn": "package:fireeye-cloudintegrations-cloudwatch"
+        }
+      ]
+    },
+    "build:freyraim-impactapi-apigateway-module": {
+      "name": "build:freyraim-impactapi-apigateway-module",
+      "description": "build freyraim-impactapi-apigateway-module",
+      "steps": [
+        {
+          "spawn": "compile:freyraim-impactapi-apigateway-module"
+        },
+        {
+          "spawn": "package:freyraim-impactapi-apigateway-module"
+        }
+      ]
+    },
+    "build:freyraim-impactapi-apihandle-module": {
+      "name": "build:freyraim-impactapi-apihandle-module",
+      "description": "build freyraim-impactapi-apihandle-module",
+      "steps": [
+        {
+          "spawn": "compile:freyraim-impactapi-apihandle-module"
+        },
+        {
+          "spawn": "package:freyraim-impactapi-apihandle-module"
+        }
+      ]
+    },
+    "build:freyraim-impactapi-ec2instance-module": {
+      "name": "build:freyraim-impactapi-ec2instance-module",
+      "description": "build freyraim-impactapi-ec2instance-module",
+      "steps": [
+        {
+          "spawn": "compile:freyraim-impactapi-ec2instance-module"
+        },
+        {
+          "spawn": "package:freyraim-impactapi-ec2instance-module"
+        }
+      ]
+    },
+    "build:freyraim-impactapi-lambdafunction-module": {
+      "name": "build:freyraim-impactapi-lambdafunction-module",
+      "description": "build freyraim-impactapi-lambdafunction-module",
+      "steps": [
+        {
+          "spawn": "compile:freyraim-impactapi-lambdafunction-module"
+        },
+        {
+          "spawn": "package:freyraim-impactapi-lambdafunction-module"
+        }
+      ]
+    },
+    "build:freyraim-impactapi-loadbalancer-module": {
+      "name": "build:freyraim-impactapi-loadbalancer-module",
+      "description": "build freyraim-impactapi-loadbalancer-module",
+      "steps": [
+        {
+          "spawn": "compile:freyraim-impactapi-loadbalancer-module"
+        },
+        {
+          "spawn": "package:freyraim-impactapi-loadbalancer-module"
+        }
+      ]
+    },
+    "build:freyraim-spider-cloudfront-module": {
+      "name": "build:freyraim-spider-cloudfront-module",
+      "description": "build freyraim-spider-cloudfront-module",
+      "steps": [
+        {
+          "spawn": "compile:freyraim-spider-cloudfront-module"
+        },
+        {
+          "spawn": "package:freyraim-spider-cloudfront-module"
+        }
+      ]
+    },
+    "build:freyraim-spider-ec2instance-module": {
+      "name": "build:freyraim-spider-ec2instance-module",
+      "description": "build freyraim-spider-ec2instance-module",
+      "steps": [
+        {
+          "spawn": "compile:freyraim-spider-ec2instance-module"
+        },
+        {
+          "spawn": "package:freyraim-spider-ec2instance-module"
+        }
+      ]
+    },
+    "build:freyraim-spider-ecs-module": {
+      "name": "build:freyraim-spider-ecs-module",
+      "description": "build freyraim-spider-ecs-module",
+      "steps": [
+        {
+          "spawn": "compile:freyraim-spider-ecs-module"
+        },
+        {
+          "spawn": "package:freyraim-spider-ecs-module"
+        }
+      ]
+    },
+    "build:freyraim-spider-loadbalancer-module": {
+      "name": "build:freyraim-spider-loadbalancer-module",
+      "description": "build freyraim-spider-loadbalancer-module",
+      "steps": [
+        {
+          "spawn": "compile:freyraim-spider-loadbalancer-module"
+        },
+        {
+          "spawn": "package:freyraim-spider-loadbalancer-module"
+        }
+      ]
+    },
+    "build:freyraim-spider-postgresql-module": {
+      "name": "build:freyraim-spider-postgresql-module",
+      "description": "build freyraim-spider-postgresql-module",
+      "steps": [
+        {
+          "spawn": "compile:freyraim-spider-postgresql-module"
+        },
+        {
+          "spawn": "package:freyraim-spider-postgresql-module"
+        }
+      ]
+    },
+    "build:freyraim-spider-s3bucket-module": {
+      "name": "build:freyraim-spider-s3bucket-module",
+      "description": "build freyraim-spider-s3bucket-module",
+      "steps": [
+        {
+          "spawn": "compile:freyraim-spider-s3bucket-module"
+        },
+        {
+          "spawn": "package:freyraim-spider-s3bucket-module"
         }
       ]
     },
@@ -300,6 +924,18 @@
         }
       ]
     },
+    "build:generic-secretsprotection-hook": {
+      "name": "build:generic-secretsprotection-hook",
+      "description": "build generic-secretsprotection-hook",
+      "steps": [
+        {
+          "spawn": "compile:generic-secretsprotection-hook"
+        },
+        {
+          "spawn": "package:generic-secretsprotection-hook"
+        }
+      ]
+    },
     "build:generic-transcribe-vocabulary": {
       "name": "build:generic-transcribe-vocabulary",
       "description": "build generic-transcribe-vocabulary",
@@ -309,6 +945,198 @@
         },
         {
           "spawn": "package:generic-transcribe-vocabulary"
+        }
+      ]
+    },
+    "build:github-git-tag": {
+      "name": "build:github-git-tag",
+      "description": "build github-git-tag",
+      "steps": [
+        {
+          "spawn": "compile:github-git-tag"
+        },
+        {
+          "spawn": "package:github-git-tag"
+        }
+      ]
+    },
+    "build:github-organizations-membership": {
+      "name": "build:github-organizations-membership",
+      "description": "build github-organizations-membership",
+      "steps": [
+        {
+          "spawn": "compile:github-organizations-membership"
+        },
+        {
+          "spawn": "package:github-organizations-membership"
+        }
+      ]
+    },
+    "build:github-repositories-collaborator": {
+      "name": "build:github-repositories-collaborator",
+      "description": "build github-repositories-collaborator",
+      "steps": [
+        {
+          "spawn": "compile:github-repositories-collaborator"
+        },
+        {
+          "spawn": "package:github-repositories-collaborator"
+        }
+      ]
+    },
+    "build:github-repositories-repository": {
+      "name": "build:github-repositories-repository",
+      "description": "build github-repositories-repository",
+      "steps": [
+        {
+          "spawn": "compile:github-repositories-repository"
+        },
+        {
+          "spawn": "package:github-repositories-repository"
+        }
+      ]
+    },
+    "build:github-repositories-webhook": {
+      "name": "build:github-repositories-webhook",
+      "description": "build github-repositories-webhook",
+      "steps": [
+        {
+          "spawn": "compile:github-repositories-webhook"
+        },
+        {
+          "spawn": "package:github-repositories-webhook"
+        }
+      ]
+    },
+    "build:github-teams-membership": {
+      "name": "build:github-teams-membership",
+      "description": "build github-teams-membership",
+      "steps": [
+        {
+          "spawn": "compile:github-teams-membership"
+        },
+        {
+          "spawn": "package:github-teams-membership"
+        }
+      ]
+    },
+    "build:github-teams-repositoryaccess": {
+      "name": "build:github-teams-repositoryaccess",
+      "description": "build github-teams-repositoryaccess",
+      "steps": [
+        {
+          "spawn": "compile:github-teams-repositoryaccess"
+        },
+        {
+          "spawn": "package:github-teams-repositoryaccess"
+        }
+      ]
+    },
+    "build:github-teams-team": {
+      "name": "build:github-teams-team",
+      "description": "build github-teams-team",
+      "steps": [
+        {
+          "spawn": "compile:github-teams-team"
+        },
+        {
+          "spawn": "package:github-teams-team"
+        }
+      ]
+    },
+    "build:gitlab-code-tag": {
+      "name": "build:gitlab-code-tag",
+      "description": "build gitlab-code-tag",
+      "steps": [
+        {
+          "spawn": "compile:gitlab-code-tag"
+        },
+        {
+          "spawn": "package:gitlab-code-tag"
+        }
+      ]
+    },
+    "build:gitlab-groups-group": {
+      "name": "build:gitlab-groups-group",
+      "description": "build gitlab-groups-group",
+      "steps": [
+        {
+          "spawn": "compile:gitlab-groups-group"
+        },
+        {
+          "spawn": "package:gitlab-groups-group"
+        }
+      ]
+    },
+    "build:gitlab-groups-groupaccesstogroup": {
+      "name": "build:gitlab-groups-groupaccesstogroup",
+      "description": "build gitlab-groups-groupaccesstogroup",
+      "steps": [
+        {
+          "spawn": "compile:gitlab-groups-groupaccesstogroup"
+        },
+        {
+          "spawn": "package:gitlab-groups-groupaccesstogroup"
+        }
+      ]
+    },
+    "build:gitlab-groups-usermemberofgroup": {
+      "name": "build:gitlab-groups-usermemberofgroup",
+      "description": "build gitlab-groups-usermemberofgroup",
+      "steps": [
+        {
+          "spawn": "compile:gitlab-groups-usermemberofgroup"
+        },
+        {
+          "spawn": "package:gitlab-groups-usermemberofgroup"
+        }
+      ]
+    },
+    "build:gitlab-projects-accesstoken": {
+      "name": "build:gitlab-projects-accesstoken",
+      "description": "build gitlab-projects-accesstoken",
+      "steps": [
+        {
+          "spawn": "compile:gitlab-projects-accesstoken"
+        },
+        {
+          "spawn": "package:gitlab-projects-accesstoken"
+        }
+      ]
+    },
+    "build:gitlab-projects-groupaccesstoproject": {
+      "name": "build:gitlab-projects-groupaccesstoproject",
+      "description": "build gitlab-projects-groupaccesstoproject",
+      "steps": [
+        {
+          "spawn": "compile:gitlab-projects-groupaccesstoproject"
+        },
+        {
+          "spawn": "package:gitlab-projects-groupaccesstoproject"
+        }
+      ]
+    },
+    "build:gitlab-projects-project": {
+      "name": "build:gitlab-projects-project",
+      "description": "build gitlab-projects-project",
+      "steps": [
+        {
+          "spawn": "compile:gitlab-projects-project"
+        },
+        {
+          "spawn": "package:gitlab-projects-project"
+        }
+      ]
+    },
+    "build:gitlab-projects-usermemberofproject": {
+      "name": "build:gitlab-projects-usermemberofproject",
+      "description": "build gitlab-projects-usermemberofproject",
+      "steps": [
+        {
+          "spawn": "compile:gitlab-projects-usermemberofproject"
+        },
+        {
+          "spawn": "package:gitlab-projects-usermemberofproject"
         }
       ]
     },
@@ -408,6 +1236,18 @@
         }
       ]
     },
+    "build:karte-eventbridge-documentdb-module": {
+      "name": "build:karte-eventbridge-documentdb-module",
+      "description": "build karte-eventbridge-documentdb-module",
+      "steps": [
+        {
+          "spawn": "compile:karte-eventbridge-documentdb-module"
+        },
+        {
+          "spawn": "package:karte-eventbridge-documentdb-module"
+        }
+      ]
+    },
     "build:logzio-autodeploymentlogzio-cloudwatch-module": {
       "name": "build:logzio-autodeploymentlogzio-cloudwatch-module",
       "description": "build logzio-autodeploymentlogzio-cloudwatch-module",
@@ -465,6 +1305,18 @@
         },
         {
           "spawn": "package:logzio-myservice-myname-module"
+        }
+      ]
+    },
+    "build:mongodb-atlas-awsiamdatabaseuser": {
+      "name": "build:mongodb-atlas-awsiamdatabaseuser",
+      "description": "build mongodb-atlas-awsiamdatabaseuser",
+      "steps": [
+        {
+          "spawn": "compile:mongodb-atlas-awsiamdatabaseuser"
+        },
+        {
+          "spawn": "package:mongodb-atlas-awsiamdatabaseuser"
         }
       ]
     },
@@ -528,6 +1380,234 @@
         }
       ]
     },
+    "build:newrelic-cloudformation-dashboards": {
+      "name": "build:newrelic-cloudformation-dashboards",
+      "description": "build newrelic-cloudformation-dashboards",
+      "steps": [
+        {
+          "spawn": "compile:newrelic-cloudformation-dashboards"
+        },
+        {
+          "spawn": "package:newrelic-cloudformation-dashboards"
+        }
+      ]
+    },
+    "build:newrelic-cloudformation-tagging": {
+      "name": "build:newrelic-cloudformation-tagging",
+      "description": "build newrelic-cloudformation-tagging",
+      "steps": [
+        {
+          "spawn": "compile:newrelic-cloudformation-tagging"
+        },
+        {
+          "spawn": "package:newrelic-cloudformation-tagging"
+        }
+      ]
+    },
+    "build:newrelic-cloudformation-workloads": {
+      "name": "build:newrelic-cloudformation-workloads",
+      "description": "build newrelic-cloudformation-workloads",
+      "steps": [
+        {
+          "spawn": "compile:newrelic-cloudformation-workloads"
+        },
+        {
+          "spawn": "package:newrelic-cloudformation-workloads"
+        }
+      ]
+    },
+    "build:newrelic-observability-dashboards": {
+      "name": "build:newrelic-observability-dashboards",
+      "description": "build newrelic-observability-dashboards",
+      "steps": [
+        {
+          "spawn": "compile:newrelic-observability-dashboards"
+        },
+        {
+          "spawn": "package:newrelic-observability-dashboards"
+        }
+      ]
+    },
+    "build:newrelic-observability-workloads": {
+      "name": "build:newrelic-observability-workloads",
+      "description": "build newrelic-observability-workloads",
+      "steps": [
+        {
+          "spawn": "compile:newrelic-observability-workloads"
+        },
+        {
+          "spawn": "package:newrelic-observability-workloads"
+        }
+      ]
+    },
+    "build:okta-application-application": {
+      "name": "build:okta-application-application",
+      "description": "build okta-application-application",
+      "steps": [
+        {
+          "spawn": "compile:okta-application-application"
+        },
+        {
+          "spawn": "package:okta-application-application"
+        }
+      ]
+    },
+    "build:okta-group-group": {
+      "name": "build:okta-group-group",
+      "description": "build okta-group-group",
+      "steps": [
+        {
+          "spawn": "compile:okta-group-group"
+        },
+        {
+          "spawn": "package:okta-group-group"
+        }
+      ]
+    },
+    "build:okta-group-groupapplicationassociation": {
+      "name": "build:okta-group-groupapplicationassociation",
+      "description": "build okta-group-groupapplicationassociation",
+      "steps": [
+        {
+          "spawn": "compile:okta-group-groupapplicationassociation"
+        },
+        {
+          "spawn": "package:okta-group-groupapplicationassociation"
+        }
+      ]
+    },
+    "build:okta-group-membership": {
+      "name": "build:okta-group-membership",
+      "description": "build okta-group-membership",
+      "steps": [
+        {
+          "spawn": "compile:okta-group-membership"
+        },
+        {
+          "spawn": "package:okta-group-membership"
+        }
+      ]
+    },
+    "build:okta-policy-policy": {
+      "name": "build:okta-policy-policy",
+      "description": "build okta-policy-policy",
+      "steps": [
+        {
+          "spawn": "compile:okta-policy-policy"
+        },
+        {
+          "spawn": "package:okta-policy-policy"
+        }
+      ]
+    },
+    "build:org-test-sample-module": {
+      "name": "build:org-test-sample-module",
+      "description": "build org-test-sample-module",
+      "steps": [
+        {
+          "spawn": "compile:org-test-sample-module"
+        },
+        {
+          "spawn": "package:org-test-sample-module"
+        }
+      ]
+    },
+    "build:pagerduty-escalationpolicies-escalationpolicy": {
+      "name": "build:pagerduty-escalationpolicies-escalationpolicy",
+      "description": "build pagerduty-escalationpolicies-escalationpolicy",
+      "steps": [
+        {
+          "spawn": "compile:pagerduty-escalationpolicies-escalationpolicy"
+        },
+        {
+          "spawn": "package:pagerduty-escalationpolicies-escalationpolicy"
+        }
+      ]
+    },
+    "build:pagerduty-responseplays-responseplay": {
+      "name": "build:pagerduty-responseplays-responseplay",
+      "description": "build pagerduty-responseplays-responseplay",
+      "steps": [
+        {
+          "spawn": "compile:pagerduty-responseplays-responseplay"
+        },
+        {
+          "spawn": "package:pagerduty-responseplays-responseplay"
+        }
+      ]
+    },
+    "build:pagerduty-schedules-schedule": {
+      "name": "build:pagerduty-schedules-schedule",
+      "description": "build pagerduty-schedules-schedule",
+      "steps": [
+        {
+          "spawn": "compile:pagerduty-schedules-schedule"
+        },
+        {
+          "spawn": "package:pagerduty-schedules-schedule"
+        }
+      ]
+    },
+    "build:pagerduty-teams-membership": {
+      "name": "build:pagerduty-teams-membership",
+      "description": "build pagerduty-teams-membership",
+      "steps": [
+        {
+          "spawn": "compile:pagerduty-teams-membership"
+        },
+        {
+          "spawn": "package:pagerduty-teams-membership"
+        }
+      ]
+    },
+    "build:pagerduty-teams-team": {
+      "name": "build:pagerduty-teams-team",
+      "description": "build pagerduty-teams-team",
+      "steps": [
+        {
+          "spawn": "compile:pagerduty-teams-team"
+        },
+        {
+          "spawn": "package:pagerduty-teams-team"
+        }
+      ]
+    },
+    "build:pagerduty-users-user": {
+      "name": "build:pagerduty-users-user",
+      "description": "build pagerduty-users-user",
+      "steps": [
+        {
+          "spawn": "compile:pagerduty-users-user"
+        },
+        {
+          "spawn": "package:pagerduty-users-user"
+        }
+      ]
+    },
+    "build:paloaltonetworks-cloudngfw-ngfw": {
+      "name": "build:paloaltonetworks-cloudngfw-ngfw",
+      "description": "build paloaltonetworks-cloudngfw-ngfw",
+      "steps": [
+        {
+          "spawn": "compile:paloaltonetworks-cloudngfw-ngfw"
+        },
+        {
+          "spawn": "package:paloaltonetworks-cloudngfw-ngfw"
+        }
+      ]
+    },
+    "build:paloaltonetworks-cloudngfw-rulestack": {
+      "name": "build:paloaltonetworks-cloudngfw-rulestack",
+      "description": "build paloaltonetworks-cloudngfw-rulestack",
+      "steps": [
+        {
+          "spawn": "compile:paloaltonetworks-cloudngfw-rulestack"
+        },
+        {
+          "spawn": "package:paloaltonetworks-cloudngfw-rulestack"
+        }
+      ]
+    },
     "build:registry-test-resource1-module": {
       "name": "build:registry-test-resource1-module",
       "description": "build registry-test-resource1-module",
@@ -537,6 +1617,138 @@
         },
         {
           "spawn": "package:registry-test-resource1-module"
+        }
+      ]
+    },
+    "build:rollbar-notifications-rule": {
+      "name": "build:rollbar-notifications-rule",
+      "description": "build rollbar-notifications-rule",
+      "steps": [
+        {
+          "spawn": "compile:rollbar-notifications-rule"
+        },
+        {
+          "spawn": "package:rollbar-notifications-rule"
+        }
+      ]
+    },
+    "build:rollbar-projects-accesstoken": {
+      "name": "build:rollbar-projects-accesstoken",
+      "description": "build rollbar-projects-accesstoken",
+      "steps": [
+        {
+          "spawn": "compile:rollbar-projects-accesstoken"
+        },
+        {
+          "spawn": "package:rollbar-projects-accesstoken"
+        }
+      ]
+    },
+    "build:rollbar-projects-project": {
+      "name": "build:rollbar-projects-project",
+      "description": "build rollbar-projects-project",
+      "steps": [
+        {
+          "spawn": "compile:rollbar-projects-project"
+        },
+        {
+          "spawn": "package:rollbar-projects-project"
+        }
+      ]
+    },
+    "build:rollbar-teams-membership": {
+      "name": "build:rollbar-teams-membership",
+      "description": "build rollbar-teams-membership",
+      "steps": [
+        {
+          "spawn": "compile:rollbar-teams-membership"
+        },
+        {
+          "spawn": "package:rollbar-teams-membership"
+        }
+      ]
+    },
+    "build:rollbar-teams-team": {
+      "name": "build:rollbar-teams-team",
+      "description": "build rollbar-teams-team",
+      "steps": [
+        {
+          "spawn": "compile:rollbar-teams-team"
+        },
+        {
+          "spawn": "package:rollbar-teams-team"
+        }
+      ]
+    },
+    "build:snowflake-database-database": {
+      "name": "build:snowflake-database-database",
+      "description": "build snowflake-database-database",
+      "steps": [
+        {
+          "spawn": "compile:snowflake-database-database"
+        },
+        {
+          "spawn": "package:snowflake-database-database"
+        }
+      ]
+    },
+    "build:snowflake-database-grant": {
+      "name": "build:snowflake-database-grant",
+      "description": "build snowflake-database-grant",
+      "steps": [
+        {
+          "spawn": "compile:snowflake-database-grant"
+        },
+        {
+          "spawn": "package:snowflake-database-grant"
+        }
+      ]
+    },
+    "build:snowflake-role-grant": {
+      "name": "build:snowflake-role-grant",
+      "description": "build snowflake-role-grant",
+      "steps": [
+        {
+          "spawn": "compile:snowflake-role-grant"
+        },
+        {
+          "spawn": "package:snowflake-role-grant"
+        }
+      ]
+    },
+    "build:snowflake-role-role": {
+      "name": "build:snowflake-role-role",
+      "description": "build snowflake-role-role",
+      "steps": [
+        {
+          "spawn": "compile:snowflake-role-role"
+        },
+        {
+          "spawn": "package:snowflake-role-role"
+        }
+      ]
+    },
+    "build:snowflake-user-user": {
+      "name": "build:snowflake-user-user",
+      "description": "build snowflake-user-user",
+      "steps": [
+        {
+          "spawn": "compile:snowflake-user-user"
+        },
+        {
+          "spawn": "package:snowflake-user-user"
+        }
+      ]
+    },
+    "build:snowflake-warehouse-grant": {
+      "name": "build:snowflake-warehouse-grant",
+      "description": "build snowflake-warehouse-grant",
+      "steps": [
+        {
+          "spawn": "compile:snowflake-warehouse-grant"
+        },
+        {
+          "spawn": "package:snowflake-warehouse-grant"
         }
       ]
     },
@@ -804,6 +2016,18 @@
         }
       ]
     },
+    "build:zmk-iam-lambdabasicrole-module": {
+      "name": "build:zmk-iam-lambdabasicrole-module",
+      "description": "build zmk-iam-lambdabasicrole-module",
+      "steps": [
+        {
+          "spawn": "compile:zmk-iam-lambdabasicrole-module"
+        },
+        {
+          "spawn": "package:zmk-iam-lambdabasicrole-module"
+        }
+      ]
+    },
     "bump": {
       "name": "bump",
       "description": "Bumps version based on latest git tag and generates a changelog entry",
@@ -948,6 +2172,26 @@
       ],
       "cwd": "packages/@cdk-cloudformation/atlassian-opsgenie-user"
     },
+    "compile:awscommunity-account-alternatecontact": {
+      "name": "compile:awscommunity-account-alternatecontact",
+      "description": "compile awscommunity-account-alternatecontact with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awscommunity-account-alternatecontact"
+    },
+    "compile:awscommunity-s3-deletebucketcontents": {
+      "name": "compile:awscommunity-s3-deletebucketcontents",
+      "description": "compile awscommunity-s3-deletebucketcontents with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awscommunity-s3-deletebucketcontents"
+    },
     "compile:awsqs-checkpoint-cloudguardqs-module": {
       "name": "compile:awsqs-checkpoint-cloudguardqs-module",
       "description": "compile awsqs-checkpoint-cloudguardqs-module with JSII",
@@ -1028,6 +2272,296 @@
       ],
       "cwd": "packages/@cdk-cloudformation/awsqs-vpc-vpcqs-module"
     },
+    "compile:awssamples-ec2imageidcheckssm-hook": {
+      "name": "compile:awssamples-ec2imageidcheckssm-hook",
+      "description": "compile awssamples-ec2imageidcheckssm-hook with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-ec2imageidcheckssm-hook"
+    },
+    "compile:awssamples-ec2ssmsmonly-hook": {
+      "name": "compile:awssamples-ec2ssmsmonly-hook",
+      "description": "compile awssamples-ec2ssmsmonly-hook with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-ec2ssmsmonly-hook"
+    },
+    "compile:awssamples-ec2volumeencryptionkms-hook": {
+      "name": "compile:awssamples-ec2volumeencryptionkms-hook",
+      "description": "compile awssamples-ec2volumeencryptionkms-hook with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-ec2volumeencryptionkms-hook"
+    },
+    "compile:awssamples-efsencrypt-hook": {
+      "name": "compile:awssamples-efsencrypt-hook",
+      "description": "compile awssamples-efsencrypt-hook with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-efsencrypt-hook"
+    },
+    "compile:awssamples-eksclusterlogging-hook": {
+      "name": "compile:awssamples-eksclusterlogging-hook",
+      "description": "compile awssamples-eksclusterlogging-hook with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-eksclusterlogging-hook"
+    },
+    "compile:awssamples-eksclusterpublicapi-hook": {
+      "name": "compile:awssamples-eksclusterpublicapi-hook",
+      "description": "compile awssamples-eksclusterpublicapi-hook with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-eksclusterpublicapi-hook"
+    },
+    "compile:awssamples-fsxwindowsonly-hook": {
+      "name": "compile:awssamples-fsxwindowsonly-hook",
+      "description": "compile awssamples-fsxwindowsonly-hook with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-fsxwindowsonly-hook"
+    },
+    "compile:awssamples-iampoliciesrequiremfa-hook": {
+      "name": "compile:awssamples-iampoliciesrequiremfa-hook",
+      "description": "compile awssamples-iampoliciesrequiremfa-hook with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-iampoliciesrequiremfa-hook"
+    },
+    "compile:awssamples-iampolicydoesnotgiveadmin-hook": {
+      "name": "compile:awssamples-iampolicydoesnotgiveadmin-hook",
+      "description": "compile awssamples-iampolicydoesnotgiveadmin-hook with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-iampolicydoesnotgiveadmin-hook"
+    },
+    "compile:awssamples-iamprincipalboundary-hook": {
+      "name": "compile:awssamples-iamprincipalboundary-hook",
+      "description": "compile awssamples-iamprincipalboundary-hook with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-iamprincipalboundary-hook"
+    },
+    "compile:awssamples-iamusershavepolicy-hook": {
+      "name": "compile:awssamples-iamusershavepolicy-hook",
+      "description": "compile awssamples-iamusershavepolicy-hook with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-iamusershavepolicy-hook"
+    },
+    "compile:awssamples-noip6-hook": {
+      "name": "compile:awssamples-noip6-hook",
+      "description": "compile awssamples-noip6-hook with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-noip6-hook"
+    },
+    "compile:awssamples-rdsencrypt-hook": {
+      "name": "compile:awssamples-rdsencrypt-hook",
+      "description": "compile awssamples-rdsencrypt-hook with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-rdsencrypt-hook"
+    },
+    "compile:awssamples-s3blockpublicaccess-hook": {
+      "name": "compile:awssamples-s3blockpublicaccess-hook",
+      "description": "compile awssamples-s3blockpublicaccess-hook with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-s3blockpublicaccess-hook"
+    },
+    "compile:awssamples-s3bucketencrypt-hook": {
+      "name": "compile:awssamples-s3bucketencrypt-hook",
+      "description": "compile awssamples-s3bucketencrypt-hook with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-s3bucketencrypt-hook"
+    },
+    "compile:awssamples-s3bucketloggingcompliance-hook": {
+      "name": "compile:awssamples-s3bucketloggingcompliance-hook",
+      "description": "compile awssamples-s3bucketloggingcompliance-hook with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-s3bucketloggingcompliance-hook"
+    },
+    "compile:awssamples-s3bucketloggingenabled-hook": {
+      "name": "compile:awssamples-s3bucketloggingenabled-hook",
+      "description": "compile awssamples-s3bucketloggingenabled-hook with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-s3bucketloggingenabled-hook"
+    },
+    "compile:awssamples-securitygroupopeningress-hook": {
+      "name": "compile:awssamples-securitygroupopeningress-hook",
+      "description": "compile awssamples-securitygroupopeningress-hook with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-securitygroupopeningress-hook"
+    },
+    "compile:awssamples-sqsnonpublic-hook": {
+      "name": "compile:awssamples-sqsnonpublic-hook",
+      "description": "compile awssamples-sqsnonpublic-hook with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-sqsnonpublic-hook"
+    },
+    "compile:awssamples-sqspolicyencryption-hook": {
+      "name": "compile:awssamples-sqspolicyencryption-hook",
+      "description": "compile awssamples-sqspolicyencryption-hook with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-sqspolicyencryption-hook"
+    },
+    "compile:bigid-datasource-dynamodb": {
+      "name": "compile:bigid-datasource-dynamodb",
+      "description": "compile bigid-datasource-dynamodb with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/bigid-datasource-dynamodb"
+    },
+    "compile:bigid-datasource-s3": {
+      "name": "compile:bigid-datasource-s3",
+      "description": "compile bigid-datasource-s3 with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/bigid-datasource-s3"
+    },
+    "compile:cloudflare-dns-record": {
+      "name": "compile:cloudflare-dns-record",
+      "description": "compile cloudflare-dns-record with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/cloudflare-dns-record"
+    },
+    "compile:cloudflare-loadbalancer-loadbalancer": {
+      "name": "compile:cloudflare-loadbalancer-loadbalancer",
+      "description": "compile cloudflare-loadbalancer-loadbalancer with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/cloudflare-loadbalancer-loadbalancer"
+    },
+    "compile:cloudflare-loadbalancer-monitor": {
+      "name": "compile:cloudflare-loadbalancer-monitor",
+      "description": "compile cloudflare-loadbalancer-monitor with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/cloudflare-loadbalancer-monitor"
+    },
+    "compile:cloudflare-loadbalancer-pool": {
+      "name": "compile:cloudflare-loadbalancer-pool",
+      "description": "compile cloudflare-loadbalancer-pool with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/cloudflare-loadbalancer-pool"
+    },
+    "compile:confluentcloud-iam-serviceaccount": {
+      "name": "compile:confluentcloud-iam-serviceaccount",
+      "description": "compile confluentcloud-iam-serviceaccount with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/confluentcloud-iam-serviceaccount"
+    },
+    "compile:databricks-clusters-cluster": {
+      "name": "compile:databricks-clusters-cluster",
+      "description": "compile databricks-clusters-cluster with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/databricks-clusters-cluster"
+    },
+    "compile:databricks-clusters-job": {
+      "name": "compile:databricks-clusters-job",
+      "description": "compile databricks-clusters-job with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/databricks-clusters-job"
+    },
     "compile:datadog-dashboards-dashboard": {
       "name": "compile:datadog-dashboards-dashboard",
       "description": "compile datadog-dashboards-dashboard with JSII",
@@ -1078,6 +2612,106 @@
       ],
       "cwd": "packages/@cdk-cloudformation/datadog-slos-slo"
     },
+    "compile:dynatrace-configuration-dashboard": {
+      "name": "compile:dynatrace-configuration-dashboard",
+      "description": "compile dynatrace-configuration-dashboard with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/dynatrace-configuration-dashboard"
+    },
+    "compile:dynatrace-environment-servicelevelobjective": {
+      "name": "compile:dynatrace-environment-servicelevelobjective",
+      "description": "compile dynatrace-environment-servicelevelobjective with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/dynatrace-environment-servicelevelobjective"
+    },
+    "compile:dynatrace-environment-syntheticlocation": {
+      "name": "compile:dynatrace-environment-syntheticlocation",
+      "description": "compile dynatrace-environment-syntheticlocation with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/dynatrace-environment-syntheticlocation"
+    },
+    "compile:dynatrace-environment-syntheticmonitor": {
+      "name": "compile:dynatrace-environment-syntheticmonitor",
+      "description": "compile dynatrace-environment-syntheticmonitor with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/dynatrace-environment-syntheticmonitor"
+    },
+    "compile:fastly-dictionary-dictionary": {
+      "name": "compile:fastly-dictionary-dictionary",
+      "description": "compile fastly-dictionary-dictionary with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/fastly-dictionary-dictionary"
+    },
+    "compile:fastly-dictionary-dictionaryitem": {
+      "name": "compile:fastly-dictionary-dictionaryitem",
+      "description": "compile fastly-dictionary-dictionaryitem with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/fastly-dictionary-dictionaryitem"
+    },
+    "compile:fastly-services-backend": {
+      "name": "compile:fastly-services-backend",
+      "description": "compile fastly-services-backend with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/fastly-services-backend"
+    },
+    "compile:fastly-services-domain": {
+      "name": "compile:fastly-services-domain",
+      "description": "compile fastly-services-domain with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/fastly-services-domain"
+    },
+    "compile:fastly-services-healthcheck": {
+      "name": "compile:fastly-services-healthcheck",
+      "description": "compile fastly-services-healthcheck with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/fastly-services-healthcheck"
+    },
+    "compile:fastly-services-service": {
+      "name": "compile:fastly-services-service",
+      "description": "compile fastly-services-service with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/fastly-services-service"
+    },
     "compile:fireeye-cloudintegrations-cloudwatch": {
       "name": "compile:fireeye-cloudintegrations-cloudwatch",
       "description": "compile fireeye-cloudintegrations-cloudwatch with JSII",
@@ -1087,6 +2721,116 @@
         }
       ],
       "cwd": "packages/@cdk-cloudformation/fireeye-cloudintegrations-cloudwatch"
+    },
+    "compile:freyraim-impactapi-apigateway-module": {
+      "name": "compile:freyraim-impactapi-apigateway-module",
+      "description": "compile freyraim-impactapi-apigateway-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/freyraim-impactapi-apigateway-module"
+    },
+    "compile:freyraim-impactapi-apihandle-module": {
+      "name": "compile:freyraim-impactapi-apihandle-module",
+      "description": "compile freyraim-impactapi-apihandle-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/freyraim-impactapi-apihandle-module"
+    },
+    "compile:freyraim-impactapi-ec2instance-module": {
+      "name": "compile:freyraim-impactapi-ec2instance-module",
+      "description": "compile freyraim-impactapi-ec2instance-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/freyraim-impactapi-ec2instance-module"
+    },
+    "compile:freyraim-impactapi-lambdafunction-module": {
+      "name": "compile:freyraim-impactapi-lambdafunction-module",
+      "description": "compile freyraim-impactapi-lambdafunction-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/freyraim-impactapi-lambdafunction-module"
+    },
+    "compile:freyraim-impactapi-loadbalancer-module": {
+      "name": "compile:freyraim-impactapi-loadbalancer-module",
+      "description": "compile freyraim-impactapi-loadbalancer-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/freyraim-impactapi-loadbalancer-module"
+    },
+    "compile:freyraim-spider-cloudfront-module": {
+      "name": "compile:freyraim-spider-cloudfront-module",
+      "description": "compile freyraim-spider-cloudfront-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/freyraim-spider-cloudfront-module"
+    },
+    "compile:freyraim-spider-ec2instance-module": {
+      "name": "compile:freyraim-spider-ec2instance-module",
+      "description": "compile freyraim-spider-ec2instance-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/freyraim-spider-ec2instance-module"
+    },
+    "compile:freyraim-spider-ecs-module": {
+      "name": "compile:freyraim-spider-ecs-module",
+      "description": "compile freyraim-spider-ecs-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/freyraim-spider-ecs-module"
+    },
+    "compile:freyraim-spider-loadbalancer-module": {
+      "name": "compile:freyraim-spider-loadbalancer-module",
+      "description": "compile freyraim-spider-loadbalancer-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/freyraim-spider-loadbalancer-module"
+    },
+    "compile:freyraim-spider-postgresql-module": {
+      "name": "compile:freyraim-spider-postgresql-module",
+      "description": "compile freyraim-spider-postgresql-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/freyraim-spider-postgresql-module"
+    },
+    "compile:freyraim-spider-s3bucket-module": {
+      "name": "compile:freyraim-spider-s3bucket-module",
+      "description": "compile freyraim-spider-s3bucket-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/freyraim-spider-s3bucket-module"
     },
     "compile:generic-database-schema": {
       "name": "compile:generic-database-schema",
@@ -1098,6 +2842,16 @@
       ],
       "cwd": "packages/@cdk-cloudformation/generic-database-schema"
     },
+    "compile:generic-secretsprotection-hook": {
+      "name": "compile:generic-secretsprotection-hook",
+      "description": "compile generic-secretsprotection-hook with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/generic-secretsprotection-hook"
+    },
     "compile:generic-transcribe-vocabulary": {
       "name": "compile:generic-transcribe-vocabulary",
       "description": "compile generic-transcribe-vocabulary with JSII",
@@ -1107,6 +2861,166 @@
         }
       ],
       "cwd": "packages/@cdk-cloudformation/generic-transcribe-vocabulary"
+    },
+    "compile:github-git-tag": {
+      "name": "compile:github-git-tag",
+      "description": "compile github-git-tag with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/github-git-tag"
+    },
+    "compile:github-organizations-membership": {
+      "name": "compile:github-organizations-membership",
+      "description": "compile github-organizations-membership with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/github-organizations-membership"
+    },
+    "compile:github-repositories-collaborator": {
+      "name": "compile:github-repositories-collaborator",
+      "description": "compile github-repositories-collaborator with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/github-repositories-collaborator"
+    },
+    "compile:github-repositories-repository": {
+      "name": "compile:github-repositories-repository",
+      "description": "compile github-repositories-repository with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/github-repositories-repository"
+    },
+    "compile:github-repositories-webhook": {
+      "name": "compile:github-repositories-webhook",
+      "description": "compile github-repositories-webhook with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/github-repositories-webhook"
+    },
+    "compile:github-teams-membership": {
+      "name": "compile:github-teams-membership",
+      "description": "compile github-teams-membership with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/github-teams-membership"
+    },
+    "compile:github-teams-repositoryaccess": {
+      "name": "compile:github-teams-repositoryaccess",
+      "description": "compile github-teams-repositoryaccess with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/github-teams-repositoryaccess"
+    },
+    "compile:github-teams-team": {
+      "name": "compile:github-teams-team",
+      "description": "compile github-teams-team with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/github-teams-team"
+    },
+    "compile:gitlab-code-tag": {
+      "name": "compile:gitlab-code-tag",
+      "description": "compile gitlab-code-tag with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/gitlab-code-tag"
+    },
+    "compile:gitlab-groups-group": {
+      "name": "compile:gitlab-groups-group",
+      "description": "compile gitlab-groups-group with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/gitlab-groups-group"
+    },
+    "compile:gitlab-groups-groupaccesstogroup": {
+      "name": "compile:gitlab-groups-groupaccesstogroup",
+      "description": "compile gitlab-groups-groupaccesstogroup with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/gitlab-groups-groupaccesstogroup"
+    },
+    "compile:gitlab-groups-usermemberofgroup": {
+      "name": "compile:gitlab-groups-usermemberofgroup",
+      "description": "compile gitlab-groups-usermemberofgroup with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/gitlab-groups-usermemberofgroup"
+    },
+    "compile:gitlab-projects-accesstoken": {
+      "name": "compile:gitlab-projects-accesstoken",
+      "description": "compile gitlab-projects-accesstoken with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/gitlab-projects-accesstoken"
+    },
+    "compile:gitlab-projects-groupaccesstoproject": {
+      "name": "compile:gitlab-projects-groupaccesstoproject",
+      "description": "compile gitlab-projects-groupaccesstoproject with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/gitlab-projects-groupaccesstoproject"
+    },
+    "compile:gitlab-projects-project": {
+      "name": "compile:gitlab-projects-project",
+      "description": "compile gitlab-projects-project with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/gitlab-projects-project"
+    },
+    "compile:gitlab-projects-usermemberofproject": {
+      "name": "compile:gitlab-projects-usermemberofproject",
+      "description": "compile gitlab-projects-usermemberofproject with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/gitlab-projects-usermemberofproject"
     },
     "compile:gremlin-agent-helm": {
       "name": "compile:gremlin-agent-helm",
@@ -1188,6 +3102,16 @@
       ],
       "cwd": "packages/@cdk-cloudformation/jfrog-xray-ec2instance-module"
     },
+    "compile:karte-eventbridge-documentdb-module": {
+      "name": "compile:karte-eventbridge-documentdb-module",
+      "description": "compile karte-eventbridge-documentdb-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/karte-eventbridge-documentdb-module"
+    },
     "compile:logzio-autodeploymentlogzio-cloudwatch-module": {
       "name": "compile:logzio-autodeploymentlogzio-cloudwatch-module",
       "description": "compile logzio-autodeploymentlogzio-cloudwatch-module with JSII",
@@ -1237,6 +3161,16 @@
         }
       ],
       "cwd": "packages/@cdk-cloudformation/logzio-myservice-myname-module"
+    },
+    "compile:mongodb-atlas-awsiamdatabaseuser": {
+      "name": "compile:mongodb-atlas-awsiamdatabaseuser",
+      "description": "compile mongodb-atlas-awsiamdatabaseuser with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/mongodb-atlas-awsiamdatabaseuser"
     },
     "compile:mongodb-atlas-cluster": {
       "name": "compile:mongodb-atlas-cluster",
@@ -1288,6 +3222,196 @@
       ],
       "cwd": "packages/@cdk-cloudformation/mongodb-atlas-projectipaccesslist"
     },
+    "compile:newrelic-cloudformation-dashboards": {
+      "name": "compile:newrelic-cloudformation-dashboards",
+      "description": "compile newrelic-cloudformation-dashboards with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/newrelic-cloudformation-dashboards"
+    },
+    "compile:newrelic-cloudformation-tagging": {
+      "name": "compile:newrelic-cloudformation-tagging",
+      "description": "compile newrelic-cloudformation-tagging with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/newrelic-cloudformation-tagging"
+    },
+    "compile:newrelic-cloudformation-workloads": {
+      "name": "compile:newrelic-cloudformation-workloads",
+      "description": "compile newrelic-cloudformation-workloads with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/newrelic-cloudformation-workloads"
+    },
+    "compile:newrelic-observability-dashboards": {
+      "name": "compile:newrelic-observability-dashboards",
+      "description": "compile newrelic-observability-dashboards with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/newrelic-observability-dashboards"
+    },
+    "compile:newrelic-observability-workloads": {
+      "name": "compile:newrelic-observability-workloads",
+      "description": "compile newrelic-observability-workloads with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/newrelic-observability-workloads"
+    },
+    "compile:okta-application-application": {
+      "name": "compile:okta-application-application",
+      "description": "compile okta-application-application with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/okta-application-application"
+    },
+    "compile:okta-group-group": {
+      "name": "compile:okta-group-group",
+      "description": "compile okta-group-group with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/okta-group-group"
+    },
+    "compile:okta-group-groupapplicationassociation": {
+      "name": "compile:okta-group-groupapplicationassociation",
+      "description": "compile okta-group-groupapplicationassociation with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/okta-group-groupapplicationassociation"
+    },
+    "compile:okta-group-membership": {
+      "name": "compile:okta-group-membership",
+      "description": "compile okta-group-membership with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/okta-group-membership"
+    },
+    "compile:okta-policy-policy": {
+      "name": "compile:okta-policy-policy",
+      "description": "compile okta-policy-policy with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/okta-policy-policy"
+    },
+    "compile:org-test-sample-module": {
+      "name": "compile:org-test-sample-module",
+      "description": "compile org-test-sample-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/org-test-sample-module"
+    },
+    "compile:pagerduty-escalationpolicies-escalationpolicy": {
+      "name": "compile:pagerduty-escalationpolicies-escalationpolicy",
+      "description": "compile pagerduty-escalationpolicies-escalationpolicy with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/pagerduty-escalationpolicies-escalationpolicy"
+    },
+    "compile:pagerduty-responseplays-responseplay": {
+      "name": "compile:pagerduty-responseplays-responseplay",
+      "description": "compile pagerduty-responseplays-responseplay with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/pagerduty-responseplays-responseplay"
+    },
+    "compile:pagerduty-schedules-schedule": {
+      "name": "compile:pagerduty-schedules-schedule",
+      "description": "compile pagerduty-schedules-schedule with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/pagerduty-schedules-schedule"
+    },
+    "compile:pagerduty-teams-membership": {
+      "name": "compile:pagerduty-teams-membership",
+      "description": "compile pagerduty-teams-membership with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/pagerduty-teams-membership"
+    },
+    "compile:pagerduty-teams-team": {
+      "name": "compile:pagerduty-teams-team",
+      "description": "compile pagerduty-teams-team with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/pagerduty-teams-team"
+    },
+    "compile:pagerduty-users-user": {
+      "name": "compile:pagerduty-users-user",
+      "description": "compile pagerduty-users-user with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/pagerduty-users-user"
+    },
+    "compile:paloaltonetworks-cloudngfw-ngfw": {
+      "name": "compile:paloaltonetworks-cloudngfw-ngfw",
+      "description": "compile paloaltonetworks-cloudngfw-ngfw with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/paloaltonetworks-cloudngfw-ngfw"
+    },
+    "compile:paloaltonetworks-cloudngfw-rulestack": {
+      "name": "compile:paloaltonetworks-cloudngfw-rulestack",
+      "description": "compile paloaltonetworks-cloudngfw-rulestack with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/paloaltonetworks-cloudngfw-rulestack"
+    },
     "compile:registry-test-resource1-module": {
       "name": "compile:registry-test-resource1-module",
       "description": "compile registry-test-resource1-module with JSII",
@@ -1297,6 +3421,116 @@
         }
       ],
       "cwd": "packages/@cdk-cloudformation/registry-test-resource1-module"
+    },
+    "compile:rollbar-notifications-rule": {
+      "name": "compile:rollbar-notifications-rule",
+      "description": "compile rollbar-notifications-rule with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/rollbar-notifications-rule"
+    },
+    "compile:rollbar-projects-accesstoken": {
+      "name": "compile:rollbar-projects-accesstoken",
+      "description": "compile rollbar-projects-accesstoken with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/rollbar-projects-accesstoken"
+    },
+    "compile:rollbar-projects-project": {
+      "name": "compile:rollbar-projects-project",
+      "description": "compile rollbar-projects-project with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/rollbar-projects-project"
+    },
+    "compile:rollbar-teams-membership": {
+      "name": "compile:rollbar-teams-membership",
+      "description": "compile rollbar-teams-membership with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/rollbar-teams-membership"
+    },
+    "compile:rollbar-teams-team": {
+      "name": "compile:rollbar-teams-team",
+      "description": "compile rollbar-teams-team with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/rollbar-teams-team"
+    },
+    "compile:snowflake-database-database": {
+      "name": "compile:snowflake-database-database",
+      "description": "compile snowflake-database-database with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/snowflake-database-database"
+    },
+    "compile:snowflake-database-grant": {
+      "name": "compile:snowflake-database-grant",
+      "description": "compile snowflake-database-grant with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/snowflake-database-grant"
+    },
+    "compile:snowflake-role-grant": {
+      "name": "compile:snowflake-role-grant",
+      "description": "compile snowflake-role-grant with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/snowflake-role-grant"
+    },
+    "compile:snowflake-role-role": {
+      "name": "compile:snowflake-role-role",
+      "description": "compile snowflake-role-role with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/snowflake-role-role"
+    },
+    "compile:snowflake-user-user": {
+      "name": "compile:snowflake-user-user",
+      "description": "compile snowflake-user-user with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/snowflake-user-user"
+    },
+    "compile:snowflake-warehouse-grant": {
+      "name": "compile:snowflake-warehouse-grant",
+      "description": "compile snowflake-warehouse-grant with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/snowflake-warehouse-grant"
     },
     "compile:snyk-container-helm": {
       "name": "compile:snyk-container-helm",
@@ -1518,6 +3752,16 @@
       ],
       "cwd": "packages/@cdk-cloudformation/trendmicro-cloudonecontainer-helm"
     },
+    "compile:zmk-iam-lambdabasicrole-module": {
+      "name": "compile:zmk-iam-lambdabasicrole-module",
+      "description": "compile zmk-iam-lambdabasicrole-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/zmk-iam-lambdabasicrole-module"
+    },
     "default": {
       "name": "default",
       "description": "Synthesize project files",
@@ -1632,6 +3876,26 @@
       ],
       "cwd": "packages/@cdk-cloudformation/atlassian-opsgenie-user"
     },
+    "package:awscommunity-account-alternatecontact": {
+      "name": "package:awscommunity-account-alternatecontact",
+      "description": "produce multi-language packaging for awscommunity-account-alternatecontact",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awscommunity-account-alternatecontact"
+    },
+    "package:awscommunity-s3-deletebucketcontents": {
+      "name": "package:awscommunity-s3-deletebucketcontents",
+      "description": "produce multi-language packaging for awscommunity-s3-deletebucketcontents",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awscommunity-s3-deletebucketcontents"
+    },
     "package:awsqs-checkpoint-cloudguardqs-module": {
       "name": "package:awsqs-checkpoint-cloudguardqs-module",
       "description": "produce multi-language packaging for awsqs-checkpoint-cloudguardqs-module",
@@ -1712,6 +3976,296 @@
       ],
       "cwd": "packages/@cdk-cloudformation/awsqs-vpc-vpcqs-module"
     },
+    "package:awssamples-ec2imageidcheckssm-hook": {
+      "name": "package:awssamples-ec2imageidcheckssm-hook",
+      "description": "produce multi-language packaging for awssamples-ec2imageidcheckssm-hook",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-ec2imageidcheckssm-hook"
+    },
+    "package:awssamples-ec2ssmsmonly-hook": {
+      "name": "package:awssamples-ec2ssmsmonly-hook",
+      "description": "produce multi-language packaging for awssamples-ec2ssmsmonly-hook",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-ec2ssmsmonly-hook"
+    },
+    "package:awssamples-ec2volumeencryptionkms-hook": {
+      "name": "package:awssamples-ec2volumeencryptionkms-hook",
+      "description": "produce multi-language packaging for awssamples-ec2volumeencryptionkms-hook",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-ec2volumeencryptionkms-hook"
+    },
+    "package:awssamples-efsencrypt-hook": {
+      "name": "package:awssamples-efsencrypt-hook",
+      "description": "produce multi-language packaging for awssamples-efsencrypt-hook",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-efsencrypt-hook"
+    },
+    "package:awssamples-eksclusterlogging-hook": {
+      "name": "package:awssamples-eksclusterlogging-hook",
+      "description": "produce multi-language packaging for awssamples-eksclusterlogging-hook",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-eksclusterlogging-hook"
+    },
+    "package:awssamples-eksclusterpublicapi-hook": {
+      "name": "package:awssamples-eksclusterpublicapi-hook",
+      "description": "produce multi-language packaging for awssamples-eksclusterpublicapi-hook",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-eksclusterpublicapi-hook"
+    },
+    "package:awssamples-fsxwindowsonly-hook": {
+      "name": "package:awssamples-fsxwindowsonly-hook",
+      "description": "produce multi-language packaging for awssamples-fsxwindowsonly-hook",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-fsxwindowsonly-hook"
+    },
+    "package:awssamples-iampoliciesrequiremfa-hook": {
+      "name": "package:awssamples-iampoliciesrequiremfa-hook",
+      "description": "produce multi-language packaging for awssamples-iampoliciesrequiremfa-hook",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-iampoliciesrequiremfa-hook"
+    },
+    "package:awssamples-iampolicydoesnotgiveadmin-hook": {
+      "name": "package:awssamples-iampolicydoesnotgiveadmin-hook",
+      "description": "produce multi-language packaging for awssamples-iampolicydoesnotgiveadmin-hook",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-iampolicydoesnotgiveadmin-hook"
+    },
+    "package:awssamples-iamprincipalboundary-hook": {
+      "name": "package:awssamples-iamprincipalboundary-hook",
+      "description": "produce multi-language packaging for awssamples-iamprincipalboundary-hook",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-iamprincipalboundary-hook"
+    },
+    "package:awssamples-iamusershavepolicy-hook": {
+      "name": "package:awssamples-iamusershavepolicy-hook",
+      "description": "produce multi-language packaging for awssamples-iamusershavepolicy-hook",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-iamusershavepolicy-hook"
+    },
+    "package:awssamples-noip6-hook": {
+      "name": "package:awssamples-noip6-hook",
+      "description": "produce multi-language packaging for awssamples-noip6-hook",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-noip6-hook"
+    },
+    "package:awssamples-rdsencrypt-hook": {
+      "name": "package:awssamples-rdsencrypt-hook",
+      "description": "produce multi-language packaging for awssamples-rdsencrypt-hook",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-rdsencrypt-hook"
+    },
+    "package:awssamples-s3blockpublicaccess-hook": {
+      "name": "package:awssamples-s3blockpublicaccess-hook",
+      "description": "produce multi-language packaging for awssamples-s3blockpublicaccess-hook",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-s3blockpublicaccess-hook"
+    },
+    "package:awssamples-s3bucketencrypt-hook": {
+      "name": "package:awssamples-s3bucketencrypt-hook",
+      "description": "produce multi-language packaging for awssamples-s3bucketencrypt-hook",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-s3bucketencrypt-hook"
+    },
+    "package:awssamples-s3bucketloggingcompliance-hook": {
+      "name": "package:awssamples-s3bucketloggingcompliance-hook",
+      "description": "produce multi-language packaging for awssamples-s3bucketloggingcompliance-hook",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-s3bucketloggingcompliance-hook"
+    },
+    "package:awssamples-s3bucketloggingenabled-hook": {
+      "name": "package:awssamples-s3bucketloggingenabled-hook",
+      "description": "produce multi-language packaging for awssamples-s3bucketloggingenabled-hook",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-s3bucketloggingenabled-hook"
+    },
+    "package:awssamples-securitygroupopeningress-hook": {
+      "name": "package:awssamples-securitygroupopeningress-hook",
+      "description": "produce multi-language packaging for awssamples-securitygroupopeningress-hook",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-securitygroupopeningress-hook"
+    },
+    "package:awssamples-sqsnonpublic-hook": {
+      "name": "package:awssamples-sqsnonpublic-hook",
+      "description": "produce multi-language packaging for awssamples-sqsnonpublic-hook",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-sqsnonpublic-hook"
+    },
+    "package:awssamples-sqspolicyencryption-hook": {
+      "name": "package:awssamples-sqspolicyencryption-hook",
+      "description": "produce multi-language packaging for awssamples-sqspolicyencryption-hook",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awssamples-sqspolicyencryption-hook"
+    },
+    "package:bigid-datasource-dynamodb": {
+      "name": "package:bigid-datasource-dynamodb",
+      "description": "produce multi-language packaging for bigid-datasource-dynamodb",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/bigid-datasource-dynamodb"
+    },
+    "package:bigid-datasource-s3": {
+      "name": "package:bigid-datasource-s3",
+      "description": "produce multi-language packaging for bigid-datasource-s3",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/bigid-datasource-s3"
+    },
+    "package:cloudflare-dns-record": {
+      "name": "package:cloudflare-dns-record",
+      "description": "produce multi-language packaging for cloudflare-dns-record",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/cloudflare-dns-record"
+    },
+    "package:cloudflare-loadbalancer-loadbalancer": {
+      "name": "package:cloudflare-loadbalancer-loadbalancer",
+      "description": "produce multi-language packaging for cloudflare-loadbalancer-loadbalancer",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/cloudflare-loadbalancer-loadbalancer"
+    },
+    "package:cloudflare-loadbalancer-monitor": {
+      "name": "package:cloudflare-loadbalancer-monitor",
+      "description": "produce multi-language packaging for cloudflare-loadbalancer-monitor",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/cloudflare-loadbalancer-monitor"
+    },
+    "package:cloudflare-loadbalancer-pool": {
+      "name": "package:cloudflare-loadbalancer-pool",
+      "description": "produce multi-language packaging for cloudflare-loadbalancer-pool",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/cloudflare-loadbalancer-pool"
+    },
+    "package:confluentcloud-iam-serviceaccount": {
+      "name": "package:confluentcloud-iam-serviceaccount",
+      "description": "produce multi-language packaging for confluentcloud-iam-serviceaccount",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/confluentcloud-iam-serviceaccount"
+    },
+    "package:databricks-clusters-cluster": {
+      "name": "package:databricks-clusters-cluster",
+      "description": "produce multi-language packaging for databricks-clusters-cluster",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/databricks-clusters-cluster"
+    },
+    "package:databricks-clusters-job": {
+      "name": "package:databricks-clusters-job",
+      "description": "produce multi-language packaging for databricks-clusters-job",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/databricks-clusters-job"
+    },
     "package:datadog-dashboards-dashboard": {
       "name": "package:datadog-dashboards-dashboard",
       "description": "produce multi-language packaging for datadog-dashboards-dashboard",
@@ -1762,6 +4316,106 @@
       ],
       "cwd": "packages/@cdk-cloudformation/datadog-slos-slo"
     },
+    "package:dynatrace-configuration-dashboard": {
+      "name": "package:dynatrace-configuration-dashboard",
+      "description": "produce multi-language packaging for dynatrace-configuration-dashboard",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/dynatrace-configuration-dashboard"
+    },
+    "package:dynatrace-environment-servicelevelobjective": {
+      "name": "package:dynatrace-environment-servicelevelobjective",
+      "description": "produce multi-language packaging for dynatrace-environment-servicelevelobjective",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/dynatrace-environment-servicelevelobjective"
+    },
+    "package:dynatrace-environment-syntheticlocation": {
+      "name": "package:dynatrace-environment-syntheticlocation",
+      "description": "produce multi-language packaging for dynatrace-environment-syntheticlocation",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/dynatrace-environment-syntheticlocation"
+    },
+    "package:dynatrace-environment-syntheticmonitor": {
+      "name": "package:dynatrace-environment-syntheticmonitor",
+      "description": "produce multi-language packaging for dynatrace-environment-syntheticmonitor",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/dynatrace-environment-syntheticmonitor"
+    },
+    "package:fastly-dictionary-dictionary": {
+      "name": "package:fastly-dictionary-dictionary",
+      "description": "produce multi-language packaging for fastly-dictionary-dictionary",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/fastly-dictionary-dictionary"
+    },
+    "package:fastly-dictionary-dictionaryitem": {
+      "name": "package:fastly-dictionary-dictionaryitem",
+      "description": "produce multi-language packaging for fastly-dictionary-dictionaryitem",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/fastly-dictionary-dictionaryitem"
+    },
+    "package:fastly-services-backend": {
+      "name": "package:fastly-services-backend",
+      "description": "produce multi-language packaging for fastly-services-backend",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/fastly-services-backend"
+    },
+    "package:fastly-services-domain": {
+      "name": "package:fastly-services-domain",
+      "description": "produce multi-language packaging for fastly-services-domain",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/fastly-services-domain"
+    },
+    "package:fastly-services-healthcheck": {
+      "name": "package:fastly-services-healthcheck",
+      "description": "produce multi-language packaging for fastly-services-healthcheck",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/fastly-services-healthcheck"
+    },
+    "package:fastly-services-service": {
+      "name": "package:fastly-services-service",
+      "description": "produce multi-language packaging for fastly-services-service",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/fastly-services-service"
+    },
     "package:fireeye-cloudintegrations-cloudwatch": {
       "name": "package:fireeye-cloudintegrations-cloudwatch",
       "description": "produce multi-language packaging for fireeye-cloudintegrations-cloudwatch",
@@ -1771,6 +4425,116 @@
         }
       ],
       "cwd": "packages/@cdk-cloudformation/fireeye-cloudintegrations-cloudwatch"
+    },
+    "package:freyraim-impactapi-apigateway-module": {
+      "name": "package:freyraim-impactapi-apigateway-module",
+      "description": "produce multi-language packaging for freyraim-impactapi-apigateway-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/freyraim-impactapi-apigateway-module"
+    },
+    "package:freyraim-impactapi-apihandle-module": {
+      "name": "package:freyraim-impactapi-apihandle-module",
+      "description": "produce multi-language packaging for freyraim-impactapi-apihandle-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/freyraim-impactapi-apihandle-module"
+    },
+    "package:freyraim-impactapi-ec2instance-module": {
+      "name": "package:freyraim-impactapi-ec2instance-module",
+      "description": "produce multi-language packaging for freyraim-impactapi-ec2instance-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/freyraim-impactapi-ec2instance-module"
+    },
+    "package:freyraim-impactapi-lambdafunction-module": {
+      "name": "package:freyraim-impactapi-lambdafunction-module",
+      "description": "produce multi-language packaging for freyraim-impactapi-lambdafunction-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/freyraim-impactapi-lambdafunction-module"
+    },
+    "package:freyraim-impactapi-loadbalancer-module": {
+      "name": "package:freyraim-impactapi-loadbalancer-module",
+      "description": "produce multi-language packaging for freyraim-impactapi-loadbalancer-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/freyraim-impactapi-loadbalancer-module"
+    },
+    "package:freyraim-spider-cloudfront-module": {
+      "name": "package:freyraim-spider-cloudfront-module",
+      "description": "produce multi-language packaging for freyraim-spider-cloudfront-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/freyraim-spider-cloudfront-module"
+    },
+    "package:freyraim-spider-ec2instance-module": {
+      "name": "package:freyraim-spider-ec2instance-module",
+      "description": "produce multi-language packaging for freyraim-spider-ec2instance-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/freyraim-spider-ec2instance-module"
+    },
+    "package:freyraim-spider-ecs-module": {
+      "name": "package:freyraim-spider-ecs-module",
+      "description": "produce multi-language packaging for freyraim-spider-ecs-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/freyraim-spider-ecs-module"
+    },
+    "package:freyraim-spider-loadbalancer-module": {
+      "name": "package:freyraim-spider-loadbalancer-module",
+      "description": "produce multi-language packaging for freyraim-spider-loadbalancer-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/freyraim-spider-loadbalancer-module"
+    },
+    "package:freyraim-spider-postgresql-module": {
+      "name": "package:freyraim-spider-postgresql-module",
+      "description": "produce multi-language packaging for freyraim-spider-postgresql-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/freyraim-spider-postgresql-module"
+    },
+    "package:freyraim-spider-s3bucket-module": {
+      "name": "package:freyraim-spider-s3bucket-module",
+      "description": "produce multi-language packaging for freyraim-spider-s3bucket-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/freyraim-spider-s3bucket-module"
     },
     "package:generic-database-schema": {
       "name": "package:generic-database-schema",
@@ -1782,6 +4546,16 @@
       ],
       "cwd": "packages/@cdk-cloudformation/generic-database-schema"
     },
+    "package:generic-secretsprotection-hook": {
+      "name": "package:generic-secretsprotection-hook",
+      "description": "produce multi-language packaging for generic-secretsprotection-hook",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/generic-secretsprotection-hook"
+    },
     "package:generic-transcribe-vocabulary": {
       "name": "package:generic-transcribe-vocabulary",
       "description": "produce multi-language packaging for generic-transcribe-vocabulary",
@@ -1791,6 +4565,166 @@
         }
       ],
       "cwd": "packages/@cdk-cloudformation/generic-transcribe-vocabulary"
+    },
+    "package:github-git-tag": {
+      "name": "package:github-git-tag",
+      "description": "produce multi-language packaging for github-git-tag",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/github-git-tag"
+    },
+    "package:github-organizations-membership": {
+      "name": "package:github-organizations-membership",
+      "description": "produce multi-language packaging for github-organizations-membership",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/github-organizations-membership"
+    },
+    "package:github-repositories-collaborator": {
+      "name": "package:github-repositories-collaborator",
+      "description": "produce multi-language packaging for github-repositories-collaborator",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/github-repositories-collaborator"
+    },
+    "package:github-repositories-repository": {
+      "name": "package:github-repositories-repository",
+      "description": "produce multi-language packaging for github-repositories-repository",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/github-repositories-repository"
+    },
+    "package:github-repositories-webhook": {
+      "name": "package:github-repositories-webhook",
+      "description": "produce multi-language packaging for github-repositories-webhook",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/github-repositories-webhook"
+    },
+    "package:github-teams-membership": {
+      "name": "package:github-teams-membership",
+      "description": "produce multi-language packaging for github-teams-membership",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/github-teams-membership"
+    },
+    "package:github-teams-repositoryaccess": {
+      "name": "package:github-teams-repositoryaccess",
+      "description": "produce multi-language packaging for github-teams-repositoryaccess",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/github-teams-repositoryaccess"
+    },
+    "package:github-teams-team": {
+      "name": "package:github-teams-team",
+      "description": "produce multi-language packaging for github-teams-team",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/github-teams-team"
+    },
+    "package:gitlab-code-tag": {
+      "name": "package:gitlab-code-tag",
+      "description": "produce multi-language packaging for gitlab-code-tag",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/gitlab-code-tag"
+    },
+    "package:gitlab-groups-group": {
+      "name": "package:gitlab-groups-group",
+      "description": "produce multi-language packaging for gitlab-groups-group",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/gitlab-groups-group"
+    },
+    "package:gitlab-groups-groupaccesstogroup": {
+      "name": "package:gitlab-groups-groupaccesstogroup",
+      "description": "produce multi-language packaging for gitlab-groups-groupaccesstogroup",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/gitlab-groups-groupaccesstogroup"
+    },
+    "package:gitlab-groups-usermemberofgroup": {
+      "name": "package:gitlab-groups-usermemberofgroup",
+      "description": "produce multi-language packaging for gitlab-groups-usermemberofgroup",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/gitlab-groups-usermemberofgroup"
+    },
+    "package:gitlab-projects-accesstoken": {
+      "name": "package:gitlab-projects-accesstoken",
+      "description": "produce multi-language packaging for gitlab-projects-accesstoken",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/gitlab-projects-accesstoken"
+    },
+    "package:gitlab-projects-groupaccesstoproject": {
+      "name": "package:gitlab-projects-groupaccesstoproject",
+      "description": "produce multi-language packaging for gitlab-projects-groupaccesstoproject",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/gitlab-projects-groupaccesstoproject"
+    },
+    "package:gitlab-projects-project": {
+      "name": "package:gitlab-projects-project",
+      "description": "produce multi-language packaging for gitlab-projects-project",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/gitlab-projects-project"
+    },
+    "package:gitlab-projects-usermemberofproject": {
+      "name": "package:gitlab-projects-usermemberofproject",
+      "description": "produce multi-language packaging for gitlab-projects-usermemberofproject",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/gitlab-projects-usermemberofproject"
     },
     "package:gremlin-agent-helm": {
       "name": "package:gremlin-agent-helm",
@@ -1872,6 +4806,16 @@
       ],
       "cwd": "packages/@cdk-cloudformation/jfrog-xray-ec2instance-module"
     },
+    "package:karte-eventbridge-documentdb-module": {
+      "name": "package:karte-eventbridge-documentdb-module",
+      "description": "produce multi-language packaging for karte-eventbridge-documentdb-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/karte-eventbridge-documentdb-module"
+    },
     "package:logzio-autodeploymentlogzio-cloudwatch-module": {
       "name": "package:logzio-autodeploymentlogzio-cloudwatch-module",
       "description": "produce multi-language packaging for logzio-autodeploymentlogzio-cloudwatch-module",
@@ -1921,6 +4865,16 @@
         }
       ],
       "cwd": "packages/@cdk-cloudformation/logzio-myservice-myname-module"
+    },
+    "package:mongodb-atlas-awsiamdatabaseuser": {
+      "name": "package:mongodb-atlas-awsiamdatabaseuser",
+      "description": "produce multi-language packaging for mongodb-atlas-awsiamdatabaseuser",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/mongodb-atlas-awsiamdatabaseuser"
     },
     "package:mongodb-atlas-cluster": {
       "name": "package:mongodb-atlas-cluster",
@@ -1972,6 +4926,196 @@
       ],
       "cwd": "packages/@cdk-cloudformation/mongodb-atlas-projectipaccesslist"
     },
+    "package:newrelic-cloudformation-dashboards": {
+      "name": "package:newrelic-cloudformation-dashboards",
+      "description": "produce multi-language packaging for newrelic-cloudformation-dashboards",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/newrelic-cloudformation-dashboards"
+    },
+    "package:newrelic-cloudformation-tagging": {
+      "name": "package:newrelic-cloudformation-tagging",
+      "description": "produce multi-language packaging for newrelic-cloudformation-tagging",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/newrelic-cloudformation-tagging"
+    },
+    "package:newrelic-cloudformation-workloads": {
+      "name": "package:newrelic-cloudformation-workloads",
+      "description": "produce multi-language packaging for newrelic-cloudformation-workloads",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/newrelic-cloudformation-workloads"
+    },
+    "package:newrelic-observability-dashboards": {
+      "name": "package:newrelic-observability-dashboards",
+      "description": "produce multi-language packaging for newrelic-observability-dashboards",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/newrelic-observability-dashboards"
+    },
+    "package:newrelic-observability-workloads": {
+      "name": "package:newrelic-observability-workloads",
+      "description": "produce multi-language packaging for newrelic-observability-workloads",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/newrelic-observability-workloads"
+    },
+    "package:okta-application-application": {
+      "name": "package:okta-application-application",
+      "description": "produce multi-language packaging for okta-application-application",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/okta-application-application"
+    },
+    "package:okta-group-group": {
+      "name": "package:okta-group-group",
+      "description": "produce multi-language packaging for okta-group-group",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/okta-group-group"
+    },
+    "package:okta-group-groupapplicationassociation": {
+      "name": "package:okta-group-groupapplicationassociation",
+      "description": "produce multi-language packaging for okta-group-groupapplicationassociation",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/okta-group-groupapplicationassociation"
+    },
+    "package:okta-group-membership": {
+      "name": "package:okta-group-membership",
+      "description": "produce multi-language packaging for okta-group-membership",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/okta-group-membership"
+    },
+    "package:okta-policy-policy": {
+      "name": "package:okta-policy-policy",
+      "description": "produce multi-language packaging for okta-policy-policy",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/okta-policy-policy"
+    },
+    "package:org-test-sample-module": {
+      "name": "package:org-test-sample-module",
+      "description": "produce multi-language packaging for org-test-sample-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/org-test-sample-module"
+    },
+    "package:pagerduty-escalationpolicies-escalationpolicy": {
+      "name": "package:pagerduty-escalationpolicies-escalationpolicy",
+      "description": "produce multi-language packaging for pagerduty-escalationpolicies-escalationpolicy",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/pagerduty-escalationpolicies-escalationpolicy"
+    },
+    "package:pagerduty-responseplays-responseplay": {
+      "name": "package:pagerduty-responseplays-responseplay",
+      "description": "produce multi-language packaging for pagerduty-responseplays-responseplay",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/pagerduty-responseplays-responseplay"
+    },
+    "package:pagerduty-schedules-schedule": {
+      "name": "package:pagerduty-schedules-schedule",
+      "description": "produce multi-language packaging for pagerduty-schedules-schedule",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/pagerduty-schedules-schedule"
+    },
+    "package:pagerduty-teams-membership": {
+      "name": "package:pagerduty-teams-membership",
+      "description": "produce multi-language packaging for pagerduty-teams-membership",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/pagerduty-teams-membership"
+    },
+    "package:pagerduty-teams-team": {
+      "name": "package:pagerduty-teams-team",
+      "description": "produce multi-language packaging for pagerduty-teams-team",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/pagerduty-teams-team"
+    },
+    "package:pagerduty-users-user": {
+      "name": "package:pagerduty-users-user",
+      "description": "produce multi-language packaging for pagerduty-users-user",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/pagerduty-users-user"
+    },
+    "package:paloaltonetworks-cloudngfw-ngfw": {
+      "name": "package:paloaltonetworks-cloudngfw-ngfw",
+      "description": "produce multi-language packaging for paloaltonetworks-cloudngfw-ngfw",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/paloaltonetworks-cloudngfw-ngfw"
+    },
+    "package:paloaltonetworks-cloudngfw-rulestack": {
+      "name": "package:paloaltonetworks-cloudngfw-rulestack",
+      "description": "produce multi-language packaging for paloaltonetworks-cloudngfw-rulestack",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/paloaltonetworks-cloudngfw-rulestack"
+    },
     "package:registry-test-resource1-module": {
       "name": "package:registry-test-resource1-module",
       "description": "produce multi-language packaging for registry-test-resource1-module",
@@ -1981,6 +5125,116 @@
         }
       ],
       "cwd": "packages/@cdk-cloudformation/registry-test-resource1-module"
+    },
+    "package:rollbar-notifications-rule": {
+      "name": "package:rollbar-notifications-rule",
+      "description": "produce multi-language packaging for rollbar-notifications-rule",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/rollbar-notifications-rule"
+    },
+    "package:rollbar-projects-accesstoken": {
+      "name": "package:rollbar-projects-accesstoken",
+      "description": "produce multi-language packaging for rollbar-projects-accesstoken",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/rollbar-projects-accesstoken"
+    },
+    "package:rollbar-projects-project": {
+      "name": "package:rollbar-projects-project",
+      "description": "produce multi-language packaging for rollbar-projects-project",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/rollbar-projects-project"
+    },
+    "package:rollbar-teams-membership": {
+      "name": "package:rollbar-teams-membership",
+      "description": "produce multi-language packaging for rollbar-teams-membership",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/rollbar-teams-membership"
+    },
+    "package:rollbar-teams-team": {
+      "name": "package:rollbar-teams-team",
+      "description": "produce multi-language packaging for rollbar-teams-team",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/rollbar-teams-team"
+    },
+    "package:snowflake-database-database": {
+      "name": "package:snowflake-database-database",
+      "description": "produce multi-language packaging for snowflake-database-database",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/snowflake-database-database"
+    },
+    "package:snowflake-database-grant": {
+      "name": "package:snowflake-database-grant",
+      "description": "produce multi-language packaging for snowflake-database-grant",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/snowflake-database-grant"
+    },
+    "package:snowflake-role-grant": {
+      "name": "package:snowflake-role-grant",
+      "description": "produce multi-language packaging for snowflake-role-grant",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/snowflake-role-grant"
+    },
+    "package:snowflake-role-role": {
+      "name": "package:snowflake-role-role",
+      "description": "produce multi-language packaging for snowflake-role-role",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/snowflake-role-role"
+    },
+    "package:snowflake-user-user": {
+      "name": "package:snowflake-user-user",
+      "description": "produce multi-language packaging for snowflake-user-user",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/snowflake-user-user"
+    },
+    "package:snowflake-warehouse-grant": {
+      "name": "package:snowflake-warehouse-grant",
+      "description": "produce multi-language packaging for snowflake-warehouse-grant",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/snowflake-warehouse-grant"
     },
     "package:snyk-container-helm": {
       "name": "package:snyk-container-helm",
@@ -2201,6 +5455,16 @@
         }
       ],
       "cwd": "packages/@cdk-cloudformation/trendmicro-cloudonecontainer-helm"
+    },
+    "package:zmk-iam-lambdabasicrole-module": {
+      "name": "package:zmk-iam-lambdabasicrole-module",
+      "description": "produce multi-language packaging for zmk-iam-lambdabasicrole-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/zmk-iam-lambdabasicrole-module"
     },
     "post-compile": {
       "name": "post-compile",

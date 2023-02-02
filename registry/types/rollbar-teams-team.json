@@ -1,0 +1,18 @@
+{
+  "Arn": "arn:aws:cloudformation:us-east-1::type/resource/c830e97710da0c9954d80ba8df021e5439e7134b/Rollbar-Teams-Team",
+  "Type": "RESOURCE",
+  "TypeName": "Rollbar::Teams::Team",
+  "Description": "Manage a team on Rollbar.",
+  "Schema": "{\n  \"typeName\": \"Rollbar::Teams::Team\",\n  \"description\": \"Manage a team on Rollbar.\",\n  \"sourceUrl\": \"https://github.com/aws-ia/cloudformation-rollbar-resource-providers.git\",\n  \"documentationUrl\": \"https://github.com/aws-ia/cloudformation-rollbar-resource-providers\",\n  \"definitions\": {\n    \"RollbarAccess\": {\n      \"description\": \"Properties needed to access Rollbar.\",\n      \"type\": \"object\",\n      \"properties\": {\n        \"Token\": {\n          \"type\": \"string\",\n          \"description\": \"API token used to access Rollbar\"\n        }\n      },\n      \"required\": [\n        \"Token\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"typeConfiguration\": {\n    \"properties\": {\n      \"RollbarAccess\": {\n        \"$ref\": \"#/definitions/RollbarAccess\"\n      }\n    },\n    \"additionalProperties\": false,\n    \"required\": [\n      \"RollbarAccess\"\n    ]\n  },\n  \"properties\": {\n    \"Name\": {\n      \"description\": \"Name of the team. Max length 32 characters.\",\n      \"type\": \"string\",\n      \"pattern\": \"^[a-zA-Z0-9\\\\-\\\\_ ]{1,32}$\"\n    },\n    \"AccessLevel\": {\n      \"description\": \"Can be standard, light, or view.\",\n      \"type\": \"string\",\n      \"enum\": [\n        \"standard\",\n        \"light\",\n        \"view\"\n      ]\n    },\n    \"Id\": {\n      \"description\": \"The team ID.\",\n      \"type\": \"integer\"\n    },\n    \"AccountId\": {\n      \"description\": \"The account ID where the team belongs to.\",\n      \"type\": \"integer\"\n    }\n  },\n  \"additionalProperties\": false,\n  \"tagging\": {\n    \"taggable\": false\n  },\n  \"required\": [\n    \"Name\",\n    \"AccessLevel\"\n  ],\n  \"readOnlyProperties\": [\n    \"/properties/Id\",\n    \"/properties/AccountId\"\n  ],\n  \"primaryIdentifier\": [\n    \"/properties/Id\"\n  ],\n  \"handlers\": {\n    \"create\": {\n      \"permissions\": []\n    },\n    \"read\": {\n      \"permissions\": []\n    },\n    \"delete\": {\n      \"permissions\": []\n    },\n    \"list\": {\n      \"permissions\": []\n    }\n  }\n}\n",
+  "ProvisioningType": "IMMUTABLE",
+  "DeprecatedStatus": "LIVE",
+  "RequiredActivatedTypes": [],
+  "Visibility": "PUBLIC",
+  "SourceUrl": "https://github.com/aws-ia/cloudformation-rollbar-resource-providers.git",
+  "DocumentationUrl": "https://github.com/aws-ia/cloudformation-rollbar-resource-providers",
+  "TimeCreated": "2022-11-25T22:55:37.868Z",
+  "ConfigurationSchema": "{\n    \"properties\": {\n        \"RollbarAccess\": {\n            \"$ref\": \"#/definitions/RollbarAccess\"\n        }\n    },\n    \"additionalProperties\": false,\n    \"required\": [\n        \"RollbarAccess\"\n    ],\n    \"definitions\": {\n        \"RollbarAccess\": {\n            \"description\": \"Properties needed to access Rollbar.\",\n            \"type\": \"object\",\n            \"properties\": {\n                \"Token\": {\n                    \"type\": \"string\",\n                    \"description\": \"API token used to access Rollbar\"\n                }\n            },\n            \"required\": [\n                \"Token\"\n            ],\n            \"additionalProperties\": false\n        }\n    },\n    \"typeName\": \"Rollbar::Teams::Team\"\n}",
+  "PublisherId": "c830e97710da0c9954d80ba8df021e5439e7134b",
+  "LatestPublicVersion": "1.0.0",
+  "IsActivated": false
+}

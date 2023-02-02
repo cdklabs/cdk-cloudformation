@@ -1,0 +1,18 @@
+{
+  "Arn": "arn:aws:cloudformation:us-east-1::type/resource/c830e97710da0c9954d80ba8df021e5439e7134b/GitHub-Organizations-Membership",
+  "Type": "RESOURCE",
+  "TypeName": "GitHub::Organizations::Membership",
+  "Description": "Add people to an organization. Will create an invite and user will only become a member once they accept this invite.",
+  "Schema": "{\n  \"typeName\": \"GitHub::Organizations::Membership\",\n  \"description\": \"Add people to an organization. Will create an invite and user will only become a member once they accept this invite.\",\n  \"sourceUrl\": \"https://github.com/aws-ia/cloudformation-github-resource-providers.git\",\n  \"documentationUrl\": \"https://github.com/aws-ia/cloudformation-github-resource-providers\",\n  \"definitions\": {\n    \"GitHubAccess\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"AccessToken\": {\n          \"description\": \"Personal Access Token\",\n          \"type\": \"string\"\n        }\n      },\n      \"required\": [\n        \"AccessToken\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"typeConfiguration\": {\n    \"properties\": {\n      \"GitHubAccess\": {\n        \"$ref\": \"#/definitions/GitHubAccess\"\n      }\n    },\n    \"additionalProperties\": false,\n    \"required\": [\n      \"GitHubAccess\"\n    ]\n  },\n  \"properties\": {\n    \"Organization\": {\n      \"description\": \"The Organization the user is being added to\",\n      \"type\": \"string\"\n    },\n    \"Username\": {\n      \"description\": \"The handle for the GitHub user account\",\n      \"type\": \"string\"\n    },\n    \"Role\": {\n      \"description\": \"The role for the new member.\",\n      \"type\": \"string\",\n      \"enum\": [\n        \"admin\",\n        \"member\"\n      ]\n    }\n  },\n  \"additionalProperties\": false,\n  \"tagging\": {\n    \"taggable\": false\n  },\n  \"required\": [\n    \"Organization\",\n    \"Username\"\n  ],\n  \"primaryIdentifier\": [\n    \"/properties/Username\",\n    \"/properties/Organization\"\n  ],\n  \"createOnlyProperties\": [\n    \"/properties/Organization\",\n    \"/properties/Username\"\n  ],\n  \"handlers\": {\n    \"create\": {\n      \"permissions\": []\n    },\n    \"read\": {\n      \"permissions\": []\n    },\n    \"update\": {\n      \"permissions\": []\n    },\n    \"delete\": {\n      \"permissions\": []\n    },\n    \"list\": {\n      \"permissions\": []\n    }\n  }\n}\n",
+  "ProvisioningType": "FULLY_MUTABLE",
+  "DeprecatedStatus": "LIVE",
+  "RequiredActivatedTypes": [],
+  "Visibility": "PUBLIC",
+  "SourceUrl": "https://github.com/aws-ia/cloudformation-github-resource-providers.git",
+  "DocumentationUrl": "https://github.com/aws-ia/cloudformation-github-resource-providers",
+  "TimeCreated": "2022-11-25T22:48:48.498Z",
+  "ConfigurationSchema": "{\n    \"properties\": {\n        \"GitHubAccess\": {\n            \"$ref\": \"#/definitions/GitHubAccess\"\n        }\n    },\n    \"additionalProperties\": false,\n    \"required\": [\n        \"GitHubAccess\"\n    ],\n    \"definitions\": {\n        \"GitHubAccess\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"AccessToken\": {\n                    \"description\": \"Personal Access Token\",\n                    \"type\": \"string\"\n                }\n            },\n            \"required\": [\n                \"AccessToken\"\n            ],\n            \"additionalProperties\": false\n        }\n    },\n    \"typeName\": \"GitHub::Organizations::Membership\"\n}",
+  "PublisherId": "c830e97710da0c9954d80ba8df021e5439e7134b",
+  "LatestPublicVersion": "1.0.0",
+  "IsActivated": false
+}

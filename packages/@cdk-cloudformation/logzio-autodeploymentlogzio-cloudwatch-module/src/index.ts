@@ -40,7 +40,7 @@ export function toJson_CfnCloudWatchModuleProps(obj: CfnCloudWatchModuleProps | 
  */
 export interface CfnCloudWatchModulePropsParameters {
   /**
-   * The Logz.io listener URL fot your region.
+   * The Logz.io listener URL for your region. You can find explanations here: https://docs.logz.io/user-guide/accounts/account-region.html
    *
    * @schema CfnCloudWatchModulePropsParameters#LogzioListenerUrl
    */
@@ -162,7 +162,7 @@ export function toJson_CfnCloudWatchModulePropsResources(obj: CfnCloudWatchModul
 /* eslint-enable max-len, quote-props */
 
 /**
- * The Logz.io listener URL fot your region.
+ * The Logz.io listener URL for your region. You can find explanations here: https://docs.logz.io/user-guide/accounts/account-region.html
  *
  * @schema CfnCloudWatchModulePropsParametersLogzioListenerUrl
  */

@@ -3,7 +3,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as constructs from 'constructs';
 
 /**
- * A resource provider for managing helm.
+ * A resource provider for managing helm. Version: 1.2.1
  *
  * @schema CfnHelmProps
  */

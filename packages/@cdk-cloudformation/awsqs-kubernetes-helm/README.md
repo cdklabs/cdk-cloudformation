@@ -1,13 +1,13 @@
 # awsqs-kubernetes-helm
 
-> AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `AWSQS::Kubernetes::Helm` v1.11.0.
+> AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `AWSQS::Kubernetes::Helm` v1.16.0.
 
 [L1 construct]: https://docs.aws.amazon.com/cdk/latest/guide/constructs.html
 [AWS CloudFormation Registry]: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html
 
 ## Description
 
-A resource provider for managing helm.
+A resource provider for managing helm. Version: 1.2.1
 
 ## References
 
@@ -40,7 +40,7 @@ You can find more information about activating this type in the [AWS CloudFormat
 
 This library is auto-generated and published to all supported programming languages by the [cdklabs/cdk-cloudformation] project based on the API schema published for `AWSQS::Kubernetes::Helm`.
 
-* Issues related to this generated library should be [reported here](https://github.com/cdklabs/cdk-cloudformation/issues/new?title=Issue+with+%40cdk-cloudformation%2Fawsqs-kubernetes-helm+v1.11.0).
+* Issues related to this generated library should be [reported here](https://github.com/cdklabs/cdk-cloudformation/issues/new?title=Issue+with+%40cdk-cloudformation%2Fawsqs-kubernetes-helm+v1.16.0).
 * Issues related to `AWSQS::Kubernetes::Helm` should be reported to the [publisher](https://github.com/aws-quickstart/quickstart-helm-resource-provider/blob/main/README.md).
 
 [cdklabs/cdk-cloudformation]: https://github.com/cdklabs/cdk-cloudformation

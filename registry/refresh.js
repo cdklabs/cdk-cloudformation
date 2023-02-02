@@ -20,8 +20,8 @@ async function main() {
   do {
     const response = await cfn.listTypes({ Visibility: 'PUBLIC', NextToken: nextToken }).promise();
     for (const type of response.TypeSummaries ?? []) {
-      // skip 1st party and any deprecated types
-      if (type.TypeName.startsWith('AWS::') || isDeprecated(type.TypeName)) {
+      // skip any Hooks, 1st party and any deprecated types
+      if (type.Type === 'HOOK' || type.TypeName.startsWith('AWS::') || isDeprecated(type.TypeName)) {
         continue;
       }
 

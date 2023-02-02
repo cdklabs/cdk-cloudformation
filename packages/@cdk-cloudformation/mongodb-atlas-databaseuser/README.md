@@ -1,13 +1,13 @@
 # mongodb-atlas-databaseuser
 
-> AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `MongoDB::Atlas::DatabaseUser` v1.3.0.
+> AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `MongoDB::Atlas::DatabaseUser` v1.5.0.
 
 [L1 construct]: https://docs.aws.amazon.com/cdk/latest/guide/constructs.html
 [AWS CloudFormation Registry]: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html
 
 ## Description
 
-The databaseUsers resource lets you retrieve, create and modify the MongoDB users in your cluster. Each user has a set of roles that provide access to the project?s databases. A user?s roles apply to all the clusters in the project: if two clusters have a products database and a user has a role granting read access on the products database, the user has that access on both clusters.
+Returns, adds, edits, and removes database users.
 
 ## Usage
 
@@ -35,7 +35,7 @@ You can find more information about activating this type in the [AWS CloudFormat
 
 This library is auto-generated and published to all supported programming languages by the [cdklabs/cdk-cloudformation] project based on the API schema published for `MongoDB::Atlas::DatabaseUser`.
 
-* Issues related to this generated library should be [reported here](https://github.com/cdklabs/cdk-cloudformation/issues/new?title=Issue+with+%40cdk-cloudformation%2Fmongodb-atlas-databaseuser+v1.3.0).
+* Issues related to this generated library should be [reported here](https://github.com/cdklabs/cdk-cloudformation/issues/new?title=Issue+with+%40cdk-cloudformation%2Fmongodb-atlas-databaseuser+v1.5.0).
 * Issues related to `MongoDB::Atlas::DatabaseUser` should be reported to the [publisher](undefined).
 
 [cdklabs/cdk-cloudformation]: https://github.com/cdklabs/cdk-cloudformation

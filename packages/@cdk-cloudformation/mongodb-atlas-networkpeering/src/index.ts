@@ -3,62 +3,55 @@ import * as cdk from 'aws-cdk-lib';
 import * as constructs from 'constructs';
 
 /**
- * This resource allows to create, read, update and delete a network peering
+ * Returns, adds, edits, and removes network peering containers and peering connections.
  *
  * @schema CfnNetworkPeeringProps
  */
 export interface CfnNetworkPeeringProps {
   /**
-   * The unique identifier of the project.
+   * Unique 24-hexadecimal digit string that identifies your project.
    *
    * @schema CfnNetworkPeeringProps#ProjectId
    */
   readonly projectId: string;
 
   /**
-   * Unique identifier of the Atlas VPC container for the AWS region.
+   * Unique 24-hexadecimal digit string that identifies the MongoDB Cloud network container that contains the specified network peering connection.
    *
    * @schema CfnNetworkPeeringProps#ContainerId
    */
   readonly containerId?: string;
 
   /**
-   * AWS region where the peer VPC resides. Returns null if the region is the same region in which the Atlas VPC resides.
+   * Amazon Web Services (AWS) region where the Virtual Peering Connection (VPC) that you peered with the MongoDB Cloud VPC resides. The resource returns null if your VPC and the MongoDB Cloud VPC reside in the same region.
    *
    * @schema CfnNetworkPeeringProps#AccepterRegionName
    */
   readonly accepterRegionName?: string;
 
   /**
-   * AWS account ID of the owner of the peer VPC.
+   * Unique twelve-digit string that identifies the Amazon Web Services (AWS) account that owns the VPC that you peered with the MongoDB Cloud VPC.
    *
    * @schema CfnNetworkPeeringProps#AwsAccountId
    */
   readonly awsAccountId?: string;
 
   /**
-   * The name of the provider
-   *
-   * @schema CfnNetworkPeeringProps#ProviderName
-   */
-  readonly providerName?: string;
-
-  /**
-   * Peer VPC CIDR block or subnet.
+   * Internet Protocol (IP) addresses expressed in Classless Inter-Domain Routing (CIDR) notation of the VPC's subnet that you want to peer with the MongoDB Cloud VPC.
    *
    * @schema CfnNetworkPeeringProps#RouteTableCIDRBlock
    */
   readonly routeTableCidrBlock?: string;
 
   /**
-   * Unique identifier of the peer VPC.
+   * Unique string that identifies the VPC on Amazon Web Services (AWS) that you want to peer with the MongoDB Cloud VPC.
    *
    * @schema CfnNetworkPeeringProps#VpcId
    */
   readonly vpcId: string;
 
   /**
-   * Unique identifier for the peering connection.
+   * Unique 24-hexadecimal digit string that identifies the MongoDB Cloud network container that contains the specified network peering connection.
    *
    * @schema CfnNetworkPeeringProps#ConnectionId
    */
@@ -82,7 +75,6 @@ export function toJson_CfnNetworkPeeringProps(obj: CfnNetworkPeeringProps | unde
     'ContainerId': obj.containerId,
     'AccepterRegionName': obj.accepterRegionName,
     'AwsAccountId': obj.awsAccountId,
-    'ProviderName': obj.providerName,
     'RouteTableCIDRBlock': obj.routeTableCidrBlock,
     'VpcId': obj.vpcId,
     'ConnectionId': obj.connectionId,

@@ -3,7 +3,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as constructs from 'constructs';
 
 /**
- * Datadog Monitor 4.0.0
+ * Datadog Monitor 4.5.0
  *
  * @schema CfnMonitorProps
  */
@@ -35,6 +35,13 @@ export interface CfnMonitorProps {
   readonly tags?: string[];
 
   /**
+   * Integer from 1 (high) to 5 (low) indicating alert severity.
+   *
+   * @schema CfnMonitorProps#Priority
+   */
+  readonly priority?: number;
+
+  /**
    * The monitor options
    *
    * @schema CfnMonitorProps#Options
@@ -62,6 +69,13 @@ export interface CfnMonitorProps {
    */
   readonly multi?: boolean;
 
+  /**
+   * A list of unique role identifiers to define which roles are allowed to edit the monitor. The unique identifiers for all roles can be pulled from the [Roles API](https://docs.datadoghq.com/api/latest/roles/#list-roles) and are located in the `data.id` field. Editing a monitor includes any updates to the monitor configuration, monitor deletion, and muting of the monitor for any amount of time. `restricted_roles` is the successor of `locked`. For more information about `locked` and `restricted_roles`, see the [monitor options docs](https://docs.datadoghq.com/monitors/guide/monitor_api_options/#permissions-options).
+   *
+   * @schema CfnMonitorProps#RestrictedRoles
+   */
+  readonly restrictedRoles?: string[];
+
 }
 
 /**
@@ -75,10 +89,12 @@ export function toJson_CfnMonitorProps(obj: CfnMonitorProps | undefined): Record
     'Message': obj.message,
     'Name': obj.name,
     'Tags': obj.tags?.map(y => y),
+    'Priority': obj.priority,
     'Options': toJson_MonitorOptions(obj.options),
     'Query': obj.query,
     'Type': obj.type,
     'Multi': obj.multi,
+    'RestrictedRoles': obj.restrictedRoles?.map(y => y),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -244,6 +260,41 @@ export interface MonitorOptions {
    */
   readonly timeoutH?: number;
 
+  /**
+   * The number of times re-notification messages should be sent on the current status at the provided re-notification interval.
+   *
+   * @schema MonitorOptions#RenotifyOccurrences
+   */
+  readonly renotifyOccurrences?: number;
+
+  /**
+   * The types of monitor statuses for which re-notification messages are sent.
+   *
+   * @schema MonitorOptions#RenotifyStatuses
+   */
+  readonly renotifyStatuses?: MonitorOptionsRenotifyStatuses[];
+
+  /**
+   * How long the test should be in failure before alerting (integer, number of seconds, max 7200).
+   *
+   * @schema MonitorOptions#MinFailureDuration
+   */
+  readonly minFailureDuration?: number;
+
+  /**
+   * Time (in seconds) to skip evaluations for new groups. For example, this option can be used to skip evaluations for new hosts while they initialize. Must be a non negative integer.
+   *
+   * @schema MonitorOptions#NewGroupDelay
+   */
+  readonly newGroupDelay?: number;
+
+  /**
+   * List of requests that can be used in the monitor query.
+   *
+   * @schema MonitorOptions#Variables
+   */
+  readonly variables?: any[];
+
 }
 
 /**
@@ -269,6 +320,11 @@ export function toJson_MonitorOptions(obj: MonitorOptions | undefined): Record<s
     'Thresholds': toJson_MonitorThresholds(obj.thresholds),
     'ThresholdWindows': toJson_MonitorThresholdWindows(obj.thresholdWindows),
     'TimeoutH': obj.timeoutH,
+    'RenotifyOccurrences': obj.renotifyOccurrences,
+    'RenotifyStatuses': obj.renotifyStatuses?.map(y => y),
+    'MinFailureDuration': obj.minFailureDuration,
+    'NewGroupDelay': obj.newGroupDelay,
+    'Variables': obj.variables?.map(y => y),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -281,26 +337,38 @@ export function toJson_MonitorOptions(obj: MonitorOptions | undefined): Record<s
  * @schema CfnMonitorPropsType
  */
 export enum CfnMonitorPropsType {
+  /** audit alert */
+  AUDIT_ALERT = "audit alert",
   /** composite */
-  COMPOSITE = 'composite',
+  COMPOSITE = "composite",
   /** event alert */
-  EVENT_ALERT = 'event alert',
+  EVENT_ALERT = "event alert",
+  /** event-v2 alert */
+  EVENT_V2_ALERT = "event-v2 alert",
   /** log alert */
-  LOG_ALERT = 'log alert',
+  LOG_ALERT = "log alert",
   /** metric alert */
-  METRIC_ALERT = 'metric alert',
+  METRIC_ALERT = "metric alert",
   /** process alert */
-  PROCESS_ALERT = 'process alert',
+  PROCESS_ALERT = "process alert",
   /** query alert */
-  QUERY_ALERT = 'query alert',
+  QUERY_ALERT = "query alert",
   /** service check */
-  SERVICE_CHECK = 'service check',
+  SERVICE_CHECK = "service check",
   /** synthetics alert */
-  SYNTHETICS_ALERT = 'synthetics alert',
+  SYNTHETICS_ALERT = "synthetics alert",
   /** trace-analytics alert */
-  TRACE_ANALYTICS_ALERT = 'trace-analytics alert',
+  TRACE_ANALYTICS_ALERT = "trace-analytics alert",
   /** slo alert */
-  SLO_ALERT = 'slo alert',
+  SLO_ALERT = "slo alert",
+  /** rum alert */
+  RUM_ALERT = "rum alert",
+  /** ci-pipelines alert */
+  CI_PIPELINES_ALERT = "ci-pipelines alert",
+  /** error-tracking alert */
+  ERROR_TRACKING_ALERT = "error-tracking alert",
+  /** ci-tests alert */
+  CI_TESTS_ALERT = "ci-tests alert",
 }
 
 /**
@@ -396,6 +464,18 @@ export function toJson_MonitorThresholdWindows(obj: MonitorThresholdWindows | un
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
 /* eslint-enable max-len, quote-props */
+
+/**
+ * @schema MonitorOptionsRenotifyStatuses
+ */
+export enum MonitorOptionsRenotifyStatuses {
+  /** alert */
+  ALERT = "alert",
+  /** no data */
+  NO_DATA = "no data",
+  /** warn */
+  WARN = "warn",
+}
 
 
 /**

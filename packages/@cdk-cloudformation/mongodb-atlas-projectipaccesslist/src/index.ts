@@ -3,7 +3,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as constructs from 'constructs';
 
 /**
- * An example resource schema demonstrating some basic constructs and validation rules.
+ * Returns, adds, edits, and removes network access limits to database deployments in MongoDB Cloud.
  *
  * @schema CfnProjectIpAccessListProps
  */
@@ -19,11 +19,16 @@ export interface CfnProjectIpAccessListProps {
   readonly apiKeys: ApiKeyDefinition;
 
   /**
-   * The unique identifier for the project to which you want to add one or more ip access list entries.
+   * Unique 24-hexadecimal digit string that identifies your project.
    *
    * @schema CfnProjectIpAccessListProps#ProjectId
    */
   readonly projectId: string;
+
+  /**
+   * @schema CfnProjectIpAccessListProps#ListOptions
+   */
+  readonly listOptions?: ListOptions;
 
 }
 
@@ -37,6 +42,7 @@ export function toJson_CfnProjectIpAccessListProps(obj: CfnProjectIpAccessListPr
     'AccessList': obj.accessList?.map(y => toJson_AccessListDefinition(y)),
     'ApiKeys': toJson_ApiKeyDefinition(obj.apiKeys),
     'ProjectId': obj.projectId,
+    'ListOptions': toJson_ListOptions(obj.listOptions),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -48,35 +54,42 @@ export function toJson_CfnProjectIpAccessListProps(obj: CfnProjectIpAccessListPr
  */
 export interface AccessListDefinition {
   /**
-   * ID of the AWS security group to allow access. Mutually exclusive with CIDRBlock and IPAddress.
+   * Date and time after which MongoDB Cloud deletes the temporary access list entry. This parameter expresses its value in the ISO 8601 timestamp format in UTC and can include the time zone designation. The date must be later than the current date but no later than one week after you submit this request. The resource returns this parameter if you specified an expiration date when creating this IP access list entry.
+   *
+   * @schema accessListDefinition#DeleteAfterDate
+   */
+  readonly deleteAfterDate?: string;
+
+  /**
+   * Unique string of the Amazon Web Services (AWS) security group that you want to add to the project's IP access list. Your IP access list entry can be one awsSecurityGroup, one cidrBlock, or one ipAddress. You must configure Virtual Private Connection (VPC) peering for your project before you can add an AWS security group to an IP access list. You cannot set AWS security groups as temporary access list entries. Don't set this parameter if you set cidrBlock or ipAddress.
    *
    * @schema accessListDefinition#AwsSecurityGroup
    */
   readonly awsSecurityGroup?: string;
 
   /**
-   * Accessable entry in Classless Inter-Domain Routing (CIDR) notation. Mutually exclusive with ipAddress and AwsSecurityGroup.
+   * Range of IP addresses in Classless Inter-Domain Routing (CIDR) notation that you want to add to the project's IP access list. Your IP access list entry can be one awsSecurityGroup, one cidrBlock, or one ipAddress. Don't set this parameter if you set awsSecurityGroup or ipAddress
    *
    * @schema accessListDefinition#CIDRBlock
    */
   readonly cidrBlock?: string;
 
   /**
-   * Comment associated with the ip access list entry.
+   * Remark that explains the purpose or scope of this IP access list entry.
    *
    * @schema accessListDefinition#Comment
    */
   readonly comment?: string;
 
   /**
-   * Accessable IP address. Mutually exclusive with CIDRBlock and AwsSecurityGroup.
+   * IP address that you want to add to the project's IP access list. Your IP access list entry can be one awsSecurityGroup, one cidrBlock, or one ipAddress. Don't set this parameter if you set awsSecurityGroup or cidrBlock.
    *
    * @schema accessListDefinition#IPAddress
    */
   readonly ipAddress?: string;
 
   /**
-   * The unique identifier for the project to which you want to add one or more ip access list entries.
+   * Unique 24-hexadecimal digit string that identifies your project.
    *
    * @schema accessListDefinition#ProjectId
    */
@@ -91,6 +104,7 @@ export interface AccessListDefinition {
 export function toJson_AccessListDefinition(obj: AccessListDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
+    'DeleteAfterDate': obj.deleteAfterDate,
     'AwsSecurityGroup': obj.awsSecurityGroup,
     'CIDRBlock': obj.cidrBlock,
     'Comment': obj.comment,
@@ -127,6 +141,49 @@ export function toJson_ApiKeyDefinition(obj: ApiKeyDefinition | undefined): Reco
   const result = {
     'PrivateKey': obj.privateKey,
     'PublicKey': obj.publicKey,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema listOptions
+ */
+export interface ListOptions {
+  /**
+   * Number of the page that displays the current set of the total objects that the response returns.
+   *
+   * @schema listOptions#PageNum
+   */
+  readonly pageNum?: number;
+
+  /**
+   * Number of items that the response returns per page.
+   *
+   * @schema listOptions#ItemsPerPage
+   */
+  readonly itemsPerPage?: number;
+
+  /**
+   * Flag that indicates whether the response returns the total number of items (totalCount) in the response.
+   *
+   * @schema listOptions#IncludeCount
+   */
+  readonly includeCount?: boolean;
+
+}
+
+/**
+ * Converts an object of type 'ListOptions' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_ListOptions(obj: ListOptions | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'PageNum': obj.pageNum,
+    'ItemsPerPage': obj.itemsPerPage,
+    'IncludeCount': obj.includeCount,
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});

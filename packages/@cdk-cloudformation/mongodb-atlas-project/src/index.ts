@@ -23,9 +23,38 @@ export interface CfnProjectProps {
   readonly orgId: string;
 
   /**
+   * Unique identifier of the organization within which to create the project.
+   *
+   * @schema CfnProjectProps#ProjectOwnerId
+   */
+  readonly projectOwnerId?: string;
+
+  /**
+   * Unique identifier of the organization within which to create the project.
+   *
+   * @schema CfnProjectProps#WithDefaultAlertsSettings
+   */
+  readonly withDefaultAlertsSettings?: boolean;
+
+  /**
+   * @schema CfnProjectProps#ProjectSettings
+   */
+  readonly projectSettings?: ProjectSettings;
+
+  /**
    * @schema CfnProjectProps#ApiKeys
    */
   readonly apiKeys?: ApiKeyDefinition;
+
+  /**
+   * @schema CfnProjectProps#ProjectTeams
+   */
+  readonly projectTeams?: ProjectTeam[];
+
+  /**
+   * @schema CfnProjectProps#ProjectApiKeys
+   */
+  readonly projectApiKeys?: ProjectApiKey[];
 
 }
 
@@ -38,7 +67,61 @@ export function toJson_CfnProjectProps(obj: CfnProjectProps | undefined): Record
   const result = {
     'Name': obj.name,
     'OrgId': obj.orgId,
+    'ProjectOwnerId': obj.projectOwnerId,
+    'WithDefaultAlertsSettings': obj.withDefaultAlertsSettings,
+    'ProjectSettings': toJson_ProjectSettings(obj.projectSettings),
     'ApiKeys': toJson_ApiKeyDefinition(obj.apiKeys),
+    'ProjectTeams': obj.projectTeams?.map(y => toJson_ProjectTeam(y)),
+    'ProjectApiKeys': obj.projectApiKeys?.map(y => toJson_ProjectApiKey(y)),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema projectSettings
+ */
+export interface ProjectSettings {
+  /**
+   * @schema projectSettings#IsCollectDatabaseSpecificsStatisticsEnabled
+   */
+  readonly isCollectDatabaseSpecificsStatisticsEnabled?: boolean;
+
+  /**
+   * @schema projectSettings#IsDataExplorerEnabled
+   */
+  readonly isDataExplorerEnabled?: boolean;
+
+  /**
+   * @schema projectSettings#IsPerformanceAdvisorEnabled
+   */
+  readonly isPerformanceAdvisorEnabled?: boolean;
+
+  /**
+   * @schema projectSettings#IsRealtimePerformancePanelEnabled
+   */
+  readonly isRealtimePerformancePanelEnabled?: boolean;
+
+  /**
+   * @schema projectSettings#IsSchemaAdvisorEnabled
+   */
+  readonly isSchemaAdvisorEnabled?: boolean;
+
+}
+
+/**
+ * Converts an object of type 'ProjectSettings' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_ProjectSettings(obj: ProjectSettings | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'IsCollectDatabaseSpecificsStatisticsEnabled': obj.isCollectDatabaseSpecificsStatisticsEnabled,
+    'IsDataExplorerEnabled': obj.isDataExplorerEnabled,
+    'IsPerformanceAdvisorEnabled': obj.isPerformanceAdvisorEnabled,
+    'IsRealtimePerformancePanelEnabled': obj.isRealtimePerformancePanelEnabled,
+    'IsSchemaAdvisorEnabled': obj.isSchemaAdvisorEnabled,
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -70,6 +153,68 @@ export function toJson_ApiKeyDefinition(obj: ApiKeyDefinition | undefined): Reco
   const result = {
     'PublicKey': obj.publicKey,
     'PrivateKey': obj.privateKey,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema projectTeam
+ */
+export interface ProjectTeam {
+  /**
+   * @schema projectTeam#TeamId
+   */
+  readonly teamId?: string;
+
+  /**
+   * @schema projectTeam#RoleNames
+   */
+  readonly roleNames?: string[];
+
+}
+
+/**
+ * Converts an object of type 'ProjectTeam' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_ProjectTeam(obj: ProjectTeam | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'TeamId': obj.teamId,
+    'RoleNames': obj.roleNames?.map(y => y),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema projectApiKey
+ */
+export interface ProjectApiKey {
+  /**
+   * @schema projectApiKey#Key
+   */
+  readonly key?: string;
+
+  /**
+   * @schema projectApiKey#RoleNames
+   */
+  readonly roleNames?: string[];
+
+}
+
+/**
+ * Converts an object of type 'ProjectApiKey' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_ProjectApiKey(obj: ProjectApiKey | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'Key': obj.key,
+    'RoleNames': obj.roleNames?.map(y => y),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});

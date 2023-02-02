@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/mongodb-atlas-projectipaccesslist",
-  "description": "An example resource schema demonstrating some basic constructs and validation rules.",
-  "version": "1.1.0-alpha.5",
+  "description": "Returns, adds, edits, and removes network access limits to database deployments in MongoDB Cloud.",
+  "version": "1.2.0-alpha.5",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

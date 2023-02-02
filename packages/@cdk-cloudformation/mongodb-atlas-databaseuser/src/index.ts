@@ -3,13 +3,20 @@ import * as cdk from 'aws-cdk-lib';
 import * as constructs from 'constructs';
 
 /**
- * The databaseUsers resource lets you retrieve, create and modify the MongoDB users in your cluster. Each user has a set of roles that provide access to the project’s databases. A user’s roles apply to all the clusters in the project: if two clusters have a products database and a user has a role granting read access on the products database, the user has that access on both clusters.
+ * Returns, adds, edits, and removes database users.
  *
  * @schema CfnDatabaseUserProps
  */
 export interface CfnDatabaseUserProps {
   /**
-   * If this value is set, the new database user authenticates with AWS IAM credentials.
+   * Date and time when MongoDB Cloud deletes the user. This parameter expresses its value in the ISO 8601 timestamp format in UTC and can include the time zone designation. You must specify a future date that falls within one week of making the Application Programming Interface (API) request.
+   *
+   * @schema CfnDatabaseUserProps#DeleteAfterDate
+   */
+  readonly deleteAfterDate?: string;
+
+  /**
+   * Human-readable label that indicates whether the new database user authenticates with the Amazon Web Services (AWS) Identity and Access Management (IAM) credentials associated with the user or the user's role.
    *
    * @schema CfnDatabaseUserProps#AWSIAMType
    */
@@ -21,14 +28,14 @@ export interface CfnDatabaseUserProps {
   readonly apiKeys?: ApiKeyDefinition;
 
   /**
-   * The user’s authentication database. A user must provide both a username and authentication database to log into MongoDB. In Atlas deployments of MongoDB, the authentication database is always the admin database.
+   * MongoDB database against which the MongoDB database user authenticates. MongoDB database users must provide both a username and authentication database to log into MongoDB.
    *
    * @schema CfnDatabaseUserProps#DatabaseName
    */
   readonly databaseName: string;
 
   /**
-   * Array containing key-value pairs that tag and categorize the database user.
+   * List that contains the key-value pairs for tagging and categorizing the MongoDB database user. The labels that you define do not appear in the console.
    *
    * @schema CfnDatabaseUserProps#Labels
    */
@@ -40,6 +47,13 @@ export interface CfnDatabaseUserProps {
    * @schema CfnDatabaseUserProps#LdapAuthType
    */
   readonly ldapAuthType?: CfnDatabaseUserPropsLdapAuthType;
+
+  /**
+   * Method that briefs who owns the certificate provided. If no value is given while using X509Type, Atlas uses the default value of MANAGED.
+   *
+   * @schema CfnDatabaseUserProps#X509Type
+   */
+  readonly x509Type?: CfnDatabaseUserPropsX509Type;
 
   /**
    * The user’s password. This field is not included in the entity returned from the server.
@@ -56,21 +70,21 @@ export interface CfnDatabaseUserProps {
   readonly projectId: string;
 
   /**
-   * Array of this user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well.
+   * List that provides the pairings of one role with one applicable database.
    *
    * @schema CfnDatabaseUserProps#Roles
    */
   readonly roles: RoleDefinition[];
 
   /**
-   * Array of clusters and Atlas Data Lakes that this user has access to. If omitted, Atlas grants the user access to all the clusters and Atlas Data Lakes in the project by default.
+   * List that contains clusters and MongoDB Atlas Data Lakes that this database user can access. If omitted, MongoDB Cloud grants the database user access to all the clusters and MongoDB Atlas Data Lakes in the project.
    *
    * @schema CfnDatabaseUserProps#Scopes
    */
   readonly scopes?: ScopeDefinition[];
 
   /**
-   * Username for authenticating to MongoDB.
+   * Human-readable label that represents the user that authenticates to MongoDB.
    *
    * @schema CfnDatabaseUserProps#Username
    */
@@ -85,11 +99,13 @@ export interface CfnDatabaseUserProps {
 export function toJson_CfnDatabaseUserProps(obj: CfnDatabaseUserProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
+    'DeleteAfterDate': obj.deleteAfterDate,
     'AWSIAMType': obj.awsiamType,
     'ApiKeys': toJson_ApiKeyDefinition(obj.apiKeys),
     'DatabaseName': obj.databaseName,
     'Labels': obj.labels?.map(y => toJson_LabelDefinition(y)),
     'LdapAuthType': obj.ldapAuthType,
+    'X509Type': obj.x509Type,
     'Password': obj.password,
     'ProjectId': obj.projectId,
     'Roles': obj.roles?.map(y => toJson_RoleDefinition(y)),
@@ -102,17 +118,17 @@ export function toJson_CfnDatabaseUserProps(obj: CfnDatabaseUserProps | undefine
 /* eslint-enable max-len, quote-props */
 
 /**
- * If this value is set, the new database user authenticates with AWS IAM credentials.
+ * Human-readable label that indicates whether the new database user authenticates with the Amazon Web Services (AWS) Identity and Access Management (IAM) credentials associated with the user or the user's role.
  *
  * @schema CfnDatabaseUserPropsAwsiamType
  */
 export enum CfnDatabaseUserPropsAwsiamType {
   /** NONE */
-  NONE = 'NONE',
+  NONE = "NONE",
   /** USER */
-  USER = 'USER',
+  USER = "USER",
   /** ROLE */
-  ROLE = 'ROLE',
+  ROLE = "ROLE",
 }
 
 /**
@@ -184,11 +200,25 @@ export function toJson_LabelDefinition(obj: LabelDefinition | undefined): Record
  */
 export enum CfnDatabaseUserPropsLdapAuthType {
   /** NONE */
-  NONE = 'NONE',
+  NONE = "NONE",
   /** USER */
-  USER = 'USER',
+  USER = "USER",
   /** GROUP */
-  GROUP = 'GROUP',
+  GROUP = "GROUP",
+}
+
+/**
+ * Method that briefs who owns the certificate provided. If no value is given while using X509Type, Atlas uses the default value of MANAGED.
+ *
+ * @schema CfnDatabaseUserPropsX509Type
+ */
+export enum CfnDatabaseUserPropsX509Type {
+  /** NONE */
+  NONE = "NONE",
+  /** MANAGED */
+  MANAGED = "MANAGED",
+  /** CUSTOMER */
+  CUSTOMER = "CUSTOMER",
 }
 
 /**
@@ -264,9 +294,9 @@ export function toJson_ScopeDefinition(obj: ScopeDefinition | undefined): Record
  */
 export enum ScopeDefinitionType {
   /** CLUSTER */
-  CLUSTER = 'CLUSTER',
+  CLUSTER = "CLUSTER",
   /** DATA_LAKE */
-  DATA_LAKE = 'DATA_LAKE',
+  DATA_LAKE = "DATA_LAKE",
 }
 
 

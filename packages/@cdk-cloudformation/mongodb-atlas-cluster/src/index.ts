@@ -302,13 +302,13 @@ export function toJson_ConnectionStrings(obj: ConnectionStrings | undefined): Re
  */
 export enum CfnClusterPropsEncryptionAtRestProvider {
   /** AWS */
-  AWS = 'AWS',
+  AWS = "AWS",
   /** GCP */
-  GCP = 'GCP',
+  GCP = "GCP",
   /** AZURE */
-  AZURE = 'AZURE',
+  AZURE = "AZURE",
   /** NONE */
-  NONE = 'NONE',
+  NONE = "NONE",
 }
 
 /**

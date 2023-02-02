@@ -1425,11 +1425,11 @@ export function toJson_Attribute(obj: Attribute | undefined): Record<string, any
  */
 export enum BlockDeviceMappingEbsVolumeType {
   /** standard */
-  STANDARD = 'standard',
+  STANDARD = "standard",
   /** io1 */
-  IO1 = 'io1',
+  IO1 = "io1",
   /** gp2 */
-  GP2 = 'gp2',
+  GP2 = "gp2",
 }
 
 

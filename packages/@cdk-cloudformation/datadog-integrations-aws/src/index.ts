@@ -3,7 +3,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as constructs from 'constructs';
 
 /**
- * Datadog AWS Integration 2.1.0
+ * Datadog AWS Integration 2.2.1
  *
  * @schema CfnAwsProps
  */
@@ -58,6 +58,27 @@ export interface CfnAwsProps {
    */
   readonly externalIdSecretName?: string;
 
+  /**
+   * Enable the infrastructure monitoring Datadog product for this AWS Account. This will enable collecting all AWS metrics in your account.
+   *
+   * @schema CfnAwsProps#MetricsCollection
+   */
+  readonly metricsCollection?: boolean;
+
+  /**
+   * Enable the compliance and security posture management Datadog product. This will enable collecting information on your AWS resources and providing security validation.
+   *
+   * @schema CfnAwsProps#CSPMResourceCollection
+   */
+  readonly cspmResourceCollection?: boolean;
+
+  /**
+   * Enable collecting information on your AWS resources for use in Datadog products such as Network Process Monitoring.
+   *
+   * @schema CfnAwsProps#ResourceCollection
+   */
+  readonly resourceCollection?: boolean;
+
 }
 
 /**
@@ -74,6 +95,9 @@ export function toJson_CfnAwsProps(obj: CfnAwsProps | undefined): Record<string,
     'HostTags': obj.hostTags?.map(y => y),
     'AccountSpecificNamespaceRules': obj.accountSpecificNamespaceRules,
     'ExternalIDSecretName': obj.externalIdSecretName,
+    'MetricsCollection': obj.metricsCollection,
+    'CSPMResourceCollection': obj.cspmResourceCollection,
+    'ResourceCollection': obj.resourceCollection,
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});

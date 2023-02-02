@@ -3,7 +3,7 @@ const aws = require('aws-sdk');
 const fs = require('fs/promises');
 const { join } = require('path');
 const caseutil = require('case');
-const deprecatedTypes = require('../deprecated-types.json');
+const deprecations = require('../deprecated-types.json');
 
 const outdir = join(__dirname, 'types');
 
@@ -11,13 +11,17 @@ const cfn = new aws.CloudFormation({
   region: 'us-east-1'
 });
 
+function isDeprecated(typeName) {
+  return typeName in deprecations.deprecatedTypes || Object.keys(deprecations.deprecatedPrefixes).some(p => typeName.startsWith(p))
+}
+
 async function main() {
   let nextToken = undefined;
   do {
     const response = await cfn.listTypes({ Visibility: 'PUBLIC', NextToken: nextToken }).promise();
     for (const type of response.TypeSummaries ?? []) {
       // skip 1st party and any deprecated types
-      if (type.TypeName.startsWith('AWS::') || type.TypeName in deprecatedTypes) {
+      if (type.TypeName.startsWith('AWS::') || isDeprecated(type.TypeName)) {
         continue;
       }
 
@@ -27,7 +31,7 @@ async function main() {
     }
 
     nextToken = response.NextToken;
-  } while (nextToken); 
+  } while (nextToken);
 }
 
 async function saveTypeInfo(type) {

@@ -1,0 +1,14 @@
+{
+  "Arn": "arn:aws:cloudformation:us-east-1::type/module/5b05ef5a51fcbc931d63aafe139bec8a97389a21/ORG-TEST-SAMPLE-MODULE",
+  "Type": "MODULE",
+  "TypeName": "ORG::TEST::SAMPLE::MODULE",
+  "Description": "Schema for Module Fragment of type ORG::TEST::SAMPLE::MODULE",
+  "Schema": "{\n    \"typeName\": \"ORG::TEST::SAMPLE::MODULE\",\n    \"description\": \"Schema for Module Fragment of type ORG::TEST::SAMPLE::MODULE\",\n    \"properties\": {\n        \"Parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"BucketName\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"Type\": {\n                            \"type\": \"string\"\n                        },\n                        \"Description\": {\n                            \"type\": \"string\"\n                        }\n                    },\n                    \"required\": [\n                        \"Type\",\n                        \"Description\"\n                    ],\n                    \"description\": \"Name for the bucket\"\n                }\n            }\n        },\n        \"Resources\": {\n            \"properties\": {\n                \"S3Bucket\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"Type\": {\n                            \"type\": \"string\",\n                            \"const\": \"AWS::S3::Bucket\"\n                        },\n                        \"Properties\": {\n                            \"type\": \"object\"\n                        }\n                    }\n                }\n            },\n            \"type\": \"object\",\n            \"additionalProperties\": false\n        }\n    },\n    \"additionalProperties\": true\n}\n",
+  "DeprecatedStatus": "LIVE",
+  "RequiredActivatedTypes": [],
+  "Visibility": "PUBLIC",
+  "TimeCreated": "2022-02-24T23:05:18.816Z",
+  "PublisherId": "5b05ef5a51fcbc931d63aafe139bec8a97389a21",
+  "LatestPublicVersion": "1.0.0",
+  "IsActivated": false
+}

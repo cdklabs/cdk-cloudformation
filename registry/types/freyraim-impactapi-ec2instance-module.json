@@ -1,0 +1,14 @@
+{
+  "Arn": "arn:aws:cloudformation:us-east-1::type/module/1f3a049eb4a792395c6609688da1c941f63d5698/FreyrAIM-ImpactApi-EC2Instance-MODULE",
+  "Type": "MODULE",
+  "TypeName": "FreyrAIM::ImpactApi::EC2Instance::MODULE",
+  "Description": "Schema for Module Fragment of type FreyrAIM::ImpactApi::EC2Instance::MODULE",
+  "Schema": "{\r\n    \"typeName\": \"FreyrAIM::ImpactApi::EC2Instance::MODULE\",\r\n    \"description\": \"Schema for Module Fragment of type FreyrAIM::ImpactApi::EC2Instance::MODULE\",\r\n    \"properties\": {\r\n        \"Parameters\": {\r\n            \"type\": \"object\",\r\n            \"properties\": {\r\n                \"EnvName\": {\r\n                    \"type\": \"object\",\r\n                    \"properties\": {\r\n                        \"Type\": {\r\n                            \"type\": \"string\"\r\n                        },\r\n                        \"Description\": {\r\n                            \"type\": \"string\"\r\n                        }\r\n                    },\r\n                    \"required\": [\r\n                        \"Type\",\r\n                        \"Description\"\r\n                    ],\r\n                    \"description\": \"The environment name \"\r\n                },\r\n                \"ImageDigest\": {\r\n                    \"type\": \"object\",\r\n                    \"properties\": {\r\n                        \"Type\": {\r\n                            \"type\": \"string\"\r\n                        },\r\n                        \"Description\": {\r\n                            \"type\": \"string\"\r\n                        }\r\n                    },\r\n                    \"required\": [\r\n                        \"Type\",\r\n                        \"Description\"\r\n                    ],\r\n                    \"description\": \"The ImageDigest \"\r\n                }\r\n            }\r\n        },\r\n        \"Resources\": {\r\n            \"properties\": {\r\n                \"ImpactClassifyEC2Instance\": {\r\n                    \"type\": \"object\",\r\n                    \"properties\": {\r\n                        \"Type\": {\r\n                            \"type\": \"string\",\r\n                            \"const\": \"AWS::EC2::Instance\"\r\n                        },\r\n                        \"Properties\": {\r\n                            \"type\": \"object\"\r\n                        }\r\n                    }\r\n                }\r\n            },\r\n            \"type\": \"object\",\r\n            \"additionalProperties\": false\r\n        }\r\n    },\r\n    \"additionalProperties\": true\r\n}\r\n",
+  "DeprecatedStatus": "LIVE",
+  "RequiredActivatedTypes": [],
+  "Visibility": "PUBLIC",
+  "TimeCreated": "2022-07-04T07:44:12.545Z",
+  "PublisherId": "1f3a049eb4a792395c6609688da1c941f63d5698",
+  "LatestPublicVersion": "1.0.0",
+  "IsActivated": false
+}

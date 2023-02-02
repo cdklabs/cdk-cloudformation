@@ -1,0 +1,18 @@
+{
+  "Arn": "arn:aws:cloudformation:us-east-1::type/resource/c830e97710da0c9954d80ba8df021e5439e7134b/Okta-Group-Membership",
+  "Type": "RESOURCE",
+  "TypeName": "Okta::Group::Membership",
+  "Description": "Adds Okta users to groups",
+  "Schema": "{\n    \"typeName\": \"Okta::Group::Membership\",\n    \"description\": \"Adds Okta users to groups\",\n    \"sourceUrl\": \"https://github.com/aws-ia/cloudformation-okta-resource-providers.git\",\n    \"documentationUrl\": \"https://github.com/aws-ia/cloudformation-okta-resource-providers\",\n    \"typeConfiguration\": {\n        \"properties\": {\n            \"OktaAccess\": {\n                \"$ref\": \"#/definitions/OktaAccess\"\n            }\n        },\n        \"additionalProperties\": false\n    },\n    \"definitions\": {\n        \"OktaAccess\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"Url\": {\n                    \"type\": \"string\",\n                    \"description\": \"Okta URL, including organization identifier\"\n                },\n                \"ApiKey\": {\n                    \"type\": \"string\",\n                    \"description\": \"Okta API tokens are used to authenticate requests to Okta APIs.\"\n                }\n            },\n            \"additionalProperties\": false\n        }\n    },\n    \"properties\": {\n        \"GroupId\": {\n            \"type\": \"string\"\n        },\n        \"UserId\": {\n            \"type\": \"string\"\n        }\n    },\n    \"additionalProperties\": false,\n    \"required\": [\n        \"GroupId\", \n        \"UserId\"\n    ],\n    \"primaryIdentifier\": [\n        \"/properties/GroupId\",\n        \"/properties/UserId\"\n    ],\n    \"createOnlyProperties\": [\n        \"/properties/GroupId\",\n        \"/properties/UserId\"\n    ],\n    \"handlers\": {\n        \"create\": {\n            \"permissions\": []\n        },\n        \"read\": {\n            \"permissions\": []\n        },\n        \"update\": {\n            \"permissions\": []\n        },\n        \"delete\": {\n            \"permissions\": []\n        },\n        \"list\": {\n            \"permissions\": []\n        }\n    }\n}\n",
+  "ProvisioningType": "FULLY_MUTABLE",
+  "DeprecatedStatus": "LIVE",
+  "RequiredActivatedTypes": [],
+  "Visibility": "PUBLIC",
+  "SourceUrl": "https://github.com/aws-ia/cloudformation-okta-resource-providers.git",
+  "DocumentationUrl": "https://github.com/aws-ia/cloudformation-okta-resource-providers",
+  "TimeCreated": "2023-02-01T23:15:38.101Z",
+  "ConfigurationSchema": "{\n    \"properties\": {\n        \"OktaAccess\": {\n            \"$ref\": \"#/definitions/OktaAccess\"\n        }\n    },\n    \"additionalProperties\": false,\n    \"definitions\": {\n        \"OktaAccess\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"Url\": {\n                    \"type\": \"string\",\n                    \"description\": \"Okta URL, including organization identifier\"\n                },\n                \"ApiKey\": {\n                    \"type\": \"string\",\n                    \"description\": \"Okta API tokens are used to authenticate requests to Okta APIs.\"\n                }\n            },\n            \"additionalProperties\": false\n        }\n    },\n    \"typeName\": \"Okta::Group::Membership\"\n}",
+  "PublisherId": "c830e97710da0c9954d80ba8df021e5439e7134b",
+  "LatestPublicVersion": "1.2.0",
+  "IsActivated": false
+}

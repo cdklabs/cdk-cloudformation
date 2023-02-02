@@ -305,6 +305,7 @@ export class CloudFormationTypeProject extends Component {
     }
 
     const originalWarn = console.warn;
+    console.log(typeName);
     try {
       console.warn = (...args: string[]) => console.error('  >', ...args);
       const schema = JSON.parse(schemaJson);

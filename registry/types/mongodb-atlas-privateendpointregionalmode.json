@@ -1,0 +1,16 @@
+{
+  "Arn": "arn:aws:cloudformation:us-east-1::type/resource/bb989456c78c398a858fef18f2ca1bfc1fbba082/MongoDB-Atlas-PrivateEndPointRegionalMode",
+  "Type": "RESOURCE",
+  "TypeName": "MongoDB::Atlas::PrivateEndPointRegionalMode",
+  "Description": "An example resource schema demonstrating some basic constructs and validation rules.",
+  "Schema": "{\n    \"typeName\": \"MongoDB::Atlas::PrivateEndPointRegionalMode\",\n    \"description\": \"An example resource schema demonstrating some basic constructs and validation rules.\",\n    \"sourceUrl\": \"https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git\",\n    \"definitions\": {\n        \"ApiKey\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"PublicKey\": {\n                    \"type\": \"string\"\n                },\n                \"PrivateKey\": {\n                    \"type\": \"string\"\n                }\n            },\n            \"additionalProperties\": false\n        }\n    },\n    \"properties\": {\n        \"Enabled\": {\n            \"description\": \"Flag that indicates whether someone enabled the regionalized private endpoint setting for the specified project\",\n            \"type\": \"boolean\"\n        },\n        \"ProjectId\": {\n            \"description\": \"Unique 24-hexadecimal digit string that identifies your project.\",\n            \"type\": \"string\",\n            \"pattern\": \"^([a-f0-9]{24})$\"\n        },\n        \"ApiKeys\": {\n            \"$ref\": \"#/definitions/ApiKey\"\n        }\n    },\n    \"additionalProperties\": false,\n    \"required\": [\n        \"ProjectId\"\n    ],\n    \"createOnlyProperties\": [\n        \"/properties/ProjectId\"\n    ],\n    \"readOnlyProperties\": [\n        \"/properties/Enabled\"\n    ],\n    \"primaryIdentifier\": [\n        \"/properties/ProjectId\"\n    ],\n    \"handlers\": {\n        \"create\": {\n            \"permissions\": [\n            ]\n        },\n        \"read\": {\n            \"permissions\": [\n            ]\n        },\n        \"delete\": {\n            \"permissions\": [\n            ]\n        }\n    }\n}",
+  "ProvisioningType": "IMMUTABLE",
+  "DeprecatedStatus": "LIVE",
+  "RequiredActivatedTypes": [],
+  "Visibility": "PUBLIC",
+  "SourceUrl": "https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git",
+  "TimeCreated": "2022-12-22T22:17:00.383Z",
+  "PublisherId": "bb989456c78c398a858fef18f2ca1bfc1fbba082",
+  "LatestPublicVersion": "1.0.0",
+  "IsActivated": false
+}

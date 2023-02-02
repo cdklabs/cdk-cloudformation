@@ -1,0 +1,17 @@
+{
+  "Arn": "arn:aws:cloudformation:us-east-1::type/resource/759f81f13de188bad7cafc8a2d50910f7d5e2bcc/NewRelic-Observability-Dashboards",
+  "Type": "RESOURCE",
+  "TypeName": "NewRelic::Observability::Dashboards",
+  "Description": "CRUD operations for New Relic Dashboards via the NerdGraph API",
+  "Schema": "{\n  \"typeName\": \"NewRelic::Observability::Dashboards\",\n  \"description\": \"CRUD operations for New Relic Dashboards via the NerdGraph API\",\n  \"sourceUrl\": \"https://github.com/newrelic-experimental/newrelic-cloudformation-resource-providers-dashboards\",\n  \"properties\": {\n    \"DashboardInput\": {\n      \"type\": \"string\"\n    },\n    \"Guid\": {\n      \"type\": \"string\"\n    },\n    \"ListQueryFilter\": {\n      \"type\": \"string\"\n    },\n    \"Variables\": {\n      \"type\": \"object\",\n      \"patternProperties\": {\n        \"^[A-Za-z0-9]{1,64}$\": {\n          \"type\": \"string\"\n        }\n      },\n      \"additionalProperties\": false\n    },\n    \"Tags\": {\n      \"type\": \"object\",\n      \"patternProperties\": {\n        \"^[A-Za-z0-9]{1,64}$\": {\n          \"type\": \"string\"\n        }\n      },\n      \"additionalProperties\": false\n    }\n  },\n  \"additionalProperties\": false,\n  \"primaryIdentifier\": [\n    \"/properties/Guid\"\n  ],\n  \"readOnlyProperties\": [\n    \"/properties/Guid\"\n  ],\n  \"handlers\": {\n    \"create\": {\n      \"permissions\": [\n        \"cloudformation:BatchDescribeTypeConfigurations\"\n      ]\n    },\n    \"read\": {\n      \"permissions\": [\n        \"cloudformation:BatchDescribeTypeConfigurations\"\n      ]\n    },\n    \"update\": {\n      \"permissions\": [\n        \"cloudformation:BatchDescribeTypeConfigurations\"\n      ]\n    },\n    \"delete\": {\n      \"permissions\": [\n        \"cloudformation:BatchDescribeTypeConfigurations\"\n      ]\n    },\n    \"list\": {\n      \"permissions\": [\n        \"cloudformation:BatchDescribeTypeConfigurations\"\n      ]\n    }\n  },\n  \"typeConfiguration\": {\n    \"properties\": {\n      \"Endpoint\": {\n        \"type\": \"string\",\n        \"default\": \"https://api.newrelic.com/graphql\"\n      },\n      \"APIKey\": {\n        \"type\": \"string\"\n      },\n      \"AccountID\": {\n        \"type\": \"string\"\n      }\n    },\n    \"additionalProperties\": false,\n    \"required\": [\n      \"APIKey\",\n      \"AccountID\"\n    ]\n  }\n}\n",
+  "ProvisioningType": "FULLY_MUTABLE",
+  "DeprecatedStatus": "LIVE",
+  "RequiredActivatedTypes": [],
+  "Visibility": "PUBLIC",
+  "SourceUrl": "https://github.com/newrelic-experimental/newrelic-cloudformation-resource-providers-dashboards",
+  "TimeCreated": "2022-11-08T18:58:13.813Z",
+  "ConfigurationSchema": "{\n    \"properties\": {\n        \"Endpoint\": {\n            \"type\": \"string\",\n            \"default\": \"https://api.newrelic.com/graphql\"\n        },\n        \"APIKey\": {\n            \"type\": \"string\"\n        },\n        \"AccountID\": {\n            \"type\": \"string\"\n        }\n    },\n    \"additionalProperties\": false,\n    \"required\": [\n        \"APIKey\",\n        \"AccountID\"\n    ],\n    \"definitions\": {},\n    \"typeName\": \"NewRelic::Observability::Dashboards\"\n}",
+  "PublisherId": "759f81f13de188bad7cafc8a2d50910f7d5e2bcc",
+  "LatestPublicVersion": "1.0.0",
+  "IsActivated": false
+}

@@ -3,7 +3,7 @@ import { dirname, join } from 'path';
 import type { CloudFormation } from 'aws-sdk';
 import * as caseutil from 'case';
 import { CfnResourceGenerator } from 'cdk-import/lib/cfn-resource-generator';
-import { Component, JsonFile, License, Project, typescript } from 'projen';
+import { Component, IgnoreFile, JsonFile, License, Project, typescript } from 'projen';
 import { GithubWorkflow } from 'projen/lib/github';
 import { DEFAULT_GITHUB_ACTIONS_USER } from 'projen/lib/github/constants';
 import { WorkflowActions } from 'projen/lib/github/workflow-actions';
@@ -177,9 +177,16 @@ export class CloudFormationTypeProject extends Component {
 
     project.addGitIgnore('/.jsii');
     project.addGitIgnore('/lib/');
-    project.addGitIgnore('/.npmignore'); // <-- created by JSII
     project.addGitIgnore('/tsconfig.json'); // <-- created by JSII
     project.addGitIgnore('/dist/');
+    project.addGitIgnore('tsconfig.tsbuildinfo');
+
+    const npmignore = new IgnoreFile(project, '.npmignore');
+    npmignore.addPatterns('.projen');
+    npmignore.addPatterns('/dist/');
+    npmignore.addPatterns('/src/');
+    npmignore.addPatterns('/test/');
+    npmignore.addPatterns('tsconfig.tsbuildinfo');
 
     const compileTask = parent.addTask(`compile:${typeNameKebab}`, {
       description: `compile ${typeNameKebab} with JSII`,

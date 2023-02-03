@@ -5,6 +5,13 @@
 [L1 construct]: https://docs.aws.amazon.com/cdk/latest/guide/constructs.html
 [AWS CloudFormation Registry]: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html
 
+---
+
+![Deprecated](https://img.shields.io/badge/deprecated-critical.svg?style=for-the-badge)
+
+> This package is deprecated. Please use the respective `@mongodbatlas-awscdk/*` scoped package instead
+
+---
 ## Description
 
 The databaseUsers resource lets you retrieve, create and modify the MongoDB users in your cluster. Each user has a set of roles that provide access to the project?s databases. A user?s roles apply to all the clusters in the project: if two clusters have a products database and a user has a role granting read access on the products database, the user has that access on both clusters.

@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/paloaltonetworks-cloudngfw-rulestack",
   "description": "A rulestack defines the NGFW's advanced access control (APP-ID, URL Filtering) and threat prevention behavior.",
-  "version": "1.1.0-alpha.6",
+  "version": "1.1.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

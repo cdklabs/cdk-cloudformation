@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/awsqs-ec2-linuxbastionqs-module",
   "description": "Schema for Module Fragment of type AWSQS::EC2::LinuxBastionQS::MODULE",
-  "version": "1.4.0-alpha.6",
+  "version": "1.4.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

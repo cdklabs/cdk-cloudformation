@@ -1,7 +1,8 @@
 {
   "name": "@cdk-cloudformation/mongodb-atlas-project",
   "description": "Retrieves or creates projects in any given Atlas organization.",
-  "version": "1.6.0-alpha.6",
+  "version": "1.6.0-alpha.7",
+  "deprecated": true,
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

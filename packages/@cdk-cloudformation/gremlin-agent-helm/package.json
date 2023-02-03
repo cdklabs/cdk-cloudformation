@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/gremlin-agent-helm",
   "description": "An example resource schema demonstrating some basic constructs and validation rules.",
-  "version": "1.0.0-alpha.6",
+  "version": "1.0.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

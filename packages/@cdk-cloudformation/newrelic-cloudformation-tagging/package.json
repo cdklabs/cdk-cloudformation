@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/newrelic-cloudformation-tagging",
   "description": "CRUD operations for New Relic Tags via the NerdGraph API",
-  "version": "1.0.0-alpha.6",
+  "version": "1.0.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

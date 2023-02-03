@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/awsqs-kubernetes-resource",
   "description": "Applys a YAML manifest to the specified Kubernetes cluster",
-  "version": "1.15.0-alpha.6",
+  "version": "1.15.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

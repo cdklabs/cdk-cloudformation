@@ -184,10 +184,12 @@ export class CloudFormationTypeProject extends Component {
     const npmignore = new IgnoreFile(project, '.npmignore');
     npmignore.readonly = false;
     npmignore.addPatterns('.projen');
-    npmignore.addPatterns('/dist/');
-    npmignore.addPatterns('/src/');
-    npmignore.addPatterns('/test/');
+    npmignore.addPatterns('dist');
+    npmignore.addPatterns('src');
+    npmignore.addPatterns('test');
     npmignore.addPatterns('tsconfig.tsbuildinfo');
+    npmignore.addPatterns('!.jsii');
+    npmignore.addPatterns('!.jsii.gz');
 
     const compileTask = parent.addTask(`compile:${typeNameKebab}`, {
       description: `compile ${typeNameKebab} with JSII`,
@@ -197,7 +199,7 @@ export class CloudFormationTypeProject extends Component {
 
     const packageTask = parent.addTask(`package:${typeNameKebab}`, {
       description: `produce multi-language packaging for ${typeNameKebab}`,
-      exec: 'jsii-pacmak',
+      exec: 'jsii-pacmak --no-npmignore',
       cwd: outdir,
     });
 

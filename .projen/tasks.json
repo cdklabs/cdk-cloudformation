@@ -3317,7 +3317,7 @@
       "description": "produce multi-language packaging for alexa-ask-skill",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/alexa-ask-skill"
@@ -3327,7 +3327,7 @@
       "description": "produce multi-language packaging for aqua-enterprise-enforcer",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/aqua-enterprise-enforcer"
@@ -3337,7 +3337,7 @@
       "description": "produce multi-language packaging for aqua-enterprise-kubeenforcer",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/aqua-enterprise-kubeenforcer"
@@ -3347,7 +3347,7 @@
       "description": "produce multi-language packaging for aqua-enterprise-scanner",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/aqua-enterprise-scanner"
@@ -3357,7 +3357,7 @@
       "description": "produce multi-language packaging for aqua-enterprise-server",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/aqua-enterprise-server"
@@ -3367,7 +3367,7 @@
       "description": "produce multi-language packaging for atlassian-opsgenie-integration",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/atlassian-opsgenie-integration"
@@ -3377,7 +3377,7 @@
       "description": "produce multi-language packaging for atlassian-opsgenie-team",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/atlassian-opsgenie-team"
@@ -3387,7 +3387,7 @@
       "description": "produce multi-language packaging for atlassian-opsgenie-user",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/atlassian-opsgenie-user"
@@ -3397,7 +3397,7 @@
       "description": "produce multi-language packaging for awscommunity-account-alternatecontact",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/awscommunity-account-alternatecontact"
@@ -3407,7 +3407,7 @@
       "description": "produce multi-language packaging for awscommunity-s3-deletebucketcontents",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/awscommunity-s3-deletebucketcontents"
@@ -3417,7 +3417,7 @@
       "description": "produce multi-language packaging for awsqs-checkpoint-cloudguardqs-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/awsqs-checkpoint-cloudguardqs-module"
@@ -3427,7 +3427,7 @@
       "description": "produce multi-language packaging for awsqs-ec2-linuxbastionqs-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/awsqs-ec2-linuxbastionqs-module"
@@ -3437,7 +3437,7 @@
       "description": "produce multi-language packaging for awsqs-eks-cluster",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/awsqs-eks-cluster"
@@ -3447,7 +3447,7 @@
       "description": "produce multi-language packaging for awsqs-iridium-cloudconnectqs-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/awsqs-iridium-cloudconnectqs-module"
@@ -3457,7 +3457,7 @@
       "description": "produce multi-language packaging for awsqs-kubernetes-get",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/awsqs-kubernetes-get"
@@ -3467,7 +3467,7 @@
       "description": "produce multi-language packaging for awsqs-kubernetes-helm",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/awsqs-kubernetes-helm"
@@ -3477,7 +3477,7 @@
       "description": "produce multi-language packaging for awsqs-kubernetes-resource",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/awsqs-kubernetes-resource"
@@ -3487,7 +3487,7 @@
       "description": "produce multi-language packaging for awsqs-vpc-vpcqs-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/awsqs-vpc-vpcqs-module"
@@ -3497,7 +3497,7 @@
       "description": "produce multi-language packaging for bigid-datasource-dynamodb",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/bigid-datasource-dynamodb"
@@ -3507,7 +3507,7 @@
       "description": "produce multi-language packaging for bigid-datasource-s3",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/bigid-datasource-s3"
@@ -3517,7 +3517,7 @@
       "description": "produce multi-language packaging for cloudflare-dns-record",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/cloudflare-dns-record"
@@ -3527,7 +3527,7 @@
       "description": "produce multi-language packaging for cloudflare-loadbalancer-loadbalancer",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/cloudflare-loadbalancer-loadbalancer"
@@ -3537,7 +3537,7 @@
       "description": "produce multi-language packaging for cloudflare-loadbalancer-monitor",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/cloudflare-loadbalancer-monitor"
@@ -3547,7 +3547,7 @@
       "description": "produce multi-language packaging for cloudflare-loadbalancer-pool",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/cloudflare-loadbalancer-pool"
@@ -3557,7 +3557,7 @@
       "description": "produce multi-language packaging for confluentcloud-iam-serviceaccount",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/confluentcloud-iam-serviceaccount"
@@ -3567,7 +3567,7 @@
       "description": "produce multi-language packaging for databricks-clusters-cluster",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/databricks-clusters-cluster"
@@ -3577,7 +3577,7 @@
       "description": "produce multi-language packaging for databricks-clusters-job",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/databricks-clusters-job"
@@ -3587,7 +3587,7 @@
       "description": "produce multi-language packaging for datadog-dashboards-dashboard",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/datadog-dashboards-dashboard"
@@ -3597,7 +3597,7 @@
       "description": "produce multi-language packaging for datadog-integrations-aws",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/datadog-integrations-aws"
@@ -3607,7 +3607,7 @@
       "description": "produce multi-language packaging for datadog-monitors-downtime",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/datadog-monitors-downtime"
@@ -3617,7 +3617,7 @@
       "description": "produce multi-language packaging for datadog-monitors-monitor",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/datadog-monitors-monitor"
@@ -3627,7 +3627,7 @@
       "description": "produce multi-language packaging for datadog-slos-slo",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/datadog-slos-slo"
@@ -3637,7 +3637,7 @@
       "description": "produce multi-language packaging for dynatrace-configuration-dashboard",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/dynatrace-configuration-dashboard"
@@ -3647,7 +3647,7 @@
       "description": "produce multi-language packaging for dynatrace-environment-servicelevelobjective",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/dynatrace-environment-servicelevelobjective"
@@ -3657,7 +3657,7 @@
       "description": "produce multi-language packaging for dynatrace-environment-syntheticlocation",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/dynatrace-environment-syntheticlocation"
@@ -3667,7 +3667,7 @@
       "description": "produce multi-language packaging for dynatrace-environment-syntheticmonitor",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/dynatrace-environment-syntheticmonitor"
@@ -3677,7 +3677,7 @@
       "description": "produce multi-language packaging for fastly-dictionary-dictionary",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/fastly-dictionary-dictionary"
@@ -3687,7 +3687,7 @@
       "description": "produce multi-language packaging for fastly-dictionary-dictionaryitem",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/fastly-dictionary-dictionaryitem"
@@ -3697,7 +3697,7 @@
       "description": "produce multi-language packaging for fastly-services-backend",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/fastly-services-backend"
@@ -3707,7 +3707,7 @@
       "description": "produce multi-language packaging for fastly-services-domain",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/fastly-services-domain"
@@ -3717,7 +3717,7 @@
       "description": "produce multi-language packaging for fastly-services-healthcheck",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/fastly-services-healthcheck"
@@ -3727,7 +3727,7 @@
       "description": "produce multi-language packaging for fastly-services-service",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/fastly-services-service"
@@ -3737,7 +3737,7 @@
       "description": "produce multi-language packaging for fireeye-cloudintegrations-cloudwatch",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/fireeye-cloudintegrations-cloudwatch"
@@ -3747,7 +3747,7 @@
       "description": "produce multi-language packaging for freyraim-impactapi-apigateway-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/freyraim-impactapi-apigateway-module"
@@ -3757,7 +3757,7 @@
       "description": "produce multi-language packaging for freyraim-impactapi-apihandle-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/freyraim-impactapi-apihandle-module"
@@ -3767,7 +3767,7 @@
       "description": "produce multi-language packaging for freyraim-impactapi-ec2instance-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/freyraim-impactapi-ec2instance-module"
@@ -3777,7 +3777,7 @@
       "description": "produce multi-language packaging for freyraim-impactapi-lambdafunction-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/freyraim-impactapi-lambdafunction-module"
@@ -3787,7 +3787,7 @@
       "description": "produce multi-language packaging for freyraim-impactapi-loadbalancer-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/freyraim-impactapi-loadbalancer-module"
@@ -3797,7 +3797,7 @@
       "description": "produce multi-language packaging for freyraim-spider-cloudfront-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/freyraim-spider-cloudfront-module"
@@ -3807,7 +3807,7 @@
       "description": "produce multi-language packaging for freyraim-spider-ec2instance-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/freyraim-spider-ec2instance-module"
@@ -3817,7 +3817,7 @@
       "description": "produce multi-language packaging for freyraim-spider-ecs-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/freyraim-spider-ecs-module"
@@ -3827,7 +3827,7 @@
       "description": "produce multi-language packaging for freyraim-spider-loadbalancer-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/freyraim-spider-loadbalancer-module"
@@ -3837,7 +3837,7 @@
       "description": "produce multi-language packaging for freyraim-spider-postgresql-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/freyraim-spider-postgresql-module"
@@ -3847,7 +3847,7 @@
       "description": "produce multi-language packaging for freyraim-spider-s3bucket-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/freyraim-spider-s3bucket-module"
@@ -3857,7 +3857,7 @@
       "description": "produce multi-language packaging for generic-database-schema",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/generic-database-schema"
@@ -3867,7 +3867,7 @@
       "description": "produce multi-language packaging for generic-transcribe-vocabulary",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/generic-transcribe-vocabulary"
@@ -3877,7 +3877,7 @@
       "description": "produce multi-language packaging for github-git-tag",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/github-git-tag"
@@ -3887,7 +3887,7 @@
       "description": "produce multi-language packaging for github-organizations-membership",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/github-organizations-membership"
@@ -3897,7 +3897,7 @@
       "description": "produce multi-language packaging for github-repositories-collaborator",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/github-repositories-collaborator"
@@ -3907,7 +3907,7 @@
       "description": "produce multi-language packaging for github-repositories-repository",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/github-repositories-repository"
@@ -3917,7 +3917,7 @@
       "description": "produce multi-language packaging for github-repositories-webhook",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/github-repositories-webhook"
@@ -3927,7 +3927,7 @@
       "description": "produce multi-language packaging for github-teams-membership",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/github-teams-membership"
@@ -3937,7 +3937,7 @@
       "description": "produce multi-language packaging for github-teams-repositoryaccess",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/github-teams-repositoryaccess"
@@ -3947,7 +3947,7 @@
       "description": "produce multi-language packaging for github-teams-team",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/github-teams-team"
@@ -3957,7 +3957,7 @@
       "description": "produce multi-language packaging for gitlab-code-tag",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/gitlab-code-tag"
@@ -3967,7 +3967,7 @@
       "description": "produce multi-language packaging for gitlab-groups-group",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/gitlab-groups-group"
@@ -3977,7 +3977,7 @@
       "description": "produce multi-language packaging for gitlab-groups-groupaccesstogroup",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/gitlab-groups-groupaccesstogroup"
@@ -3987,7 +3987,7 @@
       "description": "produce multi-language packaging for gitlab-groups-usermemberofgroup",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/gitlab-groups-usermemberofgroup"
@@ -3997,7 +3997,7 @@
       "description": "produce multi-language packaging for gitlab-projects-accesstoken",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/gitlab-projects-accesstoken"
@@ -4007,7 +4007,7 @@
       "description": "produce multi-language packaging for gitlab-projects-groupaccesstoproject",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/gitlab-projects-groupaccesstoproject"
@@ -4017,7 +4017,7 @@
       "description": "produce multi-language packaging for gitlab-projects-project",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/gitlab-projects-project"
@@ -4027,7 +4027,7 @@
       "description": "produce multi-language packaging for gitlab-projects-usermemberofproject",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/gitlab-projects-usermemberofproject"
@@ -4037,7 +4037,7 @@
       "description": "produce multi-language packaging for gremlin-agent-helm",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/gremlin-agent-helm"
@@ -4047,7 +4047,7 @@
       "description": "produce multi-language packaging for jfrog-artifactory-core-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/jfrog-artifactory-core-module"
@@ -4057,7 +4057,7 @@
       "description": "produce multi-language packaging for jfrog-artifactory-ec2instance-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/jfrog-artifactory-ec2instance-module"
@@ -4067,7 +4067,7 @@
       "description": "produce multi-language packaging for jfrog-artifactory-existingvpc-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/jfrog-artifactory-existingvpc-module"
@@ -4077,7 +4077,7 @@
       "description": "produce multi-language packaging for jfrog-artifactory-newvpc-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/jfrog-artifactory-newvpc-module"
@@ -4087,7 +4087,7 @@
       "description": "produce multi-language packaging for jfrog-linux-bastion-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/jfrog-linux-bastion-module"
@@ -4097,7 +4097,7 @@
       "description": "produce multi-language packaging for jfrog-vpc-multiaz-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/jfrog-vpc-multiaz-module"
@@ -4107,7 +4107,7 @@
       "description": "produce multi-language packaging for jfrog-xray-ec2instance-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/jfrog-xray-ec2instance-module"
@@ -4117,7 +4117,7 @@
       "description": "produce multi-language packaging for karte-eventbridge-documentdb-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/karte-eventbridge-documentdb-module"
@@ -4127,7 +4127,7 @@
       "description": "produce multi-language packaging for logzio-autodeploymentlogzio-cloudwatch-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/logzio-autodeploymentlogzio-cloudwatch-module"
@@ -4137,7 +4137,7 @@
       "description": "produce multi-language packaging for logzio-awscostandusage-cur-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/logzio-awscostandusage-cur-module"
@@ -4147,7 +4147,7 @@
       "description": "produce multi-language packaging for logzio-awssecurityhub-collector-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/logzio-awssecurityhub-collector-module"
@@ -4157,7 +4157,7 @@
       "description": "produce multi-language packaging for logzio-kinesisshipper-kinesisshipper-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/logzio-kinesisshipper-kinesisshipper-module"
@@ -4167,7 +4167,7 @@
       "description": "produce multi-language packaging for logzio-myservice-myname-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/logzio-myservice-myname-module"
@@ -4177,7 +4177,7 @@
       "description": "produce multi-language packaging for mongodb-atlas-cluster",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/mongodb-atlas-cluster"
@@ -4187,7 +4187,7 @@
       "description": "produce multi-language packaging for mongodb-atlas-databaseuser",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/mongodb-atlas-databaseuser"
@@ -4197,7 +4197,7 @@
       "description": "produce multi-language packaging for mongodb-atlas-networkpeering",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/mongodb-atlas-networkpeering"
@@ -4207,7 +4207,7 @@
       "description": "produce multi-language packaging for mongodb-atlas-project",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/mongodb-atlas-project"
@@ -4217,7 +4217,7 @@
       "description": "produce multi-language packaging for mongodb-atlas-projectipaccesslist",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/mongodb-atlas-projectipaccesslist"
@@ -4227,7 +4227,7 @@
       "description": "produce multi-language packaging for newrelic-cloudformation-dashboards",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/newrelic-cloudformation-dashboards"
@@ -4237,7 +4237,7 @@
       "description": "produce multi-language packaging for newrelic-cloudformation-tagging",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/newrelic-cloudformation-tagging"
@@ -4247,7 +4247,7 @@
       "description": "produce multi-language packaging for newrelic-cloudformation-workloads",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/newrelic-cloudformation-workloads"
@@ -4257,7 +4257,7 @@
       "description": "produce multi-language packaging for newrelic-observability-dashboards",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/newrelic-observability-dashboards"
@@ -4267,7 +4267,7 @@
       "description": "produce multi-language packaging for newrelic-observability-workloads",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/newrelic-observability-workloads"
@@ -4277,7 +4277,7 @@
       "description": "produce multi-language packaging for okta-application-application",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/okta-application-application"
@@ -4287,7 +4287,7 @@
       "description": "produce multi-language packaging for okta-group-group",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/okta-group-group"
@@ -4297,7 +4297,7 @@
       "description": "produce multi-language packaging for okta-group-groupapplicationassociation",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/okta-group-groupapplicationassociation"
@@ -4307,7 +4307,7 @@
       "description": "produce multi-language packaging for okta-group-membership",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/okta-group-membership"
@@ -4317,7 +4317,7 @@
       "description": "produce multi-language packaging for okta-policy-policy",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/okta-policy-policy"
@@ -4327,7 +4327,7 @@
       "description": "produce multi-language packaging for org-test-sample-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/org-test-sample-module"
@@ -4337,7 +4337,7 @@
       "description": "produce multi-language packaging for pagerduty-escalationpolicies-escalationpolicy",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/pagerduty-escalationpolicies-escalationpolicy"
@@ -4347,7 +4347,7 @@
       "description": "produce multi-language packaging for pagerduty-responseplays-responseplay",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/pagerduty-responseplays-responseplay"
@@ -4357,7 +4357,7 @@
       "description": "produce multi-language packaging for pagerduty-schedules-schedule",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/pagerduty-schedules-schedule"
@@ -4367,7 +4367,7 @@
       "description": "produce multi-language packaging for pagerduty-teams-membership",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/pagerduty-teams-membership"
@@ -4377,7 +4377,7 @@
       "description": "produce multi-language packaging for pagerduty-teams-team",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/pagerduty-teams-team"
@@ -4387,7 +4387,7 @@
       "description": "produce multi-language packaging for pagerduty-users-user",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/pagerduty-users-user"
@@ -4397,7 +4397,7 @@
       "description": "produce multi-language packaging for paloaltonetworks-cloudngfw-ngfw",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/paloaltonetworks-cloudngfw-ngfw"
@@ -4407,7 +4407,7 @@
       "description": "produce multi-language packaging for paloaltonetworks-cloudngfw-rulestack",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/paloaltonetworks-cloudngfw-rulestack"
@@ -4417,7 +4417,7 @@
       "description": "produce multi-language packaging for registry-test-resource1-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/registry-test-resource1-module"
@@ -4427,7 +4427,7 @@
       "description": "produce multi-language packaging for rollbar-notifications-rule",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/rollbar-notifications-rule"
@@ -4437,7 +4437,7 @@
       "description": "produce multi-language packaging for rollbar-projects-accesstoken",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/rollbar-projects-accesstoken"
@@ -4447,7 +4447,7 @@
       "description": "produce multi-language packaging for rollbar-projects-project",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/rollbar-projects-project"
@@ -4457,7 +4457,7 @@
       "description": "produce multi-language packaging for rollbar-teams-membership",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/rollbar-teams-membership"
@@ -4467,7 +4467,7 @@
       "description": "produce multi-language packaging for rollbar-teams-team",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/rollbar-teams-team"
@@ -4477,7 +4477,7 @@
       "description": "produce multi-language packaging for snowflake-database-database",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/snowflake-database-database"
@@ -4487,7 +4487,7 @@
       "description": "produce multi-language packaging for snowflake-database-grant",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/snowflake-database-grant"
@@ -4497,7 +4497,7 @@
       "description": "produce multi-language packaging for snowflake-role-grant",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/snowflake-role-grant"
@@ -4507,7 +4507,7 @@
       "description": "produce multi-language packaging for snowflake-role-role",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/snowflake-role-role"
@@ -4517,7 +4517,7 @@
       "description": "produce multi-language packaging for snowflake-user-user",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/snowflake-user-user"
@@ -4527,7 +4527,7 @@
       "description": "produce multi-language packaging for snowflake-warehouse-grant",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/snowflake-warehouse-grant"
@@ -4537,7 +4537,7 @@
       "description": "produce multi-language packaging for snyk-container-helm",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/snyk-container-helm"
@@ -4547,7 +4547,7 @@
       "description": "produce multi-language packaging for splunk-enterprise-quickstart-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/splunk-enterprise-quickstart-module"
@@ -4557,7 +4557,7 @@
       "description": "produce multi-language packaging for spot-elastigroup-group",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/spot-elastigroup-group"
@@ -4567,7 +4567,7 @@
       "description": "produce multi-language packaging for stackery-open-bastion-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/stackery-open-bastion-module"
@@ -4577,7 +4577,7 @@
       "description": "produce multi-language packaging for stocks-orders-marketorder",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/stocks-orders-marketorder"
@@ -4587,7 +4587,7 @@
       "description": "produce multi-language packaging for symphonia-opensource-cloudformationartifactsbucket-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/symphonia-opensource-cloudformationartifactsbucket-module"
@@ -4597,7 +4597,7 @@
       "description": "produce multi-language packaging for sysdig-helm-agent",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/sysdig-helm-agent"
@@ -4607,7 +4607,7 @@
       "description": "produce multi-language packaging for tf-ad-computer",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/tf-ad-computer"
@@ -4617,7 +4617,7 @@
       "description": "produce multi-language packaging for tf-ad-user",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/tf-ad-user"
@@ -4627,7 +4627,7 @@
       "description": "produce multi-language packaging for tf-aws-keypair",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/tf-aws-keypair"
@@ -4637,7 +4637,7 @@
       "description": "produce multi-language packaging for tf-aws-s3bucket",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/tf-aws-s3bucket"
@@ -4647,7 +4647,7 @@
       "description": "produce multi-language packaging for tf-aws-s3bucketobject",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/tf-aws-s3bucketobject"
@@ -4657,7 +4657,7 @@
       "description": "produce multi-language packaging for tf-azuread-application",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/tf-azuread-application"
@@ -4667,7 +4667,7 @@
       "description": "produce multi-language packaging for tf-azuread-user",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/tf-azuread-user"
@@ -4677,7 +4677,7 @@
       "description": "produce multi-language packaging for tf-cloudflare-record",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/tf-cloudflare-record"
@@ -4687,7 +4687,7 @@
       "description": "produce multi-language packaging for tf-digitalocean-droplet",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/tf-digitalocean-droplet"
@@ -4697,7 +4697,7 @@
       "description": "produce multi-language packaging for tf-github-repository",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/tf-github-repository"
@@ -4707,7 +4707,7 @@
       "description": "produce multi-language packaging for tf-google-storagebucket",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/tf-google-storagebucket"
@@ -4717,7 +4717,7 @@
       "description": "produce multi-language packaging for tf-pagerduty-service",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/tf-pagerduty-service"
@@ -4727,7 +4727,7 @@
       "description": "produce multi-language packaging for tf-random-string",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/tf-random-string"
@@ -4737,7 +4737,7 @@
       "description": "produce multi-language packaging for tf-random-uuid",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/tf-random-uuid"
@@ -4747,7 +4747,7 @@
       "description": "produce multi-language packaging for trendmicro-cloudonecontainer-helm",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/trendmicro-cloudonecontainer-helm"
@@ -4757,7 +4757,7 @@
       "description": "produce multi-language packaging for zmk-iam-lambdabasicrole-module",
       "steps": [
         {
-          "exec": "jsii-pacmak"
+          "exec": "jsii-pacmak --no-npmignore"
         }
       ],
       "cwd": "packages/@cdk-cloudformation/zmk-iam-lambdabasicrole-module"

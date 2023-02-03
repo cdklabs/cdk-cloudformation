@@ -182,6 +182,7 @@ export class CloudFormationTypeProject extends Component {
     project.addGitIgnore('tsconfig.tsbuildinfo');
 
     const npmignore = new IgnoreFile(project, '.npmignore');
+    npmignore.readonly = false;
     npmignore.addPatterns('.projen');
     npmignore.addPatterns('/dist/');
     npmignore.addPatterns('/src/');

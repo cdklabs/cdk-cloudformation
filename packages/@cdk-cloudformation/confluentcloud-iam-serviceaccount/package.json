@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/confluentcloud-iam-serviceaccount",
   "description": "Service Account as defined in Confluent Cloud IAM v2 API.",
-  "version": "1.0.0-alpha.5",
+  "version": "1.0.0-alpha.6",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

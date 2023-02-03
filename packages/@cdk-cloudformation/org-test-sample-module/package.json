@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/org-test-sample-module",
   "description": "Schema for Module Fragment of type ORG::TEST::SAMPLE::MODULE",
-  "version": "1.0.0-alpha.5",
+  "version": "1.0.0-alpha.6",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

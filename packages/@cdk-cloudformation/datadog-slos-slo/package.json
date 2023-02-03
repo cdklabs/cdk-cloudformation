@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/datadog-slos-slo",
   "description": "Datadog SLO 1.0.1",
-  "version": "1.0.1-alpha.5",
+  "version": "1.0.1-alpha.6",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/spot-elastigroup-group",
   "description": "The Spot Elastigroup Resource allows you to create, update, manage, and delete Spot Elastigroups easily with CloudFormation",
-  "version": "1.0.3-alpha.5",
+  "version": "1.0.3-alpha.6",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

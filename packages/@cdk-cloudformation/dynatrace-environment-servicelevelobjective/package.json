@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/dynatrace-environment-servicelevelobjective",
   "description": "Manage a Service Level Objective in Dynatrace.",
-  "version": "1.1.0-alpha.5",
+  "version": "1.1.0-alpha.6",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

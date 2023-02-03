@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/datadog-monitors-downtime",
   "description": "Datadog Monitors Downtime 3.0.0",
-  "version": "3.0.0-alpha.5",
+  "version": "3.0.0-alpha.6",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

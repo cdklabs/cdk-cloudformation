@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/jfrog-vpc-multiaz-module",
   "description": "Schema for Module Fragment of type JFrog::Vpc::MultiAz::MODULE",
-  "version": "1.6.0-alpha.5",
+  "version": "1.6.0-alpha.6",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

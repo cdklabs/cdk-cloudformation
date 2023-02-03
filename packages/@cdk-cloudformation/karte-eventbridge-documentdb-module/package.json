@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/karte-eventbridge-documentdb-module",
   "description": "Schema for Module Fragment of type KARTE::EventBridge::DocumentDB::MODULE",
-  "version": "1.0.2-alpha.5",
+  "version": "1.0.2-alpha.6",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

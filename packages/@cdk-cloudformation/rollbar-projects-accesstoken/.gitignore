@@ -9,6 +9,7 @@ node_modules/
 !/package.json
 /.jsii
 /lib/
-/.npmignore
 /tsconfig.json
 /dist/
+tsconfig.tsbuildinfo
+!/.npmignore

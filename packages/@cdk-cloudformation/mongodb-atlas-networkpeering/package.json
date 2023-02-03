@@ -1,7 +1,8 @@
 {
   "name": "@cdk-cloudformation/mongodb-atlas-networkpeering",
   "description": "This resource allows to create, read, update and delete a network peering",
-  "version": "1.2.0-alpha.6",
+  "version": "1.2.0-alpha.7",
+  "deprecated": true,
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

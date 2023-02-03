@@ -5,6 +5,13 @@
 [L1 construct]: https://docs.aws.amazon.com/cdk/latest/guide/constructs.html
 [AWS CloudFormation Registry]: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html
 
+---
+
+![Deprecated](https://img.shields.io/badge/deprecated-critical.svg?style=for-the-badge)
+
+> This package is deprecated. Please use the respective `@mongodbatlas-awscdk/*` scoped package instead
+
+---
 ## Description
 
 The cluster resource provides access to your cluster configurations. The resource lets you create, edit and delete clusters. The resource requires your Project ID.

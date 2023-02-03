@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/freyraim-impactapi-lambdafunction-module",
   "description": "Schema for Module Fragment of type FreyrAIM::ImpactApi::LambdaFunction::MODULE",
-  "version": "1.2.0-alpha.6",
+  "version": "1.2.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

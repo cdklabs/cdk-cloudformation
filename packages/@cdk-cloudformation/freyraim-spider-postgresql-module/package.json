@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/freyraim-spider-postgresql-module",
   "description": "Schema for Module Fragment of type FreyrAIM::Spider::PostgreSQL::MODULE",
-  "version": "1.4.0-alpha.6",
+  "version": "1.4.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

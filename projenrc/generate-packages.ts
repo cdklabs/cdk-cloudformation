@@ -5,7 +5,7 @@ import { typescript } from 'projen';
 import { CloudFormationTypeProject } from './type-package';
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
-const deprecatedTypes = require('../deprecated-types.json').deprecatedTypes;
+const deprecations = require('../deprecated-types.json');
 
 // this directory includes the type description for all registry types
 // it is updated by calling `yarn update-registry`
@@ -40,7 +40,18 @@ export function generatePackages(root: typescript.TypeScriptProject, options: Ge
   const excludes = options.excludeTypes ?? [];
   const shouldExclude = (type: CloudFormation.DescribeTypeOutput) => type.TypeName && excludes.includes(type.TypeName);
 
-  const shouldDeprecate = (type: CloudFormation.DescribeTypeOutput) => type.TypeName && type.TypeName in deprecatedTypes;
+  const shouldDeprecate = (type: CloudFormation.DescribeTypeOutput): string | undefined => {
+    if (type.TypeName && type.TypeName in deprecations.deprecatedTypes) {
+      return deprecations.deprecatedTypes[type.TypeName];
+    }
+
+    const matchedPrefix = Object.keys(deprecations.deprecatedPrefixes).find(p => type.TypeName?.startsWith(p));
+    if (matchedPrefix) {
+      return deprecations.deprecatedPrefixes[matchedPrefix];
+    }
+
+    return undefined;
+  };
 
   const projects = new Array<CloudFormationTypeProject>();
 
@@ -55,7 +66,7 @@ export function generatePackages(root: typescript.TypeScriptProject, options: Ge
       type: type,
       prerelease: options.prerelease,
       buildWorkflow: buildIndividalWorkflow,
-      readmeDeprecatedMessage: shouldDeprecate(type) ? deprecatedTypes[type.TypeName!] : undefined,
+      readmeDeprecatedMessage: shouldDeprecate(type),
     });
 
     projects.push(p);

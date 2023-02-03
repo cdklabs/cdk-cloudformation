@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/bigid-datasource-dynamodb",
   "description": "Manage a BigID DynamoDB data source.",
-  "version": "1.0.0-alpha.6",
+  "version": "1.0.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

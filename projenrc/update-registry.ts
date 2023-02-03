@@ -73,6 +73,16 @@ export class UpdateRegistry extends Component {
               'labels': 'auto-approve',
             },
           },
+
+          // Auto-approve PR
+          {
+            uses: 'peter-evans/enable-pull-request-automerge@v2',
+            with: {
+              'token': '${{ secrets.PROJEN_GITHUB_TOKEN }}',
+              'pull-request-number': '${{ steps.create-pr.outputs.pull-request-number }}',
+              'merge-method': 'squash',
+            },
+          },
         ],
       },
     });

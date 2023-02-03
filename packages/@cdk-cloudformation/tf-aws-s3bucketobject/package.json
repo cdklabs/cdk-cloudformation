@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/tf-aws-s3bucketobject",
   "description": "Provides a S3 bucket object resource.",
-  "version": "1.0.0-alpha.5",
+  "version": "1.0.0-alpha.6",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

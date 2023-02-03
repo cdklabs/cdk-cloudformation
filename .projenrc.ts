@@ -51,7 +51,7 @@ const projects = generatePackages(project, {
   ],
   dir: packagesDir,
   scope: scope,
-  prerelease: 'alpha.5',
+  prerelease: 'alpha.6',
 });
 
 updateReadme(project, projects);

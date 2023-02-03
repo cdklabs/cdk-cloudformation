@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/newrelic-cloudformation-dashboards",
   "description": "CRUDL operations for New Relic Dashboards via the NerdGraph API",
-  "version": "1.0.0-alpha.5",
+  "version": "1.0.0-alpha.6",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/dynatrace-environment-syntheticmonitor",
   "description": "Manage a synthetic monitor (V1) in Dynatrace.",
-  "version": "1.0.0-alpha.5",
+  "version": "1.0.0-alpha.6",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

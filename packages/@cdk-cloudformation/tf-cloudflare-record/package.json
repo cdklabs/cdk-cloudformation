@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/tf-cloudflare-record",
   "description": "Provides a Cloudflare record resource.",
-  "version": "1.0.0-alpha.5",
+  "version": "1.0.0-alpha.6",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

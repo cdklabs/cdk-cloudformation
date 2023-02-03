@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/awscommunity-s3-deletebucketcontents",
   "description": "An experimental extension that deletes all contents of the referenced bucket when the stack is deleted. Use with caution!",
-  "version": "1.8.0-alpha.5",
+  "version": "1.8.0-alpha.6",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

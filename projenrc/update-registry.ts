@@ -76,6 +76,7 @@ export class UpdateRegistry extends Component {
 
           // Auto-approve PR
           {
+            if: 'steps.create-pr.outputs.pull-request-number != 0',
             uses: 'peter-evans/enable-pull-request-automerge@v2',
             with: {
               'token': '${{ secrets.PROJEN_GITHUB_TOKEN }}',

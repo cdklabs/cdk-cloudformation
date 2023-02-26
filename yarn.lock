@@ -11,9 +11,9 @@
     "@jridgewell/trace-mapping" "^0.3.9"
 
 "@aws-cdk/asset-awscli-v1@^2.2.69":
-  version "2.2.81"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.81.tgz#4589848507dd67fcf5756a4f966b086cb6008c5f"
-  integrity sha512-5dyk8sY45DJm8QKm9n+q1iDBhkXWE87aBg/GY9mC8sarN8UpnNiQFN54BCbX0uykjGG8rJnNxq+5pAS2+tgjWg==
+  version "2.2.82"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.82.tgz#8ef82fc9fa45a131c525d2a124d305bc5a841861"
+  integrity sha512-ArDgC0LaZuSf1pHCPgyvfsy/i0X2giKjooyj6VMWJCTPtl1cnjaaKqdPeji2HQHUTLFhX/IoPh/zui6bRym80g==
 
 "@aws-cdk/asset-kubectl-v20@^2.1.1":
   version "2.1.1"
@@ -21,9 +21,9 @@
   integrity sha512-U1ntiX8XiMRRRH5J1IdC+1t5CE89015cwyt5U63Cpk0GnMlN5+h9WsWMlKlPXZR4rdq/m806JRlBMRpBUB2Dhw==
 
 "@aws-cdk/asset-node-proxy-agent-v5@^2.0.58":
-  version "2.0.67"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-node-proxy-agent-v5/-/asset-node-proxy-agent-v5-2.0.67.tgz#e48f3a7af3e08e1aa5f18139aaf5f6d6b76366e8"
-  integrity sha512-7XpvxIps4/XzZdaYnXIJEvwVX4LyWFmaZtOv03c2C2fm6YGrvWoTRSx+zifN0KJimsSUVoqWwHs8f1miee1Juw==
+  version "2.0.68"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-node-proxy-agent-v5/-/asset-node-proxy-agent-v5-2.0.68.tgz#69cd847063ff0adb197a79b94b681f90a306e10b"
+  integrity sha512-yYR0ekc3kqRiuhvfiPpYuhRCAAoydzrfZah+ZbHbfZi9H1+fFOzWYeGnbasAjq2gKpLLGO8v93lkYKU0M0xEZQ==
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.18.6":
   version "7.18.6"
@@ -1288,7 +1288,7 @@ aws-cdk-github-oidc@^2.2.0:
   resolved "https://registry.yarnpkg.com/aws-cdk-github-oidc/-/aws-cdk-github-oidc-2.3.2.tgz#589a5874305ab831546b5e9ca4f66e09ef1ac386"
   integrity sha512-mJKVKr4n5lF5fV8jyV/ozPo8fXnMYnp60QIu/PSepP5LfxR2ba7RV90yTV1L7X9LqovW9vG55ac/T0RgUXtWPA==
 
-aws-cdk-lib@2.66.1, aws-cdk-lib@^2.66.0, aws-cdk-lib@^2.66.1:
+aws-cdk-lib@2.66.1, aws-cdk-lib@^2.66.1:
   version "2.66.1"
   resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.66.1.tgz#f560a8a86f755ce1507f15398e55d6c0218f9c1a"
   integrity sha512-xMnKXOnsoJLoDyl6L3BUYLPa9bqw8UoBlFGGH4gbzpBPViv9b49xvYuW+BLf7bK7IVgTzYQ+VmZKaFsj+VFouA==
@@ -1306,7 +1306,7 @@ aws-cdk-lib@2.66.1, aws-cdk-lib@^2.66.0, aws-cdk-lib@^2.66.1:
     semver "^7.3.8"
     yaml "1.10.2"
 
-aws-sdk@^2.1322.0, aws-sdk@^2.1323.0:
+aws-sdk@^2.1323.0:
   version "2.1323.0"
   resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1323.0.tgz#ee27583ae502ce37fa644657f3d90a02ce468f2c"
   integrity sha512-GoLwk2SuG9A6eWgc1mGmm548dklheDmkeptHRw2RhCvq2GZqlc4AzStFUjUURy4O4NQmd2ZiQIoeseue4RwurA==
@@ -1583,9 +1583,9 @@ camelcase@^7.0.0:
   integrity sha512-xlx1yCK2Oc1APsPXDL2LdlNP6+uu8OCDdhOBSVT279M/S+y75O30C2VuD8T2ogdePBBl7PfPF4504tnLgX3zfw==
 
 caniuse-lite@^1.0.30001449:
-  version "1.0.30001457"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001457.tgz#6af34bb5d720074e2099432aa522c21555a18301"
-  integrity sha512-SDIV6bgE1aVbK6XyxdURbUE89zY7+k1BBBaOwYwkNCglXlel/E7mELiHC64HQ+W0xSKlqWhV9Wh7iHxUjMs4fA==
+  version "1.0.30001458"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001458.tgz#871e35866b4654a7d25eccca86864f411825540c"
+  integrity sha512-lQ1VlUUq5q9ro9X+5gOEyH7i3vm+AYVT1WDCVB69XOZ17KZRhnZ9J0Sqz7wTHQaLBJccNCHq8/Ww5LlOIZbB0w==
 
 case@1.6.3, case@^1.6.3:
   version "1.6.3"
@@ -1593,16 +1593,16 @@ case@1.6.3, case@^1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-import@^0.2.112:
-  version "0.2.444"
-  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.444.tgz#f287fdbf974b7b433258bbd635b9893b0abd8bff"
-  integrity sha512-0PGvxflqofXN2UFSslUaX8YCfFSagA+KffvcMGAnh7q8a/2RKgg9zvp170oEb/zQmml8fU4ZgVDu5vPbfeRGHg==
+  version "0.2.445"
+  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.445.tgz#8175717f00b8ac34b32b1629700ddca7b11bcbf2"
+  integrity sha512-zjrRWyZywGKN69qvu2vA8+slmvKT1LiF7rcgB3sIvDxftBV32Mpo3qV4ouo4Z6SKZ2p9S2USxRAgM0py+UebHg==
   dependencies:
-    aws-cdk-lib "^2.66.0"
-    aws-sdk "^2.1322.0"
+    aws-cdk-lib "^2.66.1"
+    aws-sdk "^2.1323.0"
     case "^1.6.3"
     constructs "^10"
-    jsii-srcmak "^0.1.834"
-    json2jsii "^0.3.285"
+    jsii-srcmak "^0.1.835"
+    json2jsii "^0.3.286"
     minimist "^1.2.8"
     minimist-subcommand "^3.0.2"
     proxy-agent "^5.0.0"
@@ -1822,10 +1822,10 @@ console-control-strings@^1.1.0:
   resolved "https://registry.yarnpkg.com/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
   integrity sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==
 
-constructs@10.1.260, constructs@^10, constructs@^10.0.5:
-  version "10.1.260"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.260.tgz#aed8cb20310bd05d738aa12c2b03545bc5b0904b"
-  integrity sha512-eO4BX6XkyHiPf8zQ2/seM2T9+0x2P4MlvsEPs+R2YX/hXfoAGSSRZVTW+qzlTJey31MhWyVbJ8Yx6Sja/5wNVA==
+constructs@10.1.261, constructs@^10, constructs@^10.0.5:
+  version "10.1.261"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.261.tgz#ede7c4db8b2861ef396814875cf4ef933bbcca89"
+  integrity sha512-Y8gN6F+fgkGR0HQqgsMkknL3LShBgjeG6VAsGJfQ33zT5qZyA6Uf3tLKLuFdDiyHKzp5zu+E7qR68urfophthQ==
 
 conventional-changelog-angular@^5.0.12:
   version "5.0.13"
@@ -4198,10 +4198,10 @@ jsii-rosetta@^1.76.0:
     workerpool "^6.3.1"
     yargs "^16.2.0"
 
-jsii-srcmak@^0.1.834:
-  version "0.1.835"
-  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.835.tgz#1167ca601880852435725277ca63179f58b824ba"
-  integrity sha512-xNDXuHZ2Oic7avP/XP/qau0eJS+BMpXqcTcYQ00BQTGawcoIqS8WMs+bucFAhtxB1S6F6pzMUJlwAuTp7EgtIw==
+jsii-srcmak@^0.1.835:
+  version "0.1.836"
+  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.836.tgz#506232c337a1ab243028ef81f6f3b959fafc27cd"
+  integrity sha512-oc/NUdn3TUE4gpIhTfXq3KM2wKEFTP4Qs2lSy0yk2eadWEz1vQSdT3kGudGhKU1XQzUjCbuX8QQ2OiVuYtu7pA==
   dependencies:
     fs-extra "^9.1.0"
     jsii "^1.76.0"
@@ -4280,10 +4280,10 @@ json-stringify-safe@^5.0.1:
   resolved "https://registry.yarnpkg.com/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
   integrity sha512-ZClg6AaYvamvYEE82d3Iyd3vSSIjQ+odgjaTzRuO3s7toCdFKczob2i0zCh7JE8kWn17yvAWhUVxvqGwUalsRA==
 
-json2jsii@^0.3.285:
-  version "0.3.286"
-  resolved "https://registry.yarnpkg.com/json2jsii/-/json2jsii-0.3.286.tgz#e011f52deb7e31e77e0d312a77f39f71ccdfd765"
-  integrity sha512-ch9rEHnxnJP2nOyzB25gutweOp3N0j/U2FwxM+hapB5s85NrpqCXq6CeJ3eitG++fqBMTV8GHbsNcSe7kQelpg==
+json2jsii@^0.3.286:
+  version "0.3.287"
+  resolved "https://registry.yarnpkg.com/json2jsii/-/json2jsii-0.3.287.tgz#fad5759d198f4f96faa5029b1824faf7aa4332de"
+  integrity sha512-k7s9K/oymdZ2yICHf55FDDJ2yhxuTd+ej5RctH6hbN55Nz1ypXMqsRZd227xBosu5N8KSRdQGx9nMypt7f2LuA==
   dependencies:
     camelcase "^6.3.0"
     json-schema "^0.4.0"
@@ -4294,7 +4294,7 @@ json5@2.x, json5@^2.2.2:
   resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.3.tgz#78cd6f1a19bdc12b73db5ad0c61efd66c1e29283"
   integrity sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==
 
-json5@^1.0.1:
+json5@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/json5/-/json5-1.0.2.tgz#63d98d60f21b313b77c4d6da18bfa69d80e1d593"
   integrity sha512-g1MWMLBiz8FKi1e4w0UyVL3w+iJceWAFBAaBnnGKOpNa5f8TLktkbre1+s6oICydWAm+HRUGTmI+//xv2hvXYA==
@@ -6366,12 +6366,12 @@ ts-node@^10:
     yn "3.1.1"
 
 tsconfig-paths@^3.14.1:
-  version "3.14.1"
-  resolved "https://registry.yarnpkg.com/tsconfig-paths/-/tsconfig-paths-3.14.1.tgz#ba0734599e8ea36c862798e920bcf163277b137a"
-  integrity sha512-fxDhWnFSLt3VuTwtvJt5fpwxBHg5AdKWMsgcPOOIilyjymcYVZoCQF8fvFRezCNfblEXmi+PcM1eYHeOAgXCOQ==
+  version "3.14.2"
+  resolved "https://registry.yarnpkg.com/tsconfig-paths/-/tsconfig-paths-3.14.2.tgz#6e32f1f79412decd261f92d633a9dc1cfa99f088"
+  integrity sha512-o/9iXgCYc5L/JxCHPe3Hvh8Q/2xm5Z+p18PESBU6Ff33695QnCHBEjcytY2q19ua7Mbl/DavtBOLq+oG0RCL+g==
   dependencies:
     "@types/json5" "^0.0.29"
-    json5 "^1.0.1"
+    json5 "^1.0.2"
     minimist "^1.2.6"
     strip-bom "^3.0.0"
 

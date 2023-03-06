@@ -477,7 +477,7 @@
     "jsii": "^1.76.0",
     "jsii-pacmak": "^1.76.0",
     "npm-check-updates": "^16",
-    "projen": "^0.67.72",
+    "projen": "^0.67.73",
     "standard-version": "^9",
     "ts-jest": "^27.1.5",
     "ts-node": "^10",

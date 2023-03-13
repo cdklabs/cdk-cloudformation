@@ -9,11 +9,6 @@ import * as constructs from 'constructs';
  */
 export interface CfnRuleProps {
   /**
-   * @schema CfnRuleProps#ProjectAccessToken
-   */
-  readonly projectAccessToken: string;
-
-  /**
    * @schema CfnRuleProps#Slack
    */
   readonly slack?: SlackRule;
@@ -42,7 +37,6 @@ export interface CfnRuleProps {
 export function toJson_CfnRuleProps(obj: CfnRuleProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'ProjectAccessToken': obj.projectAccessToken,
     'Slack': toJson_SlackRule(obj.slack),
     'PagerDuty': toJson_PagerDutyRule(obj.pagerDuty),
     'Email': toJson_EmailRule(obj.email),

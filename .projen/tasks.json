@@ -1116,6 +1116,42 @@
         }
       ]
     },
+    "build:newrelic-agent-configuration": {
+      "name": "build:newrelic-agent-configuration",
+      "description": "build newrelic-agent-configuration",
+      "steps": [
+        {
+          "spawn": "compile:newrelic-agent-configuration"
+        },
+        {
+          "spawn": "package:newrelic-agent-configuration"
+        }
+      ]
+    },
+    "build:newrelic-alert-alertspolicy": {
+      "name": "build:newrelic-alert-alertspolicy",
+      "description": "build newrelic-alert-alertspolicy",
+      "steps": [
+        {
+          "spawn": "compile:newrelic-alert-alertspolicy"
+        },
+        {
+          "spawn": "package:newrelic-alert-alertspolicy"
+        }
+      ]
+    },
+    "build:newrelic-alert-nrqlconditionstatic": {
+      "name": "build:newrelic-alert-nrqlconditionstatic",
+      "description": "build newrelic-alert-nrqlconditionstatic",
+      "steps": [
+        {
+          "spawn": "compile:newrelic-alert-nrqlconditionstatic"
+        },
+        {
+          "spawn": "package:newrelic-alert-nrqlconditionstatic"
+        }
+      ]
+    },
     "build:newrelic-cloudformation-dashboards": {
       "name": "build:newrelic-cloudformation-dashboards",
       "description": "build newrelic-cloudformation-dashboards",
@@ -2738,6 +2774,36 @@
       ],
       "cwd": "packages/@cdk-cloudformation/mongodb-atlas-projectipaccesslist"
     },
+    "compile:newrelic-agent-configuration": {
+      "name": "compile:newrelic-agent-configuration",
+      "description": "compile newrelic-agent-configuration with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/newrelic-agent-configuration"
+    },
+    "compile:newrelic-alert-alertspolicy": {
+      "name": "compile:newrelic-alert-alertspolicy",
+      "description": "compile newrelic-alert-alertspolicy with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/newrelic-alert-alertspolicy"
+    },
+    "compile:newrelic-alert-nrqlconditionstatic": {
+      "name": "compile:newrelic-alert-nrqlconditionstatic",
+      "description": "compile newrelic-alert-nrqlconditionstatic with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/newrelic-alert-nrqlconditionstatic"
+    },
     "compile:newrelic-cloudformation-dashboards": {
       "name": "compile:newrelic-cloudformation-dashboards",
       "description": "compile newrelic-cloudformation-dashboards with JSII",
@@ -4221,6 +4287,36 @@
         }
       ],
       "cwd": "packages/@cdk-cloudformation/mongodb-atlas-projectipaccesslist"
+    },
+    "package:newrelic-agent-configuration": {
+      "name": "package:newrelic-agent-configuration",
+      "description": "produce multi-language packaging for newrelic-agent-configuration",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/newrelic-agent-configuration"
+    },
+    "package:newrelic-alert-alertspolicy": {
+      "name": "package:newrelic-alert-alertspolicy",
+      "description": "produce multi-language packaging for newrelic-alert-alertspolicy",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/newrelic-alert-alertspolicy"
+    },
+    "package:newrelic-alert-nrqlconditionstatic": {
+      "name": "package:newrelic-alert-nrqlconditionstatic",
+      "description": "produce multi-language packaging for newrelic-alert-nrqlconditionstatic",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/newrelic-alert-nrqlconditionstatic"
     },
     "package:newrelic-cloudformation-dashboards": {
       "name": "package:newrelic-cloudformation-dashboards",

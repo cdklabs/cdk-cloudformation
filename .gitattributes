@@ -99,6 +99,9 @@
 /.github/workflows/release-mongodb-atlas-networkpeering.yml linguist-generated
 /.github/workflows/release-mongodb-atlas-project.yml linguist-generated
 /.github/workflows/release-mongodb-atlas-projectipaccesslist.yml linguist-generated
+/.github/workflows/release-newrelic-agent-configuration.yml linguist-generated
+/.github/workflows/release-newrelic-alert-alertspolicy.yml linguist-generated
+/.github/workflows/release-newrelic-alert-nrqlconditionstatic.yml linguist-generated
 /.github/workflows/release-newrelic-cloudformation-dashboards.yml linguist-generated
 /.github/workflows/release-newrelic-cloudformation-tagging.yml linguist-generated
 /.github/workflows/release-newrelic-cloudformation-workloads.yml linguist-generated

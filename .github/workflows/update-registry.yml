@@ -20,7 +20,8 @@ jobs:
           role-session-name: github-automation
       - run: yarn install
       - run: npx projen update-registry
-      - uses: peter-evans/create-pull-request@v4
+      - id: create-pr
+        uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.PROJEN_GITHUB_TOKEN }}
           title: "feat: cloudformation registry update"

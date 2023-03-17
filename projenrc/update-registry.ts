@@ -64,6 +64,7 @@ export class UpdateRegistry extends Component {
           // create a pull request
           {
             uses: 'peter-evans/create-pull-request@v4',
+            id: 'create-pr',
             with: {
               'token': '${{ secrets.PROJEN_GITHUB_TOKEN }}',
               'title': 'feat: cloudformation registry update',

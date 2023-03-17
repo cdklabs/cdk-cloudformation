@@ -27,17 +27,10 @@
     },
     "default": {
       "name": "default",
-      "description": "Synthesize project files"
-    },
-    "eject": {
-      "name": "eject",
-      "description": "Remove projen from the project",
-      "env": {
-        "PROJEN_EJECTING": "true"
-      },
+      "description": "Synthesize project files",
       "steps": [
         {
-          "spawn": "default"
+          "exec": "cd ../../.. && npx projen default"
         }
       ]
     },

@@ -128,12 +128,12 @@ export interface ContactMethod {
    *
    * @schema ContactMethod#Type
    */
-  readonly type: ContactMethodType;
+  readonly type?: ContactMethodType;
 
   /**
    * @schema ContactMethod#Id
    */
-  readonly id: string;
+  readonly id?: string;
 
   /**
    * A short-form, server-generated string that provides succinct, important information about an object suitable for primary labeling of an entity in a client. In many cases, this will be identical to name, though it is not intended to be an identifier.
@@ -141,13 +141,6 @@ export interface ContactMethod {
    * @schema ContactMethod#Summary
    */
   readonly summary?: string;
-
-  /**
-   * A URL at which the entity is uniquely displayed in the Web app
-   *
-   * @schema ContactMethod#HtmlUrl
-   */
-  readonly htmlUrl?: string;
 
 }
 
@@ -161,7 +154,6 @@ export function toJson_ContactMethod(obj: ContactMethod | undefined): Record<str
     'Type': obj.type,
     'Id': obj.id,
     'Summary': obj.summary,
-    'HtmlUrl': obj.htmlUrl,
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -177,12 +169,12 @@ export interface NotificationRule {
    *
    * @schema NotificationRule#Type
    */
-  readonly type: NotificationRuleType;
+  readonly type?: NotificationRuleType;
 
   /**
    * @schema NotificationRule#Id
    */
-  readonly id: string;
+  readonly id?: string;
 
   /**
    * A short-form, server-generated string that provides succinct, important information about an object suitable for primary labeling of an entity in a client. In many cases, this will be identical to name, though it is not intended to be an identifier.
@@ -190,13 +182,6 @@ export interface NotificationRule {
    * @schema NotificationRule#Summary
    */
   readonly summary?: string;
-
-  /**
-   * A URL at which the entity is uniquely displayed in the Web app
-   *
-   * @schema NotificationRule#HtmlUrl
-   */
-  readonly htmlUrl?: string;
 
 }
 
@@ -210,7 +195,6 @@ export function toJson_NotificationRule(obj: NotificationRule | undefined): Reco
     'Type': obj.type,
     'Id': obj.id,
     'Summary': obj.summary,
-    'HtmlUrl': obj.htmlUrl,
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});

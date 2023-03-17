@@ -323,6 +323,15 @@ junit.xml
 /packages/@cdk-cloudformation/mongodb-atlas-projectipaccesslist/dist/
 /packages/@cdk-cloudformation/mongodb-atlas-projectipaccesslist/lib/
 !/.github/workflows/release-mongodb-atlas-projectipaccesslist.yml
+/packages/@cdk-cloudformation/newrelic-agent-configuration/dist/
+/packages/@cdk-cloudformation/newrelic-agent-configuration/lib/
+!/.github/workflows/release-newrelic-agent-configuration.yml
+/packages/@cdk-cloudformation/newrelic-alert-alertspolicy/dist/
+/packages/@cdk-cloudformation/newrelic-alert-alertspolicy/lib/
+!/.github/workflows/release-newrelic-alert-alertspolicy.yml
+/packages/@cdk-cloudformation/newrelic-alert-nrqlconditionstatic/dist/
+/packages/@cdk-cloudformation/newrelic-alert-nrqlconditionstatic/lib/
+!/.github/workflows/release-newrelic-alert-nrqlconditionstatic.yml
 /packages/@cdk-cloudformation/newrelic-cloudformation-dashboards/dist/
 /packages/@cdk-cloudformation/newrelic-cloudformation-dashboards/lib/
 !/.github/workflows/release-newrelic-cloudformation-dashboards.yml

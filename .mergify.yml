@@ -97,6 +97,9 @@ queue_rules:
       - status-success=mongodb-atlas-networkpeering
       - status-success=mongodb-atlas-project
       - status-success=mongodb-atlas-projectipaccesslist
+      - status-success=newrelic-agent-configuration
+      - status-success=newrelic-alert-alertspolicy
+      - status-success=newrelic-alert-nrqlconditionstatic
       - status-success=newrelic-cloudformation-dashboards
       - status-success=newrelic-cloudformation-tagging
       - status-success=newrelic-cloudformation-workloads
@@ -257,6 +260,9 @@ pull_request_rules:
       - status-success=mongodb-atlas-networkpeering
       - status-success=mongodb-atlas-project
       - status-success=mongodb-atlas-projectipaccesslist
+      - status-success=newrelic-agent-configuration
+      - status-success=newrelic-alert-alertspolicy
+      - status-success=newrelic-alert-nrqlconditionstatic
       - status-success=newrelic-cloudformation-dashboards
       - status-success=newrelic-cloudformation-tagging
       - status-success=newrelic-cloudformation-workloads

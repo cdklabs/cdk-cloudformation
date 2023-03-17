@@ -23,7 +23,7 @@ export interface CfnCollaboratorProps {
   readonly repository: string;
 
   /**
-   * The handle for the GitHub user account.
+   * The login name for the GitHub user account.
    *
    * @schema CfnCollaboratorProps#Username
    */

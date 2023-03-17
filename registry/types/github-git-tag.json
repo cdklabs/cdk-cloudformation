@@ -10,9 +10,9 @@
   "Visibility": "PUBLIC",
   "SourceUrl": "https://github.com/aws-ia/cloudformation-github-resource-providers.git",
   "DocumentationUrl": "https://github.com/aws-ia/cloudformation-github-resource-providers",
-  "TimeCreated": "2022-11-25T22:48:35.131Z",
+  "TimeCreated": "2023-03-13T19:17:34.864Z",
   "ConfigurationSchema": "{\n    \"properties\": {\n        \"GitHubAccess\": {\n            \"$ref\": \"#/definitions/GitHubAccess\"\n        }\n    },\n    \"additionalProperties\": false,\n    \"required\": [\n        \"GitHubAccess\"\n    ],\n    \"definitions\": {\n        \"GitHubAccess\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"AccessToken\": {\n                    \"description\": \"Personal Access Token\",\n                    \"type\": \"string\"\n                }\n            },\n            \"required\": [\n                \"AccessToken\"\n            ],\n            \"additionalProperties\": false\n        }\n    },\n    \"typeName\": \"GitHub::Git::Tag\"\n}",
   "PublisherId": "c830e97710da0c9954d80ba8df021e5439e7134b",
-  "LatestPublicVersion": "1.0.0",
+  "LatestPublicVersion": "1.1.0",
   "IsActivated": false
 }

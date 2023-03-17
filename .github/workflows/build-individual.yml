@@ -915,6 +915,36 @@ jobs:
       - run: yarn build:mongodb-atlas-projectipaccesslist
     container:
       image: jsii/superchain:1-buster-slim-node14
+  newrelic-agent-configuration:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:newrelic-agent-configuration
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  newrelic-alert-alertspolicy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:newrelic-alert-alertspolicy
+    container:
+      image: jsii/superchain:1-buster-slim-node14
+  newrelic-alert-nrqlconditionstatic:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:newrelic-alert-nrqlconditionstatic
+    container:
+      image: jsii/superchain:1-buster-slim-node14
   newrelic-cloudformation-dashboards:
     runs-on: ubuntu-latest
     permissions:

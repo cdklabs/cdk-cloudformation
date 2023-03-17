@@ -46,7 +46,7 @@ that version from your package manager.
 
 <!--STATUS-BEGIN-->
 
-Release status for 145 libraries:
+Release status for 148 libraries:
 
 * [![alexa-ask-skill](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-alexa-ask-skill.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-alexa-ask-skill.yml)
 * [![aqua-enterprise-enforcer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml)
@@ -139,6 +139,9 @@ Release status for 145 libraries:
 * [![mongodb-atlas-networkpeering](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mongodb-atlas-networkpeering.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mongodb-atlas-networkpeering.yml)
 * [![mongodb-atlas-project](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mongodb-atlas-project.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mongodb-atlas-project.yml)
 * [![mongodb-atlas-projectipaccesslist](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mongodb-atlas-projectipaccesslist.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mongodb-atlas-projectipaccesslist.yml)
+* [![newrelic-agent-configuration](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-agent-configuration.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-agent-configuration.yml)
+* [![newrelic-alert-alertspolicy](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-alert-alertspolicy.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-alert-alertspolicy.yml)
+* [![newrelic-alert-nrqlconditionstatic](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-alert-nrqlconditionstatic.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-alert-nrqlconditionstatic.yml)
 * [![newrelic-cloudformation-dashboards](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-cloudformation-dashboards.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-cloudformation-dashboards.yml)
 * [![newrelic-cloudformation-tagging](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-cloudformation-tagging.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-cloudformation-tagging.yml)
 * [![newrelic-cloudformation-workloads](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-cloudformation-workloads.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-cloudformation-workloads.yml)

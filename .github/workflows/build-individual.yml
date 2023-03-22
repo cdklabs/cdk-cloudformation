@@ -14,7 +14,7 @@ jobs:
       - run: yarn install
       - run: yarn build:alexa-ask-skill
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   aqua-enterprise-enforcer:
     runs-on: ubuntu-latest
     permissions:
@@ -24,7 +24,7 @@ jobs:
       - run: yarn install
       - run: yarn build:aqua-enterprise-enforcer
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   aqua-enterprise-kubeenforcer:
     runs-on: ubuntu-latest
     permissions:
@@ -34,7 +34,7 @@ jobs:
       - run: yarn install
       - run: yarn build:aqua-enterprise-kubeenforcer
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   aqua-enterprise-scanner:
     runs-on: ubuntu-latest
     permissions:
@@ -44,7 +44,7 @@ jobs:
       - run: yarn install
       - run: yarn build:aqua-enterprise-scanner
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   aqua-enterprise-server:
     runs-on: ubuntu-latest
     permissions:
@@ -54,7 +54,7 @@ jobs:
       - run: yarn install
       - run: yarn build:aqua-enterprise-server
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   atlassian-opsgenie-integration:
     runs-on: ubuntu-latest
     permissions:
@@ -64,7 +64,7 @@ jobs:
       - run: yarn install
       - run: yarn build:atlassian-opsgenie-integration
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   atlassian-opsgenie-team:
     runs-on: ubuntu-latest
     permissions:
@@ -74,7 +74,7 @@ jobs:
       - run: yarn install
       - run: yarn build:atlassian-opsgenie-team
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   atlassian-opsgenie-user:
     runs-on: ubuntu-latest
     permissions:
@@ -84,7 +84,7 @@ jobs:
       - run: yarn install
       - run: yarn build:atlassian-opsgenie-user
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   awscommunity-account-alternatecontact:
     runs-on: ubuntu-latest
     permissions:
@@ -94,7 +94,7 @@ jobs:
       - run: yarn install
       - run: yarn build:awscommunity-account-alternatecontact
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   awscommunity-s3-deletebucketcontents:
     runs-on: ubuntu-latest
     permissions:
@@ -104,7 +104,7 @@ jobs:
       - run: yarn install
       - run: yarn build:awscommunity-s3-deletebucketcontents
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   awsqs-checkpoint-cloudguardqs-module:
     runs-on: ubuntu-latest
     permissions:
@@ -114,7 +114,7 @@ jobs:
       - run: yarn install
       - run: yarn build:awsqs-checkpoint-cloudguardqs-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   awsqs-ec2-linuxbastionqs-module:
     runs-on: ubuntu-latest
     permissions:
@@ -124,7 +124,7 @@ jobs:
       - run: yarn install
       - run: yarn build:awsqs-ec2-linuxbastionqs-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   awsqs-eks-cluster:
     runs-on: ubuntu-latest
     permissions:
@@ -134,7 +134,7 @@ jobs:
       - run: yarn install
       - run: yarn build:awsqs-eks-cluster
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   awsqs-iridium-cloudconnectqs-module:
     runs-on: ubuntu-latest
     permissions:
@@ -144,7 +144,7 @@ jobs:
       - run: yarn install
       - run: yarn build:awsqs-iridium-cloudconnectqs-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   awsqs-kubernetes-get:
     runs-on: ubuntu-latest
     permissions:
@@ -154,7 +154,7 @@ jobs:
       - run: yarn install
       - run: yarn build:awsqs-kubernetes-get
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   awsqs-kubernetes-helm:
     runs-on: ubuntu-latest
     permissions:
@@ -164,7 +164,7 @@ jobs:
       - run: yarn install
       - run: yarn build:awsqs-kubernetes-helm
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   awsqs-kubernetes-resource:
     runs-on: ubuntu-latest
     permissions:
@@ -174,7 +174,7 @@ jobs:
       - run: yarn install
       - run: yarn build:awsqs-kubernetes-resource
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   awsqs-vpc-vpcqs-module:
     runs-on: ubuntu-latest
     permissions:
@@ -184,7 +184,7 @@ jobs:
       - run: yarn install
       - run: yarn build:awsqs-vpc-vpcqs-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   bigid-datasource-dynamodb:
     runs-on: ubuntu-latest
     permissions:
@@ -194,7 +194,7 @@ jobs:
       - run: yarn install
       - run: yarn build:bigid-datasource-dynamodb
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   bigid-datasource-s3:
     runs-on: ubuntu-latest
     permissions:
@@ -204,7 +204,7 @@ jobs:
       - run: yarn install
       - run: yarn build:bigid-datasource-s3
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   cloudflare-dns-record:
     runs-on: ubuntu-latest
     permissions:
@@ -214,7 +214,7 @@ jobs:
       - run: yarn install
       - run: yarn build:cloudflare-dns-record
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   cloudflare-loadbalancer-loadbalancer:
     runs-on: ubuntu-latest
     permissions:
@@ -224,7 +224,7 @@ jobs:
       - run: yarn install
       - run: yarn build:cloudflare-loadbalancer-loadbalancer
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   cloudflare-loadbalancer-monitor:
     runs-on: ubuntu-latest
     permissions:
@@ -234,7 +234,7 @@ jobs:
       - run: yarn install
       - run: yarn build:cloudflare-loadbalancer-monitor
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   cloudflare-loadbalancer-pool:
     runs-on: ubuntu-latest
     permissions:
@@ -244,7 +244,7 @@ jobs:
       - run: yarn install
       - run: yarn build:cloudflare-loadbalancer-pool
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   confluentcloud-iam-serviceaccount:
     runs-on: ubuntu-latest
     permissions:
@@ -254,7 +254,7 @@ jobs:
       - run: yarn install
       - run: yarn build:confluentcloud-iam-serviceaccount
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   databricks-clusters-cluster:
     runs-on: ubuntu-latest
     permissions:
@@ -264,7 +264,7 @@ jobs:
       - run: yarn install
       - run: yarn build:databricks-clusters-cluster
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   databricks-clusters-job:
     runs-on: ubuntu-latest
     permissions:
@@ -274,7 +274,7 @@ jobs:
       - run: yarn install
       - run: yarn build:databricks-clusters-job
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   datadog-dashboards-dashboard:
     runs-on: ubuntu-latest
     permissions:
@@ -284,7 +284,7 @@ jobs:
       - run: yarn install
       - run: yarn build:datadog-dashboards-dashboard
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   datadog-integrations-aws:
     runs-on: ubuntu-latest
     permissions:
@@ -294,7 +294,7 @@ jobs:
       - run: yarn install
       - run: yarn build:datadog-integrations-aws
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   datadog-monitors-downtime:
     runs-on: ubuntu-latest
     permissions:
@@ -304,7 +304,7 @@ jobs:
       - run: yarn install
       - run: yarn build:datadog-monitors-downtime
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   datadog-monitors-monitor:
     runs-on: ubuntu-latest
     permissions:
@@ -314,7 +314,7 @@ jobs:
       - run: yarn install
       - run: yarn build:datadog-monitors-monitor
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   datadog-slos-slo:
     runs-on: ubuntu-latest
     permissions:
@@ -324,7 +324,7 @@ jobs:
       - run: yarn install
       - run: yarn build:datadog-slos-slo
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   dynatrace-configuration-dashboard:
     runs-on: ubuntu-latest
     permissions:
@@ -334,7 +334,7 @@ jobs:
       - run: yarn install
       - run: yarn build:dynatrace-configuration-dashboard
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   dynatrace-environment-servicelevelobjective:
     runs-on: ubuntu-latest
     permissions:
@@ -344,7 +344,7 @@ jobs:
       - run: yarn install
       - run: yarn build:dynatrace-environment-servicelevelobjective
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   dynatrace-environment-syntheticlocation:
     runs-on: ubuntu-latest
     permissions:
@@ -354,7 +354,7 @@ jobs:
       - run: yarn install
       - run: yarn build:dynatrace-environment-syntheticlocation
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   dynatrace-environment-syntheticmonitor:
     runs-on: ubuntu-latest
     permissions:
@@ -364,7 +364,7 @@ jobs:
       - run: yarn install
       - run: yarn build:dynatrace-environment-syntheticmonitor
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   fastly-dictionary-dictionary:
     runs-on: ubuntu-latest
     permissions:
@@ -374,7 +374,7 @@ jobs:
       - run: yarn install
       - run: yarn build:fastly-dictionary-dictionary
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   fastly-dictionary-dictionaryitem:
     runs-on: ubuntu-latest
     permissions:
@@ -384,7 +384,7 @@ jobs:
       - run: yarn install
       - run: yarn build:fastly-dictionary-dictionaryitem
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   fastly-services-backend:
     runs-on: ubuntu-latest
     permissions:
@@ -394,7 +394,7 @@ jobs:
       - run: yarn install
       - run: yarn build:fastly-services-backend
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   fastly-services-domain:
     runs-on: ubuntu-latest
     permissions:
@@ -404,7 +404,7 @@ jobs:
       - run: yarn install
       - run: yarn build:fastly-services-domain
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   fastly-services-healthcheck:
     runs-on: ubuntu-latest
     permissions:
@@ -414,7 +414,7 @@ jobs:
       - run: yarn install
       - run: yarn build:fastly-services-healthcheck
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   fastly-services-service:
     runs-on: ubuntu-latest
     permissions:
@@ -424,7 +424,7 @@ jobs:
       - run: yarn install
       - run: yarn build:fastly-services-service
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   fireeye-cloudintegrations-cloudwatch:
     runs-on: ubuntu-latest
     permissions:
@@ -434,7 +434,7 @@ jobs:
       - run: yarn install
       - run: yarn build:fireeye-cloudintegrations-cloudwatch
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   freyraim-impactapi-apigateway-module:
     runs-on: ubuntu-latest
     permissions:
@@ -444,7 +444,7 @@ jobs:
       - run: yarn install
       - run: yarn build:freyraim-impactapi-apigateway-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   freyraim-impactapi-apihandle-module:
     runs-on: ubuntu-latest
     permissions:
@@ -454,7 +454,7 @@ jobs:
       - run: yarn install
       - run: yarn build:freyraim-impactapi-apihandle-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   freyraim-impactapi-ec2instance-module:
     runs-on: ubuntu-latest
     permissions:
@@ -464,7 +464,7 @@ jobs:
       - run: yarn install
       - run: yarn build:freyraim-impactapi-ec2instance-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   freyraim-impactapi-lambdafunction-module:
     runs-on: ubuntu-latest
     permissions:
@@ -474,7 +474,7 @@ jobs:
       - run: yarn install
       - run: yarn build:freyraim-impactapi-lambdafunction-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   freyraim-impactapi-loadbalancer-module:
     runs-on: ubuntu-latest
     permissions:
@@ -484,7 +484,7 @@ jobs:
       - run: yarn install
       - run: yarn build:freyraim-impactapi-loadbalancer-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   freyraim-spider-cloudfront-module:
     runs-on: ubuntu-latest
     permissions:
@@ -494,7 +494,7 @@ jobs:
       - run: yarn install
       - run: yarn build:freyraim-spider-cloudfront-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   freyraim-spider-ec2instance-module:
     runs-on: ubuntu-latest
     permissions:
@@ -504,7 +504,7 @@ jobs:
       - run: yarn install
       - run: yarn build:freyraim-spider-ec2instance-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   freyraim-spider-ecs-module:
     runs-on: ubuntu-latest
     permissions:
@@ -514,7 +514,7 @@ jobs:
       - run: yarn install
       - run: yarn build:freyraim-spider-ecs-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   freyraim-spider-loadbalancer-module:
     runs-on: ubuntu-latest
     permissions:
@@ -524,7 +524,7 @@ jobs:
       - run: yarn install
       - run: yarn build:freyraim-spider-loadbalancer-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   freyraim-spider-postgresql-module:
     runs-on: ubuntu-latest
     permissions:
@@ -534,7 +534,7 @@ jobs:
       - run: yarn install
       - run: yarn build:freyraim-spider-postgresql-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   freyraim-spider-s3bucket-module:
     runs-on: ubuntu-latest
     permissions:
@@ -544,7 +544,7 @@ jobs:
       - run: yarn install
       - run: yarn build:freyraim-spider-s3bucket-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   generic-database-schema:
     runs-on: ubuntu-latest
     permissions:
@@ -554,7 +554,7 @@ jobs:
       - run: yarn install
       - run: yarn build:generic-database-schema
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   generic-transcribe-vocabulary:
     runs-on: ubuntu-latest
     permissions:
@@ -564,7 +564,7 @@ jobs:
       - run: yarn install
       - run: yarn build:generic-transcribe-vocabulary
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   github-git-tag:
     runs-on: ubuntu-latest
     permissions:
@@ -574,7 +574,7 @@ jobs:
       - run: yarn install
       - run: yarn build:github-git-tag
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   github-organizations-membership:
     runs-on: ubuntu-latest
     permissions:
@@ -584,7 +584,7 @@ jobs:
       - run: yarn install
       - run: yarn build:github-organizations-membership
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   github-repositories-collaborator:
     runs-on: ubuntu-latest
     permissions:
@@ -594,7 +594,7 @@ jobs:
       - run: yarn install
       - run: yarn build:github-repositories-collaborator
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   github-repositories-repository:
     runs-on: ubuntu-latest
     permissions:
@@ -604,7 +604,7 @@ jobs:
       - run: yarn install
       - run: yarn build:github-repositories-repository
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   github-repositories-webhook:
     runs-on: ubuntu-latest
     permissions:
@@ -614,7 +614,7 @@ jobs:
       - run: yarn install
       - run: yarn build:github-repositories-webhook
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   github-teams-membership:
     runs-on: ubuntu-latest
     permissions:
@@ -624,7 +624,7 @@ jobs:
       - run: yarn install
       - run: yarn build:github-teams-membership
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   github-teams-repositoryaccess:
     runs-on: ubuntu-latest
     permissions:
@@ -634,7 +634,7 @@ jobs:
       - run: yarn install
       - run: yarn build:github-teams-repositoryaccess
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   github-teams-team:
     runs-on: ubuntu-latest
     permissions:
@@ -644,7 +644,7 @@ jobs:
       - run: yarn install
       - run: yarn build:github-teams-team
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   gitlab-code-tag:
     runs-on: ubuntu-latest
     permissions:
@@ -654,7 +654,7 @@ jobs:
       - run: yarn install
       - run: yarn build:gitlab-code-tag
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   gitlab-groups-group:
     runs-on: ubuntu-latest
     permissions:
@@ -664,7 +664,7 @@ jobs:
       - run: yarn install
       - run: yarn build:gitlab-groups-group
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   gitlab-groups-groupaccesstogroup:
     runs-on: ubuntu-latest
     permissions:
@@ -674,7 +674,7 @@ jobs:
       - run: yarn install
       - run: yarn build:gitlab-groups-groupaccesstogroup
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   gitlab-groups-usermemberofgroup:
     runs-on: ubuntu-latest
     permissions:
@@ -684,7 +684,7 @@ jobs:
       - run: yarn install
       - run: yarn build:gitlab-groups-usermemberofgroup
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   gitlab-projects-accesstoken:
     runs-on: ubuntu-latest
     permissions:
@@ -694,7 +694,7 @@ jobs:
       - run: yarn install
       - run: yarn build:gitlab-projects-accesstoken
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   gitlab-projects-groupaccesstoproject:
     runs-on: ubuntu-latest
     permissions:
@@ -704,7 +704,7 @@ jobs:
       - run: yarn install
       - run: yarn build:gitlab-projects-groupaccesstoproject
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   gitlab-projects-project:
     runs-on: ubuntu-latest
     permissions:
@@ -714,7 +714,7 @@ jobs:
       - run: yarn install
       - run: yarn build:gitlab-projects-project
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   gitlab-projects-usermemberofproject:
     runs-on: ubuntu-latest
     permissions:
@@ -724,7 +724,7 @@ jobs:
       - run: yarn install
       - run: yarn build:gitlab-projects-usermemberofproject
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   gremlin-agent-helm:
     runs-on: ubuntu-latest
     permissions:
@@ -734,7 +734,7 @@ jobs:
       - run: yarn install
       - run: yarn build:gremlin-agent-helm
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   jfrog-artifactory-core-module:
     runs-on: ubuntu-latest
     permissions:
@@ -744,7 +744,7 @@ jobs:
       - run: yarn install
       - run: yarn build:jfrog-artifactory-core-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   jfrog-artifactory-ec2instance-module:
     runs-on: ubuntu-latest
     permissions:
@@ -754,7 +754,7 @@ jobs:
       - run: yarn install
       - run: yarn build:jfrog-artifactory-ec2instance-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   jfrog-artifactory-existingvpc-module:
     runs-on: ubuntu-latest
     permissions:
@@ -764,7 +764,7 @@ jobs:
       - run: yarn install
       - run: yarn build:jfrog-artifactory-existingvpc-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   jfrog-artifactory-newvpc-module:
     runs-on: ubuntu-latest
     permissions:
@@ -774,7 +774,7 @@ jobs:
       - run: yarn install
       - run: yarn build:jfrog-artifactory-newvpc-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   jfrog-linux-bastion-module:
     runs-on: ubuntu-latest
     permissions:
@@ -784,7 +784,7 @@ jobs:
       - run: yarn install
       - run: yarn build:jfrog-linux-bastion-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   jfrog-vpc-multiaz-module:
     runs-on: ubuntu-latest
     permissions:
@@ -794,7 +794,7 @@ jobs:
       - run: yarn install
       - run: yarn build:jfrog-vpc-multiaz-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   jfrog-xray-ec2instance-module:
     runs-on: ubuntu-latest
     permissions:
@@ -804,7 +804,7 @@ jobs:
       - run: yarn install
       - run: yarn build:jfrog-xray-ec2instance-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   karte-eventbridge-documentdb-module:
     runs-on: ubuntu-latest
     permissions:
@@ -814,7 +814,7 @@ jobs:
       - run: yarn install
       - run: yarn build:karte-eventbridge-documentdb-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   logzio-autodeploymentlogzio-cloudwatch-module:
     runs-on: ubuntu-latest
     permissions:
@@ -824,7 +824,7 @@ jobs:
       - run: yarn install
       - run: yarn build:logzio-autodeploymentlogzio-cloudwatch-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   logzio-awscostandusage-cur-module:
     runs-on: ubuntu-latest
     permissions:
@@ -834,7 +834,7 @@ jobs:
       - run: yarn install
       - run: yarn build:logzio-awscostandusage-cur-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   logzio-awssecurityhub-collector-module:
     runs-on: ubuntu-latest
     permissions:
@@ -844,7 +844,7 @@ jobs:
       - run: yarn install
       - run: yarn build:logzio-awssecurityhub-collector-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   logzio-kinesisshipper-kinesisshipper-module:
     runs-on: ubuntu-latest
     permissions:
@@ -854,7 +854,7 @@ jobs:
       - run: yarn install
       - run: yarn build:logzio-kinesisshipper-kinesisshipper-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   logzio-myservice-myname-module:
     runs-on: ubuntu-latest
     permissions:
@@ -864,7 +864,7 @@ jobs:
       - run: yarn install
       - run: yarn build:logzio-myservice-myname-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   mongodb-atlas-cluster:
     runs-on: ubuntu-latest
     permissions:
@@ -874,7 +874,7 @@ jobs:
       - run: yarn install
       - run: yarn build:mongodb-atlas-cluster
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   mongodb-atlas-databaseuser:
     runs-on: ubuntu-latest
     permissions:
@@ -884,7 +884,7 @@ jobs:
       - run: yarn install
       - run: yarn build:mongodb-atlas-databaseuser
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   mongodb-atlas-networkpeering:
     runs-on: ubuntu-latest
     permissions:
@@ -894,7 +894,7 @@ jobs:
       - run: yarn install
       - run: yarn build:mongodb-atlas-networkpeering
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   mongodb-atlas-project:
     runs-on: ubuntu-latest
     permissions:
@@ -904,7 +904,7 @@ jobs:
       - run: yarn install
       - run: yarn build:mongodb-atlas-project
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   mongodb-atlas-projectipaccesslist:
     runs-on: ubuntu-latest
     permissions:
@@ -914,7 +914,7 @@ jobs:
       - run: yarn install
       - run: yarn build:mongodb-atlas-projectipaccesslist
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   newrelic-agent-configuration:
     runs-on: ubuntu-latest
     permissions:
@@ -924,7 +924,7 @@ jobs:
       - run: yarn install
       - run: yarn build:newrelic-agent-configuration
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   newrelic-alert-alertspolicy:
     runs-on: ubuntu-latest
     permissions:
@@ -934,7 +934,7 @@ jobs:
       - run: yarn install
       - run: yarn build:newrelic-alert-alertspolicy
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   newrelic-alert-nrqlconditionstatic:
     runs-on: ubuntu-latest
     permissions:
@@ -944,7 +944,7 @@ jobs:
       - run: yarn install
       - run: yarn build:newrelic-alert-nrqlconditionstatic
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   newrelic-cloudformation-dashboards:
     runs-on: ubuntu-latest
     permissions:
@@ -954,7 +954,7 @@ jobs:
       - run: yarn install
       - run: yarn build:newrelic-cloudformation-dashboards
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   newrelic-cloudformation-tagging:
     runs-on: ubuntu-latest
     permissions:
@@ -964,7 +964,7 @@ jobs:
       - run: yarn install
       - run: yarn build:newrelic-cloudformation-tagging
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   newrelic-cloudformation-workloads:
     runs-on: ubuntu-latest
     permissions:
@@ -974,7 +974,7 @@ jobs:
       - run: yarn install
       - run: yarn build:newrelic-cloudformation-workloads
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   newrelic-observability-dashboards:
     runs-on: ubuntu-latest
     permissions:
@@ -984,7 +984,7 @@ jobs:
       - run: yarn install
       - run: yarn build:newrelic-observability-dashboards
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   newrelic-observability-workloads:
     runs-on: ubuntu-latest
     permissions:
@@ -994,7 +994,7 @@ jobs:
       - run: yarn install
       - run: yarn build:newrelic-observability-workloads
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   okta-application-application:
     runs-on: ubuntu-latest
     permissions:
@@ -1004,7 +1004,7 @@ jobs:
       - run: yarn install
       - run: yarn build:okta-application-application
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   okta-group-group:
     runs-on: ubuntu-latest
     permissions:
@@ -1014,7 +1014,7 @@ jobs:
       - run: yarn install
       - run: yarn build:okta-group-group
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   okta-group-groupapplicationassociation:
     runs-on: ubuntu-latest
     permissions:
@@ -1024,7 +1024,7 @@ jobs:
       - run: yarn install
       - run: yarn build:okta-group-groupapplicationassociation
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   okta-group-membership:
     runs-on: ubuntu-latest
     permissions:
@@ -1034,7 +1034,7 @@ jobs:
       - run: yarn install
       - run: yarn build:okta-group-membership
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   okta-policy-policy:
     runs-on: ubuntu-latest
     permissions:
@@ -1044,7 +1044,7 @@ jobs:
       - run: yarn install
       - run: yarn build:okta-policy-policy
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   org-test-sample-module:
     runs-on: ubuntu-latest
     permissions:
@@ -1054,7 +1054,7 @@ jobs:
       - run: yarn install
       - run: yarn build:org-test-sample-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   pagerduty-escalationpolicies-escalationpolicy:
     runs-on: ubuntu-latest
     permissions:
@@ -1064,7 +1064,7 @@ jobs:
       - run: yarn install
       - run: yarn build:pagerduty-escalationpolicies-escalationpolicy
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   pagerduty-responseplays-responseplay:
     runs-on: ubuntu-latest
     permissions:
@@ -1074,7 +1074,7 @@ jobs:
       - run: yarn install
       - run: yarn build:pagerduty-responseplays-responseplay
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   pagerduty-schedules-schedule:
     runs-on: ubuntu-latest
     permissions:
@@ -1084,7 +1084,7 @@ jobs:
       - run: yarn install
       - run: yarn build:pagerduty-schedules-schedule
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   pagerduty-teams-membership:
     runs-on: ubuntu-latest
     permissions:
@@ -1094,7 +1094,7 @@ jobs:
       - run: yarn install
       - run: yarn build:pagerduty-teams-membership
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   pagerduty-teams-team:
     runs-on: ubuntu-latest
     permissions:
@@ -1104,7 +1104,7 @@ jobs:
       - run: yarn install
       - run: yarn build:pagerduty-teams-team
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   pagerduty-users-user:
     runs-on: ubuntu-latest
     permissions:
@@ -1114,7 +1114,7 @@ jobs:
       - run: yarn install
       - run: yarn build:pagerduty-users-user
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   paloaltonetworks-cloudngfw-ngfw:
     runs-on: ubuntu-latest
     permissions:
@@ -1124,7 +1124,7 @@ jobs:
       - run: yarn install
       - run: yarn build:paloaltonetworks-cloudngfw-ngfw
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   paloaltonetworks-cloudngfw-rulestack:
     runs-on: ubuntu-latest
     permissions:
@@ -1134,7 +1134,7 @@ jobs:
       - run: yarn install
       - run: yarn build:paloaltonetworks-cloudngfw-rulestack
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   registry-test-resource1-module:
     runs-on: ubuntu-latest
     permissions:
@@ -1144,7 +1144,7 @@ jobs:
       - run: yarn install
       - run: yarn build:registry-test-resource1-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   rollbar-notifications-rule:
     runs-on: ubuntu-latest
     permissions:
@@ -1154,7 +1154,7 @@ jobs:
       - run: yarn install
       - run: yarn build:rollbar-notifications-rule
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   rollbar-projects-accesstoken:
     runs-on: ubuntu-latest
     permissions:
@@ -1164,7 +1164,7 @@ jobs:
       - run: yarn install
       - run: yarn build:rollbar-projects-accesstoken
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   rollbar-projects-project:
     runs-on: ubuntu-latest
     permissions:
@@ -1174,7 +1174,7 @@ jobs:
       - run: yarn install
       - run: yarn build:rollbar-projects-project
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   rollbar-teams-membership:
     runs-on: ubuntu-latest
     permissions:
@@ -1184,7 +1184,7 @@ jobs:
       - run: yarn install
       - run: yarn build:rollbar-teams-membership
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   rollbar-teams-team:
     runs-on: ubuntu-latest
     permissions:
@@ -1194,7 +1194,7 @@ jobs:
       - run: yarn install
       - run: yarn build:rollbar-teams-team
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   snowflake-database-database:
     runs-on: ubuntu-latest
     permissions:
@@ -1204,7 +1204,7 @@ jobs:
       - run: yarn install
       - run: yarn build:snowflake-database-database
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   snowflake-database-grant:
     runs-on: ubuntu-latest
     permissions:
@@ -1214,7 +1214,7 @@ jobs:
       - run: yarn install
       - run: yarn build:snowflake-database-grant
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   snowflake-role-grant:
     runs-on: ubuntu-latest
     permissions:
@@ -1224,7 +1224,7 @@ jobs:
       - run: yarn install
       - run: yarn build:snowflake-role-grant
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   snowflake-role-role:
     runs-on: ubuntu-latest
     permissions:
@@ -1234,7 +1234,7 @@ jobs:
       - run: yarn install
       - run: yarn build:snowflake-role-role
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   snowflake-user-user:
     runs-on: ubuntu-latest
     permissions:
@@ -1244,7 +1244,7 @@ jobs:
       - run: yarn install
       - run: yarn build:snowflake-user-user
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   snowflake-warehouse-grant:
     runs-on: ubuntu-latest
     permissions:
@@ -1254,7 +1254,7 @@ jobs:
       - run: yarn install
       - run: yarn build:snowflake-warehouse-grant
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   snyk-container-helm:
     runs-on: ubuntu-latest
     permissions:
@@ -1264,7 +1264,7 @@ jobs:
       - run: yarn install
       - run: yarn build:snyk-container-helm
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   splunk-enterprise-quickstart-module:
     runs-on: ubuntu-latest
     permissions:
@@ -1274,7 +1274,7 @@ jobs:
       - run: yarn install
       - run: yarn build:splunk-enterprise-quickstart-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   spot-elastigroup-group:
     runs-on: ubuntu-latest
     permissions:
@@ -1284,7 +1284,7 @@ jobs:
       - run: yarn install
       - run: yarn build:spot-elastigroup-group
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   stackery-open-bastion-module:
     runs-on: ubuntu-latest
     permissions:
@@ -1294,7 +1294,7 @@ jobs:
       - run: yarn install
       - run: yarn build:stackery-open-bastion-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   stocks-orders-marketorder:
     runs-on: ubuntu-latest
     permissions:
@@ -1304,7 +1304,7 @@ jobs:
       - run: yarn install
       - run: yarn build:stocks-orders-marketorder
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   symphonia-opensource-cloudformationartifactsbucket-module:
     runs-on: ubuntu-latest
     permissions:
@@ -1314,7 +1314,7 @@ jobs:
       - run: yarn install
       - run: yarn build:symphonia-opensource-cloudformationartifactsbucket-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   sysdig-helm-agent:
     runs-on: ubuntu-latest
     permissions:
@@ -1324,7 +1324,7 @@ jobs:
       - run: yarn install
       - run: yarn build:sysdig-helm-agent
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   tf-ad-computer:
     runs-on: ubuntu-latest
     permissions:
@@ -1334,7 +1334,7 @@ jobs:
       - run: yarn install
       - run: yarn build:tf-ad-computer
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   tf-ad-user:
     runs-on: ubuntu-latest
     permissions:
@@ -1344,7 +1344,7 @@ jobs:
       - run: yarn install
       - run: yarn build:tf-ad-user
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   tf-aws-keypair:
     runs-on: ubuntu-latest
     permissions:
@@ -1354,7 +1354,7 @@ jobs:
       - run: yarn install
       - run: yarn build:tf-aws-keypair
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   tf-aws-s3bucket:
     runs-on: ubuntu-latest
     permissions:
@@ -1364,7 +1364,7 @@ jobs:
       - run: yarn install
       - run: yarn build:tf-aws-s3bucket
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   tf-aws-s3bucketobject:
     runs-on: ubuntu-latest
     permissions:
@@ -1374,7 +1374,7 @@ jobs:
       - run: yarn install
       - run: yarn build:tf-aws-s3bucketobject
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   tf-azuread-application:
     runs-on: ubuntu-latest
     permissions:
@@ -1384,7 +1384,7 @@ jobs:
       - run: yarn install
       - run: yarn build:tf-azuread-application
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   tf-azuread-user:
     runs-on: ubuntu-latest
     permissions:
@@ -1394,7 +1394,7 @@ jobs:
       - run: yarn install
       - run: yarn build:tf-azuread-user
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   tf-cloudflare-record:
     runs-on: ubuntu-latest
     permissions:
@@ -1404,7 +1404,7 @@ jobs:
       - run: yarn install
       - run: yarn build:tf-cloudflare-record
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   tf-digitalocean-droplet:
     runs-on: ubuntu-latest
     permissions:
@@ -1414,7 +1414,7 @@ jobs:
       - run: yarn install
       - run: yarn build:tf-digitalocean-droplet
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   tf-github-repository:
     runs-on: ubuntu-latest
     permissions:
@@ -1424,7 +1424,7 @@ jobs:
       - run: yarn install
       - run: yarn build:tf-github-repository
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   tf-google-storagebucket:
     runs-on: ubuntu-latest
     permissions:
@@ -1434,7 +1434,7 @@ jobs:
       - run: yarn install
       - run: yarn build:tf-google-storagebucket
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   tf-pagerduty-service:
     runs-on: ubuntu-latest
     permissions:
@@ -1444,7 +1444,7 @@ jobs:
       - run: yarn install
       - run: yarn build:tf-pagerduty-service
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   tf-random-string:
     runs-on: ubuntu-latest
     permissions:
@@ -1454,7 +1454,7 @@ jobs:
       - run: yarn install
       - run: yarn build:tf-random-string
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   tf-random-uuid:
     runs-on: ubuntu-latest
     permissions:
@@ -1464,7 +1464,7 @@ jobs:
       - run: yarn install
       - run: yarn build:tf-random-uuid
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   trendmicro-cloudonecontainer-helm:
     runs-on: ubuntu-latest
     permissions:
@@ -1474,7 +1474,7 @@ jobs:
       - run: yarn install
       - run: yarn build:trendmicro-cloudonecontainer-helm
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16
   zmk-iam-lambdabasicrole-module:
     runs-on: ubuntu-latest
     permissions:
@@ -1484,4 +1484,4 @@ jobs:
       - run: yarn install
       - run: yarn build:zmk-iam-lambdabasicrole-module
     container:
-      image: jsii/superchain:1-buster-slim-node14
+      image: jsii/superchain:1-buster-slim-node16

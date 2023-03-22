@@ -30,7 +30,8 @@
       "description": "Synthesize project files",
       "steps": [
         {
-          "exec": "cd ../../.. && npx projen default"
+          "exec": "npx projen default",
+          "cwd": "../../.."
         }
       ]
     },

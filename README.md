@@ -46,7 +46,7 @@ that version from your package manager.
 
 <!--STATUS-BEGIN-->
 
-Release status for 148 libraries:
+Release status for 154 libraries:
 
 * [![alexa-ask-skill](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-alexa-ask-skill.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-alexa-ask-skill.yml)
 * [![aqua-enterprise-enforcer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml)
@@ -81,15 +81,21 @@ Release status for 148 libraries:
 * [![datadog-monitors-monitor](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-monitors-monitor.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-monitors-monitor.yml)
 * [![datadog-slos-slo](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-slos-slo.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-slos-slo.yml)
 * [![dynatrace-configuration-dashboard](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-dynatrace-configuration-dashboard.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-dynatrace-configuration-dashboard.yml)
+* [![dynatrace-environment-metric](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-dynatrace-environment-metric.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-dynatrace-environment-metric.yml)
 * [![dynatrace-environment-servicelevelobjective](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-dynatrace-environment-servicelevelobjective.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-dynatrace-environment-servicelevelobjective.yml)
 * [![dynatrace-environment-syntheticlocation](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-dynatrace-environment-syntheticlocation.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-dynatrace-environment-syntheticlocation.yml)
 * [![dynatrace-environment-syntheticmonitor](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-dynatrace-environment-syntheticmonitor.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-dynatrace-environment-syntheticmonitor.yml)
 * [![fastly-dictionary-dictionary](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-dictionary-dictionary.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-dictionary-dictionary.yml)
 * [![fastly-dictionary-dictionaryitem](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-dictionary-dictionaryitem.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-dictionary-dictionaryitem.yml)
+* [![fastly-logging-s3](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-logging-s3.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-logging-s3.yml)
+* [![fastly-logging-splunk](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-logging-splunk.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-logging-splunk.yml)
 * [![fastly-services-backend](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-services-backend.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-services-backend.yml)
 * [![fastly-services-domain](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-services-domain.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-services-domain.yml)
 * [![fastly-services-healthcheck](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-services-healthcheck.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-services-healthcheck.yml)
 * [![fastly-services-service](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-services-service.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-services-service.yml)
+* [![fastly-tls-certificate](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-tls-certificate.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-tls-certificate.yml)
+* [![fastly-tls-domain](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-tls-domain.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-tls-domain.yml)
+* [![fastly-tls-privatekeys](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-tls-privatekeys.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-tls-privatekeys.yml)
 * [![fireeye-cloudintegrations-cloudwatch](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fireeye-cloudintegrations-cloudwatch.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fireeye-cloudintegrations-cloudwatch.yml)
 * [![freyraim-impactapi-apigateway-module](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-freyraim-impactapi-apigateway-module.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-freyraim-impactapi-apigateway-module.yml)
 * [![freyraim-impactapi-apihandle-module](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-freyraim-impactapi-apihandle-module.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-freyraim-impactapi-apihandle-module.yml)

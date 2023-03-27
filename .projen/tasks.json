@@ -420,6 +420,18 @@
         }
       ]
     },
+    "build:dynatrace-environment-metric": {
+      "name": "build:dynatrace-environment-metric",
+      "description": "build dynatrace-environment-metric",
+      "steps": [
+        {
+          "spawn": "compile:dynatrace-environment-metric"
+        },
+        {
+          "spawn": "package:dynatrace-environment-metric"
+        }
+      ]
+    },
     "build:dynatrace-environment-servicelevelobjective": {
       "name": "build:dynatrace-environment-servicelevelobjective",
       "description": "build dynatrace-environment-servicelevelobjective",
@@ -480,6 +492,30 @@
         }
       ]
     },
+    "build:fastly-logging-s3": {
+      "name": "build:fastly-logging-s3",
+      "description": "build fastly-logging-s3",
+      "steps": [
+        {
+          "spawn": "compile:fastly-logging-s3"
+        },
+        {
+          "spawn": "package:fastly-logging-s3"
+        }
+      ]
+    },
+    "build:fastly-logging-splunk": {
+      "name": "build:fastly-logging-splunk",
+      "description": "build fastly-logging-splunk",
+      "steps": [
+        {
+          "spawn": "compile:fastly-logging-splunk"
+        },
+        {
+          "spawn": "package:fastly-logging-splunk"
+        }
+      ]
+    },
     "build:fastly-services-backend": {
       "name": "build:fastly-services-backend",
       "description": "build fastly-services-backend",
@@ -525,6 +561,42 @@
         },
         {
           "spawn": "package:fastly-services-service"
+        }
+      ]
+    },
+    "build:fastly-tls-certificate": {
+      "name": "build:fastly-tls-certificate",
+      "description": "build fastly-tls-certificate",
+      "steps": [
+        {
+          "spawn": "compile:fastly-tls-certificate"
+        },
+        {
+          "spawn": "package:fastly-tls-certificate"
+        }
+      ]
+    },
+    "build:fastly-tls-domain": {
+      "name": "build:fastly-tls-domain",
+      "description": "build fastly-tls-domain",
+      "steps": [
+        {
+          "spawn": "compile:fastly-tls-domain"
+        },
+        {
+          "spawn": "package:fastly-tls-domain"
+        }
+      ]
+    },
+    "build:fastly-tls-privatekeys": {
+      "name": "build:fastly-tls-privatekeys",
+      "description": "build fastly-tls-privatekeys",
+      "steps": [
+        {
+          "spawn": "compile:fastly-tls-privatekeys"
+        },
+        {
+          "spawn": "package:fastly-tls-privatekeys"
         }
       ]
     },
@@ -2194,6 +2266,16 @@
       ],
       "cwd": "packages/@cdk-cloudformation/dynatrace-configuration-dashboard"
     },
+    "compile:dynatrace-environment-metric": {
+      "name": "compile:dynatrace-environment-metric",
+      "description": "compile dynatrace-environment-metric with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/dynatrace-environment-metric"
+    },
     "compile:dynatrace-environment-servicelevelobjective": {
       "name": "compile:dynatrace-environment-servicelevelobjective",
       "description": "compile dynatrace-environment-servicelevelobjective with JSII",
@@ -2244,6 +2326,26 @@
       ],
       "cwd": "packages/@cdk-cloudformation/fastly-dictionary-dictionaryitem"
     },
+    "compile:fastly-logging-s3": {
+      "name": "compile:fastly-logging-s3",
+      "description": "compile fastly-logging-s3 with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/fastly-logging-s3"
+    },
+    "compile:fastly-logging-splunk": {
+      "name": "compile:fastly-logging-splunk",
+      "description": "compile fastly-logging-splunk with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/fastly-logging-splunk"
+    },
     "compile:fastly-services-backend": {
       "name": "compile:fastly-services-backend",
       "description": "compile fastly-services-backend with JSII",
@@ -2283,6 +2385,36 @@
         }
       ],
       "cwd": "packages/@cdk-cloudformation/fastly-services-service"
+    },
+    "compile:fastly-tls-certificate": {
+      "name": "compile:fastly-tls-certificate",
+      "description": "compile fastly-tls-certificate with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/fastly-tls-certificate"
+    },
+    "compile:fastly-tls-domain": {
+      "name": "compile:fastly-tls-domain",
+      "description": "compile fastly-tls-domain with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/fastly-tls-domain"
+    },
+    "compile:fastly-tls-privatekeys": {
+      "name": "compile:fastly-tls-privatekeys",
+      "description": "compile fastly-tls-privatekeys with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/fastly-tls-privatekeys"
     },
     "compile:fireeye-cloudintegrations-cloudwatch": {
       "name": "compile:fireeye-cloudintegrations-cloudwatch",
@@ -3726,6 +3858,16 @@
       ],
       "cwd": "packages/@cdk-cloudformation/dynatrace-configuration-dashboard"
     },
+    "package:dynatrace-environment-metric": {
+      "name": "package:dynatrace-environment-metric",
+      "description": "produce multi-language packaging for dynatrace-environment-metric",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/dynatrace-environment-metric"
+    },
     "package:dynatrace-environment-servicelevelobjective": {
       "name": "package:dynatrace-environment-servicelevelobjective",
       "description": "produce multi-language packaging for dynatrace-environment-servicelevelobjective",
@@ -3776,6 +3918,26 @@
       ],
       "cwd": "packages/@cdk-cloudformation/fastly-dictionary-dictionaryitem"
     },
+    "package:fastly-logging-s3": {
+      "name": "package:fastly-logging-s3",
+      "description": "produce multi-language packaging for fastly-logging-s3",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/fastly-logging-s3"
+    },
+    "package:fastly-logging-splunk": {
+      "name": "package:fastly-logging-splunk",
+      "description": "produce multi-language packaging for fastly-logging-splunk",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/fastly-logging-splunk"
+    },
     "package:fastly-services-backend": {
       "name": "package:fastly-services-backend",
       "description": "produce multi-language packaging for fastly-services-backend",
@@ -3815,6 +3977,36 @@
         }
       ],
       "cwd": "packages/@cdk-cloudformation/fastly-services-service"
+    },
+    "package:fastly-tls-certificate": {
+      "name": "package:fastly-tls-certificate",
+      "description": "produce multi-language packaging for fastly-tls-certificate",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/fastly-tls-certificate"
+    },
+    "package:fastly-tls-domain": {
+      "name": "package:fastly-tls-domain",
+      "description": "produce multi-language packaging for fastly-tls-domain",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/fastly-tls-domain"
+    },
+    "package:fastly-tls-privatekeys": {
+      "name": "package:fastly-tls-privatekeys",
+      "description": "produce multi-language packaging for fastly-tls-privatekeys",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/fastly-tls-privatekeys"
     },
     "package:fireeye-cloudintegrations-cloudwatch": {
       "name": "package:fireeye-cloudintegrations-cloudwatch",

@@ -10,9 +10,9 @@
   "Visibility": "PUBLIC",
   "SourceUrl": "https://github.com/aws-ia/cloudformation-snowflake-resource-providers.git",
   "DocumentationUrl": "https://github.com/aws-ia/cloudformation-snowflake-resource-providers",
-  "TimeCreated": "2022-11-25T22:52:56.847Z",
+  "TimeCreated": "2023-03-23T04:12:18.943Z",
   "ConfigurationSchema": "{\n    \"properties\": {\n        \"SnowflakeAccess\": {\n            \"$ref\": \"#/definitions/SnowflakeAccess\"\n        }\n    },\n    \"additionalProperties\": false,\n    \"required\": [\n        \"SnowflakeAccess\"\n    ],\n    \"definitions\": {\n        \"SnowflakeAccess\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"Account\": {\n                    \"type\": \"string\"\n                },\n                \"Username\": {\n                    \"type\": \"string\"\n                },\n                \"Password\": {\n                    \"type\": \"string\"\n                }\n            },\n            \"required\": [\n                \"Account\",\n                \"Username\",\n                \"Password\"\n            ],\n            \"additionalProperties\": false\n        }\n    },\n    \"typeName\": \"Snowflake::User::User\"\n}",
   "PublisherId": "c830e97710da0c9954d80ba8df021e5439e7134b",
-  "LatestPublicVersion": "1.0.0",
+  "LatestPublicVersion": "1.1.0",
   "IsActivated": false
 }

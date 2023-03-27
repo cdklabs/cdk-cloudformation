@@ -335,6 +335,16 @@ jobs:
       - run: yarn build:dynatrace-configuration-dashboard
     container:
       image: jsii/superchain:1-buster-slim-node16
+  dynatrace-environment-metric:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:dynatrace-environment-metric
+    container:
+      image: jsii/superchain:1-buster-slim-node16
   dynatrace-environment-servicelevelobjective:
     runs-on: ubuntu-latest
     permissions:
@@ -385,6 +395,26 @@ jobs:
       - run: yarn build:fastly-dictionary-dictionaryitem
     container:
       image: jsii/superchain:1-buster-slim-node16
+  fastly-logging-s3:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:fastly-logging-s3
+    container:
+      image: jsii/superchain:1-buster-slim-node16
+  fastly-logging-splunk:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:fastly-logging-splunk
+    container:
+      image: jsii/superchain:1-buster-slim-node16
   fastly-services-backend:
     runs-on: ubuntu-latest
     permissions:
@@ -423,6 +453,36 @@ jobs:
       - uses: actions/checkout@v3
       - run: yarn install
       - run: yarn build:fastly-services-service
+    container:
+      image: jsii/superchain:1-buster-slim-node16
+  fastly-tls-certificate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:fastly-tls-certificate
+    container:
+      image: jsii/superchain:1-buster-slim-node16
+  fastly-tls-domain:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:fastly-tls-domain
+    container:
+      image: jsii/superchain:1-buster-slim-node16
+  fastly-tls-privatekeys:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:fastly-tls-privatekeys
     container:
       image: jsii/superchain:1-buster-slim-node16
   fireeye-cloudintegrations-cloudwatch:

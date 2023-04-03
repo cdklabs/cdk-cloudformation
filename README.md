@@ -46,7 +46,7 @@ that version from your package manager.
 
 <!--STATUS-BEGIN-->
 
-Release status for 154 libraries:
+Release status for 155 libraries:
 
 * [![alexa-ask-skill](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-alexa-ask-skill.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-alexa-ask-skill.yml)
 * [![aqua-enterprise-enforcer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml)
@@ -167,6 +167,7 @@ Release status for 154 libraries:
 * [![pagerduty-users-user](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-pagerduty-users-user.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-pagerduty-users-user.yml)
 * [![paloaltonetworks-cloudngfw-ngfw](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-paloaltonetworks-cloudngfw-ngfw.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-paloaltonetworks-cloudngfw-ngfw.yml)
 * [![paloaltonetworks-cloudngfw-rulestack](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-paloaltonetworks-cloudngfw-rulestack.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-paloaltonetworks-cloudngfw-rulestack.yml)
+* [![poc-azure-blobstorage](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-poc-azure-blobstorage.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-poc-azure-blobstorage.yml)
 * [![registry-test-resource1-module](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-registry-test-resource1-module.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-registry-test-resource1-module.yml)
 * [![rollbar-notifications-rule](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-rollbar-notifications-rule.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-rollbar-notifications-rule.yml)
 * [![rollbar-projects-accesstoken](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-rollbar-projects-accesstoken.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-rollbar-projects-accesstoken.yml)

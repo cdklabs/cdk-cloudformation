@@ -127,6 +127,7 @@
 /.github/workflows/release-pagerduty-users-user.yml linguist-generated
 /.github/workflows/release-paloaltonetworks-cloudngfw-ngfw.yml linguist-generated
 /.github/workflows/release-paloaltonetworks-cloudngfw-rulestack.yml linguist-generated
+/.github/workflows/release-poc-azure-blobstorage.yml linguist-generated
 /.github/workflows/release-registry-test-resource1-module.yml linguist-generated
 /.github/workflows/release-rollbar-notifications-rule.yml linguist-generated
 /.github/workflows/release-rollbar-projects-accesstoken.yml linguist-generated

@@ -407,6 +407,9 @@ junit.xml
 /packages/@cdk-cloudformation/paloaltonetworks-cloudngfw-rulestack/dist/
 /packages/@cdk-cloudformation/paloaltonetworks-cloudngfw-rulestack/lib/
 !/.github/workflows/release-paloaltonetworks-cloudngfw-rulestack.yml
+/packages/@cdk-cloudformation/poc-azure-blobstorage/dist/
+/packages/@cdk-cloudformation/poc-azure-blobstorage/lib/
+!/.github/workflows/release-poc-azure-blobstorage.yml
 /packages/@cdk-cloudformation/registry-test-resource1-module/dist/
 /packages/@cdk-cloudformation/registry-test-resource1-module/lib/
 !/.github/workflows/release-registry-test-resource1-module.yml

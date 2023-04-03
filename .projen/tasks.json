@@ -1452,6 +1452,18 @@
         }
       ]
     },
+    "build:poc-azure-blobstorage": {
+      "name": "build:poc-azure-blobstorage",
+      "description": "build poc-azure-blobstorage",
+      "steps": [
+        {
+          "spawn": "compile:poc-azure-blobstorage"
+        },
+        {
+          "spawn": "package:poc-azure-blobstorage"
+        }
+      ]
+    },
     "build:registry-test-resource1-module": {
       "name": "build:registry-test-resource1-module",
       "description": "build registry-test-resource1-module",
@@ -3126,6 +3138,16 @@
       ],
       "cwd": "packages/@cdk-cloudformation/paloaltonetworks-cloudngfw-rulestack"
     },
+    "compile:poc-azure-blobstorage": {
+      "name": "compile:poc-azure-blobstorage",
+      "description": "compile poc-azure-blobstorage with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/poc-azure-blobstorage"
+    },
     "compile:registry-test-resource1-module": {
       "name": "compile:registry-test-resource1-module",
       "description": "compile registry-test-resource1-module with JSII",
@@ -4717,6 +4739,16 @@
         }
       ],
       "cwd": "packages/@cdk-cloudformation/paloaltonetworks-cloudngfw-rulestack"
+    },
+    "package:poc-azure-blobstorage": {
+      "name": "package:poc-azure-blobstorage",
+      "description": "produce multi-language packaging for poc-azure-blobstorage",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/poc-azure-blobstorage"
     },
     "package:registry-test-resource1-module": {
       "name": "package:registry-test-resource1-module",

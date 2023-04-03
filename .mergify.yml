@@ -126,6 +126,7 @@ queue_rules:
       - status-success=pagerduty-users-user
       - status-success=paloaltonetworks-cloudngfw-ngfw
       - status-success=paloaltonetworks-cloudngfw-rulestack
+      - status-success=poc-azure-blobstorage
       - status-success=registry-test-resource1-module
       - status-success=rollbar-notifications-rule
       - status-success=rollbar-projects-accesstoken
@@ -295,6 +296,7 @@ pull_request_rules:
       - status-success=pagerduty-users-user
       - status-success=paloaltonetworks-cloudngfw-ngfw
       - status-success=paloaltonetworks-cloudngfw-rulestack
+      - status-success=poc-azure-blobstorage
       - status-success=registry-test-resource1-module
       - status-success=rollbar-notifications-rule
       - status-success=rollbar-projects-accesstoken

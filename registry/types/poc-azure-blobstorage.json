@@ -1,0 +1,15 @@
+{
+  "Arn": "arn:aws:cloudformation:us-east-1::type/resource/fbafc40f22913f42efb711903e40c701642af7ee/POC-Azure-BlobStorage",
+  "Type": "RESOURCE",
+  "TypeName": "POC::Azure::BlobStorage",
+  "Description": "An example resource that creates an Azure Storage account along with a Blob container.",
+  "Schema": "{\r\n    \"typeName\": \"POC::Azure::BlobStorage\",\r\n    \"description\": \"An example resource that creates an Azure Storage account along with a Blob container.\",\r\n    \"properties\": {\r\n        \"AzureSubscriptionId\": {\r\n            \"description\": \"Subscription ID of the Azure Account.\",\r\n            \"type\": \"string\"\r\n        },\r\n        \"AzureClientId\": {\r\n            \"description\": \"App ID CloudFormation will use to access Azure.\",\r\n            \"type\": \"string\"\r\n        },\r\n        \"AzureTenantId\": {\r\n            \"description\": \"Directory ID CloudFormation will use to access Azure.\",\r\n            \"type\": \"string\"\r\n        },\r\n        \"AzureClientSecret\": {\r\n            \"description\": \"Client credentials CloudFormation will use to authenticate to Azure and access services.\",\r\n            \"type\": \"string\"\r\n        },\r\n        \"AzureResourceGroup\": {\r\n            \"description\": \"Name of the Resource Group created by CloudFormation.\",\r\n            \"type\": \"string\"\r\n        },\r\n        \"AzureBlobStorageAccountName\": {\r\n            \"description\": \"Name of the Blob Storage account created by CloudFormation.\",\r\n            \"type\": \"string\"\r\n        },\r\n        \"AzureBlobContainerUrl\": {\r\n            \"description\": \"Url of the Blob container created by CloudFormation.\",\r\n            \"type\": \"string\"\r\n        }\r\n    },\r\n    \"additionalProperties\": false,\r\n    \"required\": [\r\n        \"AzureSubscriptionId\",\r\n        \"AzureClientId\",\r\n        \"AzureTenantId\",\r\n        \"AzureClientSecret\"\r\n    ],\r\n    \"readOnlyProperties\": [\r\n        \"/properties/AzureBlobStorageAccountName\",\r\n        \"/properties/AzureBlobContainerUrl\",\r\n        \"/properties/AzureResourceGroup\"\r\n    ],\r\n    \"primaryIdentifier\": [\r\n        \"/properties/AzureBlobStorageAccountName\"\r\n    ],\r\n    \"handlers\": {\r\n        \"create\": {\r\n            \"permissions\": [\"\"]\r\n        },\r\n        \"read\": {\r\n            \"permissions\": [\"\"]\r\n        },\r\n        \"delete\": {\r\n            \"permissions\": [\"\"]\r\n        }\r\n    }\r\n}",
+  "ProvisioningType": "IMMUTABLE",
+  "DeprecatedStatus": "LIVE",
+  "RequiredActivatedTypes": [],
+  "Visibility": "PUBLIC",
+  "TimeCreated": "2023-03-31T21:30:00.408Z",
+  "PublisherId": "fbafc40f22913f42efb711903e40c701642af7ee",
+  "LatestPublicVersion": "1.0.0",
+  "IsActivated": false
+}

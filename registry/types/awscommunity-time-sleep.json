@@ -1,0 +1,16 @@
+{
+  "Arn": "arn:aws:cloudformation:us-east-1::type/resource/c830e97710da0c9954d80ba8df021e5439e7134b/AwsCommunity-Time-Sleep",
+  "Type": "RESOURCE",
+  "TypeName": "AwsCommunity::Time::Sleep",
+  "Description": "An example resource schema demonstrating some basic constructs and validation rules.",
+  "Schema": "{\n    \"typeName\": \"AwsCommunity::Time::Sleep\",\n    \"description\": \"An example resource schema demonstrating some basic constructs and validation rules.\",\n    \"sourceUrl\": \"https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git\",\n    \"definitions\": {},\n    \"properties\": {\n        \"Id\": {\n            \"description\": \"Id is a unique identifier that is auto generated.\",\n            \"type\": \"string\"\n        },\n        \"Seconds\": {\n            \"description\": \"The number of seconds to sleep for.\",\n            \"type\": \"integer\",\n            \"exclusiveMinimum\": 0,\n            \"exclusiveMaximum\": 600\n        },\n        \"SleepOnCreate\": {\n            \"description\": \"If we should sleep on a create.\",\n            \"type\": \"boolean\",\n            \"default\": true\n        },\n        \"SleepOnUpdate\": {\n            \"description\": \"If we should sleep on an update.\",\n            \"type\": \"boolean\",\n            \"default\": true\n        },\n        \"SleepOnDelete\": {\n            \"description\": \"If we should sleep on a delete.\",\n            \"type\": \"boolean\",\n            \"default\": true\n        },\n        \"Triggers\": {\n            \"description\": \"A value to represent when a sleep should occur. Any time this is updated this resource will sleep.\",\n            \"type\": \"array\",\n            \"items\": {\n                \"type\": \"string\"\n            },\n            \"insertionOrder\": true\n        }\n    },\n    \"additionalProperties\": false,\n    \"required\": [\n        \"Seconds\"\n    ],\n    \"readOnlyProperties\": [\n        \"/properties/Id\"\n    ],\n    \"primaryIdentifier\": [\n        \"/properties/Id\"\n    ],\n    \"handlers\": {\n        \"create\": {\n            \"permissions\": [\n                \"ssm:PutParameter\"\n            ]\n        },\n        \"read\": {\n            \"permissions\": [\n                \"ssm:GetParameter\"\n            ]\n        },\n        \"update\": {\n            \"permissions\": [\n                \"ssm:PutParameter\"\n            ]\n        },\n        \"delete\": {\n            \"permissions\": [\n                \"ssm:DeleteParameter\"\n            ]\n        }\n    }\n}\n",
+  "ProvisioningType": "FULLY_MUTABLE",
+  "DeprecatedStatus": "LIVE",
+  "RequiredActivatedTypes": [],
+  "Visibility": "PUBLIC",
+  "SourceUrl": "https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git",
+  "TimeCreated": "2023-04-05T19:07:57.297Z",
+  "PublisherId": "c830e97710da0c9954d80ba8df021e5439e7134b",
+  "LatestPublicVersion": "1.0.0",
+  "IsActivated": false
+}

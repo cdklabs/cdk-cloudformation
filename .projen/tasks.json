@@ -132,6 +132,42 @@
         }
       ]
     },
+    "build:awscommunity-cloudfront-s3website-module": {
+      "name": "build:awscommunity-cloudfront-s3website-module",
+      "description": "build awscommunity-cloudfront-s3website-module",
+      "steps": [
+        {
+          "spawn": "compile:awscommunity-cloudfront-s3website-module"
+        },
+        {
+          "spawn": "package:awscommunity-cloudfront-s3website-module"
+        }
+      ]
+    },
+    "build:awscommunity-dynamodb-item": {
+      "name": "build:awscommunity-dynamodb-item",
+      "description": "build awscommunity-dynamodb-item",
+      "steps": [
+        {
+          "spawn": "compile:awscommunity-dynamodb-item"
+        },
+        {
+          "spawn": "package:awscommunity-dynamodb-item"
+        }
+      ]
+    },
+    "build:awscommunity-s3-bucket-module": {
+      "name": "build:awscommunity-s3-bucket-module",
+      "description": "build awscommunity-s3-bucket-module",
+      "steps": [
+        {
+          "spawn": "compile:awscommunity-s3-bucket-module"
+        },
+        {
+          "spawn": "package:awscommunity-s3-bucket-module"
+        }
+      ]
+    },
     "build:awscommunity-s3-deletebucketcontents": {
       "name": "build:awscommunity-s3-deletebucketcontents",
       "description": "build awscommunity-s3-deletebucketcontents",
@@ -141,6 +177,42 @@
         },
         {
           "spawn": "package:awscommunity-s3-deletebucketcontents"
+        }
+      ]
+    },
+    "build:awscommunity-time-offset": {
+      "name": "build:awscommunity-time-offset",
+      "description": "build awscommunity-time-offset",
+      "steps": [
+        {
+          "spawn": "compile:awscommunity-time-offset"
+        },
+        {
+          "spawn": "package:awscommunity-time-offset"
+        }
+      ]
+    },
+    "build:awscommunity-time-sleep": {
+      "name": "build:awscommunity-time-sleep",
+      "description": "build awscommunity-time-sleep",
+      "steps": [
+        {
+          "spawn": "compile:awscommunity-time-sleep"
+        },
+        {
+          "spawn": "package:awscommunity-time-sleep"
+        }
+      ]
+    },
+    "build:awscommunity-time-static": {
+      "name": "build:awscommunity-time-static",
+      "description": "build awscommunity-time-static",
+      "steps": [
+        {
+          "spawn": "compile:awscommunity-time-static"
+        },
+        {
+          "spawn": "package:awscommunity-time-static"
         }
       ]
     },
@@ -2038,6 +2110,36 @@
       ],
       "cwd": "packages/@cdk-cloudformation/awscommunity-account-alternatecontact"
     },
+    "compile:awscommunity-cloudfront-s3website-module": {
+      "name": "compile:awscommunity-cloudfront-s3website-module",
+      "description": "compile awscommunity-cloudfront-s3website-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awscommunity-cloudfront-s3website-module"
+    },
+    "compile:awscommunity-dynamodb-item": {
+      "name": "compile:awscommunity-dynamodb-item",
+      "description": "compile awscommunity-dynamodb-item with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awscommunity-dynamodb-item"
+    },
+    "compile:awscommunity-s3-bucket-module": {
+      "name": "compile:awscommunity-s3-bucket-module",
+      "description": "compile awscommunity-s3-bucket-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awscommunity-s3-bucket-module"
+    },
     "compile:awscommunity-s3-deletebucketcontents": {
       "name": "compile:awscommunity-s3-deletebucketcontents",
       "description": "compile awscommunity-s3-deletebucketcontents with JSII",
@@ -2047,6 +2149,36 @@
         }
       ],
       "cwd": "packages/@cdk-cloudformation/awscommunity-s3-deletebucketcontents"
+    },
+    "compile:awscommunity-time-offset": {
+      "name": "compile:awscommunity-time-offset",
+      "description": "compile awscommunity-time-offset with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awscommunity-time-offset"
+    },
+    "compile:awscommunity-time-sleep": {
+      "name": "compile:awscommunity-time-sleep",
+      "description": "compile awscommunity-time-sleep with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awscommunity-time-sleep"
+    },
+    "compile:awscommunity-time-static": {
+      "name": "compile:awscommunity-time-static",
+      "description": "compile awscommunity-time-static with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awscommunity-time-static"
     },
     "compile:awsqs-checkpoint-cloudguardqs-module": {
       "name": "compile:awsqs-checkpoint-cloudguardqs-module",
@@ -3640,6 +3772,36 @@
       ],
       "cwd": "packages/@cdk-cloudformation/awscommunity-account-alternatecontact"
     },
+    "package:awscommunity-cloudfront-s3website-module": {
+      "name": "package:awscommunity-cloudfront-s3website-module",
+      "description": "produce multi-language packaging for awscommunity-cloudfront-s3website-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awscommunity-cloudfront-s3website-module"
+    },
+    "package:awscommunity-dynamodb-item": {
+      "name": "package:awscommunity-dynamodb-item",
+      "description": "produce multi-language packaging for awscommunity-dynamodb-item",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awscommunity-dynamodb-item"
+    },
+    "package:awscommunity-s3-bucket-module": {
+      "name": "package:awscommunity-s3-bucket-module",
+      "description": "produce multi-language packaging for awscommunity-s3-bucket-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awscommunity-s3-bucket-module"
+    },
     "package:awscommunity-s3-deletebucketcontents": {
       "name": "package:awscommunity-s3-deletebucketcontents",
       "description": "produce multi-language packaging for awscommunity-s3-deletebucketcontents",
@@ -3649,6 +3811,36 @@
         }
       ],
       "cwd": "packages/@cdk-cloudformation/awscommunity-s3-deletebucketcontents"
+    },
+    "package:awscommunity-time-offset": {
+      "name": "package:awscommunity-time-offset",
+      "description": "produce multi-language packaging for awscommunity-time-offset",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awscommunity-time-offset"
+    },
+    "package:awscommunity-time-sleep": {
+      "name": "package:awscommunity-time-sleep",
+      "description": "produce multi-language packaging for awscommunity-time-sleep",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awscommunity-time-sleep"
+    },
+    "package:awscommunity-time-static": {
+      "name": "package:awscommunity-time-static",
+      "description": "produce multi-language packaging for awscommunity-time-static",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awscommunity-time-static"
     },
     "package:awsqs-checkpoint-cloudguardqs-module": {
       "name": "package:awsqs-checkpoint-cloudguardqs-module",

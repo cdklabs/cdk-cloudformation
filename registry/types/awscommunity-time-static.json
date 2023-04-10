@@ -1,0 +1,16 @@
+{
+  "Arn": "arn:aws:cloudformation:us-east-1::type/resource/c830e97710da0c9954d80ba8df021e5439e7134b/AwsCommunity-Time-Static",
+  "Type": "RESOURCE",
+  "TypeName": "AwsCommunity::Time::Static",
+  "Description": "Creates a static time stamp.",
+  "Schema": "{\n  \"typeName\": \"AwsCommunity::Time::Static\",\n  \"description\": \"Creates a static time stamp.\",\n  \"sourceUrl\": \"https://github.com/aws-cloudformation/awscommunity-registry-extensions/resources/Time_Static.git\",\n  \"properties\": {\n    \"Id\": {\n      \"description\": \"Id is a unique identifier that is auto generated.\",\n      \"type\": \"string\"\n    },\n    \"Time\": {\n      \"description\": \"Optional parameter to represent the time or default is now.\",\n      \"type\": \"string\",\n      \"pattern\": \"^\\\\d{4}-[0-1][0-3]-[0-3]\\\\d{1}T[0-2]\\\\d{1}:[0-5]\\\\d{1}:[0-5]\\\\d{1}Z$\"\n    },\n    \"Utc\": {\n      \"description\": \"UTC returns the time in UTC format.\",\n      \"type\": \"string\"\n    },\n    \"Day\": {\n      \"description\": \"Day returns the day of the month.\",\n      \"type\": \"string\"\n    },\n    \"Hour\": {\n      \"description\": \"Hour returns the hour within the day, in the range [0, 23].\",\n      \"type\": \"string\"\n    },\n    \"Minute\": {\n      \"description\": \"Minute returns the minute offset within the hour, in the range [0, 59].\",\n      \"type\": \"string\"\n    },\n    \"Month\": {\n      \"description\": \"Month returns the month of the year.\",\n      \"type\": \"string\"\n    },\n    \"Second\": {\n      \"description\": \"Second returns the second offset within the minute, in the range [0, 59].\",\n      \"type\": \"string\"\n    },\n    \"Unix\": {\n      \"description\": \"Unix returns a Unix time, the number of seconds elapsed since January 1, 1970 UTC.\",\n      \"type\": \"string\"\n    },\n    \"Year\": {\n      \"description\": \"Year returns the year.\",\n      \"type\": \"string\"\n    }\n  },\n  \"additionalProperties\": false,\n  \"required\": [],\n  \"readOnlyProperties\": [\n    \"/properties/Id\",\n    \"/properties/Utc\",\n    \"/properties/Day\",\n    \"/properties/Hour\",\n    \"/properties/Minute\",\n    \"/properties/Month\",\n    \"/properties/Second\",\n    \"/properties/Unix\",\n    \"/properties/Year\"\n  ],\n  \"createOnlyProperties\": [\n    \"/properties/Time\"\n  ],\n  \"primaryIdentifier\": [\n    \"/properties/Id\"\n  ],\n  \"handlers\": {\n    \"create\": {\n      \"permissions\": [\n        \"ssm:PutParameter\"\n      ]\n    },\n    \"read\": {\n      \"permissions\": [\n        \"ssm:GetParameter\"\n      ]\n    },\n    \"delete\": {\n      \"permissions\": [\n        \"ssm:DeleteParameter\"\n      ]\n    }\n  }\n}",
+  "ProvisioningType": "IMMUTABLE",
+  "DeprecatedStatus": "LIVE",
+  "RequiredActivatedTypes": [],
+  "Visibility": "PUBLIC",
+  "SourceUrl": "https://github.com/aws-cloudformation/awscommunity-registry-extensions/resources/Time_Static.git",
+  "TimeCreated": "2023-04-05T19:05:52.270Z",
+  "PublisherId": "c830e97710da0c9954d80ba8df021e5439e7134b",
+  "LatestPublicVersion": "1.0.0",
+  "IsActivated": false
+}

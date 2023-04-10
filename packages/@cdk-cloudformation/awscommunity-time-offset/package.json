@@ -1,7 +1,7 @@
 {
-  "name": "@cdk-cloudformation/awscommunity-s3-deletebucketcontents",
-  "description": "An experimental extension that deletes all contents of the referenced bucket when the stack is deleted. Use with caution!",
-  "version": "1.10.0-alpha.7",
+  "name": "@cdk-cloudformation/awscommunity-time-offset",
+  "description": "Creates a time based resource with an offset from the provided time or now.",
+  "version": "1.0.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -19,14 +19,14 @@
     "cloudformation-registry",
     "l1",
     "awscommunity",
-    "s3",
-    "deletebucketcontents"
+    "time",
+    "offset"
   ],
   "homepage": "https://github.com/aws-cloudformation/community-registry-extensions.git",
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation.git",
-    "directory": "packages/@cdk-cloudformation/awscommunity-s3-deletebucketcontents"
+    "directory": "packages/@cdk-cloudformation/awscommunity-time-offset"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -37,19 +37,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.awscommunity_s3_deletebucketcontents",
+        "package": "io.github.cdklabs.cdk_cloudformation.awscommunity_time_offset",
         "maven": {
           "groupId": "io.github.cdklabs.cdk_cloudformation",
-          "artifactId": "awscommunity-s3-deletebucketcontents"
+          "artifactId": "awscommunity-time-offset"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-awscommunity-s3-deletebucketcontents",
-        "module": "cdk_cloudformation_awscommunity_s3_deletebucketcontents"
+        "distName": "cdk-cloudformation-awscommunity-time-offset",
+        "module": "cdk_cloudformation_awscommunity_time_offset"
       },
       "dotnet": {
-        "namespace": "CdkCloudFormation.AwsCommunityS3DeleteBucketContents",
-        "packageId": "CdkCloudFormation.AwsCommunityS3DeleteBucketContents"
+        "namespace": "CdkCloudFormation.AwsCommunityTimeOffset",
+        "packageId": "CdkCloudFormation.AwsCommunityTimeOffset"
       }
     },
     "tsc": {

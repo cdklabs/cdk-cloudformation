@@ -1,7 +1,7 @@
 {
-  "name": "@cdk-cloudformation/awscommunity-s3-deletebucketcontents",
-  "description": "An experimental extension that deletes all contents of the referenced bucket when the stack is deleted. Use with caution!",
-  "version": "1.10.0-alpha.7",
+  "name": "@cdk-cloudformation/awscommunity-s3-bucket-module",
+  "description": "Schema for Module Fragment of type AwsCommunity::S3::Bucket::MODULE",
+  "version": "1.4.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -20,13 +20,13 @@
     "l1",
     "awscommunity",
     "s3",
-    "deletebucketcontents"
+    "bucket",
+    "module"
   ],
-  "homepage": "https://github.com/aws-cloudformation/community-registry-extensions.git",
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation.git",
-    "directory": "packages/@cdk-cloudformation/awscommunity-s3-deletebucketcontents"
+    "directory": "packages/@cdk-cloudformation/awscommunity-s3-bucket-module"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -37,19 +37,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.awscommunity_s3_deletebucketcontents",
+        "package": "io.github.cdklabs.cdk_cloudformation.awscommunity_s3_bucket_module",
         "maven": {
           "groupId": "io.github.cdklabs.cdk_cloudformation",
-          "artifactId": "awscommunity-s3-deletebucketcontents"
+          "artifactId": "awscommunity-s3-bucket-module"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-awscommunity-s3-deletebucketcontents",
-        "module": "cdk_cloudformation_awscommunity_s3_deletebucketcontents"
+        "distName": "cdk-cloudformation-awscommunity-s3-bucket-module",
+        "module": "cdk_cloudformation_awscommunity_s3_bucket_module"
       },
       "dotnet": {
-        "namespace": "CdkCloudFormation.AwsCommunityS3DeleteBucketContents",
-        "packageId": "CdkCloudFormation.AwsCommunityS3DeleteBucketContents"
+        "namespace": "CdkCloudFormation.AwsCommunityS3BucketMODULE",
+        "packageId": "CdkCloudFormation.AwsCommunityS3BucketMODULE"
       }
     },
     "tsc": {

@@ -9,7 +9,7 @@ import * as constructs from 'constructs';
  */
 export interface CfnAlternateContactProps {
   /**
-   * The account ID of the AWS account that you want to add an alternate contact to. If you do not specify this parameter, it defaults to the current AWS account.
+   * The account ID of the AWS account that you want to add an alternate contact to.
    *
    * @schema CfnAlternateContactProps#AccountId
    */

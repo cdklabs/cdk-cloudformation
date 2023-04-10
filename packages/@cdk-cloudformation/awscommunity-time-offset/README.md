@@ -1,13 +1,13 @@
-# awscommunity-s3-deletebucketcontents
+# awscommunity-time-offset
 
-> AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `AwsCommunity::S3::DeleteBucketContents` v1.10.0.
+> AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `AwsCommunity::Time::Offset` v1.0.0.
 
 [L1 construct]: https://docs.aws.amazon.com/cdk/latest/guide/constructs.html
 [AWS CloudFormation Registry]: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html
 
 ## Description
 
-An experimental extension that deletes all contents of the referenced bucket when the stack is deleted. Use with caution!
+Creates a time based resource with an offset from the provided time or now.
 
 ## References
 
@@ -19,7 +19,7 @@ In order to use this library, you will need to activate this AWS CloudFormation 
 
 ```sh
 aws cloudformation activate-type \
-  --type-name AwsCommunity::S3::DeleteBucketContents \
+  --type-name AwsCommunity::Time::Offset \
   --publisher-id c830e97710da0c9954d80ba8df021e5439e7134b \
   --type RESOURCE \
   --execution-role-arn ROLE-ARN
@@ -29,7 +29,7 @@ Alternatively:
 
 ```sh
 aws cloudformation activate-type \
-  --public-type-arn arn:aws:cloudformation:us-east-1::type/resource/c830e97710da0c9954d80ba8df021e5439e7134b/AwsCommunity-S3-DeleteBucketContents \
+  --public-type-arn arn:aws:cloudformation:us-east-1::type/resource/c830e97710da0c9954d80ba8df021e5439e7134b/AwsCommunity-Time-Offset \
   --execution-role-arn ROLE-ARN
 ```
 
@@ -37,10 +37,10 @@ You can find more information about activating this type in the [AWS CloudFormat
 
 ## Feedback
 
-This library is auto-generated and published to all supported programming languages by the [cdklabs/cdk-cloudformation] project based on the API schema published for `AwsCommunity::S3::DeleteBucketContents`.
+This library is auto-generated and published to all supported programming languages by the [cdklabs/cdk-cloudformation] project based on the API schema published for `AwsCommunity::Time::Offset`.
 
-* Issues related to this generated library should be [reported here](https://github.com/cdklabs/cdk-cloudformation/issues/new?title=Issue+with+%40cdk-cloudformation%2Fawscommunity-s3-deletebucketcontents+v1.10.0).
-* Issues related to `AwsCommunity::S3::DeleteBucketContents` should be reported to the [publisher](https://github.com/aws-cloudformation/community-registry-extensions.git).
+* Issues related to this generated library should be [reported here](https://github.com/cdklabs/cdk-cloudformation/issues/new?title=Issue+with+%40cdk-cloudformation%2Fawscommunity-time-offset+v1.0.0).
+* Issues related to `AwsCommunity::Time::Offset` should be reported to the [publisher](https://github.com/aws-cloudformation/community-registry-extensions.git).
 
 [cdklabs/cdk-cloudformation]: https://github.com/cdklabs/cdk-cloudformation
 

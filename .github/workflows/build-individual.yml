@@ -95,6 +95,36 @@ jobs:
       - run: yarn build:awscommunity-account-alternatecontact
     container:
       image: jsii/superchain:1-buster-slim-node16
+  awscommunity-cloudfront-s3website-module:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:awscommunity-cloudfront-s3website-module
+    container:
+      image: jsii/superchain:1-buster-slim-node16
+  awscommunity-dynamodb-item:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:awscommunity-dynamodb-item
+    container:
+      image: jsii/superchain:1-buster-slim-node16
+  awscommunity-s3-bucket-module:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:awscommunity-s3-bucket-module
+    container:
+      image: jsii/superchain:1-buster-slim-node16
   awscommunity-s3-deletebucketcontents:
     runs-on: ubuntu-latest
     permissions:
@@ -103,6 +133,36 @@ jobs:
       - uses: actions/checkout@v3
       - run: yarn install
       - run: yarn build:awscommunity-s3-deletebucketcontents
+    container:
+      image: jsii/superchain:1-buster-slim-node16
+  awscommunity-time-offset:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:awscommunity-time-offset
+    container:
+      image: jsii/superchain:1-buster-slim-node16
+  awscommunity-time-sleep:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:awscommunity-time-sleep
+    container:
+      image: jsii/superchain:1-buster-slim-node16
+  awscommunity-time-static:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:awscommunity-time-static
     container:
       image: jsii/superchain:1-buster-slim-node16
   awsqs-checkpoint-cloudguardqs-module:

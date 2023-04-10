@@ -16,7 +16,13 @@ queue_rules:
       - status-success=atlassian-opsgenie-team
       - status-success=atlassian-opsgenie-user
       - status-success=awscommunity-account-alternatecontact
+      - status-success=awscommunity-cloudfront-s3website-module
+      - status-success=awscommunity-dynamodb-item
+      - status-success=awscommunity-s3-bucket-module
       - status-success=awscommunity-s3-deletebucketcontents
+      - status-success=awscommunity-time-offset
+      - status-success=awscommunity-time-sleep
+      - status-success=awscommunity-time-static
       - status-success=awsqs-checkpoint-cloudguardqs-module
       - status-success=awsqs-ec2-linuxbastionqs-module
       - status-success=awsqs-eks-cluster
@@ -186,7 +192,13 @@ pull_request_rules:
       - status-success=atlassian-opsgenie-team
       - status-success=atlassian-opsgenie-user
       - status-success=awscommunity-account-alternatecontact
+      - status-success=awscommunity-cloudfront-s3website-module
+      - status-success=awscommunity-dynamodb-item
+      - status-success=awscommunity-s3-bucket-module
       - status-success=awscommunity-s3-deletebucketcontents
+      - status-success=awscommunity-time-offset
+      - status-success=awscommunity-time-sleep
+      - status-success=awscommunity-time-static
       - status-success=awsqs-checkpoint-cloudguardqs-module
       - status-success=awsqs-ec2-linuxbastionqs-module
       - status-success=awsqs-eks-cluster

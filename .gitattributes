@@ -17,7 +17,13 @@
 /.github/workflows/release-atlassian-opsgenie-team.yml linguist-generated
 /.github/workflows/release-atlassian-opsgenie-user.yml linguist-generated
 /.github/workflows/release-awscommunity-account-alternatecontact.yml linguist-generated
+/.github/workflows/release-awscommunity-cloudfront-s3website-module.yml linguist-generated
+/.github/workflows/release-awscommunity-dynamodb-item.yml linguist-generated
+/.github/workflows/release-awscommunity-s3-bucket-module.yml linguist-generated
 /.github/workflows/release-awscommunity-s3-deletebucketcontents.yml linguist-generated
+/.github/workflows/release-awscommunity-time-offset.yml linguist-generated
+/.github/workflows/release-awscommunity-time-sleep.yml linguist-generated
+/.github/workflows/release-awscommunity-time-static.yml linguist-generated
 /.github/workflows/release-awsqs-checkpoint-cloudguardqs-module.yml linguist-generated
 /.github/workflows/release-awsqs-ec2-linuxbastionqs-module.yml linguist-generated
 /.github/workflows/release-awsqs-eks-cluster.yml linguist-generated

@@ -1,13 +1,13 @@
 # datadog-dashboards-dashboard
 
-> AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `Datadog::Dashboards::Dashboard` v2.0.2.
+> AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `Datadog::Dashboards::Dashboard` v2.1.0.
 
 [L1 construct]: https://docs.aws.amazon.com/cdk/latest/guide/constructs.html
 [AWS CloudFormation Registry]: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html
 
 ## Description
 
-Datadog Dashboard 2.0.2
+Datadog Dashboard 2.1.0
 
 ## Usage
 
@@ -35,7 +35,7 @@ You can find more information about activating this type in the [AWS CloudFormat
 
 This library is auto-generated and published to all supported programming languages by the [cdklabs/cdk-cloudformation] project based on the API schema published for `Datadog::Dashboards::Dashboard`.
 
-* Issues related to this generated library should be [reported here](https://github.com/cdklabs/cdk-cloudformation/issues/new?title=Issue+with+%40cdk-cloudformation%2Fdatadog-dashboards-dashboard+v2.0.2).
+* Issues related to this generated library should be [reported here](https://github.com/cdklabs/cdk-cloudformation/issues/new?title=Issue+with+%40cdk-cloudformation%2Fdatadog-dashboards-dashboard+v2.1.0).
 * Issues related to `Datadog::Dashboards::Dashboard` should be reported to the [publisher](undefined).
 
 [cdklabs/cdk-cloudformation]: https://github.com/cdklabs/cdk-cloudformation

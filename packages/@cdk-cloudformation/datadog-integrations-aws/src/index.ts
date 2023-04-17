@@ -3,7 +3,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as constructs from 'constructs';
 
 /**
- * Datadog AWS Integration 2.2.1
+ * Datadog AWS Integration 2.4.0
  *
  * @schema CfnAwsProps
  */
@@ -79,6 +79,13 @@ export interface CfnAwsProps {
    */
   readonly resourceCollection?: boolean;
 
+  /**
+   * Array of AWS regions to exclude from metrics collection.
+   *
+   * @schema CfnAwsProps#ExcludedRegions
+   */
+  readonly excludedRegions?: string[];
+
 }
 
 /**
@@ -98,6 +105,7 @@ export function toJson_CfnAwsProps(obj: CfnAwsProps | undefined): Record<string,
     'MetricsCollection': obj.metricsCollection,
     'CSPMResourceCollection': obj.cspmResourceCollection,
     'ResourceCollection': obj.resourceCollection,
+    'ExcludedRegions': obj.excludedRegions?.map(y => y),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});

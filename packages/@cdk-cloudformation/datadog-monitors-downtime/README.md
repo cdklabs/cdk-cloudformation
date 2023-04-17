@@ -1,13 +1,13 @@
 # datadog-monitors-downtime
 
-> AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `Datadog::Monitors::Downtime` v3.0.0.
+> AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `Datadog::Monitors::Downtime` v3.1.0.
 
 [L1 construct]: https://docs.aws.amazon.com/cdk/latest/guide/constructs.html
 [AWS CloudFormation Registry]: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html
 
 ## Description
 
-Datadog Monitors Downtime 3.0.0
+Datadog Monitors Downtime 3.1.0
 
 ## Usage
 
@@ -35,7 +35,7 @@ You can find more information about activating this type in the [AWS CloudFormat
 
 This library is auto-generated and published to all supported programming languages by the [cdklabs/cdk-cloudformation] project based on the API schema published for `Datadog::Monitors::Downtime`.
 
-* Issues related to this generated library should be [reported here](https://github.com/cdklabs/cdk-cloudformation/issues/new?title=Issue+with+%40cdk-cloudformation%2Fdatadog-monitors-downtime+v3.0.0).
+* Issues related to this generated library should be [reported here](https://github.com/cdklabs/cdk-cloudformation/issues/new?title=Issue+with+%40cdk-cloudformation%2Fdatadog-monitors-downtime+v3.1.0).
 * Issues related to `Datadog::Monitors::Downtime` should be reported to the [publisher](undefined).
 
 [cdklabs/cdk-cloudformation]: https://github.com/cdklabs/cdk-cloudformation

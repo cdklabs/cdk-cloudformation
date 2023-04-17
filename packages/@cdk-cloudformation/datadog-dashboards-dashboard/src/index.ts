@@ -3,7 +3,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as constructs from 'constructs';
 
 /**
- * Datadog Dashboard 2.0.2
+ * Datadog Dashboard 2.1.0
  *
  * @schema CfnDashboardProps
  */

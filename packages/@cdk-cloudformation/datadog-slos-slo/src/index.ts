@@ -3,7 +3,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as constructs from 'constructs';
 
 /**
- * Datadog SLO 1.0.1
+ * Datadog SLO 1.1.0
  *
  * @schema CfnSloProps
  */

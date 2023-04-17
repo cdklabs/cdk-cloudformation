@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/datadog-monitors-monitor",
-  "description": "Datadog Monitor 4.5.0",
-  "version": "4.5.0-alpha.7",
+  "description": "Datadog Monitor 4.6.0",
+  "version": "4.6.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

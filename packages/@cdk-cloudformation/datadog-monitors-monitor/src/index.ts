@@ -3,7 +3,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as constructs from 'constructs';
 
 /**
- * Datadog Monitor 4.5.0
+ * Datadog Monitor 4.6.0
  *
  * @schema CfnMonitorProps
  */

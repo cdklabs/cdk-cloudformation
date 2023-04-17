@@ -3,7 +3,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as constructs from 'constructs';
 
 /**
- * Datadog Monitors Downtime 3.0.0
+ * Datadog Monitors Downtime 3.1.0
  *
  * @schema CfnDowntimeProps
  */

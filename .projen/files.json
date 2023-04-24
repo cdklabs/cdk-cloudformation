@@ -167,6 +167,7 @@
     ".github/workflows/release-tf-random-string.yml",
     ".github/workflows/release-tf-random-uuid.yml",
     ".github/workflows/release-trendmicro-cloudonecontainer-helm.yml",
+    ".github/workflows/release-unxpose-iam-integration-module.yml",
     ".github/workflows/release-zmk-iam-lambdabasicrole-module.yml",
     ".github/workflows/release.yml",
     ".github/workflows/update-registry.yml",

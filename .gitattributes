@@ -168,6 +168,7 @@
 /.github/workflows/release-tf-random-string.yml linguist-generated
 /.github/workflows/release-tf-random-uuid.yml linguist-generated
 /.github/workflows/release-trendmicro-cloudonecontainer-helm.yml linguist-generated
+/.github/workflows/release-unxpose-iam-integration-module.yml linguist-generated
 /.github/workflows/release-zmk-iam-lambdabasicrole-module.yml linguist-generated
 /.github/workflows/release.yml linguist-generated
 /.github/workflows/update-registry.yml linguist-generated

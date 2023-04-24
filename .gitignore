@@ -530,6 +530,9 @@ junit.xml
 /packages/@cdk-cloudformation/trendmicro-cloudonecontainer-helm/dist/
 /packages/@cdk-cloudformation/trendmicro-cloudonecontainer-helm/lib/
 !/.github/workflows/release-trendmicro-cloudonecontainer-helm.yml
+/packages/@cdk-cloudformation/unxpose-iam-integration-module/dist/
+/packages/@cdk-cloudformation/unxpose-iam-integration-module/lib/
+!/.github/workflows/release-unxpose-iam-integration-module.yml
 /packages/@cdk-cloudformation/zmk-iam-lambdabasicrole-module/dist/
 /packages/@cdk-cloudformation/zmk-iam-lambdabasicrole-module/lib/
 !/.github/workflows/release-zmk-iam-lambdabasicrole-module.yml

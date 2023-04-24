@@ -1605,6 +1605,16 @@ jobs:
       - run: yarn build:trendmicro-cloudonecontainer-helm
     container:
       image: jsii/superchain:1-buster-slim-node16
+  unxpose-iam-integration-module:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:unxpose-iam-integration-module
+    container:
+      image: jsii/superchain:1-buster-slim-node16
   zmk-iam-lambdabasicrole-module:
     runs-on: ubuntu-latest
     permissions:

@@ -1,7 +1,7 @@
 {
-  "name": "@cdk-cloudformation/newrelic-observability-dashboards",
-  "description": "CRUD operations for New Relic Dashboards via the NerdGraph API",
-  "version": "1.1.0-alpha.7",
+  "name": "@cdk-cloudformation/unxpose-iam-integration-module",
+  "description": "Schema for Module Fragment of type Unxpose::IAM::Integration::MODULE",
+  "version": "1.0.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -18,15 +18,15 @@
     "cfn-resources",
     "cloudformation-registry",
     "l1",
-    "newrelic",
-    "observability",
-    "dashboards"
+    "unxpose",
+    "iam",
+    "integration",
+    "module"
   ],
-  "homepage": "https://github.com/newrelic-experimental/newrelic-cloudformation-resource-providers-dashboards",
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation.git",
-    "directory": "packages/@cdk-cloudformation/newrelic-observability-dashboards"
+    "directory": "packages/@cdk-cloudformation/unxpose-iam-integration-module"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -37,19 +37,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.newrelic_observability_dashboards",
+        "package": "io.github.cdklabs.cdk_cloudformation.unxpose_iam_integration_module",
         "maven": {
           "groupId": "io.github.cdklabs.cdk_cloudformation",
-          "artifactId": "newrelic-observability-dashboards"
+          "artifactId": "unxpose-iam-integration-module"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-newrelic-observability-dashboards",
-        "module": "cdk_cloudformation_newrelic_observability_dashboards"
+        "distName": "cdk-cloudformation-unxpose-iam-integration-module",
+        "module": "cdk_cloudformation_unxpose_iam_integration_module"
       },
       "dotnet": {
-        "namespace": "CdkCloudFormation.NewRelicObservabilityDashboards",
-        "packageId": "CdkCloudFormation.NewRelicObservabilityDashboards"
+        "namespace": "CdkCloudFormation.UnxposeIAMIntegrationMODULE",
+        "packageId": "CdkCloudFormation.UnxposeIAMIntegrationMODULE"
       }
     },
     "tsc": {

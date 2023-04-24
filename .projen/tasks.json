@@ -1944,6 +1944,18 @@
         }
       ]
     },
+    "build:unxpose-iam-integration-module": {
+      "name": "build:unxpose-iam-integration-module",
+      "description": "build unxpose-iam-integration-module",
+      "steps": [
+        {
+          "spawn": "compile:unxpose-iam-integration-module"
+        },
+        {
+          "spawn": "package:unxpose-iam-integration-module"
+        }
+      ]
+    },
     "build:zmk-iam-lambdabasicrole-module": {
       "name": "build:zmk-iam-lambdabasicrole-module",
       "description": "build zmk-iam-lambdabasicrole-module",
@@ -3620,6 +3632,16 @@
       ],
       "cwd": "packages/@cdk-cloudformation/trendmicro-cloudonecontainer-helm"
     },
+    "compile:unxpose-iam-integration-module": {
+      "name": "compile:unxpose-iam-integration-module",
+      "description": "compile unxpose-iam-integration-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/unxpose-iam-integration-module"
+    },
     "compile:zmk-iam-lambdabasicrole-module": {
       "name": "compile:zmk-iam-lambdabasicrole-module",
       "description": "compile zmk-iam-lambdabasicrole-module with JSII",
@@ -5281,6 +5303,16 @@
         }
       ],
       "cwd": "packages/@cdk-cloudformation/trendmicro-cloudonecontainer-helm"
+    },
+    "package:unxpose-iam-integration-module": {
+      "name": "package:unxpose-iam-integration-module",
+      "description": "produce multi-language packaging for unxpose-iam-integration-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/unxpose-iam-integration-module"
     },
     "package:zmk-iam-lambdabasicrole-module": {
       "name": "package:zmk-iam-lambdabasicrole-module",

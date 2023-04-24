@@ -46,7 +46,7 @@ that version from your package manager.
 
 <!--STATUS-BEGIN-->
 
-Release status for 161 libraries:
+Release status for 162 libraries:
 
 * [![alexa-ask-skill](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-alexa-ask-skill.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-alexa-ask-skill.yml)
 * [![aqua-enterprise-enforcer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml)
@@ -208,6 +208,7 @@ Release status for 161 libraries:
 * [![tf-random-string](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-tf-random-string.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-tf-random-string.yml)
 * [![tf-random-uuid](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-tf-random-uuid.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-tf-random-uuid.yml)
 * [![trendmicro-cloudonecontainer-helm](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-trendmicro-cloudonecontainer-helm.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-trendmicro-cloudonecontainer-helm.yml)
+* [![unxpose-iam-integration-module](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-unxpose-iam-integration-module.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-unxpose-iam-integration-module.yml)
 * [![zmk-iam-lambdabasicrole-module](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-zmk-iam-lambdabasicrole-module.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-zmk-iam-lambdabasicrole-module.yml)
 
 <!--STATUS-END-->

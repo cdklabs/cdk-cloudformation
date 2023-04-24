@@ -167,6 +167,7 @@ queue_rules:
       - status-success=tf-random-string
       - status-success=tf-random-uuid
       - status-success=trendmicro-cloudonecontainer-helm
+      - status-success=unxpose-iam-integration-module
       - status-success=zmk-iam-lambdabasicrole-module
 pull_request_rules:
   - name: Automatic merge on approval and successful build
@@ -343,4 +344,5 @@ pull_request_rules:
       - status-success=tf-random-string
       - status-success=tf-random-uuid
       - status-success=trendmicro-cloudonecontainer-helm
+      - status-success=unxpose-iam-integration-module
       - status-success=zmk-iam-lambdabasicrole-module

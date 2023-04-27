@@ -253,7 +253,7 @@ export class CloudFormationTypeProject extends Component {
         },
 
         // sets git identity so we can push later
-        ...WorkflowActions.setGitIdentity(DEFAULT_GITHUB_ACTIONS_USER),
+        ...WorkflowActions.setupGitIdentity(DEFAULT_GITHUB_ACTIONS_USER),
 
         { run: 'yarn install' },
 

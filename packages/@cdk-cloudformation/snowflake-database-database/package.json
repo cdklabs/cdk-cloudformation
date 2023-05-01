@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/snowflake-database-database",
   "description": "Allows for the creation and modification of a Snowflake Database. https://docs.snowflake.com/en/user-guide/databases.html",
-  "version": "1.1.0-alpha.7",
+  "version": "1.2.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

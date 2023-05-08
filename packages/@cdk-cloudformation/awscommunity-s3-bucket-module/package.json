@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/awscommunity-s3-bucket-module",
   "description": "Schema for Module Fragment of type AwsCommunity::S3::Bucket::MODULE",
-  "version": "1.4.0-alpha.7",
+  "version": "1.5.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

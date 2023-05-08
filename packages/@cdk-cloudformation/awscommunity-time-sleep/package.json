@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/awscommunity-time-sleep",
-  "description": "An example resource schema demonstrating some basic constructs and validation rules.",
-  "version": "1.0.0-alpha.7",
+  "description": "Sleep a provided number of seconds between create, update, or delete operations.",
+  "version": "1.1.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -22,7 +22,7 @@
     "time",
     "sleep"
   ],
-  "homepage": "https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git",
+  "homepage": "https://github.com/aws-cloudformation/community-registry-extensions.git",
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation.git",

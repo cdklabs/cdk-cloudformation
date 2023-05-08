@@ -3,7 +3,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as constructs from 'constructs';
 
 /**
- * An example resource schema demonstrating some basic constructs and validation rules.
+ * Sleep a provided number of seconds between create, update, or delete operations.
  *
  * @schema CfnSleepProps
  */
@@ -69,7 +69,7 @@ export function toJson_CfnSleepProps(obj: CfnSleepProps | undefined): Record<str
  *
  * @cloudformationResource AwsCommunity::Time::Sleep
  * @stability external
- * @link https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git
+ * @link https://github.com/aws-cloudformation/community-registry-extensions.git
  */
 export class CfnSleep extends cdk.CfnResource {
   /**
@@ -84,7 +84,7 @@ export class CfnSleep extends cdk.CfnResource {
 
   /**
    * Attribute `AwsCommunity::Time::Sleep.Id`
-   * @link https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git
+   * @link https://github.com/aws-cloudformation/community-registry-extensions.git
    */
   public readonly attrId: string;
 

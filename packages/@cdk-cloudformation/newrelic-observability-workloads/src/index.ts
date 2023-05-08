@@ -9,16 +9,6 @@ import * as constructs from 'constructs';
  */
 export interface CfnWorkloadsProps {
   /**
-   * @schema CfnWorkloadsProps#SourceGuid
-   */
-  readonly sourceGuid?: string;
-
-  /**
-   * @schema CfnWorkloadsProps#DuplicateName
-   */
-  readonly duplicateName?: string;
-
-  /**
    * @schema CfnWorkloadsProps#Workload
    */
   readonly workload?: string;
@@ -33,6 +23,11 @@ export interface CfnWorkloadsProps {
    */
   readonly variables?: any;
 
+  /**
+   * @schema CfnWorkloadsProps#Tags
+   */
+  readonly tags?: any;
+
 }
 
 /**
@@ -42,11 +37,10 @@ export interface CfnWorkloadsProps {
 export function toJson_CfnWorkloadsProps(obj: CfnWorkloadsProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'SourceGuid': obj.sourceGuid,
-    'DuplicateName': obj.duplicateName,
     'Workload': obj.workload,
     'ListQueryFilter': obj.listQueryFilter,
     'Variables': obj.variables,
+    'Tags': obj.tags,
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});

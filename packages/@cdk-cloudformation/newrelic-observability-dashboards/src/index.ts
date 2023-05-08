@@ -9,9 +9,9 @@ import * as constructs from 'constructs';
  */
 export interface CfnDashboardsProps {
   /**
-   * @schema CfnDashboardsProps#DashboardInput
+   * @schema CfnDashboardsProps#Dashboard
    */
-  readonly dashboardInput?: string;
+  readonly dashboard?: string;
 
   /**
    * @schema CfnDashboardsProps#ListQueryFilter
@@ -37,7 +37,7 @@ export interface CfnDashboardsProps {
 export function toJson_CfnDashboardsProps(obj: CfnDashboardsProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'DashboardInput': obj.dashboardInput,
+    'Dashboard': obj.dashboard,
     'ListQueryFilter': obj.listQueryFilter,
     'Variables': obj.variables,
     'Tags': obj.tags,

@@ -72,9 +72,9 @@ export interface CfnIntegrationModulePropsResources {
   readonly unxposeRole?: CfnIntegrationModulePropsResourcesUnxposeRole;
 
   /**
-   * @schema CfnIntegrationModulePropsResources#UnxposePolicy
+   * @schema CfnIntegrationModulePropsResources#UnxposeManagedPolicy
    */
-  readonly unxposePolicy?: CfnIntegrationModulePropsResourcesUnxposePolicy;
+  readonly unxposeManagedPolicy?: CfnIntegrationModulePropsResourcesUnxposeManagedPolicy;
 
 }
 
@@ -86,7 +86,7 @@ export function toJson_CfnIntegrationModulePropsResources(obj: CfnIntegrationMod
   if (obj === undefined) { return undefined; }
   const result = {
     'UnxposeRole': toJson_CfnIntegrationModulePropsResourcesUnxposeRole(obj.unxposeRole),
-    'UnxposePolicy': toJson_CfnIntegrationModulePropsResourcesUnxposePolicy(obj.unxposePolicy),
+    'UnxposeManagedPolicy': toJson_CfnIntegrationModulePropsResourcesUnxposeManagedPolicy(obj.unxposeManagedPolicy),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -158,26 +158,26 @@ export function toJson_CfnIntegrationModulePropsResourcesUnxposeRole(obj: CfnInt
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnIntegrationModulePropsResourcesUnxposePolicy
+ * @schema CfnIntegrationModulePropsResourcesUnxposeManagedPolicy
  */
-export interface CfnIntegrationModulePropsResourcesUnxposePolicy {
+export interface CfnIntegrationModulePropsResourcesUnxposeManagedPolicy {
   /**
-   * @schema CfnIntegrationModulePropsResourcesUnxposePolicy#Type
+   * @schema CfnIntegrationModulePropsResourcesUnxposeManagedPolicy#Type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnIntegrationModulePropsResourcesUnxposePolicy#Properties
+   * @schema CfnIntegrationModulePropsResourcesUnxposeManagedPolicy#Properties
    */
   readonly properties?: any;
 
 }
 
 /**
- * Converts an object of type 'CfnIntegrationModulePropsResourcesUnxposePolicy' to JSON representation.
+ * Converts an object of type 'CfnIntegrationModulePropsResourcesUnxposeManagedPolicy' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnIntegrationModulePropsResourcesUnxposePolicy(obj: CfnIntegrationModulePropsResourcesUnxposePolicy | undefined): Record<string, any> | undefined {
+export function toJson_CfnIntegrationModulePropsResourcesUnxposeManagedPolicy(obj: CfnIntegrationModulePropsResourcesUnxposeManagedPolicy | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Type': obj.type,

@@ -156,6 +156,18 @@
         }
       ]
     },
+    "build:awscommunity-resource-lookup": {
+      "name": "build:awscommunity-resource-lookup",
+      "description": "build awscommunity-resource-lookup",
+      "steps": [
+        {
+          "spawn": "compile:awscommunity-resource-lookup"
+        },
+        {
+          "spawn": "package:awscommunity-resource-lookup"
+        }
+      ]
+    },
     "build:awscommunity-s3-bucket-module": {
       "name": "build:awscommunity-s3-bucket-module",
       "description": "build awscommunity-s3-bucket-module",
@@ -2142,6 +2154,16 @@
       ],
       "cwd": "packages/@cdk-cloudformation/awscommunity-dynamodb-item"
     },
+    "compile:awscommunity-resource-lookup": {
+      "name": "compile:awscommunity-resource-lookup",
+      "description": "compile awscommunity-resource-lookup with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awscommunity-resource-lookup"
+    },
     "compile:awscommunity-s3-bucket-module": {
       "name": "compile:awscommunity-s3-bucket-module",
       "description": "compile awscommunity-s3-bucket-module with JSII",
@@ -3813,6 +3835,16 @@
         }
       ],
       "cwd": "packages/@cdk-cloudformation/awscommunity-dynamodb-item"
+    },
+    "package:awscommunity-resource-lookup": {
+      "name": "package:awscommunity-resource-lookup",
+      "description": "produce multi-language packaging for awscommunity-resource-lookup",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awscommunity-resource-lookup"
     },
     "package:awscommunity-s3-bucket-module": {
       "name": "package:awscommunity-s3-bucket-module",

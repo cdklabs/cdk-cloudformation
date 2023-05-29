@@ -19,6 +19,7 @@
 /.github/workflows/release-awscommunity-account-alternatecontact.yml linguist-generated
 /.github/workflows/release-awscommunity-cloudfront-s3website-module.yml linguist-generated
 /.github/workflows/release-awscommunity-dynamodb-item.yml linguist-generated
+/.github/workflows/release-awscommunity-resource-lookup.yml linguist-generated
 /.github/workflows/release-awscommunity-s3-bucket-module.yml linguist-generated
 /.github/workflows/release-awscommunity-s3-deletebucketcontents.yml linguist-generated
 /.github/workflows/release-awscommunity-time-offset.yml linguist-generated

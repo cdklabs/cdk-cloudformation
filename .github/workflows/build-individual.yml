@@ -115,6 +115,16 @@ jobs:
       - run: yarn build:awscommunity-dynamodb-item
     container:
       image: jsii/superchain:1-buster-slim-node16
+  awscommunity-resource-lookup:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:awscommunity-resource-lookup
+    container:
+      image: jsii/superchain:1-buster-slim-node16
   awscommunity-s3-bucket-module:
     runs-on: ubuntu-latest
     permissions:

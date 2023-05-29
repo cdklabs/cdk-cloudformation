@@ -84,6 +84,9 @@ junit.xml
 /packages/@cdk-cloudformation/awscommunity-dynamodb-item/dist/
 /packages/@cdk-cloudformation/awscommunity-dynamodb-item/lib/
 !/.github/workflows/release-awscommunity-dynamodb-item.yml
+/packages/@cdk-cloudformation/awscommunity-resource-lookup/dist/
+/packages/@cdk-cloudformation/awscommunity-resource-lookup/lib/
+!/.github/workflows/release-awscommunity-resource-lookup.yml
 /packages/@cdk-cloudformation/awscommunity-s3-bucket-module/dist/
 /packages/@cdk-cloudformation/awscommunity-s3-bucket-module/lib/
 !/.github/workflows/release-awscommunity-s3-bucket-module.yml

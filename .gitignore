@@ -78,6 +78,9 @@ junit.xml
 /packages/@cdk-cloudformation/awscommunity-account-alternatecontact/dist/
 /packages/@cdk-cloudformation/awscommunity-account-alternatecontact/lib/
 !/.github/workflows/release-awscommunity-account-alternatecontact.yml
+/packages/@cdk-cloudformation/awscommunity-applicationautoscaling-scheduledaction/dist/
+/packages/@cdk-cloudformation/awscommunity-applicationautoscaling-scheduledaction/lib/
+!/.github/workflows/release-awscommunity-applicationautoscaling-scheduledaction.yml
 /packages/@cdk-cloudformation/awscommunity-cloudfront-s3website-module/dist/
 /packages/@cdk-cloudformation/awscommunity-cloudfront-s3website-module/lib/
 !/.github/workflows/release-awscommunity-cloudfront-s3website-module.yml

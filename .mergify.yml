@@ -16,6 +16,7 @@ queue_rules:
       - status-success=atlassian-opsgenie-team
       - status-success=atlassian-opsgenie-user
       - status-success=awscommunity-account-alternatecontact
+      - status-success=awscommunity-applicationautoscaling-scheduledaction
       - status-success=awscommunity-cloudfront-s3website-module
       - status-success=awscommunity-dynamodb-item
       - status-success=awscommunity-resource-lookup
@@ -194,6 +195,7 @@ pull_request_rules:
       - status-success=atlassian-opsgenie-team
       - status-success=atlassian-opsgenie-user
       - status-success=awscommunity-account-alternatecontact
+      - status-success=awscommunity-applicationautoscaling-scheduledaction
       - status-success=awscommunity-cloudfront-s3website-module
       - status-success=awscommunity-dynamodb-item
       - status-success=awscommunity-resource-lookup

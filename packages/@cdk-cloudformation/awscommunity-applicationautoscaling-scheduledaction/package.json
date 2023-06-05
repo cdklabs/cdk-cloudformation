@@ -1,7 +1,7 @@
 {
-  "name": "@cdk-cloudformation/awscommunity-dynamodb-item",
-  "description": "This resource will manage the lifecycle of items in a DynamoDB table",
-  "version": "1.4.0-alpha.7",
+  "name": "@cdk-cloudformation/awscommunity-applicationautoscaling-scheduledaction",
+  "description": "Application Autoscaling Scheduled Action.",
+  "version": "1.3.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -19,14 +19,14 @@
     "cloudformation-registry",
     "l1",
     "awscommunity",
-    "dynamodb",
-    "item"
+    "applicationautoscaling",
+    "scheduledaction"
   ],
-  "homepage": "https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git",
+  "homepage": "https://github.com/aws-cloudformation/community-registry-extensions",
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation.git",
-    "directory": "packages/@cdk-cloudformation/awscommunity-dynamodb-item"
+    "directory": "packages/@cdk-cloudformation/awscommunity-applicationautoscaling-scheduledaction"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -37,19 +37,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.awscommunity_dynamodb_item",
+        "package": "io.github.cdklabs.cdk_cloudformation.awscommunity_applicationautoscaling_scheduledaction",
         "maven": {
           "groupId": "io.github.cdklabs.cdk_cloudformation",
-          "artifactId": "awscommunity-dynamodb-item"
+          "artifactId": "awscommunity-applicationautoscaling-scheduledaction"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-awscommunity-dynamodb-item",
-        "module": "cdk_cloudformation_awscommunity_dynamodb_item"
+        "distName": "cdk-cloudformation-awscommunity-applicationautoscaling-scheduledaction",
+        "module": "cdk_cloudformation_awscommunity_applicationautoscaling_scheduledaction"
       },
       "dotnet": {
-        "namespace": "CdkCloudFormation.AwsCommunityDynamoDBItem",
-        "packageId": "CdkCloudFormation.AwsCommunityDynamoDBItem"
+        "namespace": "CdkCloudFormation.AwsCommunityApplicationAutoscalingScheduledAction",
+        "packageId": "CdkCloudFormation.AwsCommunityApplicationAutoscalingScheduledAction"
       }
     },
     "tsc": {

@@ -95,6 +95,16 @@ jobs:
       - run: yarn build:awscommunity-account-alternatecontact
     container:
       image: jsii/superchain:1-buster-slim-node16
+  awscommunity-applicationautoscaling-scheduledaction:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:awscommunity-applicationautoscaling-scheduledaction
+    container:
+      image: jsii/superchain:1-buster-slim-node16
   awscommunity-cloudfront-s3website-module:
     runs-on: ubuntu-latest
     permissions:

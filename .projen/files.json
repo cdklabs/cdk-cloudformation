@@ -16,6 +16,7 @@
     ".github/workflows/release-atlassian-opsgenie-team.yml",
     ".github/workflows/release-atlassian-opsgenie-user.yml",
     ".github/workflows/release-awscommunity-account-alternatecontact.yml",
+    ".github/workflows/release-awscommunity-applicationautoscaling-scheduledaction.yml",
     ".github/workflows/release-awscommunity-cloudfront-s3website-module.yml",
     ".github/workflows/release-awscommunity-dynamodb-item.yml",
     ".github/workflows/release-awscommunity-resource-lookup.yml",

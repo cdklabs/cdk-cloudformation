@@ -46,7 +46,7 @@ that version from your package manager.
 
 <!--STATUS-BEGIN-->
 
-Release status for 163 libraries:
+Release status for 164 libraries:
 
 * [![alexa-ask-skill](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-alexa-ask-skill.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-alexa-ask-skill.yml)
 * [![aqua-enterprise-enforcer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml)
@@ -57,6 +57,7 @@ Release status for 163 libraries:
 * [![atlassian-opsgenie-team](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-atlassian-opsgenie-team.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-atlassian-opsgenie-team.yml)
 * [![atlassian-opsgenie-user](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-atlassian-opsgenie-user.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-atlassian-opsgenie-user.yml)
 * [![awscommunity-account-alternatecontact](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-awscommunity-account-alternatecontact.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-awscommunity-account-alternatecontact.yml)
+* [![awscommunity-applicationautoscaling-scheduledaction](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-awscommunity-applicationautoscaling-scheduledaction.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-awscommunity-applicationautoscaling-scheduledaction.yml)
 * [![awscommunity-cloudfront-s3website-module](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-awscommunity-cloudfront-s3website-module.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-awscommunity-cloudfront-s3website-module.yml)
 * [![awscommunity-dynamodb-item](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-awscommunity-dynamodb-item.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-awscommunity-dynamodb-item.yml)
 * [![awscommunity-resource-lookup](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-awscommunity-resource-lookup.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-awscommunity-resource-lookup.yml)

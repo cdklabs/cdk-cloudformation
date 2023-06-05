@@ -17,6 +17,7 @@
 /.github/workflows/release-atlassian-opsgenie-team.yml linguist-generated
 /.github/workflows/release-atlassian-opsgenie-user.yml linguist-generated
 /.github/workflows/release-awscommunity-account-alternatecontact.yml linguist-generated
+/.github/workflows/release-awscommunity-applicationautoscaling-scheduledaction.yml linguist-generated
 /.github/workflows/release-awscommunity-cloudfront-s3website-module.yml linguist-generated
 /.github/workflows/release-awscommunity-dynamodb-item.yml linguist-generated
 /.github/workflows/release-awscommunity-resource-lookup.yml linguist-generated

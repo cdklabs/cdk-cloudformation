@@ -132,6 +132,18 @@
         }
       ]
     },
+    "build:awscommunity-applicationautoscaling-scheduledaction": {
+      "name": "build:awscommunity-applicationautoscaling-scheduledaction",
+      "description": "build awscommunity-applicationautoscaling-scheduledaction",
+      "steps": [
+        {
+          "spawn": "compile:awscommunity-applicationautoscaling-scheduledaction"
+        },
+        {
+          "spawn": "package:awscommunity-applicationautoscaling-scheduledaction"
+        }
+      ]
+    },
     "build:awscommunity-cloudfront-s3website-module": {
       "name": "build:awscommunity-cloudfront-s3website-module",
       "description": "build awscommunity-cloudfront-s3website-module",
@@ -2134,6 +2146,16 @@
       ],
       "cwd": "packages/@cdk-cloudformation/awscommunity-account-alternatecontact"
     },
+    "compile:awscommunity-applicationautoscaling-scheduledaction": {
+      "name": "compile:awscommunity-applicationautoscaling-scheduledaction",
+      "description": "compile awscommunity-applicationautoscaling-scheduledaction with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awscommunity-applicationautoscaling-scheduledaction"
+    },
     "compile:awscommunity-cloudfront-s3website-module": {
       "name": "compile:awscommunity-cloudfront-s3website-module",
       "description": "compile awscommunity-cloudfront-s3website-module with JSII",
@@ -3815,6 +3837,16 @@
         }
       ],
       "cwd": "packages/@cdk-cloudformation/awscommunity-account-alternatecontact"
+    },
+    "package:awscommunity-applicationautoscaling-scheduledaction": {
+      "name": "package:awscommunity-applicationautoscaling-scheduledaction",
+      "description": "produce multi-language packaging for awscommunity-applicationautoscaling-scheduledaction",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/awscommunity-applicationautoscaling-scheduledaction"
     },
     "package:awscommunity-cloudfront-s3website-module": {
       "name": "package:awscommunity-cloudfront-s3website-module",

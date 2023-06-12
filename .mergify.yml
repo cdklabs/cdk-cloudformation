@@ -118,6 +118,7 @@ queue_rules:
       - status-success=newrelic-cloudformation-dashboards
       - status-success=newrelic-cloudformation-tagging
       - status-success=newrelic-cloudformation-workloads
+      - status-success=newrelic-observability-ainotificationschannel
       - status-success=newrelic-observability-dashboards
       - status-success=newrelic-observability-workloads
       - status-success=okta-application-application
@@ -297,6 +298,7 @@ pull_request_rules:
       - status-success=newrelic-cloudformation-dashboards
       - status-success=newrelic-cloudformation-tagging
       - status-success=newrelic-cloudformation-workloads
+      - status-success=newrelic-observability-ainotificationschannel
       - status-success=newrelic-observability-dashboards
       - status-success=newrelic-observability-workloads
       - status-success=okta-application-application

@@ -1356,6 +1356,18 @@
         }
       ]
     },
+    "build:newrelic-observability-ainotificationschannel": {
+      "name": "build:newrelic-observability-ainotificationschannel",
+      "description": "build newrelic-observability-ainotificationschannel",
+      "steps": [
+        {
+          "spawn": "compile:newrelic-observability-ainotificationschannel"
+        },
+        {
+          "spawn": "package:newrelic-observability-ainotificationschannel"
+        }
+      ]
+    },
     "build:newrelic-observability-dashboards": {
       "name": "build:newrelic-observability-dashboards",
       "description": "build newrelic-observability-dashboards",
@@ -3166,6 +3178,16 @@
       ],
       "cwd": "packages/@cdk-cloudformation/newrelic-cloudformation-workloads"
     },
+    "compile:newrelic-observability-ainotificationschannel": {
+      "name": "compile:newrelic-observability-ainotificationschannel",
+      "description": "compile newrelic-observability-ainotificationschannel with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/newrelic-observability-ainotificationschannel"
+    },
     "compile:newrelic-observability-dashboards": {
       "name": "compile:newrelic-observability-dashboards",
       "description": "compile newrelic-observability-dashboards with JSII",
@@ -4857,6 +4879,16 @@
         }
       ],
       "cwd": "packages/@cdk-cloudformation/newrelic-cloudformation-workloads"
+    },
+    "package:newrelic-observability-ainotificationschannel": {
+      "name": "package:newrelic-observability-ainotificationschannel",
+      "description": "produce multi-language packaging for newrelic-observability-ainotificationschannel",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/newrelic-observability-ainotificationschannel"
     },
     "package:newrelic-observability-dashboards": {
       "name": "package:newrelic-observability-dashboards",

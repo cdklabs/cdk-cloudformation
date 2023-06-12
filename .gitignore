@@ -384,6 +384,9 @@ junit.xml
 /packages/@cdk-cloudformation/newrelic-cloudformation-workloads/dist/
 /packages/@cdk-cloudformation/newrelic-cloudformation-workloads/lib/
 !/.github/workflows/release-newrelic-cloudformation-workloads.yml
+/packages/@cdk-cloudformation/newrelic-observability-ainotificationschannel/dist/
+/packages/@cdk-cloudformation/newrelic-observability-ainotificationschannel/lib/
+!/.github/workflows/release-newrelic-observability-ainotificationschannel.yml
 /packages/@cdk-cloudformation/newrelic-observability-dashboards/dist/
 /packages/@cdk-cloudformation/newrelic-observability-dashboards/lib/
 !/.github/workflows/release-newrelic-observability-dashboards.yml

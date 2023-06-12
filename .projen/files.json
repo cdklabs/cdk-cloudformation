@@ -118,6 +118,7 @@
     ".github/workflows/release-newrelic-cloudformation-dashboards.yml",
     ".github/workflows/release-newrelic-cloudformation-tagging.yml",
     ".github/workflows/release-newrelic-cloudformation-workloads.yml",
+    ".github/workflows/release-newrelic-observability-ainotificationschannel.yml",
     ".github/workflows/release-newrelic-observability-dashboards.yml",
     ".github/workflows/release-newrelic-observability-workloads.yml",
     ".github/workflows/release-okta-application-application.yml",

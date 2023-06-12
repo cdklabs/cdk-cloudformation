@@ -119,6 +119,7 @@
 /.github/workflows/release-newrelic-cloudformation-dashboards.yml linguist-generated
 /.github/workflows/release-newrelic-cloudformation-tagging.yml linguist-generated
 /.github/workflows/release-newrelic-cloudformation-workloads.yml linguist-generated
+/.github/workflows/release-newrelic-observability-ainotificationschannel.yml linguist-generated
 /.github/workflows/release-newrelic-observability-dashboards.yml linguist-generated
 /.github/workflows/release-newrelic-observability-workloads.yml linguist-generated
 /.github/workflows/release-okta-application-application.yml linguist-generated

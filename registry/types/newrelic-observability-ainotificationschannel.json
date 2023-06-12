@@ -1,0 +1,17 @@
+{
+  "Arn": "arn:aws:cloudformation:us-east-1::type/resource/759f81f13de188bad7cafc8a2d50910f7d5e2bcc/NewRelic-Observability-AINotificationsChannel",
+  "Type": "RESOURCE",
+  "TypeName": "NewRelic::Observability::AINotificationsChannel",
+  "Description": "CRUD operations for New Relic AI Notifications Channels via the NerdGraph API",
+  "Schema": "{\n  \"typeName\": \"NewRelic::Observability::AINotificationsChannel\",\n  \"description\": \"CRUD operations for New Relic AI Notifications Channels via the NerdGraph API\",\n  \"sourceUrl\": \"https://github.com/newrelic/newrelic-cloudformation-resource-providers-ainotificationschannel.git\",\n  \"tagging\": {\n    \"taggable\": false\n  },\n  \"properties\": {\n    \"Channel\": {\n      \"type\": \"string\"\n    },\n    \"Id\": {\n      \"type\": \"string\"\n    },\n    \"ListQueryFilter\": {\n      \"type\": \"string\"\n    },\n    \"ListQuerySorter\": {\n      \"type\": \"string\"\n    },\n    \"Variables\": {\n      \"type\": \"object\",\n      \"patternProperties\": {\n        \"^[A-Za-z0-9]{1,64}$\": {\n          \"type\": \"string\"\n        }\n      },\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"Channel\"\n  ],\n  \"additionalProperties\": false,\n  \"primaryIdentifier\": [\n    \"/properties/Id\"\n  ],\n  \"readOnlyProperties\": [\n    \"/properties/Id\"\n  ],\n  \"handlers\": {\n    \"create\": {\n      \"permissions\": [\n        \"cloudformation:BatchDescribeTypeConfigurations\"\n      ]\n    },\n    \"read\": {\n      \"permissions\": [\n        \"cloudformation:BatchDescribeTypeConfigurations\"\n      ]\n    },\n    \"update\": {\n      \"permissions\": [\n        \"cloudformation:BatchDescribeTypeConfigurations\"\n      ]\n    },\n    \"delete\": {\n      \"permissions\": [\n        \"cloudformation:BatchDescribeTypeConfigurations\"\n      ]\n    },\n    \"list\": {\n      \"permissions\": [\n        \"cloudformation:BatchDescribeTypeConfigurations\"\n      ]\n    }\n  },\n  \"typeConfiguration\": {\n    \"properties\": {\n      \"Endpoint\": {\n        \"type\": \"string\",\n        \"default\": \"https://api.newrelic.com/graphql\"\n      },\n      \"APIKey\": {\n        \"type\": \"string\"\n      },\n      \"AccountID\": {\n        \"type\": \"string\"\n      }\n    },\n    \"additionalProperties\": false,\n    \"required\": [\n      \"APIKey\",\n      \"AccountID\"\n    ]\n  }\n}\n",
+  "ProvisioningType": "FULLY_MUTABLE",
+  "DeprecatedStatus": "LIVE",
+  "RequiredActivatedTypes": [],
+  "Visibility": "PUBLIC",
+  "SourceUrl": "https://github.com/newrelic/newrelic-cloudformation-resource-providers-ainotificationschannel.git",
+  "TimeCreated": "2023-06-07T14:23:28.729Z",
+  "ConfigurationSchema": "{\n    \"properties\": {\n        \"Endpoint\": {\n            \"type\": \"string\",\n            \"default\": \"https://api.newrelic.com/graphql\"\n        },\n        \"APIKey\": {\n            \"type\": \"string\"\n        },\n        \"AccountID\": {\n            \"type\": \"string\"\n        }\n    },\n    \"additionalProperties\": false,\n    \"required\": [\n        \"APIKey\",\n        \"AccountID\"\n    ],\n    \"definitions\": {},\n    \"typeName\": \"NewRelic::Observability::AINotificationsChannel\"\n}",
+  "PublisherId": "759f81f13de188bad7cafc8a2d50910f7d5e2bcc",
+  "LatestPublicVersion": "1.0.0",
+  "IsActivated": false
+}

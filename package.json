@@ -534,7 +534,7 @@
     "jsii": "^1.83.0",
     "jsii-pacmak": "^1.83.0",
     "npm-check-updates": "^16",
-    "projen": "^0.71.89",
+    "projen": "^0.71.90",
     "standard-version": "^9",
     "ts-jest": "^27.1.5",
     "ts-node": "^10",

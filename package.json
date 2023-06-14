@@ -514,8 +514,14 @@
     "unbump": "npx projen unbump",
     "update-registry": "npx projen update-registry",
     "upgrade": "npx projen upgrade",
+    "upgrade-cdklabs-projen-project-types": "npx projen upgrade-cdklabs-projen-project-types",
     "watch": "npx projen watch",
     "projen": "npx projen"
+  },
+  "author": {
+    "name": "Amazon Web Services",
+    "email": "aws-cdk-dev@amazon.com",
+    "organization": true
   },
   "devDependencies": {
     "@types/jest": "^27.5.2",
@@ -527,6 +533,7 @@
     "aws-sdk": "^2.1397.0",
     "case": "^1.6.3",
     "cdk-import": "^0.2.112",
+    "cdklabs-projen-project-types": "^0.1.138",
     "constructs": "^10.0.5",
     "eslint": "^8",
     "eslint-import-resolver-node": "^0.3.7",

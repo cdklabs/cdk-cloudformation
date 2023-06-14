@@ -42,6 +42,10 @@
       "type": "build"
     },
     {
+      "name": "cdklabs-projen-project-types",
+      "type": "build"
+    },
+    {
       "name": "constructs",
       "version": "^10.0.5",
       "type": "build"

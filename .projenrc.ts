@@ -1,9 +1,11 @@
-import { typescript } from 'projen';
+import { CdklabsTypeScriptProject } from 'cdklabs-projen-project-types';
 import { DeprecatedTypes } from './projenrc/deprecated-types';
 import { generatePackages, updateReadme } from './projenrc/generate-packages';
 import { UpdateRegistry } from './projenrc/update-registry';
 
-const project = new typescript.TypeScriptProject({
+const project = new CdklabsTypeScriptProject({
+  setNodeEngineVersion: false,
+  stability: 'stable',
   defaultReleaseBranch: 'main',
   name: 'cdk-cloudformation',
   projenrcTs: true,
@@ -14,8 +16,6 @@ const project = new typescript.TypeScriptProject({
   },
   autoApproveUpgrades: true,
 });
-
-project.package.addField('private', true);
 
 project.addDevDeps('cdk-import@^0.2.112');
 project.addDevDeps('case');

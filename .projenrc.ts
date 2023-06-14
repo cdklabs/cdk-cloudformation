@@ -5,16 +5,10 @@ import { UpdateRegistry } from './projenrc/update-registry';
 
 const project = new CdklabsTypeScriptProject({
   setNodeEngineVersion: false,
-  stability: 'stable',
   defaultReleaseBranch: 'main',
   name: 'cdk-cloudformation',
   projenrcTs: true,
   sampleCode: false,
-  autoApproveOptions: {
-    allowedUsernames: ['cdklabs-automation'],
-    secret: 'GITHUB_TOKEN',
-  },
-  autoApproveUpgrades: true,
 });
 
 project.addDevDeps('cdk-import@^0.2.112');

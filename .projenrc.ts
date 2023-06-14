@@ -28,7 +28,6 @@ project.packageTask.reset();
 const packagesDir = 'packages';
 const scope = '@cdk-cloudformation';
 
-project.package.addField('private', true);
 project.package.addField('workspaces', {
   packages: [`${packagesDir}/${scope}/*`],
 });

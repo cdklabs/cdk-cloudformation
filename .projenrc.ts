@@ -1,21 +1,15 @@
-import { typescript } from 'projen';
+import { CdklabsTypeScriptProject } from 'cdklabs-projen-project-types';
 import { DeprecatedTypes } from './projenrc/deprecated-types';
 import { generatePackages, updateReadme } from './projenrc/generate-packages';
 import { UpdateRegistry } from './projenrc/update-registry';
 
-const project = new typescript.TypeScriptProject({
+const project = new CdklabsTypeScriptProject({
+  setNodeEngineVersion: false,
   defaultReleaseBranch: 'main',
   name: 'cdk-cloudformation',
   projenrcTs: true,
   sampleCode: false,
-  autoApproveOptions: {
-    allowedUsernames: ['cdklabs-automation'],
-    secret: 'GITHUB_TOKEN',
-  },
-  autoApproveUpgrades: true,
 });
-
-project.package.addField('private', true);
 
 project.addDevDeps('cdk-import@^0.2.112');
 project.addDevDeps('case');
@@ -34,7 +28,6 @@ project.packageTask.reset();
 const packagesDir = 'packages';
 const scope = '@cdk-cloudformation';
 
-project.package.addField('private', true);
 project.package.addField('workspaces', {
   packages: [`${packagesDir}/${scope}/*`],
 });

@@ -86,7 +86,7 @@ export function toJson_Key(obj: Key | undefined): Record<string, any> | undefine
  *
  * @cloudformationResource AwsCommunity::DynamoDB::Item
  * @stability external
- * @link https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git
+ * @link https://github.com/aws-cloudformation/community-registry-extensions.git
  */
 export class CfnItem extends cdk.CfnResource {
   /**
@@ -101,7 +101,7 @@ export class CfnItem extends cdk.CfnResource {
 
   /**
    * Attribute `AwsCommunity::DynamoDB::Item.CompositeKey`
-   * @link https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git
+   * @link https://github.com/aws-cloudformation/community-registry-extensions.git
    */
   public readonly attrCompositeKey: string;
 

@@ -1,6 +1,6 @@
 # awscommunity-dynamodb-item
 
-> AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `AwsCommunity::DynamoDB::Item` v1.4.0.
+> AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `AwsCommunity::DynamoDB::Item` v1.5.0.
 
 [L1 construct]: https://docs.aws.amazon.com/cdk/latest/guide/constructs.html
 [AWS CloudFormation Registry]: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html
@@ -11,7 +11,7 @@ This resource will manage the lifecycle of items in a DynamoDB table
 
 ## References
 
-* [Source](https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git)
+* [Source](https://github.com/aws-cloudformation/community-registry-extensions.git)
 
 ## Usage
 
@@ -39,8 +39,8 @@ You can find more information about activating this type in the [AWS CloudFormat
 
 This library is auto-generated and published to all supported programming languages by the [cdklabs/cdk-cloudformation] project based on the API schema published for `AwsCommunity::DynamoDB::Item`.
 
-* Issues related to this generated library should be [reported here](https://github.com/cdklabs/cdk-cloudformation/issues/new?title=Issue+with+%40cdk-cloudformation%2Fawscommunity-dynamodb-item+v1.4.0).
-* Issues related to `AwsCommunity::DynamoDB::Item` should be reported to the [publisher](https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git).
+* Issues related to this generated library should be [reported here](https://github.com/cdklabs/cdk-cloudformation/issues/new?title=Issue+with+%40cdk-cloudformation%2Fawscommunity-dynamodb-item+v1.5.0).
+* Issues related to `AwsCommunity::DynamoDB::Item` should be reported to the [publisher](https://github.com/aws-cloudformation/community-registry-extensions.git).
 
 [cdklabs/cdk-cloudformation]: https://github.com/cdklabs/cdk-cloudformation
 

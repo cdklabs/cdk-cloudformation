@@ -888,6 +888,18 @@
         }
       ]
     },
+    "build:github-organizations-secret": {
+      "name": "build:github-organizations-secret",
+      "description": "build github-organizations-secret",
+      "steps": [
+        {
+          "spawn": "compile:github-organizations-secret"
+        },
+        {
+          "spawn": "package:github-organizations-secret"
+        }
+      ]
+    },
     "build:github-repositories-collaborator": {
       "name": "build:github-repositories-collaborator",
       "description": "build github-repositories-collaborator",
@@ -909,6 +921,18 @@
         },
         {
           "spawn": "package:github-repositories-repository"
+        }
+      ]
+    },
+    "build:github-repositories-secret": {
+      "name": "build:github-repositories-secret",
+      "description": "build github-repositories-secret",
+      "steps": [
+        {
+          "spawn": "compile:github-repositories-secret"
+        },
+        {
+          "spawn": "package:github-repositories-secret"
         }
       ]
     },
@@ -2788,6 +2812,16 @@
       ],
       "cwd": "packages/@cdk-cloudformation/github-organizations-membership"
     },
+    "compile:github-organizations-secret": {
+      "name": "compile:github-organizations-secret",
+      "description": "compile github-organizations-secret with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/github-organizations-secret"
+    },
     "compile:github-repositories-collaborator": {
       "name": "compile:github-repositories-collaborator",
       "description": "compile github-repositories-collaborator with JSII",
@@ -2807,6 +2841,16 @@
         }
       ],
       "cwd": "packages/@cdk-cloudformation/github-repositories-repository"
+    },
+    "compile:github-repositories-secret": {
+      "name": "compile:github-repositories-secret",
+      "description": "compile github-repositories-secret with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/github-repositories-secret"
     },
     "compile:github-repositories-webhook": {
       "name": "compile:github-repositories-webhook",
@@ -4490,6 +4534,16 @@
       ],
       "cwd": "packages/@cdk-cloudformation/github-organizations-membership"
     },
+    "package:github-organizations-secret": {
+      "name": "package:github-organizations-secret",
+      "description": "produce multi-language packaging for github-organizations-secret",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/github-organizations-secret"
+    },
     "package:github-repositories-collaborator": {
       "name": "package:github-repositories-collaborator",
       "description": "produce multi-language packaging for github-repositories-collaborator",
@@ -4509,6 +4563,16 @@
         }
       ],
       "cwd": "packages/@cdk-cloudformation/github-repositories-repository"
+    },
+    "package:github-repositories-secret": {
+      "name": "package:github-repositories-secret",
+      "description": "produce multi-language packaging for github-repositories-secret",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/github-repositories-secret"
     },
     "package:github-repositories-webhook": {
       "name": "package:github-repositories-webhook",

@@ -46,7 +46,7 @@ that version from your package manager.
 
 <!--STATUS-BEGIN-->
 
-Release status for 165 libraries:
+Release status for 167 libraries:
 
 * [![alexa-ask-skill](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-alexa-ask-skill.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-alexa-ask-skill.yml)
 * [![aqua-enterprise-enforcer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml)
@@ -120,8 +120,10 @@ Release status for 165 libraries:
 * [![generic-transcribe-vocabulary](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-generic-transcribe-vocabulary.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-generic-transcribe-vocabulary.yml)
 * [![github-git-tag](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-github-git-tag.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-github-git-tag.yml)
 * [![github-organizations-membership](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-github-organizations-membership.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-github-organizations-membership.yml)
+* [![github-organizations-secret](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-github-organizations-secret.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-github-organizations-secret.yml)
 * [![github-repositories-collaborator](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-github-repositories-collaborator.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-github-repositories-collaborator.yml)
 * [![github-repositories-repository](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-github-repositories-repository.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-github-repositories-repository.yml)
+* [![github-repositories-secret](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-github-repositories-secret.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-github-repositories-secret.yml)
 * [![github-repositories-webhook](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-github-repositories-webhook.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-github-repositories-webhook.yml)
 * [![github-teams-membership](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-github-teams-membership.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-github-teams-membership.yml)
 * [![github-teams-repositoryaccess](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-github-teams-repositoryaccess.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-github-teams-repositoryaccess.yml)

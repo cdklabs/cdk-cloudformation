@@ -81,8 +81,10 @@
 /.github/workflows/release-generic-transcribe-vocabulary.yml linguist-generated
 /.github/workflows/release-github-git-tag.yml linguist-generated
 /.github/workflows/release-github-organizations-membership.yml linguist-generated
+/.github/workflows/release-github-organizations-secret.yml linguist-generated
 /.github/workflows/release-github-repositories-collaborator.yml linguist-generated
 /.github/workflows/release-github-repositories-repository.yml linguist-generated
+/.github/workflows/release-github-repositories-secret.yml linguist-generated
 /.github/workflows/release-github-repositories-webhook.yml linguist-generated
 /.github/workflows/release-github-teams-membership.yml linguist-generated
 /.github/workflows/release-github-teams-repositoryaccess.yml linguist-generated

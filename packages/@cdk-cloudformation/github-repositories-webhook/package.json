@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/github-repositories-webhook",
   "description": "Repositories can have multiple webhooks installed. Each webhook should have a unique config. Multiple webhooks can share the same config as long as those webhooks do not have any events that overlap.",
-  "version": "1.2.0-alpha.7",
+  "version": "1.4.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

@@ -62,11 +62,11 @@
     }
   },
   "peerDependencies": {
-    "aws-cdk-lib": "^2.88.0",
+    "aws-cdk-lib": "^2.89.0",
     "constructs": "^10.2.69"
   },
   "devDependencies": {
-    "aws-cdk-lib": "2.88.0",
+    "aws-cdk-lib": "2.89.0",
     "constructs": "10.2.69"
   },
   "license": "Apache-2.0",

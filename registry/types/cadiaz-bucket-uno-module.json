@@ -1,0 +1,14 @@
+{
+  "Arn": "arn:aws:cloudformation:us-east-1::type/module/c812060033ed3bad51a82f3aa9ad5ef18ea8ed0d/Cadiaz-Bucket-Uno-MODULE",
+  "Type": "MODULE",
+  "TypeName": "Cadiaz::Bucket::Uno::MODULE",
+  "Description": "Schema for Module Fragment of type Cadiaz::Bucket::Uno::MODULE",
+  "Schema": "{\r\n    \"typeName\": \"Cadiaz::Bucket::Uno::MODULE\",\r\n    \"description\": \"Schema for Module Fragment of type Cadiaz::Bucket::Uno::MODULE\",\r\n    \"properties\": {\r\n        \"Parameters\": {\r\n            \"type\": \"object\",\r\n            \"properties\": {\r\n                \"BucketCustomName\": {\r\n                    \"type\": \"object\",\r\n                    \"properties\": {\r\n                        \"Type\": {\r\n                            \"type\": \"string\"\r\n                        },\r\n                        \"Description\": {\r\n                            \"type\": \"string\"\r\n                        }\r\n                    },\r\n                    \"required\": [\r\n                        \"Type\",\r\n                        \"Description\"\r\n                    ],\r\n                    \"description\": \"Name for the bucket\"\r\n                }\r\n            }\r\n        },\r\n        \"Resources\": {\r\n            \"properties\": {\r\n                \"S3Bucket\": {\r\n                    \"type\": \"object\",\r\n                    \"properties\": {\r\n                        \"Type\": {\r\n                            \"type\": \"string\",\r\n                            \"const\": \"AWS::S3::Bucket\"\r\n                        },\r\n                        \"Properties\": {\r\n                            \"type\": \"object\"\r\n                        }\r\n                    }\r\n                }\r\n            },\r\n            \"type\": \"object\",\r\n            \"additionalProperties\": false\r\n        }\r\n    },\r\n    \"additionalProperties\": true\r\n}\r\n",
+  "DeprecatedStatus": "LIVE",
+  "RequiredActivatedTypes": [],
+  "Visibility": "PUBLIC",
+  "TimeCreated": "2023-07-28T17:32:32.082Z",
+  "PublisherId": "c812060033ed3bad51a82f3aa9ad5ef18ea8ed0d",
+  "LatestPublicVersion": "1.0.0",
+  "IsActivated": false
+}

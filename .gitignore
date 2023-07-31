@@ -136,6 +136,9 @@ junit.xml
 /packages/@cdk-cloudformation/bigid-datasource-s3/dist/
 /packages/@cdk-cloudformation/bigid-datasource-s3/lib/
 !/.github/workflows/release-bigid-datasource-s3.yml
+/packages/@cdk-cloudformation/cadiaz-bucket-uno-module/dist/
+/packages/@cdk-cloudformation/cadiaz-bucket-uno-module/lib/
+!/.github/workflows/release-cadiaz-bucket-uno-module.yml
 /packages/@cdk-cloudformation/cloudflare-dns-record/dist/
 /packages/@cdk-cloudformation/cloudflare-dns-record/lib/
 !/.github/workflows/release-cloudflare-dns-record.yml
@@ -358,6 +361,9 @@ junit.xml
 /packages/@cdk-cloudformation/logzio-myservice-myname-module/dist/
 /packages/@cdk-cloudformation/logzio-myservice-myname-module/lib/
 !/.github/workflows/release-logzio-myservice-myname-module.yml
+/packages/@cdk-cloudformation/mavi-pipeline-default-module/dist/
+/packages/@cdk-cloudformation/mavi-pipeline-default-module/lib/
+!/.github/workflows/release-mavi-pipeline-default-module.yml
 /packages/@cdk-cloudformation/mongodb-atlas-cluster/dist/
 /packages/@cdk-cloudformation/mongodb-atlas-cluster/lib/
 !/.github/workflows/release-mongodb-atlas-cluster.yml

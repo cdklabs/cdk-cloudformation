@@ -46,7 +46,7 @@ that version from your package manager.
 
 <!--STATUS-BEGIN-->
 
-Release status for 167 libraries:
+Release status for 169 libraries:
 
 * [![alexa-ask-skill](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-alexa-ask-skill.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-alexa-ask-skill.yml)
 * [![aqua-enterprise-enforcer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml)
@@ -76,6 +76,7 @@ Release status for 167 libraries:
 * [![awsqs-vpc-vpcqs-module](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-awsqs-vpc-vpcqs-module.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-awsqs-vpc-vpcqs-module.yml)
 * [![bigid-datasource-dynamodb](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-bigid-datasource-dynamodb.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-bigid-datasource-dynamodb.yml)
 * [![bigid-datasource-s3](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-bigid-datasource-s3.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-bigid-datasource-s3.yml)
+* [![cadiaz-bucket-uno-module](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-cadiaz-bucket-uno-module.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-cadiaz-bucket-uno-module.yml)
 * [![cloudflare-dns-record](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-cloudflare-dns-record.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-cloudflare-dns-record.yml)
 * [![cloudflare-loadbalancer-loadbalancer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-cloudflare-loadbalancer-loadbalancer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-cloudflare-loadbalancer-loadbalancer.yml)
 * [![cloudflare-loadbalancer-monitor](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-cloudflare-loadbalancer-monitor.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-cloudflare-loadbalancer-monitor.yml)
@@ -150,6 +151,7 @@ Release status for 167 libraries:
 * [![logzio-awssecurityhub-collector-module](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-logzio-awssecurityhub-collector-module.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-logzio-awssecurityhub-collector-module.yml)
 * [![logzio-kinesisshipper-kinesisshipper-module](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-logzio-kinesisshipper-kinesisshipper-module.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-logzio-kinesisshipper-kinesisshipper-module.yml)
 * [![logzio-myservice-myname-module](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-logzio-myservice-myname-module.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-logzio-myservice-myname-module.yml)
+* [![mavi-pipeline-default-module](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mavi-pipeline-default-module.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mavi-pipeline-default-module.yml)
 * [![mongodb-atlas-cluster](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mongodb-atlas-cluster.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mongodb-atlas-cluster.yml)
 * [![mongodb-atlas-databaseuser](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mongodb-atlas-databaseuser.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mongodb-atlas-databaseuser.yml)
 * [![mongodb-atlas-networkpeering](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mongodb-atlas-networkpeering.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mongodb-atlas-networkpeering.yml)

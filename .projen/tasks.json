@@ -360,6 +360,18 @@
         }
       ]
     },
+    "build:cadiaz-bucket-uno-module": {
+      "name": "build:cadiaz-bucket-uno-module",
+      "description": "build cadiaz-bucket-uno-module",
+      "steps": [
+        {
+          "spawn": "compile:cadiaz-bucket-uno-module"
+        },
+        {
+          "spawn": "package:cadiaz-bucket-uno-module"
+        }
+      ]
+    },
     "build:cloudflare-dns-record": {
       "name": "build:cloudflare-dns-record",
       "description": "build cloudflare-dns-record",
@@ -1245,6 +1257,18 @@
         },
         {
           "spawn": "package:logzio-myservice-myname-module"
+        }
+      ]
+    },
+    "build:mavi-pipeline-default-module": {
+      "name": "build:mavi-pipeline-default-module",
+      "description": "build mavi-pipeline-default-module",
+      "steps": [
+        {
+          "spawn": "compile:mavi-pipeline-default-module"
+        },
+        {
+          "spawn": "package:mavi-pipeline-default-module"
         }
       ]
     },
@@ -2373,6 +2397,16 @@
       ],
       "cwd": "packages/@cdk-cloudformation/bigid-datasource-s3"
     },
+    "compile:cadiaz-bucket-uno-module": {
+      "name": "compile:cadiaz-bucket-uno-module",
+      "description": "compile cadiaz-bucket-uno-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/cadiaz-bucket-uno-module"
+    },
     "compile:cloudflare-dns-record": {
       "name": "compile:cloudflare-dns-record",
       "description": "compile cloudflare-dns-record with JSII",
@@ -3112,6 +3146,16 @@
         }
       ],
       "cwd": "packages/@cdk-cloudformation/logzio-myservice-myname-module"
+    },
+    "compile:mavi-pipeline-default-module": {
+      "name": "compile:mavi-pipeline-default-module",
+      "description": "compile mavi-pipeline-default-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/mavi-pipeline-default-module"
     },
     "compile:mongodb-atlas-cluster": {
       "name": "compile:mongodb-atlas-cluster",
@@ -4095,6 +4139,16 @@
       ],
       "cwd": "packages/@cdk-cloudformation/bigid-datasource-s3"
     },
+    "package:cadiaz-bucket-uno-module": {
+      "name": "package:cadiaz-bucket-uno-module",
+      "description": "produce multi-language packaging for cadiaz-bucket-uno-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/cadiaz-bucket-uno-module"
+    },
     "package:cloudflare-dns-record": {
       "name": "package:cloudflare-dns-record",
       "description": "produce multi-language packaging for cloudflare-dns-record",
@@ -4834,6 +4888,16 @@
         }
       ],
       "cwd": "packages/@cdk-cloudformation/logzio-myservice-myname-module"
+    },
+    "package:mavi-pipeline-default-module": {
+      "name": "package:mavi-pipeline-default-module",
+      "description": "produce multi-language packaging for mavi-pipeline-default-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/mavi-pipeline-default-module"
     },
     "package:mongodb-atlas-cluster": {
       "name": "package:mongodb-atlas-cluster",

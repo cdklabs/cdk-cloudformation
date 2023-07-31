@@ -37,6 +37,7 @@
 /.github/workflows/release-awsqs-vpc-vpcqs-module.yml linguist-generated
 /.github/workflows/release-bigid-datasource-dynamodb.yml linguist-generated
 /.github/workflows/release-bigid-datasource-s3.yml linguist-generated
+/.github/workflows/release-cadiaz-bucket-uno-module.yml linguist-generated
 /.github/workflows/release-cloudflare-dns-record.yml linguist-generated
 /.github/workflows/release-cloudflare-loadbalancer-loadbalancer.yml linguist-generated
 /.github/workflows/release-cloudflare-loadbalancer-monitor.yml linguist-generated
@@ -111,6 +112,7 @@
 /.github/workflows/release-logzio-awssecurityhub-collector-module.yml linguist-generated
 /.github/workflows/release-logzio-kinesisshipper-kinesisshipper-module.yml linguist-generated
 /.github/workflows/release-logzio-myservice-myname-module.yml linguist-generated
+/.github/workflows/release-mavi-pipeline-default-module.yml linguist-generated
 /.github/workflows/release-mongodb-atlas-cluster.yml linguist-generated
 /.github/workflows/release-mongodb-atlas-databaseuser.yml linguist-generated
 /.github/workflows/release-mongodb-atlas-networkpeering.yml linguist-generated

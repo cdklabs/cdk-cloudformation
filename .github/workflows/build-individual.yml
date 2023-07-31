@@ -285,6 +285,16 @@ jobs:
       - run: yarn build:bigid-datasource-s3
     container:
       image: jsii/superchain:1-buster-slim-node16
+  cadiaz-bucket-uno-module:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:cadiaz-bucket-uno-module
+    container:
+      image: jsii/superchain:1-buster-slim-node16
   cloudflare-dns-record:
     runs-on: ubuntu-latest
     permissions:
@@ -1023,6 +1033,16 @@ jobs:
       - uses: actions/checkout@v3
       - run: yarn install
       - run: yarn build:logzio-myservice-myname-module
+    container:
+      image: jsii/superchain:1-buster-slim-node16
+  mavi-pipeline-default-module:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:mavi-pipeline-default-module
     container:
       image: jsii/superchain:1-buster-slim-node16
   mongodb-atlas-cluster:

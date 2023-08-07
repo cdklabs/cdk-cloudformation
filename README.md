@@ -46,7 +46,7 @@ that version from your package manager.
 
 <!--STATUS-BEGIN-->
 
-Release status for 169 libraries:
+Release status for 171 libraries:
 
 * [![alexa-ask-skill](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-alexa-ask-skill.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-alexa-ask-skill.yml)
 * [![aqua-enterprise-enforcer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml)
@@ -98,10 +98,12 @@ Release status for 169 libraries:
 * [![fastly-dictionary-dictionaryitem](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-dictionary-dictionaryitem.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-dictionary-dictionaryitem.yml)
 * [![fastly-logging-s3](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-logging-s3.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-logging-s3.yml)
 * [![fastly-logging-splunk](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-logging-splunk.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-logging-splunk.yml)
+* [![fastly-services-activeversion](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-services-activeversion.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-services-activeversion.yml)
 * [![fastly-services-backend](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-services-backend.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-services-backend.yml)
 * [![fastly-services-domain](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-services-domain.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-services-domain.yml)
 * [![fastly-services-healthcheck](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-services-healthcheck.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-services-healthcheck.yml)
 * [![fastly-services-service](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-services-service.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-services-service.yml)
+* [![fastly-services-version](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-services-version.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-services-version.yml)
 * [![fastly-tls-certificate](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-tls-certificate.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-tls-certificate.yml)
 * [![fastly-tls-domain](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-tls-domain.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-tls-domain.yml)
 * [![fastly-tls-privatekeys](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-tls-privatekeys.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-fastly-tls-privatekeys.yml)

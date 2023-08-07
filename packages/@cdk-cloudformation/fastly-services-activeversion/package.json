@@ -1,7 +1,7 @@
 {
-  "name": "@cdk-cloudformation/fastly-tls-domain",
-  "description": "Manage the activation of a Tls Domain",
-  "version": "1.3.0-alpha.7",
+  "name": "@cdk-cloudformation/fastly-services-activeversion",
+  "description": "Manage a Fastly service active version.",
+  "version": "1.1.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -19,14 +19,14 @@
     "cloudformation-registry",
     "l1",
     "fastly",
-    "tls",
-    "domain"
+    "services",
+    "activeversion"
   ],
   "homepage": "https://github.com/aws-ia/cloudformation-fastly-resource-providers",
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation.git",
-    "directory": "packages/@cdk-cloudformation/fastly-tls-domain"
+    "directory": "packages/@cdk-cloudformation/fastly-services-activeversion"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -37,19 +37,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.fastly_tls_domain",
+        "package": "io.github.cdklabs.cdk_cloudformation.fastly_services_activeversion",
         "maven": {
           "groupId": "io.github.cdklabs.cdk_cloudformation",
-          "artifactId": "fastly-tls-domain"
+          "artifactId": "fastly-services-activeversion"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-fastly-tls-domain",
-        "module": "cdk_cloudformation_fastly_tls_domain"
+        "distName": "cdk-cloudformation-fastly-services-activeversion",
+        "module": "cdk_cloudformation_fastly_services_activeversion"
       },
       "dotnet": {
-        "namespace": "CdkCloudFormation.FastlyTlsDomain",
-        "packageId": "CdkCloudFormation.FastlyTlsDomain"
+        "namespace": "CdkCloudFormation.FastlyServicesActiveVersion",
+        "packageId": "CdkCloudFormation.FastlyServicesActiveVersion"
       }
     },
     "tsc": {

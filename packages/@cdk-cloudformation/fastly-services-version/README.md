@@ -1,13 +1,13 @@
-# fastly-services-healthcheck
+# fastly-services-version
 
-> AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `Fastly::Services::Healthcheck` v1.4.0.
+> AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `Fastly::Services::Version` v1.1.0.
 
 [L1 construct]: https://docs.aws.amazon.com/cdk/latest/guide/constructs.html
 [AWS CloudFormation Registry]: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html
 
 ## Description
 
-Manage a Fastly service health check.
+Manage a Fastly service version.
 
 ## References
 
@@ -20,7 +20,7 @@ In order to use this library, you will need to activate this AWS CloudFormation 
 
 ```sh
 aws cloudformation activate-type \
-  --type-name Fastly::Services::Healthcheck \
+  --type-name Fastly::Services::Version \
   --publisher-id c830e97710da0c9954d80ba8df021e5439e7134b \
   --type RESOURCE \
   --execution-role-arn ROLE-ARN
@@ -30,7 +30,7 @@ Alternatively:
 
 ```sh
 aws cloudformation activate-type \
-  --public-type-arn arn:aws:cloudformation:us-east-1::type/resource/c830e97710da0c9954d80ba8df021e5439e7134b/Fastly-Services-Healthcheck \
+  --public-type-arn arn:aws:cloudformation:us-east-1::type/resource/c830e97710da0c9954d80ba8df021e5439e7134b/Fastly-Services-Version \
   --execution-role-arn ROLE-ARN
 ```
 
@@ -38,10 +38,10 @@ You can find more information about activating this type in the [AWS CloudFormat
 
 ## Feedback
 
-This library is auto-generated and published to all supported programming languages by the [cdklabs/cdk-cloudformation] project based on the API schema published for `Fastly::Services::Healthcheck`.
+This library is auto-generated and published to all supported programming languages by the [cdklabs/cdk-cloudformation] project based on the API schema published for `Fastly::Services::Version`.
 
-* Issues related to this generated library should be [reported here](https://github.com/cdklabs/cdk-cloudformation/issues/new?title=Issue+with+%40cdk-cloudformation%2Ffastly-services-healthcheck+v1.4.0).
-* Issues related to `Fastly::Services::Healthcheck` should be reported to the [publisher](https://github.com/aws-ia/cloudformation-fastly-resource-providers).
+* Issues related to this generated library should be [reported here](https://github.com/cdklabs/cdk-cloudformation/issues/new?title=Issue+with+%40cdk-cloudformation%2Ffastly-services-version+v1.1.0).
+* Issues related to `Fastly::Services::Version` should be reported to the [publisher](https://github.com/aws-ia/cloudformation-fastly-resource-providers).
 
 [cdklabs/cdk-cloudformation]: https://github.com/cdklabs/cdk-cloudformation
 

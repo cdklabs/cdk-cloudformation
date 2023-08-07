@@ -26,12 +26,17 @@ export interface CfnDomainProps {
   /**
    * @schema CfnDomainProps#VersionId
    */
-  readonly versionId: string;
+  readonly versionId: number;
 
   /**
    * @schema CfnDomainProps#Version
    */
-  readonly version?: string;
+  readonly version?: number;
+
+  /**
+   * @schema CfnDomainProps#Service
+   */
+  readonly service?: string;
 
   /**
    * @schema CfnDomainProps#DomainName
@@ -67,6 +72,7 @@ export function toJson_CfnDomainProps(obj: CfnDomainProps | undefined): Record<s
     'ServiceId': obj.serviceId,
     'VersionId': obj.versionId,
     'Version': obj.version,
+    'Service': obj.service,
     'DomainName': obj.domainName,
     'CreatedAt': obj.createdAt?.toISOString(),
     'UpdatedAt': obj.updatedAt?.toISOString(),

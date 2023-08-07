@@ -202,6 +202,9 @@ junit.xml
 /packages/@cdk-cloudformation/fastly-logging-splunk/dist/
 /packages/@cdk-cloudformation/fastly-logging-splunk/lib/
 !/.github/workflows/release-fastly-logging-splunk.yml
+/packages/@cdk-cloudformation/fastly-services-activeversion/dist/
+/packages/@cdk-cloudformation/fastly-services-activeversion/lib/
+!/.github/workflows/release-fastly-services-activeversion.yml
 /packages/@cdk-cloudformation/fastly-services-backend/dist/
 /packages/@cdk-cloudformation/fastly-services-backend/lib/
 !/.github/workflows/release-fastly-services-backend.yml
@@ -214,6 +217,9 @@ junit.xml
 /packages/@cdk-cloudformation/fastly-services-service/dist/
 /packages/@cdk-cloudformation/fastly-services-service/lib/
 !/.github/workflows/release-fastly-services-service.yml
+/packages/@cdk-cloudformation/fastly-services-version/dist/
+/packages/@cdk-cloudformation/fastly-services-version/lib/
+!/.github/workflows/release-fastly-services-version.yml
 /packages/@cdk-cloudformation/fastly-tls-certificate/dist/
 /packages/@cdk-cloudformation/fastly-tls-certificate/lib/
 !/.github/workflows/release-fastly-tls-certificate.yml

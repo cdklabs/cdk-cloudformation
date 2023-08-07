@@ -59,10 +59,12 @@
 /.github/workflows/release-fastly-dictionary-dictionaryitem.yml linguist-generated
 /.github/workflows/release-fastly-logging-s3.yml linguist-generated
 /.github/workflows/release-fastly-logging-splunk.yml linguist-generated
+/.github/workflows/release-fastly-services-activeversion.yml linguist-generated
 /.github/workflows/release-fastly-services-backend.yml linguist-generated
 /.github/workflows/release-fastly-services-domain.yml linguist-generated
 /.github/workflows/release-fastly-services-healthcheck.yml linguist-generated
 /.github/workflows/release-fastly-services-service.yml linguist-generated
+/.github/workflows/release-fastly-services-version.yml linguist-generated
 /.github/workflows/release-fastly-tls-certificate.yml linguist-generated
 /.github/workflows/release-fastly-tls-domain.yml linguist-generated
 /.github/workflows/release-fastly-tls-privatekeys.yml linguist-generated

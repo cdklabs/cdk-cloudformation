@@ -624,6 +624,18 @@
         }
       ]
     },
+    "build:fastly-services-activeversion": {
+      "name": "build:fastly-services-activeversion",
+      "description": "build fastly-services-activeversion",
+      "steps": [
+        {
+          "spawn": "compile:fastly-services-activeversion"
+        },
+        {
+          "spawn": "package:fastly-services-activeversion"
+        }
+      ]
+    },
     "build:fastly-services-backend": {
       "name": "build:fastly-services-backend",
       "description": "build fastly-services-backend",
@@ -669,6 +681,18 @@
         },
         {
           "spawn": "package:fastly-services-service"
+        }
+      ]
+    },
+    "build:fastly-services-version": {
+      "name": "build:fastly-services-version",
+      "description": "build fastly-services-version",
+      "steps": [
+        {
+          "spawn": "compile:fastly-services-version"
+        },
+        {
+          "spawn": "package:fastly-services-version"
         }
       ]
     },
@@ -2617,6 +2641,16 @@
       ],
       "cwd": "packages/@cdk-cloudformation/fastly-logging-splunk"
     },
+    "compile:fastly-services-activeversion": {
+      "name": "compile:fastly-services-activeversion",
+      "description": "compile fastly-services-activeversion with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/fastly-services-activeversion"
+    },
     "compile:fastly-services-backend": {
       "name": "compile:fastly-services-backend",
       "description": "compile fastly-services-backend with JSII",
@@ -2656,6 +2690,16 @@
         }
       ],
       "cwd": "packages/@cdk-cloudformation/fastly-services-service"
+    },
+    "compile:fastly-services-version": {
+      "name": "compile:fastly-services-version",
+      "description": "compile fastly-services-version with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/fastly-services-version"
     },
     "compile:fastly-tls-certificate": {
       "name": "compile:fastly-tls-certificate",
@@ -4359,6 +4403,16 @@
       ],
       "cwd": "packages/@cdk-cloudformation/fastly-logging-splunk"
     },
+    "package:fastly-services-activeversion": {
+      "name": "package:fastly-services-activeversion",
+      "description": "produce multi-language packaging for fastly-services-activeversion",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/fastly-services-activeversion"
+    },
     "package:fastly-services-backend": {
       "name": "package:fastly-services-backend",
       "description": "produce multi-language packaging for fastly-services-backend",
@@ -4398,6 +4452,16 @@
         }
       ],
       "cwd": "packages/@cdk-cloudformation/fastly-services-service"
+    },
+    "package:fastly-services-version": {
+      "name": "package:fastly-services-version",
+      "description": "produce multi-language packaging for fastly-services-version",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/fastly-services-version"
     },
     "package:fastly-tls-certificate": {
       "name": "package:fastly-tls-certificate",

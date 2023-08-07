@@ -10,9 +10,9 @@
   "Visibility": "PUBLIC",
   "SourceUrl": "https://github.com/aws-ia/cloudformation-fastly-resource-providers.git",
   "DocumentationUrl": "https://github.com/aws-ia/cloudformation-fastly-resource-providers",
-  "TimeCreated": "2023-03-24T00:05:10.105Z",
+  "TimeCreated": "2023-08-05T02:03:45.531Z",
   "ConfigurationSchema": "{\n    \"properties\": {\n        \"FastlyAccess\": {\n            \"$ref\": \"#/definitions/FastlyAccess\"\n        }\n    },\n    \"additionalProperties\": false,\n    \"required\": [\n        \"FastlyAccess\"\n    ],\n    \"definitions\": {\n        \"FastlyAccess\": {\n            \"description\": \"Properties needed to access Fastly.\",\n            \"type\": \"object\",\n            \"properties\": {\n                \"Token\": {\n                    \"type\": \"string\",\n                    \"description\": \"API token used to access Fastly\"\n                }\n            },\n            \"required\": [\n                \"Token\"\n            ],\n            \"additionalProperties\": false\n        }\n    },\n    \"typeName\": \"Fastly::Dictionary::DictionaryItem\"\n}",
   "PublisherId": "c830e97710da0c9954d80ba8df021e5439e7134b",
-  "LatestPublicVersion": "1.4.0",
+  "LatestPublicVersion": "1.5.0",
   "IsActivated": false
 }

@@ -9,9 +9,9 @@
   "RequiredActivatedTypes": [],
   "Visibility": "PUBLIC",
   "SourceUrl": "https://developer.fastly.com/reference/api/logging/s3/",
-  "TimeCreated": "2023-03-23T15:40:11.775Z",
+  "TimeCreated": "2023-08-04T23:55:33.877Z",
   "ConfigurationSchema": "{\n    \"properties\": {\n        \"FastlyAccess\": {\n            \"$ref\": \"#/definitions/FastlyAccess\"\n        }\n    },\n    \"additionalProperties\": false,\n    \"required\": [\n        \"FastlyAccess\"\n    ],\n    \"definitions\": {\n        \"FastlyAccess\": {\n            \"description\": \"Properties needed to access Fastly.\",\n            \"type\": \"object\",\n            \"properties\": {\n                \"Token\": {\n                    \"type\": \"string\",\n                    \"description\": \"API token used to access Fastly\"\n                }\n            },\n            \"required\": [\n                \"Token\"\n            ],\n            \"additionalProperties\": false\n        }\n    },\n    \"typeName\": \"Fastly::Logging::S3\"\n}",
   "PublisherId": "c830e97710da0c9954d80ba8df021e5439e7134b",
-  "LatestPublicVersion": "1.1.0",
+  "LatestPublicVersion": "1.3.0",
   "IsActivated": false
 }

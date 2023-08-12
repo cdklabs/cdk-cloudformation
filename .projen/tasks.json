@@ -5707,19 +5707,7 @@
           "exec": "yarn upgrade npm-check-updates"
         },
         {
-          "exec": "npm-check-updates --dep dev --upgrade --target=minor"
-        },
-        {
-          "exec": "npm-check-updates --dep bundle --upgrade --target=minor"
-        },
-        {
-          "exec": "npm-check-updates --dep peer --upgrade --target=minor"
-        },
-        {
-          "exec": "npm-check-updates --dep prod --upgrade --target=minor"
-        },
-        {
-          "exec": "npm-check-updates --dep optional --upgrade --target=minor"
+          "exec": "npm-check-updates --upgrade --target=minor --filter=@types/jest,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,aws-cdk-github-oidc,aws-cdk-lib,aws-sdk,case,cdk-import,cdklabs-projen-project-types,constructs,eslint-import-resolver-node,eslint-import-resolver-typescript,eslint-plugin-import,eslint,jest,jest-junit,jsii,jsii-pacmak,npm-check-updates,projen,standard-version,ts-jest,ts-node,typescript"
         },
         {
           "exec": "yarn install --check-files"
@@ -5743,7 +5731,7 @@
       },
       "steps": [
         {
-          "exec": "yarn upgrade "
+          "exec": "yarn upgrade npm-check-updates"
         },
         {
           "exec": "npm-check-updates --filter=cdklabs-projen-project-types,projen --upgrade"
@@ -5752,7 +5740,7 @@
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade "
+          "exec": "yarn upgrade cdklabs-projen-project-types projen"
         },
         {
           "exec": "npx projen"

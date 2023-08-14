@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/newrelic-observability-dashboards",
   "description": "CRUD operations for New Relic Dashboards via the NerdGraph API",
-  "version": "1.2.0-alpha.7",
+  "version": "1.0.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -22,7 +22,7 @@
     "observability",
     "dashboards"
   ],
-  "homepage": "https://github.com/newrelic-experimental/newrelic-cloudformation-resource-providers-dashboards",
+  "homepage": "https://github.com/newrelic/newrelic-cloudformation-resource-providers-dashboards",
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation.git",

@@ -1440,6 +1440,66 @@
         }
       ]
     },
+    "build:newrelic-observability-ainotificationsdestination": {
+      "name": "build:newrelic-observability-ainotificationsdestination",
+      "description": "build newrelic-observability-ainotificationsdestination",
+      "steps": [
+        {
+          "spawn": "compile:newrelic-observability-ainotificationsdestination"
+        },
+        {
+          "spawn": "package:newrelic-observability-ainotificationsdestination"
+        }
+      ]
+    },
+    "build:newrelic-observability-aiworkflows": {
+      "name": "build:newrelic-observability-aiworkflows",
+      "description": "build newrelic-observability-aiworkflows",
+      "steps": [
+        {
+          "spawn": "compile:newrelic-observability-aiworkflows"
+        },
+        {
+          "spawn": "package:newrelic-observability-aiworkflows"
+        }
+      ]
+    },
+    "build:newrelic-observability-alertsmutingrule": {
+      "name": "build:newrelic-observability-alertsmutingrule",
+      "description": "build newrelic-observability-alertsmutingrule",
+      "steps": [
+        {
+          "spawn": "compile:newrelic-observability-alertsmutingrule"
+        },
+        {
+          "spawn": "package:newrelic-observability-alertsmutingrule"
+        }
+      ]
+    },
+    "build:newrelic-observability-alertsnrqlcondition": {
+      "name": "build:newrelic-observability-alertsnrqlcondition",
+      "description": "build newrelic-observability-alertsnrqlcondition",
+      "steps": [
+        {
+          "spawn": "compile:newrelic-observability-alertsnrqlcondition"
+        },
+        {
+          "spawn": "package:newrelic-observability-alertsnrqlcondition"
+        }
+      ]
+    },
+    "build:newrelic-observability-alertspolicy": {
+      "name": "build:newrelic-observability-alertspolicy",
+      "description": "build newrelic-observability-alertspolicy",
+      "steps": [
+        {
+          "spawn": "compile:newrelic-observability-alertspolicy"
+        },
+        {
+          "spawn": "package:newrelic-observability-alertspolicy"
+        }
+      ]
+    },
     "build:newrelic-observability-dashboards": {
       "name": "build:newrelic-observability-dashboards",
       "description": "build newrelic-observability-dashboards",
@@ -3321,6 +3381,56 @@
       ],
       "cwd": "packages/@cdk-cloudformation/newrelic-observability-ainotificationschannel"
     },
+    "compile:newrelic-observability-ainotificationsdestination": {
+      "name": "compile:newrelic-observability-ainotificationsdestination",
+      "description": "compile newrelic-observability-ainotificationsdestination with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/newrelic-observability-ainotificationsdestination"
+    },
+    "compile:newrelic-observability-aiworkflows": {
+      "name": "compile:newrelic-observability-aiworkflows",
+      "description": "compile newrelic-observability-aiworkflows with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/newrelic-observability-aiworkflows"
+    },
+    "compile:newrelic-observability-alertsmutingrule": {
+      "name": "compile:newrelic-observability-alertsmutingrule",
+      "description": "compile newrelic-observability-alertsmutingrule with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/newrelic-observability-alertsmutingrule"
+    },
+    "compile:newrelic-observability-alertsnrqlcondition": {
+      "name": "compile:newrelic-observability-alertsnrqlcondition",
+      "description": "compile newrelic-observability-alertsnrqlcondition with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/newrelic-observability-alertsnrqlcondition"
+    },
+    "compile:newrelic-observability-alertspolicy": {
+      "name": "compile:newrelic-observability-alertspolicy",
+      "description": "compile newrelic-observability-alertspolicy with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/newrelic-observability-alertspolicy"
+    },
     "compile:newrelic-observability-dashboards": {
       "name": "compile:newrelic-observability-dashboards",
       "description": "compile newrelic-observability-dashboards with JSII",
@@ -5082,6 +5192,56 @@
         }
       ],
       "cwd": "packages/@cdk-cloudformation/newrelic-observability-ainotificationschannel"
+    },
+    "package:newrelic-observability-ainotificationsdestination": {
+      "name": "package:newrelic-observability-ainotificationsdestination",
+      "description": "produce multi-language packaging for newrelic-observability-ainotificationsdestination",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/newrelic-observability-ainotificationsdestination"
+    },
+    "package:newrelic-observability-aiworkflows": {
+      "name": "package:newrelic-observability-aiworkflows",
+      "description": "produce multi-language packaging for newrelic-observability-aiworkflows",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/newrelic-observability-aiworkflows"
+    },
+    "package:newrelic-observability-alertsmutingrule": {
+      "name": "package:newrelic-observability-alertsmutingrule",
+      "description": "produce multi-language packaging for newrelic-observability-alertsmutingrule",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/newrelic-observability-alertsmutingrule"
+    },
+    "package:newrelic-observability-alertsnrqlcondition": {
+      "name": "package:newrelic-observability-alertsnrqlcondition",
+      "description": "produce multi-language packaging for newrelic-observability-alertsnrqlcondition",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/newrelic-observability-alertsnrqlcondition"
+    },
+    "package:newrelic-observability-alertspolicy": {
+      "name": "package:newrelic-observability-alertspolicy",
+      "description": "produce multi-language packaging for newrelic-observability-alertspolicy",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/newrelic-observability-alertspolicy"
     },
     "package:newrelic-observability-dashboards": {
       "name": "package:newrelic-observability-dashboards",

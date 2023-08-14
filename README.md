@@ -46,7 +46,7 @@ that version from your package manager.
 
 <!--STATUS-BEGIN-->
 
-Release status for 171 libraries:
+Release status for 176 libraries:
 
 * [![alexa-ask-skill](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-alexa-ask-skill.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-alexa-ask-skill.yml)
 * [![aqua-enterprise-enforcer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml)
@@ -166,6 +166,11 @@ Release status for 171 libraries:
 * [![newrelic-cloudformation-tagging](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-cloudformation-tagging.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-cloudformation-tagging.yml)
 * [![newrelic-cloudformation-workloads](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-cloudformation-workloads.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-cloudformation-workloads.yml)
 * [![newrelic-observability-ainotificationschannel](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-observability-ainotificationschannel.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-observability-ainotificationschannel.yml)
+* [![newrelic-observability-ainotificationsdestination](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-observability-ainotificationsdestination.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-observability-ainotificationsdestination.yml)
+* [![newrelic-observability-aiworkflows](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-observability-aiworkflows.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-observability-aiworkflows.yml)
+* [![newrelic-observability-alertsmutingrule](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-observability-alertsmutingrule.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-observability-alertsmutingrule.yml)
+* [![newrelic-observability-alertsnrqlcondition](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-observability-alertsnrqlcondition.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-observability-alertsnrqlcondition.yml)
+* [![newrelic-observability-alertspolicy](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-observability-alertspolicy.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-observability-alertspolicy.yml)
 * [![newrelic-observability-dashboards](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-observability-dashboards.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-observability-dashboards.yml)
 * [![newrelic-observability-workloads](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-observability-workloads.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-observability-workloads.yml)
 * [![okta-application-application](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-okta-application-application.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-okta-application-application.yml)

@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/fastly-services-domain",
   "description": "Manage a Fastly service domain.",
-  "version": "1.4.0-alpha.7",
+  "version": "1.5.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

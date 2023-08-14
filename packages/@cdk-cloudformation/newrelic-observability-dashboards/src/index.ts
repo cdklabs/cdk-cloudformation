@@ -53,7 +53,7 @@ export function toJson_CfnDashboardsProps(obj: CfnDashboardsProps | undefined): 
  *
  * @cloudformationResource NewRelic::Observability::Dashboards
  * @stability external
- * @link https://github.com/newrelic-experimental/newrelic-cloudformation-resource-providers-dashboards
+ * @link https://github.com/newrelic/newrelic-cloudformation-resource-providers-dashboards
  */
 export class CfnDashboards extends cdk.CfnResource {
   /**
@@ -68,7 +68,7 @@ export class CfnDashboards extends cdk.CfnResource {
 
   /**
    * Attribute `NewRelic::Observability::Dashboards.Guid`
-   * @link https://github.com/newrelic-experimental/newrelic-cloudformation-resource-providers-dashboards
+   * @link https://github.com/newrelic/newrelic-cloudformation-resource-providers-dashboards
    */
   public readonly attrGuid: string;
 

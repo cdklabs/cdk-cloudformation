@@ -1185,6 +1185,56 @@ jobs:
       - run: yarn build:newrelic-observability-ainotificationschannel
     container:
       image: jsii/superchain:1-buster-slim-node16
+  newrelic-observability-ainotificationsdestination:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:newrelic-observability-ainotificationsdestination
+    container:
+      image: jsii/superchain:1-buster-slim-node16
+  newrelic-observability-aiworkflows:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:newrelic-observability-aiworkflows
+    container:
+      image: jsii/superchain:1-buster-slim-node16
+  newrelic-observability-alertsmutingrule:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:newrelic-observability-alertsmutingrule
+    container:
+      image: jsii/superchain:1-buster-slim-node16
+  newrelic-observability-alertsnrqlcondition:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:newrelic-observability-alertsnrqlcondition
+    container:
+      image: jsii/superchain:1-buster-slim-node16
+  newrelic-observability-alertspolicy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:newrelic-observability-alertspolicy
+    container:
+      image: jsii/superchain:1-buster-slim-node16
   newrelic-observability-dashboards:
     runs-on: ubuntu-latest
     permissions:

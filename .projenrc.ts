@@ -1,4 +1,5 @@
 import { CdklabsTypeScriptProject } from 'cdklabs-projen-project-types';
+import { ReleaseTrigger } from 'projen/lib/release';
 import { DeprecatedTypes } from './projenrc/deprecated-types';
 import { generatePackages, updateReadme } from './projenrc/generate-packages';
 import { UpdateRegistry } from './projenrc/update-registry';
@@ -9,6 +10,8 @@ const project = new CdklabsTypeScriptProject({
   name: 'cdk-cloudformation',
   projenrcTs: true,
   sampleCode: false,
+  // This is temporary. We are throttling Maven with our concurrent package releases
+  releaseTrigger: ReleaseTrigger.manual(),
 });
 
 project.addDevDeps('cdk-import@^0.2.112');

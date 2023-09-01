@@ -233,9 +233,7 @@ export class CloudFormationTypeProject extends Component {
     const artifactDir = 'dist';
     const releaseWorkflow = parent.github!.addWorkflow(`release-${typeNameKebab}`);
     releaseWorkflow.on({
-      push: {
-        branches: ['main'],
-      },
+      workflowDispatch: {},
     });
     releaseWorkflow.addJob('build', {
       runsOn: ['ubuntu-latest'],

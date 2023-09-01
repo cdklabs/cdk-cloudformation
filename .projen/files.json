@@ -184,7 +184,6 @@
     ".github/workflows/release-trendmicro-cloudonecontainer-helm.yml",
     ".github/workflows/release-unxpose-iam-integration-module.yml",
     ".github/workflows/release-zmk-iam-lambdabasicrole-module.yml",
-    ".github/workflows/release.yml",
     ".github/workflows/update-registry.yml",
     ".github/workflows/upgrade-cdklabs-projen-project-types-main.yml",
     ".github/workflows/upgrade-main.yml",

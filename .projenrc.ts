@@ -1,5 +1,4 @@
 import { CdklabsTypeScriptProject } from 'cdklabs-projen-project-types';
-import { ReleasableCommits } from 'projen';
 import { DeprecatedTypes } from './projenrc/deprecated-types';
 import { generatePackages, updateReadme } from './projenrc/generate-packages';
 import { UpdateRegistry } from './projenrc/update-registry';
@@ -10,7 +9,6 @@ const project = new CdklabsTypeScriptProject({
   name: 'cdk-cloudformation',
   projenrcTs: true,
   sampleCode: false,
-  releasableCommits: ReleasableCommits.featuresAndFixes(),
 });
 
 project.addDevDeps('cdk-import@^0.2.112');

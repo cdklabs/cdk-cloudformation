@@ -185,6 +185,7 @@
 /.github/workflows/release-trendmicro-cloudonecontainer-helm.yml linguist-generated
 /.github/workflows/release-unxpose-iam-integration-module.yml linguist-generated
 /.github/workflows/release-zmk-iam-lambdabasicrole-module.yml linguist-generated
+/.github/workflows/release.yml linguist-generated
 /.github/workflows/update-registry.yml linguist-generated
 /.github/workflows/upgrade-cdklabs-projen-project-types-main.yml linguist-generated
 /.github/workflows/upgrade-main.yml linguist-generated

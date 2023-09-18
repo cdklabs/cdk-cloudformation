@@ -53,7 +53,7 @@ export function toJson_CfnWorkloadsProps(obj: CfnWorkloadsProps | undefined): Re
  *
  * @cloudformationResource NewRelic::Observability::Workloads
  * @stability external
- * @link https://github.com/newrelic-experimental/newrelic-cloudformation-resource-providers-workloads
+ * @link https://github.com/newrelice/newrelic-cloudformation-resource-providers-workloads
  */
 export class CfnWorkloads extends cdk.CfnResource {
   /**
@@ -68,7 +68,7 @@ export class CfnWorkloads extends cdk.CfnResource {
 
   /**
    * Attribute `NewRelic::Observability::Workloads.Guid`
-   * @link https://github.com/newrelic-experimental/newrelic-cloudformation-resource-providers-workloads
+   * @link https://github.com/newrelice/newrelic-cloudformation-resource-providers-workloads
    */
   public readonly attrGuid: string;
 

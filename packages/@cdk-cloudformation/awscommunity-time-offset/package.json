@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/awscommunity-time-offset",
   "description": "Creates a time based resource with an offset from the provided time or now.",
-  "version": "1.4.0-alpha.7",
+  "version": "1.6.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

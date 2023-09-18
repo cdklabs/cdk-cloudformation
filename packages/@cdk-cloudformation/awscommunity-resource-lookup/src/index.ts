@@ -3,7 +3,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as constructs from 'constructs';
 
 /**
- * This resource uses AWS Cloud Control API to perform a lookup of a resource of a given type (such as, `AWS::EC2::VPC`) in your AWS account and current region, based on a query you specify.  If only one match is found, this resource returns the primary identifier of the resource (in the `AWS::EC2::VPC` example, the ID of the VPC), that you can then reference in your template with the `Fn::GetAtt` intrinsic function.  Specify resource type search targets that are supported by Cloud Control API.
+ * This resource uses AWS Cloud Control API to perform a lookup of a resource of a given type (such as, `AWS::EC2::VPC`) in your AWS account and current region, based on a query you specify.  If only one match is found, this resource returns the primary ID of the resource (in the `AWS::EC2::VPC` example, the VPC ID) and the resource properties, that you can then reference in your template with the `Fn::GetAtt` intrinsic function.  Specify resource type search targets that are supported by Cloud Control API.
  *
  * @schema CfnLookupProps
  */
@@ -100,6 +100,11 @@ export class CfnLookup extends cdk.CfnResource {
    * @link https://github.com/aws-cloudformation/community-registry-extensions/tree/main/resources/Resource_Lookup
    */
   public readonly attrResourceLookupId: string;
+  /**
+   * Attribute `AwsCommunity::Resource::Lookup.ResourceProperties`
+   * @link https://github.com/aws-cloudformation/community-registry-extensions/tree/main/resources/Resource_Lookup
+   */
+  public readonly attrResourceProperties: string;
 
   /**
    * Create a new `AwsCommunity::Resource::Lookup`.
@@ -115,5 +120,6 @@ export class CfnLookup extends cdk.CfnResource {
 
     this.attrResourceIdentifier = cdk.Token.asString(this.getAtt('ResourceIdentifier'));
     this.attrResourceLookupId = cdk.Token.asString(this.getAtt('ResourceLookupId'));
+    this.attrResourceProperties = cdk.Token.asString(this.getAtt('ResourceProperties'));
   }
 }

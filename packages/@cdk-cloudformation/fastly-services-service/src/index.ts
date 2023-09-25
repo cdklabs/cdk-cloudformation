@@ -112,12 +112,12 @@ export class CfnService extends cdk.CfnResource {
    * Attribute `Fastly::Services::Service.ActiveVersionId`
    * @link https://github.com/aws-ia/cloudformation-fastly-resource-providers.git
    */
-  public readonly attrActiveVersionId: string;
+  public readonly attrActiveVersionId: number;
   /**
    * Attribute `Fastly::Services::Service.LatestVersionId`
    * @link https://github.com/aws-ia/cloudformation-fastly-resource-providers.git
    */
-  public readonly attrLatestVersionId: string;
+  public readonly attrLatestVersionId: number;
 
   /**
    * Create a new `Fastly::Services::Service`.
@@ -131,7 +131,7 @@ export class CfnService extends cdk.CfnResource {
 
     this.props = props;
 
-    this.attrActiveVersionId = cdk.Token.asString(this.getAtt('ActiveVersionId'));
-    this.attrLatestVersionId = cdk.Token.asString(this.getAtt('LatestVersionId'));
+    this.attrActiveVersionId = cdk.Token.asNumber(this.getAtt('ActiveVersionId'));
+    this.attrLatestVersionId = cdk.Token.asNumber(this.getAtt('LatestVersionId'));
   }
 }

@@ -76,7 +76,7 @@ export interface CfnHealthcheckProps {
   /**
    * @schema CfnHealthcheckProps#VersionId
    */
-  readonly versionId: string;
+  readonly versionId: number;
 
   /**
    * @schema CfnHealthcheckProps#HealthcheckName

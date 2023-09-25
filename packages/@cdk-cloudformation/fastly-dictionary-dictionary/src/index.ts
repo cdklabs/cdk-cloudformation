@@ -30,11 +30,11 @@ export interface CfnDictionaryProps {
   readonly serviceId: string;
 
   /**
-   * Alphanumeric string identifying the service version.
+   * Id identifying the service version.
    *
    * @schema CfnDictionaryProps#VersionId
    */
-  readonly versionId: string;
+  readonly versionId: number;
 
 }
 

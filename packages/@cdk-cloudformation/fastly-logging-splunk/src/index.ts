@@ -107,11 +107,11 @@ export interface CfnSplunkProps {
   readonly serviceId?: string;
 
   /**
-   * Alphanumeric string identifying the service version.
+   * Id identifying the service version.
    *
    * @schema CfnSplunkProps#VersionId
    */
-  readonly versionId?: string;
+  readonly versionId?: number;
 
   /**
    * Integer identifying a domain version. Read-only.

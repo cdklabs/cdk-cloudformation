@@ -432,6 +432,18 @@
         }
       ]
     },
+    "build:cyral-sidecar-deployment-module": {
+      "name": "build:cyral-sidecar-deployment-module",
+      "description": "build cyral-sidecar-deployment-module",
+      "steps": [
+        {
+          "spawn": "compile:cyral-sidecar-deployment-module"
+        },
+        {
+          "spawn": "package:cyral-sidecar-deployment-module"
+        }
+      ]
+    },
     "build:databricks-clusters-cluster": {
       "name": "build:databricks-clusters-cluster",
       "description": "build databricks-clusters-cluster",
@@ -2541,6 +2553,16 @@
       ],
       "cwd": "packages/@cdk-cloudformation/confluentcloud-iam-serviceaccount"
     },
+    "compile:cyral-sidecar-deployment-module": {
+      "name": "compile:cyral-sidecar-deployment-module",
+      "description": "compile cyral-sidecar-deployment-module with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/cyral-sidecar-deployment-module"
+    },
     "compile:databricks-clusters-cluster": {
       "name": "compile:databricks-clusters-cluster",
       "description": "compile databricks-clusters-cluster with JSII",
@@ -4352,6 +4374,16 @@
         }
       ],
       "cwd": "packages/@cdk-cloudformation/confluentcloud-iam-serviceaccount"
+    },
+    "package:cyral-sidecar-deployment-module": {
+      "name": "package:cyral-sidecar-deployment-module",
+      "description": "produce multi-language packaging for cyral-sidecar-deployment-module",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/cyral-sidecar-deployment-module"
     },
     "package:databricks-clusters-cluster": {
       "name": "package:databricks-clusters-cluster",

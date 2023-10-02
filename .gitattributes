@@ -43,6 +43,7 @@
 /.github/workflows/release-cloudflare-loadbalancer-monitor.yml linguist-generated
 /.github/workflows/release-cloudflare-loadbalancer-pool.yml linguist-generated
 /.github/workflows/release-confluentcloud-iam-serviceaccount.yml linguist-generated
+/.github/workflows/release-cyral-sidecar-deployment-module.yml linguist-generated
 /.github/workflows/release-databricks-clusters-cluster.yml linguist-generated
 /.github/workflows/release-databricks-clusters-job.yml linguist-generated
 /.github/workflows/release-datadog-dashboards-dashboard.yml linguist-generated

@@ -345,6 +345,16 @@ jobs:
       - run: yarn build:confluentcloud-iam-serviceaccount
     container:
       image: jsii/superchain:1-buster-slim-node16
+  cyral-sidecar-deployment-module:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:cyral-sidecar-deployment-module
+    container:
+      image: jsii/superchain:1-buster-slim-node16
   databricks-clusters-cluster:
     runs-on: ubuntu-latest
     permissions:

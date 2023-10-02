@@ -1,7 +1,7 @@
 {
-  "name": "@cdk-cloudformation/awscommunity-time-offset",
-  "description": "Creates a time based resource with an offset from the provided time or now.",
-  "version": "1.7.0-alpha.7",
+  "name": "@cdk-cloudformation/cyral-sidecar-deployment-module",
+  "description": "Schema for Module Fragment of type Cyral::Sidecar::Deployment::MODULE",
+  "version": "1.3.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -18,15 +18,15 @@
     "cfn-resources",
     "cloudformation-registry",
     "l1",
-    "awscommunity",
-    "time",
-    "offset"
+    "cyral",
+    "sidecar",
+    "deployment",
+    "module"
   ],
-  "homepage": "https://github.com/aws-cloudformation/community-registry-extensions.git",
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation.git",
-    "directory": "packages/@cdk-cloudformation/awscommunity-time-offset"
+    "directory": "packages/@cdk-cloudformation/cyral-sidecar-deployment-module"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -37,19 +37,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.awscommunity_time_offset",
+        "package": "io.github.cdklabs.cdk_cloudformation.cyral_sidecar_deployment_module",
         "maven": {
           "groupId": "io.github.cdklabs.cdk_cloudformation",
-          "artifactId": "awscommunity-time-offset"
+          "artifactId": "cyral-sidecar-deployment-module"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-awscommunity-time-offset",
-        "module": "cdk_cloudformation_awscommunity_time_offset"
+        "distName": "cdk-cloudformation-cyral-sidecar-deployment-module",
+        "module": "cdk_cloudformation_cyral_sidecar_deployment_module"
       },
       "dotnet": {
-        "namespace": "CdkCloudFormation.AwsCommunityTimeOffset",
-        "packageId": "CdkCloudFormation.AwsCommunityTimeOffset"
+        "namespace": "CdkCloudFormation.CyralSidecarDeploymentMODULE",
+        "packageId": "CdkCloudFormation.CyralSidecarDeploymentMODULE"
       }
     },
     "tsc": {

@@ -46,7 +46,7 @@ that version from your package manager.
 
 <!--STATUS-BEGIN-->
 
-Release status for 176 libraries:
+Release status for 177 libraries:
 
 * [![alexa-ask-skill](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-alexa-ask-skill.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-alexa-ask-skill.yml)
 * [![aqua-enterprise-enforcer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml)
@@ -82,6 +82,7 @@ Release status for 176 libraries:
 * [![cloudflare-loadbalancer-monitor](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-cloudflare-loadbalancer-monitor.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-cloudflare-loadbalancer-monitor.yml)
 * [![cloudflare-loadbalancer-pool](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-cloudflare-loadbalancer-pool.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-cloudflare-loadbalancer-pool.yml)
 * [![confluentcloud-iam-serviceaccount](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-confluentcloud-iam-serviceaccount.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-confluentcloud-iam-serviceaccount.yml)
+* [![cyral-sidecar-deployment-module](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-cyral-sidecar-deployment-module.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-cyral-sidecar-deployment-module.yml)
 * [![databricks-clusters-cluster](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-databricks-clusters-cluster.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-databricks-clusters-cluster.yml)
 * [![databricks-clusters-job](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-databricks-clusters-job.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-databricks-clusters-job.yml)
 * [![datadog-dashboards-dashboard](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-dashboards-dashboard.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-dashboards-dashboard.yml)

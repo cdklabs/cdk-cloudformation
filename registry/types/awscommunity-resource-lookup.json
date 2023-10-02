@@ -10,8 +10,8 @@
   "Visibility": "PUBLIC",
   "SourceUrl": "https://github.com/aws-cloudformation/community-registry-extensions/tree/main/resources/Resource_Lookup",
   "DocumentationUrl": "https://github.com/aws-cloudformation/community-registry-extensions/blob/main/resources/Resource_Lookup/README.md",
-  "TimeCreated": "2023-09-14T02:23:47.924Z",
+  "TimeCreated": "2023-09-30T01:02:29.820Z",
   "PublisherId": "c830e97710da0c9954d80ba8df021e5439e7134b",
-  "LatestPublicVersion": "1.5.0",
+  "LatestPublicVersion": "1.6.0",
   "IsActivated": false
 }

@@ -1,6 +1,6 @@
 # awscommunity-s3-deletebucketcontents
 
-> AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `AwsCommunity::S3::DeleteBucketContents` v1.17.0.
+> AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `AwsCommunity::S3::DeleteBucketContents` v1.18.0.
 
 [L1 construct]: https://docs.aws.amazon.com/cdk/latest/guide/constructs.html
 [AWS CloudFormation Registry]: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html
@@ -39,7 +39,7 @@ You can find more information about activating this type in the [AWS CloudFormat
 
 This library is auto-generated and published to all supported programming languages by the [cdklabs/cdk-cloudformation] project based on the API schema published for `AwsCommunity::S3::DeleteBucketContents`.
 
-* Issues related to this generated library should be [reported here](https://github.com/cdklabs/cdk-cloudformation/issues/new?title=Issue+with+%40cdk-cloudformation%2Fawscommunity-s3-deletebucketcontents+v1.17.0).
+* Issues related to this generated library should be [reported here](https://github.com/cdklabs/cdk-cloudformation/issues/new?title=Issue+with+%40cdk-cloudformation%2Fawscommunity-s3-deletebucketcontents+v1.18.0).
 * Issues related to `AwsCommunity::S3::DeleteBucketContents` should be reported to the [publisher](https://github.com/aws-cloudformation/community-registry-extensions.git).
 
 [cdklabs/cdk-cloudformation]: https://github.com/cdklabs/cdk-cloudformation

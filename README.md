@@ -46,7 +46,7 @@ that version from your package manager.
 
 <!--STATUS-BEGIN-->
 
-Release status for 177 libraries:
+Release status for 178 libraries:
 
 * [![alexa-ask-skill](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-alexa-ask-skill.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-alexa-ask-skill.yml)
 * [![aqua-enterprise-enforcer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml)
@@ -88,6 +88,7 @@ Release status for 177 libraries:
 * [![datadog-dashboards-dashboard](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-dashboards-dashboard.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-dashboards-dashboard.yml)
 * [![datadog-integrations-aws](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-integrations-aws.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-integrations-aws.yml)
 * [![datadog-monitors-downtime](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-monitors-downtime.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-monitors-downtime.yml)
+* [![datadog-monitors-downtimeschedule](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-monitors-downtimeschedule.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-monitors-downtimeschedule.yml)
 * [![datadog-monitors-monitor](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-monitors-monitor.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-monitors-monitor.yml)
 * [![datadog-slos-slo](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-slos-slo.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-slos-slo.yml)
 * [![dynatrace-configuration-dashboard](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-dynatrace-configuration-dashboard.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-dynatrace-configuration-dashboard.yml)

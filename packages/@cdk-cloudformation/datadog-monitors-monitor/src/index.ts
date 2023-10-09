@@ -3,7 +3,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as constructs from 'constructs';
 
 /**
- * Datadog Monitor 4.6.0
+ * Datadog Monitor 4.7.0
  *
  * @schema CfnMonitorProps
  */
@@ -156,6 +156,13 @@ export interface MonitorOptions {
   readonly enableLogsSample?: boolean;
 
   /**
+   * Whether or not to send a list of samples when the monitor triggers. This is only used by CI Test and Pipeline monitors.
+   *
+   * @schema MonitorOptions#EnableSamples
+   */
+  readonly enableSamples?: boolean;
+
+  /**
    * Message to include with a re-notification when renotify_interval is set
    *
    * @schema MonitorOptions#EscalationMessage
@@ -168,6 +175,16 @@ export interface MonitorOptions {
    * @schema MonitorOptions#EvaluationDelay
    */
   readonly evaluationDelay?: number;
+
+  /**
+   * The time span after which groups with missing data are dropped from the monitor state.
+   * The minimum value is one hour, and the maximum value is 72 hours.
+   * Example values are: "60m", "1h", and "2d".
+   * This option is only available for APM Trace Analytics, Audit Trail, CI, Error Tracking, Event, Logs, and RUM monitors.
+   *
+   * @schema MonitorOptions#GroupRetentionDuration
+   */
+  readonly groupRetentionDuration?: string;
 
   /**
    * Whether or not to include triggering tags into notification title
@@ -212,11 +229,32 @@ export interface MonitorOptions {
   readonly notifyAudit?: boolean;
 
   /**
+   * Controls what granularity a monitor alerts on. Only available for monitors with groupings.
+   * For instance, a monitor grouped by `cluster`, `namespace`, and `pod` can be configured to only notify on each new `cluster` violating the alert conditions by setting `notify_by` to `["cluster"]`.
+   * Tags mentioned in `notify_by` must be a subset of the grouping tags in the query.
+   * For example, a query grouped by `cluster` and `namespace` cannot notify on `region`.
+   * Setting `notify_by` to `[*]` configures the monitor to notify as a simple-alert.
+   *
+   * @schema MonitorOptions#NotifyBy
+   */
+  readonly notifyBy?: string[];
+
+  /**
    * Whether or not to notify when data stops reporting
    *
    * @schema MonitorOptions#NotifyNoData
    */
   readonly notifyNoData?: boolean;
+
+  /**
+   * @schema MonitorOptions#NotificationPresetName
+   */
+  readonly notificationPresetName?: MonitorNotificationPresetName;
+
+  /**
+   * @schema MonitorOptions#OnMissingData
+   */
+  readonly onMissingData?: MonitorOnMissingData;
 
   /**
    * Number of minutes after the last notification before the monitor re-notifies on the current status
@@ -231,6 +269,11 @@ export interface MonitorOptions {
    * @schema MonitorOptions#RequireFullWindow
    */
   readonly requireFullWindow?: boolean;
+
+  /**
+   * @schema MonitorOptions#SchedulingOptions
+   */
+  readonly schedulingOptions?: MonitorSchedulingOptions;
 
   /**
    * ID of the corresponding synthetics check
@@ -305,17 +348,23 @@ export function toJson_MonitorOptions(obj: MonitorOptions | undefined): Record<s
   if (obj === undefined) { return undefined; }
   const result = {
     'EnableLogsSample': obj.enableLogsSample,
+    'EnableSamples': obj.enableSamples,
     'EscalationMessage': obj.escalationMessage,
     'EvaluationDelay': obj.evaluationDelay,
+    'GroupRetentionDuration': obj.groupRetentionDuration,
     'IncludeTags': obj.includeTags,
     'Locked': obj.locked,
     'MinLocationFailed': obj.minLocationFailed,
     'NewHostDelay': obj.newHostDelay,
     'NoDataTimeframe': obj.noDataTimeframe,
     'NotifyAudit': obj.notifyAudit,
+    'NotifyBy': obj.notifyBy?.map(y => y),
     'NotifyNoData': obj.notifyNoData,
+    'NotificationPresetName': obj.notificationPresetName,
+    'OnMissingData': obj.onMissingData,
     'RenotifyInterval': obj.renotifyInterval,
     'RequireFullWindow': obj.requireFullWindow,
+    'SchedulingOptions': toJson_MonitorSchedulingOptions(obj.schedulingOptions),
     'SyntheticsCheckID': obj.syntheticsCheckId,
     'Thresholds': toJson_MonitorThresholds(obj.thresholds),
     'ThresholdWindows': toJson_MonitorThresholdWindows(obj.thresholdWindows),
@@ -370,6 +419,69 @@ export enum CfnMonitorPropsType {
   /** ci-tests alert */
   CI_TESTS_ALERT = "ci-tests alert",
 }
+
+/**
+ * Toggles the display of additional content sent in the monitor notification.
+ *
+ * @schema MonitorNotificationPresetName
+ */
+export enum MonitorNotificationPresetName {
+  /** show_all */
+  SHOW_ALL = "show_all",
+  /** hide_query */
+  HIDE_QUERY = "hide_query",
+  /** hide_handles */
+  HIDE_HANDLES = "hide_handles",
+  /** hide_all */
+  HIDE_ALL = "hide_all",
+}
+
+/**
+ * Controls how groups or monitors are treated if an evaluation does not return any data points.
+ * The default option results in different behavior depending on the monitor query type.
+ * For monitors using Count queries, an empty monitor evaluation is treated as 0 and is compared to the threshold conditions.
+ * For monitors using any query type other than Count, for example Gauge, Measure, or Rate, the monitor shows the last known status.
+ * This option is only available for APM Trace Analytics, Audit Trail, CI, Error Tracking, Event, Logs, and RUM monitors.
+ *
+ * @schema MonitorOnMissingData
+ */
+export enum MonitorOnMissingData {
+  /** default */
+  DEFAULT = "default",
+  /** show_no_data */
+  SHOW_NO_DATA = "show_no_data",
+  /** show_and_notify_no_data */
+  SHOW_AND_NOTIFY_NO_DATA = "show_and_notify_no_data",
+  /** resolve */
+  RESOLVE = "resolve",
+}
+
+/**
+ * Configuration options for scheduling.
+ *
+ * @schema MonitorSchedulingOptions
+ */
+export interface MonitorSchedulingOptions {
+  /**
+   * @schema MonitorSchedulingOptions#EvaluationWindow
+   */
+  readonly evaluationWindow?: MonitorSchedulingOptionsEvaluationWindow;
+
+}
+
+/**
+ * Converts an object of type 'MonitorSchedulingOptions' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_MonitorSchedulingOptions(obj: MonitorSchedulingOptions | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'EvaluationWindow': toJson_MonitorSchedulingOptionsEvaluationWindow(obj.evaluationWindow),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
 
 /**
  * @schema MonitorThresholds
@@ -476,6 +588,51 @@ export enum MonitorOptionsRenotifyStatuses {
   /** warn */
   WARN = "warn",
 }
+
+/**
+ * Configuration options for the evaluation window. If `hour_starts` is set, no other fields may be set. Otherwise, `day_starts` and `month_starts` must be set together.
+ *
+ * @schema MonitorSchedulingOptionsEvaluationWindow
+ */
+export interface MonitorSchedulingOptionsEvaluationWindow {
+  /**
+   * The time of the day at which a one day cumulative evaluation window starts. Must be defined in UTC time in `HH:mm` format.
+   *
+   * @schema MonitorSchedulingOptionsEvaluationWindow#DayStarts
+   */
+  readonly dayStarts?: string;
+
+  /**
+   * The day of the month at which a one month cumulative evaluation window starts.
+   *
+   * @schema MonitorSchedulingOptionsEvaluationWindow#MonthStarts
+   */
+  readonly monthStarts?: number;
+
+  /**
+   * The minute of the hour at which a one hour cumulative evaluation window starts.
+   *
+   * @schema MonitorSchedulingOptionsEvaluationWindow#HourStarts
+   */
+  readonly hourStarts?: number;
+
+}
+
+/**
+ * Converts an object of type 'MonitorSchedulingOptionsEvaluationWindow' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_MonitorSchedulingOptionsEvaluationWindow(obj: MonitorSchedulingOptionsEvaluationWindow | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'DayStarts': obj.dayStarts,
+    'MonthStarts': obj.monthStarts,
+    'HourStarts': obj.hourStarts,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
 
 
 /**

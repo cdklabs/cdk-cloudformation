@@ -405,6 +405,16 @@ jobs:
       - run: yarn build:datadog-monitors-downtime
     container:
       image: jsii/superchain:1-buster-slim-node16
+  datadog-monitors-downtimeschedule:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build:datadog-monitors-downtimeschedule
+    container:
+      image: jsii/superchain:1-buster-slim-node16
   datadog-monitors-monitor:
     runs-on: ubuntu-latest
     permissions:

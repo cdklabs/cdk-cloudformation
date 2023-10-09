@@ -1,13 +1,13 @@
-# datadog-monitors-monitor
+# datadog-monitors-downtimeschedule
 
-> AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `Datadog::Monitors::Monitor` v4.7.0.
+> AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `Datadog::Monitors::DowntimeSchedule` v1.0.0.
 
 [L1 construct]: https://docs.aws.amazon.com/cdk/latest/guide/constructs.html
 [AWS CloudFormation Registry]: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html
 
 ## Description
 
-Datadog Monitor 4.7.0
+Datadog Downtime Schedule 1.0.0
 
 ## Usage
 
@@ -15,7 +15,7 @@ In order to use this library, you will need to activate this AWS CloudFormation 
 
 ```sh
 aws cloudformation activate-type \
-  --type-name Datadog::Monitors::Monitor \
+  --type-name Datadog::Monitors::DowntimeSchedule \
   --publisher-id 7171b96e5d207b947eb72ca9ce05247c246de623 \
   --type RESOURCE \
   --execution-role-arn ROLE-ARN
@@ -25,7 +25,7 @@ Alternatively:
 
 ```sh
 aws cloudformation activate-type \
-  --public-type-arn arn:aws:cloudformation:us-east-1::type/resource/7171b96e5d207b947eb72ca9ce05247c246de623/Datadog-Monitors-Monitor \
+  --public-type-arn arn:aws:cloudformation:us-east-1::type/resource/7171b96e5d207b947eb72ca9ce05247c246de623/Datadog-Monitors-DowntimeSchedule \
   --execution-role-arn ROLE-ARN
 ```
 
@@ -33,10 +33,10 @@ You can find more information about activating this type in the [AWS CloudFormat
 
 ## Feedback
 
-This library is auto-generated and published to all supported programming languages by the [cdklabs/cdk-cloudformation] project based on the API schema published for `Datadog::Monitors::Monitor`.
+This library is auto-generated and published to all supported programming languages by the [cdklabs/cdk-cloudformation] project based on the API schema published for `Datadog::Monitors::DowntimeSchedule`.
 
-* Issues related to this generated library should be [reported here](https://github.com/cdklabs/cdk-cloudformation/issues/new?title=Issue+with+%40cdk-cloudformation%2Fdatadog-monitors-monitor+v4.7.0).
-* Issues related to `Datadog::Monitors::Monitor` should be reported to the [publisher](undefined).
+* Issues related to this generated library should be [reported here](https://github.com/cdklabs/cdk-cloudformation/issues/new?title=Issue+with+%40cdk-cloudformation%2Fdatadog-monitors-downtimeschedule+v1.0.0).
+* Issues related to `Datadog::Monitors::DowntimeSchedule` should be reported to the [publisher](undefined).
 
 [cdklabs/cdk-cloudformation]: https://github.com/cdklabs/cdk-cloudformation
 

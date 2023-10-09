@@ -504,6 +504,18 @@
         }
       ]
     },
+    "build:datadog-monitors-downtimeschedule": {
+      "name": "build:datadog-monitors-downtimeschedule",
+      "description": "build datadog-monitors-downtimeschedule",
+      "steps": [
+        {
+          "spawn": "compile:datadog-monitors-downtimeschedule"
+        },
+        {
+          "spawn": "package:datadog-monitors-downtimeschedule"
+        }
+      ]
+    },
     "build:datadog-monitors-monitor": {
       "name": "build:datadog-monitors-monitor",
       "description": "build datadog-monitors-monitor",
@@ -2613,6 +2625,16 @@
       ],
       "cwd": "packages/@cdk-cloudformation/datadog-monitors-downtime"
     },
+    "compile:datadog-monitors-downtimeschedule": {
+      "name": "compile:datadog-monitors-downtimeschedule",
+      "description": "compile datadog-monitors-downtimeschedule with JSII",
+      "steps": [
+        {
+          "exec": "jsii"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/datadog-monitors-downtimeschedule"
+    },
     "compile:datadog-monitors-monitor": {
       "name": "compile:datadog-monitors-monitor",
       "description": "compile datadog-monitors-monitor with JSII",
@@ -4434,6 +4456,16 @@
         }
       ],
       "cwd": "packages/@cdk-cloudformation/datadog-monitors-downtime"
+    },
+    "package:datadog-monitors-downtimeschedule": {
+      "name": "package:datadog-monitors-downtimeschedule",
+      "description": "produce multi-language packaging for datadog-monitors-downtimeschedule",
+      "steps": [
+        {
+          "exec": "jsii-pacmak --no-npmignore"
+        }
+      ],
+      "cwd": "packages/@cdk-cloudformation/datadog-monitors-downtimeschedule"
     },
     "package:datadog-monitors-monitor": {
       "name": "package:datadog-monitors-monitor",

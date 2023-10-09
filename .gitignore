@@ -172,6 +172,9 @@ junit.xml
 /packages/@cdk-cloudformation/datadog-monitors-downtime/dist/
 /packages/@cdk-cloudformation/datadog-monitors-downtime/lib/
 !/.github/workflows/release-datadog-monitors-downtime.yml
+/packages/@cdk-cloudformation/datadog-monitors-downtimeschedule/dist/
+/packages/@cdk-cloudformation/datadog-monitors-downtimeschedule/lib/
+!/.github/workflows/release-datadog-monitors-downtimeschedule.yml
 /packages/@cdk-cloudformation/datadog-monitors-monitor/dist/
 /packages/@cdk-cloudformation/datadog-monitors-monitor/lib/
 !/.github/workflows/release-datadog-monitors-monitor.yml

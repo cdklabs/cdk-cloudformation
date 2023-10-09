@@ -1,7 +1,7 @@
 {
-  "name": "@cdk-cloudformation/datadog-monitors-monitor",
-  "description": "Datadog Monitor 4.7.0",
-  "version": "4.7.0-alpha.7",
+  "name": "@cdk-cloudformation/datadog-monitors-downtimeschedule",
+  "description": "Datadog Downtime Schedule 1.0.0",
+  "version": "1.0.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -20,12 +20,12 @@
     "l1",
     "datadog",
     "monitors",
-    "monitor"
+    "downtimeschedule"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation.git",
-    "directory": "packages/@cdk-cloudformation/datadog-monitors-monitor"
+    "directory": "packages/@cdk-cloudformation/datadog-monitors-downtimeschedule"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -36,19 +36,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.datadog_monitors_monitor",
+        "package": "io.github.cdklabs.cdk_cloudformation.datadog_monitors_downtimeschedule",
         "maven": {
           "groupId": "io.github.cdklabs.cdk_cloudformation",
-          "artifactId": "datadog-monitors-monitor"
+          "artifactId": "datadog-monitors-downtimeschedule"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-datadog-monitors-monitor",
-        "module": "cdk_cloudformation_datadog_monitors_monitor"
+        "distName": "cdk-cloudformation-datadog-monitors-downtimeschedule",
+        "module": "cdk_cloudformation_datadog_monitors_downtimeschedule"
       },
       "dotnet": {
-        "namespace": "CdkCloudFormation.DatadogMonitorsMonitor",
-        "packageId": "CdkCloudFormation.DatadogMonitorsMonitor"
+        "namespace": "CdkCloudFormation.DatadogMonitorsDowntimeSchedule",
+        "packageId": "CdkCloudFormation.DatadogMonitorsDowntimeSchedule"
       }
     },
     "tsc": {

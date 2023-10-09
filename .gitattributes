@@ -49,6 +49,7 @@
 /.github/workflows/release-datadog-dashboards-dashboard.yml linguist-generated
 /.github/workflows/release-datadog-integrations-aws.yml linguist-generated
 /.github/workflows/release-datadog-monitors-downtime.yml linguist-generated
+/.github/workflows/release-datadog-monitors-downtimeschedule.yml linguist-generated
 /.github/workflows/release-datadog-monitors-monitor.yml linguist-generated
 /.github/workflows/release-datadog-slos-slo.yml linguist-generated
 /.github/workflows/release-dynatrace-configuration-dashboard.yml linguist-generated

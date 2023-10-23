@@ -7,8 +7,8 @@
   "DeprecatedStatus": "LIVE",
   "RequiredActivatedTypes": [],
   "Visibility": "PUBLIC",
-  "TimeCreated": "2023-10-14T01:34:12.373Z",
+  "TimeCreated": "2023-10-16T18:59:59.180Z",
   "PublisherId": "c830e97710da0c9954d80ba8df021e5439e7134b",
-  "LatestPublicVersion": "1.13.0",
+  "LatestPublicVersion": "1.14.0",
   "IsActivated": false
 }

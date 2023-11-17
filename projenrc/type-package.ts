@@ -11,6 +11,8 @@ import { JobPermission } from 'projen/lib/github/workflows-model';
 import { Publisher } from 'projen/lib/release';
 import { Readme } from './readme';
 
+const JSII_VERSION = '1-bullseye-slim-node18';
+
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const CDK_VERSION = require('aws-cdk-lib/package.json').version;
 // eslint-disable-next-line @typescript-eslint/no-require-imports
@@ -216,7 +218,7 @@ export class CloudFormationTypeProject extends Component {
     options.buildWorkflow.addJob(typeNameKebab, {
       runsOn: ['ubuntu-latest'],
       container: {
-        image: 'jsii/superchain:1-bullseye-slim-node16',
+        image: `jsii/superchain:${JSII_VERSION}`,
       },
       permissions: {
         contents: JobPermission.READ,
@@ -241,7 +243,7 @@ export class CloudFormationTypeProject extends Component {
     releaseWorkflow.addJob('build', {
       runsOn: ['ubuntu-latest'],
       container: {
-        image: 'jsii/superchain:1-buster-slim-node16',
+        image: `jsii/superchain:${JSII_VERSION}`,
       },
       permissions: {
         contents: JobPermission.READ,

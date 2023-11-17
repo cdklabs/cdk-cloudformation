@@ -216,7 +216,7 @@ export class CloudFormationTypeProject extends Component {
     options.buildWorkflow.addJob(typeNameKebab, {
       runsOn: ['ubuntu-latest'],
       container: {
-        image: 'jsii/superchain:1-buster-slim-node16',
+        image: 'jsii/superchain:1-bullseye-slim-node16',
       },
       permissions: {
         contents: JobPermission.READ,

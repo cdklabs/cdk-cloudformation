@@ -11,7 +11,7 @@ import { JobPermission } from 'projen/lib/github/workflows-model';
 import { Publisher } from 'projen/lib/release';
 import { Readme } from './readme';
 
-const JSII_VERSION = '1-bullseye-slim-node18';
+const JSII_VERSION = '1-bullseye-slim';
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const CDK_VERSION = require('aws-cdk-lib/package.json').version;

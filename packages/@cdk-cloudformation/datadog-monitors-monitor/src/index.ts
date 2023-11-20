@@ -3,7 +3,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as constructs from 'constructs';
 
 /**
- * Datadog Monitor 4.7.0
+ * Datadog Monitor 4.7.1
  *
  * @schema CfnMonitorProps
  */
@@ -222,7 +222,7 @@ export interface MonitorOptions {
   readonly noDataTimeframe?: number;
 
   /**
-   * Whether or not to notify tagged users when changes are made to the monitor
+   * A Boolean indicating whether tagged users is notified on changes to this monitor.
    *
    * @schema MonitorOptions#NotifyAudit
    */

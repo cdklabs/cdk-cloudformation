@@ -795,9 +795,9 @@
   integrity sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==
 
 "@types/node@*":
-  version "20.9.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.9.5.tgz#bb441014bcb91c63742b0e1fe25b902f5d581faa"
-  integrity sha512-Uq2xbNq0chGg+/WQEU0LJTSs/1nKxz6u1iemLcGomkSnKokbW1fbLqc3HOqCf2JP7KjlL4QkS7oZZTrOQHQYgQ==
+  version "20.10.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.10.0.tgz#16ddf9c0a72b832ec4fcce35b8249cf149214617"
+  integrity sha512-D0WfRmU9TQ8I9PFx9Yc+EBHw+vSpIub4IDvQivcp26PtPrdMGAq5SDcpXEo/epqa/DXotVpekHiLNTg3iaKXBQ==
   dependencies:
     undici-types "~5.26.4"
 
@@ -1402,9 +1402,9 @@ case@1.6.3, case@^1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-import@^0.2.112:
-  version "0.2.570"
-  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.570.tgz#1cfbb57d454ba4d2b4ec4907687e7dad08542780"
-  integrity sha512-rzBbkaX0tdnhLY/sFmT/FB+w/CcVhXhRKEBi7pNlDGiPFmR12vFlXmqM9dNI/2dCZEKZrSqnmHjgmFalHOPpGA==
+  version "0.2.571"
+  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.571.tgz#34993a20a69baf2ea3a45d5b157ffc61470bb553"
+  integrity sha512-PSW7Ll2NeR1UF81EadwE7gpEGhvxosp3HNOW+3F233vattF/9R9aagK/Fexfs1udAU7iGVtnMr3zEs3RfDvTVQ==
   dependencies:
     aws-cdk-lib "^2.110.1"
     aws-sdk "^2.1501.0"
@@ -1417,9 +1417,9 @@ cdk-import@^0.2.112:
     proxy-agent "^5.0.0"
 
 cdklabs-projen-project-types@^0.1.180:
-  version "0.1.181"
-  resolved "https://registry.yarnpkg.com/cdklabs-projen-project-types/-/cdklabs-projen-project-types-0.1.181.tgz#249b3c95940209c1b85e7c8acc075d6db2f16ac9"
-  integrity sha512-3O7urQS6vVQdPW5MY3BxM1eBcci242AD8KPRTuswm4ytCP+2IN+F8q3VyJFrSV3z1d6E2nP9068peIdHplXo5g==
+  version "0.1.182"
+  resolved "https://registry.yarnpkg.com/cdklabs-projen-project-types/-/cdklabs-projen-project-types-0.1.182.tgz#7a2e019a7ab7ee44d98bdf2659acaffacc75afe6"
+  integrity sha512-P6bGGg/noqlx2TxqN+GzqYpZAUNbw0KSyRZsdh/U/i2neIOuVfUIZby9/tJMsF+ALtkI9eksPE37z2SfaRZlpg==
   dependencies:
     yaml "^2.3.4"
 
@@ -2005,9 +2005,9 @@ downlevel-dts@^0.11.0:
     typescript next
 
 electron-to-chromium@^1.4.535:
-  version "1.4.593"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.593.tgz#f71b157f7382f3d3a164f73ff2da772d4b3fd984"
-  integrity sha512-c7+Hhj87zWmdpmjDONbvNKNo24tvmD4mjal1+qqTYTrlF0/sNpAcDlU0Ki84ftA/5yj3BF2QhSGEC0Rky6larg==
+  version "1.4.594"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.594.tgz#f69f207fba80735a44a988df42f3f439115d0515"
+  integrity sha512-xT1HVAu5xFn7bDfkjGQi9dNpMqGchUkebwf1GL7cZN32NSwwlHRPMSDJ1KN6HkS0bWUtndbSQZqvpQftKG2uFQ==
 
 emittery@^0.8.1:
   version "0.8.1"
@@ -3706,9 +3706,9 @@ jsii-rosetta@^1.92.0:
     yargs "^16.2.0"
 
 jsii-srcmak@^0.1.973:
-  version "0.1.975"
-  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.975.tgz#91931f92e32c6d4b928821a3da13836fddb45384"
-  integrity sha512-Q/6WU02eViAzkpLeHad/cqeJuLu9mp74EycYuQ9OWK/gg7GNXn1K21WV0Wwj6dMN9Us+uvFIK+9eqFuBvfdT8Q==
+  version "0.1.976"
+  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.976.tgz#1f758ac3b15be6a8ead41efac92d3078ec896249"
+  integrity sha512-DGkMkpRDb1Qnz8jPsSXS/VC2HXjvi5QCHN4JbbDo5/HNAJwNVcNq6wElJ4B4l6dIqjnxwW1LDUuw+5ZSa7QYsA==
   dependencies:
     fs-extra "^9.1.0"
     jsii "~5.2.32"
@@ -5499,9 +5499,9 @@ typedarray@^0.0.6:
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
 typescript@next:
-  version "5.4.0-dev.20231123"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.4.0-dev.20231123.tgz#d11e62ed47d03c2abd289c3da140a0292860e099"
-  integrity sha512-1GVUhgKMReyH9AycWDCzAWFgL/0lhNajKlU37LYZjAzVsIDks8eW8kv9NEkXMk5HrN1Nb+7cO+QqZDC20u3lvQ==
+  version "5.4.0-dev.20231124"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.4.0-dev.20231124.tgz#462b98de9a72bac6a7dca35aa573fb131a58f6eb"
+  integrity sha512-XGgnXNUfccFaEWyWZ0i/JuPNbHzutjS/vKgpz5TpEjmwFYwyQMSr06Nicv0HJBw/8WQ7m8EoKbyyXN8wdWmoVg==
 
 typescript@~3.9.10:
   version "3.9.10"

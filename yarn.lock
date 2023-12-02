@@ -334,10 +334,10 @@
   resolved "https://registry.yarnpkg.com/@eslint-community/regexpp/-/regexpp-4.10.0.tgz#548f6de556857c8bb73bbee70c35dc82a2e74d63"
   integrity sha512-Cu96Sd2By9mCNTx2iyKOmq10v22jUVQv0lQnlGNy16oE9589yE+QADPbrMGCkA51cKZSg3Pu/aTJVTGfL/qjUA==
 
-"@eslint/eslintrc@^2.1.3":
-  version "2.1.3"
-  resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-2.1.3.tgz#797470a75fe0fbd5a53350ee715e85e87baff22d"
-  integrity sha512-yZzuIG+jnVu6hNSzFEN07e8BxF3uAzYtQb6uDkaYZLo6oYZDCq454c5kB8zxnzfCYyP4MIuyBn10L0DqwujTmA==
+"@eslint/eslintrc@^2.1.4":
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-2.1.4.tgz#388a269f0f25c1b6adc317b5a2c55714894c70ad"
+  integrity sha512-269Z39MS6wVJtsoUl10L60WdkhJVdPG24Q4eZTH3nnF6lpvSShEK3wQjDX9JRWAUPvPh7COouPpU9IrqaZFvtQ==
   dependencies:
     ajv "^6.12.4"
     debug "^4.3.2"
@@ -349,10 +349,10 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@eslint/js@8.54.0":
-  version "8.54.0"
-  resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.54.0.tgz#4fab9a2ff7860082c304f750e94acd644cf984cf"
-  integrity sha512-ut5V+D+fOoWPgGGNj83GGjnntO39xDy6DWxO0wb7Jp3DcMX0TfIqdzHF85VTQkerdyGmuuMD9AKAo5KiNlf/AQ==
+"@eslint/js@8.55.0":
+  version "8.55.0"
+  resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.55.0.tgz#b721d52060f369aa259cf97392403cb9ce892ec6"
+  integrity sha512-qQfo2mxH5yVom1kacMtZZJFVdW+E70mqHMJvVg6WTLo+VBuQJ4TojZlfWBjK0ve5BdEeNAVxOsl/nvNMpJOaJA==
 
 "@humanwhocodes/config-array@^0.11.13":
   version "0.11.13"
@@ -795,9 +795,9 @@
   integrity sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==
 
 "@types/node@*":
-  version "20.10.1"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.10.1.tgz#d2c96f356c3125fedc983d74c424910c3767141c"
-  integrity sha512-T2qwhjWwGH81vUEx4EXmBKsTJRXFXNZTL4v0gi01+zyBmCwzE6TyHszqX01m+QHTEq+EZNo13NeJIdEqf+Myrg==
+  version "20.10.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.10.2.tgz#32a5e8228357f57714ad28d52229ab04880c2814"
+  integrity sha512-37MXfxkb0vuIlRKHNxwCkb60PNBpR94u4efQuN4JgIAm66zfCDXGSAFCef9XUWFovX2R1ok6Z7MHhtdVXXkkIw==
   dependencies:
     undici-types "~5.26.4"
 
@@ -1182,10 +1182,10 @@ aws-cdk-github-oidc@^2.2.0:
   resolved "https://registry.yarnpkg.com/aws-cdk-github-oidc/-/aws-cdk-github-oidc-2.4.1.tgz#8fcb134401f3a15d74260e5bcc58ed05dabac2a0"
   integrity sha512-zKQYPGyf5f6APG76OpOxW6P7KGY/fC6VhN1ZullxySSu6RroUH9VtVl+cJ8hYes5XvEE/ZDpx2h2fPtNwZrcVQ==
 
-aws-cdk-lib@2.111.0, aws-cdk-lib@^2.111.0:
-  version "2.111.0"
-  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.111.0.tgz#3d26b2e4a2a2252c341ee6d3333a4182b960c479"
-  integrity sha512-E+uBDYRAwl/KFRcpTT2B4Fz50MvVqEIcOUDBo/xK8z5TWorRkqVQry7PCts3hb7dLcGgFVONes8dLuzmarx0mQ==
+aws-cdk-lib@2.113.0, aws-cdk-lib@^2.112.0, aws-cdk-lib@^2.113.0:
+  version "2.113.0"
+  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.113.0.tgz#dacc835f11c6df14bbe04746085f070bdde99eac"
+  integrity sha512-wZYooUd8nb3ADFtg1dSnsRt1MJmeqEK8cKOnPfCGCfm852YnVdb0qIEclURCQ4ygDJSuqiw9CE+xWVeTQTG6Dw==
   dependencies:
     "@aws-cdk/asset-awscli-v1" "^2.2.201"
     "@aws-cdk/asset-kubectl-v20" "^2.1.2"
@@ -1193,7 +1193,7 @@ aws-cdk-lib@2.111.0, aws-cdk-lib@^2.111.0:
     "@balena/dockerignore" "^1.0.2"
     case "1.6.3"
     fs-extra "^11.1.1"
-    ignore "^5.2.4"
+    ignore "^5.3.0"
     jsonschema "^1.4.1"
     minimatch "^3.1.2"
     punycode "^2.3.1"
@@ -1201,10 +1201,10 @@ aws-cdk-lib@2.111.0, aws-cdk-lib@^2.111.0:
     table "^6.8.1"
     yaml "1.10.2"
 
-aws-sdk@^2.1508.0, aws-sdk@^2.1509.0:
-  version "2.1509.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1509.0.tgz#1e5bea1a0befc0e5368db7a63cda0e4ec543e9f7"
-  integrity sha512-5h27GXv5/M1Cfgw5StYqTyCesnqscez3QOsKGnShCXP6saGkSEvV3TUHTXQBqdfsrBmz5hVCa8doqP3r3yJD/w==
+aws-sdk@^2.1509.0, aws-sdk@^2.1510.0:
+  version "2.1510.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1510.0.tgz#c190ccda07ae72bc1edcd7a6e9c28e48c44ebd3e"
+  integrity sha512-XQj3QINBNseA5G9Vaa/iihNz3HCrzeyhxrOUjuH0AVxYqa5Q4cxaQhrWiAiUndtO2F70nfukEYe4cCUoTalUoQ==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"
@@ -1402,15 +1402,15 @@ case@1.6.3, case@^1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-import@^0.2.112:
-  version "0.2.577"
-  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.577.tgz#48b9ae40d17c46860c1cc416c53c667ddb66ab89"
-  integrity sha512-V+nVna0t5o1qp7v3cXL1/cnDXS5LJ6fjHu5aqtoGua9SLlaL8IAxfTx0PTcjXx+lWJL2JysQnpcUJrYEqgDtYw==
+  version "0.2.578"
+  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.578.tgz#9c33ef29ae95851bf1867221bd22da7aaf25eeb8"
+  integrity sha512-ckStcu5vbFsWUpydATdjElKhtcesghULvzMtZD3P1Kg1eW2TTbvZ99EQ/ldbwgH5B4jm9JBUveZ7Hufk8Gdhuw==
   dependencies:
-    aws-cdk-lib "^2.111.0"
-    aws-sdk "^2.1508.0"
+    aws-cdk-lib "^2.112.0"
+    aws-sdk "^2.1509.0"
     case "^1.6.3"
     constructs "^10"
-    jsii-srcmak "^0.1.981"
+    jsii-srcmak "^0.1.982"
     json2jsii "^0.4.1"
     minimist "^1.2.8"
     minimist-subcommand "^3.0.2"
@@ -2005,9 +2005,9 @@ downlevel-dts@^0.11.0:
     typescript next
 
 electron-to-chromium@^1.4.535:
-  version "1.4.600"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.600.tgz#10ad8a5edc3f92a9a70b4453157ec2261c6db088"
-  integrity sha512-KD6CWjf1BnQG+NsXuyiTDDT1eV13sKuYsOUioXkQweYTQIbgHkXPry9K7M+7cKtYHnSUPitVaLrXYB1jTkkYrw==
+  version "1.4.601"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.601.tgz#cac69868548aee89961ffe63ff5a7716f0685b75"
+  integrity sha512-SpwUMDWe9tQu8JX5QCO1+p/hChAi9AE9UpoC3rcHVc+gdCGlbT3SGb5I1klgb952HRIyvt9wZhSz9bNBYz9swA==
 
 emittery@^0.8.1:
   version "0.8.1"
@@ -2208,14 +2208,14 @@ eslint-visitor-keys@^3.3.0, eslint-visitor-keys@^3.4.1, eslint-visitor-keys@^3.4
   integrity sha512-wpc+LXeiyiisxPlEkUzU6svyS1frIO3Mgxj1fdy7Pm8Ygzguax2N3Fa/D/ag1WqbOprdI+uY6wMUl8/a2G+iag==
 
 eslint@^8:
-  version "8.54.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-8.54.0.tgz#588e0dd4388af91a2e8fa37ea64924074c783537"
-  integrity sha512-NY0DfAkM8BIZDVl6PgSa1ttZbx3xHgJzSNJKYcQglem6CppHyMhRIQkBVSSMaSRnLhig3jsDbEzOjwCVt4AmmA==
+  version "8.55.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-8.55.0.tgz#078cb7b847d66f2c254ea1794fa395bf8e7e03f8"
+  integrity sha512-iyUUAM0PCKj5QpwGfmCAG9XXbZCWsqP/eWAWrG/W0umvjuLRBECwSFdt+rCntju0xEH7teIABPwXpahftIaTdA==
   dependencies:
     "@eslint-community/eslint-utils" "^4.2.0"
     "@eslint-community/regexpp" "^4.6.1"
-    "@eslint/eslintrc" "^2.1.3"
-    "@eslint/js" "8.54.0"
+    "@eslint/eslintrc" "^2.1.4"
+    "@eslint/js" "8.55.0"
     "@humanwhocodes/config-array" "^0.11.13"
     "@humanwhocodes/module-importer" "^1.0.1"
     "@nodelib/fs.walk" "^1.2.8"
@@ -2856,7 +2856,7 @@ ieee754@^1.1.4:
   resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.2.1.tgz#8eb7a10a63fff25d15a57b001586d177d1b0d352"
   integrity sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==
 
-ignore@^5.2.0, ignore@^5.2.4:
+ignore@^5.2.0, ignore@^5.2.4, ignore@^5.3.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.3.0.tgz#67418ae40d34d6999c95ff56016759c718c82f78"
   integrity sha512-g7dmpshy+gD7mh88OC9NwSGTKoc3kyLAZQRU1mt53Aw/vnvfXnbC+F/7F7QoYVKbV+KNvJx8wArewKy1vXMtlg==
@@ -3705,10 +3705,10 @@ jsii-rosetta@^1.92.0:
     workerpool "^6.5.1"
     yargs "^16.2.0"
 
-jsii-srcmak@^0.1.981:
-  version "0.1.982"
-  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.982.tgz#0edbbe88d1c3bf2c1a0be8ad2c8b1cb312d09478"
-  integrity sha512-CCgXzgzuzaZ2LERKThLBU/tBVrXGwiE7KBzbwM6+1qLvEJHoGU1KR3dZC7OPMCnANuSxm5L/zec5GGWx1Mbj2A==
+jsii-srcmak@^0.1.982:
+  version "0.1.983"
+  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.983.tgz#a29a6dc0f7bcf660c10a7535165d0e7775366f09"
+  integrity sha512-PmgNqBHpwJIHSkx7M5NeCIvJIwU/kOiolnnwCq+iRskSsKq7AFaKnT4IHm4g/eHtp8Gr+6uN1t2V74IGm/rrrw==
   dependencies:
     fs-extra "^9.1.0"
     jsii "~5.2.35"

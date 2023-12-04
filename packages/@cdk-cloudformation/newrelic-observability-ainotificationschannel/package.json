@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/newrelic-observability-ainotificationschannel",
   "description": "CRUD operations for New Relic AI Notifications Channels via the NerdGraph API",
-  "version": "1.0.0-alpha.7",
+  "version": "1.0.1-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

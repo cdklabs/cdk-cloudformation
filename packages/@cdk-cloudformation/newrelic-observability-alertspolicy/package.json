@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/newrelic-observability-alertspolicy",
   "description": "CRUD operations for New Relic Alerts Policies via the NerdGraph API",
-  "version": "1.0.0-alpha.7",
+  "version": "1.0.1-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

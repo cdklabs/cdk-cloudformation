@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/okta-policy-policy",
   "description": "Manages an Okta Policy",
-  "version": "1.2.0-alpha.7",
+  "version": "1.4.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

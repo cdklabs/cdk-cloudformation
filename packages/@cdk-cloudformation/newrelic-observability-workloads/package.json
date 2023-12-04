@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/newrelic-observability-workloads",
   "description": "CRUD operations for New Relic Workloads via the NerdGraph API",
-  "version": "1.0.0-alpha.7",
+  "version": "1.0.1-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -22,7 +22,7 @@
     "observability",
     "workloads"
   ],
-  "homepage": "https://github.com/newrelice/newrelic-cloudformation-resource-providers-workloads",
+  "homepage": "https://github.com/newrelic/newrelic-cloudformation-resource-providers-workloads",
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation.git",

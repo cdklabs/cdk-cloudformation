@@ -9,9 +9,9 @@
   "RequiredActivatedTypes": [],
   "Visibility": "PUBLIC",
   "SourceUrl": "https://github.com/newrelic/newrelic-cloudformation-resource-providers-alertsmutingrule.git",
-  "TimeCreated": "2023-08-08T16:00:09.157Z",
+  "TimeCreated": "2023-11-28T22:15:32.242Z",
   "ConfigurationSchema": "{\n    \"properties\": {\n        \"Endpoint\": {\n            \"type\": \"string\",\n            \"default\": \"https://api.newrelic.com/graphql\"\n        },\n        \"APIKey\": {\n            \"type\": \"string\"\n        },\n        \"AccountID\": {\n            \"type\": \"string\"\n        },\n        \"LogLevel\": {\n            \"type\": \"string\",\n            \"default\": \"info\"\n        }\n    },\n    \"additionalProperties\": false,\n    \"required\": [\n        \"APIKey\",\n        \"AccountID\"\n    ],\n    \"definitions\": {},\n    \"typeName\": \"NewRelic::Observability::AlertsMutingRule\"\n}",
   "PublisherId": "759f81f13de188bad7cafc8a2d50910f7d5e2bcc",
-  "LatestPublicVersion": "1.0.0",
+  "LatestPublicVersion": "1.0.1",
   "IsActivated": false
 }

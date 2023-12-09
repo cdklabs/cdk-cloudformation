@@ -44,7 +44,7 @@ export function toJson_CfnPrivateKeysProps(obj: CfnPrivateKeysProps | undefined)
  */
 export enum CfnPrivateKeysPropsType {
   /** tls_private_key */
-  TLS_PRIVATE_KEY = "tls_private_key",
+  TLS_UNDERSCORE_PRIVATE_UNDERSCORE_KEY = "tls_private_key",
 }
 
 /**

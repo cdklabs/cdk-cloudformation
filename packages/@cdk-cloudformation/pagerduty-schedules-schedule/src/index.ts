@@ -467,7 +467,7 @@ export function toJson_RenderedScheduleEntries(obj: RenderedScheduleEntries | un
  */
 export enum UserType {
   /** user_reference */
-  USER_REFERENCE = "user_reference",
+  USER_UNDERSCORE_REFERENCE = "user_reference",
 }
 
 /**
@@ -477,7 +477,7 @@ export enum UserType {
  */
 export enum TeamType {
   /** team_reference */
-  TEAM_REFERENCE = "team_reference",
+  TEAM_UNDERSCORE_REFERENCE = "team_reference",
   /** team */
   TEAM = "team",
 }
@@ -489,9 +489,9 @@ export enum TeamType {
  */
 export enum RestrictionType {
   /** daily_restriction */
-  DAILY_RESTRICTION = "daily_restriction",
+  DAILY_UNDERSCORE_RESTRICTION = "daily_restriction",
   /** weekly_restriction */
-  WEEKLY_RESTRICTION = "weekly_restriction",
+  WEEKLY_UNDERSCORE_RESTRICTION = "weekly_restriction",
 }
 
 

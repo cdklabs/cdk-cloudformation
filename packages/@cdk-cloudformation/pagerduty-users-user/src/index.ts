@@ -104,17 +104,17 @@ export enum CfnUserPropsRole {
   /** admin */
   ADMIN = "admin",
   /** limited_user */
-  LIMITED_USER = "limited_user",
+  LIMITED_UNDERSCORE_USER = "limited_user",
   /** observer */
   OBSERVER = "observer",
   /** owner */
   OWNER = "owner",
   /** read_only_user */
-  READ_ONLY_USER = "read_only_user",
+  READ_UNDERSCORE_ONLY_UNDERSCORE_USER = "read_only_user",
   /** restricted_access */
-  RESTRICTED_ACCESS = "restricted_access",
+  RESTRICTED_UNDERSCORE_ACCESS = "restricted_access",
   /** read_only_limited_user */
-  READ_ONLY_LIMITED_USER = "read_only_limited_user",
+  READ_UNDERSCORE_ONLY_UNDERSCORE_LIMITED_UNDERSCORE_USER = "read_only_limited_user",
   /** user */
   USER = "user",
 }
@@ -208,13 +208,13 @@ export function toJson_NotificationRule(obj: NotificationRule | undefined): Reco
  */
 export enum ContactMethodType {
   /** email_contact_method_reference */
-  EMAIL_CONTACT_METHOD_REFERENCE = "email_contact_method_reference",
+  EMAIL_UNDERSCORE_CONTACT_UNDERSCORE_METHOD_UNDERSCORE_REFERENCE = "email_contact_method_reference",
   /** phone_contact_method_reference */
-  PHONE_CONTACT_METHOD_REFERENCE = "phone_contact_method_reference",
+  PHONE_UNDERSCORE_CONTACT_UNDERSCORE_METHOD_UNDERSCORE_REFERENCE = "phone_contact_method_reference",
   /** push_notification_contact_method_reference */
-  PUSH_NOTIFICATION_CONTACT_METHOD_REFERENCE = "push_notification_contact_method_reference",
+  PUSH_UNDERSCORE_NOTIFICATION_UNDERSCORE_CONTACT_UNDERSCORE_METHOD_UNDERSCORE_REFERENCE = "push_notification_contact_method_reference",
   /** sms_contact_method_reference */
-  SMS_CONTACT_METHOD_REFERENCE = "sms_contact_method_reference",
+  SMS_UNDERSCORE_CONTACT_UNDERSCORE_METHOD_UNDERSCORE_REFERENCE = "sms_contact_method_reference",
 }
 
 /**
@@ -224,7 +224,7 @@ export enum ContactMethodType {
  */
 export enum NotificationRuleType {
   /** assignment_notification_rule_reference */
-  ASSIGNMENT_NOTIFICATION_RULE_REFERENCE = "assignment_notification_rule_reference",
+  ASSIGNMENT_UNDERSCORE_NOTIFICATION_UNDERSCORE_RULE_UNDERSCORE_REFERENCE = "assignment_notification_rule_reference",
 }
 
 

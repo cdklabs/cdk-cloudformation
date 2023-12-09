@@ -72,9 +72,9 @@ export enum CfnAccessTokenPropsScopes {
   /** read */
   READ = "read",
   /** post_server_item */
-  POST_SERVER_ITEM = "post_server_item",
+  POST_UNDERSCORE_SERVER_UNDERSCORE_ITEM = "post_server_item",
   /** post_client_item */
-  POST_CLIENT_ITEM = "post_client_item",
+  POST_UNDERSCORE_CLIENT_UNDERSCORE_ITEM = "post_client_item",
 }
 
 

@@ -242,23 +242,23 @@ export function toJson_WebhookRule(obj: WebhookRule | undefined): Record<string,
  */
 export enum SlackTrigger {
   /** new_item */
-  NEW_ITEM = "new_item",
+  NEW_UNDERSCORE_ITEM = "new_item",
   /** occurrence */
   OCCURRENCE = "occurrence",
   /** deploy */
   DEPLOY = "deploy",
   /** reactivated_item */
-  REACTIVATED_ITEM = "reactivated_item",
+  REACTIVATED_UNDERSCORE_ITEM = "reactivated_item",
   /** resolved_item */
-  RESOLVED_ITEM = "resolved_item",
+  RESOLVED_UNDERSCORE_ITEM = "resolved_item",
   /** new_version */
-  NEW_VERSION = "new_version",
+  NEW_UNDERSCORE_VERSION = "new_version",
   /** reopened_item */
-  REOPENED_ITEM = "reopened_item",
+  REOPENED_UNDERSCORE_ITEM = "reopened_item",
   /** occurrence_rate */
-  OCCURRENCE_RATE = "occurrence_rate",
+  OCCURRENCE_UNDERSCORE_RATE = "occurrence_rate",
   /** exp_repeat_item */
-  EXP_REPEAT_ITEM = "exp_repeat_item",
+  EXP_UNDERSCORE_REPEAT_UNDERSCORE_ITEM = "exp_repeat_item",
 }
 
 /**
@@ -268,15 +268,15 @@ export enum SlackTrigger {
  */
 export enum PagerDutyTrigger {
   /** new_item */
-  NEW_ITEM = "new_item",
+  NEW_UNDERSCORE_ITEM = "new_item",
   /** reactivated_item */
-  REACTIVATED_ITEM = "reactivated_item",
+  REACTIVATED_UNDERSCORE_ITEM = "reactivated_item",
   /** resolved_item */
-  RESOLVED_ITEM = "resolved_item",
+  RESOLVED_UNDERSCORE_ITEM = "resolved_item",
   /** occurrence_rate */
-  OCCURRENCE_RATE = "occurrence_rate",
+  OCCURRENCE_UNDERSCORE_RATE = "occurrence_rate",
   /** exp_repeat_item */
-  EXP_REPEAT_ITEM = "exp_repeat_item",
+  EXP_UNDERSCORE_REPEAT_UNDERSCORE_ITEM = "exp_repeat_item",
 }
 
 /**
@@ -313,25 +313,25 @@ export function toJson_PagerDutyConfig(obj: PagerDutyConfig | undefined): Record
  */
 export enum EmailTrigger {
   /** new_item */
-  NEW_ITEM = "new_item",
+  NEW_UNDERSCORE_ITEM = "new_item",
   /** occurrence */
   OCCURRENCE = "occurrence",
   /** deploy */
   DEPLOY = "deploy",
   /** reactivated_item */
-  REACTIVATED_ITEM = "reactivated_item",
+  REACTIVATED_UNDERSCORE_ITEM = "reactivated_item",
   /** resolved_item */
-  RESOLVED_ITEM = "resolved_item",
+  RESOLVED_UNDERSCORE_ITEM = "resolved_item",
   /** new_version */
-  NEW_VERSION = "new_version",
+  NEW_UNDERSCORE_VERSION = "new_version",
   /** reopened_item */
-  REOPENED_ITEM = "reopened_item",
+  REOPENED_UNDERSCORE_ITEM = "reopened_item",
   /** occurrence_rate */
-  OCCURRENCE_RATE = "occurrence_rate",
+  OCCURRENCE_UNDERSCORE_RATE = "occurrence_rate",
   /** exp_repeat_item */
-  EXP_REPEAT_ITEM = "exp_repeat_item",
+  EXP_UNDERSCORE_REPEAT_UNDERSCORE_ITEM = "exp_repeat_item",
   /** daily_summary */
-  DAILY_SUMMARY = "daily_summary",
+  DAILY_UNDERSCORE_SUMMARY = "daily_summary",
 }
 
 /**
@@ -341,21 +341,21 @@ export enum EmailTrigger {
  */
 export enum WebhookTrigger {
   /** new_item */
-  NEW_ITEM = "new_item",
+  NEW_UNDERSCORE_ITEM = "new_item",
   /** occurrence */
   OCCURRENCE = "occurrence",
   /** deploy */
   DEPLOY = "deploy",
   /** reactivated_item */
-  REACTIVATED_ITEM = "reactivated_item",
+  REACTIVATED_UNDERSCORE_ITEM = "reactivated_item",
   /** resolved_item */
-  RESOLVED_ITEM = "resolved_item",
+  RESOLVED_UNDERSCORE_ITEM = "resolved_item",
   /** exp_repeat_item */
-  EXP_REPEAT_ITEM = "exp_repeat_item",
+  EXP_UNDERSCORE_REPEAT_UNDERSCORE_ITEM = "exp_repeat_item",
   /** reopened_item */
-  REOPENED_ITEM = "reopened_item",
+  REOPENED_UNDERSCORE_ITEM = "reopened_item",
   /** occurrence_rate */
-  OCCURRENCE_RATE = "occurrence_rate",
+  OCCURRENCE_UNDERSCORE_RATE = "occurrence_rate",
 }
 
 /**

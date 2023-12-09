@@ -182,7 +182,7 @@ export enum CfnSchemaPropsSqlIdempotency {
   /** IDEMPOTENT */
   IDEMPOTENT = "IDEMPOTENT",
   /** RUN_ONCE */
-  RUN_ONCE = "RUN_ONCE",
+  RUN_UNDERSCORE_ONCE = "RUN_ONCE",
 }
 
 /**

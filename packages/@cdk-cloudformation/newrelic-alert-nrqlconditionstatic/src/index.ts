@@ -361,9 +361,9 @@ export enum ConditionInputSignalAggregationMethod {
   /** CADENCE */
   CADENCE = "CADENCE",
   /** EVENT_FLOW */
-  EVENT_FLOW = "EVENT_FLOW",
+  EVENT_UNDERSCORE_FLOW = "EVENT_FLOW",
   /** EVENT_TIMER */
-  EVENT_TIMER = "EVENT_TIMER",
+  EVENT_UNDERSCORE_TIMER = "EVENT_TIMER",
 }
 
 /**
@@ -373,7 +373,7 @@ export enum ConditionInputSignalAggregationMethod {
  */
 export enum ConditionInputSignalFillOption {
   /** LAST_VALUE */
-  LAST_VALUE = "LAST_VALUE",
+  LAST_UNDERSCORE_VALUE = "LAST_VALUE",
   /** NONE */
   NONE = "NONE",
   /** STATIC */
@@ -389,15 +389,15 @@ export enum ConditionInputTermsOperator {
   /** ABOVE */
   ABOVE = "ABOVE",
   /** ABOVE_OR_EQUALS */
-  ABOVE_OR_EQUALS = "ABOVE_OR_EQUALS",
+  ABOVE_UNDERSCORE_OR_UNDERSCORE_EQUALS = "ABOVE_OR_EQUALS",
   /** BELOW */
   BELOW = "BELOW",
   /** BELOW_OR_EQUALS */
-  BELOW_OR_EQUALS = "BELOW_OR_EQUALS",
+  BELOW_UNDERSCORE_OR_UNDERSCORE_EQUALS = "BELOW_OR_EQUALS",
   /** EQUALS */
   EQUALS = "EQUALS",
   /** NOT_EQUALS */
-  NOT_EQUALS = "NOT_EQUALS",
+  NOT_UNDERSCORE_EQUALS = "NOT_EQUALS",
 }
 
 /**
@@ -421,7 +421,7 @@ export enum ConditionInputTermsThresholdOccurrences {
   /** ALL */
   ALL = "ALL",
   /** AT_LEAST_ONCE */
-  AT_LEAST_ONCE = "AT_LEAST_ONCE",
+  AT_UNDERSCORE_LEAST_UNDERSCORE_ONCE = "AT_LEAST_ONCE",
 }
 
 

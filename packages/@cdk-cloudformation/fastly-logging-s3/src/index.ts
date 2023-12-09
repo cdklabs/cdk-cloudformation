@@ -258,7 +258,7 @@ export enum CfnS3PropsPlacement {
   /** none */
   NONE = "none",
   /** waf_debug */
-  WAF_DEBUG = "waf_debug",
+  WAF_UNDERSCORE_DEBUG = "waf_debug",
 }
 
 

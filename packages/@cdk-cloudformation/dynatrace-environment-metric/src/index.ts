@@ -76,125 +76,125 @@ export function toJson_CfnMetricProps(obj: CfnMetricProps | undefined): Record<s
  */
 export enum Unit {
   /** Billion (bilcount) */
-  BILLION_BILCOUNT = "Billion (bilcount)",
+  BILLION_OPEN_BRACKET_BILCOUNT_CLOSE_BRACKET = "Billion (bilcount)",
   /** Bit (bit) */
-  BIT_BIT = "Bit (bit)",
+  BIT_OPEN_BRACKET_BIT_CLOSE_BRACKET = "Bit (bit)",
   /** BitPerHour (bit/h) */
-  BIT_PER_HOUR_BIT_H = "BitPerHour (bit/h)",
+  BIT_PER_HOUR_OPEN_BRACKET_BIT_FORWARD_SLASH_H_CLOSE_BRACKET = "BitPerHour (bit/h)",
   /** BitPerMinute (bit/min) */
-  BIT_PER_MINUTE_BIT_MIN = "BitPerMinute (bit/min)",
+  BIT_PER_MINUTE_OPEN_BRACKET_BIT_FORWARD_SLASH_MIN_CLOSE_BRACKET = "BitPerMinute (bit/min)",
   /** BitPerSecond (bit/s) */
-  BIT_PER_SECOND_BIT_S = "BitPerSecond (bit/s)",
+  BIT_PER_SECOND_OPEN_BRACKET_BIT_FORWARD_SLASH_S_CLOSE_BRACKET = "BitPerSecond (bit/s)",
   /** Byte (B) */
-  BYTE_B = "Byte (B)",
+  BYTE_OPEN_BRACKET_B_CLOSE_BRACKET = "Byte (B)",
   /** BytePerHour (B/h) */
-  BYTE_PER_HOUR_B_H = "BytePerHour (B/h)",
+  BYTE_PER_HOUR_OPEN_BRACKET_B_FORWARD_SLASH_H_CLOSE_BRACKET = "BytePerHour (B/h)",
   /** BytePerMinute (B/min) */
-  BYTE_PER_MINUTE_B_MIN = "BytePerMinute (B/min)",
+  BYTE_PER_MINUTE_OPEN_BRACKET_B_FORWARD_SLASH_MIN_CLOSE_BRACKET = "BytePerMinute (B/min)",
   /** BytePerSecond (B/s) */
-  BYTE_PER_SECOND_B_S = "BytePerSecond (B/s)",
+  BYTE_PER_SECOND_OPEN_BRACKET_B_FORWARD_SLASH_S_CLOSE_BRACKET = "BytePerSecond (B/s)",
   /** Cores */
   CORES = "Cores",
   /** Count (count) */
-  COUNT_COUNT = "Count (count)",
+  COUNT_OPEN_BRACKET_COUNT_CLOSE_BRACKET = "Count (count)",
   /** Day (ds) */
-  DAY_DS = "Day (ds)",
+  DAY_OPEN_BRACKET_DS_CLOSE_BRACKET = "Day (ds)",
   /** DecibelMilliWatt (dBm) */
-  DECIBEL_MILLI_WATT_D_BM = "DecibelMilliWatt (dBm)",
+  DECIBEL_MILLI_WATT_OPEN_BRACKET_D_BM_CLOSE_BRACKET = "DecibelMilliWatt (dBm)",
   /** G */
   G = "G",
   /** GibiByte (GiB) */
-  GIBI_BYTE_GI_B = "GibiByte (GiB)",
+  GIBI_BYTE_OPEN_BRACKET_GI_B_CLOSE_BRACKET = "GibiByte (GiB)",
   /** GigaByte (GB) */
-  GIGA_BYTE_GB = "GigaByte (GB)",
+  GIGA_BYTE_OPEN_BRACKET_GB_CLOSE_BRACKET = "GigaByte (GB)",
   /** Hour (hs) */
-  HOUR_HS = "Hour (hs)",
+  HOUR_OPEN_BRACKET_HS_CLOSE_BRACKET = "Hour (hs)",
   /** KibiByte (KiB) */
-  KIBI_BYTE_KI_B = "KibiByte (KiB)",
+  KIBI_BYTE_OPEN_BRACKET_KI_B_CLOSE_BRACKET = "KibiByte (KiB)",
   /** KibiBytePerHour (KiB/h) */
-  KIBI_BYTE_PER_HOUR_KI_B_H = "KibiBytePerHour (KiB/h)",
+  KIBI_BYTE_PER_HOUR_OPEN_BRACKET_KI_B_FORWARD_SLASH_H_CLOSE_BRACKET = "KibiBytePerHour (KiB/h)",
   /** KibiBytePerMinute (KiB/min) */
-  KIBI_BYTE_PER_MINUTE_KI_B_MIN = "KibiBytePerMinute (KiB/min)",
+  KIBI_BYTE_PER_MINUTE_OPEN_BRACKET_KI_B_FORWARD_SLASH_MIN_CLOSE_BRACKET = "KibiBytePerMinute (KiB/min)",
   /** KibiBytePerSecond (KiB/s) */
-  KIBI_BYTE_PER_SECOND_KI_B_S = "KibiBytePerSecond (KiB/s)",
+  KIBI_BYTE_PER_SECOND_OPEN_BRACKET_KI_B_FORWARD_SLASH_S_CLOSE_BRACKET = "KibiBytePerSecond (KiB/s)",
   /** KiloByte (kB) */
-  KILO_BYTE_K_B = "KiloByte (kB)",
+  KILO_BYTE_OPEN_BRACKET_K_B_CLOSE_BRACKET = "KiloByte (kB)",
   /** KiloBytePerHour (kB/h) */
-  KILO_BYTE_PER_HOUR_K_B_H = "KiloBytePerHour (kB/h)",
+  KILO_BYTE_PER_HOUR_OPEN_BRACKET_K_B_FORWARD_SLASH_H_CLOSE_BRACKET = "KiloBytePerHour (kB/h)",
   /** KiloBytePerMinute (kB/min) */
-  KILO_BYTE_PER_MINUTE_K_B_MIN = "KiloBytePerMinute (kB/min)",
+  KILO_BYTE_PER_MINUTE_OPEN_BRACKET_K_B_FORWARD_SLASH_MIN_CLOSE_BRACKET = "KiloBytePerMinute (kB/min)",
   /** KiloBytePerSecond (kB/s) */
-  KILO_BYTE_PER_SECOND_K_B_S = "KiloBytePerSecond (kB/s)",
+  KILO_BYTE_PER_SECOND_OPEN_BRACKET_K_B_FORWARD_SLASH_S_CLOSE_BRACKET = "KiloBytePerSecond (kB/s)",
   /** M */
   M = "M",
   /** MSU */
   MSU = "MSU",
   /** MebiByte (MiB) */
-  MEBI_BYTE_MI_B = "MebiByte (MiB)",
+  MEBI_BYTE_OPEN_BRACKET_MI_B_CLOSE_BRACKET = "MebiByte (MiB)",
   /** MebiBytePerHour (MiB/h) */
-  MEBI_BYTE_PER_HOUR_MI_B_H = "MebiBytePerHour (MiB/h)",
+  MEBI_BYTE_PER_HOUR_OPEN_BRACKET_MI_B_FORWARD_SLASH_H_CLOSE_BRACKET = "MebiBytePerHour (MiB/h)",
   /** MebiBytePerMinute (MiB/min) */
-  MEBI_BYTE_PER_MINUTE_MI_B_MIN = "MebiBytePerMinute (MiB/min)",
+  MEBI_BYTE_PER_MINUTE_OPEN_BRACKET_MI_B_FORWARD_SLASH_MIN_CLOSE_BRACKET = "MebiBytePerMinute (MiB/min)",
   /** MebiBytePerSecond (MiB/s) */
-  MEBI_BYTE_PER_SECOND_MI_B_S = "MebiBytePerSecond (MiB/s)",
+  MEBI_BYTE_PER_SECOND_OPEN_BRACKET_MI_B_FORWARD_SLASH_S_CLOSE_BRACKET = "MebiBytePerSecond (MiB/s)",
   /** MegaByte (MB) */
-  MEGA_BYTE_MB = "MegaByte (MB)",
+  MEGA_BYTE_OPEN_BRACKET_MB_CLOSE_BRACKET = "MegaByte (MB)",
   /** MegaBytePerHour (MB/h) */
-  MEGA_BYTE_PER_HOUR_MB_H = "MegaBytePerHour (MB/h)",
+  MEGA_BYTE_PER_HOUR_OPEN_BRACKET_MB_FORWARD_SLASH_H_CLOSE_BRACKET = "MegaBytePerHour (MB/h)",
   /** MegaBytePerMinute (MB/min) */
-  MEGA_BYTE_PER_MINUTE_MB_MIN = "MegaBytePerMinute (MB/min)",
+  MEGA_BYTE_PER_MINUTE_OPEN_BRACKET_MB_FORWARD_SLASH_MIN_CLOSE_BRACKET = "MegaBytePerMinute (MB/min)",
   /** MegaBytePerSecond (MB/s) */
-  MEGA_BYTE_PER_SECOND_MB_S = "MegaBytePerSecond (MB/s)",
+  MEGA_BYTE_PER_SECOND_OPEN_BRACKET_MB_FORWARD_SLASH_S_CLOSE_BRACKET = "MegaBytePerSecond (MB/s)",
   /** MicroSecond (?s) */
-  MICRO_SECOND_S = "MicroSecond (?s)",
+  MICRO_SECOND_OPEN_BRACKET_QUESTION_MARK_S_CLOSE_BRACKET = "MicroSecond (?s)",
   /** MilliSecond (ms) */
-  MILLI_SECOND_MS = "MilliSecond (ms)",
+  MILLI_SECOND_OPEN_BRACKET_MS_CLOSE_BRACKET = "MilliSecond (ms)",
   /** MilliSecondPerMinute (ms/min) */
-  MILLI_SECOND_PER_MINUTE_MS_MIN = "MilliSecondPerMinute (ms/min)",
+  MILLI_SECOND_PER_MINUTE_OPEN_BRACKET_MS_FORWARD_SLASH_MIN_CLOSE_BRACKET = "MilliSecondPerMinute (ms/min)",
   /** Million (milcount) */
-  MILLION_MILCOUNT = "Million (milcount)",
+  MILLION_OPEN_BRACKET_MILCOUNT_CLOSE_BRACKET = "Million (milcount)",
   /** Minute (mins) */
-  MINUTE_MINS = "Minute (mins)",
+  MINUTE_OPEN_BRACKET_MINS_CLOSE_BRACKET = "Minute (mins)",
   /** Month (mos) */
-  MONTH_MOS = "Month (mos)",
+  MONTH_OPEN_BRACKET_MOS_CLOSE_BRACKET = "Month (mos)",
   /** N/A */
-  N_A = "N/A",
+  N_FORWARD_SLASH_A = "N/A",
   /** NanoSecond (ns) */
-  NANO_SECOND_NS = "NanoSecond (ns)",
+  NANO_SECOND_OPEN_BRACKET_NS_CLOSE_BRACKET = "NanoSecond (ns)",
   /** NanoSecondPerMinute (ns/min) */
-  NANO_SECOND_PER_MINUTE_NS_MIN = "NanoSecondPerMinute (ns/min)",
+  NANO_SECOND_PER_MINUTE_OPEN_BRACKET_NS_FORWARD_SLASH_MIN_CLOSE_BRACKET = "NanoSecondPerMinute (ns/min)",
   /** PerHour (count/h) */
-  PER_HOUR_COUNT_H = "PerHour (count/h)",
+  PER_HOUR_OPEN_BRACKET_COUNT_FORWARD_SLASH_H_CLOSE_BRACKET = "PerHour (count/h)",
   /** PerMinute (count/min) */
-  PER_MINUTE_COUNT_MIN = "PerMinute (count/min)",
+  PER_MINUTE_OPEN_BRACKET_COUNT_FORWARD_SLASH_MIN_CLOSE_BRACKET = "PerMinute (count/min)",
   /** PerSecond (count/s) */
-  PER_SECOND_COUNT_S = "PerSecond (count/s)",
+  PER_SECOND_OPEN_BRACKET_COUNT_FORWARD_SLASH_S_CLOSE_BRACKET = "PerSecond (count/s)",
   /** Percent (%) */
-  PERCENT = "Percent (%)",
+  PERCENT_OPEN_BRACKET_PERCENT_CLOSE_BRACKET = "Percent (%)",
   /** Pixel (px) */
-  PIXEL_PX = "Pixel (px)",
+  PIXEL_OPEN_BRACKET_PX_CLOSE_BRACKET = "Pixel (px)",
   /** Promille (?) */
-  PROMILLE = "Promille (?)",
+  PROMILLE_OPEN_BRACKET_QUESTION_MARK_CLOSE_BRACKET = "Promille (?)",
   /** Ratio */
   RATIO = "Ratio",
   /** Second (s) */
-  SECOND_S = "Second (s)",
+  SECOND_OPEN_BRACKET_S_CLOSE_BRACKET = "Second (s)",
   /** State */
   STATE = "State",
   /** Unspecified */
   UNSPECIFIED = "Unspecified",
   /** Week (ws) */
-  WEEK_WS = "Week (ws)",
+  WEEK_OPEN_BRACKET_WS_CLOSE_BRACKET = "Week (ws)",
   /** Year (ys) */
-  YEAR_YS = "Year (ys)",
+  YEAR_OPEN_BRACKET_YS_CLOSE_BRACKET = "Year (ys)",
   /** k */
   K = "k",
   /** km/h */
-  KM_H = "km/h",
+  KM_FORWARD_SLASH_H = "km/h",
   /** m/h */
-  M_H = "m/h",
+  M_FORWARD_SLASH_H = "m/h",
   /** m/s */
-  M_S = "m/s",
+  M_FORWARD_SLASH_S = "m/s",
   /** mCores */
   M_CORES = "mCores",
 }

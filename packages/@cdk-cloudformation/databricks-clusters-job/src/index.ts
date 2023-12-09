@@ -367,9 +367,9 @@ export function toJson_Schedule(obj: Schedule | undefined): Record<string, any> 
  */
 export enum CfnJobPropsFormat {
   /** SINGLE_TASK */
-  SINGLE_TASK = "SINGLE_TASK",
+  SINGLE_UNDERSCORE_TASK = "SINGLE_TASK",
   /** MULTI_TASK */
-  MULTI_TASK = "MULTI_TASK",
+  MULTI_UNDERSCORE_TASK = "MULTI_TASK",
 }
 
 /**

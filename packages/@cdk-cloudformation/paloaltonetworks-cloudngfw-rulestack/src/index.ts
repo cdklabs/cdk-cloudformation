@@ -963,9 +963,9 @@ export enum CustomUrlCategoryAction {
  */
 export enum IntelligentFeedType {
   /** IP_LIST */
-  IP_LIST = "IP_LIST",
+  IP_UNDERSCORE_LIST = "IP_LIST",
   /** URL_LIST */
-  URL_LIST = "URL_LIST",
+  URL_UNDERSCORE_LIST = "URL_LIST",
 }
 
 /**

@@ -266,7 +266,7 @@ export enum ScopeDefinitionType {
   /** CLUSTER */
   CLUSTER = "CLUSTER",
   /** DATA_LAKE */
-  DATA_LAKE = "DATA_LAKE",
+  DATA_UNDERSCORE_LAKE = "DATA_LAKE",
 }
 
 

@@ -463,9 +463,9 @@ export function toJson_AgentConfigurationInputSettingsTransactionTracer(obj: Age
  */
 export enum AgentConfigurationInputSettingsTracerTypeValue {
   /** CROSS_APPLICATION_TRACER */
-  CROSS_APPLICATION_TRACER = "CROSS_APPLICATION_TRACER",
+  CROSS_UNDERSCORE_APPLICATION_UNDERSCORE_TRACER = "CROSS_APPLICATION_TRACER",
   /** DISTRIBUTED_TRACING */
-  DISTRIBUTED_TRACING = "DISTRIBUTED_TRACING",
+  DISTRIBUTED_UNDERSCORE_TRACING = "DISTRIBUTED_TRACING",
   /** NONE */
   NONE = "NONE",
 }
@@ -477,7 +477,7 @@ export enum AgentConfigurationInputSettingsTracerTypeValue {
  */
 export enum AgentConfigurationInputSettingsTransactionTracerExplainThresholdType {
   /** APDEX_F */
-  APDEX_F = "APDEX_F",
+  APDEX_UNDERSCORE_F = "APDEX_F",
   /** VALUE */
   VALUE = "VALUE",
 }
@@ -503,7 +503,7 @@ export enum AgentConfigurationInputSettingsTransactionTracerRecordSql {
  */
 export enum AgentConfigurationInputSettingsTransactionTracerTransactionThresholdType {
   /** APDEX_F */
-  APDEX_F = "APDEX_F",
+  APDEX_UNDERSCORE_F = "APDEX_F",
   /** VALUE */
   VALUE = "VALUE",
 }

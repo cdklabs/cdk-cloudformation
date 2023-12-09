@@ -172,7 +172,7 @@ export enum CfnSplunkPropsPlacement {
   /** none */
   NONE = "none",
   /** waf_debug */
-  WAF_DEBUG = "waf_debug",
+  WAF_UNDERSCORE_DEBUG = "waf_debug",
 }
 
 /**

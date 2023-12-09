@@ -393,7 +393,7 @@ export enum CfnMonitorPropsType {
   /** event alert */
   EVENT_ALERT = "event alert",
   /** event-v2 alert */
-  EVENT_V2_ALERT = "event-v2 alert",
+  EVENT_HYPHEN_V2_ALERT = "event-v2 alert",
   /** log alert */
   LOG_ALERT = "log alert",
   /** metric alert */
@@ -407,17 +407,17 @@ export enum CfnMonitorPropsType {
   /** synthetics alert */
   SYNTHETICS_ALERT = "synthetics alert",
   /** trace-analytics alert */
-  TRACE_ANALYTICS_ALERT = "trace-analytics alert",
+  TRACE_HYPHEN_ANALYTICS_ALERT = "trace-analytics alert",
   /** slo alert */
   SLO_ALERT = "slo alert",
   /** rum alert */
   RUM_ALERT = "rum alert",
   /** ci-pipelines alert */
-  CI_PIPELINES_ALERT = "ci-pipelines alert",
+  CI_HYPHEN_PIPELINES_ALERT = "ci-pipelines alert",
   /** error-tracking alert */
-  ERROR_TRACKING_ALERT = "error-tracking alert",
+  ERROR_HYPHEN_TRACKING_ALERT = "error-tracking alert",
   /** ci-tests alert */
-  CI_TESTS_ALERT = "ci-tests alert",
+  CI_HYPHEN_TESTS_ALERT = "ci-tests alert",
 }
 
 /**
@@ -427,13 +427,13 @@ export enum CfnMonitorPropsType {
  */
 export enum MonitorNotificationPresetName {
   /** show_all */
-  SHOW_ALL = "show_all",
+  SHOW_UNDERSCORE_ALL = "show_all",
   /** hide_query */
-  HIDE_QUERY = "hide_query",
+  HIDE_UNDERSCORE_QUERY = "hide_query",
   /** hide_handles */
-  HIDE_HANDLES = "hide_handles",
+  HIDE_UNDERSCORE_HANDLES = "hide_handles",
   /** hide_all */
-  HIDE_ALL = "hide_all",
+  HIDE_UNDERSCORE_ALL = "hide_all",
 }
 
 /**
@@ -449,9 +449,9 @@ export enum MonitorOnMissingData {
   /** default */
   DEFAULT = "default",
   /** show_no_data */
-  SHOW_NO_DATA = "show_no_data",
+  SHOW_UNDERSCORE_NO_UNDERSCORE_DATA = "show_no_data",
   /** show_and_notify_no_data */
-  SHOW_AND_NOTIFY_NO_DATA = "show_and_notify_no_data",
+  SHOW_UNDERSCORE_AND_UNDERSCORE_NOTIFY_UNDERSCORE_NO_UNDERSCORE_DATA = "show_and_notify_no_data",
   /** resolve */
   RESOLVE = "resolve",
 }

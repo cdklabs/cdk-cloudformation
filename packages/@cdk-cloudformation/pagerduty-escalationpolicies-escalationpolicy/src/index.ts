@@ -96,7 +96,7 @@ export function toJson_CfnEscalationPolicyProps(obj: CfnEscalationPolicyProps | 
  */
 export enum CfnEscalationPolicyPropsOnCallHandoffNotifications {
   /** if_has_services */
-  IF_HAS_SERVICES = "if_has_services",
+  IF_UNDERSCORE_HAS_UNDERSCORE_SERVICES = "if_has_services",
   /** always */
   ALWAYS = "always",
 }
@@ -209,7 +209,7 @@ export function toJson_Target(obj: Target | undefined): Record<string, any> | un
  */
 export enum TeamType {
   /** team_reference */
-  TEAM_REFERENCE = "team_reference",
+  TEAM_UNDERSCORE_REFERENCE = "team_reference",
 }
 
 /**
@@ -223,9 +223,9 @@ export enum TargetType {
   /** schedule */
   SCHEDULE = "schedule",
   /** user_reference */
-  USER_REFERENCE = "user_reference",
+  USER_UNDERSCORE_REFERENCE = "user_reference",
   /** schedule_reference */
-  SCHEDULE_REFERENCE = "schedule_reference",
+  SCHEDULE_UNDERSCORE_REFERENCE = "schedule_reference",
 }
 
 

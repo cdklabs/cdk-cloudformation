@@ -394,7 +394,7 @@ export enum OcrLanguages {
   /** eng */
   ENG = "eng",
   /** chi_sim+chi_tra */
-  CHI_SIM_CHI_TRA = "chi_sim+chi_tra",
+  CHI_UNDERSCORE_SIM_CHI_UNDERSCORE_TRA = "chi_sim+chi_tra",
   /** ind */
   IND = "ind",
   /** jpn */

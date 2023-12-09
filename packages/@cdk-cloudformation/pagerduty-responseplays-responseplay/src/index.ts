@@ -248,9 +248,9 @@ export enum CfnResponsePlayPropsConferenceType {
  */
 export enum SubscriberType {
   /** user_reference */
-  USER_REFERENCE = "user_reference",
+  USER_UNDERSCORE_REFERENCE = "user_reference",
   /** team_reference */
-  TEAM_REFERENCE = "team_reference",
+  TEAM_UNDERSCORE_REFERENCE = "team_reference",
 }
 
 /**
@@ -260,9 +260,9 @@ export enum SubscriberType {
  */
 export enum ResponderType {
   /** user_reference */
-  USER_REFERENCE = "user_reference",
+  USER_UNDERSCORE_REFERENCE = "user_reference",
   /** escalation_policy_reference */
-  ESCALATION_POLICY_REFERENCE = "escalation_policy_reference",
+  ESCALATION_UNDERSCORE_POLICY_UNDERSCORE_REFERENCE = "escalation_policy_reference",
 }
 
 

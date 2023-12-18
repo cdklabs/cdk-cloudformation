@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/cloudflare-loadbalancer-loadbalancer",
   "description": "A Cloudflare resource for managing load-balancing across pools",
-  "version": "1.0.0-alpha.7",
+  "version": "1.1.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

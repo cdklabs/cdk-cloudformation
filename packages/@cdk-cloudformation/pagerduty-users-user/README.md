@@ -1,6 +1,6 @@
 # pagerduty-users-user
 
-> AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `PagerDuty::Users::User` v1.1.0.
+> AWS CDK [L1 construct] and data structures for the [AWS CloudFormation Registry] type `PagerDuty::Users::User` v1.3.0.
 
 [L1 construct]: https://docs.aws.amazon.com/cdk/latest/guide/constructs.html
 [AWS CloudFormation Registry]: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html
@@ -40,7 +40,7 @@ You can find more information about activating this type in the [AWS CloudFormat
 
 This library is auto-generated and published to all supported programming languages by the [cdklabs/cdk-cloudformation] project based on the API schema published for `PagerDuty::Users::User`.
 
-* Issues related to this generated library should be [reported here](https://github.com/cdklabs/cdk-cloudformation/issues/new?title=Issue+with+%40cdk-cloudformation%2Fpagerduty-users-user+v1.1.0).
+* Issues related to this generated library should be [reported here](https://github.com/cdklabs/cdk-cloudformation/issues/new?title=Issue+with+%40cdk-cloudformation%2Fpagerduty-users-user+v1.3.0).
 * Issues related to `PagerDuty::Users::User` should be reported to the [publisher](https://github.com/aws-ia/cloudformation-pagerduty-resource-providers).
 
 [cdklabs/cdk-cloudformation]: https://github.com/cdklabs/cdk-cloudformation

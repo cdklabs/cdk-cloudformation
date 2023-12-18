@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/fastly-logging-splunk",
   "description": "Manage a Fastly Splunk Log.",
-  "version": "1.7.0-alpha.7",
+  "version": "1.9.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

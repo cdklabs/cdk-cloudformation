@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/snowflake-role-role",
   "description": "Allows for the creation and modification of a Snowflake Role. https://docs.snowflake.com/en/user-guide/security-access-control-overview.html#roles",
-  "version": "1.2.0-alpha.7",
+  "version": "1.4.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

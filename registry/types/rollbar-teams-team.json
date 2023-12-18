@@ -10,9 +10,9 @@
   "Visibility": "PUBLIC",
   "SourceUrl": "https://github.com/aws-ia/cloudformation-rollbar-resource-providers.git",
   "DocumentationUrl": "https://github.com/aws-ia/cloudformation-rollbar-resource-providers",
-  "TimeCreated": "2023-03-10T18:41:22.927Z",
+  "TimeCreated": "2023-12-14T19:38:51.886Z",
   "ConfigurationSchema": "{\n    \"properties\": {\n        \"RollbarAccess\": {\n            \"$ref\": \"#/definitions/RollbarAccess\"\n        }\n    },\n    \"additionalProperties\": false,\n    \"required\": [\n        \"RollbarAccess\"\n    ],\n    \"definitions\": {\n        \"RollbarAccess\": {\n            \"description\": \"Properties needed to access Rollbar.\",\n            \"type\": \"object\",\n            \"properties\": {\n                \"Token\": {\n                    \"type\": \"string\",\n                    \"description\": \"API token used to access Rollbar\"\n                },\n                \"ProjectToken\": {\n                    \"type\": \"string\",\n                    \"description\": \"API token used to access Rollbar\"\n                }\n            },\n            \"required\": [\n                \"Token\"\n            ],\n            \"additionalProperties\": false\n        }\n    },\n    \"typeName\": \"Rollbar::Teams::Team\"\n}",
   "PublisherId": "c830e97710da0c9954d80ba8df021e5439e7134b",
-  "LatestPublicVersion": "1.2.0",
+  "LatestPublicVersion": "1.4.0",
   "IsActivated": false
 }

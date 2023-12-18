@@ -10,9 +10,9 @@
   "Visibility": "PUBLIC",
   "SourceUrl": "https://github.com/aws-ia/cloudformation-pagerduty-resource-providers.git",
   "DocumentationUrl": "https://github.com/aws-ia/cloudformation-pagerduty-resource-providers",
-  "TimeCreated": "2023-03-09T22:24:17.440Z",
+  "TimeCreated": "2023-12-14T10:33:37.257Z",
   "ConfigurationSchema": "{\n    \"properties\": {\n        \"PagerDutyAccess\": {\n            \"$ref\": \"#/definitions/PagerDutyAccess\"\n        }\n    },\n    \"additionalProperties\": false,\n    \"required\": [\n        \"PagerDutyAccess\"\n    ],\n    \"definitions\": {\n        \"PagerDutyAccess\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"Token\": {\n                    \"description\": \"Personal Access Token\",\n                    \"type\": \"string\"\n                }\n            },\n            \"required\": [\n                \"Token\"\n            ],\n            \"additionalProperties\": false\n        },\n        \"TeamId\": {\n            \"description\": \"The ID of the resource.\",\n            \"type\": \"string\"\n        },\n        \"UserId\": {\n            \"description\": \"The user ID on the team.\",\n            \"type\": \"string\"\n        },\n        \"Role\": {\n            \"description\": \"The role of the user on the team.\",\n            \"type\": \"string\",\n            \"enum\": [\n                \"observer\",\n                \"responder\",\n                \"manager\"\n            ]\n        }\n    },\n    \"typeName\": \"PagerDuty::Teams::Membership\"\n}",
   "PublisherId": "c830e97710da0c9954d80ba8df021e5439e7134b",
-  "LatestPublicVersion": "1.1.0",
+  "LatestPublicVersion": "1.3.0",
   "IsActivated": false
 }

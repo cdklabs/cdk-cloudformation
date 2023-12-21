@@ -1201,10 +1201,10 @@ aws-cdk-lib@2.115.0, aws-cdk-lib@^2.115.0:
     table "^6.8.1"
     yaml "1.10.2"
 
-aws-sdk@^2.1521.0, aws-sdk@^2.1522.0:
-  version "2.1522.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1522.0.tgz#8ae5ad99124db210abe997d7b80cc8eb1fe535c9"
-  integrity sha512-jQ3a7IiJm2g7ko5q7a/PzyFhdSDDTR2j5sv37hU+lBprHYq5xL+JTS5aO7yJDpZKo9syUaykmUkmgBD0qVSp5A==
+aws-sdk@^2.1522.0, aws-sdk@^2.1523.0:
+  version "2.1523.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1523.0.tgz#c916b2d089343cf7400c7c418a97cbd640d6a94c"
+  integrity sha512-Zodeu0h4NfpYs8B+5+OFEhkY5MJlhzAns8oocMQc2aZTiMx178qcxqD3FFltTUyLc0FFlY7ZGjoVfPnuky1MQg==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"
@@ -1402,12 +1402,12 @@ case@1.6.3, case@^1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-import@^0.2.112:
-  version "0.2.596"
-  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.596.tgz#d97dc81c6789eb568dc717acd80f8b4b216b94ce"
-  integrity sha512-/3vkQ9xDwZceekjmwsIuAZ2eMb1dnamqVuWoJ3Gv2dk1VhXYOHYiXOJY1uXcYPBDIohh+FbXmZ6qq1cmXXbvxg==
+  version "0.2.597"
+  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.597.tgz#00edf71a8132387ecf5842e3dbfaf2936066d4f2"
+  integrity sha512-WOY8uLZi7JrXEbbd4kry7zTiUqARUZZpPVHcet/9UvqqJzTkDFZYYsijl7+1g5K4qETDHNpbc9z++8y3ewRPjw==
   dependencies:
     aws-cdk-lib "^2.115.0"
-    aws-sdk "^2.1521.0"
+    aws-sdk "^2.1522.0"
     case "^1.6.3"
     constructs "^10"
     jsii-srcmak "^0.1.999"
@@ -5499,9 +5499,9 @@ typedarray@^0.0.6:
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
 typescript@next:
-  version "5.4.0-dev.20231219"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.4.0-dev.20231219.tgz#cf382386261e5efc89b65b4d6ced684e26c3c559"
-  integrity sha512-pWOp0d2qj5T4llRnhb3BVkx2jN2yglMVTc96xs9dRY4I64EG/uFfyO3aoHm/1H0LAPmilJsJGDtXASxGM+GIVg==
+  version "5.4.0-dev.20231220"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.4.0-dev.20231220.tgz#233b3600359b6c26640a76d6925baaf87ece6306"
+  integrity sha512-gO+86xJ5TnxXTrU2jXZewS9x95rKXCGpDuYUmdKC8rVfEchLrcH2LASQUXguQ2yinln8lrCttDZfO4d6gpuE4g==
 
 typescript@~3.9.10:
   version "3.9.10"

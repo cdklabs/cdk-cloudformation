@@ -1404,9 +1404,9 @@ case@1.6.3, case@^1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-import@^0.2.112:
-  version "0.2.600"
-  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.600.tgz#69a32b5d195c02ac52062998bc84333a7aa28629"
-  integrity sha512-sBJZuF6vJDwuFBa4R5UQoC7xbe5eFZizr+bKOhHARIWWxQyBunBgpnKdcBGz588ZIbMgWbtU8j8Yl4YJ5p+b/g==
+  version "0.2.601"
+  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.601.tgz#bf7091c2a8c929d6f7c13f99976ebe7c821902b8"
+  integrity sha512-EGoh9L4dClvwRv68L9I7/2PdDzsKnyz5/n+2fZAgdpoaU0r+QtDQG9zQ7gw6UOORHStmxKyNKNsEnKHzpn1SIQ==
   dependencies:
     aws-cdk-lib "^2.116.1"
     aws-sdk "^2.1525.0"
@@ -5501,9 +5501,9 @@ typedarray@^0.0.6:
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
 typescript@next:
-  version "5.4.0-dev.20231223"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.4.0-dev.20231223.tgz#0170dc94178fa945ba6d9813d61d2060ccfbb9f4"
-  integrity sha512-KiQgKjVULApZ0PuXCMOuPNNO3Ty4amfJPjGpbcQoh9YlU2qmYgmyyIT7I7zMHkjCtn8R8DkrvM0Eue0fP9hzjw==
+  version "5.4.0-dev.20231224"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.4.0-dev.20231224.tgz#92bdc3844e2480bacd20dcc4bd04360c7069b995"
+  integrity sha512-FbcuMRM2iUkY4cxHsHAGWm40kQ2fwkqmLNciqrzfBMEnuLN88t3iTEJhOAxJjVOl8LY58odFb0crTILOB/VtCw==
 
 typescript@~3.9.10:
   version "3.9.10"

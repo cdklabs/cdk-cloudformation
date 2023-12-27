@@ -20,6 +20,7 @@ project.addDevDeps('jsii');
 project.addDevDeps('jsii-pacmak');
 project.addDevDeps('aws-cdk-github-oidc@^2.2.0');
 project.addDevDeps('ts-node@^10');
+project.addDevDeps('@types/node@^16');
 
 // the root is not really a library:x
 project.compileTask.reset();

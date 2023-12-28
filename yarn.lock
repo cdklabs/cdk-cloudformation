@@ -1183,10 +1183,10 @@ aws-cdk-github-oidc@^2.2.0:
   resolved "https://registry.yarnpkg.com/aws-cdk-github-oidc/-/aws-cdk-github-oidc-2.4.1.tgz#8fcb134401f3a15d74260e5bcc58ed05dabac2a0"
   integrity sha512-zKQYPGyf5f6APG76OpOxW6P7KGY/fC6VhN1ZullxySSu6RroUH9VtVl+cJ8hYes5XvEE/ZDpx2h2fPtNwZrcVQ==
 
-aws-cdk-lib@2.116.1, aws-cdk-lib@^2.116.1:
-  version "2.116.1"
-  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.116.1.tgz#4810ae231b1b87332a158b0b15a7d85dd5bc9b02"
-  integrity sha512-3j9kUHZFp/Jl79utnsBB2xW2u+sNfjpliQtTPQlW0i7J12oxjD2rHU4AJV741cKMxnA9VrHnRyJF9NTryji8yw==
+aws-cdk-lib@2.117.0, aws-cdk-lib@^2.116.1, aws-cdk-lib@^2.117.0:
+  version "2.117.0"
+  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.117.0.tgz#9079e256c334108add9252a89c22cf46e7c2e542"
+  integrity sha512-My5T4hn34H6+tnZxKK2VlcvGI2N5SjqGt9lXWADcahdobuUcNizYrls7h/vcQ3BfwcZ5/tHTKtivkNyL8I1LDg==
   dependencies:
     "@aws-cdk/asset-awscli-v1" "^2.2.201"
     "@aws-cdk/asset-kubectl-v20" "^2.1.2"
@@ -1202,10 +1202,10 @@ aws-cdk-lib@2.116.1, aws-cdk-lib@^2.116.1:
     table "^6.8.1"
     yaml "1.10.2"
 
-aws-sdk@^2.1525.0:
-  version "2.1525.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1525.0.tgz#2d55fa7bbc110c96bb2e10a30af6b0d64a7d422b"
-  integrity sha512-M6wNOrq9HliJoWgmgHeRzMHHrgK6UY20RL2tUhNqq45ETZnj1ihrqG5vSt5ywLrV9WUyI/lUQAVmCP/2PYjpQw==
+aws-sdk@^2.1525.0, aws-sdk@^2.1526.0:
+  version "2.1526.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1526.0.tgz#3199acaa83834d10f4069c1b312582932661b71c"
+  integrity sha512-NVN9Cs+BIbYvETrtZI3VTIiL4cm9NqAG2VkHbfpr4+4JzdYlLmr4CyxYRpd74iW0Nt3TB4GvRN7h8RIuybbSGQ==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"
@@ -1393,9 +1393,9 @@ camelcase@^6.2.0, camelcase@^6.3.0:
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
 caniuse-lite@^1.0.30001565:
-  version "1.0.30001571"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001571.tgz#4182e93d696ff42930f4af7eba515ddeb57917ac"
-  integrity sha512-tYq/6MoXhdezDLFZuCO/TKboTzuQ/xR5cFdgXPfDtM7/kchBO3b4VWghE/OAi/DV7tTdhmLjZiZBZi1fA/GheQ==
+  version "1.0.30001572"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001572.tgz#1ccf7dc92d2ee2f92ed3a54e11b7b4a3041acfa0"
+  integrity sha512-1Pbh5FLmn5y4+QhNyJE9j3/7dK44dGB83/ZMjv/qJk86TvDbjk0LosiZo0i0WB0Vx607qMX9jYrn1VLHCkN4rw==
 
 case@1.6.3, case@^1.6.3:
   version "1.6.3"
@@ -1403,9 +1403,9 @@ case@1.6.3, case@^1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-import@^0.2.112:
-  version "0.2.603"
-  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.603.tgz#90d766390dbd416f0683cb87778bc2ce0e55f233"
-  integrity sha512-DPF5sbB6x7hrJtarZPuTjgU2lwqOBXjnmLINfBM6g9j0CrpWMJJsBvz8/azz97TZ6ZNma+XEaInKSaoFWcEBOg==
+  version "0.2.604"
+  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.604.tgz#b223e9435dbb11fd11d8dc5709338044d2680f2f"
+  integrity sha512-DxR9UDsGi0PkKHyidBf/9i7kPsWQ5hnJXkJIWMCa/QuMmQhP7NcRSMIpVgsThDXIgRULc5qRwkh1RjfPEWh7fg==
   dependencies:
     aws-cdk-lib "^2.116.1"
     aws-sdk "^2.1525.0"
@@ -5507,9 +5507,9 @@ typedarray@^0.0.6:
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
 typescript@next:
-  version "5.4.0-dev.20231226"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.4.0-dev.20231226.tgz#fd91b294b23f206271ca32c83c466a8023e19d05"
-  integrity sha512-UHOgBgQgky4SUZ2Z0tFVgzulKJSJBUkAtcBggBJ3swOUyIwn3PJBvZxHLtK94lszCq/FCR9ozErD+UABxmXyYQ==
+  version "5.4.0-dev.20231227"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.4.0-dev.20231227.tgz#cfbef8e3b9d4391a62e14a72e65c500c5df12e53"
+  integrity sha512-lUTwqlRFd+OYg6urfqgdDBiEs4rUyejfaNeLLE9x77VYwHGPNS+Hg6/UQiXTpHuQIk+aMjxZkBJDDuGbD+SEdA==
 
 typescript@~3.9.10:
   version "3.9.10"

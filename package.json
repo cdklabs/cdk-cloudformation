@@ -570,7 +570,7 @@
     "@typescript-eslint/parser": "^6",
     "aws-cdk-github-oidc": "^2.2.0",
     "aws-cdk-lib": "^2.121.1",
-    "aws-sdk": "^2.1535.0",
+    "aws-sdk": "^2.1536.0",
     "case": "^1.6.3",
     "cdk-import": "^0.2.112",
     "cdklabs-projen-project-types": "^0.1.186",

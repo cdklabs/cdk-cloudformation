@@ -310,7 +310,9 @@ export class CloudFormationTypeProject extends Component {
             'cat $GITHUB_OUTPUT',
           ].join('\n'),
         },
-        github.WorkflowSteps.tagExists(`cat $(${releaseTagFile})`, {}),
+        github.WorkflowSteps.tagExists(`cat $(${releaseTagFile})`, {
+          workingDirectory: outdir,
+        }),
         { run: `mv ${outdir}/${artifactDir} .` },
         {
           name: 'Upload artifact',

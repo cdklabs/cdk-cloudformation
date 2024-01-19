@@ -277,6 +277,9 @@ export class CloudFormationTypeProject extends Component {
         {
           name: 'Checkout',
           uses: 'actions/checkout@v4',
+          with: {
+            'fetch-depth': 0,
+          },
         },
 
         // sets git identity so we can push later

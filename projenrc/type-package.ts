@@ -296,7 +296,7 @@ export class CloudFormationTypeProject extends Component {
           run: [
             `echo $(node -p "require('./package.json').version") > ${versionFile}`,
             `echo "${npmName}@v$(cat ${versionFile})" > ${releaseTagFile}`,
-            `echo "Update AWS CloudFormation Registry type \`${typeName}\` to v$(cat ${versionFile})" > ${changelogFile}`,
+            `echo "Update AWS CloudFormation Registry type ${typeName} to v$(cat ${versionFile})" > ${changelogFile}`,
           ].join('\n'),
         },
         {
@@ -304,8 +304,9 @@ export class CloudFormationTypeProject extends Component {
           name: 'Check for releasable commits',
           workingDirectory: outdir,
           run: [
-            `LATEST_TAG=$(cat ${releaseTagFile})`,
-            `COUNT=$(${ReleasableCommits.featuresAndFixes('.').cmd} | sed -n '$=')`,
+            `LATEST_TAG=$(git -c "versionsort.suffix=-" tag --sort="-version:refname" --list "${npmName}@v*" | head -n 1)`,
+            'echo ${LATEST_TAG:=$(git rev-list HEAD -- . | tail -1)^}', // if no tag was found, use the commit before the first commit in this directory
+            `COUNT=$(${ReleasableCommits.featuresAndFixes('.').cmd} | wc -l | xargs)`, // xargs is trimming whitespace from the wc output
             'echo "releasable_count=$COUNT" >> $GITHUB_OUTPUT',
             'cat $GITHUB_OUTPUT',
           ].join('\n'),
@@ -334,7 +335,7 @@ export class CloudFormationTypeProject extends Component {
     const publisher = new Publisher(project, {
       artifactName: artifactDir,
       buildJobId: 'build',
-      condition: "(needs.build.outputs.tag_exists != 'true') && (fromJSON(needs.build.outputs.releasable_commits) > 0)",
+      condition: "(needs.build.outputs.tag_exists != 'true') && (needs.build.outputs.releasable_commits > 0)",
     });
 
     publisher.publishToGitHubReleases({

@@ -324,7 +324,7 @@ export class CloudFormationTypeProject extends Component {
         },
         {
           name: 'Upload artifact',
-          uses: 'actions/upload-artifact@v4',
+          uses: 'actions/upload-artifact@v3',
           // Always upload files even if previous steps have failed; for debugging
           if: 'always()',
           with: {

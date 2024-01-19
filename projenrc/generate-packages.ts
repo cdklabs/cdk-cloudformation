@@ -77,7 +77,8 @@ export function generatePackages(root: typescript.TypeScriptProject, options: Ge
 
 export function updateReadme(root: typescript.TypeScriptProject, projects: CloudFormationTypeProject[]) {
   const statusMarkdown = new Array<string>();
-  for (const p of projects) {
+  const supported = projects.filter(p => !p.isDeprecated);
+  for (const p of supported) {
     statusMarkdown.push(`* ${p.statusBadge}`);
   }
 
@@ -90,7 +91,7 @@ export function updateReadme(root: typescript.TypeScriptProject, projects: Cloud
   const combined = [
     ...readme.slice(0, statusBegin + 1),
     '',
-    `Release status for ${projects.length} libraries:`,
+    `Release status for ${supported.length} libraries:`,
     '',
     ...statusMarkdown,
     '',

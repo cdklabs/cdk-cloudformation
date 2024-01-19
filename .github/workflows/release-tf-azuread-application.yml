@@ -42,11 +42,12 @@ jobs:
       - name: Check if tag exists
         id: check-tag
         run: |-
-          TAG=cat $(dist/releasetag.txt)
+          TAG=$(cat dist/releasetag.txt)
           ([ ! -z "$TAG" ] && git ls-remote -q --exit-code --tags origin $TAG && (echo "exists=true" >> $GITHUB_OUTPUT)) || (echo "exists=false" >> $GITHUB_OUTPUT)
           cat $GITHUB_OUTPUT
         working-directory: packages/@cdk-cloudformation/tf-azuread-application
-      - run: mv packages/@cdk-cloudformation/tf-azuread-application/dist .
+      - if: always()
+        run: mv packages/@cdk-cloudformation/tf-azuread-application/dist .
       - name: Upload artifact
         if: always()
         uses: actions/upload-artifact@v4

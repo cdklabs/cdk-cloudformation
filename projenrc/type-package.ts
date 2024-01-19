@@ -310,15 +310,18 @@ export class CloudFormationTypeProject extends Component {
             'cat $GITHUB_OUTPUT',
           ].join('\n'),
         },
-        github.WorkflowSteps.tagExists(`cat $(${releaseTagFile})`, {
+        github.WorkflowSteps.tagExists(`$(cat ${releaseTagFile})`, {
           workingDirectory: outdir,
         }),
-        { run: `mv ${outdir}/${artifactDir} .` },
+        {
+          // Always copy dist files even if previous steps have failed; for debugging
+          if: 'always()',
+          run: `mv ${outdir}/${artifactDir} .`,
+        },
         {
           name: 'Upload artifact',
           uses: 'actions/upload-artifact@v4',
-          // Setting to always will ensure that this step will run even if
-          // the previous ones have failed (e.g. coverage report, internal logs, etc)
+          // Always upload files even if previous steps have failed; for debugging
           if: 'always()',
           with: {
             name: 'build-artifact',

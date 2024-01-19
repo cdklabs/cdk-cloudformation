@@ -3,8 +3,7 @@ import { dirname, join } from 'path';
 import type { CloudFormation } from 'aws-sdk';
 import * as caseutil from 'case';
 import { CfnResourceGenerator } from 'cdk-import/lib/cfn-resource-generator';
-import { Component, IgnoreFile, JsonFile, License, Project, typescript } from 'projen';
-import { GithubWorkflow } from 'projen/lib/github';
+import { Component, IgnoreFile, JsonFile, License, Project, ReleasableCommits, github, typescript } from 'projen';
 import { DEFAULT_GITHUB_ACTIONS_USER } from 'projen/lib/github/constants';
 import { WorkflowActions } from 'projen/lib/github/workflow-actions';
 import { JobPermission } from 'projen/lib/github/workflows-model';
@@ -35,7 +34,7 @@ export interface TypePackageOptions {
   /**
    * The GitHub workflow that builds all the individual projects
    */
-  readonly buildWorkflow: GithubWorkflow;
+  readonly buildWorkflow: github.GithubWorkflow;
 
   /**
    * A pre-release tag to use in the version.
@@ -61,6 +60,7 @@ export class CloudFormationTypeProject extends Component {
   private readonly type: CloudFormation.DescribeTypeOutput;
 
   public readonly statusBadge: string;
+  public readonly isDeprecated: boolean;
 
   constructor(parent: typescript.TypeScriptProject, options: TypePackageOptions) {
     super(parent);
@@ -73,12 +73,17 @@ export class CloudFormationTypeProject extends Component {
     const npmScope = '@cdk-cloudformation';
 
     this.type = options.type;
+    this.isDeprecated = !!options.readmeDeprecatedMessage;
 
     if (!npmScope.startsWith('@')) {
       throw new Error(`Scope must start with '@': ${npmScope}`);
     }
 
     const outdir = join(options.packagesDir, npmScope, typeNameKebab);
+    const artifactDir = 'dist';
+    const versionFile = `${artifactDir}/version.txt`;
+    const changelogFile = `${artifactDir}/changelog.txt`;
+    const releaseTagFile = `${artifactDir}/releasetag.txt`;
 
     const project = new Project({
       name: `${npmScope}/${typeNameKebab}`,
@@ -136,7 +141,7 @@ export class CloudFormationTypeProject extends Component {
           access: 'public',
         },
         jsii: {
-          outdir: 'dist',
+          outdir: artifactDir,
           targets: {
             java: {
               package: `io.github.cdklabs.cdk_cloudformation.${typeNameSnake}`,
@@ -180,39 +185,46 @@ export class CloudFormationTypeProject extends Component {
     project.addGitIgnore('/.jsii');
     project.addGitIgnore('/lib/');
     project.addGitIgnore('/tsconfig.json'); // <-- created by JSII
-    project.addGitIgnore('/dist/');
+    project.addGitIgnore(`/${artifactDir}/`);
     project.addGitIgnore('tsconfig.tsbuildinfo');
 
     const npmignore = new IgnoreFile(project, '.npmignore');
     npmignore.readonly = false;
     npmignore.addPatterns('.projen');
-    npmignore.addPatterns('dist');
+    npmignore.addPatterns(artifactDir);
     npmignore.addPatterns('src');
     npmignore.addPatterns('test');
     npmignore.addPatterns('tsconfig.tsbuildinfo');
     npmignore.addPatterns('!.jsii');
     npmignore.addPatterns('!.jsii.gz');
 
-    const compileTask = parent.addTask(`compile:${typeNameKebab}`, {
+    // remove default tasks
+    project.tasks.removeTask('build');
+    project.tasks.removeTask('test');
+    project.tasks.removeTask('pre-compile');
+    project.tasks.removeTask('post-compile');
+    project.tasks.removeTask('compile');
+    project.tasks.removeTask('package');
+
+    const compileTask = project.tasks.addTask('compile', {
       description: `compile ${typeNameKebab} with JSII`,
       exec: 'jsii',
-      cwd: outdir,
     });
 
-    const packageTask = parent.addTask(`package:${typeNameKebab}`, {
+    project.tasks.removeTask('package');
+    const packageTask = project.addTask('package', {
       description: `produce multi-language packaging for ${typeNameKebab}`,
       exec: 'jsii-pacmak --no-npmignore',
-      cwd: outdir,
     });
 
-    const buildTask = parent.addTask(`build:${typeNameKebab}`, {
+    const buildTask = project.addTask('build', {
       description: `build ${typeNameKebab}`,
     });
 
     buildTask.spawn(compileTask);
     buildTask.spawn(packageTask);
 
-    parent.gitignore.addPatterns(`/${outdir}/dist/`);
+    parent.gitignore.addPatterns(`/${outdir}/${artifactDir}/`);
     parent.gitignore.addPatterns(`/${outdir}/lib/`);
 
     options.buildWorkflow.addJob(typeNameKebab, {
@@ -224,15 +236,17 @@ export class CloudFormationTypeProject extends Component {
         contents: JobPermission.READ,
       },
       steps: [
-        { uses: 'actions/checkout@v3' },
+        { uses: 'actions/checkout@v4' },
         { run: 'yarn install' },
-        { run: `yarn ${buildTask.name}` },
+        {
+          workingDirectory: outdir,
+          run: `${project.projenCommand} ${buildTask.name}`,
+        },
       ],
     });
     parent.autoMerge?.addConditions(`status-success=${typeNameKebab}`);
 
     // create a release workflow for this package
-    const artifactDir = 'dist';
     const releaseWorkflow = parent.github!.addWorkflow(`release-${typeNameKebab}`);
     releaseWorkflow.on({
       push: {
@@ -248,11 +262,21 @@ export class CloudFormationTypeProject extends Component {
       permissions: {
         contents: JobPermission.READ,
       },
+      outputs: {
+        releasable_commits: {
+          stepId: 'check-commits',
+          outputName: 'releasable_count',
+        },
+        tag_exists: {
+          stepId: 'check-tag',
+          outputName: 'exists',
+        },
+      },
       steps: [
         // check out sources.
         {
           name: 'Checkout',
-          uses: 'actions/checkout@v3',
+          uses: 'actions/checkout@v4',
         },
 
         // sets git identity so we can push later
@@ -263,19 +287,40 @@ export class CloudFormationTypeProject extends Component {
         // run the main build task
         {
           name: buildTask.name,
-          run: parent.runTaskCommand(buildTask),
+          run: `${project.projenCommand} ${buildTask.name}`,
+          workingDirectory: outdir,
         },
-
-        { run: `mv ${outdir}/dist .` },
+        {
+          name: 'Create version files',
+          workingDirectory: outdir,
+          run: [
+            `echo $(node -p "require('./package.json').version") > ${versionFile}`,
+            `echo "${npmName}@v$(cat ${versionFile})" > ${releaseTagFile}`,
+            `echo "Update AWS CloudFormation Registry type \`${typeName}\` to v$(cat ${versionFile})" > ${changelogFile}`,
+          ].join('\n'),
+        },
+        {
+          id: 'check-commits',
+          name: 'Check for releasable commits',
+          workingDirectory: outdir,
+          run: [
+            `LATEST_TAG=$(cat ${releaseTagFile})`,
+            `COUNT=$(${ReleasableCommits.featuresAndFixes('.').cmd} | sed -n '$=')`,
+            'echo "releasable_count=$COUNT" >> $GITHUB_OUTPUT',
+            'cat $GITHUB_OUTPUT',
+          ].join('\n'),
+        },
+        github.WorkflowSteps.tagExists(`cat $(${releaseTagFile})`, {}),
+        { run: `mv ${outdir}/${artifactDir} .` },
         {
           name: 'Upload artifact',
-          uses: 'actions/upload-artifact@v2.1.1',
+          uses: 'actions/upload-artifact@v4',
           // Setting to always will ensure that this step will run even if
           // the previous ones have failed (e.g. coverage report, internal logs, etc)
           if: 'always()',
           with: {
             name: 'build-artifact',
-            path: 'dist',
+            path: artifactDir,
           },
         },
       ],
@@ -284,8 +329,14 @@ export class CloudFormationTypeProject extends Component {
     const publisher = new Publisher(project, {
       artifactName: artifactDir,
       buildJobId: 'build',
+      condition: "(needs.build.outputs.tag_exists != 'true') && (fromJSON(needs.build.outputs.releasable_commits) > 0)",
     });
 
+    publisher.publishToGitHubReleases({
+      versionFile,
+      changelogFile,
+      releaseTagFile,
+    });
     publisher.publishToNpm();
     // FIXME: Pausing Maven publishing till we introduce better publishing mechanism that does not impact Maven
     // GH Issue: https://github.com/cdklabs/publib/issues/874

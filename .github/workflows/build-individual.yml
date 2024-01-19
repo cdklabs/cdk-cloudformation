@@ -10,9 +10,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:alexa-ask-skill
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/alexa-ask-skill
     container:
       image: jsii/superchain:1-bullseye-slim
   aqua-enterprise-enforcer:
@@ -20,9 +21,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:aqua-enterprise-enforcer
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/aqua-enterprise-enforcer
     container:
       image: jsii/superchain:1-bullseye-slim
   aqua-enterprise-kubeenforcer:
@@ -30,9 +32,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:aqua-enterprise-kubeenforcer
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/aqua-enterprise-kubeenforcer
     container:
       image: jsii/superchain:1-bullseye-slim
   aqua-enterprise-scanner:
@@ -40,9 +43,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:aqua-enterprise-scanner
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/aqua-enterprise-scanner
     container:
       image: jsii/superchain:1-bullseye-slim
   aqua-enterprise-server:
@@ -50,9 +54,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:aqua-enterprise-server
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/aqua-enterprise-server
     container:
       image: jsii/superchain:1-bullseye-slim
   atlassian-opsgenie-integration:
@@ -60,9 +65,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:atlassian-opsgenie-integration
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/atlassian-opsgenie-integration
     container:
       image: jsii/superchain:1-bullseye-slim
   atlassian-opsgenie-team:
@@ -70,9 +76,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:atlassian-opsgenie-team
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/atlassian-opsgenie-team
     container:
       image: jsii/superchain:1-bullseye-slim
   atlassian-opsgenie-user:
@@ -80,9 +87,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:atlassian-opsgenie-user
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/atlassian-opsgenie-user
     container:
       image: jsii/superchain:1-bullseye-slim
   awscommunity-account-alternatecontact:
@@ -90,9 +98,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:awscommunity-account-alternatecontact
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/awscommunity-account-alternatecontact
     container:
       image: jsii/superchain:1-bullseye-slim
   awscommunity-applicationautoscaling-scheduledaction:
@@ -100,9 +109,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:awscommunity-applicationautoscaling-scheduledaction
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/awscommunity-applicationautoscaling-scheduledaction
     container:
       image: jsii/superchain:1-bullseye-slim
   awscommunity-cloudfront-s3website-module:
@@ -110,9 +120,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:awscommunity-cloudfront-s3website-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/awscommunity-cloudfront-s3website-module
     container:
       image: jsii/superchain:1-bullseye-slim
   awscommunity-dynamodb-item:
@@ -120,9 +131,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:awscommunity-dynamodb-item
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/awscommunity-dynamodb-item
     container:
       image: jsii/superchain:1-bullseye-slim
   awscommunity-resource-lookup:
@@ -130,9 +142,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:awscommunity-resource-lookup
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/awscommunity-resource-lookup
     container:
       image: jsii/superchain:1-bullseye-slim
   awscommunity-s3-bucket-module:
@@ -140,9 +153,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:awscommunity-s3-bucket-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/awscommunity-s3-bucket-module
     container:
       image: jsii/superchain:1-bullseye-slim
   awscommunity-s3-deletebucketcontents:
@@ -150,9 +164,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:awscommunity-s3-deletebucketcontents
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/awscommunity-s3-deletebucketcontents
     container:
       image: jsii/superchain:1-bullseye-slim
   awscommunity-time-offset:
@@ -160,9 +175,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:awscommunity-time-offset
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/awscommunity-time-offset
     container:
       image: jsii/superchain:1-bullseye-slim
   awscommunity-time-sleep:
@@ -170,9 +186,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:awscommunity-time-sleep
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/awscommunity-time-sleep
     container:
       image: jsii/superchain:1-bullseye-slim
   awscommunity-time-static:
@@ -180,9 +197,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:awscommunity-time-static
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/awscommunity-time-static
     container:
       image: jsii/superchain:1-bullseye-slim
   awsqs-checkpoint-cloudguardqs-module:
@@ -190,9 +208,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:awsqs-checkpoint-cloudguardqs-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/awsqs-checkpoint-cloudguardqs-module
     container:
       image: jsii/superchain:1-bullseye-slim
   awsqs-ec2-linuxbastionqs-module:
@@ -200,9 +219,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:awsqs-ec2-linuxbastionqs-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/awsqs-ec2-linuxbastionqs-module
     container:
       image: jsii/superchain:1-bullseye-slim
   awsqs-eks-cluster:
@@ -210,9 +230,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:awsqs-eks-cluster
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/awsqs-eks-cluster
     container:
       image: jsii/superchain:1-bullseye-slim
   awsqs-iridium-cloudconnectqs-module:
@@ -220,9 +241,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:awsqs-iridium-cloudconnectqs-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/awsqs-iridium-cloudconnectqs-module
     container:
       image: jsii/superchain:1-bullseye-slim
   awsqs-kubernetes-get:
@@ -230,9 +252,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:awsqs-kubernetes-get
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/awsqs-kubernetes-get
     container:
       image: jsii/superchain:1-bullseye-slim
   awsqs-kubernetes-helm:
@@ -240,9 +263,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:awsqs-kubernetes-helm
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/awsqs-kubernetes-helm
     container:
       image: jsii/superchain:1-bullseye-slim
   awsqs-kubernetes-resource:
@@ -250,9 +274,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:awsqs-kubernetes-resource
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/awsqs-kubernetes-resource
     container:
       image: jsii/superchain:1-bullseye-slim
   awsqs-vpc-vpcqs-module:
@@ -260,9 +285,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:awsqs-vpc-vpcqs-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/awsqs-vpc-vpcqs-module
     container:
       image: jsii/superchain:1-bullseye-slim
   bigid-datasource-dynamodb:
@@ -270,9 +296,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:bigid-datasource-dynamodb
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/bigid-datasource-dynamodb
     container:
       image: jsii/superchain:1-bullseye-slim
   bigid-datasource-s3:
@@ -280,9 +307,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:bigid-datasource-s3
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/bigid-datasource-s3
     container:
       image: jsii/superchain:1-bullseye-slim
   cadiaz-bucket-uno-module:
@@ -290,9 +318,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:cadiaz-bucket-uno-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/cadiaz-bucket-uno-module
     container:
       image: jsii/superchain:1-bullseye-slim
   cloudflare-dns-record:
@@ -300,9 +329,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:cloudflare-dns-record
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/cloudflare-dns-record
     container:
       image: jsii/superchain:1-bullseye-slim
   cloudflare-loadbalancer-loadbalancer:
@@ -310,9 +340,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:cloudflare-loadbalancer-loadbalancer
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/cloudflare-loadbalancer-loadbalancer
     container:
       image: jsii/superchain:1-bullseye-slim
   cloudflare-loadbalancer-monitor:
@@ -320,9 +351,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:cloudflare-loadbalancer-monitor
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/cloudflare-loadbalancer-monitor
     container:
       image: jsii/superchain:1-bullseye-slim
   cloudflare-loadbalancer-pool:
@@ -330,9 +362,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:cloudflare-loadbalancer-pool
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/cloudflare-loadbalancer-pool
     container:
       image: jsii/superchain:1-bullseye-slim
   confluentcloud-iam-serviceaccount:
@@ -340,9 +373,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:confluentcloud-iam-serviceaccount
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/confluentcloud-iam-serviceaccount
     container:
       image: jsii/superchain:1-bullseye-slim
   cyral-sidecar-deployment-module:
@@ -350,9 +384,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:cyral-sidecar-deployment-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/cyral-sidecar-deployment-module
     container:
       image: jsii/superchain:1-bullseye-slim
   databricks-clusters-cluster:
@@ -360,9 +395,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:databricks-clusters-cluster
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/databricks-clusters-cluster
     container:
       image: jsii/superchain:1-bullseye-slim
   databricks-clusters-job:
@@ -370,9 +406,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:databricks-clusters-job
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/databricks-clusters-job
     container:
       image: jsii/superchain:1-bullseye-slim
   datadog-dashboards-dashboard:
@@ -380,9 +417,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:datadog-dashboards-dashboard
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/datadog-dashboards-dashboard
     container:
       image: jsii/superchain:1-bullseye-slim
   datadog-integrations-aws:
@@ -390,9 +428,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:datadog-integrations-aws
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/datadog-integrations-aws
     container:
       image: jsii/superchain:1-bullseye-slim
   datadog-monitors-downtime:
@@ -400,9 +439,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:datadog-monitors-downtime
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/datadog-monitors-downtime
     container:
       image: jsii/superchain:1-bullseye-slim
   datadog-monitors-downtimeschedule:
@@ -410,9 +450,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:datadog-monitors-downtimeschedule
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/datadog-monitors-downtimeschedule
     container:
       image: jsii/superchain:1-bullseye-slim
   datadog-monitors-monitor:
@@ -420,9 +461,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:datadog-monitors-monitor
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/datadog-monitors-monitor
     container:
       image: jsii/superchain:1-bullseye-slim
   datadog-slos-slo:
@@ -430,9 +472,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:datadog-slos-slo
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/datadog-slos-slo
     container:
       image: jsii/superchain:1-bullseye-slim
   dynatrace-configuration-dashboard:
@@ -440,9 +483,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:dynatrace-configuration-dashboard
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/dynatrace-configuration-dashboard
     container:
       image: jsii/superchain:1-bullseye-slim
   dynatrace-environment-metric:
@@ -450,9 +494,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:dynatrace-environment-metric
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/dynatrace-environment-metric
     container:
       image: jsii/superchain:1-bullseye-slim
   dynatrace-environment-servicelevelobjective:
@@ -460,9 +505,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:dynatrace-environment-servicelevelobjective
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/dynatrace-environment-servicelevelobjective
     container:
       image: jsii/superchain:1-bullseye-slim
   dynatrace-environment-syntheticlocation:
@@ -470,9 +516,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:dynatrace-environment-syntheticlocation
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/dynatrace-environment-syntheticlocation
     container:
       image: jsii/superchain:1-bullseye-slim
   dynatrace-environment-syntheticmonitor:
@@ -480,9 +527,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:dynatrace-environment-syntheticmonitor
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/dynatrace-environment-syntheticmonitor
     container:
       image: jsii/superchain:1-bullseye-slim
   fastly-dictionary-dictionary:
@@ -490,9 +538,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:fastly-dictionary-dictionary
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/fastly-dictionary-dictionary
     container:
       image: jsii/superchain:1-bullseye-slim
   fastly-dictionary-dictionaryitem:
@@ -500,9 +549,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:fastly-dictionary-dictionaryitem
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/fastly-dictionary-dictionaryitem
     container:
       image: jsii/superchain:1-bullseye-slim
   fastly-logging-s3:
@@ -510,9 +560,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:fastly-logging-s3
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/fastly-logging-s3
     container:
       image: jsii/superchain:1-bullseye-slim
   fastly-logging-splunk:
@@ -520,9 +571,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:fastly-logging-splunk
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/fastly-logging-splunk
     container:
       image: jsii/superchain:1-bullseye-slim
   fastly-services-activeversion:
@@ -530,9 +582,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:fastly-services-activeversion
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/fastly-services-activeversion
     container:
       image: jsii/superchain:1-bullseye-slim
   fastly-services-backend:
@@ -540,9 +593,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:fastly-services-backend
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/fastly-services-backend
     container:
       image: jsii/superchain:1-bullseye-slim
   fastly-services-domain:
@@ -550,9 +604,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:fastly-services-domain
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/fastly-services-domain
     container:
       image: jsii/superchain:1-bullseye-slim
   fastly-services-healthcheck:
@@ -560,9 +615,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:fastly-services-healthcheck
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/fastly-services-healthcheck
     container:
       image: jsii/superchain:1-bullseye-slim
   fastly-services-service:
@@ -570,9 +626,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:fastly-services-service
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/fastly-services-service
     container:
       image: jsii/superchain:1-bullseye-slim
   fastly-services-version:
@@ -580,9 +637,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:fastly-services-version
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/fastly-services-version
     container:
       image: jsii/superchain:1-bullseye-slim
   fastly-tls-certificate:
@@ -590,9 +648,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:fastly-tls-certificate
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/fastly-tls-certificate
     container:
       image: jsii/superchain:1-bullseye-slim
   fastly-tls-domain:
@@ -600,9 +659,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:fastly-tls-domain
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/fastly-tls-domain
     container:
       image: jsii/superchain:1-bullseye-slim
   fastly-tls-privatekeys:
@@ -610,9 +670,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:fastly-tls-privatekeys
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/fastly-tls-privatekeys
     container:
       image: jsii/superchain:1-bullseye-slim
   fireeye-cloudintegrations-cloudwatch:
@@ -620,9 +681,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:fireeye-cloudintegrations-cloudwatch
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/fireeye-cloudintegrations-cloudwatch
     container:
       image: jsii/superchain:1-bullseye-slim
   freyraim-impactapi-apigateway-module:
@@ -630,9 +692,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:freyraim-impactapi-apigateway-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/freyraim-impactapi-apigateway-module
     container:
       image: jsii/superchain:1-bullseye-slim
   freyraim-impactapi-apihandle-module:
@@ -640,9 +703,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:freyraim-impactapi-apihandle-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/freyraim-impactapi-apihandle-module
     container:
       image: jsii/superchain:1-bullseye-slim
   freyraim-impactapi-ec2instance-module:
@@ -650,9 +714,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:freyraim-impactapi-ec2instance-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/freyraim-impactapi-ec2instance-module
     container:
       image: jsii/superchain:1-bullseye-slim
   freyraim-impactapi-lambdafunction-module:
@@ -660,9 +725,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:freyraim-impactapi-lambdafunction-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/freyraim-impactapi-lambdafunction-module
     container:
       image: jsii/superchain:1-bullseye-slim
   freyraim-impactapi-loadbalancer-module:
@@ -670,9 +736,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:freyraim-impactapi-loadbalancer-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/freyraim-impactapi-loadbalancer-module
     container:
       image: jsii/superchain:1-bullseye-slim
   freyraim-spider-cloudfront-module:
@@ -680,9 +747,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:freyraim-spider-cloudfront-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/freyraim-spider-cloudfront-module
     container:
       image: jsii/superchain:1-bullseye-slim
   freyraim-spider-ec2instance-module:
@@ -690,9 +758,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:freyraim-spider-ec2instance-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/freyraim-spider-ec2instance-module
     container:
       image: jsii/superchain:1-bullseye-slim
   freyraim-spider-ecs-module:
@@ -700,9 +769,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:freyraim-spider-ecs-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/freyraim-spider-ecs-module
     container:
       image: jsii/superchain:1-bullseye-slim
   freyraim-spider-loadbalancer-module:
@@ -710,9 +780,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:freyraim-spider-loadbalancer-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/freyraim-spider-loadbalancer-module
     container:
       image: jsii/superchain:1-bullseye-slim
   freyraim-spider-postgresql-module:
@@ -720,9 +791,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:freyraim-spider-postgresql-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/freyraim-spider-postgresql-module
     container:
       image: jsii/superchain:1-bullseye-slim
   freyraim-spider-s3bucket-module:
@@ -730,9 +802,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:freyraim-spider-s3bucket-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/freyraim-spider-s3bucket-module
     container:
       image: jsii/superchain:1-bullseye-slim
   generic-database-schema:
@@ -740,9 +813,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:generic-database-schema
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/generic-database-schema
     container:
       image: jsii/superchain:1-bullseye-slim
   generic-transcribe-vocabulary:
@@ -750,9 +824,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:generic-transcribe-vocabulary
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/generic-transcribe-vocabulary
     container:
       image: jsii/superchain:1-bullseye-slim
   github-git-tag:
@@ -760,9 +835,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:github-git-tag
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/github-git-tag
     container:
       image: jsii/superchain:1-bullseye-slim
   github-organizations-membership:
@@ -770,9 +846,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:github-organizations-membership
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/github-organizations-membership
     container:
       image: jsii/superchain:1-bullseye-slim
   github-organizations-secret:
@@ -780,9 +857,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:github-organizations-secret
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/github-organizations-secret
     container:
       image: jsii/superchain:1-bullseye-slim
   github-repositories-collaborator:
@@ -790,9 +868,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:github-repositories-collaborator
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/github-repositories-collaborator
     container:
       image: jsii/superchain:1-bullseye-slim
   github-repositories-repository:
@@ -800,9 +879,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:github-repositories-repository
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/github-repositories-repository
     container:
       image: jsii/superchain:1-bullseye-slim
   github-repositories-secret:
@@ -810,9 +890,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:github-repositories-secret
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/github-repositories-secret
     container:
       image: jsii/superchain:1-bullseye-slim
   github-repositories-webhook:
@@ -820,9 +901,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:github-repositories-webhook
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/github-repositories-webhook
     container:
       image: jsii/superchain:1-bullseye-slim
   github-teams-membership:
@@ -830,9 +912,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:github-teams-membership
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/github-teams-membership
     container:
       image: jsii/superchain:1-bullseye-slim
   github-teams-repositoryaccess:
@@ -840,9 +923,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:github-teams-repositoryaccess
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/github-teams-repositoryaccess
     container:
       image: jsii/superchain:1-bullseye-slim
   github-teams-team:
@@ -850,9 +934,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:github-teams-team
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/github-teams-team
     container:
       image: jsii/superchain:1-bullseye-slim
   gitlab-code-tag:
@@ -860,9 +945,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:gitlab-code-tag
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/gitlab-code-tag
     container:
       image: jsii/superchain:1-bullseye-slim
   gitlab-groups-group:
@@ -870,9 +956,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:gitlab-groups-group
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/gitlab-groups-group
     container:
       image: jsii/superchain:1-bullseye-slim
   gitlab-groups-groupaccesstogroup:
@@ -880,9 +967,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:gitlab-groups-groupaccesstogroup
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/gitlab-groups-groupaccesstogroup
     container:
       image: jsii/superchain:1-bullseye-slim
   gitlab-groups-usermemberofgroup:
@@ -890,9 +978,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:gitlab-groups-usermemberofgroup
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/gitlab-groups-usermemberofgroup
     container:
       image: jsii/superchain:1-bullseye-slim
   gitlab-projects-accesstoken:
@@ -900,9 +989,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:gitlab-projects-accesstoken
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/gitlab-projects-accesstoken
     container:
       image: jsii/superchain:1-bullseye-slim
   gitlab-projects-groupaccesstoproject:
@@ -910,9 +1000,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:gitlab-projects-groupaccesstoproject
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/gitlab-projects-groupaccesstoproject
     container:
       image: jsii/superchain:1-bullseye-slim
   gitlab-projects-project:
@@ -920,9 +1011,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:gitlab-projects-project
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/gitlab-projects-project
     container:
       image: jsii/superchain:1-bullseye-slim
   gitlab-projects-usermemberofproject:
@@ -930,9 +1022,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:gitlab-projects-usermemberofproject
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/gitlab-projects-usermemberofproject
     container:
       image: jsii/superchain:1-bullseye-slim
   gremlin-agent-helm:
@@ -940,9 +1033,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:gremlin-agent-helm
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/gremlin-agent-helm
     container:
       image: jsii/superchain:1-bullseye-slim
   jfrog-artifactory-core-module:
@@ -950,9 +1044,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:jfrog-artifactory-core-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/jfrog-artifactory-core-module
     container:
       image: jsii/superchain:1-bullseye-slim
   jfrog-artifactory-ec2instance-module:
@@ -960,9 +1055,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:jfrog-artifactory-ec2instance-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/jfrog-artifactory-ec2instance-module
     container:
       image: jsii/superchain:1-bullseye-slim
   jfrog-artifactory-existingvpc-module:
@@ -970,9 +1066,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:jfrog-artifactory-existingvpc-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/jfrog-artifactory-existingvpc-module
     container:
       image: jsii/superchain:1-bullseye-slim
   jfrog-artifactory-newvpc-module:
@@ -980,9 +1077,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:jfrog-artifactory-newvpc-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/jfrog-artifactory-newvpc-module
     container:
       image: jsii/superchain:1-bullseye-slim
   jfrog-linux-bastion-module:
@@ -990,9 +1088,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:jfrog-linux-bastion-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/jfrog-linux-bastion-module
     container:
       image: jsii/superchain:1-bullseye-slim
   jfrog-vpc-multiaz-module:
@@ -1000,9 +1099,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:jfrog-vpc-multiaz-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/jfrog-vpc-multiaz-module
     container:
       image: jsii/superchain:1-bullseye-slim
   jfrog-xray-ec2instance-module:
@@ -1010,9 +1110,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:jfrog-xray-ec2instance-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/jfrog-xray-ec2instance-module
     container:
       image: jsii/superchain:1-bullseye-slim
   karte-eventbridge-documentdb-module:
@@ -1020,9 +1121,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:karte-eventbridge-documentdb-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/karte-eventbridge-documentdb-module
     container:
       image: jsii/superchain:1-bullseye-slim
   logzio-autodeploymentlogzio-cloudwatch-module:
@@ -1030,9 +1132,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:logzio-autodeploymentlogzio-cloudwatch-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/logzio-autodeploymentlogzio-cloudwatch-module
     container:
       image: jsii/superchain:1-bullseye-slim
   logzio-awscostandusage-cur-module:
@@ -1040,9 +1143,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:logzio-awscostandusage-cur-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/logzio-awscostandusage-cur-module
     container:
       image: jsii/superchain:1-bullseye-slim
   logzio-awssecurityhub-collector-module:
@@ -1050,9 +1154,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:logzio-awssecurityhub-collector-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/logzio-awssecurityhub-collector-module
     container:
       image: jsii/superchain:1-bullseye-slim
   logzio-kinesisshipper-kinesisshipper-module:
@@ -1060,9 +1165,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:logzio-kinesisshipper-kinesisshipper-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/logzio-kinesisshipper-kinesisshipper-module
     container:
       image: jsii/superchain:1-bullseye-slim
   logzio-myservice-myname-module:
@@ -1070,9 +1176,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:logzio-myservice-myname-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/logzio-myservice-myname-module
     container:
       image: jsii/superchain:1-bullseye-slim
   mavi-pipeline-default-module:
@@ -1080,9 +1187,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:mavi-pipeline-default-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/mavi-pipeline-default-module
     container:
       image: jsii/superchain:1-bullseye-slim
   mongodb-atlas-cluster:
@@ -1090,9 +1198,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:mongodb-atlas-cluster
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/mongodb-atlas-cluster
     container:
       image: jsii/superchain:1-bullseye-slim
   mongodb-atlas-databaseuser:
@@ -1100,9 +1209,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:mongodb-atlas-databaseuser
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/mongodb-atlas-databaseuser
     container:
       image: jsii/superchain:1-bullseye-slim
   mongodb-atlas-networkpeering:
@@ -1110,9 +1220,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:mongodb-atlas-networkpeering
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/mongodb-atlas-networkpeering
     container:
       image: jsii/superchain:1-bullseye-slim
   mongodb-atlas-project:
@@ -1120,9 +1231,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:mongodb-atlas-project
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/mongodb-atlas-project
     container:
       image: jsii/superchain:1-bullseye-slim
   mongodb-atlas-projectipaccesslist:
@@ -1130,9 +1242,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:mongodb-atlas-projectipaccesslist
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/mongodb-atlas-projectipaccesslist
     container:
       image: jsii/superchain:1-bullseye-slim
   newrelic-agent-configuration:
@@ -1140,9 +1253,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:newrelic-agent-configuration
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/newrelic-agent-configuration
     container:
       image: jsii/superchain:1-bullseye-slim
   newrelic-alert-alertspolicy:
@@ -1150,9 +1264,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:newrelic-alert-alertspolicy
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/newrelic-alert-alertspolicy
     container:
       image: jsii/superchain:1-bullseye-slim
   newrelic-alert-nrqlconditionstatic:
@@ -1160,9 +1275,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:newrelic-alert-nrqlconditionstatic
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/newrelic-alert-nrqlconditionstatic
     container:
       image: jsii/superchain:1-bullseye-slim
   newrelic-cloudformation-dashboards:
@@ -1170,9 +1286,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:newrelic-cloudformation-dashboards
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/newrelic-cloudformation-dashboards
     container:
       image: jsii/superchain:1-bullseye-slim
   newrelic-cloudformation-tagging:
@@ -1180,9 +1297,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:newrelic-cloudformation-tagging
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/newrelic-cloudformation-tagging
     container:
       image: jsii/superchain:1-bullseye-slim
   newrelic-cloudformation-workloads:
@@ -1190,9 +1308,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:newrelic-cloudformation-workloads
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/newrelic-cloudformation-workloads
     container:
       image: jsii/superchain:1-bullseye-slim
   newrelic-observability-ainotificationschannel:
@@ -1200,9 +1319,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:newrelic-observability-ainotificationschannel
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/newrelic-observability-ainotificationschannel
     container:
       image: jsii/superchain:1-bullseye-slim
   newrelic-observability-ainotificationsdestination:
@@ -1210,9 +1330,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:newrelic-observability-ainotificationsdestination
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/newrelic-observability-ainotificationsdestination
     container:
       image: jsii/superchain:1-bullseye-slim
   newrelic-observability-aiworkflows:
@@ -1220,9 +1341,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:newrelic-observability-aiworkflows
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/newrelic-observability-aiworkflows
     container:
       image: jsii/superchain:1-bullseye-slim
   newrelic-observability-alertsmutingrule:
@@ -1230,9 +1352,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:newrelic-observability-alertsmutingrule
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/newrelic-observability-alertsmutingrule
     container:
       image: jsii/superchain:1-bullseye-slim
   newrelic-observability-alertsnrqlcondition:
@@ -1240,9 +1363,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:newrelic-observability-alertsnrqlcondition
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/newrelic-observability-alertsnrqlcondition
     container:
       image: jsii/superchain:1-bullseye-slim
   newrelic-observability-alertspolicy:
@@ -1250,9 +1374,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:newrelic-observability-alertspolicy
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/newrelic-observability-alertspolicy
     container:
       image: jsii/superchain:1-bullseye-slim
   newrelic-observability-dashboards:
@@ -1260,9 +1385,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:newrelic-observability-dashboards
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/newrelic-observability-dashboards
     container:
       image: jsii/superchain:1-bullseye-slim
   newrelic-observability-workloads:
@@ -1270,9 +1396,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:newrelic-observability-workloads
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/newrelic-observability-workloads
     container:
       image: jsii/superchain:1-bullseye-slim
   okta-application-application:
@@ -1280,9 +1407,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:okta-application-application
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/okta-application-application
     container:
       image: jsii/superchain:1-bullseye-slim
   okta-group-group:
@@ -1290,9 +1418,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:okta-group-group
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/okta-group-group
     container:
       image: jsii/superchain:1-bullseye-slim
   okta-group-groupapplicationassociation:
@@ -1300,9 +1429,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:okta-group-groupapplicationassociation
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/okta-group-groupapplicationassociation
     container:
       image: jsii/superchain:1-bullseye-slim
   okta-group-membership:
@@ -1310,9 +1440,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:okta-group-membership
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/okta-group-membership
     container:
       image: jsii/superchain:1-bullseye-slim
   okta-policy-policy:
@@ -1320,9 +1451,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:okta-policy-policy
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/okta-policy-policy
     container:
       image: jsii/superchain:1-bullseye-slim
   org-test-sample-module:
@@ -1330,9 +1462,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:org-test-sample-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/org-test-sample-module
     container:
       image: jsii/superchain:1-bullseye-slim
   pagerduty-escalationpolicies-escalationpolicy:
@@ -1340,9 +1473,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:pagerduty-escalationpolicies-escalationpolicy
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/pagerduty-escalationpolicies-escalationpolicy
     container:
       image: jsii/superchain:1-bullseye-slim
   pagerduty-responseplays-responseplay:
@@ -1350,9 +1484,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:pagerduty-responseplays-responseplay
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/pagerduty-responseplays-responseplay
     container:
       image: jsii/superchain:1-bullseye-slim
   pagerduty-schedules-schedule:
@@ -1360,9 +1495,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:pagerduty-schedules-schedule
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/pagerduty-schedules-schedule
     container:
       image: jsii/superchain:1-bullseye-slim
   pagerduty-teams-membership:
@@ -1370,9 +1506,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:pagerduty-teams-membership
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/pagerduty-teams-membership
     container:
       image: jsii/superchain:1-bullseye-slim
   pagerduty-teams-team:
@@ -1380,9 +1517,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:pagerduty-teams-team
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/pagerduty-teams-team
     container:
       image: jsii/superchain:1-bullseye-slim
   pagerduty-users-user:
@@ -1390,9 +1528,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:pagerduty-users-user
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/pagerduty-users-user
     container:
       image: jsii/superchain:1-bullseye-slim
   paloaltonetworks-cloudngfw-ngfw:
@@ -1400,9 +1539,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:paloaltonetworks-cloudngfw-ngfw
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/paloaltonetworks-cloudngfw-ngfw
     container:
       image: jsii/superchain:1-bullseye-slim
   paloaltonetworks-cloudngfw-rulestack:
@@ -1410,9 +1550,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:paloaltonetworks-cloudngfw-rulestack
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/paloaltonetworks-cloudngfw-rulestack
     container:
       image: jsii/superchain:1-bullseye-slim
   poc-azure-blobstorage:
@@ -1420,9 +1561,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:poc-azure-blobstorage
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/poc-azure-blobstorage
     container:
       image: jsii/superchain:1-bullseye-slim
   registry-test-resource1-module:
@@ -1430,9 +1572,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:registry-test-resource1-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/registry-test-resource1-module
     container:
       image: jsii/superchain:1-bullseye-slim
   rollbar-notifications-rule:
@@ -1440,9 +1583,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:rollbar-notifications-rule
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/rollbar-notifications-rule
     container:
       image: jsii/superchain:1-bullseye-slim
   rollbar-projects-accesstoken:
@@ -1450,9 +1594,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:rollbar-projects-accesstoken
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/rollbar-projects-accesstoken
     container:
       image: jsii/superchain:1-bullseye-slim
   rollbar-projects-project:
@@ -1460,9 +1605,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:rollbar-projects-project
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/rollbar-projects-project
     container:
       image: jsii/superchain:1-bullseye-slim
   rollbar-teams-membership:
@@ -1470,9 +1616,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:rollbar-teams-membership
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/rollbar-teams-membership
     container:
       image: jsii/superchain:1-bullseye-slim
   rollbar-teams-team:
@@ -1480,9 +1627,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:rollbar-teams-team
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/rollbar-teams-team
     container:
       image: jsii/superchain:1-bullseye-slim
   snowflake-database-database:
@@ -1490,9 +1638,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:snowflake-database-database
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/snowflake-database-database
     container:
       image: jsii/superchain:1-bullseye-slim
   snowflake-database-grant:
@@ -1500,9 +1649,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:snowflake-database-grant
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/snowflake-database-grant
     container:
       image: jsii/superchain:1-bullseye-slim
   snowflake-role-grant:
@@ -1510,9 +1660,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:snowflake-role-grant
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/snowflake-role-grant
     container:
       image: jsii/superchain:1-bullseye-slim
   snowflake-role-role:
@@ -1520,9 +1671,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:snowflake-role-role
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/snowflake-role-role
     container:
       image: jsii/superchain:1-bullseye-slim
   snowflake-user-user:
@@ -1530,9 +1682,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:snowflake-user-user
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/snowflake-user-user
     container:
       image: jsii/superchain:1-bullseye-slim
   snowflake-warehouse-grant:
@@ -1540,9 +1693,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:snowflake-warehouse-grant
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/snowflake-warehouse-grant
     container:
       image: jsii/superchain:1-bullseye-slim
   snyk-container-helm:
@@ -1550,9 +1704,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:snyk-container-helm
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/snyk-container-helm
     container:
       image: jsii/superchain:1-bullseye-slim
   splunk-enterprise-quickstart-module:
@@ -1560,9 +1715,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:splunk-enterprise-quickstart-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/splunk-enterprise-quickstart-module
     container:
       image: jsii/superchain:1-bullseye-slim
   spot-elastigroup-group:
@@ -1570,9 +1726,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:spot-elastigroup-group
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/spot-elastigroup-group
     container:
       image: jsii/superchain:1-bullseye-slim
   stackery-open-bastion-module:
@@ -1580,9 +1737,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:stackery-open-bastion-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/stackery-open-bastion-module
     container:
       image: jsii/superchain:1-bullseye-slim
   stocks-orders-marketorder:
@@ -1590,9 +1748,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:stocks-orders-marketorder
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/stocks-orders-marketorder
     container:
       image: jsii/superchain:1-bullseye-slim
   symphonia-opensource-cloudformationartifactsbucket-module:
@@ -1600,9 +1759,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:symphonia-opensource-cloudformationartifactsbucket-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/symphonia-opensource-cloudformationartifactsbucket-module
     container:
       image: jsii/superchain:1-bullseye-slim
   sysdig-helm-agent:
@@ -1610,9 +1770,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:sysdig-helm-agent
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/sysdig-helm-agent
     container:
       image: jsii/superchain:1-bullseye-slim
   tf-ad-computer:
@@ -1620,9 +1781,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:tf-ad-computer
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/tf-ad-computer
     container:
       image: jsii/superchain:1-bullseye-slim
   tf-ad-user:
@@ -1630,9 +1792,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:tf-ad-user
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/tf-ad-user
     container:
       image: jsii/superchain:1-bullseye-slim
   tf-aws-keypair:
@@ -1640,9 +1803,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:tf-aws-keypair
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/tf-aws-keypair
     container:
       image: jsii/superchain:1-bullseye-slim
   tf-aws-s3bucket:
@@ -1650,9 +1814,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:tf-aws-s3bucket
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/tf-aws-s3bucket
     container:
       image: jsii/superchain:1-bullseye-slim
   tf-aws-s3bucketobject:
@@ -1660,9 +1825,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:tf-aws-s3bucketobject
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/tf-aws-s3bucketobject
     container:
       image: jsii/superchain:1-bullseye-slim
   tf-azuread-application:
@@ -1670,9 +1836,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:tf-azuread-application
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/tf-azuread-application
     container:
       image: jsii/superchain:1-bullseye-slim
   tf-azuread-user:
@@ -1680,9 +1847,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:tf-azuread-user
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/tf-azuread-user
     container:
       image: jsii/superchain:1-bullseye-slim
   tf-cloudflare-record:
@@ -1690,9 +1858,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:tf-cloudflare-record
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/tf-cloudflare-record
     container:
       image: jsii/superchain:1-bullseye-slim
   tf-digitalocean-droplet:
@@ -1700,9 +1869,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:tf-digitalocean-droplet
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/tf-digitalocean-droplet
     container:
       image: jsii/superchain:1-bullseye-slim
   tf-github-repository:
@@ -1710,9 +1880,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:tf-github-repository
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/tf-github-repository
     container:
       image: jsii/superchain:1-bullseye-slim
   tf-google-storagebucket:
@@ -1720,9 +1891,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:tf-google-storagebucket
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/tf-google-storagebucket
     container:
       image: jsii/superchain:1-bullseye-slim
   tf-pagerduty-service:
@@ -1730,9 +1902,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:tf-pagerduty-service
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/tf-pagerduty-service
     container:
       image: jsii/superchain:1-bullseye-slim
   tf-random-string:
@@ -1740,9 +1913,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:tf-random-string
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/tf-random-string
     container:
       image: jsii/superchain:1-bullseye-slim
   tf-random-uuid:
@@ -1750,9 +1924,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:tf-random-uuid
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/tf-random-uuid
     container:
       image: jsii/superchain:1-bullseye-slim
   trendmicro-cloudonecontainer-helm:
@@ -1760,9 +1935,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:trendmicro-cloudonecontainer-helm
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/trendmicro-cloudonecontainer-helm
     container:
       image: jsii/superchain:1-bullseye-slim
   unxpose-iam-integration-module:
@@ -1770,9 +1946,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:unxpose-iam-integration-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/unxpose-iam-integration-module
     container:
       image: jsii/superchain:1-bullseye-slim
   zmk-iam-lambdabasicrole-module:
@@ -1780,8 +1957,9 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: yarn install
-      - run: yarn build:zmk-iam-lambdabasicrole-module
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/zmk-iam-lambdabasicrole-module
     container:
       image: jsii/superchain:1-bullseye-slim

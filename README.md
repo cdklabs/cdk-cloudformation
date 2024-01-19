@@ -46,9 +46,8 @@ that version from your package manager.
 
 <!--STATUS-BEGIN-->
 
-Release status for 178 libraries:
+Release status for 171 libraries:
 
-* [![alexa-ask-skill](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-alexa-ask-skill.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-alexa-ask-skill.yml)
 * [![aqua-enterprise-enforcer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml)
 * [![aqua-enterprise-kubeenforcer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-kubeenforcer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-kubeenforcer.yml)
 * [![aqua-enterprise-scanner](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-scanner.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-scanner.yml)
@@ -156,11 +155,6 @@ Release status for 178 libraries:
 * [![logzio-kinesisshipper-kinesisshipper-module](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-logzio-kinesisshipper-kinesisshipper-module.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-logzio-kinesisshipper-kinesisshipper-module.yml)
 * [![logzio-myservice-myname-module](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-logzio-myservice-myname-module.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-logzio-myservice-myname-module.yml)
 * [![mavi-pipeline-default-module](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mavi-pipeline-default-module.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mavi-pipeline-default-module.yml)
-* [![mongodb-atlas-cluster](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mongodb-atlas-cluster.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mongodb-atlas-cluster.yml)
-* [![mongodb-atlas-databaseuser](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mongodb-atlas-databaseuser.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mongodb-atlas-databaseuser.yml)
-* [![mongodb-atlas-networkpeering](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mongodb-atlas-networkpeering.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mongodb-atlas-networkpeering.yml)
-* [![mongodb-atlas-project](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mongodb-atlas-project.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mongodb-atlas-project.yml)
-* [![mongodb-atlas-projectipaccesslist](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mongodb-atlas-projectipaccesslist.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mongodb-atlas-projectipaccesslist.yml)
 * [![newrelic-agent-configuration](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-agent-configuration.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-agent-configuration.yml)
 * [![newrelic-alert-alertspolicy](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-alert-alertspolicy.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-alert-alertspolicy.yml)
 * [![newrelic-alert-nrqlconditionstatic](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-alert-nrqlconditionstatic.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-alert-nrqlconditionstatic.yml)
@@ -190,7 +184,6 @@ Release status for 178 libraries:
 * [![paloaltonetworks-cloudngfw-ngfw](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-paloaltonetworks-cloudngfw-ngfw.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-paloaltonetworks-cloudngfw-ngfw.yml)
 * [![paloaltonetworks-cloudngfw-rulestack](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-paloaltonetworks-cloudngfw-rulestack.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-paloaltonetworks-cloudngfw-rulestack.yml)
 * [![poc-azure-blobstorage](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-poc-azure-blobstorage.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-poc-azure-blobstorage.yml)
-* [![registry-test-resource1-module](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-registry-test-resource1-module.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-registry-test-resource1-module.yml)
 * [![rollbar-notifications-rule](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-rollbar-notifications-rule.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-rollbar-notifications-rule.yml)
 * [![rollbar-projects-accesstoken](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-rollbar-projects-accesstoken.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-rollbar-projects-accesstoken.yml)
 * [![rollbar-projects-project](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-rollbar-projects-project.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-rollbar-projects-project.yml)

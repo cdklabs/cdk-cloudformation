@@ -22,12 +22,28 @@ project.addDevDeps('aws-cdk-github-oidc@^2.2.0');
 project.addDevDeps('ts-node@^10');
 project.addDevDeps('@types/node@^16');
 
-// the root is not really a library:x
+// the root is not really a library
 project.compileTask.reset();
 project.packageTask.reset();
 
 const packagesDir = 'packages';
 const scope = '@cdk-cloudformation';
+const packagesPath = `${packagesDir}/${scope}`;
+
+// convenience tasks from to-level
+project.addTask('compile-pkg', {
+  exec: `cd ${packagesPath}/$@ && ${project.runTaskCommand(project.compileTask)}`,
+  receiveArgs: true,
+});
+project.addTask('package-pkg', {
+  exec: `cd ${packagesPath}/$@ && ${project.runTaskCommand(project.packageTask)}`,
+  receiveArgs: true,
+});
+project.addTask('build-pkg', {
+  exec: `cd ${packagesPath}/$@ && ${project.runTaskCommand(project.buildTask)}`,
+  receiveArgs: true,
+});
+
 
 project.package.addField('workspaces', {
   packages: [`${packagesDir}/${scope}/*`],

@@ -29,13 +29,14 @@ jobs:
         run: |-
           echo $(node -p "require('./package.json').version") > dist/version.txt
           echo "@cdk-cloudformation/rollbar-projects-project@v$(cat dist/version.txt)" > dist/releasetag.txt
-          echo "Update AWS CloudFormation Registry type `Rollbar::Projects::Project` to v$(cat dist/version.txt)" > dist/changelog.txt
+          echo "Update AWS CloudFormation Registry type Rollbar::Projects::Project to v$(cat dist/version.txt)" > dist/changelog.txt
         working-directory: packages/@cdk-cloudformation/rollbar-projects-project
       - name: Check for releasable commits
         id: check-commits
         run: |-
-          LATEST_TAG=$(cat dist/releasetag.txt)
-          COUNT=$(git log --no-merges --oneline $LATEST_TAG..HEAD -E --grep '^(feat|fix){1}(\([^()[:space:]]+\))?(!)?:[[:blank:]]+.+' -- . | sed -n '$=')
+          LATEST_TAG=$(git -c "versionsort.suffix=-" tag --sort="-version:refname" --list "@cdk-cloudformation/rollbar-projects-project@v*" | head -n 1)
+          echo ${LATEST_TAG:=$(git rev-list HEAD -- . | tail -1)^}
+          COUNT=$(git log --no-merges --oneline $LATEST_TAG..HEAD -E --grep '^(feat|fix){1}(\([^()[:space:]]+\))?(!)?:[[:blank:]]+.+' -- . | wc -l | xargs)
           echo "releasable_count=$COUNT" >> $GITHUB_OUTPUT
           cat $GITHUB_OUTPUT
         working-directory: packages/@cdk-cloudformation/rollbar-projects-project
@@ -62,7 +63,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    if: (needs.build.outputs.tag_exists != 'true') && (fromJSON(needs.build.outputs.releasable_commits) > 0)
+    if: (needs.build.outputs.tag_exists != 'true') && (needs.build.outputs.releasable_commits > 0)
     steps:
       - uses: actions/setup-node@v3
         with:
@@ -87,7 +88,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-    if: (needs.build.outputs.tag_exists != 'true') && (fromJSON(needs.build.outputs.releasable_commits) > 0)
+    if: (needs.build.outputs.tag_exists != 'true') && (needs.build.outputs.releasable_commits > 0)
     steps:
       - uses: actions/setup-node@v3
         with:
@@ -111,7 +112,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-    if: (needs.build.outputs.tag_exists != 'true') && (fromJSON(needs.build.outputs.releasable_commits) > 0)
+    if: (needs.build.outputs.tag_exists != 'true') && (needs.build.outputs.releasable_commits > 0)
     steps:
       - uses: actions/setup-node@v3
         with:
@@ -137,7 +138,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-    if: (needs.build.outputs.tag_exists != 'true') && (fromJSON(needs.build.outputs.releasable_commits) > 0)
+    if: (needs.build.outputs.tag_exists != 'true') && (needs.build.outputs.releasable_commits > 0)
     steps:
       - uses: actions/setup-node@v3
         with:

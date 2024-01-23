@@ -347,11 +347,9 @@ export class CloudFormationTypeProject extends Component {
       releaseTagFile,
     });
     publisher.publishToNpm();
-    // FIXME: Pausing Maven publishing till we introduce better publishing mechanism that does not impact Maven
-    // GH Issue: https://github.com/cdklabs/publib/issues/874
-    // publisher.publishToMaven({
-    //   mavenEndpoint: 'https://s01.oss.sonatype.org', // cdklabs endpoint
-    // });
+    publisher.publishToMaven({
+      mavenEndpoint: 'https://s01.oss.sonatype.org', // cdklabs endpoint
+    });
     publisher.publishToNuget();
     publisher.publishToPyPi();
     // publisher.publishToGo();

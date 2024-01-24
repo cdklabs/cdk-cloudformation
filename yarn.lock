@@ -1202,10 +1202,10 @@ aws-cdk-lib@2.122.0, aws-cdk-lib@^2.122.0:
     table "^6.8.1"
     yaml "1.10.2"
 
-aws-sdk@^2.1540.0, aws-sdk@^2.1541.0:
-  version "2.1541.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1541.0.tgz#7cc269e7f2435c39fb6fe9357b75599e2554a88f"
-  integrity sha512-+xS/Gq/+j/RKb3A6SHXn6tOCaog1O3troklpVxxNaqVNnq+zlwjFderGNzR6S4ftfNG7sKMUP++Znsqte8GMaw==
+aws-sdk@^2.1541.0, aws-sdk@^2.1542.0:
+  version "2.1542.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1542.0.tgz#c8940b5d746b31bd592277905c07adbda8336359"
+  integrity sha512-GcDlp9/2fRo7I6LxW1wAMVHf6G4b4S4vsFDhWMhK6Ycx3EhNmpJVEtQn5b46O90ChgD6ydQwBGEoi00W5Km0Lw==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"
@@ -1216,7 +1216,7 @@ aws-sdk@^2.1540.0, aws-sdk@^2.1541.0:
     url "0.10.3"
     util "^0.12.4"
     uuid "8.0.0"
-    xml2js "0.5.0"
+    xml2js "0.6.2"
 
 babel-jest@^27.5.1:
   version "27.5.1"
@@ -1403,15 +1403,15 @@ case@1.6.3, case@^1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-import@^0.2.112:
-  version "0.2.622"
-  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.622.tgz#ffe93e9dbcdd84c9ae99674b18070af7be12df5b"
-  integrity sha512-Dy5G8ix1hNnBgSIPPWRR/IiXYNM+qPkyB3DSA6u5E7ez1XtEdOdBD7o2xl1+AiHhNFGEUig0sJKWEK0q8ABrmQ==
+  version "0.2.623"
+  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.623.tgz#a036f76f01a6fbe322139ec536bdd5ac01d07889"
+  integrity sha512-4SuP9rKLvMQ/2h9+WICvE2iOwLDkLKhZSuVooLgN7EiIA1ofWyg1BQJHi/NWMhNThm8zBN3/QOe2V79YESqCNw==
   dependencies:
     aws-cdk-lib "^2.122.0"
-    aws-sdk "^2.1540.0"
+    aws-sdk "^2.1541.0"
     case "^1.6.3"
     constructs "^10"
-    jsii-srcmak "^0.1.1012"
+    jsii-srcmak "^0.1.1013"
     json2jsii "^0.4.3"
     minimist "^1.2.8"
     minimist-subcommand "^3.0.2"
@@ -2006,9 +2006,9 @@ downlevel-dts@^0.11.0:
     typescript next
 
 electron-to-chromium@^1.4.601:
-  version "1.4.642"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.642.tgz#eb380fa8b58e515c641d642ba452fa2c453c2e4f"
-  integrity sha512-M4+u22ZJGpk4RY7tne6W+APkZhnnhmAH48FNl8iEFK2lEgob+U5rUQsIqQhvAwCXYpfd3H20pHK/ENsCvwTbsA==
+  version "1.4.643"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.643.tgz#081a20c5534db91e66ef094f68624960f674768f"
+  integrity sha512-QHscvvS7gt155PtoRC0dR2ilhL8E9LHhfTQEq1uD5AL0524rBLAwpAREFH06f87/e45B9XkR6Ki5dbhbCsVEIg==
 
 emittery@^0.8.1:
   version "0.8.1"
@@ -3706,10 +3706,10 @@ jsii-rosetta@^1.94.0:
     workerpool "^6.5.1"
     yargs "^16.2.0"
 
-jsii-srcmak@^0.1.1012:
-  version "0.1.1013"
-  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.1013.tgz#8150f6e2cc89d70283a67b326282ad8455fa5b7c"
-  integrity sha512-jqwAlPrR3oQRMaQBsTXxjavNakxvEKZ+gdZZSRBI9MIZKuEAeS0rSKxC/Mx3KPmXrDglXKDV2EYG2JNxkOMSGg==
+jsii-srcmak@^0.1.1013:
+  version "0.1.1014"
+  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.1014.tgz#241777d382942c517846d4e2767f00a71b9837a0"
+  integrity sha512-pqjrwmfPH7YRMuJq9p2ezDw4//HMfvpuYVorr3y4wKGeOdhnNFEyYOrwkqHwFqIcCVQvsPc8ANn37v/Ai8yz6w==
   dependencies:
     fs-extra "^9.1.0"
     jsii "~5.3.11"
@@ -5508,9 +5508,9 @@ typedarray@^0.0.6:
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
 typescript@next:
-  version "5.4.0-dev.20240122"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.4.0-dev.20240122.tgz#87049df18060af0153f466194ad37c3be86b91cd"
-  integrity sha512-AlqDACgFZ2OGGSqJcWcQQOkbiznU+fXn2vhdcZttnOe5qr1E1oXf1lcHXEz3wTmEouLQwN6fVp2/76/JOsf9rQ==
+  version "5.4.0-dev.20240123"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.4.0-dev.20240123.tgz#1cdd85d92c472465798730efba2e0c8de90daaf3"
+  integrity sha512-CXf3I7gkmbVHhSuQdZn+/Xe+k3yBtYR8BwrYLOT44eUKuWH9lEuOzcR4zQcJP54dxekMIQPXxvCX3/VIG8zSKA==
 
 typescript@~3.9.10:
   version "3.9.10"
@@ -5798,10 +5798,10 @@ xml-name-validator@^3.0.0:
   resolved "https://registry.yarnpkg.com/xml-name-validator/-/xml-name-validator-3.0.0.tgz#6ae73e06de4d8c6e47f9fb181f78d648ad457c6a"
   integrity sha512-A5CUptxDsvxKJEU3yO6DuWBSJz/qizqzJKOMIfUJHETbBw/sFaDxgd6fxm1ewUaM0jZ444Fc5vC5ROYurg/4Pw==
 
-xml2js@0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/xml2js/-/xml2js-0.5.0.tgz#d9440631fbb2ed800203fad106f2724f62c493b7"
-  integrity sha512-drPFnkQJik/O+uPKpqSgr22mpuFHqKdbS835iAQrUC73L2F5WkboIRd63ai/2Yg6I1jzifPFKH2NTK+cfglkIA==
+xml2js@0.6.2:
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/xml2js/-/xml2js-0.6.2.tgz#dd0b630083aa09c161e25a4d0901e2b2a929b499"
+  integrity sha512-T4rieHaC1EXcES0Kxxj4JWgaUQHDk+qwHcYOCFHfiwKz7tOVPLq7Hjq9dM1WCMhylqMEfP7hMcOIChvotiZegA==
   dependencies:
     sax ">=0.6.0"
     xmlbuilder "~11.0.0"

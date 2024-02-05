@@ -145,6 +145,8 @@
 /.github/workflows/release-pagerduty-escalationpolicies-escalationpolicy.yml linguist-generated
 /.github/workflows/release-pagerduty-responseplays-responseplay.yml linguist-generated
 /.github/workflows/release-pagerduty-schedules-schedule.yml linguist-generated
+/.github/workflows/release-pagerduty-services-integration.yml linguist-generated
+/.github/workflows/release-pagerduty-services-service.yml linguist-generated
 /.github/workflows/release-pagerduty-teams-membership.yml linguist-generated
 /.github/workflows/release-pagerduty-teams-team.yml linguist-generated
 /.github/workflows/release-pagerduty-users-user.yml linguist-generated

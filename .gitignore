@@ -459,6 +459,12 @@ junit.xml
 /packages/@cdk-cloudformation/pagerduty-schedules-schedule/dist/
 /packages/@cdk-cloudformation/pagerduty-schedules-schedule/lib/
 !/.github/workflows/release-pagerduty-schedules-schedule.yml
+/packages/@cdk-cloudformation/pagerduty-services-integration/dist/
+/packages/@cdk-cloudformation/pagerduty-services-integration/lib/
+!/.github/workflows/release-pagerduty-services-integration.yml
+/packages/@cdk-cloudformation/pagerduty-services-service/dist/
+/packages/@cdk-cloudformation/pagerduty-services-service/lib/
+!/.github/workflows/release-pagerduty-services-service.yml
 /packages/@cdk-cloudformation/pagerduty-teams-membership/dist/
 /packages/@cdk-cloudformation/pagerduty-teams-membership/lib/
 !/.github/workflows/release-pagerduty-teams-membership.yml

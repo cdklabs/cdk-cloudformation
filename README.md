@@ -46,7 +46,7 @@ that version from your package manager.
 
 <!--STATUS-BEGIN-->
 
-Release status for 171 libraries:
+Release status for 173 libraries:
 
 * [![aqua-enterprise-enforcer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml)
 * [![aqua-enterprise-kubeenforcer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-kubeenforcer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-kubeenforcer.yml)
@@ -178,6 +178,8 @@ Release status for 171 libraries:
 * [![pagerduty-escalationpolicies-escalationpolicy](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-pagerduty-escalationpolicies-escalationpolicy.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-pagerduty-escalationpolicies-escalationpolicy.yml)
 * [![pagerduty-responseplays-responseplay](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-pagerduty-responseplays-responseplay.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-pagerduty-responseplays-responseplay.yml)
 * [![pagerduty-schedules-schedule](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-pagerduty-schedules-schedule.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-pagerduty-schedules-schedule.yml)
+* [![pagerduty-services-integration](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-pagerduty-services-integration.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-pagerduty-services-integration.yml)
+* [![pagerduty-services-service](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-pagerduty-services-service.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-pagerduty-services-service.yml)
 * [![pagerduty-teams-membership](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-pagerduty-teams-membership.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-pagerduty-teams-membership.yml)
 * [![pagerduty-teams-team](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-pagerduty-teams-team.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-pagerduty-teams-team.yml)
 * [![pagerduty-users-user](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-pagerduty-users-user.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-pagerduty-users-user.yml)

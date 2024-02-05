@@ -1501,6 +1501,28 @@ jobs:
         working-directory: packages/@cdk-cloudformation/pagerduty-schedules-schedule
     container:
       image: jsii/superchain:1-bullseye-slim
+  pagerduty-services-integration:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - run: yarn install
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/pagerduty-services-integration
+    container:
+      image: jsii/superchain:1-bullseye-slim
+  pagerduty-services-service:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - run: yarn install
+      - run: npx projen build
+        working-directory: packages/@cdk-cloudformation/pagerduty-services-service
+    container:
+      image: jsii/superchain:1-bullseye-slim
   pagerduty-teams-membership:
     runs-on: ubuntu-latest
     permissions:

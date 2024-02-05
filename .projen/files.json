@@ -144,6 +144,8 @@
     ".github/workflows/release-pagerduty-escalationpolicies-escalationpolicy.yml",
     ".github/workflows/release-pagerduty-responseplays-responseplay.yml",
     ".github/workflows/release-pagerduty-schedules-schedule.yml",
+    ".github/workflows/release-pagerduty-services-integration.yml",
+    ".github/workflows/release-pagerduty-services-service.yml",
     ".github/workflows/release-pagerduty-teams-membership.yml",
     ".github/workflows/release-pagerduty-teams-team.yml",
     ".github/workflows/release-pagerduty-users-user.yml",

@@ -1,7 +1,7 @@
 {
-  "name": "@cdk-cloudformation/pagerduty-schedules-schedule",
-  "description": "Manage a on-call schedule in PagerDuty",
-  "version": "1.6.0-alpha.7",
+  "name": "@cdk-cloudformation/pagerduty-services-integration",
+  "description": "A resource schema representing a PagerDuty Integration belonging to a Service.",
+  "version": "1.1.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",
@@ -19,14 +19,14 @@
     "cloudformation-registry",
     "l1",
     "pagerduty",
-    "schedules",
-    "schedule"
+    "services",
+    "integration"
   ],
-  "homepage": "https://github.com/aws-ia/cloudformation-pagerduty-resource-providers",
+  "homepage": "https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git",
   "repository": {
     "type": "git",
     "url": "https://github.com/cdklabs/cdk-cloudformation.git",
-    "directory": "packages/@cdk-cloudformation/pagerduty-schedules-schedule"
+    "directory": "packages/@cdk-cloudformation/pagerduty-services-integration"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -37,19 +37,19 @@
     "outdir": "dist",
     "targets": {
       "java": {
-        "package": "io.github.cdklabs.cdk_cloudformation.pagerduty_schedules_schedule",
+        "package": "io.github.cdklabs.cdk_cloudformation.pagerduty_services_integration",
         "maven": {
           "groupId": "io.github.cdklabs.cdk_cloudformation",
-          "artifactId": "pagerduty-schedules-schedule"
+          "artifactId": "pagerduty-services-integration"
         }
       },
       "python": {
-        "distName": "cdk-cloudformation-pagerduty-schedules-schedule",
-        "module": "cdk_cloudformation_pagerduty_schedules_schedule"
+        "distName": "cdk-cloudformation-pagerduty-services-integration",
+        "module": "cdk_cloudformation_pagerduty_services_integration"
       },
       "dotnet": {
-        "namespace": "CdkCloudFormation.PagerDutySchedulesSchedule",
-        "packageId": "CdkCloudFormation.PagerDutySchedulesSchedule"
+        "namespace": "CdkCloudFormation.PagerDutyServicesIntegration",
+        "packageId": "CdkCloudFormation.PagerDutyServicesIntegration"
       }
     },
     "tsc": {

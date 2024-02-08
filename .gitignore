@@ -50,7 +50,6 @@ junit.xml
 !/.github/workflows/upgrade-cdklabs-projen-project-types-main.yml
 !/.github/workflows/upgrade-main.yml
 !/.github/workflows/upgrade-dev-deps-main.yml
-!/.github/workflows/build-individual.yml
 /packages/@cdk-cloudformation/alexa-ask-skill/dist/
 /packages/@cdk-cloudformation/alexa-ask-skill/lib/
 !/.github/workflows/release-alexa-ask-skill.yml
@@ -591,6 +590,7 @@ junit.xml
 /packages/@cdk-cloudformation/zmk-iam-lambdabasicrole-module/dist/
 /packages/@cdk-cloudformation/zmk-iam-lambdabasicrole-module/lib/
 !/.github/workflows/release-zmk-iam-lambdabasicrole-module.yml
+!/.github/workflows/build-individual.yml
 /.awscdk/
 !/.github/workflows/update-registry.yml
 !/deprecated-types.json

@@ -4,6 +4,9 @@ name: build-individual
 on:
   pull_request: {}
   workflow_dispatch: {}
+  merge_group:
+    branches:
+      - main
 jobs:
   build-all:
     runs-on: ubuntu-latest
@@ -15,7 +18,7 @@ jobs:
       - run: npx projen build
         working-directory: packages/@cdk-cloudformation/${{ matrix.project }}
     strategy:
-      max-parallel: 10
+      max-parallel: 50
       fail-fast: false
       matrix:
         project:

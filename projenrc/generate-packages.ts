@@ -75,6 +75,9 @@ export function generatePackages(root: typescript.TypeScriptProject, options: Ge
   buildIndividualWorkflow.on({
     pullRequest: {},
     workflowDispatch: {},
+    mergeGroup: {
+      branches: ['main'],
+    },
   });
   buildIndividualWorkflow.addJob('build-all', {
     runsOn: ['ubuntu-latest'],
@@ -85,7 +88,7 @@ export function generatePackages(root: typescript.TypeScriptProject, options: Ge
       contents: JobPermission.READ,
     },
     strategy: {
-      maxParallel: 10, // limit concurrent requests
+      maxParallel: 50, // limit concurrent requests
       failFast: false, // we want to see individual failures
       matrix: {
         domain: {

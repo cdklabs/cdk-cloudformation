@@ -2,7 +2,10 @@ import { readdirSync, readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
 import type { CloudFormation } from 'aws-sdk';
 import { typescript } from 'projen';
+import { JobPermission } from 'projen/lib/github/workflows-model';
 import { CloudFormationTypeProject } from './type-package';
+
+const JSII_VERSION = '1-bullseye-slim';
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const deprecations = require('../deprecated-types.json');
@@ -32,11 +35,7 @@ export function generatePackages(root: typescript.TypeScriptProject, options: Ge
   const types: CloudFormation.DescribeTypeOutput[] = readdirSync(TYPE_DESCRIPTIONS).map(file => {
     return JSON.parse(readFileSync(join(TYPE_DESCRIPTIONS, file), 'utf8'));
   });
-  const buildIndividalWorkflow = root.github!.addWorkflow('build-individual');
-  buildIndividalWorkflow.on({
-    pullRequest: {},
-    workflowDispatch: {},
-  });
+
   const excludes = options.excludeTypes ?? [];
   const shouldExclude = (type: CloudFormation.DescribeTypeOutput) => type.TypeName && excludes.includes(type.TypeName);
 
@@ -65,12 +64,54 @@ export function generatePackages(root: typescript.TypeScriptProject, options: Ge
       packagesDir: options.dir,
       type: type,
       prerelease: options.prerelease,
-      buildWorkflow: buildIndividalWorkflow,
       readmeDeprecatedMessage: shouldDeprecate(type),
     });
 
     projects.push(p);
   }
+
+
+  const buildIndividualWorkflow = root.github!.addWorkflow('build-individual');
+  buildIndividualWorkflow.on({
+    pullRequest: {},
+    workflowDispatch: {},
+  });
+  buildIndividualWorkflow.addJob('build-all', {
+    runsOn: ['ubuntu-latest'],
+    container: {
+      image: `jsii/superchain:${JSII_VERSION}`,
+    },
+    permissions: {
+      contents: JobPermission.READ,
+    },
+    strategy: {
+      matrix: {
+        domain: {
+          project: projects.map(p => p.name),
+        },
+      },
+    },
+    steps: [
+      { uses: 'actions/checkout@v4' },
+      { run: 'yarn install' },
+      {
+        workingDirectory: 'packages/@cdk-cloudformation/${{ matrix.project }}',
+        run: `${root.projenCommand} ${root.buildTask.name}`,
+      },
+    ],
+  });
+
+  // Add a join target to simplify branch protection setup
+  buildIndividualWorkflow.addJob('build-okay', {
+    name: 'Build Individual',
+    permissions: {},
+    runsOn: ['ubuntu-latest'],
+    needs: ['build-all'],
+    steps: [{
+      name: 'OK',
+      run: 'echo OK',
+    }],
+  });
 
   return projects;
 }

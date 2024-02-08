@@ -32,11 +32,6 @@ export interface TypePackageOptions {
   readonly type: CloudFormation.DescribeTypeOutput;
 
   /**
-   * The GitHub workflow that builds all the individual projects
-   */
-  readonly buildWorkflow: github.GithubWorkflow;
-
-  /**
    * A pre-release tag to use in the version.
    * @example "alpha.2"
    * @default - no pre-release tag
@@ -61,6 +56,7 @@ export class CloudFormationTypeProject extends Component {
 
   public readonly statusBadge: string;
   public readonly isDeprecated: boolean;
+  public readonly name: string;
 
   constructor(parent: typescript.TypeScriptProject, options: TypePackageOptions) {
     super(parent);
@@ -73,6 +69,7 @@ export class CloudFormationTypeProject extends Component {
     const npmScope = '@cdk-cloudformation';
 
     this.type = options.type;
+    this.name = typeNameKebab;
     this.isDeprecated = !!options.readmeDeprecatedMessage;
 
     if (!npmScope.startsWith('@')) {
@@ -227,23 +224,6 @@ export class CloudFormationTypeProject extends Component {
     parent.gitignore.addPatterns(`/${outdir}/${artifactDir}/`);
     parent.gitignore.addPatterns(`/${outdir}/lib/`);
 
-    options.buildWorkflow.addJob(typeNameKebab, {
-      runsOn: ['ubuntu-latest'],
-      container: {
-        image: `jsii/superchain:${JSII_VERSION}`,
-      },
-      permissions: {
-        contents: JobPermission.READ,
-      },
-      steps: [
-        { uses: 'actions/checkout@v4' },
-        { run: 'yarn install' },
-        {
-          workingDirectory: outdir,
-          run: `${project.projenCommand} ${buildTask.name}`,
-        },
-      ],
-    });
     parent.autoMerge?.addConditions(`status-success=${typeNameKebab}`);
 
     // create a release workflow for this package

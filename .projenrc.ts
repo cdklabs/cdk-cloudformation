@@ -20,7 +20,7 @@ project.addDevDeps('jsii');
 project.addDevDeps('jsii-pacmak');
 project.addDevDeps('aws-cdk-github-oidc@^2.2.0');
 project.addDevDeps('ts-node@^10');
-project.addDevDeps('@types/node@^16');
+project.addDevDeps('@types/node@16.18.78'); // last version compatible with jsii 1.x
 
 // the root is not really a library
 project.compileTask.reset();

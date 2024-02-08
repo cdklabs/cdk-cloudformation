@@ -85,6 +85,8 @@ export function generatePackages(root: typescript.TypeScriptProject, options: Ge
       contents: JobPermission.READ,
     },
     strategy: {
+      maxParallel: 10, // limit concurrent requests
+      failFast: false, // we want to see individual failures
       matrix: {
         domain: {
           project: projects.map(p => p.name),

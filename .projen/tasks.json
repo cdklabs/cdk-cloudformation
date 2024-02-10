@@ -296,13 +296,13 @@
       },
       "steps": [
         {
-          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev --filter=@types/jest,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,aws-cdk-github-oidc,aws-cdk-lib,aws-sdk,case,cdk-import,cdklabs-projen-project-types,constructs,eslint-import-resolver-typescript,eslint-plugin-import,eslint,jest,jest-junit,jsii,jsii-pacmak,projen,standard-version,ts-jest,ts-node,typescript"
+          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev --filter=@types/jest,@types/node,aws-cdk-lib,aws-sdk,case,cdklabs-projen-project-types,eslint-import-resolver-typescript,eslint-plugin-import,jest,jsii,jsii-pacmak,projen,ts-jest,typescript"
         },
         {
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade @types/jest @typescript-eslint/eslint-plugin @typescript-eslint/parser aws-cdk-github-oidc aws-cdk-lib aws-sdk case cdk-import cdklabs-projen-project-types constructs eslint-import-resolver-typescript eslint-plugin-import eslint jest jest-junit jsii jsii-pacmak projen standard-version ts-jest ts-node typescript"
+          "exec": "yarn upgrade @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser aws-cdk-github-oidc aws-cdk-lib aws-sdk case cdk-import cdklabs-projen-project-types constructs eslint-import-resolver-typescript eslint-plugin-import eslint jest jest-junit jsii jsii-pacmak projen standard-version ts-jest ts-node typescript"
         },
         {
           "exec": "npx projen"

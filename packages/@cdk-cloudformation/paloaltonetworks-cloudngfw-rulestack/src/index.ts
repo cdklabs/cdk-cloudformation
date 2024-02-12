@@ -37,11 +37,6 @@ export interface CfnRuleStackProps {
    */
   readonly customSecurityProfiles?: CustomSecurityProfiles;
 
-  /**
-   * @schema CfnRuleStackProps#ProgrammaticAccessToken
-   */
-  readonly programmaticAccessToken: string;
-
 }
 
 /**
@@ -56,7 +51,6 @@ export function toJson_CfnRuleStackProps(obj: CfnRuleStackProps | undefined): Re
     'RuleList': obj.ruleList?.map(y => toJson_Rule(y)),
     'SecurityObjects': toJson_SecurityObjects(obj.securityObjects),
     'CustomSecurityProfiles': toJson_CustomSecurityProfiles(obj.customSecurityProfiles),
-    'ProgrammaticAccessToken': obj.programmaticAccessToken,
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -67,6 +61,11 @@ export function toJson_CfnRuleStackProps(obj: CfnRuleStackProps | undefined): Re
  * @schema RuleStack
  */
 export interface RuleStack {
+  /**
+   * @schema RuleStack#AccountId
+   */
+  readonly accountId?: string;
+
   /**
    * @schema RuleStack#Scope
    */
@@ -108,6 +107,7 @@ export interface RuleStack {
 export function toJson_RuleStack(obj: RuleStack | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
+    'AccountId': obj.accountId,
     'Scope': obj.scope,
     'LookupXForwardedFor': obj.lookupXForwardedFor,
     'MinAppIdVersion': obj.minAppIdVersion,
@@ -214,6 +214,11 @@ export interface Rule {
   readonly decryptionRuleType?: RuleDecryptionRuleType;
 
   /**
+   * @schema Rule#InboundInspectionCertificate
+   */
+  readonly inboundInspectionCertificate?: string;
+
+  /**
    * @schema Rule#Tags
    */
   readonly tags?: Tag[];
@@ -244,6 +249,7 @@ export function toJson_Rule(obj: Rule | undefined): Record<string, any> | undefi
     'Action': obj.action,
     'Logging': obj.logging,
     'DecryptionRuleType': obj.decryptionRuleType,
+    'InboundInspectionCertificate': obj.inboundInspectionCertificate,
     'Tags': obj.tags?.map(y => toJson_Tag(y)),
   };
   // filter undefined values
@@ -258,29 +264,29 @@ export function toJson_Rule(obj: Rule | undefined): Record<string, any> | undefi
  */
 export interface SecurityObjects {
   /**
-   * @schema SecurityObjects#PrefixList
+   * @schema SecurityObjects#PrefixLists
    */
-  readonly prefixList?: PrefixLists;
+  readonly prefixLists?: PrefixList[];
 
   /**
-   * @schema SecurityObjects#FqdnList
+   * @schema SecurityObjects#FqdnLists
    */
-  readonly fqdnList?: FqdnLists;
+  readonly fqdnLists?: FqdnList[];
 
   /**
-   * @schema SecurityObjects#CustomUrlCategory
+   * @schema SecurityObjects#CustomUrlCategories
    */
-  readonly customUrlCategory?: CustomUrlCategory;
+  readonly customUrlCategories?: CustomUrlCategory[];
 
   /**
-   * @schema SecurityObjects#IntelligentFeed
+   * @schema SecurityObjects#IntelligentFeeds
    */
-  readonly intelligentFeed?: IntelligentFeed;
+  readonly intelligentFeeds?: IntelligentFeed[];
 
   /**
-   * @schema SecurityObjects#CertificateObject
+   * @schema SecurityObjects#CertificateObjects
    */
-  readonly certificateObject?: CertificateObject;
+  readonly certificateObjects?: CertObject[];
 
 }
 
@@ -291,11 +297,11 @@ export interface SecurityObjects {
 export function toJson_SecurityObjects(obj: SecurityObjects | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'PrefixList': toJson_PrefixLists(obj.prefixList),
-    'FqdnList': toJson_FqdnLists(obj.fqdnList),
-    'CustomUrlCategory': toJson_CustomUrlCategory(obj.customUrlCategory),
-    'IntelligentFeed': toJson_IntelligentFeed(obj.intelligentFeed),
-    'CertificateObject': toJson_CertificateObject(obj.certificateObject),
+    'PrefixLists': obj.prefixLists?.map(y => toJson_PrefixList(y)),
+    'FqdnLists': obj.fqdnLists?.map(y => toJson_FqdnList(y)),
+    'CustomUrlCategories': obj.customUrlCategories?.map(y => toJson_CustomUrlCategory(y)),
+    'IntelligentFeeds': obj.intelligentFeeds?.map(y => toJson_IntelligentFeed(y)),
+    'CertificateObjects': obj.certificateObjects?.map(y => toJson_CertObject(y)),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -333,8 +339,6 @@ export function toJson_CustomSecurityProfiles(obj: CustomSecurityProfiles | unde
  * @schema RuleStackScope
  */
 export enum RuleStackScope {
-  /** Global */
-  GLOBAL = "Global",
   /** Local */
   LOCAL = "Local",
 }
@@ -557,6 +561,12 @@ export enum RuleAction {
 export enum RuleDecryptionRuleType {
   /** SSLOutboundInspection */
   SSL_OUTBOUND_INSPECTION = "SSLOutboundInspection",
+  /** SSLInboundInspection */
+  SSL_INBOUND_INSPECTION = "SSLInboundInspection",
+  /** SSLOutboundNoInspection */
+  SSL_OUTBOUND_NO_INSPECTION = "SSLOutboundNoInspection",
+  /** SSLInboundNoInspection */
+  SSL_INBOUND_NO_INSPECTION = "SSLInboundNoInspection",
 }
 
 /**
@@ -593,36 +603,36 @@ export function toJson_Tag(obj: Tag | undefined): Record<string, any> | undefine
 /**
  * SecurityObjects PrefixList
  *
- * @schema PrefixLists
+ * @schema PrefixList
  */
-export interface PrefixLists {
+export interface PrefixList {
   /**
-   * @schema PrefixLists#Name
+   * @schema PrefixList#Name
    */
   readonly name: string;
 
   /**
-   * @schema PrefixLists#PrefixList
+   * @schema PrefixList#PrefixList
    */
   readonly prefixList: string[];
 
   /**
-   * @schema PrefixLists#AuditComment
+   * @schema PrefixList#AuditComment
    */
   readonly auditComment?: string;
 
   /**
-   * @schema PrefixLists#Description
+   * @schema PrefixList#Description
    */
   readonly description?: string;
 
 }
 
 /**
- * Converts an object of type 'PrefixLists' to JSON representation.
+ * Converts an object of type 'PrefixList' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_PrefixLists(obj: PrefixLists | undefined): Record<string, any> | undefined {
+export function toJson_PrefixList(obj: PrefixList | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Name': obj.name,
@@ -636,36 +646,36 @@ export function toJson_PrefixLists(obj: PrefixLists | undefined): Record<string,
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema FqdnLists
+ * @schema FqdnList
  */
-export interface FqdnLists {
+export interface FqdnList {
   /**
-   * @schema FqdnLists#Name
+   * @schema FqdnList#Name
    */
   readonly name: string;
 
   /**
-   * @schema FqdnLists#Description
+   * @schema FqdnList#Description
    */
   readonly description?: string;
 
   /**
-   * @schema FqdnLists#FqdnList
+   * @schema FqdnList#FqdnList
    */
   readonly fqdnList: string[];
 
   /**
-   * @schema FqdnLists#AuditComment
+   * @schema FqdnList#AuditComment
    */
   readonly auditComment?: string;
 
 }
 
 /**
- * Converts an object of type 'FqdnLists' to JSON representation.
+ * Converts an object of type 'FqdnList' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_FqdnLists(obj: FqdnLists | undefined): Record<string, any> | undefined {
+export function toJson_FqdnList(obj: FqdnList | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Name': obj.name,
@@ -795,41 +805,41 @@ export function toJson_IntelligentFeed(obj: IntelligentFeed | undefined): Record
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CertificateObject
+ * @schema CertObject
  */
-export interface CertificateObject {
+export interface CertObject {
   /**
-   * @schema CertificateObject#Name
+   * @schema CertObject#Name
    */
   readonly name: string;
 
   /**
-   * @schema CertificateObject#Description
+   * @schema CertObject#Description
    */
   readonly description?: string;
 
   /**
-   * @schema CertificateObject#CertificateSignerArn
+   * @schema CertObject#CertificateSignerArn
    */
   readonly certificateSignerArn?: string;
 
   /**
-   * @schema CertificateObject#CertificateSelfSigned
+   * @schema CertObject#CertificateSelfSigned
    */
   readonly certificateSelfSigned?: boolean;
 
   /**
-   * @schema CertificateObject#AuditComment
+   * @schema CertObject#AuditComment
    */
   readonly auditComment?: string;
 
 }
 
 /**
- * Converts an object of type 'CertificateObject' to JSON representation.
+ * Converts an object of type 'CertObject' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CertificateObject(obj: CertificateObject | undefined): Record<string, any> | undefined {
+export function toJson_CertObject(obj: CertObject | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'Name': obj.name,

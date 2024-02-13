@@ -53,10 +53,11 @@ jobs:
         run: mv packages/@cdk-cloudformation/fastly-dictionary-dictionaryitem/dist .
       - name: Upload artifact
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: build-artifact
           path: dist
+          overwrite: true
     container:
       image: jsii/superchain:1-bullseye-slim
   release_github:

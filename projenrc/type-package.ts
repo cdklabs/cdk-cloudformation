@@ -4,6 +4,7 @@ import type { CloudFormation } from 'aws-sdk';
 import * as caseutil from 'case';
 import { CfnResourceGenerator } from 'cdk-import/lib/cfn-resource-generator';
 import { Component, IgnoreFile, JsonFile, License, Project, ReleasableCommits, github, typescript } from 'projen';
+import { WorkflowSteps } from 'projen/lib/github';
 import { DEFAULT_GITHUB_ACTIONS_USER } from 'projen/lib/github/constants';
 import { WorkflowActions } from 'projen/lib/github/workflow-actions';
 import { JobPermission } from 'projen/lib/github/workflows-model';
@@ -302,16 +303,14 @@ export class CloudFormationTypeProject extends Component {
           if: 'always()',
           run: `mv ${outdir}/${artifactDir} .`,
         },
-        {
-          name: 'Upload artifact',
-          uses: 'actions/upload-artifact@v4',
+        WorkflowSteps.uploadArtifact({
           // Always upload files even if previous steps have failed; for debugging
           if: 'always()',
           with: {
             name: 'build-artifact',
             path: artifactDir,
           },
-        },
+        }),
       ],
     });
 

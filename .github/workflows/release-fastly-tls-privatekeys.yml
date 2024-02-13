@@ -57,6 +57,7 @@ jobs:
         with:
           name: build-artifact
           path: dist
+          overwrite: true
     container:
       image: jsii/superchain:1-bullseye-slim
   release_github:

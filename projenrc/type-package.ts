@@ -4,7 +4,6 @@ import type { CloudFormation } from 'aws-sdk';
 import * as caseutil from 'case';
 import { CfnResourceGenerator } from 'cdk-import/lib/cfn-resource-generator';
 import { Component, IgnoreFile, JsonFile, License, Project, ReleasableCommits, github, typescript } from 'projen';
-import { WorkflowSteps } from 'projen/lib/github';
 import { DEFAULT_GITHUB_ACTIONS_USER } from 'projen/lib/github/constants';
 import { WorkflowActions } from 'projen/lib/github/workflow-actions';
 import { JobPermission } from 'projen/lib/github/workflows-model';

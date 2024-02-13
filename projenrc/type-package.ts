@@ -302,7 +302,7 @@ export class CloudFormationTypeProject extends Component {
           if: 'always()',
           run: `mv ${outdir}/${artifactDir} .`,
         },
-        WorkflowSteps.uploadArtifact({
+        github.WorkflowSteps.uploadArtifact({
           // Always upload files even if previous steps have failed; for debugging
           if: 'always()',
           with: {

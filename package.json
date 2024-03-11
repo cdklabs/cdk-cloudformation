@@ -51,7 +51,7 @@
     "jest-junit": "^15",
     "jsii": "^1.95.0",
     "jsii-pacmak": "^1.95.0",
-    "projen": "^0.80.9",
+    "projen": "^0.80.10",
     "standard-version": "^9",
     "ts-jest": "^27.1.5",
     "ts-node": "^10",

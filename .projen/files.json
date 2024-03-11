@@ -169,6 +169,8 @@
     ".github/workflows/release-spot-elastigroup-group.yml",
     ".github/workflows/release-stackery-open-bastion-module.yml",
     ".github/workflows/release-stocks-orders-marketorder.yml",
+    ".github/workflows/release-svectordb-vectordatabase-apikey.yml",
+    ".github/workflows/release-svectordb-vectordatabase-database.yml",
     ".github/workflows/release-symphonia-opensource-cloudformationartifactsbucket-module.yml",
     ".github/workflows/release-sysdig-helm-agent.yml",
     ".github/workflows/release-tf-ad-computer.yml",

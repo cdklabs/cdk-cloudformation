@@ -46,7 +46,7 @@ that version from your package manager.
 
 <!--STATUS-BEGIN-->
 
-Release status for 173 libraries:
+Release status for 175 libraries:
 
 * [![aqua-enterprise-enforcer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml)
 * [![aqua-enterprise-kubeenforcer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-kubeenforcer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-kubeenforcer.yml)
@@ -202,6 +202,8 @@ Release status for 173 libraries:
 * [![spot-elastigroup-group](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-spot-elastigroup-group.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-spot-elastigroup-group.yml)
 * [![stackery-open-bastion-module](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-stackery-open-bastion-module.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-stackery-open-bastion-module.yml)
 * [![stocks-orders-marketorder](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-stocks-orders-marketorder.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-stocks-orders-marketorder.yml)
+* [![svectordb-vectordatabase-apikey](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-svectordb-vectordatabase-apikey.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-svectordb-vectordatabase-apikey.yml)
+* [![svectordb-vectordatabase-database](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-svectordb-vectordatabase-database.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-svectordb-vectordatabase-database.yml)
 * [![symphonia-opensource-cloudformationartifactsbucket-module](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-symphonia-opensource-cloudformationartifactsbucket-module.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-symphonia-opensource-cloudformationartifactsbucket-module.yml)
 * [![sysdig-helm-agent](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-sysdig-helm-agent.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-sysdig-helm-agent.yml)
 * [![tf-ad-computer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-tf-ad-computer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-tf-ad-computer.yml)

@@ -170,6 +170,8 @@
 /.github/workflows/release-spot-elastigroup-group.yml linguist-generated
 /.github/workflows/release-stackery-open-bastion-module.yml linguist-generated
 /.github/workflows/release-stocks-orders-marketorder.yml linguist-generated
+/.github/workflows/release-svectordb-vectordatabase-apikey.yml linguist-generated
+/.github/workflows/release-svectordb-vectordatabase-database.yml linguist-generated
 /.github/workflows/release-symphonia-opensource-cloudformationartifactsbucket-module.yml linguist-generated
 /.github/workflows/release-sysdig-helm-agent.yml linguist-generated
 /.github/workflows/release-tf-ad-computer.yml linguist-generated

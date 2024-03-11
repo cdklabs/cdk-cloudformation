@@ -1,0 +1,15 @@
+{
+  "Arn": "arn:aws:cloudformation:us-east-1::type/resource/a867ba60608173fcd64ddc25dcbee967cb54dbb4/SvectorDB-VectorDatabase-ApiKey",
+  "Type": "RESOURCE",
+  "TypeName": "SvectorDB::VectorDatabase::ApiKey",
+  "Description": "Generates an API key to access a SvectorDB serverless vector database, sign up at https://svectordb.com to get started",
+  "Schema": "{\n    \"typeName\": \"SvectorDB::VectorDatabase::ApiKey\",\n    \"description\": \"Generates an API key to access a SvectorDB serverless vector database, sign up at https://svectordb.com to get started\",\n    \"definitions\": {},\n    \"properties\": {\n        \"EndpointUrl\": {\n            \"type\": \"string\",\n            \"description\": \"(Advanced use cases only) - Custom endpoint URL for contacting the SvectorDB API\"\n        },\n        \"IntegrationId\": {\n            \"type\": \"string\",\n            \"description\": \"Integration ID\"\n        },\n        \"DatabaseId\": {\n            \"type\": \"string\",\n            \"description\": \"Database ID\"\n        },\n        \"ApiKey\": {\n            \"type\": \"string\",\n            \"description\": \"API key\"\n        }\n    },\n    \"additionalProperties\": false,\n    \"required\": [\n        \"IntegrationId\",\n        \"DatabaseId\"\n    ],\n    \"createOnlyProperties\": [\n        \"/properties/EndpointUrl\",\n        \"/properties/IntegrationId\",\n        \"/properties/DatabaseId\"\n    ],\n    \"readOnlyProperties\": [\n        \"/properties/ApiKey\"\n    ],\n    \"primaryIdentifier\": [\n        \"/properties/ApiKey\"\n    ],\n    \"handlers\": {\n        \"create\": {\n            \"permissions\": []\n        },\n        \"read\": {\n            \"permissions\": []\n        },\n        \"update\": {\n            \"permissions\": []\n        },\n        \"delete\": {\n            \"permissions\": []\n        },\n        \"list\": {\n            \"permissions\": []\n        }\n    }\n}",
+  "ProvisioningType": "FULLY_MUTABLE",
+  "DeprecatedStatus": "LIVE",
+  "RequiredActivatedTypes": [],
+  "Visibility": "PUBLIC",
+  "TimeCreated": "2024-03-09T14:26:04.444Z",
+  "PublisherId": "a867ba60608173fcd64ddc25dcbee967cb54dbb4",
+  "LatestPublicVersion": "1.0.0",
+  "IsActivated": false
+}

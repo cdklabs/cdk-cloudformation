@@ -183,6 +183,8 @@ jobs:
           - spot-elastigroup-group
           - stackery-open-bastion-module
           - stocks-orders-marketorder
+          - svectordb-vectordatabase-apikey
+          - svectordb-vectordatabase-database
           - symphonia-opensource-cloudformationartifactsbucket-module
           - sysdig-helm-agent
           - tf-ad-computer

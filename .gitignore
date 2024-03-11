@@ -533,6 +533,12 @@ junit.xml
 /packages/@cdk-cloudformation/stocks-orders-marketorder/dist/
 /packages/@cdk-cloudformation/stocks-orders-marketorder/lib/
 !/.github/workflows/release-stocks-orders-marketorder.yml
+/packages/@cdk-cloudformation/svectordb-vectordatabase-apikey/dist/
+/packages/@cdk-cloudformation/svectordb-vectordatabase-apikey/lib/
+!/.github/workflows/release-svectordb-vectordatabase-apikey.yml
+/packages/@cdk-cloudformation/svectordb-vectordatabase-database/dist/
+/packages/@cdk-cloudformation/svectordb-vectordatabase-database/lib/
+!/.github/workflows/release-svectordb-vectordatabase-database.yml
 /packages/@cdk-cloudformation/symphonia-opensource-cloudformationartifactsbucket-module/dist/
 /packages/@cdk-cloudformation/symphonia-opensource-cloudformationartifactsbucket-module/lib/
 !/.github/workflows/release-symphonia-opensource-cloudformationartifactsbucket-module.yml

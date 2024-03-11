@@ -1,0 +1,15 @@
+{
+  "Arn": "arn:aws:cloudformation:us-east-1::type/resource/a867ba60608173fcd64ddc25dcbee967cb54dbb4/SvectorDB-VectorDatabase-Database",
+  "Type": "RESOURCE",
+  "TypeName": "SvectorDB::VectorDatabase::Database",
+  "Description": "Creates a serverless vector database with SvectorDB, sign up at https://svectordb.com to get started",
+  "Schema": "{\n    \"typeName\": \"SvectorDB::VectorDatabase::Database\",\n    \"description\": \"Creates a serverless vector database with SvectorDB, sign up at https://svectordb.com to get started\",\n    \"definitions\": {\n    },\n    \"properties\": {\n        \"EndpointUrl\": {\n            \"type\": \"string\",\n            \"description\": \"(Advanced use cases only) - Custom endpoint URL for contacting the SvectorDB API\"\n        },\n        \"IntegrationId\": {\n            \"type\": \"string\",\n            \"description\": \"Integration ID\"\n        },\n        \"Id\": {\n            \"type\": \"string\",\n            \"description\": \"Database ID\"\n        },\n        \"Name\": {\n            \"type\": \"string\",\n            \"description\": \"Name that appears in the SvectorDB console\",\n            \"minLength\": 1,\n            \"maxLength\": 256,\n            \"pattern\": \"^[A-Za-z0-9 -_]+$\"\n        },\n        \"Type\": {\n            \"type\": \"string\",\n            \"enum\": [\n                \"SANDBOX\",\n                \"STANDARD\"\n            ]\n        },\n        \"Metric\": {\n            \"type\": \"string\",\n            \"enum\": [\n                \"EUCLIDEAN\",\n                \"DOT_PRODUCT\",\n                \"COSINE\"\n            ]\n        },\n        \"Dimension\": {\n            \"type\": \"integer\",\n            \"minimum\": 1,\n            \"maximum\": 1024\n        }\n    },\n    \"additionalProperties\": false,\n    \"required\": [\n        \"IntegrationId\",\n        \"Metric\",\n        \"Dimension\"\n    ],\n    \"createOnlyProperties\": [\n        \"/properties/EndpointUrl\",\n        \"/properties/IntegrationId\",\n        \"/properties/Type\",\n        \"/properties/Metric\",\n        \"/properties/Dimension\"\n    ],\n    \"readOnlyProperties\": [\n        \"/properties/Id\"\n    ],\n    \"primaryIdentifier\": [\n        \"/properties/Id\"\n    ],\n    \"handlers\": {\n        \"create\": {\n            \"permissions\": []\n        },\n        \"read\": {\n            \"permissions\": []\n        },\n        \"update\": {\n            \"permissions\": []\n        },\n        \"delete\": {\n            \"permissions\": []\n        },\n        \"list\": {\n            \"permissions\": []\n        }\n    }\n}",
+  "ProvisioningType": "FULLY_MUTABLE",
+  "DeprecatedStatus": "LIVE",
+  "RequiredActivatedTypes": [],
+  "Visibility": "PUBLIC",
+  "TimeCreated": "2024-03-09T13:03:43.545Z",
+  "PublisherId": "a867ba60608173fcd64ddc25dcbee967cb54dbb4",
+  "LatestPublicVersion": "1.1.0",
+  "IsActivated": false
+}

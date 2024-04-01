@@ -9,6 +9,11 @@ import * as constructs from 'constructs';
  */
 export interface CfnNgfwProps {
   /**
+   * @schema CfnNgfwProps#AccountId
+   */
+  readonly accountId: string;
+
+  /**
    * @schema CfnNgfwProps#AppIdVersion
    */
   readonly appIdVersion?: string;
@@ -26,7 +31,7 @@ export interface CfnNgfwProps {
   /**
    * @schema CfnNgfwProps#EndpointMode
    */
-  readonly endpointMode: CfnNgfwPropsEndpointMode;
+  readonly endpointMode?: EndpointMode;
 
   /**
    * @schema CfnNgfwProps#FirewallName
@@ -34,29 +39,54 @@ export interface CfnNgfwProps {
   readonly firewallName: string;
 
   /**
+   * @schema CfnNgfwProps#MultiVpcEnable
+   */
+  readonly multiVpcEnable?: boolean;
+
+  /**
+   * @schema CfnNgfwProps#Describe
+   */
+  readonly describe?: boolean;
+
+  /**
    * @schema CfnNgfwProps#RuleStackName
    */
   readonly ruleStackName?: string;
 
   /**
-   * @schema CfnNgfwProps#SubnetMappings
+   * @schema CfnNgfwProps#GlobalRuleStackName
    */
-  readonly subnetMappings: string[];
+  readonly globalRuleStackName?: string;
 
   /**
-   * @schema CfnNgfwProps#Tags
+   * @schema CfnNgfwProps#SubnetMappings
    */
-  readonly tags?: any[];
+  readonly subnetMappings?: SubnetMappings[];
+
+  /**
+   * @schema CfnNgfwProps#AssociateSubnetMappings
+   */
+  readonly associateSubnetMappings?: SubnetMappings[];
+
+  /**
+   * @schema CfnNgfwProps#DisassociateSubnetMappings
+   */
+  readonly disassociateSubnetMappings?: SubnetMappings[];
 
   /**
    * @schema CfnNgfwProps#VpcId
    */
-  readonly vpcId: string;
+  readonly vpcId?: string;
+
+  /**
+   * @schema CfnNgfwProps#LinkId
+   */
+  readonly linkId?: string;
 
   /**
    * @schema CfnNgfwProps#LogDestinationConfigs
    */
-  readonly logDestinationConfigs: LogProfileConfig[];
+  readonly logDestinationConfigs?: LogProfileConfig[];
 
   /**
    * @schema CfnNgfwProps#CloudWatchMetricNamespace
@@ -64,9 +94,19 @@ export interface CfnNgfwProps {
   readonly cloudWatchMetricNamespace?: string;
 
   /**
-   * @schema CfnNgfwProps#ProgrammaticAccessToken
+   * @schema CfnNgfwProps#Tags
    */
-  readonly programmaticAccessToken: string;
+  readonly tags?: Tag[];
+
+  /**
+   * @schema CfnNgfwProps#VPCIds
+   */
+  readonly vpcIds?: string[];
+
+  /**
+   * @schema CfnNgfwProps#ReadFirewall
+   */
+  readonly readFirewall?: CfnNgfwPropsReadFirewall;
 
 }
 
@@ -77,18 +117,26 @@ export interface CfnNgfwProps {
 export function toJson_CfnNgfwProps(obj: CfnNgfwProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
+    'AccountId': obj.accountId,
     'AppIdVersion': obj.appIdVersion,
     'AutomaticUpgradeAppIdVersion': obj.automaticUpgradeAppIdVersion,
     'Description': obj.description,
     'EndpointMode': obj.endpointMode,
     'FirewallName': obj.firewallName,
+    'MultiVpcEnable': obj.multiVpcEnable,
+    'Describe': obj.describe,
     'RuleStackName': obj.ruleStackName,
-    'SubnetMappings': obj.subnetMappings?.map(y => y),
-    'Tags': obj.tags?.map(y => y),
+    'GlobalRuleStackName': obj.globalRuleStackName,
+    'SubnetMappings': obj.subnetMappings?.map(y => toJson_SubnetMappings(y)),
+    'AssociateSubnetMappings': obj.associateSubnetMappings?.map(y => toJson_SubnetMappings(y)),
+    'DisassociateSubnetMappings': obj.disassociateSubnetMappings?.map(y => toJson_SubnetMappings(y)),
     'VpcId': obj.vpcId,
+    'LinkId': obj.linkId,
     'LogDestinationConfigs': obj.logDestinationConfigs?.map(y => toJson_LogProfileConfig(y)),
     'CloudWatchMetricNamespace': obj.cloudWatchMetricNamespace,
-    'ProgrammaticAccessToken': obj.programmaticAccessToken,
+    'Tags': obj.tags?.map(y => toJson_Tag(y)),
+    'VPCIds': obj.vpcIds?.map(y => y),
+    'ReadFirewall': toJson_CfnNgfwPropsReadFirewall(obj.readFirewall),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -96,14 +144,45 @@ export function toJson_CfnNgfwProps(obj: CfnNgfwProps | undefined): Record<strin
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnNgfwPropsEndpointMode
+ * @schema EndpointMode
  */
-export enum CfnNgfwPropsEndpointMode {
+export enum EndpointMode {
   /** ServiceManaged */
   SERVICE_MANAGED = "ServiceManaged",
   /** CustomerManaged */
   CUSTOMER_MANAGED = "CustomerManaged",
 }
+
+/**
+ * @schema SubnetMappings
+ */
+export interface SubnetMappings {
+  /**
+   * @schema SubnetMappings#AvailabilityZone
+   */
+  readonly availabilityZone?: string;
+
+  /**
+   * @schema SubnetMappings#SubnetId
+   */
+  readonly subnetId?: string;
+
+}
+
+/**
+ * Converts an object of type 'SubnetMappings' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_SubnetMappings(obj: SubnetMappings | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'AvailabilityZone': obj.availabilityZone,
+    'SubnetId': obj.subnetId,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
 
 /**
  * Add Log profile config
@@ -145,6 +224,170 @@ export function toJson_LogProfileConfig(obj: LogProfileConfig | undefined): Reco
 /* eslint-enable max-len, quote-props */
 
 /**
+ * @schema Tag
+ */
+export interface Tag {
+  /**
+   * @schema Tag#Key
+   */
+  readonly key: string;
+
+  /**
+   * @schema Tag#Value
+   */
+  readonly value: string;
+
+}
+
+/**
+ * Converts an object of type 'Tag' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_Tag(obj: Tag | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'Key': obj.key,
+    'Value': obj.value,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnNgfwPropsReadFirewall
+ */
+export interface CfnNgfwPropsReadFirewall {
+  /**
+   * @schema CfnNgfwPropsReadFirewall#AccountId
+   */
+  readonly accountId?: string;
+
+  /**
+   * @schema CfnNgfwPropsReadFirewall#AppIdVersion
+   */
+  readonly appIdVersion?: string;
+
+  /**
+   * @schema CfnNgfwPropsReadFirewall#AutomaticUpgradeAppIdVersion
+   */
+  readonly automaticUpgradeAppIdVersion?: boolean;
+
+  /**
+   * @schema CfnNgfwPropsReadFirewall#EndpointMode
+   */
+  readonly endpointMode?: EndpointMode;
+
+  /**
+   * @schema CfnNgfwPropsReadFirewall#Description
+   */
+  readonly description?: string;
+
+  /**
+   * @schema CfnNgfwPropsReadFirewall#FirewallName
+   */
+  readonly firewallName?: string;
+
+  /**
+   * @schema CfnNgfwPropsReadFirewall#MultiVpcEnable
+   */
+  readonly multiVpcEnable?: boolean;
+
+  /**
+   * @schema CfnNgfwPropsReadFirewall#RuleStackName
+   */
+  readonly ruleStackName?: string;
+
+  /**
+   * @schema CfnNgfwPropsReadFirewall#GlobalRuleStackName
+   */
+  readonly globalRuleStackName?: string;
+
+  /**
+   * @schema CfnNgfwPropsReadFirewall#SubnetMappings
+   */
+  readonly subnetMappings?: SubnetMappings;
+
+  /**
+   * @schema CfnNgfwPropsReadFirewall#VpcId
+   */
+  readonly vpcId?: string;
+
+  /**
+   * @schema CfnNgfwPropsReadFirewall#LinkId
+   */
+  readonly linkId?: string;
+
+  /**
+   * @schema CfnNgfwPropsReadFirewall#LinkStatus
+   */
+  readonly linkStatus?: string;
+
+  /**
+   * @schema CfnNgfwPropsReadFirewall#EndpointServiceName
+   */
+  readonly endpointServiceName?: string;
+
+  /**
+   * @schema CfnNgfwPropsReadFirewall#Attachments
+   */
+  readonly attachments?: Attachment[];
+
+  /**
+   * @schema CfnNgfwPropsReadFirewall#FirewallStatus
+   */
+  readonly firewallStatus?: string;
+
+  /**
+   * @schema CfnNgfwPropsReadFirewall#RuleStackStatus
+   */
+  readonly ruleStackStatus?: string;
+
+  /**
+   * @schema CfnNgfwPropsReadFirewall#FailureReason
+   */
+  readonly failureReason?: string;
+
+  /**
+   * @schema CfnNgfwPropsReadFirewall#Tags
+   */
+  readonly tags?: Tag[];
+
+}
+
+/**
+ * Converts an object of type 'CfnNgfwPropsReadFirewall' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnNgfwPropsReadFirewall(obj: CfnNgfwPropsReadFirewall | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'AccountId': obj.accountId,
+    'AppIdVersion': obj.appIdVersion,
+    'AutomaticUpgradeAppIdVersion': obj.automaticUpgradeAppIdVersion,
+    'EndpointMode': obj.endpointMode,
+    'Description': obj.description,
+    'FirewallName': obj.firewallName,
+    'MultiVpcEnable': obj.multiVpcEnable,
+    'RuleStackName': obj.ruleStackName,
+    'GlobalRuleStackName': obj.globalRuleStackName,
+    'SubnetMappings': toJson_SubnetMappings(obj.subnetMappings),
+    'VpcId': obj.vpcId,
+    'LinkId': obj.linkId,
+    'LinkStatus': obj.linkStatus,
+    'EndpointServiceName': obj.endpointServiceName,
+    'Attachments': obj.attachments?.map(y => toJson_Attachment(y)),
+    'FirewallStatus': obj.firewallStatus,
+    'RuleStackStatus': obj.ruleStackStatus,
+    'FailureReason': obj.failureReason,
+    'Tags': obj.tags?.map(y => toJson_Tag(y)),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
  * @schema LogProfileConfigLogDestinationType
  */
 export enum LogProfileConfigLogDestinationType {
@@ -167,6 +410,61 @@ export enum LogProfileConfigLogType {
   /** THREAT */
   THREAT = "THREAT",
 }
+
+/**
+ * @schema Attachment
+ */
+export interface Attachment {
+  /**
+   * @schema Attachment#EndpointId
+   */
+  readonly endpointId?: string;
+
+  /**
+   * @schema Attachment#Status
+   */
+  readonly status?: string;
+
+  /**
+   * @schema Attachment#RejectedReason
+   */
+  readonly rejectedReason?: string;
+
+  /**
+   * @schema Attachment#SubnetId
+   */
+  readonly subnetId?: string;
+
+  /**
+   * @schema Attachment#AccountId
+   */
+  readonly accountId?: string;
+
+  /**
+   * @schema Attachment#VpcId
+   */
+  readonly vpcId?: string;
+
+}
+
+/**
+ * Converts an object of type 'Attachment' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_Attachment(obj: Attachment | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'EndpointId': obj.endpointId,
+    'Status': obj.status,
+    'RejectedReason': obj.rejectedReason,
+    'SubnetId': obj.subnetId,
+    'AccountId': obj.accountId,
+    'VpcId': obj.vpcId,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
 
 
 /**

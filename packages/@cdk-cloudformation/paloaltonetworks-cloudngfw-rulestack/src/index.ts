@@ -28,6 +28,11 @@ export interface CfnRuleStackProps {
   readonly ruleList?: Rule[];
 
   /**
+   * @schema CfnRuleStackProps#Describe
+   */
+  readonly describe?: boolean;
+
+  /**
    * @schema CfnRuleStackProps#SecurityObjects
    */
   readonly securityObjects?: SecurityObjects;
@@ -36,6 +41,26 @@ export interface CfnRuleStackProps {
    * @schema CfnRuleStackProps#CustomSecurityProfiles
    */
   readonly customSecurityProfiles?: CustomSecurityProfiles;
+
+  /**
+   * @schema CfnRuleStackProps#RuleStackCandidate
+   */
+  readonly ruleStackCandidate?: RuleStack;
+
+  /**
+   * @schema CfnRuleStackProps#RuleStackRunning
+   */
+  readonly ruleStackRunning?: RuleStack;
+
+  /**
+   * @schema CfnRuleStackProps#Tags
+   */
+  readonly tags?: Tag[];
+
+  /**
+   * @schema CfnRuleStackProps#RuleStackState
+   */
+  readonly ruleStackState?: string;
 
 }
 
@@ -49,8 +74,13 @@ export function toJson_CfnRuleStackProps(obj: CfnRuleStackProps | undefined): Re
     'RuleStackName': obj.ruleStackName,
     'RuleStack': toJson_RuleStack(obj.ruleStack),
     'RuleList': obj.ruleList?.map(y => toJson_Rule(y)),
+    'Describe': obj.describe,
     'SecurityObjects': toJson_SecurityObjects(obj.securityObjects),
     'CustomSecurityProfiles': toJson_CustomSecurityProfiles(obj.customSecurityProfiles),
+    'RuleStackCandidate': toJson_RuleStack(obj.ruleStackCandidate),
+    'RuleStackRunning': toJson_RuleStack(obj.ruleStackRunning),
+    'Tags': obj.tags?.map(y => toJson_Tag(y)),
+    'RuleStackState': obj.ruleStackState,
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -336,11 +366,44 @@ export function toJson_CustomSecurityProfiles(obj: CustomSecurityProfiles | unde
 /* eslint-enable max-len, quote-props */
 
 /**
+ * @schema Tag
+ */
+export interface Tag {
+  /**
+   * @schema Tag#Key
+   */
+  readonly key: string;
+
+  /**
+   * @schema Tag#Value
+   */
+  readonly value: string;
+
+}
+
+/**
+ * Converts an object of type 'Tag' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_Tag(obj: Tag | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'Key': obj.key,
+    'Value': obj.value,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
  * @schema RuleStackScope
  */
 export enum RuleStackScope {
   /** Local */
   LOCAL = "Local",
+  /** Global */
+  GLOBAL = "Global",
 }
 
 /**
@@ -568,37 +631,6 @@ export enum RuleDecryptionRuleType {
   /** SSLInboundNoInspection */
   SSL_INBOUND_NO_INSPECTION = "SSLInboundNoInspection",
 }
-
-/**
- * @schema Tag
- */
-export interface Tag {
-  /**
-   * @schema Tag#Key
-   */
-  readonly key: string;
-
-  /**
-   * @schema Tag#Value
-   */
-  readonly value: string;
-
-}
-
-/**
- * Converts an object of type 'Tag' to JSON representation.
- */
-/* eslint-disable max-len, quote-props */
-export function toJson_Tag(obj: Tag | undefined): Record<string, any> | undefined {
-  if (obj === undefined) { return undefined; }
-  const result = {
-    'Key': obj.key,
-    'Value': obj.value,
-  };
-  // filter undefined values
-  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
-}
-/* eslint-enable max-len, quote-props */
 
 /**
  * SecurityObjects PrefixList

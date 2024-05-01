@@ -18,6 +18,7 @@ project.addDevDeps('constructs@^10.0.5');
 project.addDevDeps('aws-cdk-lib');
 project.addDevDeps('jsii');
 project.addDevDeps('jsii-pacmak');
+project.addDevDeps('jsii-rosetta');
 project.addDevDeps('aws-cdk-github-oidc@^2.2.0');
 project.addDevDeps('ts-node@^10');
 project.addDevDeps('@types/node@16.18.78'); // last version compatible with jsii 1.x

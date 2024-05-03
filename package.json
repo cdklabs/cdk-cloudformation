@@ -1,5 +1,9 @@
 {
   "name": "cdk-cloudformation",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cdklabs/cdk-cloudformation.git"
+  },
   "scripts": {
     "build": "npx projen build",
     "build-pkg": "npx projen build-pkg",
@@ -38,11 +42,11 @@
     "@typescript-eslint/eslint-plugin": "^6",
     "@typescript-eslint/parser": "^6",
     "aws-cdk-github-oidc": "^2.2.0",
-    "aws-cdk-lib": "^2.139.1",
-    "aws-sdk": "^2.1611.0",
+    "aws-cdk-lib": "^2.140.0",
+    "aws-sdk": "^2.1612.0",
     "case": "^1.6.3",
     "cdk-import": "^0.2.112",
-    "cdklabs-projen-project-types": "^0.1.195",
+    "cdklabs-projen-project-types": "^0.1.196",
     "constructs": "^10.0.5",
     "eslint": "^8",
     "eslint-import-resolver-typescript": "^2.7.1",

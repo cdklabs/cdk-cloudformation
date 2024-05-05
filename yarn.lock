@@ -1224,7 +1224,7 @@ aws-cdk-lib@2.140.0, aws-cdk-lib@^2.140.0:
     table "^6.8.2"
     yaml "1.10.2"
 
-aws-sdk@^2.1612.0, aws-sdk@^2.1613.0:
+aws-sdk@^2.1613.0:
   version "2.1613.0"
   resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1613.0.tgz#242a4aa73bbd4312153f5ec0d9435ea13a2879db"
   integrity sha512-NCBSOa7i/VewoAy6fZIcxJxjKqySREy+bqAG2tKESZo2/DCm0i9XFW0R78LDtxKvjz+mqjmqviAm3r7LBsF0dg==
@@ -1417,9 +1417,9 @@ camelcase@^6.2.0, camelcase@^6.3.0:
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
 caniuse-lite@^1.0.30001587:
-  version "1.0.30001615"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001615.tgz#7c2c8772db681b6dee74d81d6550db68f2d28842"
-  integrity sha512-1IpazM5G3r38meiae0bHRnPhz+CBQ3ZLqbQMtrg+AsTPKAXgW38JNsXkyZ+v8waCsDmPq87lmfun5Q2AGysNEQ==
+  version "1.0.30001616"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001616.tgz#4342712750d35f71ebba9fcac65e2cf8870013c3"
+  integrity sha512-RHVYKov7IcdNjVHJFNY/78RdG4oGVjbayxv8u5IO74Wv7Hlq4PnJE6mo/OjFijjVFNy5ijnCt6H3IIo4t+wfEw==
 
 case@1.6.3, case@^1.6.3:
   version "1.6.3"
@@ -1427,15 +1427,15 @@ case@1.6.3, case@^1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-import@^0.2.112:
-  version "0.2.721"
-  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.721.tgz#b5639239b28104c52ac75bf734af910ca10cf3c3"
-  integrity sha512-mpe3DRpZO/LrUAIYyU4zJnxF3lr/AhT1Yp3dIokKgn6qnwnpaSKZf8wAcmSa1ASE1RBkGgLoanPFMup5SCLAFw==
+  version "0.2.722"
+  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.722.tgz#d3fadfd5f61abcc9b76ee9df3efc3feb55d5bab8"
+  integrity sha512-ooVlC0Wv/gUVJDBCqlG0Xodpb2/iD6KunEFsm6A2SpSk5IYhUiTSeRVMnMDhlbKWkQmd/dGUNvflndxIjNuEMw==
   dependencies:
     aws-cdk-lib "^2.140.0"
-    aws-sdk "^2.1612.0"
+    aws-sdk "^2.1613.0"
     case "^1.6.3"
     constructs "^10"
-    jsii-srcmak "^0.1.1111"
+    jsii-srcmak "^0.1.1112"
     json2jsii "^0.4.3"
     minimist "^1.2.8"
     minimist-subcommand "^3.0.2"
@@ -3763,10 +3763,10 @@ jsii-rosetta@^5.4.10:
     workerpool "^6.5.1"
     yargs "^17.7.2"
 
-jsii-srcmak@^0.1.1111:
-  version "0.1.1112"
-  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.1112.tgz#eb48f0d83894a21a55eb43b77b404a0a6303d6d4"
-  integrity sha512-vxFBrc+Ok6elIrTIGU0+h4tK4A/dxXmqzh/Mx8ZHcDQS64wgZgdR3lQ4uFel4Qb+NKJ2B3C5OqfstRz2k7EYOA==
+jsii-srcmak@^0.1.1112:
+  version "0.1.1113"
+  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.1113.tgz#0c7567f780a2c6efce13baa91114d1368a3000fb"
+  integrity sha512-8bYaZJPuQKNkAfIdQqb8KH11hurulskR+2/BcnbQxMf3wI3/6+qD18hs5glgfwgFbX78PufiE+ID7fzmiWSn7A==
   dependencies:
     fs-extra "^9.1.0"
     jsii "~5.4.9"
@@ -5496,9 +5496,9 @@ typedarray@^0.0.6:
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
 typescript@next:
-  version "5.5.0-dev.20240503"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.5.0-dev.20240503.tgz#a7da908b5e5d61dafba0c81fc29ae82132725f73"
-  integrity sha512-tOdPPinGIa3zx6xEhbvrNseqE+4ODzcDBLl9cFAnSsOrbjlXaQVMdDRXR2T8pS4GR4mc0aoU5XX+sP61ynHgAQ==
+  version "5.5.0-dev.20240504"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.5.0-dev.20240504.tgz#5eaf4fd6910c980595957b6678e4c08c8dcd4a66"
+  integrity sha512-DCn87xYYzHMmF56NZpjUNpZO5GujB3Xr2JdJh1AP8U2FcUM40h0ZWqFXbqF+qukJ7B8LG5HIRIaNfl8+z/c8vw==
 
 typescript@~4.9.5:
   version "4.9.5"

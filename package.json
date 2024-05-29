@@ -42,8 +42,8 @@
     "@typescript-eslint/eslint-plugin": "^6",
     "@typescript-eslint/parser": "^6",
     "aws-cdk-github-oidc": "^2.2.0",
-    "aws-cdk-lib": "^2.141.0",
-    "aws-sdk": "^2.1620.0",
+    "aws-cdk-lib": "^2.143.0",
+    "aws-sdk": "^2.1629.0",
     "case": "^1.6.3",
     "cdk-import": "^0.2.112",
     "cdklabs-projen-project-types": "^0.1.196",
@@ -53,10 +53,10 @@
     "eslint-plugin-import": "^2.29.1",
     "jest": "^27.5.1",
     "jest-junit": "^15",
-    "jsii": "^5.4.15",
+    "jsii": "^5.4.18",
     "jsii-pacmak": "^1.98.0",
-    "jsii-rosetta": "^5.4.17",
-    "projen": "^0.81.11",
+    "jsii-rosetta": "^5.4.20",
+    "projen": "^0.82.1",
     "standard-version": "^9",
     "ts-jest": "^27.1.5",
     "ts-node": "^10",
@@ -67,11 +67,15 @@
   },
   "main": "lib/index.js",
   "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "0.0.0",
   "jest": {
+    "coverageProvider": "v8",
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.ts?(x)",
-      "<rootDir>/(test|src)/**/*(*.)@(spec|test).ts?(x)"
+      "<rootDir>/@(test|src)/**/*(*.)@(spec|test).ts?(x)"
     ],
     "clearMocks": true,
     "collectCoverage": true,

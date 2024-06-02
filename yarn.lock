@@ -1195,7 +1195,7 @@ aws-cdk-github-oidc@^2.2.0:
   resolved "https://registry.yarnpkg.com/aws-cdk-github-oidc/-/aws-cdk-github-oidc-2.4.1.tgz#8fcb134401f3a15d74260e5bcc58ed05dabac2a0"
   integrity sha512-zKQYPGyf5f6APG76OpOxW6P7KGY/fC6VhN1ZullxySSu6RroUH9VtVl+cJ8hYes5XvEE/ZDpx2h2fPtNwZrcVQ==
 
-aws-cdk-lib@2.144.0, aws-cdk-lib@^2.143.1, aws-cdk-lib@^2.144.0:
+aws-cdk-lib@2.144.0, aws-cdk-lib@^2.144.0:
   version "2.144.0"
   resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.144.0.tgz#0e224634d361cea0a8019b4677a517752600609b"
   integrity sha512-DpyIyTs8NHX6WgAyYM2mGorirIk+eTjWzXGQRfzAe40qkwcqsb5Ax4JEl5gz1OEo9QIJIgWDtmImgWN0tUbILA==
@@ -1215,7 +1215,7 @@ aws-cdk-lib@2.144.0, aws-cdk-lib@^2.143.1, aws-cdk-lib@^2.144.0:
     table "^6.8.2"
     yaml "1.10.2"
 
-aws-sdk@^2.1631.0, aws-sdk@^2.1632.0:
+aws-sdk@^2.1632.0:
   version "2.1632.0"
   resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1632.0.tgz#24bd0bd000f500300f7d52ac4c6e316a0311e25d"
   integrity sha512-doNHUxto00r7r9qWb5RcIsQHUTHdGiPPyJoXxmsmQW6aOr69BqYeuFl8SicNS1YzP6s5sFFnDNKq9KB7jA2fyA==
@@ -1418,15 +1418,15 @@ case@1.6.3, case@^1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-import@^0.2.112:
-  version "0.2.749"
-  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.749.tgz#5f9af1ba5ba57339307c865f307377ca1b755134"
-  integrity sha512-oJnSNLhJ2Vt34Ag6YRCbXUJQ8IWp95AKlIprxzZA3MNGEkSPYwYrBB2tnrGiVaH0/QubYoa9OUfsqUi6kVEFPA==
+  version "0.2.750"
+  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.750.tgz#d6ff976af462ac8c34305c2a21a5e78cb83f6c8a"
+  integrity sha512-OAbhyNczRYg495YqV/IXrjsYb85VOs0MBpnNQXS/qFMl00iI8UcunzhUGCu0+GVdq0/QcPIq5Yc2w2mvQWuSTA==
   dependencies:
-    aws-cdk-lib "^2.143.1"
-    aws-sdk "^2.1631.0"
+    aws-cdk-lib "^2.144.0"
+    aws-sdk "^2.1632.0"
     case "^1.6.3"
     constructs "^10"
-    jsii-srcmak "^0.1.1139"
+    jsii-srcmak "^0.1.1140"
     json2jsii "^0.4.3"
     minimist "^1.2.8"
     minimist-subcommand "^3.0.2"
@@ -2043,9 +2043,9 @@ downlevel-dts@^0.11.0:
     typescript next
 
 electron-to-chromium@^1.4.668:
-  version "1.4.787"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.787.tgz#3eedd0a3b8be2b9e96e21675d399786ad90b99ed"
-  integrity sha512-d0EFmtLPjctczO3LogReyM2pbBiiZbnsKnGF+cdZhsYzHm/A0GV7W94kqzLD8SN4O3f3iHlgLUChqghgyznvCQ==
+  version "1.4.788"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.788.tgz#a3545959d5cfa0a266d3e551386c040be34e7e06"
+  integrity sha512-ubp5+Ev/VV8KuRoWnfP2QF2Bg+O2ZFdb49DiiNbz2VmgkIqrnyYaqIOqj8A6K/3p1xV0QcU5hBQ1+BmB6ot1OA==
 
 emittery@^0.8.1:
   version "0.8.1"
@@ -3754,10 +3754,10 @@ jsii-rosetta@^5.4.20:
     workerpool "^6.5.1"
     yargs "^17.7.2"
 
-jsii-srcmak@^0.1.1139:
-  version "0.1.1140"
-  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.1140.tgz#062a6d007977f12a99c61d530b75e955076fa949"
-  integrity sha512-hO9XyaipflOohSIFLQ2ur5fV4g3LRGBmpnBa+Rx20Um7SnoT3B0QC8iDXC0Fd+Hhw2P10CSuAyapbrDZ3l4Yew==
+jsii-srcmak@^0.1.1140:
+  version "0.1.1141"
+  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.1141.tgz#42c1d2c5c9bbe8c8fe000e958fafc00b3c6f518d"
+  integrity sha512-/jwpKGSH44jRQcM5zywgbCuaXI2R80/D23IJRN3J1Fh1hD8n5UjEjKe2wcCm/e8jflwITQy7YV/AO+lKSHl0lA==
   dependencies:
     fs-extra "^9.1.0"
     jsii "~5.4.18"
@@ -5485,9 +5485,9 @@ typedarray@^0.0.6:
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
 typescript@next:
-  version "5.5.0-dev.20240531"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.5.0-dev.20240531.tgz#0cf281373a0a40019ad6c7225597e0dcae526cd8"
-  integrity sha512-OzmPvUfcE/QfBFZGl+a976k3SCEo26/eGhDEOSz/gGUTWCOqoLjdBFgtQx9OJRKLBMJd+oI59BdRC/cbtDa11g==
+  version "5.5.0-dev.20240601"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.5.0-dev.20240601.tgz#f5f62280f540c4673eb89a801ba4c6b431de55a1"
+  integrity sha512-JdOf4SBFb/i7lh8CiIsRk1SOEA2uwr/2qoYjmPWiLP6L4ttAJd0Chb0PbGAItbRy9Cf55iej67T2l9D0NCmE6w==
 
 typescript@~4.9.5:
   version "4.9.5"

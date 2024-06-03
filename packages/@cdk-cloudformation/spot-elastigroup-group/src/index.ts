@@ -90,6 +90,16 @@ export interface CfnGroupPropsGroup {
   readonly description?: string;
 
   /**
+   * @schema CfnGroupPropsGroup#createdAt
+   */
+  readonly createdAt?: string;
+
+  /**
+   * @schema CfnGroupPropsGroup#updatedAt
+   */
+  readonly updatedAt?: string;
+
+  /**
    * @schema CfnGroupPropsGroup#region
    */
   readonly region?: string;
@@ -136,6 +146,8 @@ export function toJson_CfnGroupPropsGroup(obj: CfnGroupPropsGroup | undefined): 
     'groupId': obj.groupId,
     'name': obj.name,
     'description': obj.description,
+    'createdAt': obj.createdAt,
+    'updatedAt': obj.updatedAt,
     'region': obj.region,
     'strategy': toJson_CfnGroupPropsGroupStrategy(obj.strategy),
     'compute': toJson_CfnGroupPropsGroupCompute(obj.compute),
@@ -159,6 +171,26 @@ export interface CfnGroupPropsGroupStrategy {
   readonly risk?: number;
 
   /**
+   * @schema CfnGroupPropsGroupStrategy#immediateODRecoverThreshold
+   */
+  readonly immediateOdRecoverThreshold?: number;
+
+  /**
+   * @schema CfnGroupPropsGroupStrategy#restrictSingleAz
+   */
+  readonly restrictSingleAz?: boolean;
+
+  /**
+   * @schema CfnGroupPropsGroupStrategy#utilizeReservedInstances
+   */
+  readonly utilizeReservedInstances?: boolean;
+
+  /**
+   * @schema CfnGroupPropsGroupStrategy#utilizeCommitments
+   */
+  readonly utilizeCommitments?: boolean;
+
+  /**
    * @schema CfnGroupPropsGroupStrategy#onDemandCount
    */
   readonly onDemandCount?: number;
@@ -174,6 +206,11 @@ export interface CfnGroupPropsGroupStrategy {
   readonly drainingTimeout?: number;
 
   /**
+   * @schema CfnGroupPropsGroupStrategy#spinUpTime
+   */
+  readonly spinUpTime?: number;
+
+  /**
    * @schema CfnGroupPropsGroupStrategy#fallbackToOd
    */
   readonly fallbackToOd?: boolean;
@@ -182,6 +219,26 @@ export interface CfnGroupPropsGroupStrategy {
    * @schema CfnGroupPropsGroupStrategy#lifetimePeriod
    */
   readonly lifetimePeriod?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupStrategy#signals
+   */
+  readonly signals?: CfnGroupPropsGroupStrategySignals[];
+
+  /**
+   * @schema CfnGroupPropsGroupStrategy#considerODPricing
+   */
+  readonly considerOdPricing?: boolean;
+
+  /**
+   * @schema CfnGroupPropsGroupStrategy#scalingStrategy
+   */
+  readonly scalingStrategy?: CfnGroupPropsGroupStrategyScalingStrategy;
+
+  /**
+   * @schema CfnGroupPropsGroupStrategy#persistence
+   */
+  readonly persistence?: CfnGroupPropsGroupStrategyPersistence;
 
   /**
    * @schema CfnGroupPropsGroupStrategy#revertToSpot
@@ -198,11 +255,20 @@ export function toJson_CfnGroupPropsGroupStrategy(obj: CfnGroupPropsGroupStrateg
   if (obj === undefined) { return undefined; }
   const result = {
     'risk': obj.risk,
+    'immediateODRecoverThreshold': obj.immediateOdRecoverThreshold,
+    'restrictSingleAz': obj.restrictSingleAz,
+    'utilizeReservedInstances': obj.utilizeReservedInstances,
+    'utilizeCommitments': obj.utilizeCommitments,
     'onDemandCount': obj.onDemandCount,
     'availabilityVsCost': obj.availabilityVsCost,
     'drainingTimeout': obj.drainingTimeout,
+    'spinUpTime': obj.spinUpTime,
     'fallbackToOd': obj.fallbackToOd,
     'lifetimePeriod': obj.lifetimePeriod,
+    'signals': obj.signals?.map(y => toJson_CfnGroupPropsGroupStrategySignals(y)),
+    'considerODPricing': obj.considerOdPricing,
+    'scalingStrategy': toJson_CfnGroupPropsGroupStrategyScalingStrategy(obj.scalingStrategy),
+    'persistence': toJson_CfnGroupPropsGroupStrategyPersistence(obj.persistence),
     'revertToSpot': toJson_CfnGroupPropsGroupStrategyRevertToSpot(obj.revertToSpot),
   };
   // filter undefined values
@@ -215,6 +281,21 @@ export function toJson_CfnGroupPropsGroupStrategy(obj: CfnGroupPropsGroupStrateg
  */
 export interface CfnGroupPropsGroupCompute {
   /**
+   * @schema CfnGroupPropsGroupCompute#elasticIps
+   */
+  readonly elasticIps?: string[];
+
+  /**
+   * @schema CfnGroupPropsGroupCompute#privateIps
+   */
+  readonly privateIps?: string[];
+
+  /**
+   * @schema CfnGroupPropsGroupCompute#volumeAttachments
+   */
+  readonly volumeAttachments?: CfnGroupPropsGroupComputeVolumeAttachments;
+
+  /**
    * @schema CfnGroupPropsGroupCompute#instanceTypes
    */
   readonly instanceTypes?: CfnGroupPropsGroupComputeInstanceTypes;
@@ -225,9 +306,24 @@ export interface CfnGroupPropsGroupCompute {
   readonly availabilityZones?: CfnGroupPropsGroupComputeAvailabilityZones[];
 
   /**
+   * @schema CfnGroupPropsGroupCompute#subnetIds
+   */
+  readonly subnetIds?: string[];
+
+  /**
+   * @schema CfnGroupPropsGroupCompute#preferredAvailabilityZones
+   */
+  readonly preferredAvailabilityZones?: string[];
+
+  /**
    * @schema CfnGroupPropsGroupCompute#product
    */
   readonly product?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupCompute#ebsVolumePool
+   */
+  readonly ebsVolumePool?: CfnGroupPropsGroupComputeEbsVolumePool[];
 
   /**
    * @schema CfnGroupPropsGroupCompute#launchSpecification
@@ -243,9 +339,15 @@ export interface CfnGroupPropsGroupCompute {
 export function toJson_CfnGroupPropsGroupCompute(obj: CfnGroupPropsGroupCompute | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
+    'elasticIps': obj.elasticIps?.map(y => y),
+    'privateIps': obj.privateIps?.map(y => y),
+    'volumeAttachments': toJson_CfnGroupPropsGroupComputeVolumeAttachments(obj.volumeAttachments),
     'instanceTypes': toJson_CfnGroupPropsGroupComputeInstanceTypes(obj.instanceTypes),
     'availabilityZones': obj.availabilityZones?.map(y => toJson_CfnGroupPropsGroupComputeAvailabilityZones(y)),
+    'subnetIds': obj.subnetIds?.map(y => y),
+    'preferredAvailabilityZones': obj.preferredAvailabilityZones?.map(y => y),
     'product': obj.product,
+    'ebsVolumePool': obj.ebsVolumePool?.map(y => toJson_CfnGroupPropsGroupComputeEbsVolumePool(y)),
     'launchSpecification': toJson_CfnGroupPropsGroupComputeLaunchSpecification(obj.launchSpecification),
   };
   // filter undefined values
@@ -301,14 +403,24 @@ export function toJson_CfnGroupPropsGroupCapacity(obj: CfnGroupPropsGroupCapacit
  */
 export interface CfnGroupPropsGroupScaling {
   /**
+   * @schema CfnGroupPropsGroupScaling#multipleMetrics
+   */
+  readonly multipleMetrics?: CfnGroupPropsGroupScalingMultipleMetrics;
+
+  /**
    * @schema CfnGroupPropsGroupScaling#up
    */
-  readonly up?: ScalingPolicy[];
+  readonly up?: ScalingUpPolicy[];
 
   /**
    * @schema CfnGroupPropsGroupScaling#down
    */
-  readonly down?: ScalingPolicy[];
+  readonly down?: ScalingDownPolicy[];
+
+  /**
+   * @schema CfnGroupPropsGroupScaling#target
+   */
+  readonly target?: ScalingTargetPolicy[];
 
 }
 
@@ -319,8 +431,10 @@ export interface CfnGroupPropsGroupScaling {
 export function toJson_CfnGroupPropsGroupScaling(obj: CfnGroupPropsGroupScaling | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'up': obj.up?.map(y => toJson_ScalingPolicy(y)),
-    'down': obj.down?.map(y => toJson_ScalingPolicy(y)),
+    'multipleMetrics': toJson_CfnGroupPropsGroupScalingMultipleMetrics(obj.multipleMetrics),
+    'up': obj.up?.map(y => toJson_ScalingUpPolicy(y)),
+    'down': obj.down?.map(y => toJson_ScalingDownPolicy(y)),
+    'target': obj.target?.map(y => toJson_ScalingTargetPolicy(y)),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -332,14 +446,84 @@ export function toJson_CfnGroupPropsGroupScaling(obj: CfnGroupPropsGroupScaling 
  */
 export interface CfnGroupPropsGroupThirdPartiesIntegration {
   /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegration#rancher
+   */
+  readonly rancher?: CfnGroupPropsGroupThirdPartiesIntegrationRancher;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegration#mesosphere
+   */
+  readonly mesosphere?: CfnGroupPropsGroupThirdPartiesIntegrationMesosphere;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegration#elasticBeanstalk
+   */
+  readonly elasticBeanstalk?: CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalk;
+
+  /**
    * @schema CfnGroupPropsGroupThirdPartiesIntegration#ecs
    */
   readonly ecs?: Ecs;
 
   /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegration#mlbRuntime
+   */
+  readonly mlbRuntime?: CfnGroupPropsGroupThirdPartiesIntegrationMlbRuntime;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegration#kubernetes
+   */
+  readonly kubernetes?: Kubernetes;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegration#rightScale
+   */
+  readonly rightScale?: CfnGroupPropsGroupThirdPartiesIntegrationRightScale;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegration#opsWorks
+   */
+  readonly opsWorks?: CfnGroupPropsGroupThirdPartiesIntegrationOpsWorks;
+
+  /**
    * @schema CfnGroupPropsGroupThirdPartiesIntegration#codeDeploy
    */
   readonly codeDeploy?: CfnGroupPropsGroupThirdPartiesIntegrationCodeDeploy;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegration#chef
+   */
+  readonly chef?: CfnGroupPropsGroupThirdPartiesIntegrationChef;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegration#nomad
+   */
+  readonly nomad?: Nomad;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegration#dockerSwarm
+   */
+  readonly dockerSwarm?: DockerSwarm;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegration#route53
+   */
+  readonly route53?: CfnGroupPropsGroupThirdPartiesIntegrationRoute53;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegration#gitlab
+   */
+  readonly gitlab?: CfnGroupPropsGroupThirdPartiesIntegrationGitlab;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegration#datadog
+   */
+  readonly datadog?: CfnGroupPropsGroupThirdPartiesIntegrationDatadog;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegration#jenkins
+   */
+  readonly jenkins?: CfnGroupPropsGroupThirdPartiesIntegrationJenkins;
 
 }
 
@@ -350,8 +534,22 @@ export interface CfnGroupPropsGroupThirdPartiesIntegration {
 export function toJson_CfnGroupPropsGroupThirdPartiesIntegration(obj: CfnGroupPropsGroupThirdPartiesIntegration | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
+    'rancher': toJson_CfnGroupPropsGroupThirdPartiesIntegrationRancher(obj.rancher),
+    'mesosphere': toJson_CfnGroupPropsGroupThirdPartiesIntegrationMesosphere(obj.mesosphere),
+    'elasticBeanstalk': toJson_CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalk(obj.elasticBeanstalk),
     'ecs': toJson_Ecs(obj.ecs),
+    'mlbRuntime': toJson_CfnGroupPropsGroupThirdPartiesIntegrationMlbRuntime(obj.mlbRuntime),
+    'kubernetes': toJson_Kubernetes(obj.kubernetes),
+    'rightScale': toJson_CfnGroupPropsGroupThirdPartiesIntegrationRightScale(obj.rightScale),
+    'opsWorks': toJson_CfnGroupPropsGroupThirdPartiesIntegrationOpsWorks(obj.opsWorks),
     'codeDeploy': toJson_CfnGroupPropsGroupThirdPartiesIntegrationCodeDeploy(obj.codeDeploy),
+    'chef': toJson_CfnGroupPropsGroupThirdPartiesIntegrationChef(obj.chef),
+    'nomad': toJson_Nomad(obj.nomad),
+    'dockerSwarm': toJson_DockerSwarm(obj.dockerSwarm),
+    'route53': toJson_CfnGroupPropsGroupThirdPartiesIntegrationRoute53(obj.route53),
+    'gitlab': toJson_CfnGroupPropsGroupThirdPartiesIntegrationGitlab(obj.gitlab),
+    'datadog': toJson_CfnGroupPropsGroupThirdPartiesIntegrationDatadog(obj.datadog),
+    'jenkins': toJson_CfnGroupPropsGroupThirdPartiesIntegrationJenkins(obj.jenkins),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -377,6 +575,111 @@ export function toJson_CfnGroupPropsGroupScheduling(obj: CfnGroupPropsGroupSched
   if (obj === undefined) { return undefined; }
   const result = {
     'tasks': obj.tasks?.map(y => toJson_Task(y)),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupStrategySignals
+ */
+export interface CfnGroupPropsGroupStrategySignals {
+  /**
+   * @schema CfnGroupPropsGroupStrategySignals#name
+   */
+  readonly name?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupStrategySignals#timeout
+   */
+  readonly timeout?: number;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupStrategySignals' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupStrategySignals(obj: CfnGroupPropsGroupStrategySignals | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'name': obj.name,
+    'timeout': obj.timeout,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupStrategyScalingStrategy
+ */
+export interface CfnGroupPropsGroupStrategyScalingStrategy {
+  /**
+   * @schema CfnGroupPropsGroupStrategyScalingStrategy#terminateAtEndOfBillingHour
+   */
+  readonly terminateAtEndOfBillingHour?: boolean;
+
+  /**
+   * @schema CfnGroupPropsGroupStrategyScalingStrategy#terminationPolicy
+   */
+  readonly terminationPolicy?: string;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupStrategyScalingStrategy' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupStrategyScalingStrategy(obj: CfnGroupPropsGroupStrategyScalingStrategy | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'terminateAtEndOfBillingHour': obj.terminateAtEndOfBillingHour,
+    'terminationPolicy': obj.terminationPolicy,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupStrategyPersistence
+ */
+export interface CfnGroupPropsGroupStrategyPersistence {
+  /**
+   * @schema CfnGroupPropsGroupStrategyPersistence#shouldPersistBlockDevices
+   */
+  readonly shouldPersistBlockDevices?: boolean;
+
+  /**
+   * @schema CfnGroupPropsGroupStrategyPersistence#shouldPersistRootDevice
+   */
+  readonly shouldPersistRootDevice?: boolean;
+
+  /**
+   * @schema CfnGroupPropsGroupStrategyPersistence#shouldPersistPrivateIp
+   */
+  readonly shouldPersistPrivateIp?: boolean;
+
+  /**
+   * @schema CfnGroupPropsGroupStrategyPersistence#blockDevicesMode
+   */
+  readonly blockDevicesMode?: string;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupStrategyPersistence' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupStrategyPersistence(obj: CfnGroupPropsGroupStrategyPersistence | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'shouldPersistBlockDevices': obj.shouldPersistBlockDevices,
+    'shouldPersistRootDevice': obj.shouldPersistRootDevice,
+    'shouldPersistPrivateIp': obj.shouldPersistPrivateIp,
+    'blockDevicesMode': obj.blockDevicesMode,
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -415,6 +718,31 @@ export function toJson_CfnGroupPropsGroupStrategyRevertToSpot(obj: CfnGroupProps
 /* eslint-enable max-len, quote-props */
 
 /**
+ * @schema CfnGroupPropsGroupComputeVolumeAttachments
+ */
+export interface CfnGroupPropsGroupComputeVolumeAttachments {
+  /**
+   * @schema CfnGroupPropsGroupComputeVolumeAttachments#volumes
+   */
+  readonly volumes?: CfnGroupPropsGroupComputeVolumeAttachmentsVolumes[];
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupComputeVolumeAttachments' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupComputeVolumeAttachments(obj: CfnGroupPropsGroupComputeVolumeAttachments | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'volumes': obj.volumes?.map(y => toJson_CfnGroupPropsGroupComputeVolumeAttachmentsVolumes(y)),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
  * @schema CfnGroupPropsGroupComputeInstanceTypes
  */
 export interface CfnGroupPropsGroupComputeInstanceTypes {
@@ -424,9 +752,29 @@ export interface CfnGroupPropsGroupComputeInstanceTypes {
   readonly onDemand?: string;
 
   /**
+   * @schema CfnGroupPropsGroupComputeInstanceTypes#onDemandTypes
+   */
+  readonly onDemandTypes?: string[];
+
+  /**
    * @schema CfnGroupPropsGroupComputeInstanceTypes#spot
    */
   readonly spot?: string[];
+
+  /**
+   * @schema CfnGroupPropsGroupComputeInstanceTypes#resourceRequirements
+   */
+  readonly resourceRequirements?: CfnGroupPropsGroupComputeInstanceTypesResourceRequirements;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeInstanceTypes#weights
+   */
+  readonly weights?: CfnGroupPropsGroupComputeInstanceTypesWeights[];
+
+  /**
+   * @schema CfnGroupPropsGroupComputeInstanceTypes#preferredSpot
+   */
+  readonly preferredSpot?: string[];
 
 }
 
@@ -438,7 +786,11 @@ export function toJson_CfnGroupPropsGroupComputeInstanceTypes(obj: CfnGroupProps
   if (obj === undefined) { return undefined; }
   const result = {
     'onDemand': obj.onDemand,
+    'onDemandTypes': obj.onDemandTypes?.map(y => y),
     'spot': obj.spot?.map(y => y),
+    'resourceRequirements': toJson_CfnGroupPropsGroupComputeInstanceTypesResourceRequirements(obj.resourceRequirements),
+    'weights': obj.weights?.map(y => toJson_CfnGroupPropsGroupComputeInstanceTypesWeights(y)),
+    'preferredSpot': obj.preferredSpot?.map(y => y),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -455,9 +807,19 @@ export interface CfnGroupPropsGroupComputeAvailabilityZones {
   readonly name?: string;
 
   /**
+   * @schema CfnGroupPropsGroupComputeAvailabilityZones#subnetId
+   */
+  readonly subnetId?: string;
+
+  /**
    * @schema CfnGroupPropsGroupComputeAvailabilityZones#subnetIds
    */
   readonly subnetIds?: string[];
+
+  /**
+   * @schema CfnGroupPropsGroupComputeAvailabilityZones#placementGroupName
+   */
+  readonly placementGroupName?: string;
 
 }
 
@@ -469,7 +831,40 @@ export function toJson_CfnGroupPropsGroupComputeAvailabilityZones(obj: CfnGroupP
   if (obj === undefined) { return undefined; }
   const result = {
     'name': obj.name,
+    'subnetId': obj.subnetId,
     'subnetIds': obj.subnetIds?.map(y => y),
+    'placementGroupName': obj.placementGroupName,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupComputeEbsVolumePool
+ */
+export interface CfnGroupPropsGroupComputeEbsVolumePool {
+  /**
+   * @schema CfnGroupPropsGroupComputeEbsVolumePool#deviceName
+   */
+  readonly deviceName?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeEbsVolumePool#volumeIds
+   */
+  readonly volumeIds?: string[];
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupComputeEbsVolumePool' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupComputeEbsVolumePool(obj: CfnGroupPropsGroupComputeEbsVolumePool | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'deviceName': obj.deviceName,
+    'volumeIds': obj.volumeIds?.map(y => y),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -481,6 +876,16 @@ export function toJson_CfnGroupPropsGroupComputeAvailabilityZones(obj: CfnGroupP
  */
 export interface CfnGroupPropsGroupComputeLaunchSpecification {
   /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecification#loadBalancerName
+   */
+  readonly loadBalancerName?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecification#loadBalancerNames
+   */
+  readonly loadBalancerNames?: string[];
+
+  /**
    * @schema CfnGroupPropsGroupComputeLaunchSpecification#securityGroupIds
    */
   readonly securityGroupIds?: string[];
@@ -488,7 +893,12 @@ export interface CfnGroupPropsGroupComputeLaunchSpecification {
   /**
    * @schema CfnGroupPropsGroupComputeLaunchSpecification#loadBalancersConfig
    */
-  readonly loadBalancersConfig?: CfnGroupPropsGroupComputeLaunchSpecificationLoadBalancersConfig;
+  readonly loadBalancersConfig?: LoadBalancersConfig;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecification#itf
+   */
+  readonly itf?: CfnGroupPropsGroupComputeLaunchSpecificationItf;
 
   /**
    * @schema CfnGroupPropsGroupComputeLaunchSpecification#healthCheckUnhealthyDurationBeforeReplacement
@@ -509,6 +919,11 @@ export interface CfnGroupPropsGroupComputeLaunchSpecification {
    * @schema CfnGroupPropsGroupComputeLaunchSpecification#imageId
    */
   readonly imageId?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecification#images
+   */
+  readonly images?: CfnGroupPropsGroupComputeLaunchSpecificationImages[];
 
   /**
    * @schema CfnGroupPropsGroupComputeLaunchSpecification#keyPair
@@ -555,6 +970,36 @@ export interface CfnGroupPropsGroupComputeLaunchSpecification {
    */
   readonly iamRole?: CfnGroupPropsGroupComputeLaunchSpecificationIamRole;
 
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecification#creditSpecification
+   */
+  readonly creditSpecification?: CfnGroupPropsGroupComputeLaunchSpecificationCreditSpecification;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecification#networkInterfaces
+   */
+  readonly networkInterfaces?: CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfaces[];
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecification#cpuOptions
+   */
+  readonly cpuOptions?: CfnGroupPropsGroupComputeLaunchSpecificationCpuOptions;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecification#resourceTagSpecification
+   */
+  readonly resourceTagSpecification?: CfnGroupPropsGroupComputeLaunchSpecificationResourceTagSpecification;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecification#metadataOptions
+   */
+  readonly metadataOptions?: CfnGroupPropsGroupComputeLaunchSpecificationMetadataOptions;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecification#autoHealing
+   */
+  readonly autoHealing?: boolean;
+
 }
 
 /**
@@ -564,12 +1009,16 @@ export interface CfnGroupPropsGroupComputeLaunchSpecification {
 export function toJson_CfnGroupPropsGroupComputeLaunchSpecification(obj: CfnGroupPropsGroupComputeLaunchSpecification | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
+    'loadBalancerName': obj.loadBalancerName,
+    'loadBalancerNames': obj.loadBalancerNames?.map(y => y),
     'securityGroupIds': obj.securityGroupIds?.map(y => y),
-    'loadBalancersConfig': toJson_CfnGroupPropsGroupComputeLaunchSpecificationLoadBalancersConfig(obj.loadBalancersConfig),
+    'loadBalancersConfig': toJson_LoadBalancersConfig(obj.loadBalancersConfig),
+    'itf': toJson_CfnGroupPropsGroupComputeLaunchSpecificationItf(obj.itf),
     'healthCheckUnhealthyDurationBeforeReplacement': obj.healthCheckUnhealthyDurationBeforeReplacement,
     'monitoring': obj.monitoring,
     'ebsOptimized': obj.ebsOptimized,
     'imageId': obj.imageId,
+    'images': obj.images?.map(y => toJson_CfnGroupPropsGroupComputeLaunchSpecificationImages(y)),
     'keyPair': obj.keyPair,
     'userData': obj.userData,
     'shutdownScript': obj.shutdownScript,
@@ -579,6 +1028,12 @@ export function toJson_CfnGroupPropsGroupComputeLaunchSpecification(obj: CfnGrou
     'tenancy': obj.tenancy,
     'blockDeviceMappings': obj.blockDeviceMappings?.map(y => toJson_BlockDeviceMapping(y)),
     'iamRole': toJson_CfnGroupPropsGroupComputeLaunchSpecificationIamRole(obj.iamRole),
+    'creditSpecification': toJson_CfnGroupPropsGroupComputeLaunchSpecificationCreditSpecification(obj.creditSpecification),
+    'networkInterfaces': obj.networkInterfaces?.map(y => toJson_CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfaces(y)),
+    'cpuOptions': toJson_CfnGroupPropsGroupComputeLaunchSpecificationCpuOptions(obj.cpuOptions),
+    'resourceTagSpecification': toJson_CfnGroupPropsGroupComputeLaunchSpecificationResourceTagSpecification(obj.resourceTagSpecification),
+    'metadataOptions': toJson_CfnGroupPropsGroupComputeLaunchSpecificationMetadataOptions(obj.metadataOptions),
+    'autoHealing': obj.autoHealing,
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -586,84 +1041,363 @@ export function toJson_CfnGroupPropsGroupComputeLaunchSpecification(obj: CfnGrou
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema ScalingPolicy
+ * @schema CfnGroupPropsGroupScalingMultipleMetrics
  */
-export interface ScalingPolicy {
+export interface CfnGroupPropsGroupScalingMultipleMetrics {
   /**
-   * @schema ScalingPolicy#policyName
+   * @schema CfnGroupPropsGroupScalingMultipleMetrics#metrics
    */
-  readonly policyName?: string;
+  readonly metrics?: CfnGroupPropsGroupScalingMultipleMetricsMetrics[];
 
   /**
-   * @schema ScalingPolicy#metricName
+   * @schema CfnGroupPropsGroupScalingMultipleMetrics#expressions
    */
-  readonly metricName?: string;
-
-  /**
-   * @schema ScalingPolicy#statistic
-   */
-  readonly statistic?: string;
-
-  /**
-   * @schema ScalingPolicy#unit
-   */
-  readonly unit?: string;
-
-  /**
-   * @schema ScalingPolicy#threshold
-   */
-  readonly threshold?: number;
-
-  /**
-   * @schema ScalingPolicy#namespace
-   */
-  readonly namespace?: string;
-
-  /**
-   * @schema ScalingPolicy#period
-   */
-  readonly period?: number;
-
-  /**
-   * @schema ScalingPolicy#evaluationPeriods
-   */
-  readonly evaluationPeriods?: number;
-
-  /**
-   * @schema ScalingPolicy#cooldown
-   */
-  readonly cooldown?: number;
-
-  /**
-   * @schema ScalingPolicy#dimension
-   */
-  readonly dimension?: ScalingPolicyDimension[];
-
-  /**
-   * @schema ScalingPolicy#action
-   */
-  readonly action?: ScalingPolicyAction;
+  readonly expressions?: CfnGroupPropsGroupScalingMultipleMetricsExpressions[];
 
 }
 
 /**
- * Converts an object of type 'ScalingPolicy' to JSON representation.
+ * Converts an object of type 'CfnGroupPropsGroupScalingMultipleMetrics' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_ScalingPolicy(obj: ScalingPolicy | undefined): Record<string, any> | undefined {
+export function toJson_CfnGroupPropsGroupScalingMultipleMetrics(obj: CfnGroupPropsGroupScalingMultipleMetrics | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'metrics': obj.metrics?.map(y => toJson_CfnGroupPropsGroupScalingMultipleMetricsMetrics(y)),
+    'expressions': obj.expressions?.map(y => toJson_CfnGroupPropsGroupScalingMultipleMetricsExpressions(y)),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema ScalingUpPolicy
+ */
+export interface ScalingUpPolicy {
+  /**
+   * @schema ScalingUpPolicy#policyName
+   */
+  readonly policyName?: string;
+
+  /**
+   * @schema ScalingUpPolicy#metricName
+   */
+  readonly metricName?: string;
+
+  /**
+   * @schema ScalingUpPolicy#statistic
+   */
+  readonly statistic?: string;
+
+  /**
+   * @schema ScalingUpPolicy#extendedStatistic
+   */
+  readonly extendedStatistic?: string;
+
+  /**
+   * @schema ScalingUpPolicy#unit
+   */
+  readonly unit?: string;
+
+  /**
+   * @schema ScalingUpPolicy#threshold
+   */
+  readonly threshold?: number;
+
+  /**
+   * @schema ScalingUpPolicy#stepAdjustments
+   */
+  readonly stepAdjustments?: ScaleUpStepAdjustment[];
+
+  /**
+   * @schema ScalingUpPolicy#namespace
+   */
+  readonly namespace?: string;
+
+  /**
+   * @schema ScalingUpPolicy#source
+   */
+  readonly source?: string;
+
+  /**
+   * @schema ScalingUpPolicy#period
+   */
+  readonly period?: number;
+
+  /**
+   * @schema ScalingUpPolicy#evaluationPeriods
+   */
+  readonly evaluationPeriods?: number;
+
+  /**
+   * @schema ScalingUpPolicy#cooldown
+   */
+  readonly cooldown?: number;
+
+  /**
+   * @schema ScalingUpPolicy#dimension
+   */
+  readonly dimension?: Dimension[];
+
+  /**
+   * @schema ScalingUpPolicy#action
+   */
+  readonly action?: ScaleUpAction;
+
+  /**
+   * @schema ScalingUpPolicy#operator
+   */
+  readonly operator?: string;
+
+  /**
+   * @schema ScalingUpPolicy#shouldResumeStateful
+   */
+  readonly shouldResumeStateful?: boolean;
+
+  /**
+   * @schema ScalingUpPolicy#isEnabled
+   */
+  readonly isEnabled?: boolean;
+
+}
+
+/**
+ * Converts an object of type 'ScalingUpPolicy' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_ScalingUpPolicy(obj: ScalingUpPolicy | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'policyName': obj.policyName,
+    'metricName': obj.metricName,
+    'statistic': obj.statistic,
+    'extendedStatistic': obj.extendedStatistic,
+    'unit': obj.unit,
+    'threshold': obj.threshold,
+    'stepAdjustments': obj.stepAdjustments?.map(y => toJson_ScaleUpStepAdjustment(y)),
+    'namespace': obj.namespace,
+    'source': obj.source,
+    'period': obj.period,
+    'evaluationPeriods': obj.evaluationPeriods,
+    'cooldown': obj.cooldown,
+    'dimension': obj.dimension?.map(y => toJson_Dimension(y)),
+    'action': toJson_ScaleUpAction(obj.action),
+    'operator': obj.operator,
+    'shouldResumeStateful': obj.shouldResumeStateful,
+    'isEnabled': obj.isEnabled,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema ScalingDownPolicy
+ */
+export interface ScalingDownPolicy {
+  /**
+   * @schema ScalingDownPolicy#policyName
+   */
+  readonly policyName?: string;
+
+  /**
+   * @schema ScalingDownPolicy#metricName
+   */
+  readonly metricName?: string;
+
+  /**
+   * @schema ScalingDownPolicy#statistic
+   */
+  readonly statistic?: string;
+
+  /**
+   * @schema ScalingDownPolicy#extendedStatistic
+   */
+  readonly extendedStatistic?: string;
+
+  /**
+   * @schema ScalingDownPolicy#unit
+   */
+  readonly unit?: string;
+
+  /**
+   * @schema ScalingDownPolicy#threshold
+   */
+  readonly threshold?: number;
+
+  /**
+   * @schema ScalingDownPolicy#stepAdjustments
+   */
+  readonly stepAdjustments?: ScaleDownStepAdjustment[];
+
+  /**
+   * @schema ScalingDownPolicy#namespace
+   */
+  readonly namespace?: string;
+
+  /**
+   * @schema ScalingDownPolicy#source
+   */
+  readonly source?: string;
+
+  /**
+   * @schema ScalingDownPolicy#period
+   */
+  readonly period?: number;
+
+  /**
+   * @schema ScalingDownPolicy#evaluationPeriods
+   */
+  readonly evaluationPeriods?: number;
+
+  /**
+   * @schema ScalingDownPolicy#cooldown
+   */
+  readonly cooldown?: number;
+
+  /**
+   * @schema ScalingDownPolicy#dimension
+   */
+  readonly dimension?: Dimension[];
+
+  /**
+   * @schema ScalingDownPolicy#action
+   */
+  readonly action?: ScaleDownAction;
+
+  /**
+   * @schema ScalingDownPolicy#operator
+   */
+  readonly operator?: string;
+
+  /**
+   * @schema ScalingDownPolicy#isEnabled
+   */
+  readonly isEnabled?: boolean;
+
+}
+
+/**
+ * Converts an object of type 'ScalingDownPolicy' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_ScalingDownPolicy(obj: ScalingDownPolicy | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'policyName': obj.policyName,
+    'metricName': obj.metricName,
+    'statistic': obj.statistic,
+    'extendedStatistic': obj.extendedStatistic,
+    'unit': obj.unit,
+    'threshold': obj.threshold,
+    'stepAdjustments': obj.stepAdjustments?.map(y => toJson_ScaleDownStepAdjustment(y)),
+    'namespace': obj.namespace,
+    'source': obj.source,
+    'period': obj.period,
+    'evaluationPeriods': obj.evaluationPeriods,
+    'cooldown': obj.cooldown,
+    'dimension': obj.dimension?.map(y => toJson_Dimension(y)),
+    'action': toJson_ScaleDownAction(obj.action),
+    'operator': obj.operator,
+    'isEnabled': obj.isEnabled,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema ScalingTargetPolicy
+ */
+export interface ScalingTargetPolicy {
+  /**
+   * @schema ScalingTargetPolicy#policyName
+   */
+  readonly policyName?: string;
+
+  /**
+   * @schema ScalingTargetPolicy#metricName
+   */
+  readonly metricName?: string;
+
+  /**
+   * @schema ScalingTargetPolicy#statistic
+   */
+  readonly statistic?: string;
+
+  /**
+   * @schema ScalingTargetPolicy#unit
+   */
+  readonly unit?: string;
+
+  /**
+   * @schema ScalingTargetPolicy#target
+   */
+  readonly target?: number;
+
+  /**
+   * @schema ScalingTargetPolicy#namespace
+   */
+  readonly namespace?: string;
+
+  /**
+   * @schema ScalingTargetPolicy#maxCapacityPerScale
+   */
+  readonly maxCapacityPerScale?: string;
+
+  /**
+   * @schema ScalingTargetPolicy#source
+   */
+  readonly source?: string;
+
+  /**
+   * @schema ScalingTargetPolicy#period
+   */
+  readonly period?: number;
+
+  /**
+   * @schema ScalingTargetPolicy#evaluationPeriods
+   */
+  readonly evaluationPeriods?: number;
+
+  /**
+   * @schema ScalingTargetPolicy#cooldown
+   */
+  readonly cooldown?: number;
+
+  /**
+   * @schema ScalingTargetPolicy#dimension
+   */
+  readonly dimension?: Dimension[];
+
+  /**
+   * @schema ScalingTargetPolicy#predictive
+   */
+  readonly predictive?: ScalingTargetPolicyPredictive;
+
+}
+
+/**
+ * Converts an object of type 'ScalingTargetPolicy' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_ScalingTargetPolicy(obj: ScalingTargetPolicy | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'policyName': obj.policyName,
     'metricName': obj.metricName,
     'statistic': obj.statistic,
     'unit': obj.unit,
-    'threshold': obj.threshold,
+    'target': obj.target,
     'namespace': obj.namespace,
+    'maxCapacityPerScale': obj.maxCapacityPerScale,
+    'source': obj.source,
     'period': obj.period,
     'evaluationPeriods': obj.evaluationPeriods,
     'cooldown': obj.cooldown,
-    'dimension': obj.dimension?.map(y => toJson_ScalingPolicyDimension(y)),
-    'action': toJson_ScalingPolicyAction(obj.action),
+    'dimension': obj.dimension?.map(y => toJson_Dimension(y)),
+    'predictive': toJson_ScalingTargetPolicyPredictive(obj.predictive),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -671,26 +1405,131 @@ export function toJson_ScalingPolicy(obj: ScalingPolicy | undefined): Record<str
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema ecs
+ * @schema CfnGroupPropsGroupThirdPartiesIntegrationRancher
+ */
+export interface CfnGroupPropsGroupThirdPartiesIntegrationRancher {
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationRancher#version
+   */
+  readonly version?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationRancher#accessKey
+   */
+  readonly accessKey?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationRancher#secretKey
+   */
+  readonly secretKey?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationRancher#masterHost
+   */
+  readonly masterHost?: string;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationRancher' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationRancher(obj: CfnGroupPropsGroupThirdPartiesIntegrationRancher | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'version': obj.version,
+    'accessKey': obj.accessKey,
+    'secretKey': obj.secretKey,
+    'masterHost': obj.masterHost,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupThirdPartiesIntegrationMesosphere
+ */
+export interface CfnGroupPropsGroupThirdPartiesIntegrationMesosphere {
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationMesosphere#apiServer
+   */
+  readonly apiServer?: string;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationMesosphere' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationMesosphere(obj: CfnGroupPropsGroupThirdPartiesIntegrationMesosphere | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'apiServer': obj.apiServer,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalk
+ */
+export interface CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalk {
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalk#environmentId
+   */
+  readonly environmentId?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalk#deploymentPreferences
+   */
+  readonly deploymentPreferences?: CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkDeploymentPreferences;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalk#managedActions
+   */
+  readonly managedActions?: CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActions;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalk' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalk(obj: CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalk | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'environmentId': obj.environmentId,
+    'deploymentPreferences': toJson_CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkDeploymentPreferences(obj.deploymentPreferences),
+    'managedActions': toJson_CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActions(obj.managedActions),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema Ecs
  */
 export interface Ecs {
   /**
-   * @schema ecs#clusterName
+   * @schema Ecs#clusterName
    */
   readonly clusterName?: string;
 
   /**
-   * @schema ecs#autoScale
+   * @schema Ecs#autoScale
    */
   readonly autoScale?: EcsAutoScale;
 
   /**
-   * @schema ecs#batch
+   * @schema Ecs#batch
    */
   readonly batch?: EcsBatch;
 
   /**
-   * @schema ecs#optimizeImages
+   * @schema Ecs#optimizeImages
    */
   readonly optimizeImages?: EcsOptimizeImages;
 
@@ -707,6 +1546,148 @@ export function toJson_Ecs(obj: Ecs | undefined): Record<string, any> | undefine
     'autoScale': toJson_EcsAutoScale(obj.autoScale),
     'batch': toJson_EcsBatch(obj.batch),
     'optimizeImages': toJson_EcsOptimizeImages(obj.optimizeImages),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupThirdPartiesIntegrationMlbRuntime
+ */
+export interface CfnGroupPropsGroupThirdPartiesIntegrationMlbRuntime {
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationMlbRuntime#deploymentId
+   */
+  readonly deploymentId?: string;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationMlbRuntime' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationMlbRuntime(obj: CfnGroupPropsGroupThirdPartiesIntegrationMlbRuntime | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'deploymentId': obj.deploymentId,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema Kubernetes
+ */
+export interface Kubernetes {
+  /**
+   * @schema Kubernetes#integrationMode
+   */
+  readonly integrationMode?: string;
+
+  /**
+   * @schema Kubernetes#clusterIdentifier
+   */
+  readonly clusterIdentifier?: string;
+
+  /**
+   * @schema Kubernetes#apiServer
+   */
+  readonly apiServer?: string;
+
+  /**
+   * @schema Kubernetes#token
+   */
+  readonly token?: string;
+
+  /**
+   * @schema Kubernetes#autoScale
+   */
+  readonly autoScale?: KubernetesAutoScale;
+
+}
+
+/**
+ * Converts an object of type 'Kubernetes' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_Kubernetes(obj: Kubernetes | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'integrationMode': obj.integrationMode,
+    'clusterIdentifier': obj.clusterIdentifier,
+    'apiServer': obj.apiServer,
+    'token': obj.token,
+    'autoScale': toJson_KubernetesAutoScale(obj.autoScale),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupThirdPartiesIntegrationRightScale
+ */
+export interface CfnGroupPropsGroupThirdPartiesIntegrationRightScale {
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationRightScale#accountId
+   */
+  readonly accountId?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationRightScale#refreshToken
+   */
+  readonly refreshToken?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationRightScale#region
+   */
+  readonly region?: string;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationRightScale' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationRightScale(obj: CfnGroupPropsGroupThirdPartiesIntegrationRightScale | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'accountId': obj.accountId,
+    'refreshToken': obj.refreshToken,
+    'region': obj.region,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupThirdPartiesIntegrationOpsWorks
+ */
+export interface CfnGroupPropsGroupThirdPartiesIntegrationOpsWorks {
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationOpsWorks#layerId
+   */
+  readonly layerId?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationOpsWorks#stackType
+   */
+  readonly stackType?: string;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationOpsWorks' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationOpsWorks(obj: CfnGroupPropsGroupThirdPartiesIntegrationOpsWorks | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'layerId': obj.layerId,
+    'stackType': obj.stackType,
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -744,6 +1725,253 @@ export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationCodeDeploy(obj: 
     'cleanUpOnFailure': obj.cleanUpOnFailure,
     'terminateInstanceOnFailure': obj.terminateInstanceOnFailure,
     'deploymentGroups': obj.deploymentGroups?.map(y => toJson_CfnGroupPropsGroupThirdPartiesIntegrationCodeDeployDeploymentGroups(y)),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupThirdPartiesIntegrationChef
+ */
+export interface CfnGroupPropsGroupThirdPartiesIntegrationChef {
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationChef#chefServer
+   */
+  readonly chefServer?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationChef#organization
+   */
+  readonly organization?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationChef#user
+   */
+  readonly user?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationChef#pemKey
+   */
+  readonly pemKey?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationChef#chefVersion
+   */
+  readonly chefVersion?: string;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationChef' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationChef(obj: CfnGroupPropsGroupThirdPartiesIntegrationChef | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'chefServer': obj.chefServer,
+    'organization': obj.organization,
+    'user': obj.user,
+    'pemKey': obj.pemKey,
+    'chefVersion': obj.chefVersion,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema Nomad
+ */
+export interface Nomad {
+  /**
+   * @schema Nomad#masterHost
+   */
+  readonly masterHost?: string;
+
+  /**
+   * @schema Nomad#masterPort
+   */
+  readonly masterPort?: number;
+
+  /**
+   * @schema Nomad#aclToken
+   */
+  readonly aclToken?: string;
+
+  /**
+   * @schema Nomad#autoScale
+   */
+  readonly autoScale?: NomadAutoScale;
+
+  /**
+   * @schema Nomad#tlsConfig
+   */
+  readonly tlsConfig?: TlsConfig;
+
+}
+
+/**
+ * Converts an object of type 'Nomad' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_Nomad(obj: Nomad | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'masterHost': obj.masterHost,
+    'masterPort': obj.masterPort,
+    'aclToken': obj.aclToken,
+    'autoScale': toJson_NomadAutoScale(obj.autoScale),
+    'tlsConfig': toJson_TlsConfig(obj.tlsConfig),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema DockerSwarm
+ */
+export interface DockerSwarm {
+  /**
+   * @schema DockerSwarm#masterHost
+   */
+  readonly masterHost?: string;
+
+  /**
+   * @schema DockerSwarm#masterPort
+   */
+  readonly masterPort?: number;
+
+  /**
+   * @schema DockerSwarm#autoScale
+   */
+  readonly autoScale?: DockerSwarmAutoScale;
+
+  /**
+   * @schema DockerSwarm#tlsConfig
+   */
+  readonly tlsConfig?: TlsConfig;
+
+}
+
+/**
+ * Converts an object of type 'DockerSwarm' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_DockerSwarm(obj: DockerSwarm | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'masterHost': obj.masterHost,
+    'masterPort': obj.masterPort,
+    'autoScale': toJson_DockerSwarmAutoScale(obj.autoScale),
+    'tlsConfig': toJson_TlsConfig(obj.tlsConfig),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupThirdPartiesIntegrationRoute53
+ */
+export interface CfnGroupPropsGroupThirdPartiesIntegrationRoute53 {
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationRoute53#domains
+   */
+  readonly domains?: CfnGroupPropsGroupThirdPartiesIntegrationRoute53Domains[];
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationRoute53' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationRoute53(obj: CfnGroupPropsGroupThirdPartiesIntegrationRoute53 | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'domains': obj.domains?.map(y => toJson_CfnGroupPropsGroupThirdPartiesIntegrationRoute53Domains(y)),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupThirdPartiesIntegrationGitlab
+ */
+export interface CfnGroupPropsGroupThirdPartiesIntegrationGitlab {
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationGitlab#runner
+   */
+  readonly runner?: CfnGroupPropsGroupThirdPartiesIntegrationGitlabRunner;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationGitlab' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationGitlab(obj: CfnGroupPropsGroupThirdPartiesIntegrationGitlab | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'runner': toJson_CfnGroupPropsGroupThirdPartiesIntegrationGitlabRunner(obj.runner),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupThirdPartiesIntegrationDatadog
+ */
+export interface CfnGroupPropsGroupThirdPartiesIntegrationDatadog {
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationDatadog#id
+   */
+  readonly id?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationDatadog#metricsToReport
+   */
+  readonly metricsToReport?: CfnGroupPropsGroupThirdPartiesIntegrationDatadogMetricsToReport;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationDatadog' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationDatadog(obj: CfnGroupPropsGroupThirdPartiesIntegrationDatadog | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'id': obj.id,
+    'metricsToReport': toJson_CfnGroupPropsGroupThirdPartiesIntegrationDatadogMetricsToReport(obj.metricsToReport),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupThirdPartiesIntegrationJenkins
+ */
+export interface CfnGroupPropsGroupThirdPartiesIntegrationJenkins {
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationJenkins#connectionMethod
+   */
+  readonly connectionMethod?: CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethod;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationJenkins' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationJenkins(obj: CfnGroupPropsGroupThirdPartiesIntegrationJenkins | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'connectionMethod': toJson_CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethod(obj.connectionMethod),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -809,6 +2037,26 @@ export interface Task {
    */
   readonly adjustment?: number;
 
+  /**
+   * @schema Task#adjustmentPercentage
+   */
+  readonly adjustmentPercentage?: number;
+
+  /**
+   * @schema Task#targetCapacity
+   */
+  readonly targetCapacity?: number;
+
+  /**
+   * @schema Task#minCapacity
+   */
+  readonly minCapacity?: number;
+
+  /**
+   * @schema Task#maxCapacity
+   */
+  readonly maxCapacity?: number;
+
 }
 
 /**
@@ -829,6 +2077,10 @@ export function toJson_Task(obj: Task | undefined): Record<string, any> | undefi
     'frequency': obj.frequency,
     'startTime': obj.startTime,
     'adjustment': obj.adjustment,
+    'adjustmentPercentage': obj.adjustmentPercentage,
+    'targetCapacity': obj.targetCapacity,
+    'minCapacity': obj.minCapacity,
+    'maxCapacity': obj.maxCapacity,
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -836,24 +2088,215 @@ export function toJson_Task(obj: Task | undefined): Record<string, any> | undefi
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnGroupPropsGroupComputeLaunchSpecificationLoadBalancersConfig
+ * @schema CfnGroupPropsGroupComputeVolumeAttachmentsVolumes
  */
-export interface CfnGroupPropsGroupComputeLaunchSpecificationLoadBalancersConfig {
+export interface CfnGroupPropsGroupComputeVolumeAttachmentsVolumes {
   /**
-   * @schema CfnGroupPropsGroupComputeLaunchSpecificationLoadBalancersConfig#loadBalancers
+   * @schema CfnGroupPropsGroupComputeVolumeAttachmentsVolumes#deviceName
    */
-  readonly loadBalancers?: CfnGroupPropsGroupComputeLaunchSpecificationLoadBalancersConfigLoadBalancers[];
+  readonly deviceName?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeVolumeAttachmentsVolumes#volumeId
+   */
+  readonly volumeId?: string;
 
 }
 
 /**
- * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationLoadBalancersConfig' to JSON representation.
+ * Converts an object of type 'CfnGroupPropsGroupComputeVolumeAttachmentsVolumes' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationLoadBalancersConfig(obj: CfnGroupPropsGroupComputeLaunchSpecificationLoadBalancersConfig | undefined): Record<string, any> | undefined {
+export function toJson_CfnGroupPropsGroupComputeVolumeAttachmentsVolumes(obj: CfnGroupPropsGroupComputeVolumeAttachmentsVolumes | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
-    'loadBalancers': obj.loadBalancers?.map(y => toJson_CfnGroupPropsGroupComputeLaunchSpecificationLoadBalancersConfigLoadBalancers(y)),
+    'deviceName': obj.deviceName,
+    'volumeId': obj.volumeId,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupComputeInstanceTypesResourceRequirements
+ */
+export interface CfnGroupPropsGroupComputeInstanceTypesResourceRequirements {
+  /**
+   * @schema CfnGroupPropsGroupComputeInstanceTypesResourceRequirements#requiredVCpu
+   */
+  readonly requiredVCpu?: ResourceRequirement;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeInstanceTypesResourceRequirements#requiredGpu
+   */
+  readonly requiredGpu?: ResourceRequirement;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeInstanceTypesResourceRequirements#requiredMemory
+   */
+  readonly requiredMemory?: ResourceRequirement;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeInstanceTypesResourceRequirements#excludedInstanceGenerations
+   */
+  readonly excludedInstanceGenerations?: string[];
+
+  /**
+   * @schema CfnGroupPropsGroupComputeInstanceTypesResourceRequirements#excludedInstanceFamilies
+   */
+  readonly excludedInstanceFamilies?: string[];
+
+  /**
+   * @schema CfnGroupPropsGroupComputeInstanceTypesResourceRequirements#excludedInstanceTypes
+   */
+  readonly excludedInstanceTypes?: string[];
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupComputeInstanceTypesResourceRequirements' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupComputeInstanceTypesResourceRequirements(obj: CfnGroupPropsGroupComputeInstanceTypesResourceRequirements | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'requiredVCpu': toJson_ResourceRequirement(obj.requiredVCpu),
+    'requiredGpu': toJson_ResourceRequirement(obj.requiredGpu),
+    'requiredMemory': toJson_ResourceRequirement(obj.requiredMemory),
+    'excludedInstanceGenerations': obj.excludedInstanceGenerations?.map(y => y),
+    'excludedInstanceFamilies': obj.excludedInstanceFamilies?.map(y => y),
+    'excludedInstanceTypes': obj.excludedInstanceTypes?.map(y => y),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupComputeInstanceTypesWeights
+ */
+export interface CfnGroupPropsGroupComputeInstanceTypesWeights {
+  /**
+   * @schema CfnGroupPropsGroupComputeInstanceTypesWeights#instanceType
+   */
+  readonly instanceType?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeInstanceTypesWeights#weightedCapacity
+   */
+  readonly weightedCapacity?: number;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupComputeInstanceTypesWeights' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupComputeInstanceTypesWeights(obj: CfnGroupPropsGroupComputeInstanceTypesWeights | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'instanceType': obj.instanceType,
+    'weightedCapacity': obj.weightedCapacity,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema LoadBalancersConfig
+ */
+export interface LoadBalancersConfig {
+  /**
+   * @schema LoadBalancersConfig#loadBalancers
+   */
+  readonly loadBalancers?: LoadBalancerConfig[];
+
+}
+
+/**
+ * Converts an object of type 'LoadBalancersConfig' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_LoadBalancersConfig(obj: LoadBalancersConfig | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'loadBalancers': obj.loadBalancers?.map(y => toJson_LoadBalancerConfig(y)),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupComputeLaunchSpecificationItf
+ */
+export interface CfnGroupPropsGroupComputeLaunchSpecificationItf {
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationItf#migrationHealthinessThreshold
+   */
+  readonly migrationHealthinessThreshold?: number;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationItf#weightStrategy
+   */
+  readonly weightStrategy?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationItf#fixedTargetGroups
+   */
+  readonly fixedTargetGroups?: boolean;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationItf#loadBalancers
+   */
+  readonly loadBalancers?: CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancers[];
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationItf#targetGroupConfig
+   */
+  readonly targetGroupConfig?: CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfig;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationItf' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationItf(obj: CfnGroupPropsGroupComputeLaunchSpecificationItf | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'migrationHealthinessThreshold': obj.migrationHealthinessThreshold,
+    'weightStrategy': obj.weightStrategy,
+    'fixedTargetGroups': obj.fixedTargetGroups,
+    'loadBalancers': obj.loadBalancers?.map(y => toJson_CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancers(y)),
+    'targetGroupConfig': toJson_CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfig(obj.targetGroupConfig),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupComputeLaunchSpecificationImages
+ */
+export interface CfnGroupPropsGroupComputeLaunchSpecificationImages {
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationImages#id
+   */
+  readonly id?: string;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationImages' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationImages(obj: CfnGroupPropsGroupComputeLaunchSpecificationImages | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'id': obj.id,
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -966,26 +2409,364 @@ export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationIamRole(obj: 
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema ScalingPolicyDimension
+ * @schema CfnGroupPropsGroupComputeLaunchSpecificationCreditSpecification
  */
-export interface ScalingPolicyDimension {
+export interface CfnGroupPropsGroupComputeLaunchSpecificationCreditSpecification {
   /**
-   * @schema ScalingPolicyDimension#name
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationCreditSpecification#cpuCredits
+   */
+  readonly cpuCredits?: string;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationCreditSpecification' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationCreditSpecification(obj: CfnGroupPropsGroupComputeLaunchSpecificationCreditSpecification | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'cpuCredits': obj.cpuCredits,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfaces
+ */
+export interface CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfaces {
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfaces#description
+   */
+  readonly description?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfaces#deviceIndex
+   */
+  readonly deviceIndex?: number;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfaces#secondaryPrivateIpAddressCount
+   */
+  readonly secondaryPrivateIpAddressCount?: number;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfaces#associatePublicIpAddress
+   */
+  readonly associatePublicIpAddress?: boolean;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfaces#deleteOnTermination
+   */
+  readonly deleteOnTermination?: boolean;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfaces#groups
+   */
+  readonly groups?: string[];
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfaces#networkInterfaceId
+   */
+  readonly networkInterfaceId?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfaces#privateIpAddress
+   */
+  readonly privateIpAddress?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfaces#privateIpAddresses
+   */
+  readonly privateIpAddresses?: CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfacesPrivateIpAddresses[];
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfaces#subnetId
+   */
+  readonly subnetId?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfaces#associateIpv6Address
+   */
+  readonly associateIpv6Address?: boolean;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfaces' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfaces(obj: CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfaces | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'description': obj.description,
+    'deviceIndex': obj.deviceIndex,
+    'secondaryPrivateIpAddressCount': obj.secondaryPrivateIpAddressCount,
+    'associatePublicIpAddress': obj.associatePublicIpAddress,
+    'deleteOnTermination': obj.deleteOnTermination,
+    'groups': obj.groups?.map(y => y),
+    'networkInterfaceId': obj.networkInterfaceId,
+    'privateIpAddress': obj.privateIpAddress,
+    'privateIpAddresses': obj.privateIpAddresses?.map(y => toJson_CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfacesPrivateIpAddresses(y)),
+    'subnetId': obj.subnetId,
+    'associateIpv6Address': obj.associateIpv6Address,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupComputeLaunchSpecificationCpuOptions
+ */
+export interface CfnGroupPropsGroupComputeLaunchSpecificationCpuOptions {
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationCpuOptions#threadsPerCore
+   */
+  readonly threadsPerCore?: number;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationCpuOptions' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationCpuOptions(obj: CfnGroupPropsGroupComputeLaunchSpecificationCpuOptions | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'threadsPerCore': obj.threadsPerCore,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupComputeLaunchSpecificationResourceTagSpecification
+ */
+export interface CfnGroupPropsGroupComputeLaunchSpecificationResourceTagSpecification {
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationResourceTagSpecification#volumes
+   */
+  readonly volumes?: ResourceTagSpecificationConfig;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationResourceTagSpecification#snapshots
+   */
+  readonly snapshots?: ResourceTagSpecificationConfig;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationResourceTagSpecification#amis
+   */
+  readonly amis?: ResourceTagSpecificationConfig;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationResourceTagSpecification#enis
+   */
+  readonly enis?: ResourceTagSpecificationConfig;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationResourceTagSpecification' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationResourceTagSpecification(obj: CfnGroupPropsGroupComputeLaunchSpecificationResourceTagSpecification | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'volumes': toJson_ResourceTagSpecificationConfig(obj.volumes),
+    'snapshots': toJson_ResourceTagSpecificationConfig(obj.snapshots),
+    'amis': toJson_ResourceTagSpecificationConfig(obj.amis),
+    'enis': toJson_ResourceTagSpecificationConfig(obj.enis),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupComputeLaunchSpecificationMetadataOptions
+ */
+export interface CfnGroupPropsGroupComputeLaunchSpecificationMetadataOptions {
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationMetadataOptions#httpTokens
+   */
+  readonly httpTokens?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationMetadataOptions#httpPutResponseHopLimit
+   */
+  readonly httpPutResponseHopLimit?: number;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationMetadataOptions#instanceMetadataTags
+   */
+  readonly instanceMetadataTags?: string;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationMetadataOptions' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationMetadataOptions(obj: CfnGroupPropsGroupComputeLaunchSpecificationMetadataOptions | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'httpTokens': obj.httpTokens,
+    'httpPutResponseHopLimit': obj.httpPutResponseHopLimit,
+    'instanceMetadataTags': obj.instanceMetadataTags,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupScalingMultipleMetricsMetrics
+ */
+export interface CfnGroupPropsGroupScalingMultipleMetricsMetrics {
+  /**
+   * @schema CfnGroupPropsGroupScalingMultipleMetricsMetrics#name
    */
   readonly name?: string;
 
   /**
-   * @schema ScalingPolicyDimension#value
+   * @schema CfnGroupPropsGroupScalingMultipleMetricsMetrics#metricName
+   */
+  readonly metricName?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupScalingMultipleMetricsMetrics#namespace
+   */
+  readonly namespace?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupScalingMultipleMetricsMetrics#statistic
+   */
+  readonly statistic?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupScalingMultipleMetricsMetrics#extendedStatistic
+   */
+  readonly extendedStatistic?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupScalingMultipleMetricsMetrics#unit
+   */
+  readonly unit?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupScalingMultipleMetricsMetrics#dimensions
+   */
+  readonly dimensions?: Dimension[];
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupScalingMultipleMetricsMetrics' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupScalingMultipleMetricsMetrics(obj: CfnGroupPropsGroupScalingMultipleMetricsMetrics | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'name': obj.name,
+    'metricName': obj.metricName,
+    'namespace': obj.namespace,
+    'statistic': obj.statistic,
+    'extendedStatistic': obj.extendedStatistic,
+    'unit': obj.unit,
+    'dimensions': obj.dimensions?.map(y => toJson_Dimension(y)),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupScalingMultipleMetricsExpressions
+ */
+export interface CfnGroupPropsGroupScalingMultipleMetricsExpressions {
+  /**
+   * @schema CfnGroupPropsGroupScalingMultipleMetricsExpressions#name
+   */
+  readonly name?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupScalingMultipleMetricsExpressions#expression
+   */
+  readonly expression?: string;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupScalingMultipleMetricsExpressions' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupScalingMultipleMetricsExpressions(obj: CfnGroupPropsGroupScalingMultipleMetricsExpressions | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'name': obj.name,
+    'expression': obj.expression,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema ScaleUpStepAdjustment
+ */
+export interface ScaleUpStepAdjustment {
+  /**
+   * @schema ScaleUpStepAdjustment#threshold
+   */
+  readonly threshold?: number;
+
+  /**
+   * @schema ScaleUpStepAdjustment#action
+   */
+  readonly action?: ScaleUpAction;
+
+}
+
+/**
+ * Converts an object of type 'ScaleUpStepAdjustment' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_ScaleUpStepAdjustment(obj: ScaleUpStepAdjustment | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'threshold': obj.threshold,
+    'action': toJson_ScaleUpAction(obj.action),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema Dimension
+ */
+export interface Dimension {
+  /**
+   * @schema Dimension#name
+   */
+  readonly name?: string;
+
+  /**
+   * @schema Dimension#value
    */
   readonly value?: string;
 
 }
 
 /**
- * Converts an object of type 'ScalingPolicyDimension' to JSON representation.
+ * Converts an object of type 'Dimension' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_ScalingPolicyDimension(obj: ScalingPolicyDimension | undefined): Record<string, any> | undefined {
+export function toJson_Dimension(obj: Dimension | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'name': obj.name,
@@ -997,54 +2778,209 @@ export function toJson_ScalingPolicyDimension(obj: ScalingPolicyDimension | unde
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema ScalingPolicyAction
+ * @schema ScaleUpAction
  */
-export interface ScalingPolicyAction {
+export interface ScaleUpAction {
   /**
-   * @schema ScalingPolicyAction#type
+   * @schema ScaleUpAction#type
    */
   readonly type?: string;
 
   /**
-   * @schema ScalingPolicyAction#adjustment
-   */
-  readonly adjustment?: string;
-
-  /**
-   * @schema ScalingPolicyAction#minTargetCapacity
-   */
-  readonly minTargetCapacity?: string;
-
-  /**
-   * @schema ScalingPolicyAction#target
+   * @schema ScaleUpAction#target
    */
   readonly target?: string;
 
   /**
-   * @schema ScalingPolicyAction#minimum
+   * @schema ScaleUpAction#minimum
    */
   readonly minimum?: string;
 
   /**
-   * @schema ScalingPolicyAction#maximum
+   * @schema ScaleUpAction#maximum
    */
   readonly maximum?: string;
 
 }
 
 /**
- * Converts an object of type 'ScalingPolicyAction' to JSON representation.
+ * Converts an object of type 'ScaleUpAction' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_ScalingPolicyAction(obj: ScalingPolicyAction | undefined): Record<string, any> | undefined {
+export function toJson_ScaleUpAction(obj: ScaleUpAction | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'type': obj.type,
-    'adjustment': obj.adjustment,
-    'minTargetCapacity': obj.minTargetCapacity,
     'target': obj.target,
     'minimum': obj.minimum,
     'maximum': obj.maximum,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema ScaleDownStepAdjustment
+ */
+export interface ScaleDownStepAdjustment {
+  /**
+   * @schema ScaleDownStepAdjustment#threshold
+   */
+  readonly threshold?: number;
+
+  /**
+   * @schema ScaleDownStepAdjustment#action
+   */
+  readonly action?: ScaleDownAction;
+
+}
+
+/**
+ * Converts an object of type 'ScaleDownStepAdjustment' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_ScaleDownStepAdjustment(obj: ScaleDownStepAdjustment | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'threshold': obj.threshold,
+    'action': toJson_ScaleDownAction(obj.action),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema ScaleDownAction
+ */
+export interface ScaleDownAction {
+  /**
+   * @schema ScaleDownAction#type
+   */
+  readonly type?: string;
+
+  /**
+   * @schema ScaleDownAction#target
+   */
+  readonly target?: string;
+
+  /**
+   * @schema ScaleDownAction#minimum
+   */
+  readonly minimum?: string;
+
+  /**
+   * @schema ScaleDownAction#maximum
+   */
+  readonly maximum?: string;
+
+}
+
+/**
+ * Converts an object of type 'ScaleDownAction' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_ScaleDownAction(obj: ScaleDownAction | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'type': obj.type,
+    'target': obj.target,
+    'minimum': obj.minimum,
+    'maximum': obj.maximum,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema ScalingTargetPolicyPredictive
+ */
+export interface ScalingTargetPolicyPredictive {
+  /**
+   * @schema ScalingTargetPolicyPredictive#mode
+   */
+  readonly mode?: string;
+
+}
+
+/**
+ * Converts an object of type 'ScalingTargetPolicyPredictive' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_ScalingTargetPolicyPredictive(obj: ScalingTargetPolicyPredictive | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'mode': obj.mode,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkDeploymentPreferences
+ */
+export interface CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkDeploymentPreferences {
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkDeploymentPreferences#automaticRoll
+   */
+  readonly automaticRoll?: boolean;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkDeploymentPreferences#batchSizePercentage
+   */
+  readonly batchSizePercentage?: number;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkDeploymentPreferences#gracePeriod
+   */
+  readonly gracePeriod?: number;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkDeploymentPreferences#strategy
+   */
+  readonly strategy?: BeanStalkStrategy;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkDeploymentPreferences' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkDeploymentPreferences(obj: CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkDeploymentPreferences | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'automaticRoll': obj.automaticRoll,
+    'batchSizePercentage': obj.batchSizePercentage,
+    'gracePeriod': obj.gracePeriod,
+    'strategy': toJson_BeanStalkStrategy(obj.strategy),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActions
+ */
+export interface CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActions {
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActions#platformUpdate
+   */
+  readonly platformUpdate?: CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActionsPlatformUpdate;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActions' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActions(obj: CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActions | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'platformUpdate': toJson_CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActionsPlatformUpdate(obj.platformUpdate),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -1078,12 +3014,12 @@ export interface EcsAutoScale {
   /**
    * @schema EcsAutoScale#headroom
    */
-  readonly headroom?: EcsAutoScaleHeadroom;
+  readonly headroom?: Headroom;
 
   /**
    * @schema EcsAutoScale#down
    */
-  readonly down?: EcsAutoScaleDown;
+  readonly down?: AutoScaleDown;
 
   /**
    * @schema EcsAutoScale#attributes
@@ -1103,8 +3039,8 @@ export function toJson_EcsAutoScale(obj: EcsAutoScale | undefined): Record<strin
     'cooldown': obj.cooldown,
     'isAutoConfig': obj.isAutoConfig,
     'shouldScaleDownNonServiceTasks': obj.shouldScaleDownNonServiceTasks,
-    'headroom': toJson_EcsAutoScaleHeadroom(obj.headroom),
-    'down': toJson_EcsAutoScaleDown(obj.down),
+    'headroom': toJson_Headroom(obj.headroom),
+    'down': toJson_AutoScaleDown(obj.down),
     'attributes': obj.attributes?.map(y => toJson_Attribute(y)),
   };
   // filter undefined values
@@ -1175,6 +3111,67 @@ export function toJson_EcsOptimizeImages(obj: EcsOptimizeImages | undefined): Re
 /* eslint-enable max-len, quote-props */
 
 /**
+ * @schema KubernetesAutoScale
+ */
+export interface KubernetesAutoScale {
+  /**
+   * @schema KubernetesAutoScale#isEnabled
+   */
+  readonly isEnabled?: boolean;
+
+  /**
+   * @schema KubernetesAutoScale#isAutoConfig
+   */
+  readonly isAutoConfig?: boolean;
+
+  /**
+   * @schema KubernetesAutoScale#cooldown
+   */
+  readonly cooldown?: number;
+
+  /**
+   * @schema KubernetesAutoScale#headroom
+   */
+  readonly headroom?: KubernetesAutoScaleHeadroom;
+
+  /**
+   * @schema KubernetesAutoScale#resourceLimits
+   */
+  readonly resourceLimits?: KubernetesAutoScaleResourceLimits;
+
+  /**
+   * @schema KubernetesAutoScale#labels
+   */
+  readonly labels?: Attribute[];
+
+  /**
+   * @schema KubernetesAutoScale#down
+   */
+  readonly down?: AutoScaleDown;
+
+}
+
+/**
+ * Converts an object of type 'KubernetesAutoScale' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_KubernetesAutoScale(obj: KubernetesAutoScale | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'isEnabled': obj.isEnabled,
+    'isAutoConfig': obj.isAutoConfig,
+    'cooldown': obj.cooldown,
+    'headroom': toJson_KubernetesAutoScaleHeadroom(obj.headroom),
+    'resourceLimits': toJson_KubernetesAutoScaleResourceLimits(obj.resourceLimits),
+    'labels': obj.labels?.map(y => toJson_Attribute(y)),
+    'down': toJson_AutoScaleDown(obj.down),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
  * @schema CfnGroupPropsGroupThirdPartiesIntegrationCodeDeployDeploymentGroups
  */
 export interface CfnGroupPropsGroupThirdPartiesIntegrationCodeDeployDeploymentGroups {
@@ -1206,51 +3203,359 @@ export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationCodeDeployDeploy
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema CfnGroupPropsGroupComputeLaunchSpecificationLoadBalancersConfigLoadBalancers
+ * @schema NomadAutoScale
  */
-export interface CfnGroupPropsGroupComputeLaunchSpecificationLoadBalancersConfigLoadBalancers {
+export interface NomadAutoScale {
   /**
-   * @schema CfnGroupPropsGroupComputeLaunchSpecificationLoadBalancersConfigLoadBalancers#name
+   * @schema NomadAutoScale#isEnabled
+   */
+  readonly isEnabled?: boolean;
+
+  /**
+   * @schema NomadAutoScale#isAutoConfig
+   */
+  readonly isAutoConfig?: boolean;
+
+  /**
+   * @schema NomadAutoScale#cooldown
+   */
+  readonly cooldown?: number;
+
+  /**
+   * @schema NomadAutoScale#headroom
+   */
+  readonly headroom?: Headroom;
+
+  /**
+   * @schema NomadAutoScale#constraints
+   */
+  readonly constraints?: Attribute[];
+
+  /**
+   * @schema NomadAutoScale#down
+   */
+  readonly down?: AutoScaleDown;
+
+}
+
+/**
+ * Converts an object of type 'NomadAutoScale' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_NomadAutoScale(obj: NomadAutoScale | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'isEnabled': obj.isEnabled,
+    'isAutoConfig': obj.isAutoConfig,
+    'cooldown': obj.cooldown,
+    'headroom': toJson_Headroom(obj.headroom),
+    'constraints': obj.constraints?.map(y => toJson_Attribute(y)),
+    'down': toJson_AutoScaleDown(obj.down),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema TlsConfig
+ */
+export interface TlsConfig {
+  /**
+   * @schema TlsConfig#tlsEnabled
+   */
+  readonly tlsEnabled?: boolean;
+
+  /**
+   * @schema TlsConfig#certificate
+   */
+  readonly certificate?: string;
+
+  /**
+   * @schema TlsConfig#privateKey
+   */
+  readonly privateKey?: string;
+
+}
+
+/**
+ * Converts an object of type 'TlsConfig' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_TlsConfig(obj: TlsConfig | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'tlsEnabled': obj.tlsEnabled,
+    'certificate': obj.certificate,
+    'privateKey': obj.privateKey,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema DockerSwarmAutoScale
+ */
+export interface DockerSwarmAutoScale {
+  /**
+   * @schema DockerSwarmAutoScale#isEnabled
+   */
+  readonly isEnabled?: boolean;
+
+  /**
+   * @schema DockerSwarmAutoScale#cooldown
+   */
+  readonly cooldown?: number;
+
+  /**
+   * @schema DockerSwarmAutoScale#headroom
+   */
+  readonly headroom?: Headroom;
+
+  /**
+   * @schema DockerSwarmAutoScale#labels
+   */
+  readonly labels?: Attribute[];
+
+  /**
+   * @schema DockerSwarmAutoScale#down
+   */
+  readonly down?: AutoScaleDown;
+
+}
+
+/**
+ * Converts an object of type 'DockerSwarmAutoScale' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_DockerSwarmAutoScale(obj: DockerSwarmAutoScale | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'isEnabled': obj.isEnabled,
+    'cooldown': obj.cooldown,
+    'headroom': toJson_Headroom(obj.headroom),
+    'labels': obj.labels?.map(y => toJson_Attribute(y)),
+    'down': toJson_AutoScaleDown(obj.down),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupThirdPartiesIntegrationRoute53Domains
+ */
+export interface CfnGroupPropsGroupThirdPartiesIntegrationRoute53Domains {
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationRoute53Domains#hostedZoneId
+   */
+  readonly hostedZoneId?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationRoute53Domains#spotinstAccountId
+   */
+  readonly spotinstAccountId?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationRoute53Domains#recordSetType
+   */
+  readonly recordSetType?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationRoute53Domains#recordSets
+   */
+  readonly recordSets?: CfnGroupPropsGroupThirdPartiesIntegrationRoute53DomainsRecordSets[];
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationRoute53Domains' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationRoute53Domains(obj: CfnGroupPropsGroupThirdPartiesIntegrationRoute53Domains | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'hostedZoneId': obj.hostedZoneId,
+    'spotinstAccountId': obj.spotinstAccountId,
+    'recordSetType': obj.recordSetType,
+    'recordSets': obj.recordSets?.map(y => toJson_CfnGroupPropsGroupThirdPartiesIntegrationRoute53DomainsRecordSets(y)),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupThirdPartiesIntegrationGitlabRunner
+ */
+export interface CfnGroupPropsGroupThirdPartiesIntegrationGitlabRunner {
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationGitlabRunner#isEnabled
+   */
+  readonly isEnabled?: boolean;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationGitlabRunner' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationGitlabRunner(obj: CfnGroupPropsGroupThirdPartiesIntegrationGitlabRunner | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'isEnabled': obj.isEnabled,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupThirdPartiesIntegrationDatadogMetricsToReport
+ */
+export interface CfnGroupPropsGroupThirdPartiesIntegrationDatadogMetricsToReport {
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationDatadogMetricsToReport#metricsList
+   */
+  readonly metricsList?: string[];
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationDatadogMetricsToReport#tags
+   */
+  readonly tags?: Tag[];
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationDatadogMetricsToReport' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationDatadogMetricsToReport(obj: CfnGroupPropsGroupThirdPartiesIntegrationDatadogMetricsToReport | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'metricsList': obj.metricsList?.map(y => y),
+    'tags': obj.tags?.map(y => toJson_Tag(y)),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethod
+ */
+export interface CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethod {
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethod#ssh
+   */
+  readonly ssh?: CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethodSsh;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethod#jnlp
+   */
+  readonly jnlp?: CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethodJnlp;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethod#manuallyConnection
+   */
+  readonly manuallyConnection?: boolean;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethod' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethod(obj: CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethod | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'ssh': toJson_CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethodSsh(obj.ssh),
+    'jnlp': toJson_CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethodJnlp(obj.jnlp),
+    'manuallyConnection': obj.manuallyConnection,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema ResourceRequirement
+ */
+export interface ResourceRequirement {
+  /**
+   * @schema ResourceRequirement#minimum
+   */
+  readonly minimum?: number;
+
+  /**
+   * @schema ResourceRequirement#maximum
+   */
+  readonly maximum?: number;
+
+}
+
+/**
+ * Converts an object of type 'ResourceRequirement' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_ResourceRequirement(obj: ResourceRequirement | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'minimum': obj.minimum,
+    'maximum': obj.maximum,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema LoadBalancerConfig
+ */
+export interface LoadBalancerConfig {
+  /**
+   * @schema LoadBalancerConfig#name
    */
   readonly name?: string;
 
   /**
-   * @schema CfnGroupPropsGroupComputeLaunchSpecificationLoadBalancersConfigLoadBalancers#arn
+   * @schema LoadBalancerConfig#arn
    */
   readonly arn?: string;
 
   /**
-   * @schema CfnGroupPropsGroupComputeLaunchSpecificationLoadBalancersConfigLoadBalancers#type
+   * @schema LoadBalancerConfig#type
    */
   readonly type?: string;
 
   /**
-   * @schema CfnGroupPropsGroupComputeLaunchSpecificationLoadBalancersConfigLoadBalancers#balancerId
+   * @schema LoadBalancerConfig#balancerId
    */
   readonly balancerId?: string;
 
   /**
-   * @schema CfnGroupPropsGroupComputeLaunchSpecificationLoadBalancersConfigLoadBalancers#targetSetId
+   * @schema LoadBalancerConfig#targetSetId
    */
   readonly targetSetId?: string;
 
   /**
-   * @schema CfnGroupPropsGroupComputeLaunchSpecificationLoadBalancersConfigLoadBalancers#azAwareness
+   * @schema LoadBalancerConfig#azAwareness
    */
   readonly azAwareness?: boolean;
 
   /**
-   * @schema CfnGroupPropsGroupComputeLaunchSpecificationLoadBalancersConfigLoadBalancers#autoWeight
+   * @schema LoadBalancerConfig#autoWeight
    */
   readonly autoWeight?: boolean;
 
 }
 
 /**
- * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationLoadBalancersConfigLoadBalancers' to JSON representation.
+ * Converts an object of type 'LoadBalancerConfig' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationLoadBalancersConfigLoadBalancers(obj: CfnGroupPropsGroupComputeLaunchSpecificationLoadBalancersConfigLoadBalancers | undefined): Record<string, any> | undefined {
+export function toJson_LoadBalancerConfig(obj: LoadBalancerConfig | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'name': obj.name,
@@ -1260,6 +3565,140 @@ export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationLoadBalancers
     'targetSetId': obj.targetSetId,
     'azAwareness': obj.azAwareness,
     'autoWeight': obj.autoWeight,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancers
+ */
+export interface CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancers {
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancers#loadBalancerArn
+   */
+  readonly loadBalancerArn?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancers#listenerRules
+   */
+  readonly listenerRules?: CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersListenerRules[];
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancers#defaultStaticTargetGroups
+   */
+  readonly defaultStaticTargetGroups?: CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersDefaultStaticTargetGroups[];
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancers' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancers(obj: CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancers | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'loadBalancerArn': obj.loadBalancerArn,
+    'listenerRules': obj.listenerRules?.map(y => toJson_CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersListenerRules(y)),
+    'defaultStaticTargetGroups': obj.defaultStaticTargetGroups?.map(y => toJson_CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersDefaultStaticTargetGroups(y)),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfig
+ */
+export interface CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfig {
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfig#vpcId
+   */
+  readonly vpcId?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfig#healthCheckPath
+   */
+  readonly healthCheckPath?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfig#healthCheckProtocol
+   */
+  readonly healthCheckProtocol?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfig#healthCheckPort
+   */
+  readonly healthCheckPort?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfig#healthCheckIntervalSeconds
+   */
+  readonly healthCheckIntervalSeconds?: number;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfig#healthCheckTimeoutSeconds
+   */
+  readonly healthCheckTimeoutSeconds?: number;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfig#healthyThresholdCount
+   */
+  readonly healthyThresholdCount?: number;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfig#unhealthyThresholdCount
+   */
+  readonly unhealthyThresholdCount?: number;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfig#port
+   */
+  readonly port?: number;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfig#protocol
+   */
+  readonly protocol?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfig#protocolVersion
+   */
+  readonly protocolVersion?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfig#tags
+   */
+  readonly tags?: Tag[];
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfig#matcher
+   */
+  readonly matcher?: CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfigMatcher;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfig' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfig(obj: CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfig | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'vpcId': obj.vpcId,
+    'healthCheckPath': obj.healthCheckPath,
+    'healthCheckProtocol': obj.healthCheckProtocol,
+    'healthCheckPort': obj.healthCheckPort,
+    'healthCheckIntervalSeconds': obj.healthCheckIntervalSeconds,
+    'healthCheckTimeoutSeconds': obj.healthCheckTimeoutSeconds,
+    'healthyThresholdCount': obj.healthyThresholdCount,
+    'unhealthyThresholdCount': obj.unhealthyThresholdCount,
+    'port': obj.port,
+    'protocol': obj.protocol,
+    'protocolVersion': obj.protocolVersion,
+    'tags': obj.tags?.map(y => toJson_Tag(y)),
+    'matcher': toJson_CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfigMatcher(obj.matcher),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -1286,6 +3725,11 @@ export interface BlockDeviceMappingEbs {
   readonly iops?: number;
 
   /**
+   * @schema BlockDeviceMappingEbs#kmsKeyId
+   */
+  readonly kmsKeyId?: string;
+
+  /**
    * @schema BlockDeviceMappingEbs#snapshotId
    */
   readonly snapshotId?: string;
@@ -1300,6 +3744,16 @@ export interface BlockDeviceMappingEbs {
    */
   readonly volumeType?: BlockDeviceMappingEbsVolumeType;
 
+  /**
+   * @schema BlockDeviceMappingEbs#throughput
+   */
+  readonly throughput?: number;
+
+  /**
+   * @schema BlockDeviceMappingEbs#dynamicVolumeSize
+   */
+  readonly dynamicVolumeSize?: BlockDeviceMappingEbsDynamicVolumeSize;
+
 }
 
 /**
@@ -1312,9 +3766,12 @@ export function toJson_BlockDeviceMappingEbs(obj: BlockDeviceMappingEbs | undefi
     'deleteOnTermination': obj.deleteOnTermination,
     'encrypted': obj.encrypted,
     'iops': obj.iops,
+    'kmsKeyId': obj.kmsKeyId,
     'snapshotId': obj.snapshotId,
     'volumeSize': obj.volumeSize,
     'volumeType': obj.volumeType,
+    'throughput': obj.throughput,
+    'dynamicVolumeSize': toJson_BlockDeviceMappingEbsDynamicVolumeSize(obj.dynamicVolumeSize),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -1322,31 +3779,161 @@ export function toJson_BlockDeviceMappingEbs(obj: BlockDeviceMappingEbs | undefi
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema EcsAutoScaleHeadroom
+ * @schema CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfacesPrivateIpAddresses
  */
-export interface EcsAutoScaleHeadroom {
+export interface CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfacesPrivateIpAddresses {
   /**
-   * @schema EcsAutoScaleHeadroom#cpuPerUnit
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfacesPrivateIpAddresses#privateIpAddress
+   */
+  readonly privateIpAddress?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfacesPrivateIpAddresses#primary
+   */
+  readonly primary?: boolean;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfacesPrivateIpAddresses' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfacesPrivateIpAddresses(obj: CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfacesPrivateIpAddresses | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'privateIpAddress': obj.privateIpAddress,
+    'primary': obj.primary,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema ResourceTagSpecificationConfig
+ */
+export interface ResourceTagSpecificationConfig {
+  /**
+   * @schema ResourceTagSpecificationConfig#shouldTag
+   */
+  readonly shouldTag?: boolean;
+
+}
+
+/**
+ * Converts an object of type 'ResourceTagSpecificationConfig' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_ResourceTagSpecificationConfig(obj: ResourceTagSpecificationConfig | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'shouldTag': obj.shouldTag,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema BeanStalkStrategy
+ */
+export interface BeanStalkStrategy {
+  /**
+   * @schema BeanStalkStrategy#action
+   */
+  readonly action?: string;
+
+  /**
+   * @schema BeanStalkStrategy#shouldDrainInstances
+   */
+  readonly shouldDrainInstances?: boolean;
+
+}
+
+/**
+ * Converts an object of type 'BeanStalkStrategy' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_BeanStalkStrategy(obj: BeanStalkStrategy | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'action': obj.action,
+    'shouldDrainInstances': obj.shouldDrainInstances,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActionsPlatformUpdate
+ */
+export interface CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActionsPlatformUpdate {
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActionsPlatformUpdate#performAt
+   */
+  readonly performAt?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActionsPlatformUpdate#timeWindow
+   */
+  readonly timeWindow?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActionsPlatformUpdate#updateLevel
+   */
+  readonly updateLevel?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActionsPlatformUpdate#instanceRefreshEnabled
+   */
+  readonly instanceRefreshEnabled?: boolean;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActionsPlatformUpdate' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActionsPlatformUpdate(obj: CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActionsPlatformUpdate | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'performAt': obj.performAt,
+    'timeWindow': obj.timeWindow,
+    'updateLevel': obj.updateLevel,
+    'instanceRefreshEnabled': obj.instanceRefreshEnabled,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema Headroom
+ */
+export interface Headroom {
+  /**
+   * @schema Headroom#cpuPerUnit
    */
   readonly cpuPerUnit?: number;
 
   /**
-   * @schema EcsAutoScaleHeadroom#memoryPerUnit
+   * @schema Headroom#memoryPerUnit
    */
   readonly memoryPerUnit?: number;
 
   /**
-   * @schema EcsAutoScaleHeadroom#numOfUnits
+   * @schema Headroom#numOfUnits
    */
   readonly numOfUnits?: number;
 
 }
 
 /**
- * Converts an object of type 'EcsAutoScaleHeadroom' to JSON representation.
+ * Converts an object of type 'Headroom' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_EcsAutoScaleHeadroom(obj: EcsAutoScaleHeadroom | undefined): Record<string, any> | undefined {
+export function toJson_Headroom(obj: Headroom | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'cpuPerUnit': obj.cpuPerUnit,
@@ -1359,26 +3946,26 @@ export function toJson_EcsAutoScaleHeadroom(obj: EcsAutoScaleHeadroom | undefine
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema EcsAutoScaleDown
+ * @schema AutoScaleDown
  */
-export interface EcsAutoScaleDown {
+export interface AutoScaleDown {
   /**
-   * @schema EcsAutoScaleDown#evaluationPeriods
+   * @schema AutoScaleDown#evaluationPeriods
    */
   readonly evaluationPeriods?: number;
 
   /**
-   * @schema EcsAutoScaleDown#maxScaleDownPercentage
+   * @schema AutoScaleDown#maxScaleDownPercentage
    */
   readonly maxScaleDownPercentage?: number;
 
 }
 
 /**
- * Converts an object of type 'EcsAutoScaleDown' to JSON representation.
+ * Converts an object of type 'AutoScaleDown' to JSON representation.
  */
 /* eslint-disable max-len, quote-props */
-export function toJson_EcsAutoScaleDown(obj: EcsAutoScaleDown | undefined): Record<string, any> | undefined {
+export function toJson_AutoScaleDown(obj: AutoScaleDown | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
     'evaluationPeriods': obj.evaluationPeriods,
@@ -1421,6 +4008,278 @@ export function toJson_Attribute(obj: Attribute | undefined): Record<string, any
 /* eslint-enable max-len, quote-props */
 
 /**
+ * @schema KubernetesAutoScaleHeadroom
+ */
+export interface KubernetesAutoScaleHeadroom {
+  /**
+   * @schema KubernetesAutoScaleHeadroom#cpuPerUnit
+   */
+  readonly cpuPerUnit?: number;
+
+  /**
+   * @schema KubernetesAutoScaleHeadroom#memoryPerUnit
+   */
+  readonly memoryPerUnit?: number;
+
+  /**
+   * @schema KubernetesAutoScaleHeadroom#gpuPerUnit
+   */
+  readonly gpuPerUnit?: number;
+
+  /**
+   * @schema KubernetesAutoScaleHeadroom#numOfUnits
+   */
+  readonly numOfUnits?: number;
+
+}
+
+/**
+ * Converts an object of type 'KubernetesAutoScaleHeadroom' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_KubernetesAutoScaleHeadroom(obj: KubernetesAutoScaleHeadroom | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'cpuPerUnit': obj.cpuPerUnit,
+    'memoryPerUnit': obj.memoryPerUnit,
+    'gpuPerUnit': obj.gpuPerUnit,
+    'numOfUnits': obj.numOfUnits,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema KubernetesAutoScaleResourceLimits
+ */
+export interface KubernetesAutoScaleResourceLimits {
+  /**
+   * @schema KubernetesAutoScaleResourceLimits#maxVCpu
+   */
+  readonly maxVCpu?: number;
+
+  /**
+   * @schema KubernetesAutoScaleResourceLimits#maxMemoryGib
+   */
+  readonly maxMemoryGib?: number;
+
+}
+
+/**
+ * Converts an object of type 'KubernetesAutoScaleResourceLimits' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_KubernetesAutoScaleResourceLimits(obj: KubernetesAutoScaleResourceLimits | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'maxVCpu': obj.maxVCpu,
+    'maxMemoryGib': obj.maxMemoryGib,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupThirdPartiesIntegrationRoute53DomainsRecordSets
+ */
+export interface CfnGroupPropsGroupThirdPartiesIntegrationRoute53DomainsRecordSets {
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationRoute53DomainsRecordSets#name
+   */
+  readonly name?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationRoute53DomainsRecordSets#usePublicDns
+   */
+  readonly usePublicDns?: boolean;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationRoute53DomainsRecordSets' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationRoute53DomainsRecordSets(obj: CfnGroupPropsGroupThirdPartiesIntegrationRoute53DomainsRecordSets | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'name': obj.name,
+    'usePublicDns': obj.usePublicDns,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethodSsh
+ */
+export interface CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethodSsh {
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethodSsh#sshPublicKey
+   */
+  readonly sshPublicKey?: string;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethodSsh' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethodSsh(obj: CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethodSsh | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'sshPublicKey': obj.sshPublicKey,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethodJnlp
+ */
+export interface CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethodJnlp {
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethodJnlp#masterIP
+   */
+  readonly masterIp?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethodJnlp#masterPort
+   */
+  readonly masterPort?: number;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethodJnlp#password
+   */
+  readonly password?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethodJnlp#userName
+   */
+  readonly userName?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethodJnlp#token
+   */
+  readonly token?: string;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethodJnlp' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethodJnlp(obj: CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethodJnlp | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'masterIP': obj.masterIp,
+    'masterPort': obj.masterPort,
+    'password': obj.password,
+    'userName': obj.userName,
+    'token': obj.token,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersListenerRules
+ */
+export interface CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersListenerRules {
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersListenerRules#ruleArn
+   */
+  readonly ruleArn?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersListenerRules#staticTargetGroups
+   */
+  readonly staticTargetGroups?: CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersListenerRulesStaticTargetGroups[];
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersListenerRules' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersListenerRules(obj: CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersListenerRules | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'ruleArn': obj.ruleArn,
+    'staticTargetGroups': obj.staticTargetGroups?.map(y => toJson_CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersListenerRulesStaticTargetGroups(y)),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersDefaultStaticTargetGroups
+ */
+export interface CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersDefaultStaticTargetGroups {
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersDefaultStaticTargetGroups#arn
+   */
+  readonly arn?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersDefaultStaticTargetGroups#percentage
+   */
+  readonly percentage?: number;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersDefaultStaticTargetGroups' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersDefaultStaticTargetGroups(obj: CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersDefaultStaticTargetGroups | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'arn': obj.arn,
+    'percentage': obj.percentage,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfigMatcher
+ */
+export interface CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfigMatcher {
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfigMatcher#httpCode
+   */
+  readonly httpCode?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfigMatcher#grpcCode
+   */
+  readonly grpcCode?: string;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfigMatcher' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfigMatcher(obj: CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfigMatcher | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'httpCode': obj.httpCode,
+    'grpcCode': obj.grpcCode,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
  * @schema BlockDeviceMappingEbsVolumeType
  */
 export enum BlockDeviceMappingEbsVolumeType {
@@ -1431,6 +4290,74 @@ export enum BlockDeviceMappingEbsVolumeType {
   /** gp2 */
   GP2 = "gp2",
 }
+
+/**
+ * @schema BlockDeviceMappingEbsDynamicVolumeSize
+ */
+export interface BlockDeviceMappingEbsDynamicVolumeSize {
+  /**
+   * @schema BlockDeviceMappingEbsDynamicVolumeSize#baseSize
+   */
+  readonly baseSize?: number;
+
+  /**
+   * @schema BlockDeviceMappingEbsDynamicVolumeSize#resource
+   */
+  readonly resource?: string;
+
+  /**
+   * @schema BlockDeviceMappingEbsDynamicVolumeSize#sizePerResourceUnit
+   */
+  readonly sizePerResourceUnit?: number;
+
+}
+
+/**
+ * Converts an object of type 'BlockDeviceMappingEbsDynamicVolumeSize' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_BlockDeviceMappingEbsDynamicVolumeSize(obj: BlockDeviceMappingEbsDynamicVolumeSize | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'baseSize': obj.baseSize,
+    'resource': obj.resource,
+    'sizePerResourceUnit': obj.sizePerResourceUnit,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
+ * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersListenerRulesStaticTargetGroups
+ */
+export interface CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersListenerRulesStaticTargetGroups {
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersListenerRulesStaticTargetGroups#arn
+   */
+  readonly arn?: string;
+
+  /**
+   * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersListenerRulesStaticTargetGroups#percentage
+   */
+  readonly percentage?: number;
+
+}
+
+/**
+ * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersListenerRulesStaticTargetGroups' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersListenerRulesStaticTargetGroups(obj: CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersListenerRulesStaticTargetGroups | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'arn': obj.arn,
+    'percentage': obj.percentage,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
 
 
 /**

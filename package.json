@@ -46,7 +46,7 @@
     "aws-sdk": "^2.1637.0",
     "case": "^1.6.3",
     "cdk-import": "^0.2.112",
-    "cdklabs-projen-project-types": "^0.1.197",
+    "cdklabs-projen-project-types": "^0.1.198",
     "constructs": "^10.0.5",
     "eslint": "^8",
     "eslint-import-resolver-typescript": "^2.7.1",

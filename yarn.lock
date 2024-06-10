@@ -1415,26 +1415,26 @@ case@1.6.3, case@^1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-import@^0.2.112:
-  version "0.2.757"
-  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.757.tgz#a3db89b4b4667ba718bce7a9bec0127fbf952883"
-  integrity sha512-c3pqLNkn4zgVMC9fKXYvh0a0deAihl9OZpOLMe46JOdnq99hh6k4UPqLQa1v5SuflDaYkJnu0FJvt1yJuJJLgw==
+  version "0.2.758"
+  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.758.tgz#a0ff3d250796b7097f5608b514c4651db8b73627"
+  integrity sha512-DFcU10PYUCHn0fLBk73yVlEMVr+1DoHN57ZpQlUFIZGyDh4YETwgKPio7xomCu0Brxmk0N2YteF2SKH/Z2ZA5g==
   dependencies:
     aws-cdk-lib "^2.145.0"
     aws-sdk "^2.1637.0"
     case "^1.6.3"
     constructs "^10"
-    jsii-srcmak "^0.1.1147"
+    jsii-srcmak "^0.1.1148"
     json2jsii "^0.4.4"
     minimist "^1.2.8"
     minimist-subcommand "^3.0.2"
     proxy-agent "^6.4.0"
 
-cdklabs-projen-project-types@^0.1.198:
-  version "0.1.198"
-  resolved "https://registry.yarnpkg.com/cdklabs-projen-project-types/-/cdklabs-projen-project-types-0.1.198.tgz#a97bbde54f633dc43b3757315a6e73d0e57962b2"
-  integrity sha512-4Vq0CfRdBc0maF6Rrad2vVpIT0fWXw969dexm2orOCkBXtN34VmMaPvqe9PDSax6MsZ3SSMky0GTO3kgT2FcCA==
+cdklabs-projen-project-types@^0.1.199:
+  version "0.1.199"
+  resolved "https://registry.yarnpkg.com/cdklabs-projen-project-types/-/cdklabs-projen-project-types-0.1.199.tgz#5fecc568f41ef4f13306540b552653696b0f4128"
+  integrity sha512-oBx6l71qgk/IURieQMPNmOxpYiVFC3CRljhkjAXLWVTuwB5bz8xaWgpxDVvxiUCrj0+uWsAlcr+OvPSiy8/QzQ==
   dependencies:
-    yaml "^2.4.4"
+    yaml "^2.4.5"
 
 chalk@^2.4.2:
   version "2.4.2"
@@ -3736,10 +3736,10 @@ jsii-rosetta@^5.4.21:
     workerpool "^6.5.1"
     yargs "^17.7.2"
 
-jsii-srcmak@^0.1.1147:
-  version "0.1.1148"
-  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.1148.tgz#aa3147da22194095e233b7e211dfe72f713acf13"
-  integrity sha512-d7w8ZBRi/5eNU/rPQCq93QMU3VfrNQXbwgJlRnl5NW607V9fUFQIEb3KCM2L2oYgCQ93Eyk86I27RcPtxd2G4w==
+jsii-srcmak@^0.1.1148:
+  version "0.1.1149"
+  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.1149.tgz#eb4d1914b58a735ed65102adb32e25b70b6e7e3b"
+  integrity sha512-k8qOh4WSrYoUDgYZsYlB0mCMagX0Ut9+dw6pNZwdmLpsWlf6rP11U2pNLhEu1OW69VTma7d9Et/rqTwd97PFiQ==
   dependencies:
     fs-extra "^9.1.0"
     jsii "~5.4.20"
@@ -4500,10 +4500,10 @@ process-nextick-args@~2.0.0:
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
   integrity sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==
 
-projen@^0.82.5:
-  version "0.82.5"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.82.5.tgz#9ba5119c107a71b777a0365ccc4fd6111608d61f"
-  integrity sha512-AQVtVHPrJVLG+/1y6u+Bi044P7m9JzFoIV4/Q5YQnPWdBaLKmscqNKPNSauOvLyNOaAwppc8WkDgNGdnwirNTw==
+projen@^0.82.6:
+  version "0.82.6"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.82.6.tgz#d6f672b5041befae1c395860b28c7d1878d9727e"
+  integrity sha512-odAYFpNvR57BAYF5gLWq4d53edcsdvyJ8YjbX/0MDLLuS99gnHvQzGIj0ZeB13ahkrFv5dW+EanpcUKg5LA/Aw==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
@@ -5462,9 +5462,9 @@ typedarray@^0.0.6:
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
 typescript@next:
-  version "5.6.0-dev.20240608"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.6.0-dev.20240608.tgz#8b10aed96e08688f694d1206b1d24cb940e11466"
-  integrity sha512-6/A+e5am8S9wXo877O6OGZo+IbLWKfx/g/qlDNs+3QD3JPjHTM4eDXWue1uTPYuhAgXs7GoFagsSPRaRC3NWtw==
+  version "5.6.0-dev.20240609"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.6.0-dev.20240609.tgz#778e9c1c1247850ed29c8b05d30f2bf441b8ae02"
+  integrity sha512-VCYrsV2e6rmJM/eNpesiO22l0o4SlBLN2ohLTJC8octWq8uX1tsQlyg3OVn9U7X+Sdgnizwj4xhctVzOPkO0Lg==
 
 typescript@~4.9.5:
   version "4.9.5"
@@ -5783,7 +5783,7 @@ yaml@1.10.2:
   resolved "https://registry.yarnpkg.com/yaml/-/yaml-1.10.2.tgz#2301c5ffbf12b467de8da2333a459e29e7920e4b"
   integrity sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==
 
-yaml@^2.2.2, yaml@^2.4.4:
+yaml@^2.2.2, yaml@^2.4.5:
   version "2.4.5"
   resolved "https://registry.yarnpkg.com/yaml/-/yaml-2.4.5.tgz#60630b206dd6d84df97003d33fc1ddf6296cca5e"
   integrity sha512-aBx2bnqDzVOyNKfsysjA2ms5ZlnjSAW2eG3/L5G/CSujfjLJTJsEw1bGw8kCf04KodQWk1pxlGnZ56CRxiawmg==

@@ -3,7 +3,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as constructs from 'constructs';
 
 /**
- * Datadog Monitor 4.7.1
+ * Datadog Monitor 4.8.0
  *
  * @schema CfnMonitorProps
  */
@@ -76,6 +76,13 @@ export interface CfnMonitorProps {
    */
   readonly restrictedRoles?: string[];
 
+  /**
+   * Cloudformation specific options. This is only used by the Cloudformation resource.
+   *
+   * @schema CfnMonitorProps#CloudformationOptions
+   */
+  readonly cloudformationOptions?: CloudformationOptions;
+
 }
 
 /**
@@ -95,6 +102,7 @@ export function toJson_CfnMonitorProps(obj: CfnMonitorProps | undefined): Record
     'Type': obj.type,
     'Multi': obj.multi,
     'RestrictedRoles': obj.restrictedRoles?.map(y => y),
+    'CloudformationOptions': toJson_CloudformationOptions(obj.cloudformationOptions),
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
@@ -419,6 +427,33 @@ export enum CfnMonitorPropsType {
   /** ci-tests alert */
   CI_HYPHEN_TESTS_ALERT = "ci-tests alert",
 }
+
+/**
+ * @schema CloudformationOptions
+ */
+export interface CloudformationOptions {
+  /**
+   * Whether or not to convert monitor query to lowercase when checking for drift.
+   *
+   * @schema CloudformationOptions#LowercaseQuery
+   */
+  readonly lowercaseQuery?: boolean;
+
+}
+
+/**
+ * Converts an object of type 'CloudformationOptions' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_CloudformationOptions(obj: CloudformationOptions | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'LowercaseQuery': obj.lowercaseQuery,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
 
 /**
  * Toggles the display of additional content sent in the monitor notification.

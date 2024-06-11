@@ -29,6 +29,8 @@ export interface GeneratePackagesOptions {
    * Pre-release tag to use.
    */
   readonly prerelease?: string;
+
+  readonly minNodeVersion?: string;
 }
 
 export function generatePackages(root: typescript.TypeScriptProject, options: GeneratePackagesOptions): CloudFormationTypeProject[] {
@@ -65,6 +67,7 @@ export function generatePackages(root: typescript.TypeScriptProject, options: Ge
       type: type,
       prerelease: options.prerelease,
       readmeDeprecatedMessage: shouldDeprecate(type),
+      minNodeVersion: options.minNodeVersion,
     });
 
     projects.push(p);

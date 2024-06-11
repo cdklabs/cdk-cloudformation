@@ -45,6 +45,8 @@ export interface TypePackageOptions {
    * @default - not deprecated/no message added
    */
   readonly readmeDeprecatedMessage?: string;
+
+  readonly minNodeVersion?: string;
 }
 
 /**
@@ -114,7 +116,7 @@ export class CloudFormationTypeProject extends Component {
 
     const keywords = this.renderKeywords(options.type);
 
-    new JsonFile(project, 'package.json', {
+    const json = new JsonFile(project, 'package.json', {
       obj: {
         name: npmName,
         description: description.split('\n')[0], // only first line
@@ -178,6 +180,10 @@ export class CloudFormationTypeProject extends Component {
         license: spdx,
       },
     });
+
+    if (options.minNodeVersion) {
+      json.addOverride('engine.node', `>= ${options.minNodeVersion}`);
+    }
 
     project.addGitIgnore('/.jsii');
     project.addGitIgnore('/lib/');

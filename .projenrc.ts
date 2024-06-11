@@ -4,11 +4,11 @@ import { generatePackages, updateReadme } from './projenrc/generate-packages';
 import { UpdateRegistry } from './projenrc/update-registry';
 
 const project = new CdklabsTypeScriptProject({
-  setNodeEngineVersion: false,
   defaultReleaseBranch: 'main',
   name: 'cdk-cloudformation',
   projenrcTs: true,
   sampleCode: false,
+  minNodeVersion: '18.18.0',
 });
 
 project.addDevDeps('cdk-import@^0.2.112');
@@ -53,7 +53,6 @@ project.package.addField('resolutions', {
   // Newer @types package doesn't work with old TypeScript
   '@types/prettier': '2.4.4',
 });
-project.package.addEngine('node', '>= 18.18.0');
 
 project.addExcludeFromCleanup('packages/**');
 

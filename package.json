@@ -65,6 +65,9 @@
   "resolutions": {
     "@types/prettier": "2.4.4"
   },
+  "engines": {
+    "node": ">= 18.18.0"
+  },
   "main": "lib/index.js",
   "license": "Apache-2.0",
   "publishConfig": {

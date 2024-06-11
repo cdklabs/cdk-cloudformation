@@ -4,7 +4,6 @@ import { generatePackages, updateReadme } from './projenrc/generate-packages';
 import { UpdateRegistry } from './projenrc/update-registry';
 
 const project = new CdklabsTypeScriptProject({
-  setNodeEngineVersion: false,
   defaultReleaseBranch: 'main',
   name: 'cdk-cloudformation',
   projenrcTs: true,
@@ -65,6 +64,7 @@ const projects = generatePackages(project, {
   dir: packagesDir,
   scope: scope,
   prerelease: 'alpha.7',
+  minNodeVersion: project.minNodeVersion,
 });
 
 updateReadme(project, projects);

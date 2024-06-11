@@ -4,11 +4,11 @@ import { generatePackages, updateReadme } from './projenrc/generate-packages';
 import { UpdateRegistry } from './projenrc/update-registry';
 
 const project = new CdklabsTypeScriptProject({
+  setNodeEngineVersion: false,
   defaultReleaseBranch: 'main',
   name: 'cdk-cloudformation',
   projenrcTs: true,
   sampleCode: false,
-  minNodeVersion: '18.18.0',
 });
 
 project.addDevDeps('cdk-import@^0.2.112');
@@ -21,7 +21,7 @@ project.addDevDeps('jsii-pacmak');
 project.addDevDeps('jsii-rosetta');
 project.addDevDeps('aws-cdk-github-oidc@^2.2.0');
 project.addDevDeps('ts-node@^10');
-project.addDevDeps('@types/node@16.18.78'); // last version compatible with jsii 1.x
+project.addDevDeps('@types/node@18.18.0');
 
 // the root is not really a library
 project.compileTask.reset();
@@ -63,7 +63,6 @@ const projects = generatePackages(project, {
   dir: packagesDir,
   scope: scope,
   prerelease: 'alpha.7',
-  minNodeVersion: project.minNodeVersion,
 });
 
 updateReadme(project, projects);

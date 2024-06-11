@@ -53,7 +53,7 @@ project.package.addField('resolutions', {
   // Newer @types package doesn't work with old TypeScript
   '@types/prettier': '2.4.4',
 });
-project.package.addEngine('node', '^18.18.0');
+project.package.addEngine('node', '>= 18.18.0');
 
 project.addExcludeFromCleanup('packages/**');
 

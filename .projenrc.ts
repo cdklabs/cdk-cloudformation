@@ -10,6 +10,7 @@ const project = new CdklabsTypeScriptProject({
   projenrcTs: true,
   sampleCode: false,
   minNodeVersion: '18.18.0',
+  workflowNodeVersion: '18.18.0',
 });
 
 project.addDevDeps('cdk-import@^0.2.112');

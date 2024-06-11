@@ -9,6 +9,7 @@ const project = new CdklabsTypeScriptProject({
   name: 'cdk-cloudformation',
   projenrcTs: true,
   sampleCode: false,
+  workflowNodeVersion: '18.18.0',
 });
 
 project.addDevDeps('cdk-import@^0.2.112');

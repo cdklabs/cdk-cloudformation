@@ -799,9 +799,9 @@
   integrity sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==
 
 "@types/node@*":
-  version "20.14.7"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.14.7.tgz#342cada27f97509eb8eb2dbc003edf21ce8ab5a8"
-  integrity sha512-uTr2m2IbJJucF3KUxgnGOZvYbN0QgkGyWxG6973HCpMYFy2KfcgYuIwkJQMQkt1VbBMlvWRbpshFTLxnxCZjKQ==
+  version "20.14.8"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.14.8.tgz#45c26a2a5de26c3534a9504530ddb3b27ce031ac"
+  integrity sha512-DO+2/jZinXfROG7j7WKFn/3C6nFwxy2lLpgLjEXJz+0XKphZlTLJ14mo8Vfg8X5BWN6XjyESXq+LcYdT7tR3bA==
   dependencies:
     undici-types "~5.26.4"
 
@@ -1424,15 +1424,15 @@ case@1.6.3, case@^1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-import@^0.2.112:
-  version "0.2.770"
-  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.770.tgz#e6e790032a6f806c00c140c92e3d33bdf5f3a15e"
-  integrity sha512-queHTehyfwO/Ib42pOOA9An02YlesXiaFc6B5xVSiriZXI2E/E2TlVbHacXxv5wIA9tx2g9xkX6DLYOYOihRDA==
+  version "0.2.771"
+  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.771.tgz#2c528439446e99b97747bbc6cf675d3fed8cd444"
+  integrity sha512-c2vQwscVA6hJWj/t2lzJD2oAUlH70we8+9nKF8vaP24uk3LbtGufa4lzXp1uHYK0Kv2mZxP7CgOnCjL2GCpmCw==
   dependencies:
     aws-cdk-lib "^2.147.0"
     aws-sdk "^2.1646.0"
     case "^1.6.3"
     constructs "^10"
-    jsii-srcmak "^0.1.1160"
+    jsii-srcmak "^0.1.1161"
     json2jsii "^0.4.4"
     minimist "^1.2.8"
     minimist-subcommand "^3.0.2"
@@ -2039,9 +2039,9 @@ downlevel-dts@^0.11.0:
     typescript next
 
 electron-to-chromium@^1.4.796:
-  version "1.4.808"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.808.tgz#85b2f93a5e32c2949a1a4d39375851945c936835"
-  integrity sha512-0ItWyhPYnww2VOuCGF4s1LTfbrdAV2ajy/TN+ZTuhR23AHI6rWHCrBXJ/uxoXOvRRqw8qjYVrG81HFI7x/2wdQ==
+  version "1.4.810"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.810.tgz#7dee01b090b9e048e6db752f7b30921790230654"
+  integrity sha512-Kaxhu4T7SJGpRQx99tq216gCq2nMxJo+uuT6uzz9l8TVN2stL7M06MIIXAtr9jsrLs2Glflgf2vMQRepxawOdQ==
 
 emittery@^0.8.1:
   version "0.8.1"
@@ -3745,10 +3745,10 @@ jsii-rosetta@^5.4.22:
     workerpool "^6.5.1"
     yargs "^17.7.2"
 
-jsii-srcmak@^0.1.1160:
-  version "0.1.1161"
-  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.1161.tgz#0647eefd4f6d05a4722b54fc3014a8d0280b2b39"
-  integrity sha512-5/MdNb7MeJ0B13psD/77IHOXx0Iqbwj2GoOAjMDrEM/UmC407a/nYTvZSlEEh7mw++Ngg8dyhNnW/DugF/OWFA==
+jsii-srcmak@^0.1.1161:
+  version "0.1.1162"
+  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.1162.tgz#dde3b1f4a054db06cef378a9da7bbfe286a84eca"
+  integrity sha512-RDwWF4kb6jcaCGKWZtG/X8YkzJxCGJjTcLQapCuW8L3vSRoLfPD/XlJvYP93Ycjb8IZN60TumZQxO0jvIOvaSA==
   dependencies:
     fs-extra "^9.1.0"
     jsii "~5.4.22"
@@ -4227,9 +4227,9 @@ nwsapi@^2.2.0:
   integrity sha512-QK0sRs7MKv0tKe1+5uZIQk/C8XGza4DAnztJG8iD+TpJIORARrCxczA738awHrZoHeTjSSoHqao2teO0dC/gFQ==
 
 object-inspect@^1.13.1:
-  version "1.13.1"
-  resolved "https://registry.yarnpkg.com/object-inspect/-/object-inspect-1.13.1.tgz#b96c6109324ccfef6b12216a956ca4dc2ff94bc2"
-  integrity sha512-5qoj1RUiKOMsCCNLV1CBiPYE10sziTsnmNxkAI/rZhiD63CF7IqdFGC/XzjWjpSgLf0LxXX3bDFIh0E18f6UhQ==
+  version "1.13.2"
+  resolved "https://registry.yarnpkg.com/object-inspect/-/object-inspect-1.13.2.tgz#dea0088467fb991e67af4058147a24824a3043ff"
+  integrity sha512-IRZSRuzJiynemAXPYtPe5BoI/RESNYR7TYm50MC5Mqbd3Jmw5y790sErYw3V6SryFJD64b74qQQs9wn5Bg/k3g==
 
 object-keys@^1.1.1:
   version "1.1.1"
@@ -5471,9 +5471,9 @@ typedarray@^0.0.6:
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
 typescript@next:
-  version "5.6.0-dev.20240621"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.6.0-dev.20240621.tgz#3071745346c6abe8670d343570df087d4c7f017c"
-  integrity sha512-1JHiBIcEY9qrX/0coAIUIdH0XdDUuwIJ7VZGZ1CbksCWq2bztyvRX7YIcGvTkN/kFGEcrmyFIUEouq+pnLvQPw==
+  version "5.6.0-dev.20240622"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.6.0-dev.20240622.tgz#b5f941fb35f61459a9e729c9ca12a3c3cc375f14"
+  integrity sha512-neHnfoZcTorI72VCYHqjwwFRdtpWiUswWxONvtNW/r0vye7VZujzi20SG+1tJz7HyjPPtir5tSt3RN6nQ16osg==
 
 typescript@~4.9.5:
   version "4.9.5"

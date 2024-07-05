@@ -3746,9 +3746,9 @@ jsii-rosetta@^5.4.24:
     yargs "^17.7.2"
 
 jsii-srcmak@^0.1.1166:
-  version "0.1.1172"
-  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.1172.tgz#e25f60e6d46aae214219152df6627304c5a49b84"
-  integrity sha512-D13nhLIGMXPYL5d1Q/Q/ixLAmxjwrz88huhXr1vbdxFndO1ch/RtD0+Wp0T2r+NCnOpF2gPXvBHktz6633TENg==
+  version "0.1.1173"
+  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.1173.tgz#9eaa1a6668edf788a1f7552f61304dd2babc7303"
+  integrity sha512-UvrCJwRZyaW0mQg3Ky5utH31dngKMfKJetfh4JSLsKJM7AM+gJ+UvEbqd18ikMgD72KS3VQKgrwmLVF34GEu+g==
   dependencies:
     fs-extra "^9.1.0"
     jsii "~5.4.25"
@@ -4509,10 +4509,10 @@ process-nextick-args@~2.0.0:
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
   integrity sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==
 
-projen@^0.83.1:
-  version "0.83.1"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.83.1.tgz#0bc644b1f95be898a565526c4eb649c225101163"
-  integrity sha512-agobaTIvfOxHllRa5pNHxFTRjH7Zxq2uus7FWQ0f+6OTLkH/hODtnV3LEA5pxVk5e0cYAD+ZZuS/mKKicAtkng==
+projen@^0.84.0:
+  version "0.84.0"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.84.0.tgz#d142fdbab40bc2a952b6d1ccb240914d773d58df"
+  integrity sha512-HXbtJiZVJyouVGbwBHMYD1REOdkmekvfrcJLH0G0ky6A1PinM5/SVm0oDccJVZpxIbZHbctSyAMLirhvtJh9wg==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
@@ -5471,9 +5471,9 @@ typedarray@^0.0.6:
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
 typescript@next:
-  version "5.6.0-dev.20240703"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.6.0-dev.20240703.tgz#4b1fad9790ff4827a9210c6943b3039b53a739da"
-  integrity sha512-AAOGWtykhMpxB4l+5CwojT2aBVAszalz9guzYaZMavmKHWxm3HciR+cIcKqDgR22hR7fPBJHtOti7uFCo4mt4A==
+  version "5.6.0-dev.20240704"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.6.0-dev.20240704.tgz#0353b1d32c5df73b6eb2d0024b573610fa1ca75c"
+  integrity sha512-dQ7dYp9FShLdziOgRehsozaKrvgCjR0/LTtrGAUq3Ec/gx0Tf38wmd/lGyNREOqfNMJkQCbVBMMCATXdj0aa9g==
 
 typescript@~4.9.5:
   version "4.9.5"

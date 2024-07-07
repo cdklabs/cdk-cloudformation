@@ -2039,9 +2039,9 @@ downlevel-dts@^0.11.0:
     typescript next
 
 electron-to-chromium@^1.4.796:
-  version "1.4.817"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.817.tgz#da9808e35212408cf4052b51679786fcb54fec39"
-  integrity sha512-3znu+lZMIbTe8ZOs360OMJvVroVF2NpNI8T5jfLnDetVvj0uNmIucZzQVYMSJfsu9f47Ssox1Gt46PR+R+1JUg==
+  version "1.4.818"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.818.tgz#7762c8bfd15a07c3833b7f5deed990e9e5a4c24f"
+  integrity sha512-eGvIk2V0dGImV9gWLq8fDfTTsCAeMDwZqEPMr+jMInxZdnp9Us8UpovYpRCf9NQ7VOFgrN2doNSgvISbsbNpxA==
 
 emittery@^0.8.1:
   version "0.8.1"
@@ -3746,9 +3746,9 @@ jsii-rosetta@^5.4.24:
     yargs "^17.7.2"
 
 jsii-srcmak@^0.1.1166:
-  version "0.1.1174"
-  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.1174.tgz#a9685b1a7c89a5e75133d730c358e6e96f03861b"
-  integrity sha512-7PwUchtrMgJ3WBidMEAsoeVS5SN+o3Hhz1klCKXUCGAnG12gi7bQOh3nbKMbCnOEHrDBWVkhBnz+gSmPbKEe7Q==
+  version "0.1.1175"
+  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.1175.tgz#f1d853204c00fdb27bd361cb8717459bef79d4b7"
+  integrity sha512-lBUtMuhTh7KKXnRvwrn2TQ1AfZ/0UArNJtWDy5EVeehmbCMD8J5EgxNVmZtgGeQe+vskay4nFNac3l26xGEwOg==
   dependencies:
     fs-extra "^9.1.0"
     jsii "~5.4.25"
@@ -5471,9 +5471,9 @@ typedarray@^0.0.6:
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
 typescript@next:
-  version "5.6.0-dev.20240705"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.6.0-dev.20240705.tgz#ed36b36611136af840fe90d5f82289ff2d8e693b"
-  integrity sha512-Z1GBiSYZqdb2B4kkFvX6sDIFZzCGD7+RtHI2/ci9IIZA1CPS6qzbiB/D2RmPupSCXpQ8FRqax1RU0tlD/n70oA==
+  version "5.6.0-dev.20240706"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.6.0-dev.20240706.tgz#9f73ae0350ddc3a49356514a490580be93632b72"
+  integrity sha512-4I4aRNO+G6/iXtD1oFKll65gKS0P/8r15nRM32TOTOCShYji8azBDCXYh27GG+IfAudWzaAcMkC1NkVwYSxWnw==
 
 typescript@~4.9.5:
   version "4.9.5"

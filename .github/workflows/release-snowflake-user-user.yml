@@ -38,7 +38,7 @@ jobs:
         run: |-
           LATEST_TAG=$(git -c "versionsort.suffix=-" tag --sort="-version:refname" --list "@cdk-cloudformation/snowflake-user-user@v*" | head -n 1)
           echo ${LATEST_TAG:=$(git rev-list HEAD -- . | tail -1)^}
-          COUNT=$(git log --no-merges --oneline $LATEST_TAG..HEAD -E --grep '^(feat|fix){1}(\([^()[:space:]]+\))?(!)?:[[:blank:]]+.+' -- . | wc -l | xargs)
+          COUNT=$(git log --no-merges --oneline $LATEST_TAG..HEAD -E --grep "^(feat|fix){1}(\([^()[:space:]]+\))?(!)?:[[:blank:]]+.+" -- . | wc -l | xargs)
           echo "releasable_count=$COUNT" >> $GITHUB_OUTPUT
           cat $GITHUB_OUTPUT
         working-directory: packages/@cdk-cloudformation/snowflake-user-user

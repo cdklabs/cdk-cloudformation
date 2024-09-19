@@ -5,7 +5,7 @@ import { typescript } from 'projen';
 import { JobPermission } from 'projen/lib/github/workflows-model';
 import { CloudFormationTypeProject } from './type-package';
 
-const JSII_VERSION = '1-bullseye-slim';
+const JSII_VERSION = '1-bullseye-slim-node20';
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const deprecations = require('../deprecated-types.json');

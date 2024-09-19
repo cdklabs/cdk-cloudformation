@@ -205,7 +205,7 @@ jobs:
           - unxpose-iam-integration-module
           - zmk-iam-lambdabasicrole-module
     container:
-      image: jsii/superchain:1-bullseye-slim
+      image: jsii/superchain:1-bullseye-slim-node20
   build-okay:
     name: Build Individual
     needs: build-all

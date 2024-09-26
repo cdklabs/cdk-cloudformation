@@ -1,4 +1,5 @@
 import { CdklabsTypeScriptProject } from 'cdklabs-projen-project-types';
+import { NpmAccess } from 'projen/lib/javascript';
 import { DeprecatedTypes } from './projenrc/deprecated-types';
 import { generatePackages, updateReadme } from './projenrc/generate-packages';
 import { UpdateRegistry } from './projenrc/update-registry';
@@ -9,6 +10,7 @@ const project = new CdklabsTypeScriptProject({
   name: 'cdk-cloudformation',
   projenrcTs: true,
   sampleCode: false,
+  npmAccess: NpmAccess.PUBLIC,
 });
 
 project.addDevDeps('cdk-import@^0.2.112');

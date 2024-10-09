@@ -1431,15 +1431,15 @@ case@1.6.3, case@^1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-import@^0.2.112:
-  version "0.2.785"
-  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.785.tgz#2e34bbc91b195f33557050384503268a09ebd18b"
-  integrity sha512-NShmkSYyguVO9wJIZDElWXewLVLFjAj9KETPf+12gj916Gfulrht9slhU/rnCNONaQB0XlYLQvrUwcUi/j/ESQ==
+  version "0.2.786"
+  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.786.tgz#bd9b53f26289d88202731762210786616f90c08f"
+  integrity sha512-WAz+zFW/t0xHHKPOQDxhSD1Xu9viicgiClgtqHH+H5qPQmTvYLP9lPpyU7LrEJ23SiKaOPjuk5zjoisLhqLu8Q==
   dependencies:
     aws-cdk-lib "^2.161.1"
     aws-sdk "^2.1691.0"
     case "^1.6.3"
     constructs "^10"
-    jsii-srcmak "^0.1.1262"
+    jsii-srcmak "^0.1.1263"
     json2jsii "^0.5.0"
     minimist "^1.2.8"
     minimist-subcommand "^3.0.2"
@@ -3824,10 +3824,10 @@ jsii-rosetta@^5.5.5:
     workerpool "^6.5.1"
     yargs "^17.7.2"
 
-jsii-srcmak@^0.1.1262:
-  version "0.1.1263"
-  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.1263.tgz#cd1e42591660f8ea92e1b092e14c21feb91d21e3"
-  integrity sha512-kv83h0QoqIgdG4vljLD/OY8L8vbDqEaI2/EiW+kRIEpjSY8m2oNHE7f9P22R4MTNe//iej9bF1w7fxIOi0ogCA==
+jsii-srcmak@^0.1.1263:
+  version "0.1.1264"
+  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.1264.tgz#a4b6c11037b1a0011affec8dc459cca8cf73a9dc"
+  integrity sha512-FGUDYk3CsKEFD3daqWvUnKi6hGB5KlU/sOnpP5nWOtmK4+OoRIVFfrbulxDmuTpXDiRisL+MuG4bCVWXpFxxQg==
   dependencies:
     fs-extra "^9.1.0"
     jsii "~5.5.4"
@@ -5545,9 +5545,9 @@ typedarray@^0.0.6:
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
 typescript@next:
-  version "5.7.0-dev.20241007"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.7.0-dev.20241007.tgz#1ae065b5aad85fe743afc80bc8a05401b6a19d0a"
-  integrity sha512-oIOWWuGS7GI51GWoNlP9O/eKmV1P+lKbIzVzg2i8Ul6n8vWHjQISb8MkPBxDj+alhYG2sl+HxtFHHG/LCgN/hg==
+  version "5.7.0-dev.20241008"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.7.0-dev.20241008.tgz#7d74ba39d72fdd2ec55c5195f7de202b04ceb899"
+  integrity sha512-FZzeU/lVGUgdl8+Rl2MChV2+eD0ZciK1LuVeoL8+P8ePsJjduRhGrWGRBHvy5KQOhZpxm0QdjrcnGkGDQEphvQ==
 
 typescript@~4.9.5:
   version "4.9.5"

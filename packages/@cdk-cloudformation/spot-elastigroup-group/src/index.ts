@@ -956,11 +956,6 @@ export interface CfnGroupPropsGroupComputeLaunchSpecification {
   readonly healthCheckGracePeriod?: number;
 
   /**
-   * @schema CfnGroupPropsGroupComputeLaunchSpecification#tenancy
-   */
-  readonly tenancy?: string;
-
-  /**
    * @schema CfnGroupPropsGroupComputeLaunchSpecification#blockDeviceMappings
    */
   readonly blockDeviceMappings?: BlockDeviceMapping[];
@@ -1025,7 +1020,6 @@ export function toJson_CfnGroupPropsGroupComputeLaunchSpecification(obj: CfnGrou
     'tags': obj.tags?.map(y => toJson_Tag(y)),
     'healthCheckType': obj.healthCheckType,
     'healthCheckGracePeriod': obj.healthCheckGracePeriod,
-    'tenancy': obj.tenancy,
     'blockDeviceMappings': obj.blockDeviceMappings?.map(y => toJson_BlockDeviceMapping(y)),
     'iamRole': toJson_CfnGroupPropsGroupComputeLaunchSpecificationIamRole(obj.iamRole),
     'creditSpecification': toJson_CfnGroupPropsGroupComputeLaunchSpecificationCreditSpecification(obj.creditSpecification),
@@ -1081,9 +1075,24 @@ export interface ScalingUpPolicy {
   readonly policyName?: string;
 
   /**
+   * @schema ScalingUpPolicy#namespace
+   */
+  readonly namespace?: string;
+
+  /**
+   * @schema ScalingUpPolicy#source
+   */
+  readonly source?: string;
+
+  /**
    * @schema ScalingUpPolicy#metricName
    */
   readonly metricName?: string;
+
+  /**
+   * @schema ScalingUpPolicy#dimension
+   */
+  readonly dimension?: Dimension[];
 
   /**
    * @schema ScalingUpPolicy#statistic
@@ -1111,14 +1120,9 @@ export interface ScalingUpPolicy {
   readonly stepAdjustments?: ScaleUpStepAdjustment[];
 
   /**
-   * @schema ScalingUpPolicy#namespace
+   * @schema ScalingUpPolicy#minTargetCapacity
    */
-  readonly namespace?: string;
-
-  /**
-   * @schema ScalingUpPolicy#source
-   */
-  readonly source?: string;
+  readonly minTargetCapacity?: number;
 
   /**
    * @schema ScalingUpPolicy#period
@@ -1136,11 +1140,6 @@ export interface ScalingUpPolicy {
   readonly cooldown?: number;
 
   /**
-   * @schema ScalingUpPolicy#dimension
-   */
-  readonly dimension?: Dimension[];
-
-  /**
    * @schema ScalingUpPolicy#action
    */
   readonly action?: ScaleUpAction;
@@ -1149,11 +1148,6 @@ export interface ScalingUpPolicy {
    * @schema ScalingUpPolicy#operator
    */
   readonly operator?: string;
-
-  /**
-   * @schema ScalingUpPolicy#shouldResumeStateful
-   */
-  readonly shouldResumeStateful?: boolean;
 
   /**
    * @schema ScalingUpPolicy#isEnabled
@@ -1170,21 +1164,21 @@ export function toJson_ScalingUpPolicy(obj: ScalingUpPolicy | undefined): Record
   if (obj === undefined) { return undefined; }
   const result = {
     'policyName': obj.policyName,
+    'namespace': obj.namespace,
+    'source': obj.source,
     'metricName': obj.metricName,
+    'dimension': obj.dimension?.map(y => toJson_Dimension(y)),
     'statistic': obj.statistic,
     'extendedStatistic': obj.extendedStatistic,
     'unit': obj.unit,
     'threshold': obj.threshold,
     'stepAdjustments': obj.stepAdjustments?.map(y => toJson_ScaleUpStepAdjustment(y)),
-    'namespace': obj.namespace,
-    'source': obj.source,
+    'minTargetCapacity': obj.minTargetCapacity,
     'period': obj.period,
     'evaluationPeriods': obj.evaluationPeriods,
     'cooldown': obj.cooldown,
-    'dimension': obj.dimension?.map(y => toJson_Dimension(y)),
     'action': toJson_ScaleUpAction(obj.action),
     'operator': obj.operator,
-    'shouldResumeStateful': obj.shouldResumeStateful,
     'isEnabled': obj.isEnabled,
   };
   // filter undefined values
@@ -1202,9 +1196,24 @@ export interface ScalingDownPolicy {
   readonly policyName?: string;
 
   /**
+   * @schema ScalingDownPolicy#namespace
+   */
+  readonly namespace?: string;
+
+  /**
+   * @schema ScalingDownPolicy#source
+   */
+  readonly source?: string;
+
+  /**
    * @schema ScalingDownPolicy#metricName
    */
   readonly metricName?: string;
+
+  /**
+   * @schema ScalingDownPolicy#dimension
+   */
+  readonly dimension?: Dimension[];
 
   /**
    * @schema ScalingDownPolicy#statistic
@@ -1232,14 +1241,9 @@ export interface ScalingDownPolicy {
   readonly stepAdjustments?: ScaleDownStepAdjustment[];
 
   /**
-   * @schema ScalingDownPolicy#namespace
+   * @schema ScalingDownPolicy#maxTargetCapacity
    */
-  readonly namespace?: string;
-
-  /**
-   * @schema ScalingDownPolicy#source
-   */
-  readonly source?: string;
+  readonly maxTargetCapacity?: number;
 
   /**
    * @schema ScalingDownPolicy#period
@@ -1255,11 +1259,6 @@ export interface ScalingDownPolicy {
    * @schema ScalingDownPolicy#cooldown
    */
   readonly cooldown?: number;
-
-  /**
-   * @schema ScalingDownPolicy#dimension
-   */
-  readonly dimension?: Dimension[];
 
   /**
    * @schema ScalingDownPolicy#action
@@ -1286,18 +1285,19 @@ export function toJson_ScalingDownPolicy(obj: ScalingDownPolicy | undefined): Re
   if (obj === undefined) { return undefined; }
   const result = {
     'policyName': obj.policyName,
+    'namespace': obj.namespace,
+    'source': obj.source,
     'metricName': obj.metricName,
+    'dimension': obj.dimension?.map(y => toJson_Dimension(y)),
     'statistic': obj.statistic,
     'extendedStatistic': obj.extendedStatistic,
     'unit': obj.unit,
     'threshold': obj.threshold,
     'stepAdjustments': obj.stepAdjustments?.map(y => toJson_ScaleDownStepAdjustment(y)),
-    'namespace': obj.namespace,
-    'source': obj.source,
+    'maxTargetCapacity': obj.maxTargetCapacity,
     'period': obj.period,
     'evaluationPeriods': obj.evaluationPeriods,
     'cooldown': obj.cooldown,
-    'dimension': obj.dimension?.map(y => toJson_Dimension(y)),
     'action': toJson_ScaleDownAction(obj.action),
     'operator': obj.operator,
     'isEnabled': obj.isEnabled,
@@ -1317,9 +1317,24 @@ export interface ScalingTargetPolicy {
   readonly policyName?: string;
 
   /**
+   * @schema ScalingTargetPolicy#namespace
+   */
+  readonly namespace?: string;
+
+  /**
+   * @schema ScalingTargetPolicy#source
+   */
+  readonly source?: string;
+
+  /**
    * @schema ScalingTargetPolicy#metricName
    */
   readonly metricName?: string;
+
+  /**
+   * @schema ScalingTargetPolicy#dimension
+   */
+  readonly dimension?: Dimension[];
 
   /**
    * @schema ScalingTargetPolicy#statistic
@@ -1330,26 +1345,6 @@ export interface ScalingTargetPolicy {
    * @schema ScalingTargetPolicy#unit
    */
   readonly unit?: string;
-
-  /**
-   * @schema ScalingTargetPolicy#target
-   */
-  readonly target?: number;
-
-  /**
-   * @schema ScalingTargetPolicy#namespace
-   */
-  readonly namespace?: string;
-
-  /**
-   * @schema ScalingTargetPolicy#maxCapacityPerScale
-   */
-  readonly maxCapacityPerScale?: string;
-
-  /**
-   * @schema ScalingTargetPolicy#source
-   */
-  readonly source?: string;
 
   /**
    * @schema ScalingTargetPolicy#period
@@ -1367,9 +1362,9 @@ export interface ScalingTargetPolicy {
   readonly cooldown?: number;
 
   /**
-   * @schema ScalingTargetPolicy#dimension
+   * @schema ScalingTargetPolicy#target
    */
-  readonly dimension?: Dimension[];
+  readonly target?: number;
 
   /**
    * @schema ScalingTargetPolicy#predictive
@@ -1386,17 +1381,16 @@ export function toJson_ScalingTargetPolicy(obj: ScalingTargetPolicy | undefined)
   if (obj === undefined) { return undefined; }
   const result = {
     'policyName': obj.policyName,
+    'namespace': obj.namespace,
+    'source': obj.source,
     'metricName': obj.metricName,
+    'dimension': obj.dimension?.map(y => toJson_Dimension(y)),
     'statistic': obj.statistic,
     'unit': obj.unit,
-    'target': obj.target,
-    'namespace': obj.namespace,
-    'maxCapacityPerScale': obj.maxCapacityPerScale,
-    'source': obj.source,
     'period': obj.period,
     'evaluationPeriods': obj.evaluationPeriods,
     'cooldown': obj.cooldown,
-    'dimension': obj.dimension?.map(y => toJson_Dimension(y)),
+    'target': obj.target,
     'predictive': toJson_ScalingTargetPolicyPredictive(obj.predictive),
   };
   // filter undefined values
@@ -2473,11 +2467,6 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfaces {
   readonly networkInterfaceId?: string;
 
   /**
-   * @schema CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfaces#privateIpAddress
-   */
-  readonly privateIpAddress?: string;
-
-  /**
    * @schema CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfaces#privateIpAddresses
    */
   readonly privateIpAddresses?: CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfacesPrivateIpAddresses[];
@@ -2508,7 +2497,6 @@ export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterf
     'deleteOnTermination': obj.deleteOnTermination,
     'groups': obj.groups?.map(y => y),
     'networkInterfaceId': obj.networkInterfaceId,
-    'privateIpAddress': obj.privateIpAddress,
     'privateIpAddresses': obj.privateIpAddresses?.map(y => toJson_CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfacesPrivateIpAddresses(y)),
     'subnetId': obj.subnetId,
     'associateIpv6Address': obj.associateIpv6Address,
@@ -2716,37 +2704,6 @@ export function toJson_CfnGroupPropsGroupScalingMultipleMetricsExpressions(obj: 
 /* eslint-enable max-len, quote-props */
 
 /**
- * @schema ScaleUpStepAdjustment
- */
-export interface ScaleUpStepAdjustment {
-  /**
-   * @schema ScaleUpStepAdjustment#threshold
-   */
-  readonly threshold?: number;
-
-  /**
-   * @schema ScaleUpStepAdjustment#action
-   */
-  readonly action?: ScaleUpAction;
-
-}
-
-/**
- * Converts an object of type 'ScaleUpStepAdjustment' to JSON representation.
- */
-/* eslint-disable max-len, quote-props */
-export function toJson_ScaleUpStepAdjustment(obj: ScaleUpStepAdjustment | undefined): Record<string, any> | undefined {
-  if (obj === undefined) { return undefined; }
-  const result = {
-    'threshold': obj.threshold,
-    'action': toJson_ScaleUpAction(obj.action),
-  };
-  // filter undefined values
-  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
-}
-/* eslint-enable max-len, quote-props */
-
-/**
  * @schema Dimension
  */
 export interface Dimension {
@@ -2778,6 +2735,37 @@ export function toJson_Dimension(obj: Dimension | undefined): Record<string, any
 /* eslint-enable max-len, quote-props */
 
 /**
+ * @schema ScaleUpStepAdjustment
+ */
+export interface ScaleUpStepAdjustment {
+  /**
+   * @schema ScaleUpStepAdjustment#threshold
+   */
+  readonly threshold?: number;
+
+  /**
+   * @schema ScaleUpStepAdjustment#action
+   */
+  readonly action?: ScaleUpAction;
+
+}
+
+/**
+ * Converts an object of type 'ScaleUpStepAdjustment' to JSON representation.
+ */
+/* eslint-disable max-len, quote-props */
+export function toJson_ScaleUpStepAdjustment(obj: ScaleUpStepAdjustment | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'threshold': obj.threshold,
+    'action': toJson_ScaleUpAction(obj.action),
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, quote-props */
+
+/**
  * @schema ScaleUpAction
  */
 export interface ScaleUpAction {
@@ -2785,6 +2773,16 @@ export interface ScaleUpAction {
    * @schema ScaleUpAction#type
    */
   readonly type?: string;
+
+  /**
+   * @schema ScaleUpAction#adjustment
+   */
+  readonly adjustment?: string;
+
+  /**
+   * @schema ScaleUpAction#minTargetCapacity
+   */
+  readonly minTargetCapacity?: string;
 
   /**
    * @schema ScaleUpAction#target
@@ -2811,6 +2809,8 @@ export function toJson_ScaleUpAction(obj: ScaleUpAction | undefined): Record<str
   if (obj === undefined) { return undefined; }
   const result = {
     'type': obj.type,
+    'adjustment': obj.adjustment,
+    'minTargetCapacity': obj.minTargetCapacity,
     'target': obj.target,
     'minimum': obj.minimum,
     'maximum': obj.maximum,
@@ -2861,6 +2861,16 @@ export interface ScaleDownAction {
   readonly type?: string;
 
   /**
+   * @schema ScaleDownAction#adjustment
+   */
+  readonly adjustment?: string;
+
+  /**
+   * @schema ScaleDownAction#maxTargetCapacity
+   */
+  readonly maxTargetCapacity?: string;
+
+  /**
    * @schema ScaleDownAction#target
    */
   readonly target?: string;
@@ -2885,6 +2895,8 @@ export function toJson_ScaleDownAction(obj: ScaleDownAction | undefined): Record
   if (obj === undefined) { return undefined; }
   const result = {
     'type': obj.type,
+    'adjustment': obj.adjustment,
+    'maxTargetCapacity': obj.maxTargetCapacity,
     'target': obj.target,
     'minimum': obj.minimum,
     'maximum': obj.maximum,
@@ -3742,7 +3754,7 @@ export interface BlockDeviceMappingEbs {
   /**
    * @schema BlockDeviceMappingEbs#volumeType
    */
-  readonly volumeType?: BlockDeviceMappingEbsVolumeType;
+  readonly volumeType?: string;
 
   /**
    * @schema BlockDeviceMappingEbs#throughput
@@ -4278,18 +4290,6 @@ export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGrou
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
 /* eslint-enable max-len, quote-props */
-
-/**
- * @schema BlockDeviceMappingEbsVolumeType
- */
-export enum BlockDeviceMappingEbsVolumeType {
-  /** standard */
-  STANDARD = "standard",
-  /** io1 */
-  IO1 = "io1",
-  /** gp2 */
-  GP2 = "gp2",
-}
 
 /**
  * @schema BlockDeviceMappingEbsDynamicVolumeSize

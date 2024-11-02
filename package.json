@@ -54,7 +54,7 @@
     "eslint-plugin-import": "^2.31.0",
     "jest": "^27.5.1",
     "jest-junit": "^15",
-    "jsii": "^5.5.4",
+    "jsii": "^5.5.8",
     "jsii-pacmak": "^1.104.0",
     "jsii-rosetta": "^5.5.5",
     "projen": "^0.88.0",

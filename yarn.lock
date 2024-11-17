@@ -1421,15 +1421,15 @@ case@1.6.3, case@^1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-import@^0.2.112:
-  version "0.2.824"
-  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.824.tgz#ff6bcdaa1ecfe82611de97c0daa51f5805b1b9a9"
-  integrity sha512-O9wwydK9CmnUy1PWKHED8GDu92KRRdJMzaZFtjwDPY6S8nZFrTFLNRza5srUlccPr209SvT9DyHvu64/imO4DA==
+  version "0.2.825"
+  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.825.tgz#29eeb41bce3f8c8fcfac26452451165cadb1607d"
+  integrity sha512-pPaExNNPbY4lqhyMNfi6RWJEWUHfBElEh/jy5Uk8G53dUi0QZ08mF/WjK9VFoinm94SKZHSe0tjEcBDerXRvew==
   dependencies:
     aws-cdk-lib "^2.167.1"
     aws-sdk "^2.1692.0"
     case "^1.6.3"
     constructs "^10"
-    jsii-srcmak "^0.1.1301"
+    jsii-srcmak "^0.1.1302"
     json2jsii "^0.5.2"
     minimist "^1.2.8"
     minimist-subcommand "^3.0.2"
@@ -3791,7 +3791,7 @@ jsii-reflect@^1.105.0:
     oo-ascii-tree "^1.105.0"
     yargs "^16.2.0"
 
-jsii-rosetta@^5.5.13, jsii-rosetta@^5.6.0:
+jsii-rosetta@^5.6.0:
   version "5.6.0"
   resolved "https://registry.yarnpkg.com/jsii-rosetta/-/jsii-rosetta-5.6.0.tgz#7435a9aa83d41abe2d3a5a54dceeb6ffb3443ea9"
   integrity sha512-PSt2PFK1ssLcRAiGnK+k0On61Idh8uTCJcofC+vPr3dOgbVNbtIVI70z9Uw2bOwByrJ+ApHewubi7cWhybEcrA==
@@ -3810,15 +3810,15 @@ jsii-rosetta@^5.5.13, jsii-rosetta@^5.6.0:
     workerpool "^6.5.1"
     yargs "^17.7.2"
 
-jsii-srcmak@^0.1.1301:
-  version "0.1.1302"
-  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.1302.tgz#9ab130d0832c44a925f00567da73cbf7920ff3ee"
-  integrity sha512-DfvcTWJGEuiYCPa6lwS499OFyWvF+LqxhePehmGFj/nd0yzo3B14p8d5b2y5VD6QfMbHb/Ijk3JSyyGLZtg2Bw==
+jsii-srcmak@^0.1.1302:
+  version "0.1.1303"
+  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.1303.tgz#59ef6c4b88ddabc08ed549df4d462f84b8d28a6f"
+  integrity sha512-CYdlxqCQRPCWBOtO4zIQuA6/H8Hr0IgFNz9mc4g2wm7kZMOWoI8bvWxT4NpDAq7TGVrpb6U86yUA23dWSxcg8A==
   dependencies:
     fs-extra "^9.1.0"
     jsii "~5.6.0"
     jsii-pacmak "^1.105.0"
-    jsii-rosetta "^5.5.13"
+    jsii-rosetta "^5.6.0"
     ncp "^2.0.0"
     yargs "^17.7.2"
 

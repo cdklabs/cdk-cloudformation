@@ -135,6 +135,7 @@ jobs:
           - mongodb-atlas-networkpeering
           - mongodb-atlas-project
           - mongodb-atlas-projectipaccesslist
+          - netapp-fsxn-link-module
           - newrelic-agent-configuration
           - newrelic-alert-alertspolicy
           - newrelic-alert-nrqlconditionstatic

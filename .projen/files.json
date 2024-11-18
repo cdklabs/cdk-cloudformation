@@ -121,6 +121,7 @@
     ".github/workflows/release-mongodb-atlas-networkpeering.yml",
     ".github/workflows/release-mongodb-atlas-project.yml",
     ".github/workflows/release-mongodb-atlas-projectipaccesslist.yml",
+    ".github/workflows/release-netapp-fsxn-link-module.yml",
     ".github/workflows/release-newrelic-agent-configuration.yml",
     ".github/workflows/release-newrelic-alert-alertspolicy.yml",
     ".github/workflows/release-newrelic-alert-nrqlconditionstatic.yml",

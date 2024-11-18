@@ -46,7 +46,7 @@ that version from your package manager.
 
 <!--STATUS-BEGIN-->
 
-Release status for 175 libraries:
+Release status for 176 libraries:
 
 * [![aqua-enterprise-enforcer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml)
 * [![aqua-enterprise-kubeenforcer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-kubeenforcer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-kubeenforcer.yml)
@@ -155,6 +155,7 @@ Release status for 175 libraries:
 * [![logzio-kinesisshipper-kinesisshipper-module](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-logzio-kinesisshipper-kinesisshipper-module.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-logzio-kinesisshipper-kinesisshipper-module.yml)
 * [![logzio-myservice-myname-module](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-logzio-myservice-myname-module.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-logzio-myservice-myname-module.yml)
 * [![mavi-pipeline-default-module](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mavi-pipeline-default-module.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-mavi-pipeline-default-module.yml)
+* [![netapp-fsxn-link-module](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-netapp-fsxn-link-module.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-netapp-fsxn-link-module.yml)
 * [![newrelic-agent-configuration](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-agent-configuration.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-agent-configuration.yml)
 * [![newrelic-alert-alertspolicy](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-alert-alertspolicy.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-alert-alertspolicy.yml)
 * [![newrelic-alert-nrqlconditionstatic](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-alert-nrqlconditionstatic.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-alert-nrqlconditionstatic.yml)

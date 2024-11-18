@@ -1421,15 +1421,15 @@ case@1.6.3, case@^1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-import@^0.2.112:
-  version "0.2.825"
-  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.825.tgz#29eeb41bce3f8c8fcfac26452451165cadb1607d"
-  integrity sha512-pPaExNNPbY4lqhyMNfi6RWJEWUHfBElEh/jy5Uk8G53dUi0QZ08mF/WjK9VFoinm94SKZHSe0tjEcBDerXRvew==
+  version "0.2.826"
+  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.826.tgz#aca70cd382c7adf49a6a266ada879de49c716c91"
+  integrity sha512-L15uGOxd2aJbWgLzVvPyUoTEembzCSQcGmNfQWPqymH2Mz5ryIZ1vyjKcM8a8e5nPaBIFF31Psswthl1XWoJCQ==
   dependencies:
     aws-cdk-lib "^2.167.1"
     aws-sdk "^2.1692.0"
     case "^1.6.3"
     constructs "^10"
-    jsii-srcmak "^0.1.1302"
+    jsii-srcmak "^0.1.1303"
     json2jsii "^0.5.2"
     minimist "^1.2.8"
     minimist-subcommand "^3.0.2"
@@ -3810,7 +3810,7 @@ jsii-rosetta@^5.6.0:
     workerpool "^6.5.1"
     yargs "^17.7.2"
 
-jsii-srcmak@^0.1.1302:
+jsii-srcmak@^0.1.1303:
   version "0.1.1303"
   resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.1303.tgz#59ef6c4b88ddabc08ed549df4d462f84b8d28a6f"
   integrity sha512-CYdlxqCQRPCWBOtO4zIQuA6/H8Hr0IgFNz9mc4g2wm7kZMOWoI8bvWxT4NpDAq7TGVrpb6U86yUA23dWSxcg8A==

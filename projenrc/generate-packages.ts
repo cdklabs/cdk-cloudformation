@@ -111,11 +111,19 @@ export function generatePackages(root: typescript.TypeScriptProject, options: Ge
     name: 'Build Individual',
     permissions: {},
     runsOn: ['ubuntu-latest'],
+    if: 'always()',
     needs: ['build-all'],
-    steps: [{
-      name: 'OK',
-      run: 'echo OK',
-    }],
+    steps: [
+      {
+        name: 'Show Matrix Build Result',
+        run: 'echo ${{ needs.build-all.result }}',
+      },
+      {
+        if: '${{ needs.build-all.result != \'success\' }}',
+        name: 'Set Status',
+        run: 'exit 1',
+      },
+    ],
   });
 
   return projects;

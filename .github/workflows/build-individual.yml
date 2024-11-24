@@ -22,7 +22,6 @@ jobs:
       fail-fast: false
       matrix:
         project:
-          - alexa-ask-skill
           - aqua-enterprise-enforcer
           - aqua-enterprise-kubeenforcer
           - aqua-enterprise-scanner
@@ -32,31 +31,23 @@ jobs:
           - atlassian-opsgenie-user
           - awscommunity-account-alternatecontact
           - awscommunity-applicationautoscaling-scheduledaction
-          - awscommunity-cloudfront-s3website-module
           - awscommunity-dynamodb-item
           - awscommunity-resource-lookup
-          - awscommunity-s3-bucket-module
           - awscommunity-s3-deletebucketcontents
           - awscommunity-time-offset
           - awscommunity-time-sleep
           - awscommunity-time-static
-          - awsqs-checkpoint-cloudguardqs-module
-          - awsqs-ec2-linuxbastionqs-module
           - awsqs-eks-cluster
-          - awsqs-iridium-cloudconnectqs-module
           - awsqs-kubernetes-get
           - awsqs-kubernetes-helm
           - awsqs-kubernetes-resource
-          - awsqs-vpc-vpcqs-module
           - bigid-datasource-dynamodb
           - bigid-datasource-s3
-          - cadiaz-bucket-uno-module
           - cloudflare-dns-record
           - cloudflare-loadbalancer-loadbalancer
           - cloudflare-loadbalancer-monitor
           - cloudflare-loadbalancer-pool
           - confluentcloud-iam-serviceaccount
-          - cyral-sidecar-deployment-module
           - databricks-clusters-cluster
           - databricks-clusters-job
           - datadog-dashboards-dashboard
@@ -84,17 +75,6 @@ jobs:
           - fastly-tls-domain
           - fastly-tls-privatekeys
           - fireeye-cloudintegrations-cloudwatch
-          - freyraim-impactapi-apigateway-module
-          - freyraim-impactapi-apihandle-module
-          - freyraim-impactapi-ec2instance-module
-          - freyraim-impactapi-lambdafunction-module
-          - freyraim-impactapi-loadbalancer-module
-          - freyraim-spider-cloudfront-module
-          - freyraim-spider-ec2instance-module
-          - freyraim-spider-ecs-module
-          - freyraim-spider-loadbalancer-module
-          - freyraim-spider-postgresql-module
-          - freyraim-spider-s3bucket-module
           - generic-database-schema
           - generic-transcribe-vocabulary
           - github-git-tag
@@ -116,32 +96,9 @@ jobs:
           - gitlab-projects-project
           - gitlab-projects-usermemberofproject
           - gremlin-agent-helm
-          - jfrog-artifactory-core-module
-          - jfrog-artifactory-ec2instance-module
-          - jfrog-artifactory-existingvpc-module
-          - jfrog-artifactory-newvpc-module
-          - jfrog-linux-bastion-module
-          - jfrog-vpc-multiaz-module
-          - jfrog-xray-ec2instance-module
-          - karte-eventbridge-documentdb-module
-          - logzio-autodeploymentlogzio-cloudwatch-module
-          - logzio-awscostandusage-cur-module
-          - logzio-awssecurityhub-collector-module
-          - logzio-kinesisshipper-kinesisshipper-module
-          - logzio-myservice-myname-module
-          - mavi-pipeline-default-module
-          - mongodb-atlas-cluster
-          - mongodb-atlas-databaseuser
-          - mongodb-atlas-networkpeering
-          - mongodb-atlas-project
-          - mongodb-atlas-projectipaccesslist
-          - netapp-fsxn-link-module
           - newrelic-agent-configuration
           - newrelic-alert-alertspolicy
           - newrelic-alert-nrqlconditionstatic
-          - newrelic-cloudformation-dashboards
-          - newrelic-cloudformation-tagging
-          - newrelic-cloudformation-workloads
           - newrelic-observability-ainotificationschannel
           - newrelic-observability-ainotificationsdestination
           - newrelic-observability-aiworkflows
@@ -155,7 +112,6 @@ jobs:
           - okta-group-groupapplicationassociation
           - okta-group-membership
           - okta-policy-policy
-          - org-test-sample-module
           - pagerduty-escalationpolicies-escalationpolicy
           - pagerduty-responseplays-responseplay
           - pagerduty-schedules-schedule
@@ -167,7 +123,6 @@ jobs:
           - paloaltonetworks-cloudngfw-ngfw
           - paloaltonetworks-cloudngfw-rulestack
           - poc-azure-blobstorage
-          - registry-test-resource1-module
           - rollbar-notifications-rule
           - rollbar-projects-accesstoken
           - rollbar-projects-project
@@ -180,13 +135,10 @@ jobs:
           - snowflake-user-user
           - snowflake-warehouse-grant
           - snyk-container-helm
-          - splunk-enterprise-quickstart-module
           - spot-elastigroup-group
-          - stackery-open-bastion-module
           - stocks-orders-marketorder
           - svectordb-vectordatabase-apikey
           - svectordb-vectordatabase-database
-          - symphonia-opensource-cloudformationartifactsbucket-module
           - sysdig-helm-agent
           - tf-ad-computer
           - tf-ad-user
@@ -203,8 +155,6 @@ jobs:
           - tf-random-string
           - tf-random-uuid
           - trendmicro-cloudonecontainer-helm
-          - unxpose-iam-integration-module
-          - zmk-iam-lambdabasicrole-module
     container:
       image: jsii/superchain:1-bullseye-slim-node20
   build-okay:

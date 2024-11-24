@@ -22,6 +22,7 @@ jobs:
       fail-fast: false
       matrix:
         project:
+          - alexa-ask-skill
           - aqua-enterprise-enforcer
           - aqua-enterprise-kubeenforcer
           - aqua-enterprise-scanner
@@ -96,9 +97,17 @@ jobs:
           - gitlab-projects-project
           - gitlab-projects-usermemberofproject
           - gremlin-agent-helm
+          - mongodb-atlas-cluster
+          - mongodb-atlas-databaseuser
+          - mongodb-atlas-networkpeering
+          - mongodb-atlas-project
+          - mongodb-atlas-projectipaccesslist
           - newrelic-agent-configuration
           - newrelic-alert-alertspolicy
           - newrelic-alert-nrqlconditionstatic
+          - newrelic-cloudformation-dashboards
+          - newrelic-cloudformation-tagging
+          - newrelic-cloudformation-workloads
           - newrelic-observability-ainotificationschannel
           - newrelic-observability-ainotificationsdestination
           - newrelic-observability-aiworkflows

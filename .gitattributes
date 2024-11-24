@@ -10,6 +10,7 @@
 /.github/workflows/build-individual.yml linguist-generated
 /.github/workflows/build.yml linguist-generated
 /.github/workflows/pull-request-lint.yml linguist-generated
+/.github/workflows/release-alexa-ask-skill.yml linguist-generated
 /.github/workflows/release-aqua-enterprise-enforcer.yml linguist-generated
 /.github/workflows/release-aqua-enterprise-kubeenforcer.yml linguist-generated
 /.github/workflows/release-aqua-enterprise-scanner.yml linguist-generated
@@ -84,9 +85,17 @@
 /.github/workflows/release-gitlab-projects-project.yml linguist-generated
 /.github/workflows/release-gitlab-projects-usermemberofproject.yml linguist-generated
 /.github/workflows/release-gremlin-agent-helm.yml linguist-generated
+/.github/workflows/release-mongodb-atlas-cluster.yml linguist-generated
+/.github/workflows/release-mongodb-atlas-databaseuser.yml linguist-generated
+/.github/workflows/release-mongodb-atlas-networkpeering.yml linguist-generated
+/.github/workflows/release-mongodb-atlas-project.yml linguist-generated
+/.github/workflows/release-mongodb-atlas-projectipaccesslist.yml linguist-generated
 /.github/workflows/release-newrelic-agent-configuration.yml linguist-generated
 /.github/workflows/release-newrelic-alert-alertspolicy.yml linguist-generated
 /.github/workflows/release-newrelic-alert-nrqlconditionstatic.yml linguist-generated
+/.github/workflows/release-newrelic-cloudformation-dashboards.yml linguist-generated
+/.github/workflows/release-newrelic-cloudformation-tagging.yml linguist-generated
+/.github/workflows/release-newrelic-cloudformation-workloads.yml linguist-generated
 /.github/workflows/release-newrelic-observability-ainotificationschannel.yml linguist-generated
 /.github/workflows/release-newrelic-observability-ainotificationsdestination.yml linguist-generated
 /.github/workflows/release-newrelic-observability-aiworkflows.yml linguist-generated

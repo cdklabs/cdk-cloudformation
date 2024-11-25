@@ -171,6 +171,10 @@ jobs:
     needs: build-all
     runs-on: ubuntu-latest
     permissions: {}
+    if: always()
     steps:
-      - name: OK
-        run: echo OK
+      - name: Show Matrix Build Result
+        run: echo ${{ needs.build-all.result }}
+      - name: Set Status
+        if: ${{ needs.build-all.result != 'success' }}
+        run: exit 1

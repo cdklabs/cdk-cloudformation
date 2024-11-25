@@ -68,7 +68,7 @@ test('CloudFormationTypeProject with deprecation', () => {
     defaultReleaseBranch: 'main',
   });
 
-  const typedef = JSON.parse(readFileSync(join(__dirname, '../registry/types/registry-test-resource1-module.json'), 'utf-8'));
+  const typedef = JSON.parse(readFileSync(join(__dirname, '../registry/types/tf-random-uuid.json'), 'utf-8'));
 
   new CloudFormationTypeProject(root, {
     packagesDir: 'my-packages',
@@ -77,8 +77,8 @@ test('CloudFormationTypeProject with deprecation', () => {
   });
 
   const snapshot = Testing.synth(root);
-  const pkgJson = snapshot['my-packages/@cdk-cloudformation/registry-test-resource1-module/package.json'];
-  const readme = snapshot['my-packages/@cdk-cloudformation/registry-test-resource1-module/README.md'];
+  const pkgJson = snapshot['my-packages/@cdk-cloudformation/tf-random-uuid/package.json'];
+  const readme = snapshot['my-packages/@cdk-cloudformation/tf-random-uuid/README.md'];
   expect(readme).toEqual(expect.stringMatching(/.*this project is deprecated.*/));
   expect(pkgJson.deprecated).toStrictEqual(true);
 });

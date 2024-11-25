@@ -18,10 +18,10 @@ function isDeprecated(typeName) {
 async function main() {
   let nextToken = undefined;
   do {
-    const response = await cfn.listTypes({ Visibility: 'PUBLIC', NextToken: nextToken }).promise();
+    const response = await cfn.listTypes({ Type: 'RESOURCE', Visibility: 'PUBLIC', NextToken: nextToken }).promise();
     for (const type of response.TypeSummaries ?? []) {
-      // skip any Hooks, 1st party and any deprecated types
-      if (type.Type === 'HOOK' || type.TypeName.startsWith('AWS::') || isDeprecated(type.TypeName)) {
+      // skip 1st party and any deprecated types
+      if (type.TypeName.startsWith('AWS::') || isDeprecated(type.TypeName)) {
         continue;
       }
 

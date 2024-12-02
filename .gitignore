@@ -380,6 +380,15 @@ junit.xml
 /packages/@cdk-cloudformation/poc-azure-blobstorage/dist/
 /packages/@cdk-cloudformation/poc-azure-blobstorage/lib/
 !/.github/workflows/release-poc-azure-blobstorage.yml
+/packages/@cdk-cloudformation/redis-cloudformation-prodatabase/dist/
+/packages/@cdk-cloudformation/redis-cloudformation-prodatabase/lib/
+!/.github/workflows/release-redis-cloudformation-prodatabase.yml
+/packages/@cdk-cloudformation/redis-cloudformation-prosubscription/dist/
+/packages/@cdk-cloudformation/redis-cloudformation-prosubscription/lib/
+!/.github/workflows/release-redis-cloudformation-prosubscription.yml
+/packages/@cdk-cloudformation/redis-cloudformation-subscriptionpeering/dist/
+/packages/@cdk-cloudformation/redis-cloudformation-subscriptionpeering/lib/
+!/.github/workflows/release-redis-cloudformation-subscriptionpeering.yml
 /packages/@cdk-cloudformation/rollbar-notifications-rule/dist/
 /packages/@cdk-cloudformation/rollbar-notifications-rule/lib/
 !/.github/workflows/release-rollbar-notifications-rule.yml

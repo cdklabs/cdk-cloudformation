@@ -132,6 +132,9 @@ jobs:
           - paloaltonetworks-cloudngfw-ngfw
           - paloaltonetworks-cloudngfw-rulestack
           - poc-azure-blobstorage
+          - redis-cloudformation-prodatabase
+          - redis-cloudformation-prosubscription
+          - redis-cloudformation-subscriptionpeering
           - rollbar-notifications-rule
           - rollbar-projects-accesstoken
           - rollbar-projects-project

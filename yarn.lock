@@ -264,9 +264,9 @@
     "@babel/types" "^7.25.9"
 
 "@babel/traverse@^7.25.9", "@babel/traverse@^7.7.2":
-  version "7.26.3"
-  resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.26.3.tgz#1ebfc75bd748d8f96b3cc63af5e82ebd4c37ba35"
-  integrity sha512-yTmc8J+Sj8yLzwr4PD5Xb/WF3bOYu2C2OoSZPzbuqRm4n98XirsbzaX+GloeO376UnSYIYJ4NCanwV5/ugZkwA==
+  version "7.26.4"
+  resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.26.4.tgz#ac3a2a84b908dde6d463c3bfa2c5fdc1653574bd"
+  integrity sha512-fH+b7Y4p3yqvApJALCPJcwb0/XaOSgtK4pzV6WVjPR5GLFQBRI7pfoX2V2iM48NXvX07NUxxm1Vw98YjqTcU5w==
   dependencies:
     "@babel/code-frame" "^7.26.2"
     "@babel/generator" "^7.26.3"
@@ -919,9 +919,9 @@
   integrity sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==
 
 "@xmldom/xmldom@^0.9.5":
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/@xmldom/xmldom/-/xmldom-0.9.5.tgz#a2c08c3a0c5931daae67dd0385edf2f464d1fee4"
-  integrity sha512-6g1EwSs8cr8JhP1iBxzyVAWM6BIDvx9Y3FZRIQiMDzgG43Pxi8YkWOZ0nQj2NHgNzgXDZbJewFx/n+YAvMZrfg==
+  version "0.9.6"
+  resolved "https://registry.yarnpkg.com/@xmldom/xmldom/-/xmldom-0.9.6.tgz#3eaefb585c1f920e06fb35e6dcb8d505445621c0"
+  integrity sha512-Su4xcxR0CPGwlDHNmVP09fqET9YxbyDXHaSob6JlBH7L6reTYaeim6zbk9o08UarO0L5GTRo3uzl0D+9lSxmvw==
 
 JSONStream@^1.3.5:
   version "1.3.5"
@@ -1413,9 +1413,9 @@ case@1.6.3, case@^1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-import@^0.2.112:
-  version "0.2.840"
-  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.840.tgz#cc7e15ecde12d9ccc09a137797e21145da6c1dd6"
-  integrity sha512-XEBZ0ySs3iR14HKeUKTfOQE2o9zDXEizUUEKZEa3NA4hYSUatAr8n+9Jl9ku0PnVIwcAqZ5GGfKUHekrh7BzDQ==
+  version "0.2.841"
+  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.841.tgz#fe9732b6ccd426ba71025e34a4a3f93890ff8850"
+  integrity sha512-rv/45CF4r/E/8KgkE8DT5C4MszPI2epeE0saUlf9svVFsHZ4NP3+oQEOHYWoP+ixToqW1Eoj0AlxGNhtQvrQsw==
   dependencies:
     aws-cdk-lib "^2.171.1"
     aws-sdk "^2.1692.0"
@@ -2036,9 +2036,9 @@ dotgitignore@^2.1.0:
     minimatch "^3.0.4"
 
 electron-to-chromium@^1.5.41:
-  version "1.5.68"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.68.tgz#4f46be4d465ef00e2100d5557b66f4af70e3ce6c"
-  integrity sha512-FgMdJlma0OzUYlbrtZ4AeXjKxKPk6KT8WOP8BjcqxWtlg8qyJQjRzPJzUtUn5GBg1oQ26hFs7HOOHJMYiJRnvQ==
+  version "1.5.71"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.71.tgz#d8b5dba1e55b320f2f4e9b1ca80738f53fcfec2b"
+  integrity sha512-dB68l59BI75W1BUGVTAEJy45CEVuEGy9qPVVQ8pnHyHMn36PLPPoE1mjLH+lo9rKulO3HC2OhbACI/8tCqJBcA==
 
 emittery@^0.8.1:
   version "0.8.1"
@@ -3845,9 +3845,9 @@ jsii-rosetta@^5.6.2:
     yargs "^17.7.2"
 
 jsii-srcmak@^0.1.1307:
-  version "0.1.1307"
-  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.1307.tgz#a0bc7d6603b4aa2237cd40407ac8ba3f436eb90a"
-  integrity sha512-XUCy2Bmg1N6XKE/QgwOoh7y5jk2jG90PhHRsXeznRfuruUZviy/9oceBZH99yMs9FOYWXGeozg+LIUBx4H/uXg==
+  version "0.1.1308"
+  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.1308.tgz#8aa9f9366e2e65ec40531b57b9a82d3e8ba8a34e"
+  integrity sha512-+jSOHWXE/nmA5c2B3tQ3bsuaXXVWnvFq3bq+2cbNCHjX6wiJggNfJ6WEm9LVvCeOg4eJAaJV8NgeT/nE83zOlw==
   dependencies:
     fs-extra "^9.1.0"
     jsii "~5.7.1"

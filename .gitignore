@@ -380,6 +380,12 @@ junit.xml
 /packages/@cdk-cloudformation/poc-azure-blobstorage/dist/
 /packages/@cdk-cloudformation/poc-azure-blobstorage/lib/
 !/.github/workflows/release-poc-azure-blobstorage.yml
+/packages/@cdk-cloudformation/redis-cloud-database/dist/
+/packages/@cdk-cloudformation/redis-cloud-database/lib/
+!/.github/workflows/release-redis-cloud-database.yml
+/packages/@cdk-cloudformation/redis-cloud-subscription/dist/
+/packages/@cdk-cloudformation/redis-cloud-subscription/lib/
+!/.github/workflows/release-redis-cloud-subscription.yml
 /packages/@cdk-cloudformation/redis-cloudformation-prodatabase/dist/
 /packages/@cdk-cloudformation/redis-cloudformation-prodatabase/lib/
 !/.github/workflows/release-redis-cloudformation-prodatabase.yml

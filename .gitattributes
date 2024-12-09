@@ -120,6 +120,8 @@
 /.github/workflows/release-paloaltonetworks-cloudngfw-ngfw.yml linguist-generated
 /.github/workflows/release-paloaltonetworks-cloudngfw-rulestack.yml linguist-generated
 /.github/workflows/release-poc-azure-blobstorage.yml linguist-generated
+/.github/workflows/release-redis-cloud-database.yml linguist-generated
+/.github/workflows/release-redis-cloud-subscription.yml linguist-generated
 /.github/workflows/release-redis-cloudformation-prodatabase.yml linguist-generated
 /.github/workflows/release-redis-cloudformation-prosubscription.yml linguist-generated
 /.github/workflows/release-redis-cloudformation-subscriptionpeering.yml linguist-generated

@@ -46,7 +46,7 @@ that version from your package manager.
 
 <!--STATUS-BEGIN-->
 
-Release status for 139 libraries:
+Release status for 141 libraries:
 
 * [![aqua-enterprise-enforcer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml)
 * [![aqua-enterprise-kubeenforcer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-kubeenforcer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-kubeenforcer.yml)
@@ -152,6 +152,8 @@ Release status for 139 libraries:
 * [![paloaltonetworks-cloudngfw-ngfw](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-paloaltonetworks-cloudngfw-ngfw.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-paloaltonetworks-cloudngfw-ngfw.yml)
 * [![paloaltonetworks-cloudngfw-rulestack](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-paloaltonetworks-cloudngfw-rulestack.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-paloaltonetworks-cloudngfw-rulestack.yml)
 * [![poc-azure-blobstorage](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-poc-azure-blobstorage.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-poc-azure-blobstorage.yml)
+* [![redis-cloud-database](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-redis-cloud-database.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-redis-cloud-database.yml)
+* [![redis-cloud-subscription](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-redis-cloud-subscription.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-redis-cloud-subscription.yml)
 * [![redis-cloudformation-prodatabase](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-redis-cloudformation-prodatabase.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-redis-cloudformation-prodatabase.yml)
 * [![redis-cloudformation-prosubscription](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-redis-cloudformation-prosubscription.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-redis-cloudformation-prosubscription.yml)
 * [![redis-cloudformation-subscriptionpeering](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-redis-cloudformation-subscriptionpeering.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-redis-cloudformation-subscriptionpeering.yml)

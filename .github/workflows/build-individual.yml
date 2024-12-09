@@ -132,6 +132,8 @@ jobs:
           - paloaltonetworks-cloudngfw-ngfw
           - paloaltonetworks-cloudngfw-rulestack
           - poc-azure-blobstorage
+          - redis-cloud-database
+          - redis-cloud-subscription
           - redis-cloudformation-prodatabase
           - redis-cloudformation-prosubscription
           - redis-cloudformation-subscriptionpeering

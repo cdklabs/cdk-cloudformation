@@ -1183,10 +1183,10 @@ aws-cdk-github-oidc@^2.2.0:
   resolved "https://registry.yarnpkg.com/aws-cdk-github-oidc/-/aws-cdk-github-oidc-2.4.1.tgz#8fcb134401f3a15d74260e5bcc58ed05dabac2a0"
   integrity sha512-zKQYPGyf5f6APG76OpOxW6P7KGY/fC6VhN1ZullxySSu6RroUH9VtVl+cJ8hYes5XvEE/ZDpx2h2fPtNwZrcVQ==
 
-aws-cdk-lib@2.173.2, aws-cdk-lib@^2.173.2:
-  version "2.173.2"
-  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.173.2.tgz#9e51332973163eb0d0a89cb67973a89b75c5f0b1"
-  integrity sha512-cL9+z8Pl3VZGoO7BwdsrFAOeud/vSl3at7OvmhihbNprMN15XuFUx/rViAU5OI1m92NbV4NBzYSLbSeCwYLNyw==
+aws-cdk-lib@2.173.4, aws-cdk-lib@^2.173.3, aws-cdk-lib@^2.173.4:
+  version "2.173.4"
+  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.173.4.tgz#a690ea79e976e86c761e118fd055aa24a51b7852"
+  integrity sha512-0reN94TzkWmyVZDDBlYB4qzJUig8wTHEe82YLHlWRUhrU78fT+drVGUr+lYZwwETaZ+8fLdCOl9ULvFNq7iczQ==
   dependencies:
     "@aws-cdk/asset-awscli-v1" "^2.2.208"
     "@aws-cdk/asset-kubectl-v20" "^2.1.3"
@@ -1425,11 +1425,11 @@ case@1.6.3, case@^1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-import@^0.2.112:
-  version "0.2.853"
-  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.853.tgz#fb4b028c25ea207f301576b21f2036d0ef9c3c20"
-  integrity sha512-pxt0912KbzUdbQMuYM/o0j89tapYadyQXRvw6HQdmkXiYO0PCSE+URalALx4lI1y6ETMa+7aIb0l648Y0nyBIw==
+  version "0.2.854"
+  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.854.tgz#ee48a50aae3e84d952bd120283dc268c920ec744"
+  integrity sha512-kj99zR7yOPhCFJyW9oJ7w8QUwHEHktrbZTBY3HdAY4x9Hd+0Bvjiy0gJm2unnrgyit9enGPhcPZkeQESIrE2Kw==
   dependencies:
-    aws-cdk-lib "^2.173.2"
+    aws-cdk-lib "^2.173.3"
     aws-sdk "^2.1692.0"
     case "^1.6.3"
     constructs "^10"

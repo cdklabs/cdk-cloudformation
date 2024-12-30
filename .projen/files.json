@@ -119,6 +119,7 @@
     ".github/workflows/release-paloaltonetworks-cloudngfw-rulestack.yml",
     ".github/workflows/release-poc-azure-blobstorage.yml",
     ".github/workflows/release-redis-cloud-database.yml",
+    ".github/workflows/release-redis-cloud-peering.yml",
     ".github/workflows/release-redis-cloud-subscription.yml",
     ".github/workflows/release-redis-cloudformation-prodatabase.yml",
     ".github/workflows/release-redis-cloudformation-prosubscription.yml",

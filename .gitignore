@@ -383,6 +383,9 @@ junit.xml
 /packages/@cdk-cloudformation/redis-cloud-database/dist/
 /packages/@cdk-cloudformation/redis-cloud-database/lib/
 !/.github/workflows/release-redis-cloud-database.yml
+/packages/@cdk-cloudformation/redis-cloud-peering/dist/
+/packages/@cdk-cloudformation/redis-cloud-peering/lib/
+!/.github/workflows/release-redis-cloud-peering.yml
 /packages/@cdk-cloudformation/redis-cloud-subscription/dist/
 /packages/@cdk-cloudformation/redis-cloud-subscription/lib/
 !/.github/workflows/release-redis-cloud-subscription.yml

@@ -46,7 +46,7 @@ that version from your package manager.
 
 <!--STATUS-BEGIN-->
 
-Release status for 142 libraries:
+Release status for 152 libraries:
 
 * [![aqua-enterprise-enforcer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml)
 * [![aqua-enterprise-kubeenforcer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-kubeenforcer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-kubeenforcer.yml)
@@ -122,6 +122,16 @@ Release status for 142 libraries:
 * [![gitlab-projects-project](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-gitlab-projects-project.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-gitlab-projects-project.yml)
 * [![gitlab-projects-usermemberofproject](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-gitlab-projects-usermemberofproject.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-gitlab-projects-usermemberofproject.yml)
 * [![gremlin-agent-helm](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-gremlin-agent-helm.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-gremlin-agent-helm.yml)
+* [![netapp-fsxn-cifsshare](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-netapp-fsxn-cifsshare.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-netapp-fsxn-cifsshare.yml)
+* [![netapp-fsxn-clusterpeer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-netapp-fsxn-clusterpeer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-netapp-fsxn-clusterpeer.yml)
+* [![netapp-fsxn-exportpolicy](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-netapp-fsxn-exportpolicy.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-netapp-fsxn-exportpolicy.yml)
+* [![netapp-fsxn-igroup](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-netapp-fsxn-igroup.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-netapp-fsxn-igroup.yml)
+* [![netapp-fsxn-lun](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-netapp-fsxn-lun.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-netapp-fsxn-lun.yml)
+* [![netapp-fsxn-snapmirror](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-netapp-fsxn-snapmirror.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-netapp-fsxn-snapmirror.yml)
+* [![netapp-fsxn-snapshot](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-netapp-fsxn-snapshot.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-netapp-fsxn-snapshot.yml)
+* [![netapp-fsxn-snapshotpolicy](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-netapp-fsxn-snapshotpolicy.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-netapp-fsxn-snapshotpolicy.yml)
+* [![netapp-fsxn-svmpeer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-netapp-fsxn-svmpeer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-netapp-fsxn-svmpeer.yml)
+* [![netapp-fsxn-volume](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-netapp-fsxn-volume.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-netapp-fsxn-volume.yml)
 * [![newrelic-agent-configuration](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-agent-configuration.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-agent-configuration.yml)
 * [![newrelic-alert-alertspolicy](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-alert-alertspolicy.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-alert-alertspolicy.yml)
 * [![newrelic-alert-nrqlconditionstatic](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-alert-nrqlconditionstatic.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-newrelic-alert-nrqlconditionstatic.yml)

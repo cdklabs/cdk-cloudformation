@@ -1222,28 +1222,7 @@ aws-cdk-github-oidc@^2.2.0:
   resolved "https://registry.yarnpkg.com/aws-cdk-github-oidc/-/aws-cdk-github-oidc-2.4.1.tgz#8fcb134401f3a15d74260e5bcc58ed05dabac2a0"
   integrity sha512-zKQYPGyf5f6APG76OpOxW6P7KGY/fC6VhN1ZullxySSu6RroUH9VtVl+cJ8hYes5XvEE/ZDpx2h2fPtNwZrcVQ==
 
-aws-cdk-lib@2.174.1:
-  version "2.174.1"
-  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.174.1.tgz#adfce6a1531eef679e1bac9ac277f04976f2f4b2"
-  integrity sha512-4WRd1Qyf+BKIMwEDQdpU+h3daDTTH9nCcEBUUxQnpuswdMUwvjjIkmWmGMnXNZK7PU/715gJK9XCSBaphb3M8g==
-  dependencies:
-    "@aws-cdk/asset-awscli-v1" "^2.2.208"
-    "@aws-cdk/asset-kubectl-v20" "^2.1.3"
-    "@aws-cdk/asset-node-proxy-agent-v6" "^2.1.0"
-    "@aws-cdk/cloud-assembly-schema" "^39.0.1"
-    "@balena/dockerignore" "^1.0.2"
-    case "1.6.3"
-    fs-extra "^11.2.0"
-    ignore "^5.3.2"
-    jsonschema "^1.4.1"
-    mime-types "^2.1.35"
-    minimatch "^3.1.2"
-    punycode "^2.3.1"
-    semver "^7.6.3"
-    table "^6.8.2"
-    yaml "1.10.2"
-
-aws-cdk-lib@^2.175.0:
+aws-cdk-lib@2.175.0, aws-cdk-lib@^2.175.0:
   version "2.175.0"
   resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.175.0.tgz#8103fe1defbbfa4ad9ed323b02215beae4c54642"
   integrity sha512-QZddiS+kFv7SuQtBTUHscO8BHhd3v3BOLMSe1tMR8dE7XvPhY50p6Amqdo4pI6lZqAJma1wC2SZkHmajzTzgVQ==

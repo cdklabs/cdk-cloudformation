@@ -37,9 +37,9 @@
   integrity sha512-7bY3J8GCVxLupn/kNmpPc5VJz8grx+4RKfnnJiO1LG+uxkZfANZG3RMHhE+qQxxwkyQ9/MfPtTpf748UhR425A==
 
 "@aws-cdk/cloud-assembly-schema@^39.0.1":
-  version "39.1.47"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/cloud-assembly-schema/-/cloud-assembly-schema-39.1.47.tgz#5801a406837efa43e74b8444556c04339cec4a00"
-  integrity sha512-gn0eqDJYQu/StmvWXoy3QOYOu9tUMYnoViBqgc9cuAXwkRxD4l1TBsOpN2qPzPEXlrfRjJJ5GRh4wI2s/n0Z7g==
+  version "39.1.48"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/cloud-assembly-schema/-/cloud-assembly-schema-39.1.48.tgz#b5721c8a16016b8ab8dc6ccee155ea087a5ce3b6"
+  integrity sha512-CKntOO+uwLdfi5iDdayPq7DrVBVYL6AJlp+YMtsQ1jYGml14BlnK2BQAw0ftYBnkr+4kFFqNjeoc2mo4XdNOQQ==
   dependencies:
     jsonschema "~1.4.1"
     semver "^7.6.3"
@@ -1464,9 +1464,9 @@ case@1.6.3, case@^1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-import@^0.2.112:
-  version "0.2.870"
-  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.870.tgz#19a6e4ca6319b1927ba51949af2e52636dd374a1"
-  integrity sha512-RSNGuJH/PqcgnV+HfBZqSBxvJgOYbfKFChZpSTQ8kKQkoYblYucHgG/foVAsgfIxkFuGN6LXIXBHlTaEF1IrCw==
+  version "0.2.871"
+  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.871.tgz#c2bc305c6a945a6602fe538a98267e8749569107"
+  integrity sha512-Uj3rgNQuBOMV2fsrEkrQWyO4cFgEs3Ihm1JeVOpRLB9vvvp46LmXbeQxrMsO/RVd7lHA7XWo+RfiUlqhTdQtiA==
   dependencies:
     aws-cdk-lib "^2.176.0"
     aws-sdk "^2.1692.0"

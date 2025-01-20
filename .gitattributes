@@ -90,6 +90,16 @@
 /.github/workflows/release-mongodb-atlas-networkpeering.yml linguist-generated
 /.github/workflows/release-mongodb-atlas-project.yml linguist-generated
 /.github/workflows/release-mongodb-atlas-projectipaccesslist.yml linguist-generated
+/.github/workflows/release-netapp-fsxn-cifsshare.yml linguist-generated
+/.github/workflows/release-netapp-fsxn-clusterpeer.yml linguist-generated
+/.github/workflows/release-netapp-fsxn-exportpolicy.yml linguist-generated
+/.github/workflows/release-netapp-fsxn-igroup.yml linguist-generated
+/.github/workflows/release-netapp-fsxn-lun.yml linguist-generated
+/.github/workflows/release-netapp-fsxn-snapmirror.yml linguist-generated
+/.github/workflows/release-netapp-fsxn-snapshot.yml linguist-generated
+/.github/workflows/release-netapp-fsxn-snapshotpolicy.yml linguist-generated
+/.github/workflows/release-netapp-fsxn-svmpeer.yml linguist-generated
+/.github/workflows/release-netapp-fsxn-volume.yml linguist-generated
 /.github/workflows/release-newrelic-agent-configuration.yml linguist-generated
 /.github/workflows/release-newrelic-alert-alertspolicy.yml linguist-generated
 /.github/workflows/release-newrelic-alert-nrqlconditionstatic.yml linguist-generated

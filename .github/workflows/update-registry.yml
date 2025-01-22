@@ -20,15 +20,35 @@ jobs:
           role-session-name: github-automation
       - run: yarn install
       - run: npx projen update-registry
-      - id: create-pr
-        uses: peter-evans/create-pull-request@v4
+      - name: Create Pull Request
+        id: create-pr
+        uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.PROJEN_GITHUB_TOKEN }}
-          title: "feat: cloudformation registry update"
-          commit-message: "feat: cloudformation registry update"
+          commit-message: |-
+            feat: cloudformation registry update
+
+            This PR was automatically created by a GitHub Action. See details in [workflow run].
+
+            [Workflow Run]: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+            ------
+
+            *Automatically created by projen via the "update-registry" workflow*
           branch: automation/update-registry
-          committer: GitHub Automation <noreply@github.com>
+          title: "feat: cloudformation registry update"
           labels: auto-approve
+          body: |-
+            This PR was automatically created by a GitHub Action. See details in [workflow run].
+
+            [Workflow Run]: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+            ------
+
+            *Automatically created by projen via the "update-registry" workflow*
+          author: GitHub Automation <noreply@github.com>
+          committer: GitHub Automation <noreply@github.com>
+          signoff: true
       - if: steps.create-pr.outputs.pull-request-number != 0
         uses: peter-evans/enable-pull-request-automerge@v2
         with:

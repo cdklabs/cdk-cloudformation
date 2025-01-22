@@ -1,6 +1,6 @@
 import { GithubActionsIdentityProvider, GithubActionsRole } from 'aws-cdk-github-oidc';
 import { PolicyStatement } from 'aws-cdk-lib/aws-iam';
-import { Component, typescript } from 'projen';
+import { Component, typescript, github } from 'projen';
 import { JobPermission } from 'projen/lib/github/workflows-model';
 import { AwsInfrastructure } from './aws-infrastructure';
 
@@ -62,18 +62,21 @@ export class UpdateRegistry extends Component {
           { run: this.project.runTaskCommand(task) },
 
           // create a pull request
-          {
-            uses: 'peter-evans/create-pull-request@v4',
-            id: 'create-pr',
-            with: {
-              'token': '${{ secrets.PROJEN_GITHUB_TOKEN }}',
-              'title': 'feat: cloudformation registry update',
-              'commit-message': 'feat: cloudformation registry update',
-              'branch': 'automation/update-registry',
-              'committer': 'GitHub Automation <noreply@github.com>',
-              'labels': 'auto-approve',
+          ...github.WorkflowActions.createPullRequest({
+            workflowName: workflow.name,
+            stepId: 'create-pr',
+            branchName: 'automation/update-registry',
+            pullRequestTitle: 'feat: cloudformation registry update',
+            pullRequestDescription: 'This PR was automatically created by a GitHub Action',
+            labels: ['auto-approve'],
+            credentials: github.GithubCredentials.fromPersonalAccessToken({
+              secret: 'PROJEN_GITHUB_TOKEN',
+            }),
+            gitIdentity: {
+              name: 'GitHub Automation',
+              email: 'noreply@github.com',
             },
-          },
+          }),
 
           // Auto-approve PR
           {

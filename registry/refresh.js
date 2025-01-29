@@ -54,14 +54,9 @@ async function saveTypeInfo(type) {
 function deduplicateReadOnlyProperties(describeTypeResponse) {
   const schema = JSON.parse(describeTypeResponse.Schema);
 
-  const dedupedProperties = [];
-  for (const prop of schema.readOnlyProperties ?? []) {
-    if (!dedupedProperties.includes(prop)) {
-      dedupedProperties.push(prop);
-    }
-  }
-  if (schema.readOnlyProperties != null) {
-    schema.readOnlyProperties = dedupedProperties;
+  // ensure only unique items are in readOnlyProperties
+  if (Array.isArray(schema.readOnlyProperties)) {
+    schema.readOnlyProperties = Array.from(new Set(schema.readOnlyProperties));
   }
 
   return describeTypeResponse.Schema = JSON.stringify(schema);

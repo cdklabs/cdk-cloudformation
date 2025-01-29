@@ -38,9 +38,33 @@ async function saveTypeInfo(type) {
   const response = await cfn.describeType({ Arn: type.TypeArn }).promise();
   const filename = `${caseutil.kebab(type.TypeName)}.json`;
   const outfile = join(outdir, filename);
-  delete response.ResponseMetadata; // incldes request id and stuff we don't want stored.
+  delete response.ResponseMetadata; // includes request id and stuff we don't want stored.
+  deduplicateReadOnlyProperties(response);
   await fs.writeFile(outfile, JSON.stringify(response, null, 2));
   return filename;
+}
+
+/**
+ * In the schema, the readOnlyProperties array may contain duplicate entries,
+ * which prevents the generation of valid code. This function removes the
+ * duplicates, keeping the rest of the schema intact.
+ *
+ * @param describeTypeResponse The response of the describeType API call
+ */
+function deduplicateReadOnlyProperties(describeTypeResponse) {
+  const schema = JSON.parse(describeTypeResponse.Schema);
+
+  const dedupedProperties = [];
+  for (const prop of schema.readOnlyProperties ?? []) {
+    if (!dedupedProperties.includes(prop)) {
+      dedupedProperties.push(prop);
+    }
+  }
+  if (schema.readOnlyProperties != null) {
+    schema.readOnlyProperties = dedupedProperties;
+  }
+
+  return describeTypeResponse.Schema = JSON.stringify(schema);
 }
 
 async function sleep(ms) {

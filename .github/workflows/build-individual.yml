@@ -57,6 +57,8 @@ jobs:
           - datadog-monitors-downtimeschedule
           - datadog-monitors-monitor
           - datadog-slos-slo
+          - dynatrace-automation-sitereliabilityguardian
+          - dynatrace-automation-workflow
           - dynatrace-configuration-dashboard
           - dynatrace-environment-metric
           - dynatrace-environment-servicelevelobjective
@@ -102,6 +104,16 @@ jobs:
           - mongodb-atlas-networkpeering
           - mongodb-atlas-project
           - mongodb-atlas-projectipaccesslist
+          - netapp-fsxn-cifsshare
+          - netapp-fsxn-clusterpeer
+          - netapp-fsxn-exportpolicy
+          - netapp-fsxn-igroup
+          - netapp-fsxn-lun
+          - netapp-fsxn-snapmirror
+          - netapp-fsxn-snapshot
+          - netapp-fsxn-snapshotpolicy
+          - netapp-fsxn-svmpeer
+          - netapp-fsxn-volume
           - newrelic-agent-configuration
           - newrelic-alert-alertspolicy
           - newrelic-alert-nrqlconditionstatic

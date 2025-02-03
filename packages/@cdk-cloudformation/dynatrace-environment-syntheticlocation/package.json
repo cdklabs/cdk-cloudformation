@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/dynatrace-environment-syntheticlocation",
   "description": "Manage a synthetic location (V1) in Dynatrace.",
-  "version": "1.4.0-alpha.7",
+  "version": "1.6.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

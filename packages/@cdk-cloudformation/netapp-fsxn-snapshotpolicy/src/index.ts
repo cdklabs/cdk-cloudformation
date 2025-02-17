@@ -3,7 +3,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as constructs from 'constructs';
 
 /**
- * A snapshot policy is a set of rules that specify when to create snapshots, how many copies to retain, and how to name them. A snapshot policy automatically creates and manages snapshots for a volume at defined intervals. The policy is used to simplify backup scheduling and maintain a reliable set of recovery points. Once activated, you will need a preview key to consume this resource. Please reach out to Ng-fsx-cloudformation@netapp.com to get the key. To use this resource, you would need to first create the Link module.
+ * A snapshot policy specifies when to create snapshots, how many to retain, and how to name them. A snapshot policy automatically creates and manages snapshots for a volume at defined intervals. The policy simplifies backup scheduling and maintains a reliable set of recovery points. Once activated, you need a preview key to consume this resource. Please reach out to Ng-fsx-cloudformation@netapp.com to get the key. To use this resource, you must first create the Link module.
  *
  * @schema CfnSnapshotPolicyProps
  */
@@ -159,7 +159,7 @@ export interface SnapshotPolicyCopy {
   readonly prefix?: string;
 
   /**
-   * The retention period of snapshot copies for this schedule. The retention period value represents a duration and must be specified in the ISO-8601 duration format. The retention period can be in years, months, days, hours, and minutes. A period specified for years, months, and days is represented in the ISO-8601 format as 'PY', 'PM', 'PD' respectively, for example 'P10Y' represents a duration of 10 years. A duration in hours and minutes is represented by 'PTH' and 'PTM' respectively. The period string must contain only a single time element that is, either years, months, days, hours, or minutes. A duration which combines different periods is not supported, for example 'P1Y10M' is not supported.
+   * Specifies the retention period of snapshot copies. The retention value represents a duration and must follow the ISO-8601 duration format. The retention period can be in years, months, days, hours, or minutes. For example 'P10Y' represents a duration of 10 years. The retention string must contain only a single time element (years, months, days, hours, or minutes).
    *
    * @schema SnapshotPolicyCopy#RetentionPeriod
    */

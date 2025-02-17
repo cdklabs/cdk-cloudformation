@@ -3,7 +3,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as constructs from 'constructs';
 
 /**
- * A LUN (Logical unit number) is a block storage object within a volume, used to provide storage for applications that require block-level access. A LUN will appear as a virtual disk to the connected host and can be formatted with a file system or used as raw storage, enabling precise control over storage resources and performance for specific workloads. Once activated, you will need a preview key to consume this resource. Please reach out to Ng-fsx-cloudformation@netapp.com to get the key. To use this resource, you would need to first create the Link module.
+ * A LUN is a block storage object within a volume. It provides storage for applications that require block-level access and appears as a virtual disk to the connected host. It is formatted with a file system or used as raw storage, enabling precise control over storage resources and performance for specific workloads. Once activated, you need a preview key to consume this resource. Please reach out to Ng-fsx-cloudformation@netapp.com to get the key. To use this resource, you must first create the Link module.
  *
  * @schema CfnLunProps
  */

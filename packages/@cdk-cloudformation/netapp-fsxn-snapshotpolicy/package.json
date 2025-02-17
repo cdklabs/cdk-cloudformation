@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/netapp-fsxn-snapshotpolicy",
-  "description": "A snapshot policy is a set of rules that specify when to create snapshots, how many copies to retain, and how to name them. A snapshot policy automatically creates and manages snapshots for a volume at defined intervals. The policy is used to simplify backup scheduling and maintain a reliable set of recovery points. Once activated, you will need a preview key to consume this resource. Please reach out to Ng-fsx-cloudformation@netapp.com to get the key. To use this resource, you would need to first create the Link module.",
-  "version": "1.0.0-alpha.7",
+  "description": "A snapshot policy specifies when to create snapshots, how many to retain, and how to name them. A snapshot policy automatically creates and manages snapshots for a volume at defined intervals. The policy simplifies backup scheduling and maintains a reliable set of recovery points. Once activated, you need a preview key to consume this resource. Please reach out to Ng-fsx-cloudformation@netapp.com to get the key. To use this resource, you must first create the Link module.",
+  "version": "1.1.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

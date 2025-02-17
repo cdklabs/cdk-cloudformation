@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/netapp-fsxn-snapmirror",
-  "description": "FSx for ONTAP provides SnapMirror, an embedded data replication technology that allows for the efficient transfer of data between two file systems. SnapMirror replicates data by creating point-in-time copies of the data. It is used for data protection, disaster recovery, and business continuity by ensuring that up-to-date copies of data are available at remote locations. To use SnapMirror, you must set up cluster peering and SVM peering between the source and target FSx for ONTAP file systems. Once activated, you will need a preview key to consume this resource. Please reach out to Ng-fsx-cloudformation@netapp.com to get the key. To use this resource, you would need to first create the Link module.",
-  "version": "1.0.0-alpha.7",
+  "description": "FSx for ONTAP offers SnapMirror for efficient data replication between file systems, aiding in data protection, disaster recovery, and long-term retention. To use SnapMirror, set up cluster peering and SVM peering between the source and target FSx for ONTAP file systems. Once activated, you need a preview key to consume this resource. Please reach out to Ng-fsx-cloudformation@netapp.com to get the key. To use this resource, you must first create the Link module.",
+  "version": "1.2.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

@@ -3,7 +3,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as constructs from 'constructs';
 
 /**
- * A cluster peer establishes a trusted network relationship between two FSx for ONTAP file systems, allowing them to securely communicate and exchange data. The relationship enables encrypted, authenticated data replication. The cluster peer can be used for disaster recovery across clusters in different regions, which provides flexibility for data protection and high availability. Once activated, you will need a preview key to consume this resource. Please reach out to Ng-fsx-cloudformation@netapp.com to get the key. To use this resource, you would need to first create the Link module.
+ * A cluster peer establishes a trusted network relationship between two FSx for ONTAP file systems, allowing them to securely communicate and replicate encrypted, authenticated data. It is used for disaster recovery across clusters in different regions, providing flexibility for data protection and high availability. Once activated, you need a preview key to consume this resource. Please reach out to Ng-fsx-cloudformation@netapp.com to get the key. To use this resource, you must first create the Link module.
  *
  * @schema CfnClusterPeerProps
  */

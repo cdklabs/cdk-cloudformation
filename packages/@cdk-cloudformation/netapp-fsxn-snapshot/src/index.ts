@@ -3,7 +3,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as constructs from 'constructs';
 
 /**
- * A snapshot is a read-only, point-in-time copy of a volume or a LUN. It preserves the state of the data at the moment the snapshot is created, allowing users to quickly restore files or entire volumes if data is accidentally deleted, corrupted, or changed. Snapshots are highly efficient because they only store changes made after the snapshot was taken, making them ideal for data protection and recovery. Once activated, you will need a preview key to consume this resource. Please reach out to Ng-fsx-cloudformation to get the key. To use this resource, you would need to first create the Link module.
+ * A snapshot creates a read-only copy of a volume or LUN at a specific time. It allows users to restore files or volumes if data is deleted, corrupted, or changed. Snapshots efficiently store only the changes made after the snapshot, making them ideal for data protection and recovery. Once activated, you need a preview key to consume this resource. Please reach out to Ng-fsx-cloudformation@netapp.com to get the key. To use this resource, you must first create the Link module.
  *
  * @schema CfnSnapshotProps
  */

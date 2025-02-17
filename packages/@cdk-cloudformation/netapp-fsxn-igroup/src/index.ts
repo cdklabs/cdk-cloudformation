@@ -3,7 +3,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as constructs from 'constructs';
 
 /**
- * An iGroup is a collection of host initiators (IQNs) that are allowed access to a specific LUN. When LUNs are associated with iGroups, administrators gain control over which hosts can connect to and access each LUN, enabling secure and organized access management for application and workloads consuming block storage. Once activated, you will need a preview key to consume this resource. Please reach out to Ng-fsx-cloudformation@netapp.com to get the key. To use this resource, you would need to first create the Link module.
+ * An iGroup is a collection of host initiators (IQNs) that are allowed access to a LUN. When LUNs are associated with iGroups, administrators gain control over which hosts can connect to and access each LUN, enabling secure and organized access management for applications and workloads consuming block storage. Once activated, you need a preview key to consume this resource. Please reach out to Ng-fsx-cloudformation@netapp.com to get the key. To use this resource, you must first create the Link module.
  *
  * @schema CfnIGroupProps
  */

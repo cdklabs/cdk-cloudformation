@@ -3,7 +3,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as constructs from 'constructs';
 
 /**
- * FSx for ONTAP provides SnapMirror, an embedded data replication technology that allows for the efficient transfer of data between two file systems. SnapMirror replicates data by creating point-in-time copies of the data. It is used for data protection, disaster recovery, and business continuity by ensuring that up-to-date copies of data are available at remote locations. To use SnapMirror, you must set up cluster peering and SVM peering between the source and target FSx for ONTAP file systems. Once activated, you will need a preview key to consume this resource. Please reach out to Ng-fsx-cloudformation@netapp.com to get the key. To use this resource, you would need to first create the Link module.
+ * FSx for ONTAP offers SnapMirror for efficient data replication between file systems, aiding in data protection, disaster recovery, and long-term retention. To use SnapMirror, set up cluster peering and SVM peering between the source and target FSx for ONTAP file systems. Once activated, you need a preview key to consume this resource. Please reach out to Ng-fsx-cloudformation@netapp.com to get the key. To use this resource, you must first create the Link module.
  *
  * @schema CfnSnapMirrorProps
  */
@@ -410,6 +410,11 @@ export class CfnSnapMirror extends cdk.CfnResource {
    */
   public readonly attrUuid: string;
   /**
+   * Attribute `NetApp::FSxN::SnapMirror.State`
+   * @link https://github.com/NetApp/NetApp-CloudFormation-FSx-ONTAP-provider
+   */
+  public readonly attrState: string;
+  /**
    * Attribute `NetApp::FSxN::SnapMirror.SourcePath`
    * @link https://github.com/NetApp/NetApp-CloudFormation-FSx-ONTAP-provider
    */
@@ -419,11 +424,6 @@ export class CfnSnapMirror extends cdk.CfnResource {
    * @link https://github.com/NetApp/NetApp-CloudFormation-FSx-ONTAP-provider
    */
   public readonly attrDestinationPath: string;
-  /**
-   * Attribute `NetApp::FSxN::SnapMirror.State`
-   * @link https://github.com/NetApp/NetApp-CloudFormation-FSx-ONTAP-provider
-   */
-  public readonly attrState: string;
 
   /**
    * Create a new `NetApp::FSxN::SnapMirror`.
@@ -439,8 +439,8 @@ export class CfnSnapMirror extends cdk.CfnResource {
 
     this.attrId = cdk.Token.asString(this.getAtt('ID'));
     this.attrUuid = cdk.Token.asString(this.getAtt('UUID'));
+    this.attrState = cdk.Token.asString(this.getAtt('State'));
     this.attrSourcePath = cdk.Token.asString(this.getAtt('SourcePath'));
     this.attrDestinationPath = cdk.Token.asString(this.getAtt('DestinationPath'));
-    this.attrState = cdk.Token.asString(this.getAtt('State'));
   }
 }

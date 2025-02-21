@@ -55,7 +55,7 @@
     "jest": "^27.5.1",
     "jest-junit": "^15",
     "jsii": "^5.7.5",
-    "jsii-pacmak": "^1.106.0",
+    "jsii-pacmak": "^1.107.0",
     "jsii-rosetta": "^5.7.5",
     "projen": "^0.88.0",
     "ts-jest": "^27.1.5",

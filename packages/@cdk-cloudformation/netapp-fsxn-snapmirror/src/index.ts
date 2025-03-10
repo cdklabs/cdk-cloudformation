@@ -79,7 +79,7 @@ export interface CfnSnapMirrorProps {
   readonly transferSchedule?: string;
 
   /**
-   * Setting state of the relationship. Can be set during modify only.
+   * Modify the SnapMirror replication status using 'StateAction' in the CloudFormation template when the relationship exists. Follow ONTAP protocol: set to 'paused' to pause, 'snapmirrored' to resync, and 'update' to trigger the transfer API. For subsequent updates, first clear the prior 'StateAction' then set it again.
    *
    * @schema CfnSnapMirrorProps#StateAction
    */
@@ -260,7 +260,7 @@ export function toJson_SnapMirrorDestinationCreation(obj: SnapMirrorDestinationC
 /* eslint-enable max-len, quote-props */
 
 /**
- * Setting state of the relationship. Can be set during modify only.
+ * Modify the SnapMirror replication status using 'StateAction' in the CloudFormation template when the relationship exists. Follow ONTAP protocol: set to 'paused' to pause, 'snapmirrored' to resync, and 'update' to trigger the transfer API. For subsequent updates, first clear the prior 'StateAction' then set it again.
  *
  * @schema CfnSnapMirrorPropsStateAction
  */
@@ -273,6 +273,8 @@ export enum CfnSnapMirrorPropsStateAction {
   SNAPMIRRORED = "snapmirrored",
   /** in_sync */
   IN_UNDERSCORE_SYNC = "in_sync",
+  /** update */
+  UPDATE = "update",
 }
 
 /**

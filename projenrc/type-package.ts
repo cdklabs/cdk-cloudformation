@@ -92,7 +92,10 @@ export class CloudFormationTypeProject extends Component {
 
     new License(project, { spdx });
 
-    const description = options.type.Description ?? `Constructs for ${typeName}`;
+    // Force trim the description to keep the char limit as per core-metadata specification for python packaging
+    // Ref: https://packaging.python.org/en/latest/specifications/core-metadata/#summary
+    const description: string = options.type.Description ? options.type.Description.slice(0, 512) : `Constructs for ${typeName}`;
+
     const npmName = `${npmScope}/${typeNameKebab}`;
 
     new Readme(project, {

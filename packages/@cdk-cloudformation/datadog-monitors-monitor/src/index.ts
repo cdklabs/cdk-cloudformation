@@ -88,7 +88,7 @@ export interface CfnMonitorProps {
 /**
  * Converts an object of type 'CfnMonitorProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnMonitorProps(obj: CfnMonitorProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -107,7 +107,7 @@ export function toJson_CfnMonitorProps(obj: CfnMonitorProps | undefined): Record
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Creator
@@ -139,7 +139,7 @@ export interface Creator {
 /**
  * Converts an object of type 'Creator' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Creator(obj: Creator | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -150,7 +150,7 @@ export function toJson_Creator(obj: Creator | undefined): Record<string, any> | 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema MonitorOptions
@@ -351,7 +351,7 @@ export interface MonitorOptions {
 /**
  * Converts an object of type 'MonitorOptions' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_MonitorOptions(obj: MonitorOptions | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -386,7 +386,7 @@ export function toJson_MonitorOptions(obj: MonitorOptions | undefined): Record<s
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * The type of the monitor
@@ -444,7 +444,7 @@ export interface CloudformationOptions {
 /**
  * Converts an object of type 'CloudformationOptions' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CloudformationOptions(obj: CloudformationOptions | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -453,7 +453,7 @@ export function toJson_CloudformationOptions(obj: CloudformationOptions | undefi
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Toggles the display of additional content sent in the monitor notification.
@@ -507,7 +507,7 @@ export interface MonitorSchedulingOptions {
 /**
  * Converts an object of type 'MonitorSchedulingOptions' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_MonitorSchedulingOptions(obj: MonitorSchedulingOptions | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -516,7 +516,7 @@ export function toJson_MonitorSchedulingOptions(obj: MonitorSchedulingOptions | 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema MonitorThresholds
@@ -562,7 +562,7 @@ export interface MonitorThresholds {
 /**
  * Converts an object of type 'MonitorThresholds' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_MonitorThresholds(obj: MonitorThresholds | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -575,7 +575,7 @@ export function toJson_MonitorThresholds(obj: MonitorThresholds | undefined): Re
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema MonitorThresholdWindows
@@ -600,7 +600,7 @@ export interface MonitorThresholdWindows {
 /**
  * Converts an object of type 'MonitorThresholdWindows' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_MonitorThresholdWindows(obj: MonitorThresholdWindows | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -610,7 +610,7 @@ export function toJson_MonitorThresholdWindows(obj: MonitorThresholdWindows | un
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema MonitorOptionsRenotifyStatuses
@@ -656,7 +656,7 @@ export interface MonitorSchedulingOptionsEvaluationWindow {
 /**
  * Converts an object of type 'MonitorSchedulingOptionsEvaluationWindow' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_MonitorSchedulingOptionsEvaluationWindow(obj: MonitorSchedulingOptionsEvaluationWindow | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -667,7 +667,7 @@ export function toJson_MonitorSchedulingOptionsEvaluationWindow(obj: MonitorSche
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 
 /**

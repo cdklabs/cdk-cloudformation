@@ -90,7 +90,7 @@ export interface CfnEnforcerProps {
 /**
  * Converts an object of type 'CfnEnforcerProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnEnforcerProps(obj: CfnEnforcerProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -109,7 +109,7 @@ export function toJson_CfnEnforcerProps(obj: CfnEnforcerProps | undefined): Reco
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * For network connectivity to Cluster inside VPC
@@ -136,7 +136,7 @@ export interface CfnEnforcerPropsVpcConfiguration {
 /**
  * Converts an object of type 'CfnEnforcerPropsVpcConfiguration' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnEnforcerPropsVpcConfiguration(obj: CfnEnforcerPropsVpcConfiguration | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -146,7 +146,7 @@ export function toJson_CfnEnforcerPropsVpcConfiguration(obj: CfnEnforcerPropsVpc
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 
 /**

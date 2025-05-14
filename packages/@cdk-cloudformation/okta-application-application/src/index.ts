@@ -59,7 +59,7 @@ export interface CfnApplicationProps {
 /**
  * Converts an object of type 'CfnApplicationProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnApplicationProps(obj: CfnApplicationProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -75,7 +75,7 @@ export function toJson_CfnApplicationProps(obj: CfnApplicationProps | undefined)
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Specifies access settings for the application
@@ -102,7 +102,7 @@ export interface Accessibility {
 /**
  * Converts an object of type 'Accessibility' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Accessibility(obj: Accessibility | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -112,7 +112,7 @@ export function toJson_Accessibility(obj: Accessibility | undefined): Record<str
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Specifies credentials and scheme for the application's signOnMode
@@ -164,7 +164,7 @@ export interface ApplicationCredentials {
 /**
  * Converts an object of type 'ApplicationCredentials' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ApplicationCredentials(obj: ApplicationCredentials | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -179,7 +179,7 @@ export function toJson_ApplicationCredentials(obj: ApplicationCredentials | unde
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * The type of JSON Web Key Set (JWKS) algorithm that must be used for signing request object
@@ -221,7 +221,7 @@ export interface CfnApplicationPropsSettings {
 /**
  * Converts an object of type 'CfnApplicationPropsSettings' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnApplicationPropsSettings(obj: CfnApplicationPropsSettings | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -230,7 +230,7 @@ export function toJson_CfnApplicationPropsSettings(obj: CfnApplicationPropsSetti
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema SignOnMode
@@ -290,7 +290,7 @@ export interface Visibility {
 /**
  * Converts an object of type 'Visibility' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Visibility(obj: Visibility | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -301,7 +301,7 @@ export function toJson_Visibility(obj: Visibility | undefined): Record<string, a
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Determines how to authenticate the OAuth 2.0 client
@@ -342,7 +342,7 @@ export interface OauthCredential {
 /**
  * Converts an object of type 'OauthCredential' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_OauthCredential(obj: OauthCredential | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -354,7 +354,7 @@ export function toJson_OauthCredential(obj: OauthCredential | undefined): Record
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Authentication Scheme
@@ -392,7 +392,7 @@ export interface SigningCredential {
 /**
  * Converts an object of type 'SigningCredential' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_SigningCredential(obj: SigningCredential | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -401,7 +401,7 @@ export function toJson_SigningCredential(obj: SigningCredential | undefined): Re
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Specifies the template used to generate a user's username when the application is assigned via a group or directly to a user
@@ -428,7 +428,7 @@ export interface UserNameTemplate {
 /**
  * Converts an object of type 'UserNameTemplate' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_UserNameTemplate(obj: UserNameTemplate | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -438,7 +438,7 @@ export function toJson_UserNameTemplate(obj: UserNameTemplate | undefined): Reco
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnApplicationPropsSettingsApp
@@ -464,7 +464,7 @@ export interface CfnApplicationPropsSettingsApp {
 /**
  * Converts an object of type 'CfnApplicationPropsSettingsApp' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnApplicationPropsSettingsApp(obj: CfnApplicationPropsSettingsApp | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -475,7 +475,7 @@ export function toJson_CfnApplicationPropsSettingsApp(obj: CfnApplicationPropsSe
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Hides this app for specific end-user apps
@@ -502,7 +502,7 @@ export interface Hide {
 /**
  * Converts an object of type 'Hide' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Hide(obj: Hide | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -512,7 +512,7 @@ export function toJson_Hide(obj: Hide | undefined): Record<string, any> | undefi
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * type of mapping expression

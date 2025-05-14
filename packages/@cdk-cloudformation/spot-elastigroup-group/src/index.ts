@@ -23,7 +23,7 @@ export interface CfnGroupProps {
 /**
  * Converts an object of type 'CfnGroupProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupProps(obj: CfnGroupProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -33,7 +33,7 @@ export function toJson_CfnGroupProps(obj: CfnGroupProps | undefined): Record<str
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsCredentials
@@ -54,7 +54,7 @@ export interface CfnGroupPropsCredentials {
 /**
  * Converts an object of type 'CfnGroupPropsCredentials' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsCredentials(obj: CfnGroupPropsCredentials | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -64,7 +64,7 @@ export function toJson_CfnGroupPropsCredentials(obj: CfnGroupPropsCredentials | 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroup
@@ -139,7 +139,7 @@ export interface CfnGroupPropsGroup {
 /**
  * Converts an object of type 'CfnGroupPropsGroup' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroup(obj: CfnGroupPropsGroup | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -159,7 +159,7 @@ export function toJson_CfnGroupPropsGroup(obj: CfnGroupPropsGroup | undefined): 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupStrategy
@@ -250,7 +250,7 @@ export interface CfnGroupPropsGroupStrategy {
 /**
  * Converts an object of type 'CfnGroupPropsGroupStrategy' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupStrategy(obj: CfnGroupPropsGroupStrategy | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -274,7 +274,7 @@ export function toJson_CfnGroupPropsGroupStrategy(obj: CfnGroupPropsGroupStrateg
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupCompute
@@ -335,7 +335,7 @@ export interface CfnGroupPropsGroupCompute {
 /**
  * Converts an object of type 'CfnGroupPropsGroupCompute' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupCompute(obj: CfnGroupPropsGroupCompute | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -353,7 +353,7 @@ export function toJson_CfnGroupPropsGroupCompute(obj: CfnGroupPropsGroupCompute 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupCapacity
@@ -384,7 +384,7 @@ export interface CfnGroupPropsGroupCapacity {
 /**
  * Converts an object of type 'CfnGroupPropsGroupCapacity' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupCapacity(obj: CfnGroupPropsGroupCapacity | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -396,7 +396,7 @@ export function toJson_CfnGroupPropsGroupCapacity(obj: CfnGroupPropsGroupCapacit
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupScaling
@@ -427,7 +427,7 @@ export interface CfnGroupPropsGroupScaling {
 /**
  * Converts an object of type 'CfnGroupPropsGroupScaling' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupScaling(obj: CfnGroupPropsGroupScaling | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -439,7 +439,7 @@ export function toJson_CfnGroupPropsGroupScaling(obj: CfnGroupPropsGroupScaling 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupThirdPartiesIntegration
@@ -530,7 +530,7 @@ export interface CfnGroupPropsGroupThirdPartiesIntegration {
 /**
  * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegration' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupThirdPartiesIntegration(obj: CfnGroupPropsGroupThirdPartiesIntegration | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -554,7 +554,7 @@ export function toJson_CfnGroupPropsGroupThirdPartiesIntegration(obj: CfnGroupPr
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupScheduling
@@ -570,7 +570,7 @@ export interface CfnGroupPropsGroupScheduling {
 /**
  * Converts an object of type 'CfnGroupPropsGroupScheduling' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupScheduling(obj: CfnGroupPropsGroupScheduling | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -579,7 +579,7 @@ export function toJson_CfnGroupPropsGroupScheduling(obj: CfnGroupPropsGroupSched
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupStrategySignals
@@ -600,7 +600,7 @@ export interface CfnGroupPropsGroupStrategySignals {
 /**
  * Converts an object of type 'CfnGroupPropsGroupStrategySignals' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupStrategySignals(obj: CfnGroupPropsGroupStrategySignals | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -610,7 +610,7 @@ export function toJson_CfnGroupPropsGroupStrategySignals(obj: CfnGroupPropsGroup
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupStrategyScalingStrategy
@@ -631,7 +631,7 @@ export interface CfnGroupPropsGroupStrategyScalingStrategy {
 /**
  * Converts an object of type 'CfnGroupPropsGroupStrategyScalingStrategy' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupStrategyScalingStrategy(obj: CfnGroupPropsGroupStrategyScalingStrategy | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -641,7 +641,7 @@ export function toJson_CfnGroupPropsGroupStrategyScalingStrategy(obj: CfnGroupPr
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupStrategyPersistence
@@ -672,7 +672,7 @@ export interface CfnGroupPropsGroupStrategyPersistence {
 /**
  * Converts an object of type 'CfnGroupPropsGroupStrategyPersistence' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupStrategyPersistence(obj: CfnGroupPropsGroupStrategyPersistence | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -684,7 +684,7 @@ export function toJson_CfnGroupPropsGroupStrategyPersistence(obj: CfnGroupPropsG
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupStrategyRevertToSpot
@@ -705,7 +705,7 @@ export interface CfnGroupPropsGroupStrategyRevertToSpot {
 /**
  * Converts an object of type 'CfnGroupPropsGroupStrategyRevertToSpot' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupStrategyRevertToSpot(obj: CfnGroupPropsGroupStrategyRevertToSpot | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -715,7 +715,7 @@ export function toJson_CfnGroupPropsGroupStrategyRevertToSpot(obj: CfnGroupProps
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupComputeVolumeAttachments
@@ -731,7 +731,7 @@ export interface CfnGroupPropsGroupComputeVolumeAttachments {
 /**
  * Converts an object of type 'CfnGroupPropsGroupComputeVolumeAttachments' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupComputeVolumeAttachments(obj: CfnGroupPropsGroupComputeVolumeAttachments | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -740,7 +740,7 @@ export function toJson_CfnGroupPropsGroupComputeVolumeAttachments(obj: CfnGroupP
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupComputeInstanceTypes
@@ -781,7 +781,7 @@ export interface CfnGroupPropsGroupComputeInstanceTypes {
 /**
  * Converts an object of type 'CfnGroupPropsGroupComputeInstanceTypes' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupComputeInstanceTypes(obj: CfnGroupPropsGroupComputeInstanceTypes | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -795,7 +795,7 @@ export function toJson_CfnGroupPropsGroupComputeInstanceTypes(obj: CfnGroupProps
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupComputeAvailabilityZones
@@ -826,7 +826,7 @@ export interface CfnGroupPropsGroupComputeAvailabilityZones {
 /**
  * Converts an object of type 'CfnGroupPropsGroupComputeAvailabilityZones' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupComputeAvailabilityZones(obj: CfnGroupPropsGroupComputeAvailabilityZones | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -838,7 +838,7 @@ export function toJson_CfnGroupPropsGroupComputeAvailabilityZones(obj: CfnGroupP
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupComputeEbsVolumePool
@@ -859,7 +859,7 @@ export interface CfnGroupPropsGroupComputeEbsVolumePool {
 /**
  * Converts an object of type 'CfnGroupPropsGroupComputeEbsVolumePool' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupComputeEbsVolumePool(obj: CfnGroupPropsGroupComputeEbsVolumePool | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -869,7 +869,7 @@ export function toJson_CfnGroupPropsGroupComputeEbsVolumePool(obj: CfnGroupProps
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupComputeLaunchSpecification
@@ -1000,7 +1000,7 @@ export interface CfnGroupPropsGroupComputeLaunchSpecification {
 /**
  * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecification' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupComputeLaunchSpecification(obj: CfnGroupPropsGroupComputeLaunchSpecification | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -1032,7 +1032,7 @@ export function toJson_CfnGroupPropsGroupComputeLaunchSpecification(obj: CfnGrou
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupScalingMultipleMetrics
@@ -1053,7 +1053,7 @@ export interface CfnGroupPropsGroupScalingMultipleMetrics {
 /**
  * Converts an object of type 'CfnGroupPropsGroupScalingMultipleMetrics' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupScalingMultipleMetrics(obj: CfnGroupPropsGroupScalingMultipleMetrics | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -1063,7 +1063,7 @@ export function toJson_CfnGroupPropsGroupScalingMultipleMetrics(obj: CfnGroupPro
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema ScalingUpPolicy
@@ -1159,7 +1159,7 @@ export interface ScalingUpPolicy {
 /**
  * Converts an object of type 'ScalingUpPolicy' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ScalingUpPolicy(obj: ScalingUpPolicy | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -1184,7 +1184,7 @@ export function toJson_ScalingUpPolicy(obj: ScalingUpPolicy | undefined): Record
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema ScalingDownPolicy
@@ -1280,7 +1280,7 @@ export interface ScalingDownPolicy {
 /**
  * Converts an object of type 'ScalingDownPolicy' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ScalingDownPolicy(obj: ScalingDownPolicy | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -1305,7 +1305,7 @@ export function toJson_ScalingDownPolicy(obj: ScalingDownPolicy | undefined): Re
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema ScalingTargetPolicy
@@ -1376,7 +1376,7 @@ export interface ScalingTargetPolicy {
 /**
  * Converts an object of type 'ScalingTargetPolicy' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ScalingTargetPolicy(obj: ScalingTargetPolicy | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -1396,7 +1396,7 @@ export function toJson_ScalingTargetPolicy(obj: ScalingTargetPolicy | undefined)
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupThirdPartiesIntegrationRancher
@@ -1427,7 +1427,7 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationRancher {
 /**
  * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationRancher' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationRancher(obj: CfnGroupPropsGroupThirdPartiesIntegrationRancher | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -1439,7 +1439,7 @@ export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationRancher(obj: Cfn
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupThirdPartiesIntegrationMesosphere
@@ -1455,7 +1455,7 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationMesosphere {
 /**
  * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationMesosphere' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationMesosphere(obj: CfnGroupPropsGroupThirdPartiesIntegrationMesosphere | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -1464,7 +1464,7 @@ export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationMesosphere(obj: 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalk
@@ -1490,7 +1490,7 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalk {
 /**
  * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalk' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalk(obj: CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalk | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -1501,7 +1501,7 @@ export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalk
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Ecs
@@ -1532,7 +1532,7 @@ export interface Ecs {
 /**
  * Converts an object of type 'Ecs' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Ecs(obj: Ecs | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -1544,7 +1544,7 @@ export function toJson_Ecs(obj: Ecs | undefined): Record<string, any> | undefine
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupThirdPartiesIntegrationMlbRuntime
@@ -1560,7 +1560,7 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationMlbRuntime {
 /**
  * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationMlbRuntime' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationMlbRuntime(obj: CfnGroupPropsGroupThirdPartiesIntegrationMlbRuntime | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -1569,7 +1569,7 @@ export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationMlbRuntime(obj: 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Kubernetes
@@ -1605,7 +1605,7 @@ export interface Kubernetes {
 /**
  * Converts an object of type 'Kubernetes' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Kubernetes(obj: Kubernetes | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -1618,7 +1618,7 @@ export function toJson_Kubernetes(obj: Kubernetes | undefined): Record<string, a
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupThirdPartiesIntegrationRightScale
@@ -1644,7 +1644,7 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationRightScale {
 /**
  * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationRightScale' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationRightScale(obj: CfnGroupPropsGroupThirdPartiesIntegrationRightScale | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -1655,7 +1655,7 @@ export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationRightScale(obj: 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupThirdPartiesIntegrationOpsWorks
@@ -1676,7 +1676,7 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationOpsWorks {
 /**
  * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationOpsWorks' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationOpsWorks(obj: CfnGroupPropsGroupThirdPartiesIntegrationOpsWorks | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -1686,7 +1686,7 @@ export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationOpsWorks(obj: Cf
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupThirdPartiesIntegrationCodeDeploy
@@ -1712,7 +1712,7 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationCodeDeploy {
 /**
  * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationCodeDeploy' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationCodeDeploy(obj: CfnGroupPropsGroupThirdPartiesIntegrationCodeDeploy | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -1723,7 +1723,7 @@ export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationCodeDeploy(obj: 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupThirdPartiesIntegrationChef
@@ -1759,7 +1759,7 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationChef {
 /**
  * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationChef' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationChef(obj: CfnGroupPropsGroupThirdPartiesIntegrationChef | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -1772,7 +1772,7 @@ export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationChef(obj: CfnGro
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Nomad
@@ -1808,7 +1808,7 @@ export interface Nomad {
 /**
  * Converts an object of type 'Nomad' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Nomad(obj: Nomad | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -1821,7 +1821,7 @@ export function toJson_Nomad(obj: Nomad | undefined): Record<string, any> | unde
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema DockerSwarm
@@ -1852,7 +1852,7 @@ export interface DockerSwarm {
 /**
  * Converts an object of type 'DockerSwarm' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_DockerSwarm(obj: DockerSwarm | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -1864,7 +1864,7 @@ export function toJson_DockerSwarm(obj: DockerSwarm | undefined): Record<string,
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupThirdPartiesIntegrationRoute53
@@ -1880,7 +1880,7 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationRoute53 {
 /**
  * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationRoute53' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationRoute53(obj: CfnGroupPropsGroupThirdPartiesIntegrationRoute53 | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -1889,7 +1889,7 @@ export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationRoute53(obj: Cfn
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupThirdPartiesIntegrationGitlab
@@ -1905,7 +1905,7 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationGitlab {
 /**
  * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationGitlab' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationGitlab(obj: CfnGroupPropsGroupThirdPartiesIntegrationGitlab | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -1914,7 +1914,7 @@ export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationGitlab(obj: CfnG
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupThirdPartiesIntegrationDatadog
@@ -1935,7 +1935,7 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationDatadog {
 /**
  * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationDatadog' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationDatadog(obj: CfnGroupPropsGroupThirdPartiesIntegrationDatadog | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -1945,7 +1945,7 @@ export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationDatadog(obj: Cfn
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupThirdPartiesIntegrationJenkins
@@ -1961,7 +1961,7 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationJenkins {
 /**
  * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationJenkins' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationJenkins(obj: CfnGroupPropsGroupThirdPartiesIntegrationJenkins | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -1970,7 +1970,7 @@ export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationJenkins(obj: Cfn
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Task
@@ -2056,7 +2056,7 @@ export interface Task {
 /**
  * Converts an object of type 'Task' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Task(obj: Task | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -2079,7 +2079,7 @@ export function toJson_Task(obj: Task | undefined): Record<string, any> | undefi
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupComputeVolumeAttachmentsVolumes
@@ -2100,7 +2100,7 @@ export interface CfnGroupPropsGroupComputeVolumeAttachmentsVolumes {
 /**
  * Converts an object of type 'CfnGroupPropsGroupComputeVolumeAttachmentsVolumes' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupComputeVolumeAttachmentsVolumes(obj: CfnGroupPropsGroupComputeVolumeAttachmentsVolumes | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -2110,7 +2110,7 @@ export function toJson_CfnGroupPropsGroupComputeVolumeAttachmentsVolumes(obj: Cf
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupComputeInstanceTypesResourceRequirements
@@ -2151,7 +2151,7 @@ export interface CfnGroupPropsGroupComputeInstanceTypesResourceRequirements {
 /**
  * Converts an object of type 'CfnGroupPropsGroupComputeInstanceTypesResourceRequirements' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupComputeInstanceTypesResourceRequirements(obj: CfnGroupPropsGroupComputeInstanceTypesResourceRequirements | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -2165,7 +2165,7 @@ export function toJson_CfnGroupPropsGroupComputeInstanceTypesResourceRequirement
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupComputeInstanceTypesWeights
@@ -2186,7 +2186,7 @@ export interface CfnGroupPropsGroupComputeInstanceTypesWeights {
 /**
  * Converts an object of type 'CfnGroupPropsGroupComputeInstanceTypesWeights' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupComputeInstanceTypesWeights(obj: CfnGroupPropsGroupComputeInstanceTypesWeights | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -2196,7 +2196,7 @@ export function toJson_CfnGroupPropsGroupComputeInstanceTypesWeights(obj: CfnGro
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema LoadBalancersConfig
@@ -2212,7 +2212,7 @@ export interface LoadBalancersConfig {
 /**
  * Converts an object of type 'LoadBalancersConfig' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_LoadBalancersConfig(obj: LoadBalancersConfig | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -2221,7 +2221,7 @@ export function toJson_LoadBalancersConfig(obj: LoadBalancersConfig | undefined)
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupComputeLaunchSpecificationItf
@@ -2257,7 +2257,7 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationItf {
 /**
  * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationItf' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationItf(obj: CfnGroupPropsGroupComputeLaunchSpecificationItf | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -2270,7 +2270,7 @@ export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationItf(obj: CfnG
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupComputeLaunchSpecificationImages
@@ -2286,7 +2286,7 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationImages {
 /**
  * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationImages' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationImages(obj: CfnGroupPropsGroupComputeLaunchSpecificationImages | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -2295,7 +2295,7 @@ export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationImages(obj: C
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Tag
@@ -2316,7 +2316,7 @@ export interface Tag {
 /**
  * Converts an object of type 'Tag' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Tag(obj: Tag | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -2326,7 +2326,7 @@ export function toJson_Tag(obj: Tag | undefined): Record<string, any> | undefine
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema BlockDeviceMapping
@@ -2357,7 +2357,7 @@ export interface BlockDeviceMapping {
 /**
  * Converts an object of type 'BlockDeviceMapping' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_BlockDeviceMapping(obj: BlockDeviceMapping | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -2369,7 +2369,7 @@ export function toJson_BlockDeviceMapping(obj: BlockDeviceMapping | undefined): 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupComputeLaunchSpecificationIamRole
@@ -2390,7 +2390,7 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationIamRole {
 /**
  * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationIamRole' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationIamRole(obj: CfnGroupPropsGroupComputeLaunchSpecificationIamRole | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -2400,7 +2400,7 @@ export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationIamRole(obj: 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupComputeLaunchSpecificationCreditSpecification
@@ -2416,7 +2416,7 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationCreditSpecification
 /**
  * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationCreditSpecification' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationCreditSpecification(obj: CfnGroupPropsGroupComputeLaunchSpecificationCreditSpecification | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -2425,7 +2425,7 @@ export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationCreditSpecifi
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfaces
@@ -2486,7 +2486,7 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfaces {
 /**
  * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfaces' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfaces(obj: CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfaces | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -2504,7 +2504,7 @@ export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterf
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupComputeLaunchSpecificationCpuOptions
@@ -2520,7 +2520,7 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationCpuOptions {
 /**
  * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationCpuOptions' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationCpuOptions(obj: CfnGroupPropsGroupComputeLaunchSpecificationCpuOptions | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -2529,7 +2529,7 @@ export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationCpuOptions(ob
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupComputeLaunchSpecificationResourceTagSpecification
@@ -2560,7 +2560,7 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationResourceTagSpecific
 /**
  * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationResourceTagSpecification' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationResourceTagSpecification(obj: CfnGroupPropsGroupComputeLaunchSpecificationResourceTagSpecification | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -2572,7 +2572,7 @@ export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationResourceTagSp
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupComputeLaunchSpecificationMetadataOptions
@@ -2598,7 +2598,7 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationMetadataOptions {
 /**
  * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationMetadataOptions' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationMetadataOptions(obj: CfnGroupPropsGroupComputeLaunchSpecificationMetadataOptions | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -2609,7 +2609,7 @@ export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationMetadataOptio
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupScalingMultipleMetricsMetrics
@@ -2655,7 +2655,7 @@ export interface CfnGroupPropsGroupScalingMultipleMetricsMetrics {
 /**
  * Converts an object of type 'CfnGroupPropsGroupScalingMultipleMetricsMetrics' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupScalingMultipleMetricsMetrics(obj: CfnGroupPropsGroupScalingMultipleMetricsMetrics | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -2670,7 +2670,7 @@ export function toJson_CfnGroupPropsGroupScalingMultipleMetricsMetrics(obj: CfnG
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupScalingMultipleMetricsExpressions
@@ -2691,7 +2691,7 @@ export interface CfnGroupPropsGroupScalingMultipleMetricsExpressions {
 /**
  * Converts an object of type 'CfnGroupPropsGroupScalingMultipleMetricsExpressions' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupScalingMultipleMetricsExpressions(obj: CfnGroupPropsGroupScalingMultipleMetricsExpressions | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -2701,7 +2701,7 @@ export function toJson_CfnGroupPropsGroupScalingMultipleMetricsExpressions(obj: 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Dimension
@@ -2722,7 +2722,7 @@ export interface Dimension {
 /**
  * Converts an object of type 'Dimension' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Dimension(obj: Dimension | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -2732,7 +2732,7 @@ export function toJson_Dimension(obj: Dimension | undefined): Record<string, any
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema ScaleUpStepAdjustment
@@ -2753,7 +2753,7 @@ export interface ScaleUpStepAdjustment {
 /**
  * Converts an object of type 'ScaleUpStepAdjustment' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ScaleUpStepAdjustment(obj: ScaleUpStepAdjustment | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -2763,7 +2763,7 @@ export function toJson_ScaleUpStepAdjustment(obj: ScaleUpStepAdjustment | undefi
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema ScaleUpAction
@@ -2804,7 +2804,7 @@ export interface ScaleUpAction {
 /**
  * Converts an object of type 'ScaleUpAction' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ScaleUpAction(obj: ScaleUpAction | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -2818,7 +2818,7 @@ export function toJson_ScaleUpAction(obj: ScaleUpAction | undefined): Record<str
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema ScaleDownStepAdjustment
@@ -2839,7 +2839,7 @@ export interface ScaleDownStepAdjustment {
 /**
  * Converts an object of type 'ScaleDownStepAdjustment' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ScaleDownStepAdjustment(obj: ScaleDownStepAdjustment | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -2849,7 +2849,7 @@ export function toJson_ScaleDownStepAdjustment(obj: ScaleDownStepAdjustment | un
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema ScaleDownAction
@@ -2890,7 +2890,7 @@ export interface ScaleDownAction {
 /**
  * Converts an object of type 'ScaleDownAction' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ScaleDownAction(obj: ScaleDownAction | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -2904,7 +2904,7 @@ export function toJson_ScaleDownAction(obj: ScaleDownAction | undefined): Record
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema ScalingTargetPolicyPredictive
@@ -2920,7 +2920,7 @@ export interface ScalingTargetPolicyPredictive {
 /**
  * Converts an object of type 'ScalingTargetPolicyPredictive' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ScalingTargetPolicyPredictive(obj: ScalingTargetPolicyPredictive | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -2929,7 +2929,7 @@ export function toJson_ScalingTargetPolicyPredictive(obj: ScalingTargetPolicyPre
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkDeploymentPreferences
@@ -2960,7 +2960,7 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkDeploy
 /**
  * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkDeploymentPreferences' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkDeploymentPreferences(obj: CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkDeploymentPreferences | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -2972,7 +2972,7 @@ export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalk
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActions
@@ -2988,7 +2988,7 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManage
 /**
  * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActions' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActions(obj: CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActions | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -2997,7 +2997,7 @@ export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalk
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema EcsAutoScale
@@ -3043,7 +3043,7 @@ export interface EcsAutoScale {
 /**
  * Converts an object of type 'EcsAutoScale' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_EcsAutoScale(obj: EcsAutoScale | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -3058,7 +3058,7 @@ export function toJson_EcsAutoScale(obj: EcsAutoScale | undefined): Record<strin
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema EcsBatch
@@ -3074,7 +3074,7 @@ export interface EcsBatch {
 /**
  * Converts an object of type 'EcsBatch' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_EcsBatch(obj: EcsBatch | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -3083,7 +3083,7 @@ export function toJson_EcsBatch(obj: EcsBatch | undefined): Record<string, any> 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema EcsOptimizeImages
@@ -3109,7 +3109,7 @@ export interface EcsOptimizeImages {
 /**
  * Converts an object of type 'EcsOptimizeImages' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_EcsOptimizeImages(obj: EcsOptimizeImages | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -3120,7 +3120,7 @@ export function toJson_EcsOptimizeImages(obj: EcsOptimizeImages | undefined): Re
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema KubernetesAutoScale
@@ -3166,7 +3166,7 @@ export interface KubernetesAutoScale {
 /**
  * Converts an object of type 'KubernetesAutoScale' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_KubernetesAutoScale(obj: KubernetesAutoScale | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -3181,7 +3181,7 @@ export function toJson_KubernetesAutoScale(obj: KubernetesAutoScale | undefined)
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupThirdPartiesIntegrationCodeDeployDeploymentGroups
@@ -3202,7 +3202,7 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationCodeDeployDeploymentGr
 /**
  * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationCodeDeployDeploymentGroups' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationCodeDeployDeploymentGroups(obj: CfnGroupPropsGroupThirdPartiesIntegrationCodeDeployDeploymentGroups | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -3212,7 +3212,7 @@ export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationCodeDeployDeploy
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema NomadAutoScale
@@ -3253,7 +3253,7 @@ export interface NomadAutoScale {
 /**
  * Converts an object of type 'NomadAutoScale' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_NomadAutoScale(obj: NomadAutoScale | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -3267,7 +3267,7 @@ export function toJson_NomadAutoScale(obj: NomadAutoScale | undefined): Record<s
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema TlsConfig
@@ -3293,7 +3293,7 @@ export interface TlsConfig {
 /**
  * Converts an object of type 'TlsConfig' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_TlsConfig(obj: TlsConfig | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -3304,7 +3304,7 @@ export function toJson_TlsConfig(obj: TlsConfig | undefined): Record<string, any
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema DockerSwarmAutoScale
@@ -3340,7 +3340,7 @@ export interface DockerSwarmAutoScale {
 /**
  * Converts an object of type 'DockerSwarmAutoScale' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_DockerSwarmAutoScale(obj: DockerSwarmAutoScale | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -3353,7 +3353,7 @@ export function toJson_DockerSwarmAutoScale(obj: DockerSwarmAutoScale | undefine
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupThirdPartiesIntegrationRoute53Domains
@@ -3384,7 +3384,7 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationRoute53Domains {
 /**
  * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationRoute53Domains' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationRoute53Domains(obj: CfnGroupPropsGroupThirdPartiesIntegrationRoute53Domains | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -3396,7 +3396,7 @@ export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationRoute53Domains(o
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupThirdPartiesIntegrationGitlabRunner
@@ -3412,7 +3412,7 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationGitlabRunner {
 /**
  * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationGitlabRunner' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationGitlabRunner(obj: CfnGroupPropsGroupThirdPartiesIntegrationGitlabRunner | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -3421,7 +3421,7 @@ export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationGitlabRunner(obj
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupThirdPartiesIntegrationDatadogMetricsToReport
@@ -3442,7 +3442,7 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationDatadogMetricsToReport
 /**
  * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationDatadogMetricsToReport' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationDatadogMetricsToReport(obj: CfnGroupPropsGroupThirdPartiesIntegrationDatadogMetricsToReport | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -3452,7 +3452,7 @@ export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationDatadogMetricsTo
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethod
@@ -3478,7 +3478,7 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMetho
 /**
  * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethod' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethod(obj: CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethod | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -3489,7 +3489,7 @@ export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectio
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema ResourceRequirement
@@ -3510,7 +3510,7 @@ export interface ResourceRequirement {
 /**
  * Converts an object of type 'ResourceRequirement' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ResourceRequirement(obj: ResourceRequirement | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -3520,7 +3520,7 @@ export function toJson_ResourceRequirement(obj: ResourceRequirement | undefined)
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema LoadBalancerConfig
@@ -3566,7 +3566,7 @@ export interface LoadBalancerConfig {
 /**
  * Converts an object of type 'LoadBalancerConfig' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_LoadBalancerConfig(obj: LoadBalancerConfig | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -3581,7 +3581,7 @@ export function toJson_LoadBalancerConfig(obj: LoadBalancerConfig | undefined): 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancers
@@ -3607,7 +3607,7 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancers {
 /**
  * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancers' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancers(obj: CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancers | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -3618,7 +3618,7 @@ export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalanc
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfig
@@ -3694,7 +3694,7 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfi
 /**
  * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfig' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfig(obj: CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfig | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -3715,7 +3715,7 @@ export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGrou
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema BlockDeviceMappingEbs
@@ -3771,7 +3771,7 @@ export interface BlockDeviceMappingEbs {
 /**
  * Converts an object of type 'BlockDeviceMappingEbs' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_BlockDeviceMappingEbs(obj: BlockDeviceMappingEbs | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -3788,7 +3788,7 @@ export function toJson_BlockDeviceMappingEbs(obj: BlockDeviceMappingEbs | undefi
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfacesPrivateIpAddresses
@@ -3809,7 +3809,7 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfacesPr
 /**
  * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfacesPrivateIpAddresses' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfacesPrivateIpAddresses(obj: CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfacesPrivateIpAddresses | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -3819,7 +3819,7 @@ export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterf
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema ResourceTagSpecificationConfig
@@ -3835,7 +3835,7 @@ export interface ResourceTagSpecificationConfig {
 /**
  * Converts an object of type 'ResourceTagSpecificationConfig' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ResourceTagSpecificationConfig(obj: ResourceTagSpecificationConfig | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -3844,7 +3844,7 @@ export function toJson_ResourceTagSpecificationConfig(obj: ResourceTagSpecificat
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema BeanStalkStrategy
@@ -3865,7 +3865,7 @@ export interface BeanStalkStrategy {
 /**
  * Converts an object of type 'BeanStalkStrategy' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_BeanStalkStrategy(obj: BeanStalkStrategy | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -3875,7 +3875,7 @@ export function toJson_BeanStalkStrategy(obj: BeanStalkStrategy | undefined): Re
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActionsPlatformUpdate
@@ -3906,7 +3906,7 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManage
 /**
  * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActionsPlatformUpdate' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActionsPlatformUpdate(obj: CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActionsPlatformUpdate | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -3918,7 +3918,7 @@ export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalk
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Headroom
@@ -3944,7 +3944,7 @@ export interface Headroom {
 /**
  * Converts an object of type 'Headroom' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Headroom(obj: Headroom | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -3955,7 +3955,7 @@ export function toJson_Headroom(obj: Headroom | undefined): Record<string, any> 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema AutoScaleDown
@@ -3976,7 +3976,7 @@ export interface AutoScaleDown {
 /**
  * Converts an object of type 'AutoScaleDown' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_AutoScaleDown(obj: AutoScaleDown | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -3986,7 +3986,7 @@ export function toJson_AutoScaleDown(obj: AutoScaleDown | undefined): Record<str
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Attribute
@@ -4007,7 +4007,7 @@ export interface Attribute {
 /**
  * Converts an object of type 'Attribute' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Attribute(obj: Attribute | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -4017,7 +4017,7 @@ export function toJson_Attribute(obj: Attribute | undefined): Record<string, any
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema KubernetesAutoScaleHeadroom
@@ -4048,7 +4048,7 @@ export interface KubernetesAutoScaleHeadroom {
 /**
  * Converts an object of type 'KubernetesAutoScaleHeadroom' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_KubernetesAutoScaleHeadroom(obj: KubernetesAutoScaleHeadroom | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -4060,7 +4060,7 @@ export function toJson_KubernetesAutoScaleHeadroom(obj: KubernetesAutoScaleHeadr
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema KubernetesAutoScaleResourceLimits
@@ -4081,7 +4081,7 @@ export interface KubernetesAutoScaleResourceLimits {
 /**
  * Converts an object of type 'KubernetesAutoScaleResourceLimits' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_KubernetesAutoScaleResourceLimits(obj: KubernetesAutoScaleResourceLimits | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -4091,7 +4091,7 @@ export function toJson_KubernetesAutoScaleResourceLimits(obj: KubernetesAutoScal
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupThirdPartiesIntegrationRoute53DomainsRecordSets
@@ -4112,7 +4112,7 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationRoute53DomainsRecordSe
 /**
  * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationRoute53DomainsRecordSets' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationRoute53DomainsRecordSets(obj: CfnGroupPropsGroupThirdPartiesIntegrationRoute53DomainsRecordSets | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -4122,7 +4122,7 @@ export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationRoute53DomainsRe
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethodSsh
@@ -4138,7 +4138,7 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMetho
 /**
  * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethodSsh' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethodSsh(obj: CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethodSsh | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -4147,7 +4147,7 @@ export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectio
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethodJnlp
@@ -4183,7 +4183,7 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMetho
 /**
  * Converts an object of type 'CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethodJnlp' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethodJnlp(obj: CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethodJnlp | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -4196,7 +4196,7 @@ export function toJson_CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectio
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersListenerRules
@@ -4217,7 +4217,7 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersLis
 /**
  * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersListenerRules' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersListenerRules(obj: CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersListenerRules | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -4227,7 +4227,7 @@ export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalanc
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersDefaultStaticTargetGroups
@@ -4248,7 +4248,7 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersDef
 /**
  * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersDefaultStaticTargetGroups' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersDefaultStaticTargetGroups(obj: CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersDefaultStaticTargetGroups | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -4258,7 +4258,7 @@ export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalanc
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfigMatcher
@@ -4279,7 +4279,7 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfi
 /**
  * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfigMatcher' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfigMatcher(obj: CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfigMatcher | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -4289,7 +4289,7 @@ export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGrou
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema BlockDeviceMappingEbsDynamicVolumeSize
@@ -4315,7 +4315,7 @@ export interface BlockDeviceMappingEbsDynamicVolumeSize {
 /**
  * Converts an object of type 'BlockDeviceMappingEbsDynamicVolumeSize' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_BlockDeviceMappingEbsDynamicVolumeSize(obj: BlockDeviceMappingEbsDynamicVolumeSize | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -4326,7 +4326,7 @@ export function toJson_BlockDeviceMappingEbsDynamicVolumeSize(obj: BlockDeviceMa
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersListenerRulesStaticTargetGroups
@@ -4347,7 +4347,7 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersLis
 /**
  * Converts an object of type 'CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersListenerRulesStaticTargetGroups' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersListenerRulesStaticTargetGroups(obj: CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersListenerRulesStaticTargetGroups | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -4357,7 +4357,7 @@ export function toJson_CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalanc
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 
 /**

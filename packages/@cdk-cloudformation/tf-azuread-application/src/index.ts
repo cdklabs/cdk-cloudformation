@@ -167,7 +167,7 @@ export interface CfnApplicationProps {
 /**
  * Converts an object of type 'CfnApplicationProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnApplicationProps(obj: CfnApplicationProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -197,7 +197,7 @@ export function toJson_CfnApplicationProps(obj: CfnApplicationProps | undefined)
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema AppRoleDefinition
@@ -243,7 +243,7 @@ export interface AppRoleDefinition {
 /**
  * Converts an object of type 'AppRoleDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_AppRoleDefinition(obj: AppRoleDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -258,7 +258,7 @@ export function toJson_AppRoleDefinition(obj: AppRoleDefinition | undefined): Re
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Oauth2PermissionsDefinition
@@ -309,7 +309,7 @@ export interface Oauth2PermissionsDefinition {
 /**
  * Converts an object of type 'Oauth2PermissionsDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Oauth2PermissionsDefinition(obj: Oauth2PermissionsDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -325,7 +325,7 @@ export function toJson_Oauth2PermissionsDefinition(obj: Oauth2PermissionsDefinit
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema ApiDefinition
@@ -341,7 +341,7 @@ export interface ApiDefinition {
 /**
  * Converts an object of type 'ApiDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ApiDefinition(obj: ApiDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -350,7 +350,7 @@ export function toJson_ApiDefinition(obj: ApiDefinition | undefined): Record<str
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema OptionalClaimsDefinition
@@ -371,7 +371,7 @@ export interface OptionalClaimsDefinition {
 /**
  * Converts an object of type 'OptionalClaimsDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_OptionalClaimsDefinition(obj: OptionalClaimsDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -381,7 +381,7 @@ export function toJson_OptionalClaimsDefinition(obj: OptionalClaimsDefinition | 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema RequiredResourceAccessDefinition
@@ -404,7 +404,7 @@ export interface RequiredResourceAccessDefinition {
 /**
  * Converts an object of type 'RequiredResourceAccessDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_RequiredResourceAccessDefinition(obj: RequiredResourceAccessDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -414,7 +414,7 @@ export function toJson_RequiredResourceAccessDefinition(obj: RequiredResourceAcc
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema TimeoutsDefinition
@@ -445,7 +445,7 @@ export interface TimeoutsDefinition {
 /**
  * Converts an object of type 'TimeoutsDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_TimeoutsDefinition(obj: TimeoutsDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -457,7 +457,7 @@ export function toJson_TimeoutsDefinition(obj: TimeoutsDefinition | undefined): 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema WebDefinition
@@ -494,7 +494,7 @@ export interface WebDefinition {
 /**
  * Converts an object of type 'WebDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_WebDefinition(obj: WebDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -506,7 +506,7 @@ export function toJson_WebDefinition(obj: WebDefinition | undefined): Record<str
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Oauth2PermissionScopeDefinition
@@ -575,7 +575,7 @@ export interface Oauth2PermissionScopeDefinition {
 /**
  * Converts an object of type 'Oauth2PermissionScopeDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Oauth2PermissionScopeDefinition(obj: Oauth2PermissionScopeDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -591,7 +591,7 @@ export function toJson_Oauth2PermissionScopeDefinition(obj: Oauth2PermissionScop
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema AccessTokenDefinition
@@ -622,7 +622,7 @@ export interface AccessTokenDefinition {
 /**
  * Converts an object of type 'AccessTokenDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_AccessTokenDefinition(obj: AccessTokenDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -634,7 +634,7 @@ export function toJson_AccessTokenDefinition(obj: AccessTokenDefinition | undefi
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema IdTokenDefinition
@@ -665,7 +665,7 @@ export interface IdTokenDefinition {
 /**
  * Converts an object of type 'IdTokenDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_IdTokenDefinition(obj: IdTokenDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -677,7 +677,7 @@ export function toJson_IdTokenDefinition(obj: IdTokenDefinition | undefined): Re
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema ResourceAccessDefinition
@@ -702,7 +702,7 @@ export interface ResourceAccessDefinition {
 /**
  * Converts an object of type 'ResourceAccessDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ResourceAccessDefinition(obj: ResourceAccessDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -712,7 +712,7 @@ export function toJson_ResourceAccessDefinition(obj: ResourceAccessDefinition | 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema ImplicitGrantDefinition
@@ -728,7 +728,7 @@ export interface ImplicitGrantDefinition {
 /**
  * Converts an object of type 'ImplicitGrantDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ImplicitGrantDefinition(obj: ImplicitGrantDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -737,7 +737,7 @@ export function toJson_ImplicitGrantDefinition(obj: ImplicitGrantDefinition | un
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 
 /**

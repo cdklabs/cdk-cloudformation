@@ -58,7 +58,7 @@ export interface CfnScheduledActionProps {
 /**
  * Converts an object of type 'CfnScheduledActionProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnScheduledActionProps(obj: CfnScheduledActionProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -75,7 +75,7 @@ export function toJson_CfnScheduledActionProps(obj: CfnScheduledActionProps | un
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnScheduledActionPropsScalableTargetAction
@@ -96,7 +96,7 @@ export interface CfnScheduledActionPropsScalableTargetAction {
 /**
  * Converts an object of type 'CfnScheduledActionPropsScalableTargetAction' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnScheduledActionPropsScalableTargetAction(obj: CfnScheduledActionPropsScalableTargetAction | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -106,7 +106,7 @@ export function toJson_CfnScheduledActionPropsScalableTargetAction(obj: CfnSched
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 
 /**

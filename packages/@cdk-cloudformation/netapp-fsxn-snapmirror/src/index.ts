@@ -104,7 +104,7 @@ export interface CfnSnapMirrorProps {
 /**
  * Converts an object of type 'CfnSnapMirrorProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnSnapMirrorProps(obj: CfnSnapMirrorProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -125,7 +125,7 @@ export function toJson_CfnSnapMirrorProps(obj: CfnSnapMirrorProps | undefined): 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema PasswordSource
@@ -143,7 +143,7 @@ export interface PasswordSource {
 /**
  * Converts an object of type 'PasswordSource' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_PasswordSource(obj: PasswordSource | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -152,7 +152,7 @@ export function toJson_PasswordSource(obj: PasswordSource | undefined): Record<s
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema FsxnDestination
@@ -184,7 +184,7 @@ export interface FsxnDestination {
 /**
  * Converts an object of type 'FsxnDestination' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_FsxnDestination(obj: FsxnDestination | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -195,7 +195,7 @@ export function toJson_FsxnDestination(obj: FsxnDestination | undefined): Record
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Endpoint
@@ -220,7 +220,7 @@ export interface Endpoint {
 /**
  * Converts an object of type 'Endpoint' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Endpoint(obj: Endpoint | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -230,7 +230,7 @@ export function toJson_Endpoint(obj: Endpoint | undefined): Record<string, any> 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema SnapMirrorDestinationCreation
@@ -248,7 +248,7 @@ export interface SnapMirrorDestinationCreation {
 /**
  * Converts an object of type 'SnapMirrorDestinationCreation' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_SnapMirrorDestinationCreation(obj: SnapMirrorDestinationCreation | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -257,7 +257,7 @@ export function toJson_SnapMirrorDestinationCreation(obj: SnapMirrorDestinationC
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Modify the SnapMirror replication status using 'StateAction' in the CloudFormation template when the relationship exists. Follow ONTAP protocol: set to 'paused' to pause, 'snapmirrored' to resync, and 'update' to trigger the transfer API. For subsequent updates, first clear the prior 'StateAction' then set it again.
@@ -300,7 +300,7 @@ export interface HealthyStatus {
 /**
  * Converts an object of type 'HealthyStatus' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_HealthyStatus(obj: HealthyStatus | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -310,7 +310,7 @@ export function toJson_HealthyStatus(obj: HealthyStatus | undefined): Record<str
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema SecretSource
@@ -335,7 +335,7 @@ export interface SecretSource {
 /**
  * Converts an object of type 'SecretSource' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_SecretSource(obj: SecretSource | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -345,7 +345,7 @@ export function toJson_SecretSource(obj: SecretSource | undefined): Record<strin
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema NameWithUuidRef
@@ -370,7 +370,7 @@ export interface NameWithUuidRef {
 /**
  * Converts an object of type 'NameWithUuidRef' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_NameWithUuidRef(obj: NameWithUuidRef | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -380,7 +380,7 @@ export function toJson_NameWithUuidRef(obj: NameWithUuidRef | undefined): Record
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 
 /**

@@ -41,7 +41,7 @@ export interface CfnUserMemberOfGroupProps {
 /**
  * Converts an object of type 'CfnUserMemberOfGroupProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnUserMemberOfGroupProps(obj: CfnUserMemberOfGroupProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -53,7 +53,7 @@ export function toJson_CfnUserMemberOfGroupProps(obj: CfnUserMemberOfGroupProps 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * The access level to grant to this user in the group, e.g. 'Guest', 'Developer', or 'Maintainer'. Note the GitLab API may not allow all values.

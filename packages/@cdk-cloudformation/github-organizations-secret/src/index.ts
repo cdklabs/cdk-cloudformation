@@ -53,7 +53,7 @@ export interface CfnSecretProps {
 /**
  * Converts an object of type 'CfnSecretProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnSecretProps(obj: CfnSecretProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -69,7 +69,7 @@ export function toJson_CfnSecretProps(obj: CfnSecretProps | undefined): Record<s
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Which type of organization repositories have access to the organization secret. selected means only the repositories specified by selected_repository_ids can access the secret.

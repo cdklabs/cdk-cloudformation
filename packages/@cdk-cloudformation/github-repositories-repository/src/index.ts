@@ -165,7 +165,7 @@ export interface CfnRepositoryProps {
 /**
  * Converts an object of type 'CfnRepositoryProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnRepositoryProps(obj: CfnRepositoryProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -195,7 +195,7 @@ export function toJson_CfnRepositoryProps(obj: CfnRepositoryProps | undefined): 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Can be public or private. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, visibility can also be internal. Note: For GitHub Enterprise Server and GitHub AE, this endpoint will only list repositories available to all users on the enterprise. For more information, see "Creating an internal repository" (https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories#about-internal-repositories) in the GitHub Help documentation.
@@ -237,7 +237,7 @@ export interface SecurityAndAnalysis {
 /**
  * Converts an object of type 'SecurityAndAnalysis' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_SecurityAndAnalysis(obj: SecurityAndAnalysis | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -248,7 +248,7 @@ export function toJson_SecurityAndAnalysis(obj: SecurityAndAnalysis | undefined)
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Use the status property to enable or disable GitHub Advanced Security for this repository. For more information, see "About GitHub Advanced Security." (https://docs.github.com/github/getting-started-with-github/learning-about-github/about-github-advanced-security)
@@ -268,7 +268,7 @@ export interface AdvanceSecurity {
 /**
  * Converts an object of type 'AdvanceSecurity' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_AdvanceSecurity(obj: AdvanceSecurity | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -277,7 +277,7 @@ export function toJson_AdvanceSecurity(obj: AdvanceSecurity | undefined): Record
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Use the status property to enable or disable secret scanning for this repository. For more information, see "About secret scanning." (https://docs.github.com/code-security/secret-security/about-secret-scanning)
@@ -297,7 +297,7 @@ export interface SecretScanning {
 /**
  * Converts an object of type 'SecretScanning' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_SecretScanning(obj: SecretScanning | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -306,7 +306,7 @@ export function toJson_SecretScanning(obj: SecretScanning | undefined): Record<s
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Use the status property to enable or disable secret scanning push protection for this repository. For more information, see "Protecting pushes with secret scanning." (https://docs.github.com/code-security/secret-scanning/protecting-pushes-with-secret-scanning)
@@ -326,7 +326,7 @@ export interface SecretScanningPushProtection {
 /**
  * Converts an object of type 'SecretScanningPushProtection' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_SecretScanningPushProtection(obj: SecretScanningPushProtection | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -335,7 +335,7 @@ export function toJson_SecretScanningPushProtection(obj: SecretScanningPushProte
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Can be enabled or disabled.

@@ -209,7 +209,7 @@ export interface CfnClusterProps {
 /**
  * Converts an object of type 'CfnClusterProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnClusterProps(obj: CfnClusterProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -247,7 +247,7 @@ export function toJson_CfnClusterProps(obj: CfnClusterProps | undefined): Record
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Range defining the min and max number of cluster workers
@@ -274,7 +274,7 @@ export interface Autoscale {
 /**
  * Converts an object of type 'Autoscale' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Autoscale(obj: Autoscale | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -284,7 +284,7 @@ export function toJson_Autoscale(obj: Autoscale | undefined): Record<string, any
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Attributes set during cluster creation related to Amazon Web Services.
@@ -380,7 +380,7 @@ export interface AwsAttributes {
 /**
  * Converts an object of type 'AwsAttributes' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_AwsAttributes(obj: AwsAttributes | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -397,7 +397,7 @@ export function toJson_AwsAttributes(obj: AwsAttributes | undefined): Record<str
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema InitScriptsListItem
@@ -413,7 +413,7 @@ export interface InitScriptsListItem {
 /**
  * Converts an object of type 'InitScriptsListItem' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_InitScriptsListItem(obj: InitScriptsListItem | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -422,7 +422,7 @@ export function toJson_InitScriptsListItem(obj: InitScriptsListItem | undefined)
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnClusterPropsInstanceSource
@@ -443,7 +443,7 @@ export interface CfnClusterPropsInstanceSource {
 /**
  * Converts an object of type 'CfnClusterPropsInstanceSource' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnClusterPropsInstanceSource(obj: CfnClusterPropsInstanceSource | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -453,7 +453,7 @@ export function toJson_CfnClusterPropsInstanceSource(obj: CfnClusterPropsInstanc
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnClusterPropsDriverInstanceSource
@@ -474,7 +474,7 @@ export interface CfnClusterPropsDriverInstanceSource {
 /**
  * Converts an object of type 'CfnClusterPropsDriverInstanceSource' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnClusterPropsDriverInstanceSource(obj: CfnClusterPropsDriverInstanceSource | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -484,7 +484,7 @@ export function toJson_CfnClusterPropsDriverInstanceSource(obj: CfnClusterPropsD
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnClusterPropsDefaultTags
@@ -515,7 +515,7 @@ export interface CfnClusterPropsDefaultTags {
 /**
  * Converts an object of type 'CfnClusterPropsDefaultTags' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnClusterPropsDefaultTags(obj: CfnClusterPropsDefaultTags | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -527,7 +527,7 @@ export function toJson_CfnClusterPropsDefaultTags(obj: CfnClusterPropsDefaultTag
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Availability type used for all subsequent nodes past the first_on_demand ones. Note: If first_on_demand is zero, this availability type will be used for the entire cluster.
@@ -574,7 +574,7 @@ export interface S3Destination {
 /**
  * Converts an object of type 'S3Destination' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_S3Destination(obj: S3Destination | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -584,7 +584,7 @@ export function toJson_S3Destination(obj: S3Destination | undefined): Record<str
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 
 /**

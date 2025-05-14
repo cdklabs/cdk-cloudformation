@@ -90,7 +90,7 @@ export interface CfnKubeEnforcerProps {
 /**
  * Converts an object of type 'CfnKubeEnforcerProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnKubeEnforcerProps(obj: CfnKubeEnforcerProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -109,7 +109,7 @@ export function toJson_CfnKubeEnforcerProps(obj: CfnKubeEnforcerProps | undefine
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * For network connectivity to Cluster inside VPC
@@ -136,7 +136,7 @@ export interface CfnKubeEnforcerPropsVpcConfiguration {
 /**
  * Converts an object of type 'CfnKubeEnforcerPropsVpcConfiguration' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnKubeEnforcerPropsVpcConfiguration(obj: CfnKubeEnforcerPropsVpcConfiguration | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -146,7 +146,7 @@ export function toJson_CfnKubeEnforcerPropsVpcConfiguration(obj: CfnKubeEnforcer
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 
 /**

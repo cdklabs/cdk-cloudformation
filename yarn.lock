@@ -1462,9 +1462,9 @@ camelcase@^6.2.0, camelcase@^6.3.0:
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
 caniuse-lite@^1.0.30001716:
-  version "1.0.30001717"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001717.tgz#5d9fec5ce09796a1893013825510678928aca129"
-  integrity sha512-auPpttCq6BDEG8ZAuHJIplGw6GODhjw+/11e7IjpnYCxZcW/ONgPs0KVBJ0d1bY3e2+7PRe5RCLyP+PfwVgkYw==
+  version "1.0.30001718"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001718.tgz#dae13a9c80d517c30c6197515a96131c194d8f82"
+  integrity sha512-AflseV1ahcSunK53NfEs9gFWgOEmzr0f+kaMFA4xiLZlr9Hzt7HxcSpIFcnNCUkz6R6dWKa54rUz3HUmI3nVcw==
 
 case@1.6.3, case@^1.6.3:
   version "1.6.3"
@@ -1472,16 +1472,16 @@ case@1.6.3, case@^1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-import@^0.2.112:
-  version "0.2.932"
-  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.932.tgz#949fe07e044eff05f1f4fe20479cafb661be4aa3"
-  integrity sha512-djaBhs5yCBB8dG0VOhnG3DkRq4SUuo9KvP4BABuV+WdwhkvTJll0enPpvQQO7AU9MhnPv8uXvA2gjT4voCYGEQ==
+  version "0.2.933"
+  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.933.tgz#784ccd01271d7333677fecf41faca72c2a42d440"
+  integrity sha512-dZXX7p/9CK41Y8rNivgUJ7V36WRy2FgTtRKLhOb+xhl6unOwfx/gBslT2YYlfTvokAptQSLNOvyEhSjn6vOQMw==
   dependencies:
     aws-cdk-lib "^2.195.0"
     aws-sdk "^2.1692.0"
     case "^1.6.3"
     constructs "^10"
     jsii-srcmak "^0.1.1308"
-    json2jsii "^0.5.2"
+    json2jsii "^0.5.3"
     minimist "^1.2.8"
     minimist-subcommand "^3.0.2"
     proxy-agent "^6.5.0"
@@ -1931,9 +1931,9 @@ dateformat@^3.0.3:
   integrity sha512-jyCETtSl3VMZMWeRo7iY1FL19ges1t55hMo5yaam4Jrsm5EPL89UQkoQRyiI+Yf4k8r2ZpdngkV8hr1lIdjb3Q==
 
 debug@4, debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2, debug@^4.3.4:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-4.4.0.tgz#2b3f2aea2ffeb776477460267377dc8710faba8a"
-  integrity sha512-6WTZ/IxCY/T6BALoZHaE4ctp9xm+Z5kY/pzYaCHRFeyVhojxlrm+46y68HA6hr0TcwEssoxNiDEUJQjfPZ/RYA==
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.4.1.tgz#e5a8bc6cbc4c6cd3e64308b0693a3d4fa550189b"
+  integrity sha512-KcKCqiftBJcZr++7ykoDIEwSa3XWowTfNPo92BYxjXiyYEVrUQh2aLyhxBCwww+heortUFxEJYcRzosstTEBYQ==
   dependencies:
     ms "^2.1.3"
 
@@ -4028,10 +4028,10 @@ json-stringify-safe@^5.0.1:
   resolved "https://registry.yarnpkg.com/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
   integrity sha512-ZClg6AaYvamvYEE82d3Iyd3vSSIjQ+odgjaTzRuO3s7toCdFKczob2i0zCh7JE8kWn17yvAWhUVxvqGwUalsRA==
 
-json2jsii@^0.5.2:
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/json2jsii/-/json2jsii-0.5.2.tgz#3dd2c8db8fd560288bd706a42bdd5e3964f70ccc"
-  integrity sha512-q1uT9GgUnzcbBcIdLujA6OiHjznUZxU5j3cbGv13+/mDW2cwvLNpGvXr2ziGngXPXRBiE9gqhMiI9ziI50JKEA==
+json2jsii@^0.5.3:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/json2jsii/-/json2jsii-0.5.3.tgz#2639c9409d2add57769691f3b07fa4c5f680ffb4"
+  integrity sha512-AZQp65rhuZvyVBJF4SEPLcq+HEakvPk8fH5GqgrflNjCOChT7Fm2Z0vPu//PUvwm1BPw1XcGbppjZ1DHa4bUTQ==
   dependencies:
     camelcase "^6.3.0"
     json-schema "^0.4.0"

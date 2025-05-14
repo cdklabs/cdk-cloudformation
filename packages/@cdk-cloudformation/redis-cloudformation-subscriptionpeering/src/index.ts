@@ -83,7 +83,7 @@ export interface CfnSubscriptionPeeringProps {
 /**
  * Converts an object of type 'CfnSubscriptionPeeringProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnSubscriptionPeeringProps(obj: CfnSubscriptionPeeringProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -101,7 +101,7 @@ export function toJson_CfnSubscriptionPeeringProps(obj: CfnSubscriptionPeeringPr
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 
 /**

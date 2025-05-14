@@ -65,7 +65,7 @@ export interface CfnWorkflowProps {
 /**
  * Converts an object of type 'CfnWorkflowProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnWorkflowProps(obj: CfnWorkflowProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -81,7 +81,7 @@ export function toJson_CfnWorkflowProps(obj: CfnWorkflowProps | undefined): Reco
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Task
@@ -161,7 +161,7 @@ export interface Task {
 /**
  * Converts an object of type 'Task' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Task(obj: Task | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -180,7 +180,7 @@ export function toJson_Task(obj: Task | undefined): Record<string, any> | undefi
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema ThrottleRequest
@@ -201,7 +201,7 @@ export interface ThrottleRequest {
 /**
  * Converts an object of type 'ThrottleRequest' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ThrottleRequest(obj: ThrottleRequest | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -211,7 +211,7 @@ export function toJson_ThrottleRequest(obj: ThrottleRequest | undefined): Record
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Configures how executions of the workflows are getting triggered. If no trigger is specified it means the workflow is getting manually triggered
@@ -234,7 +234,7 @@ export interface TriggerRequest {
 /**
  * Converts an object of type 'TriggerRequest' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_TriggerRequest(obj: TriggerRequest | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -244,7 +244,7 @@ export function toJson_TriggerRequest(obj: TriggerRequest | undefined): Record<s
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Currently known and supported values are dynatrace.automations:http-function, dynatrace.automations:run-javascript and dynatrace.automations:execute-dql-query
@@ -292,7 +292,7 @@ export interface Condition {
 /**
  * Converts an object of type 'Condition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Condition(obj: Condition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -303,7 +303,7 @@ export function toJson_Condition(obj: Condition | undefined): Record<string, any
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Layouting information about the task tile when visualized. If not specified Dynatrace will position the task tiles automatically
@@ -330,7 +330,7 @@ export interface Position {
 /**
  * Converts an object of type 'Position' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Position(obj: Position | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -340,7 +340,7 @@ export function toJson_Position(obj: Position | undefined): Record<string, any> 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Configure whether to automatically rerun the task on failure. If not specified no retries will be attempted
@@ -374,7 +374,7 @@ export interface Retry {
 /**
  * Converts an object of type 'Retry' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Retry(obj: Retry | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -385,7 +385,7 @@ export function toJson_Retry(obj: Retry | undefined): Record<string, any> | unde
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema ThrottleLimitEvent
@@ -411,7 +411,7 @@ export interface ThrottleLimitEvent {
 /**
  * Converts an object of type 'ThrottleLimitEvent' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ThrottleLimitEvent(obj: ThrottleLimitEvent | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -422,7 +422,7 @@ export function toJson_ThrottleLimitEvent(obj: ThrottleLimitEvent | undefined): 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema EventTriggerRequest
@@ -445,7 +445,7 @@ export interface EventTriggerRequest {
 /**
  * Converts an object of type 'EventTriggerRequest' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_EventTriggerRequest(obj: EventTriggerRequest | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -455,7 +455,7 @@ export function toJson_EventTriggerRequest(obj: EventTriggerRequest | undefined)
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema ScheduleRequest
@@ -503,7 +503,7 @@ export interface ScheduleRequest {
 /**
  * Converts an object of type 'ScheduleRequest' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ScheduleRequest(obj: ScheduleRequest | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -518,7 +518,7 @@ export function toJson_ScheduleRequest(obj: ScheduleRequest | undefined): Record
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Possible values are SKIP and STOP
@@ -551,7 +551,7 @@ export interface EventTriggerRequestTriggerConfiguration {
 /**
  * Converts an object of type 'EventTriggerRequestTriggerConfiguration' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_EventTriggerRequestTriggerConfiguration(obj: EventTriggerRequestTriggerConfiguration | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -561,7 +561,7 @@ export function toJson_EventTriggerRequestTriggerConfiguration(obj: EventTrigger
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema ScheduleFilterParameters
@@ -602,7 +602,7 @@ export interface ScheduleFilterParameters {
 /**
  * Converts an object of type 'ScheduleFilterParameters' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ScheduleFilterParameters(obj: ScheduleFilterParameters | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -616,7 +616,7 @@ export function toJson_ScheduleFilterParameters(obj: ScheduleFilterParameters | 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema EventTriggerRequestTriggerConfigurationType
@@ -681,7 +681,7 @@ export interface EventTriggerConfig {
 /**
  * Converts an object of type 'EventTriggerConfig' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_EventTriggerConfig(obj: EventTriggerConfig | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -697,7 +697,7 @@ export function toJson_EventTriggerConfig(obj: EventTriggerConfig | undefined): 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema DavisEventName
@@ -718,7 +718,7 @@ export interface DavisEventName {
 /**
  * Converts an object of type 'DavisEventName' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_DavisEventName(obj: DavisEventName | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -728,7 +728,7 @@ export function toJson_DavisEventName(obj: DavisEventName | undefined): Record<s
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema DavisProblemCategories
@@ -774,7 +774,7 @@ export interface DavisProblemCategories {
 /**
  * Converts an object of type 'DavisProblemCategories' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_DavisProblemCategories(obj: DavisProblemCategories | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -789,7 +789,7 @@ export function toJson_DavisProblemCategories(obj: DavisProblemCategories | unde
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema EventTriggerConfigEntityTagsMatch

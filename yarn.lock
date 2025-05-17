@@ -21,7 +21,7 @@
     "@csstools/css-tokenizer" "^3.0.3"
     lru-cache "^10.4.3"
 
-"@aws-cdk/asset-awscli-v1@2.2.236", "@aws-cdk/asset-awscli-v1@^2.2.229":
+"@aws-cdk/asset-awscli-v1@2.2.236":
   version "2.2.236"
   resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.236.tgz#623311a61c9bc8c4571d000235b7efdba09f9168"
   integrity sha512-BjqQVGYsVuS4VXdrezDapSd6P7soEdWJoXl1S8X7l0uLtVX9WvpmCylZKOJDrJblK5MNe1Vq9wUI91LBzzOi8A==
@@ -1231,27 +1231,7 @@ aws-cdk-github-oidc@^2.2.0:
   resolved "https://registry.yarnpkg.com/aws-cdk-github-oidc/-/aws-cdk-github-oidc-2.4.1.tgz#8fcb134401f3a15d74260e5bcc58ed05dabac2a0"
   integrity sha512-zKQYPGyf5f6APG76OpOxW6P7KGY/fC6VhN1ZullxySSu6RroUH9VtVl+cJ8hYes5XvEE/ZDpx2h2fPtNwZrcVQ==
 
-aws-cdk-lib@2.195.0:
-  version "2.195.0"
-  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.195.0.tgz#0d4881f1aadcf4bc5da4a51bc2c20a1fd7e8bdde"
-  integrity sha512-AYLysgSjSnSjkal/AmR86DqvOVqy0VjeWmXR+ucIIGSOzJsevsYuNWCeVnf4v9x+vd2ysVcO8fXndG426vGZ/w==
-  dependencies:
-    "@aws-cdk/asset-awscli-v1" "^2.2.229"
-    "@aws-cdk/asset-node-proxy-agent-v6" "^2.1.0"
-    "@aws-cdk/cloud-assembly-schema" "^41.2.0"
-    "@balena/dockerignore" "^1.0.2"
-    case "1.6.3"
-    fs-extra "^11.3.0"
-    ignore "^5.3.2"
-    jsonschema "^1.5.0"
-    mime-types "^2.1.35"
-    minimatch "^3.1.2"
-    punycode "^2.3.1"
-    semver "^7.7.1"
-    table "^6.9.0"
-    yaml "1.10.2"
-
-aws-cdk-lib@^2.196.0:
+aws-cdk-lib@2.196.0, aws-cdk-lib@^2.196.0:
   version "2.196.0"
   resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.196.0.tgz#fd442256ecb0b31e77a1599a78c4d8c8132f881e"
   integrity sha512-CAy0ahDpUHuYArP0vhDrOZ9OUSyRAznCcKcbETJOPr438QZUCyv+tRVgk8VP5lFW1JuV9sNzIvxdZcsNVSCF7g==

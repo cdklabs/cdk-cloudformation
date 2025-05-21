@@ -11,9 +11,9 @@
     "@jridgewell/trace-mapping" "^0.3.24"
 
 "@asamuzakjp/css-color@^3.1.2":
-  version "3.1.7"
-  resolved "https://registry.yarnpkg.com/@asamuzakjp/css-color/-/css-color-3.1.7.tgz#01fb8475bc8dc999ddc4b270ab2e31f82780d17f"
-  integrity sha512-Ok5fYhtwdyJQmU1PpEv6Si7Y+A4cYb8yNM9oiIJC9TzXPMuN9fvdonKJqcnz9TbFqV6bQ8z0giRq0iaOpGZV2g==
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@asamuzakjp/css-color/-/css-color-3.2.0.tgz#cc42f5b85c593f79f1fa4f25d2b9b321e61d1794"
+  integrity sha512-K1A6z8tS3XsmCMM86xoWdn7Fkdn9m6RSVtocUrJYIwZnFVkng/PvkEoWtOWmP+Scc6saYWHWZYbndEEXxl24jw==
   dependencies:
     "@csstools/css-calc" "^2.1.3"
     "@csstools/css-color-parser" "^3.0.9"
@@ -826,9 +826,9 @@
   integrity sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==
 
 "@types/node@*":
-  version "22.15.19"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.15.19.tgz#ba9f321675243af0456d607fa82a4865931e0cef"
-  integrity sha512-3vMNr4TzNQyjHcRZadojpRaD9Ofr6LsonZAoQ+HMUa/9ORTPoxVIw0e0mpqWpdjj8xybyCM+oKOUH2vwFu/oEw==
+  version "22.15.21"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.15.21.tgz#196ef14fe20d87f7caf1e7b39832767f9a995b77"
+  integrity sha512-EV/37Td6c+MgKAbkcLG6vqZ2zEYHD7bvSrzqqs2RIhbA6w3x+Dqz8MZM3sP6kGTeLrdoOgKZe+Xja7tUB2DNkQ==
   dependencies:
     undici-types "~6.21.0"
 
@@ -1231,7 +1231,7 @@ aws-cdk-github-oidc@^2.2.0:
   resolved "https://registry.yarnpkg.com/aws-cdk-github-oidc/-/aws-cdk-github-oidc-2.4.1.tgz#8fcb134401f3a15d74260e5bcc58ed05dabac2a0"
   integrity sha512-zKQYPGyf5f6APG76OpOxW6P7KGY/fC6VhN1ZullxySSu6RroUH9VtVl+cJ8hYes5XvEE/ZDpx2h2fPtNwZrcVQ==
 
-aws-cdk-lib@2.196.1, aws-cdk-lib@^2.196.0, aws-cdk-lib@^2.196.1:
+aws-cdk-lib@2.196.1, aws-cdk-lib@^2.196.1:
   version "2.196.1"
   resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.196.1.tgz#6bdf40ed62b802525f9b35a3f9f23068771cfb63"
   integrity sha512-OsJ0luDUnagbJpd5Uweh+/6L7OLZQZB7EV9pD9i23uJF6uoe4M02T+kg67huxZdVJVJTZK6De4QxazlB2/mO6A==
@@ -1472,11 +1472,11 @@ case@1.6.3, case@^1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-import@^0.2.112:
-  version "0.2.935"
-  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.935.tgz#a4540b9fc1c11866104ac2eb03f5d02051051b0d"
-  integrity sha512-Nk+jfPGgadY1R+bUG67P19y/GeHdar5doY74bfNaYVLMVb0N6G1iEzdAiu9QJIax7k7kRGWhZ117YD0qOEkuSw==
+  version "0.2.936"
+  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.936.tgz#c1b5ebbc63724673cf812d7cc9008142eeffa16b"
+  integrity sha512-KzuV76/IZVnEXWQXSEC2loo/GJAGwXQY/bZJZx+gfaTJSuwFIE+1/YHudMPHE8bBAMWOuX0f7SKs8xPRQwYqeg==
   dependencies:
-    aws-cdk-lib "^2.196.0"
+    aws-cdk-lib "^2.196.1"
     aws-sdk "^2.1692.0"
     case "^1.6.3"
     constructs "^10"

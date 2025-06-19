@@ -32,9 +32,9 @@
   integrity sha512-7bY3J8GCVxLupn/kNmpPc5VJz8grx+4RKfnnJiO1LG+uxkZfANZG3RMHhE+qQxxwkyQ9/MfPtTpf748UhR425A==
 
 "@aws-cdk/cloud-assembly-schema@^44.2.0":
-  version "44.5.0"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/cloud-assembly-schema/-/cloud-assembly-schema-44.5.0.tgz#475b4997977c1e3f8ebc379823259f4c85986ce8"
-  integrity sha512-/dk9YtqF+BnBS6k4m7YWIp7Pd80m7jdjT8ED8gb3Rd9hAuAEUoJubO0M3EOlLFmknIesQNm95LYU6vt/MIQhWg==
+  version "44.6.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/cloud-assembly-schema/-/cloud-assembly-schema-44.6.0.tgz#06bf0633ee92d8b3e77cbd96bbbf0ace757e006b"
+  integrity sha512-oH1I2/hf+5PJtilXZqbf5G0q4C1WXfu65mqFmBujwwdL/rtfJcgY5H5OS3EDwNXTZ726+UuXbNHKpaNLEs7VUA==
   dependencies:
     jsonschema "~1.4.1"
     semver "^7.7.2"
@@ -1466,9 +1466,9 @@ case@1.6.3, case@^1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-import@^0.2.112:
-  version "0.2.947"
-  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.947.tgz#9e911671067fb42a275c1f0af6ef14812084ec0d"
-  integrity sha512-w19m4mnpCQ6IL2AjOr2VQAcyhXZdeZ8bBFzCAeuzB5UJLKSsPFo7ObBFwJS7J4HJILJnA/+CMNus1LuxGnrI8w==
+  version "0.2.948"
+  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.948.tgz#514dc1b8c22fe8621edb1e6b07bd820d081bbc81"
+  integrity sha512-fiMcCZudKIvevVD2f6/Ft0Zt0aOlsxY3PU0ez9quP9a7bC2HGbZFxnmSqWp5dDIC9q3UKxptN/pLJjYhL/m6Fw==
   dependencies:
     aws-cdk-lib "^2.201.0"
     aws-sdk "^2.1692.0"
@@ -2099,9 +2099,9 @@ dunder-proto@^1.0.0, dunder-proto@^1.0.1:
     gopd "^1.2.0"
 
 electron-to-chromium@^1.5.160:
-  version "1.5.169"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.169.tgz#6afdfd8e701b7ab744e2bb0cfdec3cefc1072cbe"
-  integrity sha512-q7SQx6mkLy0GTJK9K9OiWeaBMV4XQtBSdf6MJUzDB/H/5tFXfIiX38Lci1Kl6SsgiEhz1SQI1ejEOU5asWEhwQ==
+  version "1.5.170"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.170.tgz#9f6697de4339e24da8b234e4492a9ecb91f5989c"
+  integrity sha512-GP+M7aeluQo9uAyiTCxgIj/j+PrWhMlY7LFVj8prlsPljd0Fdg9AprlfUi+OCSFWy9Y5/2D/Jrj9HS8Z4rpKWA==
 
 emittery@^0.8.1:
   version "0.8.1"

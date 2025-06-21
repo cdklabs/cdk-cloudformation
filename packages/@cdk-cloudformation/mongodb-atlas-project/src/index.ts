@@ -26,7 +26,6 @@ export interface CfnProjectProps {
    * @schema CfnProjectProps#ApiKeys
    */
   readonly apiKeys?: ApiKeyDefinition;
-
 }
 
 /**
@@ -58,7 +57,6 @@ export interface ApiKeyDefinition {
    * @schema apiKeyDefinition#PrivateKey
    */
   readonly privateKey?: string;
-
 }
 
 /**

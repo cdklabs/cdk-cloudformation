@@ -35,7 +35,6 @@ export interface CfnAccessTokenProps {
    * @schema CfnAccessTokenProps#Scopes
    */
   readonly scopes: string[];
-
 }
 
 /**

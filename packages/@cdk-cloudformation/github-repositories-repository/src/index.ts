@@ -159,7 +159,6 @@ export interface CfnRepositoryProps {
    * @schema CfnRepositoryProps#SecurityAndAnalysis
    */
   readonly securityAndAnalysis?: SecurityAndAnalysis;
-
 }
 
 /**
@@ -231,7 +230,6 @@ export interface SecurityAndAnalysis {
    * @schema SecurityAndAnalysis#SecretScanningPushProtection
    */
   readonly secretScanningPushProtection?: SecretScanningPushProtection;
-
 }
 
 /**
@@ -262,7 +260,6 @@ export interface AdvanceSecurity {
    * @schema AdvanceSecurity#Status
    */
   readonly status: AdvanceSecurityStatus;
-
 }
 
 /**
@@ -291,7 +288,6 @@ export interface SecretScanning {
    * @schema SecretScanning#Status
    */
   readonly status: SecretScanningStatus;
-
 }
 
 /**
@@ -320,7 +316,6 @@ export interface SecretScanningPushProtection {
    * @schema SecretScanningPushProtection#Status
    */
   readonly status: SecretScanningPushProtectionStatus;
-
 }
 
 /**

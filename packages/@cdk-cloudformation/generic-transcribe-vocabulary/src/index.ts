@@ -35,7 +35,6 @@ export interface CfnVocabularyProps {
    * @schema CfnVocabularyProps#VocabularyName
    */
   readonly vocabularyName: string;
-
 }
 
 /**

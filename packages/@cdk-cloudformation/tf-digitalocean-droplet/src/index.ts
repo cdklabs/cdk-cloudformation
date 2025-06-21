@@ -119,7 +119,6 @@ export interface CfnDropletProps {
    * @schema CfnDropletProps#VpcUuid
    */
   readonly vpcUuid?: string;
-
 }
 
 /**

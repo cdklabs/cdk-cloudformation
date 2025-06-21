@@ -56,7 +56,6 @@ export interface CfnIGroupProps {
    * @schema CfnIGroupProps#SVM
    */
   readonly svm?: Svm;
-
 }
 
 /**
@@ -89,7 +88,6 @@ export interface PasswordSource {
    * @schema PasswordSource#Secret
    */
   readonly secret: SecretSource;
-
 }
 
 /**
@@ -116,7 +114,6 @@ export interface Initiator {
    * @schema Initiator#Name
    */
   readonly name: string;
-
 }
 
 /**
@@ -184,7 +181,6 @@ export interface Svm {
    * @schema SVM#UUID
    */
   readonly uuid?: string;
-
 }
 
 /**
@@ -219,7 +215,6 @@ export interface SecretSource {
    * @schema SecretSource#SecretKey
    */
   readonly secretKey: string;
-
 }
 
 /**

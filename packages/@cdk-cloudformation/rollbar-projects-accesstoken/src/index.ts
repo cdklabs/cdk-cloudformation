@@ -42,7 +42,6 @@ export interface CfnAccessTokenProps {
    * @schema CfnAccessTokenProps#RateLimitWindowCount
    */
   readonly rateLimitWindowCount?: number;
-
 }
 
 /**

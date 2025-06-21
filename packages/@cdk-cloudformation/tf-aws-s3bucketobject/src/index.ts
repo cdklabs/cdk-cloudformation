@@ -181,7 +181,6 @@ export interface CfnS3BucketObjectProps {
    * @schema CfnS3BucketObjectProps#WebsiteRedirect
    */
   readonly websiteRedirect?: string;
-
 }
 
 /**
@@ -234,7 +233,6 @@ export interface MetadataDefinition {
    * @schema MetadataDefinition#MapValue
    */
   readonly mapValue: string;
-
 }
 
 /**
@@ -265,7 +263,6 @@ export interface TagsDefinition {
    * @schema TagsDefinition#MapValue
    */
   readonly mapValue: string;
-
 }
 
 /**
@@ -296,7 +293,6 @@ export interface TagsAllDefinition {
    * @schema TagsAllDefinition#MapValue
    */
   readonly mapValue: string;
-
 }
 
 /**

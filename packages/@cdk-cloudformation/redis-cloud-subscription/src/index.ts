@@ -70,7 +70,6 @@ export interface CfnSubscriptionProps {
    * @schema CfnSubscriptionProps#RedisVersion
    */
   readonly redisVersion?: string;
-
 }
 
 /**

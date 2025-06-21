@@ -85,7 +85,6 @@ export interface CfnIntegrationProps {
    * @schema CfnIntegrationProps#Responders
    */
   readonly responders?: RespondersProperty[];
-
 }
 
 /**
@@ -137,7 +136,6 @@ export interface RespondersProperty {
    * @schema respondersProperty#username
    */
   readonly username?: string;
-
 }
 
 /**

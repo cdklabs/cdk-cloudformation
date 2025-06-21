@@ -47,7 +47,6 @@ export interface CfnTaggingProps {
    * @schema CfnTaggingProps#Semantics
    */
   readonly semantics?: string;
-
 }
 
 /**
@@ -84,7 +83,6 @@ export interface TagObject {
    * @schema TagObject#Values
    */
   readonly values: string[];
-
 }
 
 /**

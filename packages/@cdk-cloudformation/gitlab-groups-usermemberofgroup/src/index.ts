@@ -35,7 +35,6 @@ export interface CfnUserMemberOfGroupProps {
    * @schema CfnUserMemberOfGroupProps#AccessLevel
    */
   readonly accessLevel: CfnUserMemberOfGroupPropsAccessLevel;
-
 }
 
 /**

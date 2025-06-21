@@ -56,7 +56,6 @@ export interface CfnClusterPeerProps {
    * @schema CfnClusterPeerProps#Encryption
    */
   readonly encryption?: CfnClusterPeerPropsEncryption;
-
 }
 
 /**
@@ -89,7 +88,6 @@ export interface PasswordSource {
    * @schema PasswordSource#Secret
    */
   readonly secret: SecretSource;
-
 }
 
 /**
@@ -130,7 +128,6 @@ export interface FsxnDestination {
    * @schema FsxnDestination#LinkArn
    */
   readonly linkArn: string;
-
 }
 
 /**
@@ -180,7 +177,6 @@ export interface ClusterPeerInfo {
    * @schema ClusterPeerInfo#StatusInfo
    */
   readonly statusInfo?: ClusterPeerStatus;
-
 }
 
 /**
@@ -229,7 +225,6 @@ export interface SecretSource {
    * @schema SecretSource#SecretKey
    */
   readonly secretKey: string;
-
 }
 
 /**
@@ -264,7 +259,6 @@ export interface ClusterPeerStatus {
    * @schema ClusterPeerStatus#UpdateTime
    */
   readonly updateTime?: string;
-
 }
 
 /**

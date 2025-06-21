@@ -35,7 +35,6 @@ export interface CfnUserMemberOfProjectProps {
    * @schema CfnUserMemberOfProjectProps#AccessLevel
    */
   readonly accessLevel: CfnUserMemberOfProjectPropsAccessLevel;
-
 }
 
 /**

@@ -173,7 +173,6 @@ export interface CfnUserProps {
    * @schema CfnUserProps#UserPrincipalName
    */
   readonly userPrincipalName: string;
-
 }
 
 /**

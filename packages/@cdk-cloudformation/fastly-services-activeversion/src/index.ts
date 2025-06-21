@@ -21,7 +21,6 @@ export interface CfnActiveVersionProps {
    * @schema CfnActiveVersionProps#VersionNumber
    */
   readonly versionNumber: number;
-
 }
 
 /**

@@ -122,7 +122,6 @@ export interface CfnStorageBucketProps {
    * @schema CfnStorageBucketProps#Website
    */
   readonly website?: WebsiteDefinition[];
-
 }
 
 /**
@@ -168,7 +167,6 @@ export interface LabelsDefinition {
    * @schema LabelsDefinition#MapValue
    */
   readonly mapValue: string;
-
 }
 
 /**
@@ -217,7 +215,6 @@ export interface CorsDefinition {
    * @schema CorsDefinition#ResponseHeader
    */
   readonly responseHeader?: string[];
-
 }
 
 /**
@@ -245,7 +242,6 @@ export interface EncryptionDefinition {
    * @schema EncryptionDefinition#DefaultKmsKeyName
    */
   readonly defaultKmsKeyName: string;
-
 }
 
 /**
@@ -275,7 +271,6 @@ export interface LifecycleRuleDefinition {
    * @schema LifecycleRuleDefinition#Condition
    */
   readonly condition?: ConditionDefinition[];
-
 }
 
 /**
@@ -311,7 +306,6 @@ export interface LoggingDefinition {
    * @schema LoggingDefinition#LogObjectPrefix
    */
   readonly logObjectPrefix?: string;
-
 }
 
 /**
@@ -346,7 +340,6 @@ export interface RetentionPolicyDefinition {
    * @schema RetentionPolicyDefinition#RetentionPeriod
    */
   readonly retentionPeriod: number;
-
 }
 
 /**
@@ -374,7 +367,6 @@ export interface VersioningDefinition {
    * @schema VersioningDefinition#Enabled
    */
   readonly enabled: boolean;
-
 }
 
 /**
@@ -410,7 +402,6 @@ export interface WebsiteDefinition {
    * @schema WebsiteDefinition#NotFoundPage
    */
   readonly notFoundPage?: string;
-
 }
 
 /**
@@ -445,7 +436,6 @@ export interface ActionDefinition {
    * @schema ActionDefinition#Type
    */
   readonly type: string;
-
 }
 
 /**
@@ -529,7 +519,6 @@ export interface ConditionDefinition {
    * @schema ConditionDefinition#WithState
    */
   readonly withState?: string;
-
 }
 
 /**

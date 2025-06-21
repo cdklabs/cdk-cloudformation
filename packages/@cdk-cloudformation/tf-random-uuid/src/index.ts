@@ -12,7 +12,6 @@ export interface CfnUuidProps {
    * @schema CfnUuidProps#Keepers
    */
   readonly keepers?: KeepersDefinition[];
-
 }
 
 /**
@@ -42,7 +41,6 @@ export interface KeepersDefinition {
    * @schema KeepersDefinition#MapValue
    */
   readonly mapValue: string;
-
 }
 
 /**

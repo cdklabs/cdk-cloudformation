@@ -35,7 +35,6 @@ export interface CfnResourceProps {
    * @schema CfnResourceProps#Url
    */
   readonly url?: string;
-
 }
 
 /**

@@ -57,7 +57,6 @@ export interface CfnDomainProps {
    * @schema CfnDomainProps#DeletedAt
    */
   readonly deletedAt?: Date;
-
 }
 
 /**

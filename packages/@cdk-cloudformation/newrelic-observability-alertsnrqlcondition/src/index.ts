@@ -37,7 +37,6 @@ export interface CfnAlertsNrqlConditionProps {
    * @schema CfnAlertsNrqlConditionProps#Tags
    */
   readonly tags?: any;
-
 }
 
 /**

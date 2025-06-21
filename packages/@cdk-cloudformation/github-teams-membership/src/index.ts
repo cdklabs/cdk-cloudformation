@@ -35,7 +35,6 @@ export interface CfnMembershipProps {
    * @schema CfnMembershipProps#Role
    */
   readonly role?: CfnMembershipPropsRole;
-
 }
 
 /**

@@ -75,7 +75,6 @@ export interface CfnClusterProps {
    * @schema CfnClusterProps#Tags
    */
   readonly tags?: CfnClusterPropsTags[];
-
 }
 
 /**
@@ -115,7 +114,6 @@ export interface CfnClusterPropsKubernetesNetworkConfig {
    * @schema CfnClusterPropsKubernetesNetworkConfig#ServiceIpv4Cidr
    */
   readonly serviceIpv4Cidr?: string;
-
 }
 
 /**
@@ -172,7 +170,6 @@ export interface CfnClusterPropsResourcesVpcConfig {
    * @schema CfnClusterPropsResourcesVpcConfig#PublicAccessCidrs
    */
   readonly publicAccessCidrs?: string[];
-
 }
 
 /**
@@ -210,7 +207,6 @@ export interface EncryptionConfigEntry {
    * @schema EncryptionConfigEntry#Provider
    */
   readonly provider?: Provider;
-
 }
 
 /**
@@ -241,7 +237,6 @@ export interface CfnClusterPropsKubernetesApiAccess {
    * @schema CfnClusterPropsKubernetesApiAccess#Users
    */
   readonly users?: KubernetesApiAccessEntry[];
-
 }
 
 /**
@@ -272,7 +267,6 @@ export interface CfnClusterPropsTags {
    * @schema CfnClusterPropsTags#Key
    */
   readonly key: string;
-
 }
 
 /**
@@ -302,7 +296,6 @@ export interface Provider {
    * @schema Provider#KeyArn
    */
   readonly keyArn?: string;
-
 }
 
 /**
@@ -337,7 +330,6 @@ export interface KubernetesApiAccessEntry {
    * @schema KubernetesApiAccessEntry#Groups
    */
   readonly groups?: string[];
-
 }
 
 /**

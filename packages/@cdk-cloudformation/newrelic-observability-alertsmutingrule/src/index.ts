@@ -22,7 +22,6 @@ export interface CfnAlertsMutingRuleProps {
    * @schema CfnAlertsMutingRuleProps#Variables
    */
   readonly variables?: any;
-
 }
 
 /**

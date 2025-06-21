@@ -34,7 +34,6 @@ export interface CfnProjectProps {
    * @schema CfnProjectProps#Email
    */
   readonly email?: Email;
-
 }
 
 /**
@@ -88,7 +87,6 @@ export interface Slack {
    * @schema Slack#ShowMessageButtons
    */
   readonly showMessageButtons?: boolean;
-
 }
 
 /**
@@ -127,7 +125,6 @@ export interface Webhook {
    * @schema Webhook#Url
    */
   readonly url: string;
-
 }
 
 /**
@@ -164,7 +161,6 @@ export interface PagerDuty {
    * @schema PagerDuty#ServiceKey
    */
   readonly serviceKey: string;
-
 }
 
 /**
@@ -201,7 +197,6 @@ export interface Email {
    * @schema Email#IncludeRequestParams
    */
   readonly includeRequestParams?: boolean;
-
 }
 
 /**

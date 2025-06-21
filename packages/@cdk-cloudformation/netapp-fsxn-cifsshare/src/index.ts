@@ -63,7 +63,6 @@ export interface CfnCifsShareProps {
    * @schema CfnCifsShareProps#ACLs
    */
   readonly acLs?: CifsShareAcl[];
-
 }
 
 /**
@@ -97,7 +96,6 @@ export interface PasswordSource {
    * @schema PasswordSource#Secret
    */
   readonly secret: SecretSource;
-
 }
 
 /**
@@ -131,7 +129,6 @@ export interface Svm {
    * @schema SVM#UUID
    */
   readonly uuid?: string;
-
 }
 
 /**
@@ -173,7 +170,6 @@ export interface CifsShareAcl {
    * @schema CifsShareAcl#UserOrGroup
    */
   readonly userOrGroup: string;
-
 }
 
 /**
@@ -209,7 +205,6 @@ export interface SecretSource {
    * @schema SecretSource#SecretKey
    */
   readonly secretKey: string;
-
 }
 
 /**

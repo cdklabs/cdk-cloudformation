@@ -106,7 +106,6 @@ export interface CfnServiceProps {
    * @schema CfnServiceProps#AutoPauseNotificationsParameters
    */
   readonly autoPauseNotificationsParameters?: CfnServicePropsAutoPauseNotificationsParameters;
-
 }
 
 /**
@@ -184,7 +183,6 @@ export interface CfnServicePropsIncidentUrgencyRule {
    * @schema CfnServicePropsIncidentUrgencyRule#OutsideSupportHours
    */
   readonly outsideSupportHours?: CfnServicePropsIncidentUrgencyRuleOutsideSupportHours;
-
 }
 
 /**
@@ -244,7 +242,6 @@ export interface CfnServicePropsSupportHours {
    * @schema CfnServicePropsSupportHours#DaysOfWeek
    */
   readonly daysOfWeek?: number[];
-
 }
 
 /**
@@ -308,7 +305,6 @@ export interface CfnServicePropsAlertGroupingParameters {
    * @schema CfnServicePropsAlertGroupingParameters#Config
    */
   readonly config?: CfnServicePropsAlertGroupingParametersConfig;
-
 }
 
 /**
@@ -345,7 +341,6 @@ export interface CfnServicePropsAutoPauseNotificationsParameters {
    * @schema CfnServicePropsAutoPauseNotificationsParameters#Timeout
    */
   readonly timeout?: CfnServicePropsAutoPauseNotificationsParametersTimeout;
-
 }
 
 /**
@@ -404,7 +399,6 @@ export interface CfnServicePropsIncidentUrgencyRuleDuringSupportHours {
    * @schema CfnServicePropsIncidentUrgencyRuleDuringSupportHours#Urgency
    */
   readonly urgency?: Urgency;
-
 }
 
 /**
@@ -437,7 +431,6 @@ export interface CfnServicePropsIncidentUrgencyRuleOutsideSupportHours {
    * @schema CfnServicePropsIncidentUrgencyRuleOutsideSupportHours#Urgency
    */
   readonly urgency?: Urgency;
-
 }
 
 /**
@@ -491,7 +484,6 @@ export interface CfnServicePropsAlertGroupingParametersConfig {
    * @schema CfnServicePropsAlertGroupingParametersConfig#Timeout
    */
   readonly timeout?: number;
-
 }
 
 /**

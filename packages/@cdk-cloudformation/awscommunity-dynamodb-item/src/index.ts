@@ -24,7 +24,6 @@ export interface CfnItemProps {
    * @schema CfnItemProps#TableName
    */
   readonly tableName: string;
-
 }
 
 /**
@@ -61,7 +60,6 @@ export interface Key {
    * @schema Key#AttributeValue
    */
   readonly attributeValue: string;
-
 }
 
 /**

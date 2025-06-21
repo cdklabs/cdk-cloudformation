@@ -79,7 +79,6 @@ export interface CfnScheduleProps {
    * @schema CfnScheduleProps#Teams
    */
   readonly teams?: Team[];
-
 }
 
 /**
@@ -164,7 +163,6 @@ export interface ScheduleLayer {
    * @schema ScheduleLayer#Name
    */
   readonly name?: string;
-
 }
 
 /**
@@ -210,7 +208,6 @@ export interface SubSchedule {
    * @schema SubSchedule#RenderedCoveragePercentage
    */
   readonly renderedCoveragePercentage?: number;
-
 }
 
 /**
@@ -259,7 +256,6 @@ export interface User {
    * @schema User#Self
    */
   readonly self?: string;
-
 }
 
 /**
@@ -310,7 +306,6 @@ export interface Team {
    * @schema Team#Self
    */
   readonly self?: string;
-
 }
 
 /**
@@ -339,7 +334,6 @@ export interface UserWrapper {
    * @schema UserWrapper#User
    */
   readonly user: User;
-
 }
 
 /**
@@ -387,7 +381,6 @@ export interface Restriction {
    * @schema Restriction#StartDayOfWeek
    */
   readonly startDayOfWeek?: number;
-
 }
 
 /**
@@ -441,7 +434,6 @@ export interface RenderedScheduleEntries {
    * @schema RenderedScheduleEntries#End
    */
   readonly end: Date;
-
 }
 
 /**

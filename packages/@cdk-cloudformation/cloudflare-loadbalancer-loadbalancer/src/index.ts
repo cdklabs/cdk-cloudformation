@@ -129,7 +129,6 @@ export interface CfnLoadBalancerProps {
    * @schema CfnLoadBalancerProps#Rules
    */
   readonly rules?: any[];
-
 }
 
 /**
@@ -172,7 +171,6 @@ export interface CfnLoadBalancerPropsRandomSteering {
    * @schema CfnLoadBalancerPropsRandomSteering#DefaultWeight
    */
   readonly defaultWeight?: number;
-
 }
 
 /**

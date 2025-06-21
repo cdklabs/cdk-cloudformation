@@ -27,7 +27,6 @@ export interface CfnAlertsPolicyProps {
    * @schema CfnAlertsPolicyProps#Variables
    */
   readonly variables?: any;
-
 }
 
 /**

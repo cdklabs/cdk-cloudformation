@@ -99,7 +99,6 @@ export interface CfnJobProps {
    * @schema CfnJobProps#CreatorUserName
    */
   readonly creatorUserName?: string;
-
 }
 
 /**
@@ -230,7 +229,6 @@ export interface Task {
    * @schema Task#RetryOnTimeout
    */
   readonly retryOnTimeout?: boolean;
-
 }
 
 /**
@@ -293,7 +291,6 @@ export interface EmailNotifications {
    * @schema EmailNotifications#NoAlertForSkippedRuns
    */
   readonly noAlertForSkippedRuns?: boolean;
-
 }
 
 /**
@@ -341,7 +338,6 @@ export interface Schedule {
    * @schema Schedule#PauseStatus
    */
   readonly pauseStatus?: SchedulePauseStatus;
-
 }
 
 /**
@@ -385,7 +381,6 @@ export interface AccessUser {
    * @schema AccessUser#PermissionLevel
    */
   readonly permissionLevel?: string;
-
 }
 
 /**
@@ -424,7 +419,6 @@ export interface TaskNotebookTask {
    * @schema TaskNotebookTask#BaseParameters
    */
   readonly baseParameters?: any;
-
 }
 
 /**
@@ -461,7 +455,6 @@ export interface TaskSparkJarTask {
    * @schema TaskSparkJarTask#Parameters
    */
   readonly parameters?: any;
-
 }
 
 /**
@@ -498,7 +491,6 @@ export interface TaskSparkPythonTask {
    * @schema TaskSparkPythonTask#Parameters
    */
   readonly parameters?: any;
-
 }
 
 /**
@@ -528,7 +520,6 @@ export interface TaskSparkSubmitTask {
    * @schema TaskSparkSubmitTask#Parameters
    */
   readonly parameters?: any;
-
 }
 
 /**
@@ -562,7 +553,6 @@ export interface TaskPipelineTask {
    * @schema TaskPipelineTask#FullRefresh
    */
   readonly fullRefresh?: boolean;
-
 }
 
 /**
@@ -611,7 +601,6 @@ export interface TaskPythonWheelTask {
    * @schema TaskPythonWheelTask#NamedParameters
    */
   readonly namedParameters?: any;
-
 }
 
 /**

@@ -49,7 +49,6 @@ export interface CfnSchemaProps {
    * @schema CfnSchemaProps#SQLIdempotency
    */
   readonly sqlIdempotency?: CfnSchemaPropsSqlIdempotency;
-
 }
 
 /**
@@ -102,7 +101,6 @@ export interface Database {
    * @schema Database#SQL
    */
   readonly sql?: string[];
-
 }
 
 /**
@@ -153,7 +151,6 @@ export interface User {
    * @schema User#Grants
    */
   readonly grants?: Grant[];
-
 }
 
 /**
@@ -207,7 +204,6 @@ export interface Table {
    * @schema Table#PrimaryKey
    */
   readonly primaryKey?: PrimaryKey;
-
 }
 
 /**
@@ -250,7 +246,6 @@ export interface Grant {
    * @schema Grant#Privileges
    */
   readonly privileges: string[];
-
 }
 
 /**
@@ -300,7 +295,6 @@ export interface Column {
    * @schema Column#Default
    */
   readonly default?: string;
-
 }
 
 /**
@@ -344,7 +338,6 @@ export interface PrimaryKey {
    * @schema PrimaryKey#Default
    */
   readonly default?: string;
-
 }
 
 /**

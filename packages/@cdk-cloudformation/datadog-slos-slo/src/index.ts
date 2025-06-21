@@ -64,7 +64,6 @@ export interface CfnSloProps {
    * @schema CfnSloProps#Type
    */
   readonly type: CfnSloPropsType;
-
 }
 
 /**
@@ -113,7 +112,6 @@ export interface Creator {
    * @schema Creator#Email
    */
   readonly email?: string;
-
 }
 
 /**
@@ -149,7 +147,6 @@ export interface Query {
    * @schema Query#Denominator
    */
   readonly denominator?: string;
-
 }
 
 /**
@@ -205,7 +202,6 @@ export interface Threshold {
    * @schema Threshold#WarningDisplay
    */
   readonly warningDisplay?: string;
-
 }
 
 /**

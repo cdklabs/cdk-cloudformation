@@ -32,7 +32,6 @@ export interface CfnWorkloadsProps {
    * @schema CfnWorkloadsProps#Variables
    */
   readonly variables?: any;
-
 }
 
 /**

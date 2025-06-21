@@ -70,7 +70,6 @@ export interface CfnLunProps {
    * @schema CfnLunProps#OsType
    */
   readonly osType: CfnLunPropsOsType;
-
 }
 
 /**
@@ -105,7 +104,6 @@ export interface PasswordSource {
    * @schema PasswordSource#Secret
    */
   readonly secret: SecretSource;
-
 }
 
 /**
@@ -139,7 +137,6 @@ export interface Svm {
    * @schema SVM#UUID
    */
   readonly uuid?: string;
-
 }
 
 /**
@@ -208,7 +205,6 @@ export interface SecretSource {
    * @schema SecretSource#SecretKey
    */
   readonly secretKey: string;
-
 }
 
 /**

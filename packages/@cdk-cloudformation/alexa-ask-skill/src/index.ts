@@ -22,7 +22,6 @@ export interface CfnSkillProps {
    * @schema CfnSkillProps#SkillPackage
    */
   readonly skillPackage: SkillPackage;
-
 }
 
 /**
@@ -59,7 +58,6 @@ export interface AuthenticationConfiguration {
    * @schema AuthenticationConfiguration#ClientSecret
    */
   readonly clientSecret: string;
-
 }
 
 /**
@@ -106,7 +104,6 @@ export interface SkillPackage {
    * @schema SkillPackage#S3Key
    */
   readonly s3Key: string;
-
 }
 
 /**
@@ -135,7 +132,6 @@ export interface Overrides {
    * @schema Overrides#Manifest
    */
   readonly manifest?: any;
-
 }
 
 /**

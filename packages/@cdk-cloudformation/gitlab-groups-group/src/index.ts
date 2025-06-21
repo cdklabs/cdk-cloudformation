@@ -28,7 +28,6 @@ export interface CfnGroupProps {
    * @schema CfnGroupProps#ParentId
    */
   readonly parentId?: number;
-
 }
 
 /**

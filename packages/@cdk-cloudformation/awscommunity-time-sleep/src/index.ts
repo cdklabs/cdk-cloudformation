@@ -42,7 +42,6 @@ export interface CfnSleepProps {
    * @schema CfnSleepProps#Triggers
    */
   readonly triggers?: string[];
-
 }
 
 /**

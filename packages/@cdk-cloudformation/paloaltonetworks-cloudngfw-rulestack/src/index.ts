@@ -61,7 +61,6 @@ export interface CfnRuleStackProps {
    * @schema CfnRuleStackProps#RuleStackState
    */
   readonly ruleStackState?: string;
-
 }
 
 /**
@@ -127,7 +126,6 @@ export interface RuleStack {
    * @schema RuleStack#Deploy
    */
   readonly deploy?: string;
-
 }
 
 /**
@@ -252,7 +250,6 @@ export interface Rule {
    * @schema Rule#Tags
    */
   readonly tags?: Tag[];
-
 }
 
 /**
@@ -317,7 +314,6 @@ export interface SecurityObjects {
    * @schema SecurityObjects#CertificateObjects
    */
   readonly certificateObjects?: CertObject[];
-
 }
 
 /**
@@ -348,7 +344,6 @@ export interface CustomSecurityProfiles {
    * @schema CustomSecurityProfiles#FileBlocking
    */
   readonly fileBlocking?: FileBlocking;
-
 }
 
 /**
@@ -378,7 +373,6 @@ export interface Tag {
    * @schema Tag#Value
    */
   readonly value: string;
-
 }
 
 /**
@@ -454,7 +448,6 @@ export interface RuleStackProfiles {
    * @schema RuleStackProfiles#OutboundUntrustCertificate
    */
   readonly outboundUntrustCertificate?: string;
-
 }
 
 /**
@@ -502,7 +495,6 @@ export interface RuleSource {
    * @schema RuleSource#Feeds
    */
   readonly feeds?: string[];
-
 }
 
 /**
@@ -552,7 +544,6 @@ export interface RuleDestination {
    * @schema RuleDestination#Feeds
    */
   readonly feeds?: string[];
-
 }
 
 /**
@@ -586,7 +577,6 @@ export interface UrlCategory {
    * @schema UrlCategory#Feeds
    */
   readonly feeds?: string[];
-
 }
 
 /**
@@ -657,7 +647,6 @@ export interface PrefixList {
    * @schema PrefixList#Description
    */
   readonly description?: string;
-
 }
 
 /**
@@ -700,7 +689,6 @@ export interface FqdnList {
    * @schema FqdnList#AuditComment
    */
   readonly auditComment?: string;
-
 }
 
 /**
@@ -748,7 +736,6 @@ export interface CustomUrlCategory {
    * @schema CustomUrlCategory#AuditComment
    */
   readonly auditComment?: string;
-
 }
 
 /**
@@ -812,7 +799,6 @@ export interface IntelligentFeed {
    * @schema IntelligentFeed#AuditComment
    */
   readonly auditComment?: string;
-
 }
 
 /**
@@ -864,7 +850,6 @@ export interface CertObject {
    * @schema CertObject#AuditComment
    */
   readonly auditComment?: string;
-
 }
 
 /**
@@ -913,7 +898,6 @@ export interface FileBlocking {
    * @schema FileBlocking#AuditComment
    */
   readonly auditComment?: string;
-
 }
 
 /**

@@ -73,7 +73,6 @@ export interface CfnRecordProps {
    * @schema CfnRecordProps#Timeouts
    */
   readonly timeouts?: TimeoutsDefinition;
-
 }
 
 /**
@@ -112,7 +111,6 @@ export interface DataDefinition {
    * @schema DataDefinition#MapValue
    */
   readonly mapValue: string;
-
 }
 
 /**
@@ -143,7 +141,6 @@ export interface MetadataDefinition {
    * @schema MetadataDefinition#MapValue
    */
   readonly mapValue: string;
-
 }
 
 /**
@@ -174,7 +171,6 @@ export interface TimeoutsDefinition {
    * @schema TimeoutsDefinition#Update
    */
   readonly update?: string;
-
 }
 
 /**

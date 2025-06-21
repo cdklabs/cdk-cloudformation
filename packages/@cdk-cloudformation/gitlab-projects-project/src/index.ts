@@ -28,7 +28,6 @@ export interface CfnProjectProps {
    * @schema CfnProjectProps#Public
    */
   readonly public?: boolean;
-
 }
 
 /**

@@ -35,7 +35,6 @@ export interface CfnDictionaryItemProps {
    * @schema CfnDictionaryItemProps#ServiceId
    */
   readonly serviceId: string;
-
 }
 
 /**

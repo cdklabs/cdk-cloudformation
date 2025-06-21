@@ -49,7 +49,6 @@ export interface CfnAlternateContactProps {
    * @schema CfnAlternateContactProps#Title
    */
   readonly title: string;
-
 }
 
 /**

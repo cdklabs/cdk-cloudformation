@@ -24,7 +24,6 @@ export interface CfnServiceAccountProps {
    * @schema CfnServiceAccountProps#ConfluentCloudCredentials
    */
   readonly confluentCloudCredentials: ConfluentCloudApiSecrets;
-
 }
 
 /**
@@ -60,7 +59,6 @@ export interface ConfluentCloudApiSecrets {
    * @schema ConfluentCloudAPISecrets#ApiSecret
    */
   readonly apiSecret?: string;
-
 }
 
 /**

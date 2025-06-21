@@ -29,7 +29,6 @@ export interface CfnVersionProps {
    * @schema CfnVersionProps#DeletedAt
    */
   readonly deletedAt?: Date;
-
 }
 
 /**

@@ -42,7 +42,6 @@ export interface CfnCloudwatchProps {
    * @schema CfnCloudwatchProps#HelixUploadUrl
    */
   readonly helixUploadUrl: string;
-
 }
 
 /**

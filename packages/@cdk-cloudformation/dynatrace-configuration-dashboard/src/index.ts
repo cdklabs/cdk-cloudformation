@@ -27,7 +27,6 @@ export interface CfnDashboardProps {
    * @schema CfnDashboardProps#Id
    */
   readonly id?: string;
-
 }
 
 /**
@@ -66,7 +65,6 @@ export interface Metadata {
    * @schema Metadata#ClusterVersion
    */
   readonly clusterVersion?: string;
-
 }
 
 /**
@@ -141,7 +139,6 @@ export interface DashboardMetadata {
    * @schema DashboardMetadata#TilesNameSize
    */
   readonly tilesNameSize?: DashboardMetadataTilesNameSize;
-
 }
 
 /**
@@ -197,7 +194,6 @@ export interface Tile {
    * @schema Tile#TileFilter
    */
   readonly tileFilter?: DashboardFilter;
-
 }
 
 /**
@@ -235,7 +231,6 @@ export interface DashboardFilter {
    * @schema DashboardFilter#ManagementZone
    */
   readonly managementZone?: EntityShortRepresentation;
-
 }
 
 /**
@@ -265,7 +260,6 @@ export interface DynamicFilters {
    * @schema DynamicFilters#Filters
    */
   readonly filters: string[];
-
 }
 
 /**
@@ -319,7 +313,6 @@ export interface TileBounds {
    * @schema TileBounds#Height
    */
   readonly height?: number;
-
 }
 
 /**
@@ -358,7 +351,6 @@ export interface EntityShortRepresentation {
    * @schema EntityShortRepresentation#Name
    */
   readonly name?: string;
-
 }
 
 /**

@@ -42,7 +42,6 @@ export interface CfnGetProps {
    * @schema CfnGetProps#Retries
    */
   readonly retries?: number;
-
 }
 
 /**

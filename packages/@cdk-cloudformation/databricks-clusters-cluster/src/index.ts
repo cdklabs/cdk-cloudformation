@@ -203,7 +203,6 @@ export interface CfnClusterProps {
    * @schema CfnClusterProps#StartTime
    */
   readonly startTime?: number;
-
 }
 
 /**
@@ -268,7 +267,6 @@ export interface Autoscale {
    * @schema Autoscale#MaxWorkers
    */
   readonly maxWorkers: number;
-
 }
 
 /**
@@ -374,7 +372,6 @@ export interface AwsAttributes {
    * @schema AwsAttributes#EbsVolumeThroughput
    */
   readonly ebsVolumeThroughput?: number;
-
 }
 
 /**
@@ -407,7 +404,6 @@ export interface InitScriptsListItem {
    * @schema InitScriptsListItem#S3
    */
   readonly s3?: S3Destination;
-
 }
 
 /**
@@ -437,7 +433,6 @@ export interface CfnClusterPropsInstanceSource {
    * @schema CfnClusterPropsInstanceSource#NodeTypeId
    */
   readonly nodeTypeId?: string;
-
 }
 
 /**
@@ -468,7 +463,6 @@ export interface CfnClusterPropsDriverInstanceSource {
    * @schema CfnClusterPropsDriverInstanceSource#NodeTypeId
    */
   readonly nodeTypeId?: string;
-
 }
 
 /**
@@ -509,7 +503,6 @@ export interface CfnClusterPropsDefaultTags {
    * @schema CfnClusterPropsDefaultTags#Vendor
    */
   readonly vendor?: string;
-
 }
 
 /**
@@ -568,7 +561,6 @@ export interface S3Destination {
    * @schema S3destination#Region
    */
   readonly region?: string;
-
 }
 
 /**

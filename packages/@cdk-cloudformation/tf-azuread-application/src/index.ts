@@ -161,7 +161,6 @@ export interface CfnApplicationProps {
    * @schema CfnApplicationProps#Web
    */
   readonly web?: WebDefinition[];
-
 }
 
 /**
@@ -237,7 +236,6 @@ export interface AppRoleDefinition {
    * @schema AppRoleDefinition#Value
    */
   readonly value?: string;
-
 }
 
 /**
@@ -303,7 +301,6 @@ export interface Oauth2PermissionsDefinition {
    * @schema Oauth2PermissionsDefinition#Value
    */
   readonly value?: string;
-
 }
 
 /**
@@ -335,7 +332,6 @@ export interface ApiDefinition {
    * @schema ApiDefinition#Oauth2PermissionScope
    */
   readonly oauth2PermissionScope?: Oauth2PermissionScopeDefinition[];
-
 }
 
 /**
@@ -365,7 +361,6 @@ export interface OptionalClaimsDefinition {
    * @schema OptionalClaimsDefinition#IdToken
    */
   readonly idToken?: IdTokenDefinition[];
-
 }
 
 /**
@@ -398,7 +393,6 @@ export interface RequiredResourceAccessDefinition {
    * @schema RequiredResourceAccessDefinition#ResourceAccess
    */
   readonly resourceAccess?: ResourceAccessDefinition[];
-
 }
 
 /**
@@ -439,7 +433,6 @@ export interface TimeoutsDefinition {
    * @schema TimeoutsDefinition#Update
    */
   readonly update?: string;
-
 }
 
 /**
@@ -488,7 +481,6 @@ export interface WebDefinition {
    * @schema WebDefinition#ImplicitGrant
    */
   readonly implicitGrant?: ImplicitGrantDefinition[];
-
 }
 
 /**
@@ -569,7 +561,6 @@ export interface Oauth2PermissionScopeDefinition {
    * @schema Oauth2PermissionScopeDefinition#Value
    */
   readonly value?: string;
-
 }
 
 /**
@@ -616,7 +607,6 @@ export interface AccessTokenDefinition {
    * @schema AccessTokenDefinition#Source
    */
   readonly source?: string;
-
 }
 
 /**
@@ -659,7 +649,6 @@ export interface IdTokenDefinition {
    * @schema IdTokenDefinition#Source
    */
   readonly source?: string;
-
 }
 
 /**
@@ -696,7 +685,6 @@ export interface ResourceAccessDefinition {
    * @schema ResourceAccessDefinition#Type
    */
   readonly type: string;
-
 }
 
 /**
@@ -722,7 +710,6 @@ export interface ImplicitGrantDefinition {
    * @schema ImplicitGrantDefinition#AccessTokenIssuanceEnabled
    */
   readonly accessTokenIssuanceEnabled?: boolean;
-
 }
 
 /**

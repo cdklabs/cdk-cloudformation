@@ -42,7 +42,6 @@ export interface CfnTagProps {
    * @schema CfnTagProps#Force
    */
   readonly force?: boolean;
-
 }
 
 /**

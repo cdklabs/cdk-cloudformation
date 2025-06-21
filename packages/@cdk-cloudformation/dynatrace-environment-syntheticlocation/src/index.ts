@@ -123,7 +123,6 @@ export interface CfnSyntheticLocationProps {
    * @schema CfnSyntheticLocationProps#AutoUpdateChromium
    */
   readonly autoUpdateChromium?: boolean;
-
 }
 
 /**

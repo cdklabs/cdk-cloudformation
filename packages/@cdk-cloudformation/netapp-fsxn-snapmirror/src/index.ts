@@ -98,7 +98,6 @@ export interface CfnSnapMirrorProps {
    * @schema CfnSnapMirrorProps#HealthyStatus
    */
   readonly healthyStatus?: HealthyStatus;
-
 }
 
 /**
@@ -137,7 +136,6 @@ export interface PasswordSource {
    * @schema PasswordSource#Secret
    */
   readonly secret: SecretSource;
-
 }
 
 /**
@@ -178,7 +176,6 @@ export interface FsxnDestination {
    * @schema FsxnDestination#LinkArn
    */
   readonly linkArn: string;
-
 }
 
 /**
@@ -214,7 +211,6 @@ export interface Endpoint {
    * @schema Endpoint#Volume
    */
   readonly volume: string;
-
 }
 
 /**
@@ -242,7 +238,6 @@ export interface SnapMirrorDestinationCreation {
    * @schema SnapMirrorDestinationCreation#Aggregates
    */
   readonly aggregates: string[];
-
 }
 
 /**
@@ -294,7 +289,6 @@ export interface HealthyStatus {
    * @schema HealthyStatus#UnhealthyReason
    */
   readonly unhealthyReason?: string[];
-
 }
 
 /**
@@ -329,7 +323,6 @@ export interface SecretSource {
    * @schema SecretSource#SecretKey
    */
   readonly secretKey: string;
-
 }
 
 /**
@@ -364,7 +357,6 @@ export interface NameWithUuidRef {
    * @schema NameWithUuidRef#UUID
    */
   readonly uuid?: string;
-
 }
 
 /**

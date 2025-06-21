@@ -56,7 +56,6 @@ export interface CfnRecordProps {
    * @schema CfnRecordProps#Proxied
    */
   readonly proxied?: boolean;
-
 }
 
 /**

@@ -22,7 +22,6 @@ export interface CfnAiNotificationsDestinationProps {
    * @schema CfnAiNotificationsDestinationProps#Variables
    */
   readonly variables?: any;
-
 }
 
 /**

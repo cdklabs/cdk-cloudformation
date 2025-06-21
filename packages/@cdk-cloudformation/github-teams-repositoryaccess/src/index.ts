@@ -42,7 +42,6 @@ export interface CfnRepositoryAccessProps {
    * @schema CfnRepositoryAccessProps#Permission
    */
   readonly permission?: CfnRepositoryAccessPropsPermission;
-
 }
 
 /**

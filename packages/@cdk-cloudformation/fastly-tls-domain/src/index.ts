@@ -22,7 +22,6 @@ export interface CfnDomainProps {
    * @schema CfnDomainProps#Attributes
    */
   readonly attributes?: CfnDomainPropsAttributes;
-
 }
 
 /**
@@ -59,7 +58,6 @@ export interface Relationships {
    * @schema Relationships#TlsConfiguration
    */
   readonly tlsConfiguration?: RelationshipsTlsConfiguration;
-
 }
 
 /**
@@ -86,7 +84,6 @@ export interface CfnDomainPropsAttributes {
    * @schema CfnDomainPropsAttributes#CreatedAt
    */
   readonly createdAt?: Date;
-
 }
 
 /**
@@ -111,7 +108,6 @@ export interface RelationshipsTlsCertificate {
    * @schema RelationshipsTlsCertificate#Data
    */
   readonly data?: Data;
-
 }
 
 /**
@@ -136,7 +132,6 @@ export interface RelationshipsTlsDomain {
    * @schema RelationshipsTlsDomain#Data
    */
   readonly data?: Data;
-
 }
 
 /**
@@ -161,7 +156,6 @@ export interface RelationshipsTlsConfiguration {
    * @schema RelationshipsTlsConfiguration#Data
    */
   readonly data?: Data;
-
 }
 
 /**
@@ -191,7 +185,6 @@ export interface Data {
    * @schema Data#Id
    */
   readonly id?: string;
-
 }
 
 /**

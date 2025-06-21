@@ -42,7 +42,6 @@ export interface CfnSiteReliabilityGuardianProps {
    * @schema CfnSiteReliabilityGuardianProps#Objectives
    */
   readonly objectives: Objective[];
-
 }
 
 /**
@@ -76,7 +75,6 @@ export interface Variable {
    * @schema Variable#Definition
    */
   readonly definition: string;
-
 }
 
 /**
@@ -146,7 +144,6 @@ export interface Objective {
    * @schema Objective#AutoAdaptiveThresholdEnabled
    */
   readonly autoAdaptiveThresholdEnabled?: boolean;
-
 }
 
 /**

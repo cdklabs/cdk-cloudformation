@@ -52,7 +52,6 @@ export interface CfnScheduledActionProps {
    * @schema CfnScheduledActionProps#Timezone
    */
   readonly timezone?: string;
-
 }
 
 /**
@@ -90,7 +89,6 @@ export interface CfnScheduledActionPropsScalableTargetAction {
    * @schema CfnScheduledActionPropsScalableTargetAction#MinCapacity
    */
   readonly minCapacity?: number;
-
 }
 
 /**

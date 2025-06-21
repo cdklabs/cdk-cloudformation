@@ -91,7 +91,6 @@ export interface CfnHelmProps {
    * @schema CfnHelmProps#VPCConfiguration
    */
   readonly vpcConfiguration?: CfnHelmPropsVpcConfiguration;
-
 }
 
 /**
@@ -138,7 +137,6 @@ export interface CfnHelmPropsVpcConfiguration {
    * @schema CfnHelmPropsVpcConfiguration#SubnetIds
    */
   readonly subnetIds?: string[];
-
 }
 
 /**

@@ -75,7 +75,6 @@ export interface CfnDatabaseUserProps {
    * @schema CfnDatabaseUserProps#Username
    */
   readonly username: string;
-
 }
 
 /**
@@ -128,7 +127,6 @@ export interface ApiKeyDefinition {
    * @schema apiKeyDefinition#PublicKey
    */
   readonly publicKey?: string;
-
 }
 
 /**
@@ -159,7 +157,6 @@ export interface LabelDefinition {
    * @schema labelDefinition#Value
    */
   readonly value?: string;
-
 }
 
 /**
@@ -209,7 +206,6 @@ export interface RoleDefinition {
    * @schema roleDefinition#RoleName
    */
   readonly roleName?: string;
-
 }
 
 /**
@@ -241,7 +237,6 @@ export interface ScopeDefinition {
    * @schema scopeDefinition#Type
    */
   readonly type?: ScopeDefinitionType;
-
 }
 
 /**

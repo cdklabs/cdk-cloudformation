@@ -63,7 +63,6 @@ export interface CfnEscalationPolicyProps {
    * @schema CfnEscalationPolicyProps#HtmlUrl
    */
   readonly htmlUrl?: string;
-
 }
 
 /**
@@ -118,7 +117,6 @@ export interface EscalationRule {
    * @schema EscalationRule#Targets
    */
   readonly targets: Target[];
-
 }
 
 /**
@@ -151,7 +149,6 @@ export interface Team {
    * @schema Team#Id
    */
   readonly id: string;
-
 }
 
 /**
@@ -184,7 +181,6 @@ export interface Target {
    * @schema Target#Id
    */
   readonly id: string;
-
 }
 
 /**

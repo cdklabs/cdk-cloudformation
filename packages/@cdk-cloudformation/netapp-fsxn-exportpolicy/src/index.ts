@@ -49,7 +49,6 @@ export interface CfnExportPolicyProps {
    * @schema CfnExportPolicyProps#SVM
    */
   readonly svm: Svm;
-
 }
 
 /**
@@ -81,7 +80,6 @@ export interface PasswordSource {
    * @schema PasswordSource#Secret
    */
   readonly secret: SecretSource;
-
 }
 
 /**
@@ -176,7 +174,6 @@ export interface Rule {
    * @schema Rule#Superuser
    */
   readonly superuser?: RuleSuperuser[];
-
 }
 
 /**
@@ -220,7 +217,6 @@ export interface Svm {
    * @schema SVM#UUID
    */
   readonly uuid?: string;
-
 }
 
 /**
@@ -255,7 +251,6 @@ export interface SecretSource {
    * @schema SecretSource#SecretKey
    */
   readonly secretKey: string;
-
 }
 
 /**
@@ -295,7 +290,6 @@ export interface RuleClients {
    * @schema RuleClients#Match
    */
   readonly match: string;
-
 }
 
 /**

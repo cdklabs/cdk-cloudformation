@@ -85,7 +85,6 @@ export interface CfnAwsProps {
    * @schema CfnAwsProps#ExcludedRegions
    */
   readonly excludedRegions?: string[];
-
 }
 
 /**

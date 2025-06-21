@@ -27,7 +27,6 @@ export interface CfnComputerProps {
    * @schema CfnComputerProps#Pre2kname
    */
   readonly pre2Kname?: string;
-
 }
 
 /**

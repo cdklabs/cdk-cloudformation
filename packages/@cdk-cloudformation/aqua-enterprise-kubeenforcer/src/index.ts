@@ -84,7 +84,6 @@ export interface CfnKubeEnforcerProps {
    * @schema CfnKubeEnforcerProps#VPCConfiguration
    */
   readonly vpcConfiguration?: CfnKubeEnforcerPropsVpcConfiguration;
-
 }
 
 /**
@@ -130,7 +129,6 @@ export interface CfnKubeEnforcerPropsVpcConfiguration {
    * @schema CfnKubeEnforcerPropsVpcConfiguration#SubnetIds
    */
   readonly subnetIds?: string[];
-
 }
 
 /**

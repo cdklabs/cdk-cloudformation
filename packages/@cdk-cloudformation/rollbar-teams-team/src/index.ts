@@ -21,7 +21,6 @@ export interface CfnTeamProps {
    * @schema CfnTeamProps#AccessLevel
    */
   readonly accessLevel: CfnTeamPropsAccessLevel;
-
 }
 
 /**

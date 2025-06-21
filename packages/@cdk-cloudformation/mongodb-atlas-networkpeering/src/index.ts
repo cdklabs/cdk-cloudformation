@@ -68,7 +68,6 @@ export interface CfnNetworkPeeringProps {
    * @schema CfnNetworkPeeringProps#ApiKeys
    */
   readonly apiKeys: ApiKeyDefinition;
-
 }
 
 /**
@@ -106,7 +105,6 @@ export interface ApiKeyDefinition {
    * @schema apiKeyDefinition#PrivateKey
    */
   readonly privateKey?: string;
-
 }
 
 /**

@@ -49,7 +49,6 @@ export interface CfnLookupProps {
    * @schema CfnLookupProps#Tags
    */
   readonly tags?: any;
-
 }
 
 /**

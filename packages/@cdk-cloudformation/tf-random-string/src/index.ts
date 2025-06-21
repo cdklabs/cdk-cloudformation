@@ -62,7 +62,6 @@ export interface CfnStringProps {
    * @schema CfnStringProps#Upper
    */
   readonly upper?: boolean;
-
 }
 
 /**
@@ -102,7 +101,6 @@ export interface KeepersDefinition {
    * @schema KeepersDefinition#MapValue
    */
   readonly mapValue: string;
-
 }
 
 /**

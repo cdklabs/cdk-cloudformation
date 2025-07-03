@@ -119,7 +119,6 @@ export interface CfnSplunkProps {
    * @schema CfnSplunkProps#Version
    */
   readonly version?: string;
-
 }
 
 /**

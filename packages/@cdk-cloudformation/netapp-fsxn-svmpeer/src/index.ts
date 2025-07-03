@@ -56,7 +56,6 @@ export interface CfnSvmPeerProps {
    * @schema CfnSvmPeerProps#Applications
    */
   readonly applications: CfnSvmPeerPropsApplications[];
-
 }
 
 /**
@@ -89,7 +88,6 @@ export interface PasswordSource {
    * @schema PasswordSource#Secret
    */
   readonly secret: SecretSource;
-
 }
 
 /**
@@ -130,7 +128,6 @@ export interface FsxnDestination {
    * @schema FsxnDestination#LinkArn
    */
   readonly linkArn: string;
-
 }
 
 /**
@@ -166,7 +163,6 @@ export interface Svm {
    * @schema Svm#UUID
    */
   readonly uuid?: string;
-
 }
 
 /**
@@ -211,7 +207,6 @@ export interface SecretSource {
    * @schema SecretSource#SecretKey
    */
   readonly secretKey: string;
-
 }
 
 /**

@@ -19,7 +19,6 @@ export interface CfnAlertsPolicyProps {
    * @schema CfnAlertsPolicyProps#AlertsPolicy
    */
   readonly alertsPolicy: AlertsPolicyInput;
-
 }
 
 /**
@@ -52,7 +51,6 @@ export interface AlertsPolicyInput {
    * @schema AlertsPolicyInput#IncidentPreference
    */
   readonly incidentPreference?: AlertsPolicyInputIncidentPreference;
-
 }
 
 /**

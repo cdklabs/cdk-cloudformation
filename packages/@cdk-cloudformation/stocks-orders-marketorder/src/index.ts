@@ -28,7 +28,6 @@ export interface CfnMarketOrderProps {
    * @schema CfnMarketOrderProps#Notes
    */
   readonly notes?: string;
-
 }
 
 /**

@@ -43,7 +43,6 @@ export interface CfnDatabaseProps {
    * @schema CfnDatabaseProps#Dimension
    */
   readonly dimension: number;
-
 }
 
 /**

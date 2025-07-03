@@ -84,7 +84,6 @@ export interface CfnScannerProps {
    * @schema CfnScannerProps#VPCConfiguration
    */
   readonly vpcConfiguration?: CfnScannerPropsVpcConfiguration;
-
 }
 
 /**
@@ -130,7 +129,6 @@ export interface CfnScannerPropsVpcConfiguration {
    * @schema CfnScannerPropsVpcConfiguration#SubnetIds
    */
   readonly subnetIds?: string[];
-
 }
 
 /**

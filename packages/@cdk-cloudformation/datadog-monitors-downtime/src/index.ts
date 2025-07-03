@@ -63,7 +63,6 @@ export interface CfnDowntimeProps {
    * @schema CfnDowntimeProps#Timezone
    */
   readonly timezone?: string;
-
 }
 
 /**

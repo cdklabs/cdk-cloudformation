@@ -103,7 +103,6 @@ export interface CfnPoolProps {
    * @schema CfnPoolProps#OriginSteering
    */
   readonly originSteering?: CfnPoolPropsOriginSteering;
-
 }
 
 /**
@@ -156,7 +155,6 @@ export interface Origin {
    * @schema Origin#Weight
    */
   readonly weight?: number;
-
 }
 
 /**
@@ -186,7 +184,6 @@ export interface Filter {
    * @schema Filter#Pool
    */
   readonly pool?: FilterPool;
-
 }
 
 /**
@@ -236,7 +233,6 @@ export interface LoadShedding {
    * @schema LoadShedding#SessionPolicy
    */
   readonly sessionPolicy?: LoadSheddingSessionPolicy;
-
 }
 
 /**
@@ -268,7 +264,6 @@ export interface CfnPoolPropsOriginSteering {
    * @schema CfnPoolPropsOriginSteering#Policy
    */
   readonly policy?: CfnPoolPropsOriginSteeringPolicy;
-
 }
 
 /**
@@ -293,7 +288,6 @@ export interface FilterPool {
    * @schema FilterPool#Healthy
    */
   readonly healthy?: boolean;
-
 }
 
 /**

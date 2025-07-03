@@ -14,7 +14,6 @@ export interface CfnDashboardProps {
    * @schema CfnDashboardProps#DashboardDefinition
    */
   readonly dashboardDefinition: string;
-
 }
 
 /**

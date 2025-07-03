@@ -19,7 +19,6 @@ export interface CfnPrivateKeysProps {
    * @schema CfnPrivateKeysProps#Attributes
    */
   readonly attributes: Attributes;
-
 }
 
 /**
@@ -89,7 +88,6 @@ export interface Attributes {
    * @schema Attributes#CreatedAt
    */
   readonly createdAt?: Date;
-
 }
 
 /**

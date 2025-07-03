@@ -27,7 +27,6 @@ export interface CfnAiNotificationsChannelProps {
    * @schema CfnAiNotificationsChannelProps#Variables
    */
   readonly variables?: any;
-
 }
 
 /**

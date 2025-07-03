@@ -177,7 +177,6 @@ export interface CfnRepositoryProps {
    * @schema CfnRepositoryProps#Template
    */
   readonly template?: TemplateDefinition[];
-
 }
 
 /**
@@ -230,7 +229,6 @@ export interface PagesDefinition {
    * @schema PagesDefinition#Source
    */
   readonly source?: SourceDefinition[];
-
 }
 
 /**
@@ -261,7 +259,6 @@ export interface TemplateDefinition {
    * @schema TemplateDefinition#Repository
    */
   readonly repository: string;
-
 }
 
 /**
@@ -292,7 +289,6 @@ export interface SourceDefinition {
    * @schema SourceDefinition#Path
    */
   readonly path?: string;
-
 }
 
 /**

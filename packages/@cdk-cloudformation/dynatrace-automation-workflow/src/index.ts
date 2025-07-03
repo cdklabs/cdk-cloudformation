@@ -59,7 +59,6 @@ export interface CfnWorkflowProps {
    * @schema CfnWorkflowProps#Trigger
    */
   readonly trigger?: TriggerRequest;
-
 }
 
 /**
@@ -155,7 +154,6 @@ export interface Task {
    * @schema Task#WithItems
    */
   readonly withItems?: string;
-
 }
 
 /**
@@ -195,7 +193,6 @@ export interface ThrottleRequest {
    * @schema ThrottleRequest#LimitEvents
    */
   readonly limitEvents?: ThrottleLimitEvent[];
-
 }
 
 /**
@@ -228,7 +225,6 @@ export interface TriggerRequest {
    * @schema TriggerRequest#Schedule
    */
   readonly schedule?: ScheduleRequest;
-
 }
 
 /**
@@ -286,7 +282,6 @@ export interface Condition {
    * @schema Condition#States
    */
   readonly states: any;
-
 }
 
 /**
@@ -324,7 +319,6 @@ export interface Position {
    * @schema Position#Y
    */
   readonly y: number;
-
 }
 
 /**
@@ -368,7 +362,6 @@ export interface Retry {
    * @schema Retry#FailedLoopIterationsOnly
    */
   readonly failedLoopIterationsOnly?: boolean;
-
 }
 
 /**
@@ -405,7 +398,6 @@ export interface ThrottleLimitEvent {
    * @schema ThrottleLimitEvent#Timestamp
    */
   readonly timestamp: Date;
-
 }
 
 /**
@@ -439,7 +431,6 @@ export interface EventTriggerRequest {
    * @schema EventTriggerRequest#TriggerConfiguration
    */
   readonly triggerConfiguration?: EventTriggerRequestTriggerConfiguration;
-
 }
 
 /**
@@ -497,7 +488,6 @@ export interface ScheduleRequest {
    * @schema ScheduleRequest#Trigger
    */
   readonly trigger: any;
-
 }
 
 /**
@@ -545,7 +535,6 @@ export interface EventTriggerRequestTriggerConfiguration {
    * @schema EventTriggerRequestTriggerConfiguration#Value
    */
   readonly value?: EventTriggerConfig;
-
 }
 
 /**
@@ -596,7 +585,6 @@ export interface ScheduleFilterParameters {
    * @schema ScheduleFilterParameters#Until
    */
   readonly until?: Date;
-
 }
 
 /**
@@ -675,7 +663,6 @@ export interface EventTriggerConfig {
    * @schema EventTriggerConfig#Query
    */
   readonly query?: string;
-
 }
 
 /**
@@ -712,7 +699,6 @@ export interface DavisEventName {
    * @schema DavisEventName#Name
    */
   readonly name: string;
-
 }
 
 /**
@@ -768,7 +754,6 @@ export interface DavisProblemCategories {
    * @schema DavisProblemCategories#Slowdown
    */
   readonly slowdown?: boolean;
-
 }
 
 /**

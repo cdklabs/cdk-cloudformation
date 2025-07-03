@@ -84,7 +84,6 @@ export interface CfnAgentProps {
    * @schema CfnAgentProps#VPCConfiguration
    */
   readonly vpcConfiguration?: CfnAgentPropsVpcConfiguration;
-
 }
 
 /**
@@ -130,7 +129,6 @@ export interface CfnAgentPropsVpcConfiguration {
    * @schema CfnAgentPropsVpcConfiguration#SubnetIds
    */
   readonly subnetIds?: string[];
-
 }
 
 /**

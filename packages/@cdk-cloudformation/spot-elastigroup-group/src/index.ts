@@ -17,7 +17,6 @@ export interface CfnGroupProps {
    * @schema CfnGroupProps#group
    */
   readonly group?: CfnGroupPropsGroup;
-
 }
 
 /**
@@ -48,7 +47,6 @@ export interface CfnGroupPropsCredentials {
    * @schema CfnGroupPropsCredentials#accessToken
    */
   readonly accessToken?: string;
-
 }
 
 /**
@@ -133,7 +131,6 @@ export interface CfnGroupPropsGroup {
    * @schema CfnGroupPropsGroup#scheduling
    */
   readonly scheduling?: CfnGroupPropsGroupScheduling;
-
 }
 
 /**
@@ -244,7 +241,6 @@ export interface CfnGroupPropsGroupStrategy {
    * @schema CfnGroupPropsGroupStrategy#revertToSpot
    */
   readonly revertToSpot?: CfnGroupPropsGroupStrategyRevertToSpot;
-
 }
 
 /**
@@ -329,7 +325,6 @@ export interface CfnGroupPropsGroupCompute {
    * @schema CfnGroupPropsGroupCompute#launchSpecification
    */
   readonly launchSpecification?: CfnGroupPropsGroupComputeLaunchSpecification;
-
 }
 
 /**
@@ -378,7 +373,6 @@ export interface CfnGroupPropsGroupCapacity {
    * @schema CfnGroupPropsGroupCapacity#unit
    */
   readonly unit?: string;
-
 }
 
 /**
@@ -421,7 +415,6 @@ export interface CfnGroupPropsGroupScaling {
    * @schema CfnGroupPropsGroupScaling#target
    */
   readonly target?: ScalingTargetPolicy[];
-
 }
 
 /**
@@ -524,7 +517,6 @@ export interface CfnGroupPropsGroupThirdPartiesIntegration {
    * @schema CfnGroupPropsGroupThirdPartiesIntegration#jenkins
    */
   readonly jenkins?: CfnGroupPropsGroupThirdPartiesIntegrationJenkins;
-
 }
 
 /**
@@ -564,7 +556,6 @@ export interface CfnGroupPropsGroupScheduling {
    * @schema CfnGroupPropsGroupScheduling#tasks
    */
   readonly tasks?: Task[];
-
 }
 
 /**
@@ -594,7 +585,6 @@ export interface CfnGroupPropsGroupStrategySignals {
    * @schema CfnGroupPropsGroupStrategySignals#timeout
    */
   readonly timeout?: number;
-
 }
 
 /**
@@ -625,7 +615,6 @@ export interface CfnGroupPropsGroupStrategyScalingStrategy {
    * @schema CfnGroupPropsGroupStrategyScalingStrategy#terminationPolicy
    */
   readonly terminationPolicy?: string;
-
 }
 
 /**
@@ -666,7 +655,6 @@ export interface CfnGroupPropsGroupStrategyPersistence {
    * @schema CfnGroupPropsGroupStrategyPersistence#blockDevicesMode
    */
   readonly blockDevicesMode?: string;
-
 }
 
 /**
@@ -699,7 +687,6 @@ export interface CfnGroupPropsGroupStrategyRevertToSpot {
    * @schema CfnGroupPropsGroupStrategyRevertToSpot#timeWindows
    */
   readonly timeWindows?: string[];
-
 }
 
 /**
@@ -725,7 +712,6 @@ export interface CfnGroupPropsGroupComputeVolumeAttachments {
    * @schema CfnGroupPropsGroupComputeVolumeAttachments#volumes
    */
   readonly volumes?: CfnGroupPropsGroupComputeVolumeAttachmentsVolumes[];
-
 }
 
 /**
@@ -775,7 +761,6 @@ export interface CfnGroupPropsGroupComputeInstanceTypes {
    * @schema CfnGroupPropsGroupComputeInstanceTypes#preferredSpot
    */
   readonly preferredSpot?: string[];
-
 }
 
 /**
@@ -820,7 +805,6 @@ export interface CfnGroupPropsGroupComputeAvailabilityZones {
    * @schema CfnGroupPropsGroupComputeAvailabilityZones#placementGroupName
    */
   readonly placementGroupName?: string;
-
 }
 
 /**
@@ -853,7 +837,6 @@ export interface CfnGroupPropsGroupComputeEbsVolumePool {
    * @schema CfnGroupPropsGroupComputeEbsVolumePool#volumeIds
    */
   readonly volumeIds?: string[];
-
 }
 
 /**
@@ -994,7 +977,6 @@ export interface CfnGroupPropsGroupComputeLaunchSpecification {
    * @schema CfnGroupPropsGroupComputeLaunchSpecification#autoHealing
    */
   readonly autoHealing?: boolean;
-
 }
 
 /**
@@ -1047,7 +1029,6 @@ export interface CfnGroupPropsGroupScalingMultipleMetrics {
    * @schema CfnGroupPropsGroupScalingMultipleMetrics#expressions
    */
   readonly expressions?: CfnGroupPropsGroupScalingMultipleMetricsExpressions[];
-
 }
 
 /**
@@ -1153,7 +1134,6 @@ export interface ScalingUpPolicy {
    * @schema ScalingUpPolicy#isEnabled
    */
   readonly isEnabled?: boolean;
-
 }
 
 /**
@@ -1274,7 +1254,6 @@ export interface ScalingDownPolicy {
    * @schema ScalingDownPolicy#isEnabled
    */
   readonly isEnabled?: boolean;
-
 }
 
 /**
@@ -1370,7 +1349,6 @@ export interface ScalingTargetPolicy {
    * @schema ScalingTargetPolicy#predictive
    */
   readonly predictive?: ScalingTargetPolicyPredictive;
-
 }
 
 /**
@@ -1421,7 +1399,6 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationRancher {
    * @schema CfnGroupPropsGroupThirdPartiesIntegrationRancher#masterHost
    */
   readonly masterHost?: string;
-
 }
 
 /**
@@ -1449,7 +1426,6 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationMesosphere {
    * @schema CfnGroupPropsGroupThirdPartiesIntegrationMesosphere#apiServer
    */
   readonly apiServer?: string;
-
 }
 
 /**
@@ -1484,7 +1460,6 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalk {
    * @schema CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalk#managedActions
    */
   readonly managedActions?: CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActions;
-
 }
 
 /**
@@ -1526,7 +1501,6 @@ export interface Ecs {
    * @schema Ecs#optimizeImages
    */
   readonly optimizeImages?: EcsOptimizeImages;
-
 }
 
 /**
@@ -1554,7 +1528,6 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationMlbRuntime {
    * @schema CfnGroupPropsGroupThirdPartiesIntegrationMlbRuntime#deploymentId
    */
   readonly deploymentId?: string;
-
 }
 
 /**
@@ -1599,7 +1572,6 @@ export interface Kubernetes {
    * @schema Kubernetes#autoScale
    */
   readonly autoScale?: KubernetesAutoScale;
-
 }
 
 /**
@@ -1638,7 +1610,6 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationRightScale {
    * @schema CfnGroupPropsGroupThirdPartiesIntegrationRightScale#region
    */
   readonly region?: string;
-
 }
 
 /**
@@ -1670,7 +1641,6 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationOpsWorks {
    * @schema CfnGroupPropsGroupThirdPartiesIntegrationOpsWorks#stackType
    */
   readonly stackType?: string;
-
 }
 
 /**
@@ -1706,7 +1676,6 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationCodeDeploy {
    * @schema CfnGroupPropsGroupThirdPartiesIntegrationCodeDeploy#deploymentGroups
    */
   readonly deploymentGroups?: CfnGroupPropsGroupThirdPartiesIntegrationCodeDeployDeploymentGroups[];
-
 }
 
 /**
@@ -1753,7 +1722,6 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationChef {
    * @schema CfnGroupPropsGroupThirdPartiesIntegrationChef#chefVersion
    */
   readonly chefVersion?: string;
-
 }
 
 /**
@@ -1802,7 +1770,6 @@ export interface Nomad {
    * @schema Nomad#tlsConfig
    */
   readonly tlsConfig?: TlsConfig;
-
 }
 
 /**
@@ -1846,7 +1813,6 @@ export interface DockerSwarm {
    * @schema DockerSwarm#tlsConfig
    */
   readonly tlsConfig?: TlsConfig;
-
 }
 
 /**
@@ -1874,7 +1840,6 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationRoute53 {
    * @schema CfnGroupPropsGroupThirdPartiesIntegrationRoute53#domains
    */
   readonly domains?: CfnGroupPropsGroupThirdPartiesIntegrationRoute53Domains[];
-
 }
 
 /**
@@ -1899,7 +1864,6 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationGitlab {
    * @schema CfnGroupPropsGroupThirdPartiesIntegrationGitlab#runner
    */
   readonly runner?: CfnGroupPropsGroupThirdPartiesIntegrationGitlabRunner;
-
 }
 
 /**
@@ -1929,7 +1893,6 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationDatadog {
    * @schema CfnGroupPropsGroupThirdPartiesIntegrationDatadog#metricsToReport
    */
   readonly metricsToReport?: CfnGroupPropsGroupThirdPartiesIntegrationDatadogMetricsToReport;
-
 }
 
 /**
@@ -1955,7 +1918,6 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationJenkins {
    * @schema CfnGroupPropsGroupThirdPartiesIntegrationJenkins#connectionMethod
    */
   readonly connectionMethod?: CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethod;
-
 }
 
 /**
@@ -2050,7 +2012,6 @@ export interface Task {
    * @schema Task#maxCapacity
    */
   readonly maxCapacity?: number;
-
 }
 
 /**
@@ -2094,7 +2055,6 @@ export interface CfnGroupPropsGroupComputeVolumeAttachmentsVolumes {
    * @schema CfnGroupPropsGroupComputeVolumeAttachmentsVolumes#volumeId
    */
   readonly volumeId?: string;
-
 }
 
 /**
@@ -2145,7 +2105,6 @@ export interface CfnGroupPropsGroupComputeInstanceTypesResourceRequirements {
    * @schema CfnGroupPropsGroupComputeInstanceTypesResourceRequirements#excludedInstanceTypes
    */
   readonly excludedInstanceTypes?: string[];
-
 }
 
 /**
@@ -2180,7 +2139,6 @@ export interface CfnGroupPropsGroupComputeInstanceTypesWeights {
    * @schema CfnGroupPropsGroupComputeInstanceTypesWeights#weightedCapacity
    */
   readonly weightedCapacity?: number;
-
 }
 
 /**
@@ -2206,7 +2164,6 @@ export interface LoadBalancersConfig {
    * @schema LoadBalancersConfig#loadBalancers
    */
   readonly loadBalancers?: LoadBalancerConfig[];
-
 }
 
 /**
@@ -2251,7 +2208,6 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationItf {
    * @schema CfnGroupPropsGroupComputeLaunchSpecificationItf#targetGroupConfig
    */
   readonly targetGroupConfig?: CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfig;
-
 }
 
 /**
@@ -2280,7 +2236,6 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationImages {
    * @schema CfnGroupPropsGroupComputeLaunchSpecificationImages#id
    */
   readonly id?: string;
-
 }
 
 /**
@@ -2310,7 +2265,6 @@ export interface Tag {
    * @schema Tag#tagValue
    */
   readonly tagValue?: string;
-
 }
 
 /**
@@ -2351,7 +2305,6 @@ export interface BlockDeviceMapping {
    * @schema BlockDeviceMapping#ebs
    */
   readonly ebs?: BlockDeviceMappingEbs;
-
 }
 
 /**
@@ -2384,7 +2337,6 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationIamRole {
    * @schema CfnGroupPropsGroupComputeLaunchSpecificationIamRole#arn
    */
   readonly arn?: string;
-
 }
 
 /**
@@ -2410,7 +2362,6 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationCreditSpecification
    * @schema CfnGroupPropsGroupComputeLaunchSpecificationCreditSpecification#cpuCredits
    */
   readonly cpuCredits?: string;
-
 }
 
 /**
@@ -2480,7 +2431,6 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfaces {
    * @schema CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfaces#associateIpv6Address
    */
   readonly associateIpv6Address?: boolean;
-
 }
 
 /**
@@ -2514,7 +2464,6 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationCpuOptions {
    * @schema CfnGroupPropsGroupComputeLaunchSpecificationCpuOptions#threadsPerCore
    */
   readonly threadsPerCore?: number;
-
 }
 
 /**
@@ -2554,7 +2503,6 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationResourceTagSpecific
    * @schema CfnGroupPropsGroupComputeLaunchSpecificationResourceTagSpecification#enis
    */
   readonly enis?: ResourceTagSpecificationConfig;
-
 }
 
 /**
@@ -2592,7 +2540,6 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationMetadataOptions {
    * @schema CfnGroupPropsGroupComputeLaunchSpecificationMetadataOptions#instanceMetadataTags
    */
   readonly instanceMetadataTags?: string;
-
 }
 
 /**
@@ -2649,7 +2596,6 @@ export interface CfnGroupPropsGroupScalingMultipleMetricsMetrics {
    * @schema CfnGroupPropsGroupScalingMultipleMetricsMetrics#dimensions
    */
   readonly dimensions?: Dimension[];
-
 }
 
 /**
@@ -2685,7 +2631,6 @@ export interface CfnGroupPropsGroupScalingMultipleMetricsExpressions {
    * @schema CfnGroupPropsGroupScalingMultipleMetricsExpressions#expression
    */
   readonly expression?: string;
-
 }
 
 /**
@@ -2716,7 +2661,6 @@ export interface Dimension {
    * @schema Dimension#value
    */
   readonly value?: string;
-
 }
 
 /**
@@ -2747,7 +2691,6 @@ export interface ScaleUpStepAdjustment {
    * @schema ScaleUpStepAdjustment#action
    */
   readonly action?: ScaleUpAction;
-
 }
 
 /**
@@ -2798,7 +2741,6 @@ export interface ScaleUpAction {
    * @schema ScaleUpAction#maximum
    */
   readonly maximum?: string;
-
 }
 
 /**
@@ -2833,7 +2775,6 @@ export interface ScaleDownStepAdjustment {
    * @schema ScaleDownStepAdjustment#action
    */
   readonly action?: ScaleDownAction;
-
 }
 
 /**
@@ -2884,7 +2825,6 @@ export interface ScaleDownAction {
    * @schema ScaleDownAction#maximum
    */
   readonly maximum?: string;
-
 }
 
 /**
@@ -2914,7 +2854,6 @@ export interface ScalingTargetPolicyPredictive {
    * @schema ScalingTargetPolicyPredictive#mode
    */
   readonly mode?: string;
-
 }
 
 /**
@@ -2954,7 +2893,6 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkDeploy
    * @schema CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkDeploymentPreferences#strategy
    */
   readonly strategy?: BeanStalkStrategy;
-
 }
 
 /**
@@ -2982,7 +2920,6 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManage
    * @schema CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActions#platformUpdate
    */
   readonly platformUpdate?: CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActionsPlatformUpdate;
-
 }
 
 /**
@@ -3037,7 +2974,6 @@ export interface EcsAutoScale {
    * @schema EcsAutoScale#attributes
    */
   readonly attributes?: Attribute[];
-
 }
 
 /**
@@ -3068,7 +3004,6 @@ export interface EcsBatch {
    * @schema EcsBatch#jobQueueNames
    */
   readonly jobQueueNames?: string[];
-
 }
 
 /**
@@ -3103,7 +3038,6 @@ export interface EcsOptimizeImages {
    * @schema EcsOptimizeImages#timeWindows
    */
   readonly timeWindows?: string[];
-
 }
 
 /**
@@ -3160,7 +3094,6 @@ export interface KubernetesAutoScale {
    * @schema KubernetesAutoScale#down
    */
   readonly down?: AutoScaleDown;
-
 }
 
 /**
@@ -3196,7 +3129,6 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationCodeDeployDeploymentGr
    * @schema CfnGroupPropsGroupThirdPartiesIntegrationCodeDeployDeploymentGroups#deploymentGroupName
    */
   readonly deploymentGroupName?: string;
-
 }
 
 /**
@@ -3247,7 +3179,6 @@ export interface NomadAutoScale {
    * @schema NomadAutoScale#down
    */
   readonly down?: AutoScaleDown;
-
 }
 
 /**
@@ -3287,7 +3218,6 @@ export interface TlsConfig {
    * @schema TlsConfig#privateKey
    */
   readonly privateKey?: string;
-
 }
 
 /**
@@ -3334,7 +3264,6 @@ export interface DockerSwarmAutoScale {
    * @schema DockerSwarmAutoScale#down
    */
   readonly down?: AutoScaleDown;
-
 }
 
 /**
@@ -3378,7 +3307,6 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationRoute53Domains {
    * @schema CfnGroupPropsGroupThirdPartiesIntegrationRoute53Domains#recordSets
    */
   readonly recordSets?: CfnGroupPropsGroupThirdPartiesIntegrationRoute53DomainsRecordSets[];
-
 }
 
 /**
@@ -3406,7 +3334,6 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationGitlabRunner {
    * @schema CfnGroupPropsGroupThirdPartiesIntegrationGitlabRunner#isEnabled
    */
   readonly isEnabled?: boolean;
-
 }
 
 /**
@@ -3436,7 +3363,6 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationDatadogMetricsToReport
    * @schema CfnGroupPropsGroupThirdPartiesIntegrationDatadogMetricsToReport#tags
    */
   readonly tags?: Tag[];
-
 }
 
 /**
@@ -3472,7 +3398,6 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMetho
    * @schema CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethod#manuallyConnection
    */
   readonly manuallyConnection?: boolean;
-
 }
 
 /**
@@ -3504,7 +3429,6 @@ export interface ResourceRequirement {
    * @schema ResourceRequirement#maximum
    */
   readonly maximum?: number;
-
 }
 
 /**
@@ -3560,7 +3484,6 @@ export interface LoadBalancerConfig {
    * @schema LoadBalancerConfig#autoWeight
    */
   readonly autoWeight?: boolean;
-
 }
 
 /**
@@ -3601,7 +3524,6 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancers {
    * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancers#defaultStaticTargetGroups
    */
   readonly defaultStaticTargetGroups?: CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersDefaultStaticTargetGroups[];
-
 }
 
 /**
@@ -3688,7 +3610,6 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfi
    * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfig#matcher
    */
   readonly matcher?: CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfigMatcher;
-
 }
 
 /**
@@ -3765,7 +3686,6 @@ export interface BlockDeviceMappingEbs {
    * @schema BlockDeviceMappingEbs#dynamicVolumeSize
    */
   readonly dynamicVolumeSize?: BlockDeviceMappingEbsDynamicVolumeSize;
-
 }
 
 /**
@@ -3803,7 +3723,6 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfacesPr
    * @schema CfnGroupPropsGroupComputeLaunchSpecificationNetworkInterfacesPrivateIpAddresses#primary
    */
   readonly primary?: boolean;
-
 }
 
 /**
@@ -3829,7 +3748,6 @@ export interface ResourceTagSpecificationConfig {
    * @schema ResourceTagSpecificationConfig#shouldTag
    */
   readonly shouldTag?: boolean;
-
 }
 
 /**
@@ -3859,7 +3777,6 @@ export interface BeanStalkStrategy {
    * @schema BeanStalkStrategy#shouldDrainInstances
    */
   readonly shouldDrainInstances?: boolean;
-
 }
 
 /**
@@ -3900,7 +3817,6 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManage
    * @schema CfnGroupPropsGroupThirdPartiesIntegrationElasticBeanstalkManagedActionsPlatformUpdate#instanceRefreshEnabled
    */
   readonly instanceRefreshEnabled?: boolean;
-
 }
 
 /**
@@ -3938,7 +3854,6 @@ export interface Headroom {
    * @schema Headroom#numOfUnits
    */
   readonly numOfUnits?: number;
-
 }
 
 /**
@@ -3970,7 +3885,6 @@ export interface AutoScaleDown {
    * @schema AutoScaleDown#maxScaleDownPercentage
    */
   readonly maxScaleDownPercentage?: number;
-
 }
 
 /**
@@ -4001,7 +3915,6 @@ export interface Attribute {
    * @schema Attribute#value
    */
   readonly value?: string;
-
 }
 
 /**
@@ -4042,7 +3955,6 @@ export interface KubernetesAutoScaleHeadroom {
    * @schema KubernetesAutoScaleHeadroom#numOfUnits
    */
   readonly numOfUnits?: number;
-
 }
 
 /**
@@ -4075,7 +3987,6 @@ export interface KubernetesAutoScaleResourceLimits {
    * @schema KubernetesAutoScaleResourceLimits#maxMemoryGib
    */
   readonly maxMemoryGib?: number;
-
 }
 
 /**
@@ -4106,7 +4017,6 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationRoute53DomainsRecordSe
    * @schema CfnGroupPropsGroupThirdPartiesIntegrationRoute53DomainsRecordSets#usePublicDns
    */
   readonly usePublicDns?: boolean;
-
 }
 
 /**
@@ -4132,7 +4042,6 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMetho
    * @schema CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethodSsh#sshPublicKey
    */
   readonly sshPublicKey?: string;
-
 }
 
 /**
@@ -4177,7 +4086,6 @@ export interface CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMetho
    * @schema CfnGroupPropsGroupThirdPartiesIntegrationJenkinsConnectionMethodJnlp#token
    */
   readonly token?: string;
-
 }
 
 /**
@@ -4211,7 +4119,6 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersLis
    * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersListenerRules#staticTargetGroups
    */
   readonly staticTargetGroups?: CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersListenerRulesStaticTargetGroups[];
-
 }
 
 /**
@@ -4242,7 +4149,6 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersDef
    * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersDefaultStaticTargetGroups#percentage
    */
   readonly percentage?: number;
-
 }
 
 /**
@@ -4273,7 +4179,6 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfi
    * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfTargetGroupConfigMatcher#grpcCode
    */
   readonly grpcCode?: string;
-
 }
 
 /**
@@ -4309,7 +4214,6 @@ export interface BlockDeviceMappingEbsDynamicVolumeSize {
    * @schema BlockDeviceMappingEbsDynamicVolumeSize#sizePerResourceUnit
    */
   readonly sizePerResourceUnit?: number;
-
 }
 
 /**
@@ -4341,7 +4245,6 @@ export interface CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersLis
    * @schema CfnGroupPropsGroupComputeLaunchSpecificationItfLoadBalancersListenerRulesStaticTargetGroups#percentage
    */
   readonly percentage?: number;
-
 }
 
 /**

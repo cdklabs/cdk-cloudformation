@@ -42,7 +42,6 @@ export interface CfnDashboardsProps {
    * @schema CfnDashboardsProps#Tags
    */
   readonly tags?: any;
-
 }
 
 /**

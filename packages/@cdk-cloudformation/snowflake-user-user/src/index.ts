@@ -133,7 +133,6 @@ export interface CfnUserProps {
    * @schema CfnUserProps#Comment
    */
   readonly comment?: string;
-
 }
 
 /**

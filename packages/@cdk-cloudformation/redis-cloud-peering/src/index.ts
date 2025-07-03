@@ -77,7 +77,6 @@ export interface CfnPeeringProps {
    * @schema CfnPeeringProps#VpcNetworkName
    */
   readonly vpcNetworkName?: string;
-
 }
 
 /**

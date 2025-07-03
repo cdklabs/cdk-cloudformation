@@ -32,7 +32,6 @@ export interface CfnTeamProps {
    * @schema CfnTeamProps#HtmlUrl
    */
   readonly htmlUrl?: string;
-
 }
 
 /**

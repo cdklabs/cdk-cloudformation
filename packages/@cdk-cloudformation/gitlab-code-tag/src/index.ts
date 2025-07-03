@@ -35,7 +35,6 @@ export interface CfnTagProps {
    * @schema CfnTagProps#Message
    */
   readonly message?: string;
-
 }
 
 /**

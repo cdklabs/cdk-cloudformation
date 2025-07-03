@@ -48,7 +48,6 @@ export interface CfnKeyPairProps {
    * @schema CfnKeyPairProps#TagsAll
    */
   readonly tagsAll?: TagsAllDefinition[];
-
 }
 
 /**
@@ -82,7 +81,6 @@ export interface TagsDefinition {
    * @schema TagsDefinition#MapValue
    */
   readonly mapValue: string;
-
 }
 
 /**
@@ -113,7 +111,6 @@ export interface TagsAllDefinition {
    * @schema TagsAllDefinition#MapValue
    */
   readonly mapValue: string;
-
 }
 
 /**

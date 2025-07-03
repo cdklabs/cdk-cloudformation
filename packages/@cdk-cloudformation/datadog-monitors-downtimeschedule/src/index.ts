@@ -61,7 +61,6 @@ export interface CfnDowntimeScheduleProps {
    * @schema CfnDowntimeScheduleProps#Schedule
    */
   readonly schedule?: any;
-
 }
 
 /**

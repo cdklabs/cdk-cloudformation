@@ -40,7 +40,6 @@ export interface CfnPolicyProps {
    * @schema CfnPolicyProps#Conditions
    */
   readonly conditions?: any;
-
 }
 
 /**

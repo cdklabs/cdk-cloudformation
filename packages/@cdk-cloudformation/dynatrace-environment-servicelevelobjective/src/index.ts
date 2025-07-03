@@ -84,7 +84,6 @@ export interface CfnServiceLevelObjectiveProps {
    * @schema CfnServiceLevelObjectiveProps#HasAccess
    */
   readonly hasAccess?: boolean;
-
 }
 
 /**
@@ -142,7 +141,6 @@ export interface ErrorBudgetBurnRate {
    * @schema ErrorBudgetBurnRate#BurnRateVisualizationEnabled
    */
   readonly burnRateVisualizationEnabled: boolean;
-
 }
 
 /**

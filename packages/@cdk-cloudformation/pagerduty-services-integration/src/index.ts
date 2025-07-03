@@ -97,7 +97,6 @@ export interface CfnIntegrationProps {
    * @schema CfnIntegrationProps#EmailFilters
    */
   readonly emailFilters?: EmailFilter[];
-
 }
 
 /**
@@ -203,7 +202,6 @@ export interface EmailParser {
    * @schema EmailParser#ValueExtractors
    */
   readonly valueExtractors?: ValueExtractor[];
-
 }
 
 /**
@@ -267,7 +265,6 @@ export interface EmailFilter {
    * @schema EmailFilter#FromEmailRegex
    */
   readonly fromEmailRegex?: string;
-
 }
 
 /**
@@ -312,7 +309,6 @@ export interface RootMatchPredicate {
    * @schema RootMatchPredicate#Children
    */
   readonly children?: MatchPredicate[];
-
 }
 
 /**
@@ -363,7 +359,6 @@ export interface ValueExtractor {
    * @schema ValueExtractor#EndsBefore
    */
   readonly endsBefore?: string;
-
 }
 
 /**
@@ -451,7 +446,6 @@ export interface MatchPredicate {
    * @schema MatchPredicate#Part
    */
   readonly part?: MatchPredicatePart;
-
 }
 
 /**

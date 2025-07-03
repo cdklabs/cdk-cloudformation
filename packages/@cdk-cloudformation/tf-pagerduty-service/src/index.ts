@@ -100,7 +100,6 @@ export interface CfnServiceProps {
    * @schema CfnServiceProps#SupportHours
    */
   readonly supportHours?: SupportHoursDefinition[];
-
 }
 
 /**
@@ -150,7 +149,6 @@ export interface IncidentUrgencyRuleDefinition {
    * @schema IncidentUrgencyRuleDefinition#OutsideSupportHours
    */
   readonly outsideSupportHours?: OutsideSupportHoursDefinition[];
-
 }
 
 /**
@@ -188,7 +186,6 @@ export interface ScheduledActionsDefinition {
    * @schema ScheduledActionsDefinition#At
    */
   readonly at?: AtDefinition[];
-
 }
 
 /**
@@ -235,7 +232,6 @@ export interface SupportHoursDefinition {
    * @schema SupportHoursDefinition#Type
    */
   readonly type?: string;
-
 }
 
 /**
@@ -269,7 +265,6 @@ export interface DuringSupportHoursDefinition {
    * @schema DuringSupportHoursDefinition#Urgency
    */
   readonly urgency?: string;
-
 }
 
 /**
@@ -300,7 +295,6 @@ export interface OutsideSupportHoursDefinition {
    * @schema OutsideSupportHoursDefinition#Urgency
    */
   readonly urgency?: string;
-
 }
 
 /**
@@ -331,7 +325,6 @@ export interface AtDefinition {
    * @schema AtDefinition#Type
    */
   readonly type?: string;
-
 }
 
 /**

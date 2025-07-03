@@ -22,7 +22,6 @@ export interface CfnGrantProps {
    * @schema CfnGrantProps#Role
    */
   readonly role: string;
-
 }
 
 /**

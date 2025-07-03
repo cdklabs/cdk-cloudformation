@@ -125,7 +125,6 @@ export interface CfnClusterProps {
    * @schema CfnClusterProps#ReplicationSpecs
    */
   readonly replicationSpecs?: ReplicationSpec[];
-
 }
 
 /**
@@ -172,7 +171,6 @@ export interface ApiKeyDefinition {
    * @schema apiKeyDefinition#PrivateKey
    */
   readonly privateKey?: string;
-
 }
 
 /**
@@ -203,7 +201,6 @@ export interface AutoScaling {
    * @schema autoScaling#Compute
    */
   readonly compute?: Compute;
-
 }
 
 /**
@@ -234,7 +231,6 @@ export interface CfnClusterPropsBiConnector {
    * @schema CfnClusterPropsBiConnector#Enabled
    */
   readonly enabled?: boolean;
-
 }
 
 /**
@@ -275,7 +271,6 @@ export interface ConnectionStrings {
    * @schema connectionStrings#PrivateSrv
    */
   readonly privateSrv?: string;
-
 }
 
 /**
@@ -324,7 +319,6 @@ export interface CfnClusterPropsLabels {
    * @schema CfnClusterPropsLabels#Value
    */
   readonly value?: string;
-
 }
 
 /**
@@ -385,7 +379,6 @@ export interface CfnClusterPropsProviderSettings {
    * @schema CfnClusterPropsProviderSettings#VolumeType
    */
   readonly volumeType?: string;
-
 }
 
 /**
@@ -432,7 +425,6 @@ export interface ReplicationSpec {
    * @schema replicationSpec#ZoneName
    */
   readonly zoneName?: string;
-
 }
 
 /**
@@ -475,7 +467,6 @@ export interface Compute {
    * @schema compute#MaxInstanceSize
    */
   readonly maxInstanceSize?: string;
-
 }
 
 /**
@@ -523,7 +514,6 @@ export interface RegionsConfig {
    * @schema regionsConfig#ReadOnlyNodes
    */
   readonly readOnlyNodes?: number;
-
 }
 
 /**

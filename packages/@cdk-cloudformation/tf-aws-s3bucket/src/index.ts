@@ -139,7 +139,6 @@ export interface CfnS3BucketProps {
    * @schema CfnS3BucketProps#Website
    */
   readonly website?: WebsiteDefinition[];
-
 }
 
 /**
@@ -190,7 +189,6 @@ export interface TagsDefinition {
    * @schema TagsDefinition#MapValue
    */
   readonly mapValue: string;
-
 }
 
 /**
@@ -221,7 +219,6 @@ export interface TagsAllDefinition {
    * @schema TagsAllDefinition#MapValue
    */
   readonly mapValue: string;
-
 }
 
 /**
@@ -267,7 +264,6 @@ export interface CorsRuleDefinition {
    * @schema CorsRuleDefinition#MaxAgeSeconds
    */
   readonly maxAgeSeconds?: number;
-
 }
 
 /**
@@ -319,7 +315,6 @@ export interface GrantDefinition {
    * @schema GrantDefinition#Uri
    */
   readonly uri?: string;
-
 }
 
 /**
@@ -395,7 +390,6 @@ export interface LifecycleRuleDefinition {
    * @schema LifecycleRuleDefinition#Transition
    */
   readonly transition?: TransitionDefinition[];
-
 }
 
 /**
@@ -437,7 +431,6 @@ export interface LoggingDefinition {
    * @schema LoggingDefinition#TargetPrefix
    */
   readonly targetPrefix?: string;
-
 }
 
 /**
@@ -470,7 +463,6 @@ export interface ObjectLockConfigurationDefinition {
    * @schema ObjectLockConfigurationDefinition#Rule
    */
   readonly rule?: RuleDefinition[];
-
 }
 
 /**
@@ -503,7 +495,6 @@ export interface ReplicationConfigurationDefinition {
    * @schema ReplicationConfigurationDefinition#Rules
    */
   readonly rules?: RulesDefinition[];
-
 }
 
 /**
@@ -529,7 +520,6 @@ export interface ServerSideEncryptionConfigurationDefinition {
    * @schema ServerSideEncryptionConfigurationDefinition#Rule
    */
   readonly rule?: RuleDefinition[];
-
 }
 
 /**
@@ -564,7 +554,6 @@ export interface VersioningDefinition {
    * @schema VersioningDefinition#MfaDelete
    */
   readonly mfaDelete?: boolean;
-
 }
 
 /**
@@ -614,7 +603,6 @@ export interface WebsiteDefinition {
    * @schema WebsiteDefinition#RoutingRules
    */
   readonly routingRules?: string;
-
 }
 
 /**
@@ -647,7 +635,6 @@ export interface TagsDefinition2 {
    * @schema TagsDefinition2#MapValue
    */
   readonly mapValue: string;
-
 }
 
 /**
@@ -683,7 +670,6 @@ export interface ExpirationDefinition {
    * @schema ExpirationDefinition#ExpiredObjectDeleteMarker
    */
   readonly expiredObjectDeleteMarker?: boolean;
-
 }
 
 /**
@@ -710,7 +696,6 @@ export interface NoncurrentVersionExpirationDefinition {
    * @schema NoncurrentVersionExpirationDefinition#Days
    */
   readonly days?: number;
-
 }
 
 /**
@@ -740,7 +725,6 @@ export interface NoncurrentVersionTransitionDefinition {
    * @schema NoncurrentVersionTransitionDefinition#StorageClass
    */
   readonly storageClass: string;
-
 }
 
 /**
@@ -776,7 +760,6 @@ export interface TransitionDefinition {
    * @schema TransitionDefinition#StorageClass
    */
   readonly storageClass: string;
-
 }
 
 /**
@@ -810,7 +793,6 @@ export interface RuleDefinition {
    * @schema RuleDefinition#ApplyServerSideEncryptionByDefault
    */
   readonly applyServerSideEncryptionByDefault?: ApplyServerSideEncryptionByDefaultDefinition[];
-
 }
 
 /**
@@ -874,7 +856,6 @@ export interface RulesDefinition {
    * @schema RulesDefinition#SourceSelectionCriteria
    */
   readonly sourceSelectionCriteria?: SourceSelectionCriteriaDefinition[];
-
 }
 
 /**
@@ -914,7 +895,6 @@ export interface ApplyServerSideEncryptionByDefaultDefinition {
    * @schema ApplyServerSideEncryptionByDefaultDefinition#SseAlgorithm
    */
   readonly sseAlgorithm: string;
-
 }
 
 /**
@@ -969,7 +949,6 @@ export interface DestinationDefinition {
    * @schema DestinationDefinition#AccessControlTranslation
    */
   readonly accessControlTranslation?: AccessControlTranslationDefinition[];
-
 }
 
 /**
@@ -1008,7 +987,6 @@ export interface FilterDefinition {
    * @schema FilterDefinition#Tags
    */
   readonly tags?: TagsDefinition3[];
-
 }
 
 /**
@@ -1034,7 +1012,6 @@ export interface SourceSelectionCriteriaDefinition {
    * @schema SourceSelectionCriteriaDefinition#SseKmsEncryptedObjects
    */
   readonly sseKmsEncryptedObjects?: SseKmsEncryptedObjectsDefinition[];
-
 }
 
 /**
@@ -1061,7 +1038,6 @@ export interface AccessControlTranslationDefinition {
    * @schema AccessControlTranslationDefinition#Owner
    */
   readonly owner: string;
-
 }
 
 /**
@@ -1091,7 +1067,6 @@ export interface TagsDefinition3 {
    * @schema TagsDefinition3#MapValue
    */
   readonly mapValue: string;
-
 }
 
 /**
@@ -1119,7 +1094,6 @@ export interface SseKmsEncryptedObjectsDefinition {
    * @schema SseKmsEncryptedObjectsDefinition#Enabled
    */
   readonly enabled: boolean;
-
 }
 
 /**

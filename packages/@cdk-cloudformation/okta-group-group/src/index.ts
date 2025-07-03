@@ -12,7 +12,6 @@ export interface CfnGroupProps {
    * @schema CfnGroupProps#Profile
    */
   readonly profile: Profile;
-
 }
 
 /**
@@ -46,7 +45,6 @@ export interface Profile {
    * @schema Profile#Description
    */
   readonly description?: string;
-
 }
 
 /**

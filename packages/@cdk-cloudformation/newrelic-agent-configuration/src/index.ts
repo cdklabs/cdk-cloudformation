@@ -19,7 +19,6 @@ export interface CfnConfigurationProps {
    * @schema CfnConfigurationProps#AgentConfiguration
    */
   readonly agentConfiguration: AgentConfigurationInput;
-
 }
 
 /**
@@ -47,7 +46,6 @@ export interface AgentConfigurationInput {
    * @schema AgentConfigurationInput#Settings
    */
   readonly settings?: AgentConfigurationInputSettings;
-
 }
 
 /**
@@ -123,7 +121,6 @@ export interface AgentConfigurationInputSettings {
    * @schema AgentConfigurationInputSettings#TransactionTracer
    */
   readonly transactionTracer?: AgentConfigurationInputSettingsTransactionTracer;
-
 }
 
 /**
@@ -166,7 +163,6 @@ export interface AgentConfigurationInputSettingsApmConfig {
    * @schema AgentConfigurationInputSettingsApmConfig#ApdexTarget
    */
   readonly apdexTarget?: number;
-
 }
 
 /**
@@ -194,7 +190,6 @@ export interface AgentConfigurationInputSettingsBrowserConfig {
    * @schema AgentConfigurationInputSettingsBrowserConfig#ApdexTarget
    */
   readonly apdexTarget?: number;
-
 }
 
 /**
@@ -251,7 +246,6 @@ export interface AgentConfigurationInputSettingsErrorCollector {
    * @schema AgentConfigurationInputSettingsErrorCollector#IgnoredErrorCodes
    */
   readonly ignoredErrorCodes?: string[];
-
 }
 
 /**
@@ -284,7 +278,6 @@ export interface AgentConfigurationInputSettingsSlowSql {
    * @schema AgentConfigurationInputSettingsSlowSql#Enabled
    */
   readonly enabled?: boolean;
-
 }
 
 /**
@@ -313,7 +306,6 @@ export interface AgentConfigurationInputSettingsThreadProfiler {
    * @schema AgentConfigurationInputSettingsThreadProfiler#Enabled
    */
   readonly enabled?: boolean;
-
 }
 
 /**
@@ -340,7 +332,6 @@ export interface AgentConfigurationInputSettingsTracerType {
    * @schema AgentConfigurationInputSettingsTracerType#Value
    */
   readonly value?: AgentConfigurationInputSettingsTracerTypeValue;
-
 }
 
 /**
@@ -432,7 +423,6 @@ export interface AgentConfigurationInputSettingsTransactionTracer {
    * @schema AgentConfigurationInputSettingsTransactionTracer#TransactionThresholdValue
    */
   readonly transactionThresholdValue?: number;
-
 }
 
 /**

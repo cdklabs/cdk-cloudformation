@@ -35,7 +35,6 @@ export interface CfnTeamProps {
    * @schema CfnTeamProps#Privacy
    */
   readonly privacy?: CfnTeamPropsPrivacy;
-
 }
 
 /**

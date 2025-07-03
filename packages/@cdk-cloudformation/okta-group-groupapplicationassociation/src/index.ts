@@ -21,7 +21,6 @@ export interface CfnGroupApplicationAssociationProps {
    * @schema CfnGroupApplicationAssociationProps#GroupId
    */
   readonly groupId: string;
-
 }
 
 /**

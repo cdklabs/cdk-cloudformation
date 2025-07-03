@@ -28,7 +28,6 @@ export interface CfnApiKeyProps {
    * @schema CfnApiKeyProps#DatabaseId
    */
   readonly databaseId: string;
-
 }
 
 /**

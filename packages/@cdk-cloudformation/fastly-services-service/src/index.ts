@@ -52,7 +52,6 @@ export interface CfnServiceProps {
    * @schema CfnServiceProps#DeletedAt
    */
   readonly deletedAt?: Date;
-
 }
 
 /**

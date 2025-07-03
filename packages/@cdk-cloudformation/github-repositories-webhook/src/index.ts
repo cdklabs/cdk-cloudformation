@@ -70,7 +70,6 @@ export interface CfnWebhookProps {
    * @schema CfnWebhookProps#InsecureSsl
    */
   readonly insecureSsl?: CfnWebhookPropsInsecureSsl;
-
 }
 
 /**

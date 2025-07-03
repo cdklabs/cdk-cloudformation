@@ -70,7 +70,6 @@ export interface CfnUserProps {
    * @schema CfnUserProps#NotificationRules
    */
   readonly notificationRules?: NotificationRule[];
-
 }
 
 /**
@@ -141,7 +140,6 @@ export interface ContactMethod {
    * @schema ContactMethod#Summary
    */
   readonly summary?: string;
-
 }
 
 /**
@@ -182,7 +180,6 @@ export interface NotificationRule {
    * @schema NotificationRule#Summary
    */
   readonly summary?: string;
-
 }
 
 /**

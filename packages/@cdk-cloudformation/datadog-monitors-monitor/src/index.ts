@@ -82,7 +82,6 @@ export interface CfnMonitorProps {
    * @schema CfnMonitorProps#CloudformationOptions
    */
   readonly cloudformationOptions?: CloudformationOptions;
-
 }
 
 /**
@@ -133,7 +132,6 @@ export interface Creator {
    * @schema Creator#Email
    */
   readonly email?: string;
-
 }
 
 /**
@@ -345,7 +343,6 @@ export interface MonitorOptions {
    * @schema MonitorOptions#Variables
    */
   readonly variables?: any[];
-
 }
 
 /**
@@ -438,7 +435,6 @@ export interface CloudformationOptions {
    * @schema CloudformationOptions#LowercaseQuery
    */
   readonly lowercaseQuery?: boolean;
-
 }
 
 /**
@@ -501,7 +497,6 @@ export interface MonitorSchedulingOptions {
    * @schema MonitorSchedulingOptions#EvaluationWindow
    */
   readonly evaluationWindow?: MonitorSchedulingOptionsEvaluationWindow;
-
 }
 
 /**
@@ -556,7 +551,6 @@ export interface MonitorThresholds {
    * @schema MonitorThresholds#WarningRecovery
    */
   readonly warningRecovery?: number;
-
 }
 
 /**
@@ -594,7 +588,6 @@ export interface MonitorThresholdWindows {
    * @schema MonitorThresholdWindows#RecoveryWindow
    */
   readonly recoveryWindow?: string;
-
 }
 
 /**
@@ -650,7 +643,6 @@ export interface MonitorSchedulingOptionsEvaluationWindow {
    * @schema MonitorSchedulingOptionsEvaluationWindow#HourStarts
    */
   readonly hourStarts?: number;
-
 }
 
 /**

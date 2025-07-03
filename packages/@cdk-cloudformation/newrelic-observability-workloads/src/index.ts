@@ -27,7 +27,6 @@ export interface CfnWorkloadsProps {
    * @schema CfnWorkloadsProps#Tags
    */
   readonly tags?: any;
-
 }
 
 /**

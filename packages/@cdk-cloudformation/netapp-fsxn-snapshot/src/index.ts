@@ -77,7 +77,6 @@ export interface CfnSnapshotProps {
    * @schema CfnSnapshotProps#SnaplockExpiryTime
    */
   readonly snaplockExpiryTime?: string;
-
 }
 
 /**
@@ -113,7 +112,6 @@ export interface PasswordSource {
    * @schema PasswordSource#Secret
    */
   readonly secret: SecretSource;
-
 }
 
 /**
@@ -147,7 +145,6 @@ export interface NameWithUuidRef {
    * @schema NameWithUuidRef#UUID
    */
   readonly uuid?: string;
-
 }
 
 /**
@@ -182,7 +179,6 @@ export interface SecretSource {
    * @schema SecretSource#SecretKey
    */
   readonly secretKey: string;
-
 }
 
 /**

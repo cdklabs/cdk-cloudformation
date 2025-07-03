@@ -197,7 +197,6 @@ export interface CfnUserProps {
    * @schema CfnUserProps#TrustedForDelegation
    */
   readonly trustedForDelegation?: boolean;
-
 }
 
 /**

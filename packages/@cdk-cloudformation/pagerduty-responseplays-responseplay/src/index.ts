@@ -108,7 +108,6 @@ export interface CfnResponsePlayProps {
    * @schema CfnResponsePlayProps#HtmlUrl
    */
   readonly htmlUrl?: string;
-
 }
 
 /**
@@ -154,7 +153,6 @@ export interface Subscriber {
    * @schema Subscriber#Id
    */
   readonly id: string;
-
 }
 
 /**
@@ -187,7 +185,6 @@ export interface Responder {
    * @schema Responder#Id
    */
   readonly id: string;
-
 }
 
 /**

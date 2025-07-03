@@ -84,7 +84,6 @@ export interface CfnEnforcerProps {
    * @schema CfnEnforcerProps#VPCConfiguration
    */
   readonly vpcConfiguration?: CfnEnforcerPropsVpcConfiguration;
-
 }
 
 /**
@@ -130,7 +129,6 @@ export interface CfnEnforcerPropsVpcConfiguration {
    * @schema CfnEnforcerPropsVpcConfiguration#SubnetIds
    */
   readonly subnetIds?: string[];
-
 }
 
 /**

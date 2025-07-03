@@ -28,7 +28,6 @@ export interface CfnMembershipProps {
    * @schema CfnMembershipProps#MemberType
    */
   readonly memberType: CfnMembershipPropsMemberType;
-
 }
 
 /**

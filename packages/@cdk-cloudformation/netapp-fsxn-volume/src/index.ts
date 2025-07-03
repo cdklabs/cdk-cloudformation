@@ -154,7 +154,6 @@ export interface CfnVolumeProps {
    * @schema CfnVolumeProps#Autosize
    */
   readonly autosize?: Autosize;
-
 }
 
 /**
@@ -201,7 +200,6 @@ export interface PasswordSource {
    * @schema PasswordSource#Secret
    */
   readonly secret: SecretSource;
-
 }
 
 /**
@@ -235,7 +233,6 @@ export interface NameWithUuidRef {
    * @schema NameWithUuidRef#UUID
    */
   readonly uuid?: string;
-
 }
 
 /**
@@ -270,7 +267,6 @@ export interface OntapTag {
    * @schema ONTAPTag#Value
    */
   readonly value: string;
-
 }
 
 /**
@@ -373,7 +369,6 @@ export interface Efficiency {
    * @schema Efficiency#CrossVolumeDedupe
    */
   readonly crossVolumeDedupe?: EfficiencyCrossVolumeDedupe;
-
 }
 
 /**
@@ -424,7 +419,6 @@ export interface Snaplock {
    * @schema Snaplock#DefaultRetention
    */
   readonly defaultRetention?: string;
-
 }
 
 /**
@@ -461,7 +455,6 @@ export interface Tiering {
    * @schema Tiering#MinCoolingDays
    */
   readonly minCoolingDays?: number;
-
 }
 
 /**
@@ -510,7 +503,6 @@ export interface Clone {
    * @schema Clone#IsCloned
    */
   readonly isCloned?: boolean;
-
 }
 
 /**
@@ -554,7 +546,6 @@ export interface Nas {
    * @schema NAS#ExportPolicy
    */
   readonly exportPolicy?: string;
-
 }
 
 /**
@@ -611,7 +602,6 @@ export interface Autosize {
    * @schema Autosize#ShrinkThreshold
    */
   readonly shrinkThreshold?: number;
-
 }
 
 /**
@@ -649,7 +639,6 @@ export interface SecretSource {
    * @schema SecretSource#SecretKey
    */
   readonly secretKey: string;
-
 }
 
 /**

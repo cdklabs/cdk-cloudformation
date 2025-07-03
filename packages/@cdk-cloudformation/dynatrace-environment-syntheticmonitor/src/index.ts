@@ -89,7 +89,6 @@ export interface CfnSyntheticMonitorProps {
    * @schema CfnSyntheticMonitorProps#AutomaticallyAssignedApps
    */
   readonly automaticallyAssignedApps?: string[];
-
 }
 
 /**
@@ -151,7 +150,6 @@ export interface AnomalyDetectionPolicy {
    * @schema AnomalyDetectionPolicy#LoadingTimeThresholds
    */
   readonly loadingTimeThresholds: LoadingTimeThresholdsPolicy;
-
 }
 
 /**
@@ -199,7 +197,6 @@ export interface CfnSyntheticMonitorPropsScript {
    * @schema CfnSyntheticMonitorPropsScript#Requests
    */
   readonly requests?: RequestsInput[];
-
 }
 
 /**
@@ -256,7 +253,6 @@ export interface Tag {
    * @schema Tag#Value
    */
   readonly value?: string;
-
 }
 
 /**
@@ -312,7 +308,6 @@ export interface OutageHandlingPolicy {
    * @schema OutageHandlingPolicy#RetryOnError
    */
   readonly retryOnError?: boolean;
-
 }
 
 /**
@@ -352,7 +347,6 @@ export interface LoadingTimeThresholdsPolicy {
    * @schema LoadingTimeThresholdsPolicy#Thresholds
    */
   readonly thresholds: LoadingTimeThreshold[];
-
 }
 
 /**
@@ -398,7 +392,6 @@ export interface RequestsInput {
    * @schema RequestsInput#Validation
    */
   readonly validation?: RequestsInputValidation;
-
 }
 
 /**
@@ -471,7 +464,6 @@ export interface GlobalOutagePolicy {
    * @schema GlobalOutagePolicy#ConsecutiveRuns
    */
   readonly consecutiveRuns: number;
-
 }
 
 /**
@@ -509,7 +501,6 @@ export interface LocalOutagePolicy {
    * @schema LocalOutagePolicy#ConsecutiveRuns
    */
   readonly consecutiveRuns: number;
-
 }
 
 /**
@@ -546,7 +537,6 @@ export interface LoadingTimeThreshold {
    * @schema LoadingTimeThreshold#ValueMs
    */
   readonly valueMs: number;
-
 }
 
 /**
@@ -582,7 +572,6 @@ export interface RequestsInputConfiguration {
    * @schema RequestsInputConfiguration#ShouldNotPersistSensitiveData
    */
   readonly shouldNotPersistSensitiveData?: boolean;
-
 }
 
 /**
@@ -609,7 +598,6 @@ export interface RequestsInputValidation {
    * @schema RequestsInputValidation#Rules
    */
   readonly rules?: RequestsRules[];
-
 }
 
 /**
@@ -656,7 +644,6 @@ export interface RequestsRules {
    * @schema RequestsRules#Type
    */
   readonly type?: string;
-
 }
 
 /**

@@ -35,7 +35,6 @@ export interface CfnCollaboratorProps {
    * @schema CfnCollaboratorProps#Permission
    */
   readonly permission?: CfnCollaboratorPropsPermission;
-
 }
 
 /**

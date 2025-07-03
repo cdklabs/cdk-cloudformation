@@ -27,7 +27,6 @@ export interface CfnRuleProps {
    * @schema CfnRuleProps#Webhook
    */
   readonly webhook?: WebhookRule;
-
 }
 
 /**
@@ -74,7 +73,6 @@ export interface SlackRule {
    * @schema SlackRule#Config
    */
   readonly config?: any;
-
 }
 
 /**
@@ -121,7 +119,6 @@ export interface PagerDutyRule {
    * @schema PagerDutyRule#Config
    */
   readonly config?: PagerDutyConfig;
-
 }
 
 /**
@@ -168,7 +165,6 @@ export interface EmailRule {
    * @schema EmailRule#Config
    */
   readonly config?: any;
-
 }
 
 /**
@@ -215,7 +211,6 @@ export interface WebhookRule {
    * @schema WebhookRule#Config
    */
   readonly config?: WebhookConfig;
-
 }
 
 /**
@@ -289,7 +284,6 @@ export interface PagerDutyConfig {
    * @schema PagerDutyConfig#ServiceKey
    */
   readonly serviceKey?: string;
-
 }
 
 /**
@@ -375,7 +369,6 @@ export interface WebhookConfig {
    * @schema WebhookConfig#Format
    */
   readonly format?: string;
-
 }
 
 /**

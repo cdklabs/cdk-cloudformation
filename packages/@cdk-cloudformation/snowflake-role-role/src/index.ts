@@ -21,7 +21,6 @@ export interface CfnRoleProps {
    * @schema CfnRoleProps#Comment
    */
   readonly comment?: string;
-
 }
 
 /**

@@ -42,7 +42,6 @@ export interface CfnSecretProps {
    * @schema CfnSecretProps#UpdatedAt
    */
   readonly updatedAt?: Date;
-
 }
 
 /**

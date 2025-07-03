@@ -17,7 +17,6 @@ export interface CfnMembershipProps {
    * @schema CfnMembershipProps#UserId
    */
   readonly userId: string;
-
 }
 
 /**

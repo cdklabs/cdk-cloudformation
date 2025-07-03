@@ -107,7 +107,6 @@ export interface CfnNgfwProps {
    * @schema CfnNgfwProps#ReadFirewall
    */
   readonly readFirewall?: CfnNgfwPropsReadFirewall;
-
 }
 
 /**
@@ -166,7 +165,6 @@ export interface SubnetMappings {
    * @schema SubnetMappings#SubnetId
    */
   readonly subnetId?: string;
-
 }
 
 /**
@@ -204,7 +202,6 @@ export interface LogProfileConfig {
    * @schema LogProfileConfig#LogType
    */
   readonly logType: LogProfileConfigLogType;
-
 }
 
 /**
@@ -236,7 +233,6 @@ export interface Tag {
    * @schema Tag#Value
    */
   readonly value: string;
-
 }
 
 /**
@@ -352,7 +348,6 @@ export interface CfnNgfwPropsReadFirewall {
    * @schema CfnNgfwPropsReadFirewall#Tags
    */
   readonly tags?: Tag[];
-
 }
 
 /**
@@ -444,7 +439,6 @@ export interface Attachment {
    * @schema Attachment#VpcId
    */
   readonly vpcId?: string;
-
 }
 
 /**

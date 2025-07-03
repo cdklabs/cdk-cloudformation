@@ -63,7 +63,6 @@ export interface CfnOffsetProps {
    * @schema CfnOffsetProps#Triggers
    */
   readonly triggers?: string[];
-
 }
 
 /**

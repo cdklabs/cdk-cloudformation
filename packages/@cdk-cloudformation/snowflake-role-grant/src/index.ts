@@ -17,7 +17,6 @@ export interface CfnGrantProps {
    * @schema CfnGrantProps#User
    */
   readonly user: string;
-
 }
 
 /**

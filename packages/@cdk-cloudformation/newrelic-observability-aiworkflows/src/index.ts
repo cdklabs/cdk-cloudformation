@@ -22,7 +22,6 @@ export interface CfnAiWorkflowsProps {
    * @schema CfnAiWorkflowsProps#Variables
    */
   readonly variables?: any;
-
 }
 
 /**

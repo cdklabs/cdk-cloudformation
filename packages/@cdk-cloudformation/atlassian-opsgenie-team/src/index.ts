@@ -42,7 +42,6 @@ export interface CfnTeamProps {
    * @schema CfnTeamProps#OpsgenieApiEndpoint
    */
   readonly opsgenieApiEndpoint?: string;
-
 }
 
 /**
@@ -76,7 +75,6 @@ export interface Member {
    * @schema Member#Role
    */
   readonly role?: string;
-
 }
 
 /**

@@ -112,7 +112,6 @@ export interface CfnMonitorProps {
    * @schema CfnMonitorProps#ProbeZone
    */
   readonly probeZone?: string;
-
 }
 
 /**

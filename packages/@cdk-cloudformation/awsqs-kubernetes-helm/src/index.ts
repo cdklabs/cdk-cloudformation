@@ -113,7 +113,6 @@ export interface CfnHelmProps {
    * @schema CfnHelmProps#VPCConfiguration
    */
   readonly vpcConfiguration?: CfnHelmPropsVpcConfiguration;
-
 }
 
 /**
@@ -177,7 +176,6 @@ export interface CfnHelmPropsRepositoryOptions {
    * @schema CfnHelmPropsRepositoryOptions#InsecureSkipTLSVerify
    */
   readonly insecureSkipTlsVerify?: boolean;
-
 }
 
 /**
@@ -216,7 +214,6 @@ export interface CfnHelmPropsVpcConfiguration {
    * @schema CfnHelmPropsVpcConfiguration#SubnetIds
    */
   readonly subnetIds?: string[];
-
 }
 
 /**

@@ -168,7 +168,6 @@ export interface CfnS3Props {
    * @schema CfnS3Props#Version
    */
   readonly version?: string;
-
 }
 
 /**

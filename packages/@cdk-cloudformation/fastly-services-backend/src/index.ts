@@ -177,7 +177,6 @@ export interface CfnBackendProps {
    * @schema CfnBackendProps#Version
    */
   readonly version?: string;
-
 }
 
 /**

@@ -102,7 +102,6 @@ export interface CfnHealthcheckProps {
    * @schema CfnHealthcheckProps#DeletedAt
    */
   readonly deletedAt?: Date;
-
 }
 
 /**

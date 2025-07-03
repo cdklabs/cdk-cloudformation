@@ -152,7 +152,6 @@ export interface CfnDynamoDbProps {
    * @schema CfnDynamoDbProps#IsCorrelationSetSupported
    */
   readonly isCorrelationSetSupported?: boolean;
-
 }
 
 /**
@@ -229,7 +228,6 @@ export interface CustomField {
    * @schema CustomField#Type
    */
   readonly type?: CustomFieldType;
-
 }
 
 /**
@@ -266,7 +264,6 @@ export interface User {
    * @schema User#Email
    */
   readonly email?: string;
-
 }
 
 /**

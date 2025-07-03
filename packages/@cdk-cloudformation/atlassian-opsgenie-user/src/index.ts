@@ -38,7 +38,6 @@ export interface CfnUserProps {
    * @schema CfnUserProps#Role
    */
   readonly role: string;
-
 }
 
 /**

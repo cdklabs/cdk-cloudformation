@@ -246,7 +246,6 @@ export interface CfnDatabaseProps {
    * @schema CfnDatabaseProps#ImportFromUri
    */
   readonly importFromUri?: string;
-
 }
 
 /**

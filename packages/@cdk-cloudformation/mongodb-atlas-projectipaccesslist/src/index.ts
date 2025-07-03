@@ -24,7 +24,6 @@ export interface CfnProjectIpAccessListProps {
    * @schema CfnProjectIpAccessListProps#ProjectId
    */
   readonly projectId: string;
-
 }
 
 /**
@@ -81,7 +80,6 @@ export interface AccessListDefinition {
    * @schema accessListDefinition#ProjectId
    */
   readonly projectId?: string;
-
 }
 
 /**
@@ -115,7 +113,6 @@ export interface ApiKeyDefinition {
    * @schema apiKeyDefinition#PublicKey
    */
   readonly publicKey?: string;
-
 }
 
 /**

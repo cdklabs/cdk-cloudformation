@@ -35,7 +35,6 @@ export interface CfnDictionaryProps {
    * @schema CfnDictionaryProps#VersionId
    */
   readonly versionId: number;
-
 }
 
 /**

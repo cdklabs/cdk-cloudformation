@@ -14,7 +14,6 @@ export interface CfnStaticProps {
    * @schema CfnStaticProps#Time
    */
   readonly time?: string;
-
 }
 
 /**

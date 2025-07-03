@@ -22,7 +22,6 @@ export interface CfnCertificateProps {
    * @schema CfnCertificateProps#Relationships
    */
   readonly relationships?: Relationships;
-
 }
 
 /**
@@ -99,7 +98,6 @@ export interface CfnCertificatePropsAttributes {
    * @schema CfnCertificatePropsAttributes#IssuedTo
    */
   readonly issuedTo?: string;
-
 }
 
 /**
@@ -134,7 +132,6 @@ export interface Relationships {
    * @schema Relationships#TlsDomains
    */
   readonly tlsDomains?: RelationshipsTlsDomains;
-
 }
 
 /**
@@ -159,7 +156,6 @@ export interface RelationshipsTlsDomains {
    * @schema RelationshipsTlsDomains#Data
    */
   readonly data?: Data[];
-
 }
 
 /**
@@ -184,7 +180,6 @@ export interface Data {
    * @schema Data#Id
    */
   readonly id?: string;
-
 }
 
 /**

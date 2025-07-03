@@ -212,7 +212,6 @@ export interface CfnS3Props {
    * @schema CfnS3Props#ParquetFileRegex
    */
   readonly parquetFileRegex?: string;
-
 }
 
 /**
@@ -310,7 +309,6 @@ export interface CustomField {
    * @schema CustomField#Type
    */
   readonly type?: CustomFieldType;
-
 }
 
 /**
@@ -348,7 +346,6 @@ export interface User {
    * @schema User#Email
    */
   readonly email?: string;
-
 }
 
 /**

@@ -84,7 +84,6 @@ export interface CfnServerProps {
    * @schema CfnServerProps#VPCConfiguration
    */
   readonly vpcConfiguration?: CfnServerPropsVpcConfiguration;
-
 }
 
 /**
@@ -130,7 +129,6 @@ export interface CfnServerPropsVpcConfiguration {
    * @schema CfnServerPropsVpcConfiguration#SubnetIds
    */
   readonly subnetIds?: string[];
-
 }
 
 /**

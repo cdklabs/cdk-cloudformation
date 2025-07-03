@@ -26,7 +26,6 @@ export interface CfnNrqlConditionStaticProps {
    * @schema CfnNrqlConditionStaticProps#PolicyId
    */
   readonly policyId: number;
-
 }
 
 /**
@@ -113,7 +112,6 @@ export interface ConditionInput {
    * @schema ConditionInput#ViolationTimeLimitSeconds
    */
   readonly violationTimeLimitSeconds?: number;
-
 }
 
 /**
@@ -166,7 +164,6 @@ export interface ConditionInputExpiration {
    * @schema ConditionInputExpiration#OpenViolationOnExpiration
    */
   readonly openViolationOnExpiration?: boolean;
-
 }
 
 /**
@@ -197,7 +194,6 @@ export interface ConditionInputNrql {
    * @schema ConditionInputNrql#Query
    */
   readonly query: string;
-
 }
 
 /**
@@ -268,7 +264,6 @@ export interface ConditionInputSignal {
    * @schema ConditionInputSignal#SlideBy
    */
   readonly slideBy?: number;
-
 }
 
 /**
@@ -331,7 +326,6 @@ export interface ConditionInputTerms {
    * @schema ConditionInputTerms#ThresholdOccurrences
    */
   readonly thresholdOccurrences: ConditionInputTermsThresholdOccurrences;
-
 }
 
 /**

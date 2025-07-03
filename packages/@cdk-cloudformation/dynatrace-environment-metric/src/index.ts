@@ -46,7 +46,6 @@ export interface CfnMetricProps {
    * @schema CfnMetricProps#Warnings
    */
   readonly warnings?: string[];
-
 }
 
 /**

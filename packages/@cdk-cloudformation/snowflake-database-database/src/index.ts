@@ -42,7 +42,6 @@ export interface CfnDatabaseProps {
    * @schema CfnDatabaseProps#Comment
    */
   readonly comment?: string;
-
 }
 
 /**

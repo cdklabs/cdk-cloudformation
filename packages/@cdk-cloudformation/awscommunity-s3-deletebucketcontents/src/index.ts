@@ -14,7 +14,6 @@ export interface CfnDeleteBucketContentsProps {
    * @schema CfnDeleteBucketContentsProps#BucketName
    */
   readonly bucketName: string;
-
 }
 
 /**

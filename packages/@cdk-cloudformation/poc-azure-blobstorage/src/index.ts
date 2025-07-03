@@ -35,7 +35,6 @@ export interface CfnBlobStorageProps {
    * @schema CfnBlobStorageProps#AzureClientSecret
    */
   readonly azureClientSecret: string;
-
 }
 
 /**

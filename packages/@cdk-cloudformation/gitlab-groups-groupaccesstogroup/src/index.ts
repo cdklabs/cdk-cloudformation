@@ -28,7 +28,6 @@ export interface CfnGroupAccessToGroupProps {
    * @schema CfnGroupAccessToGroupProps#AccessLevel
    */
   readonly accessLevel: CfnGroupAccessToGroupPropsAccessLevel;
-
 }
 
 /**

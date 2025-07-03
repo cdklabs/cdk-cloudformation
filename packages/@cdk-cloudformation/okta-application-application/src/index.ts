@@ -53,7 +53,6 @@ export interface CfnApplicationProps {
    * @schema CfnApplicationProps#Visibility
    */
   readonly visibility?: Visibility;
-
 }
 
 /**
@@ -96,7 +95,6 @@ export interface Accessibility {
    * @schema Accessibility#SelfService
    */
   readonly selfService?: boolean;
-
 }
 
 /**
@@ -158,7 +156,6 @@ export interface ApplicationCredentials {
    * @schema ApplicationCredentials#UserNameTemplate
    */
   readonly userNameTemplate?: UserNameTemplate;
-
 }
 
 /**
@@ -215,7 +212,6 @@ export interface CfnApplicationPropsSettings {
    * @schema CfnApplicationPropsSettings#App
    */
   readonly app?: CfnApplicationPropsSettingsApp;
-
 }
 
 /**
@@ -284,7 +280,6 @@ export interface Visibility {
    * @schema Visibility#Hide
    */
   readonly hide: Hide;
-
 }
 
 /**
@@ -336,7 +331,6 @@ export interface OauthCredential {
    * @schema OauthCredential#TokenEndpointAuthMethod
    */
   readonly tokenEndpointAuthMethod: string;
-
 }
 
 /**
@@ -386,7 +380,6 @@ export interface SigningCredential {
    * @schema SigningCredential#Kid
    */
   readonly kid?: string;
-
 }
 
 /**
@@ -422,7 +415,6 @@ export interface UserNameTemplate {
    * @schema UserNameTemplate#Type
    */
   readonly type: UserNameTemplateType;
-
 }
 
 /**
@@ -458,7 +450,6 @@ export interface CfnApplicationPropsSettingsApp {
    * @schema CfnApplicationPropsSettingsApp#Url
    */
   readonly url?: string;
-
 }
 
 /**
@@ -496,7 +487,6 @@ export interface Hide {
    * @schema Hide#Web
    */
   readonly web: boolean;
-
 }
 
 /**

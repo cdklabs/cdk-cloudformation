@@ -39,6 +39,14 @@
     jsonschema "~1.4.1"
     semver "^7.7.2"
 
+"@aws-cdk/cloud-assembly-schema@^45.0.0":
+  version "45.1.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/cloud-assembly-schema/-/cloud-assembly-schema-45.1.0.tgz#8e3d855b251e3c672c24c9295c9f7f53a15e1a48"
+  integrity sha512-vMV6nbV2dwqX3FO1PFPGXw9GzBmP30nnixHZQrT+Q6yatAt6xmj/dK4GLxzl/sFP3ItgMzBvgEekRL6Ajf4taw==
+  dependencies:
+    jsonschema "~1.4.1"
+    semver "^7.7.2"
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.27.1":
   version "7.27.1"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.27.1.tgz#200f715e66d52a23b221a9435534a91cc13ad5be"
@@ -1224,7 +1232,7 @@ aws-cdk-github-oidc@^2.2.0:
   resolved "https://registry.yarnpkg.com/aws-cdk-github-oidc/-/aws-cdk-github-oidc-2.4.1.tgz#8fcb134401f3a15d74260e5bcc58ed05dabac2a0"
   integrity sha512-zKQYPGyf5f6APG76OpOxW6P7KGY/fC6VhN1ZullxySSu6RroUH9VtVl+cJ8hYes5XvEE/ZDpx2h2fPtNwZrcVQ==
 
-aws-cdk-lib@2.203.1, aws-cdk-lib@^2.203.0, aws-cdk-lib@^2.203.1:
+aws-cdk-lib@2.203.1:
   version "2.203.1"
   resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.203.1.tgz#02f7a576e5f5f5dcb95fc432c7aa9352f7007d14"
   integrity sha512-tvxWV0aGk4UJngcDfkHL7SOx4kE1xZXNlf5x8Hw7tBLtvwwRHQ65JwFleEBQ93jOBF0pXDEruHXV/f3sfmHfBQ==
@@ -1232,6 +1240,26 @@ aws-cdk-lib@2.203.1, aws-cdk-lib@^2.203.0, aws-cdk-lib@^2.203.1:
     "@aws-cdk/asset-awscli-v1" "2.2.242"
     "@aws-cdk/asset-node-proxy-agent-v6" "^2.1.0"
     "@aws-cdk/cloud-assembly-schema" "^44.8.0"
+    "@balena/dockerignore" "^1.0.2"
+    case "1.6.3"
+    fs-extra "^11.3.0"
+    ignore "^5.3.2"
+    jsonschema "^1.5.0"
+    mime-types "^2.1.35"
+    minimatch "^3.1.2"
+    punycode "^2.3.1"
+    semver "^7.7.2"
+    table "^6.9.0"
+    yaml "1.10.2"
+
+aws-cdk-lib@^2.204.0:
+  version "2.204.0"
+  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.204.0.tgz#312240c4f21d3fb7a42d420890afe2563e4fad74"
+  integrity sha512-mY3nYu+QvPhO+fz+LCFKbc0PFhTHbHzDLnbcA2fPcQBKciYnTixpBd2ccRlKYWbG4y6NTc6ju6DudZ3HIS4OlA==
+  dependencies:
+    "@aws-cdk/asset-awscli-v1" "2.2.242"
+    "@aws-cdk/asset-node-proxy-agent-v6" "^2.1.0"
+    "@aws-cdk/cloud-assembly-schema" "^45.0.0"
     "@balena/dockerignore" "^1.0.2"
     case "1.6.3"
     fs-extra "^11.3.0"
@@ -1465,11 +1493,11 @@ case@1.6.3, case@^1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-import@^0.2.112:
-  version "0.2.954"
-  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.954.tgz#38eaa31fa0a8caca11fb8f4588e15ec6ac7fea29"
-  integrity sha512-5uyOfr+x+odZe+9JcEUYSq7ZgO4nR6/0y4AcIKAez0gcjUH4LSMpatR6kb4ImHqHbXuNxO4uGPNS5OYCMKtzmA==
+  version "0.2.956"
+  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.956.tgz#96e9436cfbf1cb06cb1fb6d71add14322e0a7860"
+  integrity sha512-muDoMB2BRjzhhUkfDnSLM0Pc1+fC6Wvab1fF+0+QXMMalpYp+qOtkTSkuN5+YFLw9U9AmUHTlS8IemaG4EiN5A==
   dependencies:
-    aws-cdk-lib "^2.203.0"
+    aws-cdk-lib "^2.204.0"
     aws-sdk "^2.1692.0"
     case "^1.6.3"
     constructs "^10"

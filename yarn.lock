@@ -1465,9 +1465,9 @@ case@1.6.3, case@^1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-import@^0.2.112:
-  version "0.2.959"
-  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.959.tgz#887db1474860fe1f632d63afccc54bfc10b8a8bb"
-  integrity sha512-tGyFJnoe0+HAjQdURvqzVlBvC+NBk0xMqPt7xlcAzoLgACLantak8zrDP4nC+yv++a7398J+olFhYqt7oeJNGg==
+  version "0.2.960"
+  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.960.tgz#02455580c3315966992de7622ae00acf7ea1d2ff"
+  integrity sha512-120fIgINDXO00qmH8A5DEDeDownMriOv1r6O9gRYji+M6S3CvoIRDOiLc+/3cwpOVh4d49ZgIAs9pUkCHorqYg==
   dependencies:
     aws-cdk-lib "^2.206.0"
     aws-sdk "^2.1692.0"
@@ -2098,9 +2098,9 @@ dunder-proto@^1.0.0, dunder-proto@^1.0.1:
     gopd "^1.2.0"
 
 electron-to-chromium@^1.5.173:
-  version "1.5.187"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.187.tgz#8c58854e065962351dc87e95614dd78d50425966"
-  integrity sha512-cl5Jc9I0KGUoOoSbxvTywTa40uspGJt/BDBoDLoxJRSBpWh4FFXBsjNRHfQrONsV/OoEjDfHUmZQa2d6Ze4YgA==
+  version "1.5.188"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.188.tgz#38033691f27b1ad914f8ba9812634fa4c4f5b4f9"
+  integrity sha512-pfEx5CBFAocOKNrc+i5fSvhDaI1Vr9R9aT5uX1IzM3hhdL6k649wfuUcdUd9EZnmbE1xdfA51CwqQ61CO3Xl3g==
 
 emittery@^0.8.1:
   version "0.8.1"
@@ -3919,10 +3919,10 @@ jsii-reflect@^1.112.0:
     oo-ascii-tree "^1.112.0"
     yargs "^16.2.0"
 
-jsii-rosetta@^5.8.10, jsii-rosetta@^5.8.11:
-  version "5.8.11"
-  resolved "https://registry.yarnpkg.com/jsii-rosetta/-/jsii-rosetta-5.8.11.tgz#65a5c9e9e9360429df448d9231db17d0132990e2"
-  integrity sha512-wHi5eI8tgTKrGk9dY99a8ZFiYiP9/gPvRECzoX2Vq0so6G5w/R1jd5vb8D6UTX7hDTPSaKChj2Bi0tG1BNod/g==
+jsii-rosetta@^5.8.12:
+  version "5.8.12"
+  resolved "https://registry.yarnpkg.com/jsii-rosetta/-/jsii-rosetta-5.8.12.tgz#5135c42ef6f1adf105178c0ef1cc5832ad9f1117"
+  integrity sha512-PZp2C/EdC9FV4bPsHIWFRG2+CTP+cF+A2/5+F7i0UoXH7XhjMc0Cs2R2fWnEmHZhLq1mUvYWu0dfsGa9GmM+iw==
   dependencies:
     "@jsii/check-node" "1.112.0"
     "@jsii/spec" "^1.112.0"
@@ -3939,21 +3939,21 @@ jsii-rosetta@^5.8.10, jsii-rosetta@^5.8.11:
     yargs "^17.7.2"
 
 jsii-srcmak@^0.1.1313:
-  version "0.1.1313"
-  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.1313.tgz#88da3608000afd28794a24e91776f66e1208b9f0"
-  integrity sha512-emCXjQ5AyanBCx46pSEUZPlSjoR1WS2sPylFv9gJTVSgLEddbypHdRtSk0Rps0yN44M+YiSLa0TrxKJLeWh0xA==
+  version "0.1.1314"
+  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.1314.tgz#cfdbeb5283c0ed5dc8d050ecc09996d5076ac7ed"
+  integrity sha512-Qh5QIUS80BSoN6/bT5IC2JbD+r1wgZ0//1y/ESDp5bnQ7RZPYvqHvCMLtRNF1VWbiYJfwqrJnY32HrGY32QaZA==
   dependencies:
     fs-extra "^9.1.0"
-    jsii "~5.8.14"
+    jsii "~5.8.16"
     jsii-pacmak "^1.112.0"
-    jsii-rosetta "^5.8.10"
+    jsii-rosetta "^5.8.12"
     ncp "^2.0.0"
     yargs "^17.7.2"
 
-jsii@^5.8.15, jsii@~5.8.0, jsii@~5.8.14:
-  version "5.8.15"
-  resolved "https://registry.yarnpkg.com/jsii/-/jsii-5.8.15.tgz#6a00b738e5543a834f8eb9d0b67dcdfc68f635f2"
-  integrity sha512-PMA+JhuuXMqGgfb3cGndlr+5NAYoOFHZRMD5uoq+oYNoPvsIejwJbw83Al1BYXhl59f/CI3xTzo5ev3krkqHoQ==
+jsii@^5.8.16, jsii@~5.8.0, jsii@~5.8.16:
+  version "5.8.16"
+  resolved "https://registry.yarnpkg.com/jsii/-/jsii-5.8.16.tgz#387a4c07a4d74bc3936ddda9f504d3719007d965"
+  integrity sha512-22Ax6rHg+EDiGfzIP7XtUbrD6Tszhe7o0ws3SfDROkCPKFOiSy73I3tQNP182e1C3zLXemja2WQ3DYIE+sCZew==
   dependencies:
     "@jsii/check-node" "1.112.0"
     "@jsii/spec" "^1.112.0"

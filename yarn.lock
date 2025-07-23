@@ -817,9 +817,9 @@
   integrity sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==
 
 "@types/node@*":
-  version "24.0.15"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-24.0.15.tgz#f34fbc973e7d64217106e0c59ed8761e6b51381e"
-  integrity sha512-oaeTSbCef7U/z7rDeJA138xpG3NuKc64/rZ2qmUFkFJmnMsAPaluIifqyWd8hSSMxyP9oie3dLAqYPblag9KgA==
+  version "24.1.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-24.1.0.tgz#0993f7dc31ab5cc402d112315b463e383d68a49c"
+  integrity sha512-ut5FthK5moxFKH2T1CUOC6ctR67rQRvvHdFLCD2Ql6KXmMuCrjsSsRI9UsLCm9M18BMwClv4pn327UvB7eeO1w==
   dependencies:
     undici-types "~7.8.0"
 
@@ -1465,15 +1465,15 @@ case@1.6.3, case@^1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-import@^0.2.112:
-  version "0.2.960"
-  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.960.tgz#02455580c3315966992de7622ae00acf7ea1d2ff"
-  integrity sha512-120fIgINDXO00qmH8A5DEDeDownMriOv1r6O9gRYji+M6S3CvoIRDOiLc+/3cwpOVh4d49ZgIAs9pUkCHorqYg==
+  version "0.2.961"
+  resolved "https://registry.yarnpkg.com/cdk-import/-/cdk-import-0.2.961.tgz#c376c3b05d68d18daacfb43481e8fd36f2064075"
+  integrity sha512-d1jEB1QJxFg0bX2rSo8i1a7XQhCuKQLusC6qluVzskFuBU/AXymMiPk0/kjXmPYOd3UJ3ds/bRS+vXz+aGNxNw==
   dependencies:
     aws-cdk-lib "^2.206.0"
     aws-sdk "^2.1692.0"
     case "^1.6.3"
     constructs "^10"
-    jsii-srcmak "^0.1.1313"
+    jsii-srcmak "^0.1.1314"
     json2jsii "^0.5.11"
     minimist "^1.2.8"
     minimist-subcommand "^3.0.2"
@@ -2098,9 +2098,9 @@ dunder-proto@^1.0.0, dunder-proto@^1.0.1:
     gopd "^1.2.0"
 
 electron-to-chromium@^1.5.173:
-  version "1.5.188"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.188.tgz#38033691f27b1ad914f8ba9812634fa4c4f5b4f9"
-  integrity sha512-pfEx5CBFAocOKNrc+i5fSvhDaI1Vr9R9aT5uX1IzM3hhdL6k649wfuUcdUd9EZnmbE1xdfA51CwqQ61CO3Xl3g==
+  version "1.5.190"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.190.tgz#f0ac8be182291a45e8154dbb12f18d2b2318e4ac"
+  integrity sha512-k4McmnB2091YIsdCgkS0fMVMPOJgxl93ltFzaryXqwip1AaxeDqKCGLxkXODDA5Ab/D+tV5EL5+aTx76RvLRxw==
 
 emittery@^0.8.1:
   version "0.8.1"
@@ -3938,7 +3938,7 @@ jsii-rosetta@^5.8.12:
     workerpool "^6.5.1"
     yargs "^17.7.2"
 
-jsii-srcmak@^0.1.1313:
+jsii-srcmak@^0.1.1314:
   version "0.1.1314"
   resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.1314.tgz#cfdbeb5283c0ed5dc8d050ecc09996d5076ac7ed"
   integrity sha512-Qh5QIUS80BSoN6/bT5IC2JbD+r1wgZ0//1y/ESDp5bnQ7RZPYvqHvCMLtRNF1VWbiYJfwqrJnY32HrGY32QaZA==

@@ -53,6 +53,7 @@ jobs:
           - databricks-clusters-job
           - datadog-dashboards-dashboard
           - datadog-integrations-aws
+          - datadog-integrations-awsaccount
           - datadog-monitors-downtime
           - datadog-monitors-downtimeschedule
           - datadog-monitors-monitor

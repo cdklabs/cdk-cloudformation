@@ -41,6 +41,7 @@
 /.github/workflows/release-databricks-clusters-job.yml linguist-generated
 /.github/workflows/release-datadog-dashboards-dashboard.yml linguist-generated
 /.github/workflows/release-datadog-integrations-aws.yml linguist-generated
+/.github/workflows/release-datadog-integrations-awsaccount.yml linguist-generated
 /.github/workflows/release-datadog-monitors-downtime.yml linguist-generated
 /.github/workflows/release-datadog-monitors-downtimeschedule.yml linguist-generated
 /.github/workflows/release-datadog-monitors-monitor.yml linguist-generated

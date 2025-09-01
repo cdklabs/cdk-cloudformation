@@ -39,6 +39,7 @@
     ".github/workflows/release-databricks-clusters-job.yml",
     ".github/workflows/release-datadog-dashboards-dashboard.yml",
     ".github/workflows/release-datadog-integrations-aws.yml",
+    ".github/workflows/release-datadog-integrations-awsaccount.yml",
     ".github/workflows/release-datadog-monitors-downtime.yml",
     ".github/workflows/release-datadog-monitors-downtimeschedule.yml",
     ".github/workflows/release-datadog-monitors-monitor.yml",

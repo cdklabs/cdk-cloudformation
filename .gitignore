@@ -143,6 +143,9 @@ junit.xml
 /packages/@cdk-cloudformation/datadog-integrations-aws/dist/
 /packages/@cdk-cloudformation/datadog-integrations-aws/lib/
 !/.github/workflows/release-datadog-integrations-aws.yml
+/packages/@cdk-cloudformation/datadog-integrations-awsaccount/dist/
+/packages/@cdk-cloudformation/datadog-integrations-awsaccount/lib/
+!/.github/workflows/release-datadog-integrations-awsaccount.yml
 /packages/@cdk-cloudformation/datadog-monitors-downtime/dist/
 /packages/@cdk-cloudformation/datadog-monitors-downtime/lib/
 !/.github/workflows/release-datadog-monitors-downtime.yml

@@ -44,6 +44,7 @@
     ".github/workflows/release-datadog-monitors-downtimeschedule.yml",
     ".github/workflows/release-datadog-monitors-monitor.yml",
     ".github/workflows/release-datadog-slos-slo.yml",
+    ".github/workflows/release-dev-fsx-storagevirtualmachine.yml",
     ".github/workflows/release-dynatrace-automation-sitereliabilityguardian.yml",
     ".github/workflows/release-dynatrace-automation-workflow.yml",
     ".github/workflows/release-dynatrace-configuration-dashboard.yml",

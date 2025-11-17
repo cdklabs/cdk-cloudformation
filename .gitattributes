@@ -46,6 +46,7 @@
 /.github/workflows/release-datadog-monitors-downtimeschedule.yml linguist-generated
 /.github/workflows/release-datadog-monitors-monitor.yml linguist-generated
 /.github/workflows/release-datadog-slos-slo.yml linguist-generated
+/.github/workflows/release-dev-fsx-storagevirtualmachine.yml linguist-generated
 /.github/workflows/release-dynatrace-automation-sitereliabilityguardian.yml linguist-generated
 /.github/workflows/release-dynatrace-automation-workflow.yml linguist-generated
 /.github/workflows/release-dynatrace-configuration-dashboard.yml linguist-generated

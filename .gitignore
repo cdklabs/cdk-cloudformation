@@ -158,6 +158,9 @@ junit.xml
 /packages/@cdk-cloudformation/datadog-slos-slo/dist/
 /packages/@cdk-cloudformation/datadog-slos-slo/lib/
 !/.github/workflows/release-datadog-slos-slo.yml
+/packages/@cdk-cloudformation/dev-fsx-storagevirtualmachine/dist/
+/packages/@cdk-cloudformation/dev-fsx-storagevirtualmachine/lib/
+!/.github/workflows/release-dev-fsx-storagevirtualmachine.yml
 /packages/@cdk-cloudformation/dynatrace-automation-sitereliabilityguardian/dist/
 /packages/@cdk-cloudformation/dynatrace-automation-sitereliabilityguardian/lib/
 !/.github/workflows/release-dynatrace-automation-sitereliabilityguardian.yml

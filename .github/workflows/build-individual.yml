@@ -58,6 +58,7 @@ jobs:
           - datadog-monitors-downtimeschedule
           - datadog-monitors-monitor
           - datadog-slos-slo
+          - dev-fsx-storagevirtualmachine
           - dynatrace-automation-sitereliabilityguardian
           - dynatrace-automation-workflow
           - dynatrace-configuration-dashboard

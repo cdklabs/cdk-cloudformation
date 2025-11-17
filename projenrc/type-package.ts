@@ -330,7 +330,6 @@ export class CloudFormationTypeProject extends Component {
     });
     publisher.publishToMaven({
       githubEnvironment: 'release',
-      mavenEndpoint: 'https://s01.oss.sonatype.org', // cdklabs endpoint
     });
     publisher.publishToNuget({
       githubEnvironment: 'release',

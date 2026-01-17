@@ -47,7 +47,7 @@
     "aws-sdk": "^2.1693.0",
     "case": "^1.6.3",
     "cdk-import": "^0.2.112",
-    "cdklabs-projen-project-types": "^0.3.9",
+    "cdklabs-projen-project-types": "^0.3.14",
     "commit-and-tag-version": "^12",
     "constructs": "^10.0.5",
     "eslint": "^9",
@@ -58,7 +58,7 @@
     "jsii": "^5.9.22",
     "jsii-pacmak": "^1.125.0",
     "jsii-rosetta": "^5.9.25",
-    "projen": "^0.98.13",
+    "projen": "^0.99.3",
     "ts-jest": "^29",
     "ts-node": "^10",
     "typescript": "5.9.x"

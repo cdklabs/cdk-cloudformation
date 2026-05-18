@@ -3,7 +3,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as constructs from 'constructs';
 
 /**
- * Datadog Monitor 4.8.0
+ * Datadog Monitor 4.10.0
  *
  * @schema CfnMonitorProps
  */
@@ -423,6 +423,14 @@ export enum CfnMonitorPropsType {
   ERROR_HYPHEN_TRACKING_ALERT = "error-tracking alert",
   /** ci-tests alert */
   CI_HYPHEN_TESTS_ALERT = "ci-tests alert",
+  /** database-monitoring alert */
+  DATABASE_HYPHEN_MONITORING_ALERT = "database-monitoring alert",
+  /** network-performance alert */
+  NETWORK_HYPHEN_PERFORMANCE_ALERT = "network-performance alert",
+  /** cost alert */
+  COST_ALERT = "cost alert",
+  /** data-quality alert */
+  DATA_HYPHEN_QUALITY_ALERT = "data-quality alert",
 }
 
 /**

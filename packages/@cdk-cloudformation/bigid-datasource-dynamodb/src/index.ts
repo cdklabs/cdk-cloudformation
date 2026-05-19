@@ -152,13 +152,12 @@ export interface CfnDynamoDbProps {
    * @schema CfnDynamoDbProps#IsCorrelationSetSupported
    */
   readonly isCorrelationSetSupported?: boolean;
-
 }
 
 /**
  * Converts an object of type 'CfnDynamoDbProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnDynamoDbProps(obj: CfnDynamoDbProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -195,7 +194,7 @@ export function toJson_CfnDynamoDbProps(obj: CfnDynamoDbProps | undefined): Reco
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Authentication Method
@@ -229,13 +228,12 @@ export interface CustomField {
    * @schema CustomField#Type
    */
   readonly type?: CustomFieldType;
-
 }
 
 /**
  * Converts an object of type 'CustomField' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CustomField(obj: CustomField | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -246,7 +244,7 @@ export function toJson_CustomField(obj: CustomField | undefined): Record<string,
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema User
@@ -266,13 +264,12 @@ export interface User {
    * @schema User#Email
    */
   readonly email?: string;
-
 }
 
 /**
  * Converts an object of type 'User' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_User(obj: User | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -283,7 +280,7 @@ export function toJson_User(obj: User | undefined): Record<string, any> | undefi
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Security Tier

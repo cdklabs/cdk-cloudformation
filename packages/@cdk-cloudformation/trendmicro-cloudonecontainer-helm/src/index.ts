@@ -91,13 +91,12 @@ export interface CfnHelmProps {
    * @schema CfnHelmProps#VPCConfiguration
    */
   readonly vpcConfiguration?: CfnHelmPropsVpcConfiguration;
-
 }
 
 /**
  * Converts an object of type 'CfnHelmProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnHelmProps(obj: CfnHelmProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -117,7 +116,7 @@ export function toJson_CfnHelmProps(obj: CfnHelmProps | undefined): Record<strin
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * For network connectivity to Cluster inside VPC
@@ -138,13 +137,12 @@ export interface CfnHelmPropsVpcConfiguration {
    * @schema CfnHelmPropsVpcConfiguration#SubnetIds
    */
   readonly subnetIds?: string[];
-
 }
 
 /**
  * Converts an object of type 'CfnHelmPropsVpcConfiguration' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnHelmPropsVpcConfiguration(obj: CfnHelmPropsVpcConfiguration | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -154,7 +152,7 @@ export function toJson_CfnHelmPropsVpcConfiguration(obj: CfnHelmPropsVpcConfigur
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 
 /**

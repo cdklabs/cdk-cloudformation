@@ -63,13 +63,12 @@ export interface CfnEscalationPolicyProps {
    * @schema CfnEscalationPolicyProps#HtmlUrl
    */
   readonly htmlUrl?: string;
-
 }
 
 /**
  * Converts an object of type 'CfnEscalationPolicyProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnEscalationPolicyProps(obj: CfnEscalationPolicyProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -86,7 +85,7 @@ export function toJson_CfnEscalationPolicyProps(obj: CfnEscalationPolicyProps | 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Determines how on call handoff notifications will be sent for users on the escalation policy. Defaults to "if_has_services".
@@ -118,13 +117,12 @@ export interface EscalationRule {
    * @schema EscalationRule#Targets
    */
   readonly targets: Target[];
-
 }
 
 /**
  * Converts an object of type 'EscalationRule' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_EscalationRule(obj: EscalationRule | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -134,7 +132,7 @@ export function toJson_EscalationRule(obj: EscalationRule | undefined): Record<s
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Team
@@ -151,13 +149,12 @@ export interface Team {
    * @schema Team#Id
    */
   readonly id: string;
-
 }
 
 /**
  * Converts an object of type 'Team' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Team(obj: Team | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -167,7 +164,7 @@ export function toJson_Team(obj: Team | undefined): Record<string, any> | undefi
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Target
@@ -184,13 +181,12 @@ export interface Target {
    * @schema Target#Id
    */
   readonly id: string;
-
 }
 
 /**
  * Converts an object of type 'Target' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Target(obj: Target | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -200,7 +196,7 @@ export function toJson_Target(obj: Target | undefined): Record<string, any> | un
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * A string that determines the schema of the object. This must be the standard name for the entity, suffixed by _reference if the object is a reference./, =, +, and -.

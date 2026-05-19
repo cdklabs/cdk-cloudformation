@@ -49,13 +49,12 @@ export interface CfnSchemaProps {
    * @schema CfnSchemaProps#SQLIdempotency
    */
   readonly sqlIdempotency?: CfnSchemaPropsSqlIdempotency;
-
 }
 
 /**
  * Converts an object of type 'CfnSchemaProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnSchemaProps(obj: CfnSchemaProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -69,7 +68,7 @@ export function toJson_CfnSchemaProps(obj: CfnSchemaProps | undefined): Record<s
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Database
@@ -102,13 +101,12 @@ export interface Database {
    * @schema Database#SQL
    */
   readonly sql?: string[];
-
 }
 
 /**
  * Converts an object of type 'Database' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Database(obj: Database | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -120,7 +118,7 @@ export function toJson_Database(obj: Database | undefined): Record<string, any> 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema User
@@ -153,13 +151,12 @@ export interface User {
    * @schema User#Grants
    */
   readonly grants?: Grant[];
-
 }
 
 /**
  * Converts an object of type 'User' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_User(obj: User | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -171,7 +168,7 @@ export function toJson_User(obj: User | undefined): Record<string, any> | undefi
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Whether arbitrary SQL statements are executed once (IDEMPOTENT), or on every update (RUN_ONCE).
@@ -207,13 +204,12 @@ export interface Table {
    * @schema Table#PrimaryKey
    */
   readonly primaryKey?: PrimaryKey;
-
 }
 
 /**
  * Converts an object of type 'Table' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Table(obj: Table | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -224,7 +220,7 @@ export function toJson_Table(obj: Table | undefined): Record<string, any> | unde
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Grant
@@ -250,13 +246,12 @@ export interface Grant {
    * @schema Grant#Privileges
    */
   readonly privileges: string[];
-
 }
 
 /**
  * Converts an object of type 'Grant' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Grant(obj: Grant | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -267,7 +262,7 @@ export function toJson_Grant(obj: Grant | undefined): Record<string, any> | unde
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Column
@@ -300,13 +295,12 @@ export interface Column {
    * @schema Column#Default
    */
   readonly default?: string;
-
 }
 
 /**
  * Converts an object of type 'Column' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Column(obj: Column | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -318,7 +312,7 @@ export function toJson_Column(obj: Column | undefined): Record<string, any> | un
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema PrimaryKey
@@ -344,13 +338,12 @@ export interface PrimaryKey {
    * @schema PrimaryKey#Default
    */
   readonly default?: string;
-
 }
 
 /**
  * Converts an object of type 'PrimaryKey' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_PrimaryKey(obj: PrimaryKey | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -361,7 +354,7 @@ export function toJson_PrimaryKey(obj: PrimaryKey | undefined): Record<string, a
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 
 /**

@@ -70,13 +70,12 @@ export interface CfnSubscriptionProps {
    * @schema CfnSubscriptionProps#RedisVersion
    */
   readonly redisVersion?: string;
-
 }
 
 /**
  * Converts an object of type 'CfnSubscriptionProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnSubscriptionProps(obj: CfnSubscriptionProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -93,7 +92,7 @@ export function toJson_CfnSubscriptionProps(obj: CfnSubscriptionProps | undefine
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 
 /**

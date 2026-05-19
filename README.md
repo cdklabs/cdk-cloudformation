@@ -46,7 +46,7 @@ that version from your package manager.
 
 <!--STATUS-BEGIN-->
 
-Release status for 154 libraries:
+Release status for 156 libraries:
 
 * [![aqua-enterprise-enforcer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-enforcer.yml)
 * [![aqua-enterprise-kubeenforcer](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-kubeenforcer.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-aqua-enterprise-kubeenforcer.yml)
@@ -78,10 +78,12 @@ Release status for 154 libraries:
 * [![databricks-clusters-job](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-databricks-clusters-job.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-databricks-clusters-job.yml)
 * [![datadog-dashboards-dashboard](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-dashboards-dashboard.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-dashboards-dashboard.yml)
 * [![datadog-integrations-aws](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-integrations-aws.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-integrations-aws.yml)
+* [![datadog-integrations-awsaccount](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-integrations-awsaccount.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-integrations-awsaccount.yml)
 * [![datadog-monitors-downtime](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-monitors-downtime.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-monitors-downtime.yml)
 * [![datadog-monitors-downtimeschedule](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-monitors-downtimeschedule.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-monitors-downtimeschedule.yml)
 * [![datadog-monitors-monitor](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-monitors-monitor.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-monitors-monitor.yml)
 * [![datadog-slos-slo](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-slos-slo.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-datadog-slos-slo.yml)
+* [![dev-fsx-storagevirtualmachine](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-dev-fsx-storagevirtualmachine.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-dev-fsx-storagevirtualmachine.yml)
 * [![dynatrace-automation-sitereliabilityguardian](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-dynatrace-automation-sitereliabilityguardian.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-dynatrace-automation-sitereliabilityguardian.yml)
 * [![dynatrace-automation-workflow](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-dynatrace-automation-workflow.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-dynatrace-automation-workflow.yml)
 * [![dynatrace-configuration-dashboard](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-dynatrace-configuration-dashboard.yml/badge.svg)](https://github.com/cdklabs/cdk-cloudformation/actions/workflows/release-dynatrace-configuration-dashboard.yml)

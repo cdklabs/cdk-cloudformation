@@ -19,13 +19,12 @@ export interface CfnConfigurationProps {
    * @schema CfnConfigurationProps#AgentConfiguration
    */
   readonly agentConfiguration: AgentConfigurationInput;
-
 }
 
 /**
  * Converts an object of type 'CfnConfigurationProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnConfigurationProps(obj: CfnConfigurationProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -35,7 +34,7 @@ export function toJson_CfnConfigurationProps(obj: CfnConfigurationProps | undefi
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema AgentConfigurationInput
@@ -47,13 +46,12 @@ export interface AgentConfigurationInput {
    * @schema AgentConfigurationInput#Settings
    */
   readonly settings?: AgentConfigurationInputSettings;
-
 }
 
 /**
  * Converts an object of type 'AgentConfigurationInput' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_AgentConfigurationInput(obj: AgentConfigurationInput | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -62,7 +60,7 @@ export function toJson_AgentConfigurationInput(obj: AgentConfigurationInput | un
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Input data about the entities you want to update and the settings to use.
@@ -123,13 +121,12 @@ export interface AgentConfigurationInputSettings {
    * @schema AgentConfigurationInputSettings#TransactionTracer
    */
   readonly transactionTracer?: AgentConfigurationInputSettingsTransactionTracer;
-
 }
 
 /**
  * Converts an object of type 'AgentConfigurationInputSettings' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_AgentConfigurationInputSettings(obj: AgentConfigurationInputSettings | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -145,7 +142,7 @@ export function toJson_AgentConfigurationInputSettings(obj: AgentConfigurationIn
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Provides fields to set general APM application settings.
@@ -166,13 +163,12 @@ export interface AgentConfigurationInputSettingsApmConfig {
    * @schema AgentConfigurationInputSettingsApmConfig#ApdexTarget
    */
   readonly apdexTarget?: number;
-
 }
 
 /**
  * Converts an object of type 'AgentConfigurationInputSettingsApmConfig' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_AgentConfigurationInputSettingsApmConfig(obj: AgentConfigurationInputSettingsApmConfig | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -182,7 +178,7 @@ export function toJson_AgentConfigurationInputSettingsApmConfig(obj: AgentConfig
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema AgentConfigurationInputSettingsBrowserConfig
@@ -194,13 +190,12 @@ export interface AgentConfigurationInputSettingsBrowserConfig {
    * @schema AgentConfigurationInputSettingsBrowserConfig#ApdexTarget
    */
   readonly apdexTarget?: number;
-
 }
 
 /**
  * Converts an object of type 'AgentConfigurationInputSettingsBrowserConfig' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_AgentConfigurationInputSettingsBrowserConfig(obj: AgentConfigurationInputSettingsBrowserConfig | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -209,7 +204,7 @@ export function toJson_AgentConfigurationInputSettingsBrowserConfig(obj: AgentCo
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * The error collector captures information about uncaught exceptions and sends them to New Relic for viewing.
@@ -251,13 +246,12 @@ export interface AgentConfigurationInputSettingsErrorCollector {
    * @schema AgentConfigurationInputSettingsErrorCollector#IgnoredErrorCodes
    */
   readonly ignoredErrorCodes?: string[];
-
 }
 
 /**
  * Converts an object of type 'AgentConfigurationInputSettingsErrorCollector' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_AgentConfigurationInputSettingsErrorCollector(obj: AgentConfigurationInputSettingsErrorCollector | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -270,7 +264,7 @@ export function toJson_AgentConfigurationInputSettingsErrorCollector(obj: AgentC
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * In APM, when transaction traces are collected, there may be additional Slow query data available.
@@ -284,13 +278,12 @@ export interface AgentConfigurationInputSettingsSlowSql {
    * @schema AgentConfigurationInputSettingsSlowSql#Enabled
    */
   readonly enabled?: boolean;
-
 }
 
 /**
  * Converts an object of type 'AgentConfigurationInputSettingsSlowSql' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_AgentConfigurationInputSettingsSlowSql(obj: AgentConfigurationInputSettingsSlowSql | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -299,7 +292,7 @@ export function toJson_AgentConfigurationInputSettingsSlowSql(obj: AgentConfigur
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Settings for the thread profiler.
@@ -313,13 +306,12 @@ export interface AgentConfigurationInputSettingsThreadProfiler {
    * @schema AgentConfigurationInputSettingsThreadProfiler#Enabled
    */
   readonly enabled?: boolean;
-
 }
 
 /**
  * Converts an object of type 'AgentConfigurationInputSettingsThreadProfiler' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_AgentConfigurationInputSettingsThreadProfiler(obj: AgentConfigurationInputSettingsThreadProfiler | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -328,7 +320,7 @@ export function toJson_AgentConfigurationInputSettingsThreadProfiler(obj: AgentC
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Input object for setting the type of tracing performed.
@@ -340,13 +332,12 @@ export interface AgentConfigurationInputSettingsTracerType {
    * @schema AgentConfigurationInputSettingsTracerType#Value
    */
   readonly value?: AgentConfigurationInputSettingsTracerTypeValue;
-
 }
 
 /**
  * Converts an object of type 'AgentConfigurationInputSettingsTracerType' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_AgentConfigurationInputSettingsTracerType(obj: AgentConfigurationInputSettingsTracerType | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -355,7 +346,7 @@ export function toJson_AgentConfigurationInputSettingsTracerType(obj: AgentConfi
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Transaction Tracer settings related to APM applications.
@@ -432,13 +423,12 @@ export interface AgentConfigurationInputSettingsTransactionTracer {
    * @schema AgentConfigurationInputSettingsTransactionTracer#TransactionThresholdValue
    */
   readonly transactionThresholdValue?: number;
-
 }
 
 /**
  * Converts an object of type 'AgentConfigurationInputSettingsTransactionTracer' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_AgentConfigurationInputSettingsTransactionTracer(obj: AgentConfigurationInputSettingsTransactionTracer | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -456,7 +446,7 @@ export function toJson_AgentConfigurationInputSettingsTransactionTracer(obj: Age
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema AgentConfigurationInputSettingsTracerTypeValue

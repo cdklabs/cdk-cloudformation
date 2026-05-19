@@ -27,13 +27,12 @@ export interface CfnRuleProps {
    * @schema CfnRuleProps#Webhook
    */
   readonly webhook?: WebhookRule;
-
 }
 
 /**
  * Converts an object of type 'CfnRuleProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnRuleProps(obj: CfnRuleProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -45,7 +44,7 @@ export function toJson_CfnRuleProps(obj: CfnRuleProps | undefined): Record<strin
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Create Slack notification rule
@@ -74,13 +73,12 @@ export interface SlackRule {
    * @schema SlackRule#Config
    */
   readonly config?: any;
-
 }
 
 /**
  * Converts an object of type 'SlackRule' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_SlackRule(obj: SlackRule | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -92,7 +90,7 @@ export function toJson_SlackRule(obj: SlackRule | undefined): Record<string, any
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Create PagerDuty notification rules
@@ -121,13 +119,12 @@ export interface PagerDutyRule {
    * @schema PagerDutyRule#Config
    */
   readonly config?: PagerDutyConfig;
-
 }
 
 /**
  * Converts an object of type 'PagerDutyRule' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_PagerDutyRule(obj: PagerDutyRule | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -139,7 +136,7 @@ export function toJson_PagerDutyRule(obj: PagerDutyRule | undefined): Record<str
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Create Email notification rules
@@ -168,13 +165,12 @@ export interface EmailRule {
    * @schema EmailRule#Config
    */
   readonly config?: any;
-
 }
 
 /**
  * Converts an object of type 'EmailRule' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_EmailRule(obj: EmailRule | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -186,7 +182,7 @@ export function toJson_EmailRule(obj: EmailRule | undefined): Record<string, any
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Create Webhook notification rules
@@ -215,13 +211,12 @@ export interface WebhookRule {
    * @schema WebhookRule#Config
    */
   readonly config?: WebhookConfig;
-
 }
 
 /**
  * Converts an object of type 'WebhookRule' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_WebhookRule(obj: WebhookRule | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -233,7 +228,7 @@ export function toJson_WebhookRule(obj: WebhookRule | undefined): Record<string,
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * An error/ message is seen for the first time.
@@ -289,13 +284,12 @@ export interface PagerDutyConfig {
    * @schema PagerDutyConfig#ServiceKey
    */
   readonly serviceKey?: string;
-
 }
 
 /**
  * Converts an object of type 'PagerDutyConfig' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_PagerDutyConfig(obj: PagerDutyConfig | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -304,7 +298,7 @@ export function toJson_PagerDutyConfig(obj: PagerDutyConfig | undefined): Record
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * An error/ message is seen for the first time.
@@ -375,13 +369,12 @@ export interface WebhookConfig {
    * @schema WebhookConfig#Format
    */
   readonly format?: string;
-
 }
 
 /**
  * Converts an object of type 'WebhookConfig' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_WebhookConfig(obj: WebhookConfig | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -391,7 +384,7 @@ export function toJson_WebhookConfig(obj: WebhookConfig | undefined): Record<str
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 
 /**

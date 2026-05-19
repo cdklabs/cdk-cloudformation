@@ -22,13 +22,12 @@ export interface CfnDomainProps {
    * @schema CfnDomainProps#Attributes
    */
   readonly attributes?: CfnDomainPropsAttributes;
-
 }
 
 /**
  * Converts an object of type 'CfnDomainProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnDomainProps(obj: CfnDomainProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -39,7 +38,7 @@ export function toJson_CfnDomainProps(obj: CfnDomainProps | undefined): Record<s
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Relationships
@@ -59,13 +58,12 @@ export interface Relationships {
    * @schema Relationships#TlsConfiguration
    */
   readonly tlsConfiguration?: RelationshipsTlsConfiguration;
-
 }
 
 /**
  * Converts an object of type 'Relationships' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Relationships(obj: Relationships | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -76,7 +74,7 @@ export function toJson_Relationships(obj: Relationships | undefined): Record<str
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnDomainPropsAttributes
@@ -86,13 +84,12 @@ export interface CfnDomainPropsAttributes {
    * @schema CfnDomainPropsAttributes#CreatedAt
    */
   readonly createdAt?: Date;
-
 }
 
 /**
  * Converts an object of type 'CfnDomainPropsAttributes' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnDomainPropsAttributes(obj: CfnDomainPropsAttributes | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -101,7 +98,7 @@ export function toJson_CfnDomainPropsAttributes(obj: CfnDomainPropsAttributes | 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema RelationshipsTlsCertificate
@@ -111,13 +108,12 @@ export interface RelationshipsTlsCertificate {
    * @schema RelationshipsTlsCertificate#Data
    */
   readonly data?: Data;
-
 }
 
 /**
  * Converts an object of type 'RelationshipsTlsCertificate' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_RelationshipsTlsCertificate(obj: RelationshipsTlsCertificate | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -126,7 +122,7 @@ export function toJson_RelationshipsTlsCertificate(obj: RelationshipsTlsCertific
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema RelationshipsTlsDomain
@@ -136,13 +132,12 @@ export interface RelationshipsTlsDomain {
    * @schema RelationshipsTlsDomain#Data
    */
   readonly data?: Data;
-
 }
 
 /**
  * Converts an object of type 'RelationshipsTlsDomain' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_RelationshipsTlsDomain(obj: RelationshipsTlsDomain | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -151,7 +146,7 @@ export function toJson_RelationshipsTlsDomain(obj: RelationshipsTlsDomain | unde
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema RelationshipsTlsConfiguration
@@ -161,13 +156,12 @@ export interface RelationshipsTlsConfiguration {
    * @schema RelationshipsTlsConfiguration#Data
    */
   readonly data?: Data;
-
 }
 
 /**
  * Converts an object of type 'RelationshipsTlsConfiguration' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_RelationshipsTlsConfiguration(obj: RelationshipsTlsConfiguration | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -176,7 +170,7 @@ export function toJson_RelationshipsTlsConfiguration(obj: RelationshipsTlsConfig
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Data
@@ -191,13 +185,12 @@ export interface Data {
    * @schema Data#Id
    */
   readonly id?: string;
-
 }
 
 /**
  * Converts an object of type 'Data' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Data(obj: Data | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -207,7 +200,7 @@ export function toJson_Data(obj: Data | undefined): Record<string, any> | undefi
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 
 /**

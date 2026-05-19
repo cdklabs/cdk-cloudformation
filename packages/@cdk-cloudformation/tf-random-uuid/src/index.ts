@@ -12,13 +12,12 @@ export interface CfnUuidProps {
    * @schema CfnUuidProps#Keepers
    */
   readonly keepers?: KeepersDefinition[];
-
 }
 
 /**
  * Converts an object of type 'CfnUuidProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnUuidProps(obj: CfnUuidProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -27,7 +26,7 @@ export function toJson_CfnUuidProps(obj: CfnUuidProps | undefined): Record<strin
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema KeepersDefinition
@@ -42,13 +41,12 @@ export interface KeepersDefinition {
    * @schema KeepersDefinition#MapValue
    */
   readonly mapValue: string;
-
 }
 
 /**
  * Converts an object of type 'KeepersDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_KeepersDefinition(obj: KeepersDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -58,7 +56,7 @@ export function toJson_KeepersDefinition(obj: KeepersDefinition | undefined): Re
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 
 /**

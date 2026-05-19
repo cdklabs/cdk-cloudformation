@@ -107,13 +107,12 @@ export interface CfnNgfwProps {
    * @schema CfnNgfwProps#ReadFirewall
    */
   readonly readFirewall?: CfnNgfwPropsReadFirewall;
-
 }
 
 /**
  * Converts an object of type 'CfnNgfwProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnNgfwProps(obj: CfnNgfwProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -141,7 +140,7 @@ export function toJson_CfnNgfwProps(obj: CfnNgfwProps | undefined): Record<strin
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema EndpointMode
@@ -166,13 +165,12 @@ export interface SubnetMappings {
    * @schema SubnetMappings#SubnetId
    */
   readonly subnetId?: string;
-
 }
 
 /**
  * Converts an object of type 'SubnetMappings' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_SubnetMappings(obj: SubnetMappings | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -182,7 +180,7 @@ export function toJson_SubnetMappings(obj: SubnetMappings | undefined): Record<s
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Add Log profile config
@@ -204,13 +202,12 @@ export interface LogProfileConfig {
    * @schema LogProfileConfig#LogType
    */
   readonly logType: LogProfileConfigLogType;
-
 }
 
 /**
  * Converts an object of type 'LogProfileConfig' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_LogProfileConfig(obj: LogProfileConfig | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -221,7 +218,7 @@ export function toJson_LogProfileConfig(obj: LogProfileConfig | undefined): Reco
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Tag
@@ -236,13 +233,12 @@ export interface Tag {
    * @schema Tag#Value
    */
   readonly value: string;
-
 }
 
 /**
  * Converts an object of type 'Tag' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Tag(obj: Tag | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -252,7 +248,7 @@ export function toJson_Tag(obj: Tag | undefined): Record<string, any> | undefine
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnNgfwPropsReadFirewall
@@ -352,13 +348,12 @@ export interface CfnNgfwPropsReadFirewall {
    * @schema CfnNgfwPropsReadFirewall#Tags
    */
   readonly tags?: Tag[];
-
 }
 
 /**
  * Converts an object of type 'CfnNgfwPropsReadFirewall' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnNgfwPropsReadFirewall(obj: CfnNgfwPropsReadFirewall | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -385,7 +380,7 @@ export function toJson_CfnNgfwPropsReadFirewall(obj: CfnNgfwPropsReadFirewall | 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema LogProfileConfigLogDestinationType
@@ -444,13 +439,12 @@ export interface Attachment {
    * @schema Attachment#VpcId
    */
   readonly vpcId?: string;
-
 }
 
 /**
  * Converts an object of type 'Attachment' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Attachment(obj: Attachment | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -464,7 +458,7 @@ export function toJson_Attachment(obj: Attachment | undefined): Record<string, a
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 
 /**

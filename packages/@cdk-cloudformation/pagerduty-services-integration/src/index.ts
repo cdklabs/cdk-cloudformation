@@ -97,13 +97,12 @@ export interface CfnIntegrationProps {
    * @schema CfnIntegrationProps#EmailFilters
    */
   readonly emailFilters?: EmailFilter[];
-
 }
 
 /**
  * Converts an object of type 'CfnIntegrationProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnIntegrationProps(obj: CfnIntegrationProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -125,7 +124,7 @@ export function toJson_CfnIntegrationProps(obj: CfnIntegrationProps | undefined)
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * The type of integration to be created. Refer to the API documentation for list of allowed values.
@@ -203,13 +202,12 @@ export interface EmailParser {
    * @schema EmailParser#ValueExtractors
    */
   readonly valueExtractors?: ValueExtractor[];
-
 }
 
 /**
  * Converts an object of type 'EmailParser' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_EmailParser(obj: EmailParser | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -220,7 +218,7 @@ export function toJson_EmailParser(obj: EmailParser | undefined): Record<string,
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Email Parsing Fallback. Specified only for generic_email_inbound_integration integrations.
@@ -267,13 +265,12 @@ export interface EmailFilter {
    * @schema EmailFilter#FromEmailRegex
    */
   readonly fromEmailRegex?: string;
-
 }
 
 /**
  * Converts an object of type 'EmailFilter' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_EmailFilter(obj: EmailFilter | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -287,7 +284,7 @@ export function toJson_EmailFilter(obj: EmailFilter | undefined): Record<string,
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema EmailParserAction
@@ -312,13 +309,12 @@ export interface RootMatchPredicate {
    * @schema RootMatchPredicate#Children
    */
   readonly children?: MatchPredicate[];
-
 }
 
 /**
  * Converts an object of type 'RootMatchPredicate' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_RootMatchPredicate(obj: RootMatchPredicate | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -328,7 +324,7 @@ export function toJson_RootMatchPredicate(obj: RootMatchPredicate | undefined): 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema ValueExtractor
@@ -363,13 +359,12 @@ export interface ValueExtractor {
    * @schema ValueExtractor#EndsBefore
    */
   readonly endsBefore?: string;
-
 }
 
 /**
  * Converts an object of type 'ValueExtractor' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ValueExtractor(obj: ValueExtractor | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -383,7 +378,7 @@ export function toJson_ValueExtractor(obj: ValueExtractor | undefined): Record<s
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema EmailFilterSubjectMode
@@ -451,13 +446,12 @@ export interface MatchPredicate {
    * @schema MatchPredicate#Part
    */
   readonly part?: MatchPredicatePart;
-
 }
 
 /**
  * Converts an object of type 'MatchPredicate' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_MatchPredicate(obj: MatchPredicate | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -468,7 +462,7 @@ export function toJson_MatchPredicate(obj: MatchPredicate | undefined): Record<s
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema ValueExtractorType

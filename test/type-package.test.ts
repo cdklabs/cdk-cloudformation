@@ -19,15 +19,15 @@ test('CloudFormationTypeProject', () => {
 
   const snapshot = Testing.synth(root);
   const keys = Object.keys(snapshot).filter(key => key.startsWith('my-packages/'));
-  expect(keys).toStrictEqual([
+  expect(keys.sort()).toStrictEqual([
     'my-packages/@cdk-cloudformation/tf-random-uuid/.gitattributes',
     'my-packages/@cdk-cloudformation/tf-random-uuid/.gitignore',
     'my-packages/@cdk-cloudformation/tf-random-uuid/.npmignore',
     'my-packages/@cdk-cloudformation/tf-random-uuid/.projen/files.json',
     'my-packages/@cdk-cloudformation/tf-random-uuid/.projen/tasks.json',
     'my-packages/@cdk-cloudformation/tf-random-uuid/LICENSE',
-    'my-packages/@cdk-cloudformation/tf-random-uuid/package.json',
     'my-packages/@cdk-cloudformation/tf-random-uuid/README.md',
+    'my-packages/@cdk-cloudformation/tf-random-uuid/package.json',
     'my-packages/@cdk-cloudformation/tf-random-uuid/src/index.ts',
   ]);
 

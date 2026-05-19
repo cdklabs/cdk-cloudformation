@@ -56,13 +56,12 @@ export interface CfnClusterPeerProps {
    * @schema CfnClusterPeerProps#Encryption
    */
   readonly encryption?: CfnClusterPeerPropsEncryption;
-
 }
 
 /**
  * Converts an object of type 'CfnClusterPeerProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnClusterPeerProps(obj: CfnClusterPeerProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -77,7 +76,7 @@ export function toJson_CfnClusterPeerProps(obj: CfnClusterPeerProps | undefined)
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema PasswordSource
@@ -89,13 +88,12 @@ export interface PasswordSource {
    * @schema PasswordSource#Secret
    */
   readonly secret: SecretSource;
-
 }
 
 /**
  * Converts an object of type 'PasswordSource' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_PasswordSource(obj: PasswordSource | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -104,7 +102,7 @@ export function toJson_PasswordSource(obj: PasswordSource | undefined): Record<s
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema FsxnDestination
@@ -130,13 +128,12 @@ export interface FsxnDestination {
    * @schema FsxnDestination#LinkArn
    */
   readonly linkArn: string;
-
 }
 
 /**
  * Converts an object of type 'FsxnDestination' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_FsxnDestination(obj: FsxnDestination | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -147,7 +144,7 @@ export function toJson_FsxnDestination(obj: FsxnDestination | undefined): Record
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema ClusterPeerInfo
@@ -180,13 +177,12 @@ export interface ClusterPeerInfo {
    * @schema ClusterPeerInfo#StatusInfo
    */
   readonly statusInfo?: ClusterPeerStatus;
-
 }
 
 /**
  * Converts an object of type 'ClusterPeerInfo' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ClusterPeerInfo(obj: ClusterPeerInfo | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -198,7 +194,7 @@ export function toJson_ClusterPeerInfo(obj: ClusterPeerInfo | undefined): Record
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Encryption mechanism of the communication channel between the two peers.
@@ -229,13 +225,12 @@ export interface SecretSource {
    * @schema SecretSource#SecretKey
    */
   readonly secretKey: string;
-
 }
 
 /**
  * Converts an object of type 'SecretSource' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_SecretSource(obj: SecretSource | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -245,7 +240,7 @@ export function toJson_SecretSource(obj: SecretSource | undefined): Record<strin
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema ClusterPeerStatus
@@ -264,13 +259,12 @@ export interface ClusterPeerStatus {
    * @schema ClusterPeerStatus#UpdateTime
    */
   readonly updateTime?: string;
-
 }
 
 /**
  * Converts an object of type 'ClusterPeerStatus' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ClusterPeerStatus(obj: ClusterPeerStatus | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -280,7 +274,7 @@ export function toJson_ClusterPeerStatus(obj: ClusterPeerStatus | undefined): Re
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * The current state of the cluster peer relationship. Possible values are 'available', 'partial', 'unavailable', 'pending' and 'unidentified'.

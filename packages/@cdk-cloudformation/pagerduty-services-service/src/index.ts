@@ -106,13 +106,12 @@ export interface CfnServiceProps {
    * @schema CfnServiceProps#AutoPauseNotificationsParameters
    */
   readonly autoPauseNotificationsParameters?: CfnServicePropsAutoPauseNotificationsParameters;
-
 }
 
 /**
  * Converts an object of type 'CfnServiceProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnServiceProps(obj: CfnServiceProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -135,7 +134,7 @@ export function toJson_CfnServiceProps(obj: CfnServiceProps | undefined): Record
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * A string that represent the current state of the Service, allowed values are: active, warning, critical, maintenance, disabled.
@@ -184,13 +183,12 @@ export interface CfnServicePropsIncidentUrgencyRule {
    * @schema CfnServicePropsIncidentUrgencyRule#OutsideSupportHours
    */
   readonly outsideSupportHours?: CfnServicePropsIncidentUrgencyRuleOutsideSupportHours;
-
 }
 
 /**
  * Converts an object of type 'CfnServicePropsIncidentUrgencyRule' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnServicePropsIncidentUrgencyRule(obj: CfnServicePropsIncidentUrgencyRule | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -202,7 +200,7 @@ export function toJson_CfnServicePropsIncidentUrgencyRule(obj: CfnServicePropsIn
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Object representing Support Hours.
@@ -244,13 +242,12 @@ export interface CfnServicePropsSupportHours {
    * @schema CfnServicePropsSupportHours#DaysOfWeek
    */
   readonly daysOfWeek?: number[];
-
 }
 
 /**
  * Converts an object of type 'CfnServicePropsSupportHours' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnServicePropsSupportHours(obj: CfnServicePropsSupportHours | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -263,7 +260,7 @@ export function toJson_CfnServicePropsSupportHours(obj: CfnServicePropsSupportHo
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Represents when scheduled action will occur, allowed values are: support_hours_start, support_hours_end.
@@ -308,13 +305,12 @@ export interface CfnServicePropsAlertGroupingParameters {
    * @schema CfnServicePropsAlertGroupingParameters#Config
    */
   readonly config?: CfnServicePropsAlertGroupingParametersConfig;
-
 }
 
 /**
  * Converts an object of type 'CfnServicePropsAlertGroupingParameters' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnServicePropsAlertGroupingParameters(obj: CfnServicePropsAlertGroupingParameters | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -324,7 +320,7 @@ export function toJson_CfnServicePropsAlertGroupingParameters(obj: CfnServicePro
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Object that defines how alerts on this service are automatically suspended for a period of time before triggering, when identified as likely being transient.
@@ -345,13 +341,12 @@ export interface CfnServicePropsAutoPauseNotificationsParameters {
    * @schema CfnServicePropsAutoPauseNotificationsParameters#Timeout
    */
   readonly timeout?: CfnServicePropsAutoPauseNotificationsParametersTimeout;
-
 }
 
 /**
  * Converts an object of type 'CfnServicePropsAutoPauseNotificationsParameters' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnServicePropsAutoPauseNotificationsParameters(obj: CfnServicePropsAutoPauseNotificationsParameters | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -361,7 +356,7 @@ export function toJson_CfnServicePropsAutoPauseNotificationsParameters(obj: CfnS
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * String representing the type of incident urgency: whether it's constant, or it's dependent on the support hours.
@@ -404,13 +399,12 @@ export interface CfnServicePropsIncidentUrgencyRuleDuringSupportHours {
    * @schema CfnServicePropsIncidentUrgencyRuleDuringSupportHours#Urgency
    */
   readonly urgency?: Urgency;
-
 }
 
 /**
  * Converts an object of type 'CfnServicePropsIncidentUrgencyRuleDuringSupportHours' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnServicePropsIncidentUrgencyRuleDuringSupportHours(obj: CfnServicePropsIncidentUrgencyRuleDuringSupportHours | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -420,7 +414,7 @@ export function toJson_CfnServicePropsIncidentUrgencyRuleDuringSupportHours(obj:
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Object representing the Incident Urgency Rule outside support hours.
@@ -437,13 +431,12 @@ export interface CfnServicePropsIncidentUrgencyRuleOutsideSupportHours {
    * @schema CfnServicePropsIncidentUrgencyRuleOutsideSupportHours#Urgency
    */
   readonly urgency?: Urgency;
-
 }
 
 /**
  * Converts an object of type 'CfnServicePropsIncidentUrgencyRuleOutsideSupportHours' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnServicePropsIncidentUrgencyRuleOutsideSupportHours(obj: CfnServicePropsIncidentUrgencyRuleOutsideSupportHours | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -453,7 +446,7 @@ export function toJson_CfnServicePropsIncidentUrgencyRuleOutsideSupportHours(obj
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * String representing the type of support hours, value must be fixed_time_per_day.
@@ -491,13 +484,12 @@ export interface CfnServicePropsAlertGroupingParametersConfig {
    * @schema CfnServicePropsAlertGroupingParametersConfig#Timeout
    */
   readonly timeout?: number;
-
 }
 
 /**
  * Converts an object of type 'CfnServicePropsAlertGroupingParametersConfig' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnServicePropsAlertGroupingParametersConfig(obj: CfnServicePropsAlertGroupingParametersConfig | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -506,7 +498,7 @@ export function toJson_CfnServicePropsAlertGroupingParametersConfig(obj: CfnServ
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Number representing the timeout for Auto Pause Notification, valid values are: 120, 180, 300, 600, 900.

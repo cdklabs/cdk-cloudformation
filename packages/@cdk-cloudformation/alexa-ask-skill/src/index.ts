@@ -22,13 +22,12 @@ export interface CfnSkillProps {
    * @schema CfnSkillProps#SkillPackage
    */
   readonly skillPackage: SkillPackage;
-
 }
 
 /**
  * Converts an object of type 'CfnSkillProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnSkillProps(obj: CfnSkillProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -39,7 +38,7 @@ export function toJson_CfnSkillProps(obj: CfnSkillProps | undefined): Record<str
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema AuthenticationConfiguration
@@ -59,13 +58,12 @@ export interface AuthenticationConfiguration {
    * @schema AuthenticationConfiguration#ClientSecret
    */
   readonly clientSecret: string;
-
 }
 
 /**
  * Converts an object of type 'AuthenticationConfiguration' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_AuthenticationConfiguration(obj: AuthenticationConfiguration | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -76,7 +74,7 @@ export function toJson_AuthenticationConfiguration(obj: AuthenticationConfigurat
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema SkillPackage
@@ -106,13 +104,12 @@ export interface SkillPackage {
    * @schema SkillPackage#S3Key
    */
   readonly s3Key: string;
-
 }
 
 /**
  * Converts an object of type 'SkillPackage' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_SkillPackage(obj: SkillPackage | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -125,7 +122,7 @@ export function toJson_SkillPackage(obj: SkillPackage | undefined): Record<strin
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Overrides
@@ -135,13 +132,12 @@ export interface Overrides {
    * @schema Overrides#Manifest
    */
   readonly manifest?: any;
-
 }
 
 /**
  * Converts an object of type 'Overrides' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Overrides(obj: Overrides | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -150,7 +146,7 @@ export function toJson_Overrides(obj: Overrides | undefined): Record<string, any
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 
 /**

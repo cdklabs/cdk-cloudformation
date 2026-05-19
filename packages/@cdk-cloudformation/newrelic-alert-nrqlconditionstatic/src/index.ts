@@ -26,13 +26,12 @@ export interface CfnNrqlConditionStaticProps {
    * @schema CfnNrqlConditionStaticProps#PolicyId
    */
   readonly policyId: number;
-
 }
 
 /**
  * Converts an object of type 'CfnNrqlConditionStaticProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnNrqlConditionStaticProps(obj: CfnNrqlConditionStaticProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -43,7 +42,7 @@ export function toJson_CfnNrqlConditionStaticProps(obj: CfnNrqlConditionStaticPr
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Input settings for the static NRQL condition.
@@ -113,13 +112,12 @@ export interface ConditionInput {
    * @schema ConditionInput#ViolationTimeLimitSeconds
    */
   readonly violationTimeLimitSeconds?: number;
-
 }
 
 /**
  * Converts an object of type 'ConditionInput' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ConditionInput(obj: ConditionInput | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -136,7 +134,7 @@ export function toJson_ConditionInput(obj: ConditionInput | undefined): Record<s
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Settings for how violations are opened or closed when a signal expires.
@@ -166,13 +164,12 @@ export interface ConditionInputExpiration {
    * @schema ConditionInputExpiration#OpenViolationOnExpiration
    */
   readonly openViolationOnExpiration?: boolean;
-
 }
 
 /**
  * Converts an object of type 'ConditionInputExpiration' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ConditionInputExpiration(obj: ConditionInputExpiration | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -183,7 +180,7 @@ export function toJson_ConditionInputExpiration(obj: ConditionInputExpiration | 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * The NRQL query that defines the signal for the condition.
@@ -197,13 +194,12 @@ export interface ConditionInputNrql {
    * @schema ConditionInputNrql#Query
    */
   readonly query: string;
-
 }
 
 /**
  * Converts an object of type 'ConditionInputNrql' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ConditionInputNrql(obj: ConditionInputNrql | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -212,7 +208,7 @@ export function toJson_ConditionInputNrql(obj: ConditionInputNrql | undefined): 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Configuration that defines the signal that the NRQL condition will use to evaluate.
@@ -268,13 +264,12 @@ export interface ConditionInputSignal {
    * @schema ConditionInputSignal#SlideBy
    */
   readonly slideBy?: number;
-
 }
 
 /**
  * Converts an object of type 'ConditionInputSignal' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ConditionInputSignal(obj: ConditionInputSignal | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -289,7 +284,7 @@ export function toJson_ConditionInputSignal(obj: ConditionInputSignal | undefine
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * List of critical and warning terms for the condition
@@ -331,13 +326,12 @@ export interface ConditionInputTerms {
    * @schema ConditionInputTerms#ThresholdOccurrences
    */
   readonly thresholdOccurrences: ConditionInputTermsThresholdOccurrences;
-
 }
 
 /**
  * Converts an object of type 'ConditionInputTerms' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ConditionInputTerms(obj: ConditionInputTerms | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -350,7 +344,7 @@ export function toJson_ConditionInputTerms(obj: ConditionInputTerms | undefined)
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * The method that determines when we consider an aggregation window to be complete so that we can evaluate the signal for violations

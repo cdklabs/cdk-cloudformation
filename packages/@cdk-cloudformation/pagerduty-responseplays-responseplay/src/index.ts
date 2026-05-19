@@ -108,13 +108,12 @@ export interface CfnResponsePlayProps {
    * @schema CfnResponsePlayProps#HtmlUrl
    */
   readonly htmlUrl?: string;
-
 }
 
 /**
  * Converts an object of type 'CfnResponsePlayProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnResponsePlayProps(obj: CfnResponsePlayProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -137,7 +136,7 @@ export function toJson_CfnResponsePlayProps(obj: CfnResponsePlayProps | undefine
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Subscriber
@@ -154,13 +153,12 @@ export interface Subscriber {
    * @schema Subscriber#Id
    */
   readonly id: string;
-
 }
 
 /**
  * Converts an object of type 'Subscriber' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Subscriber(obj: Subscriber | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -170,7 +168,7 @@ export function toJson_Subscriber(obj: Subscriber | undefined): Record<string, a
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Responder
@@ -187,13 +185,12 @@ export interface Responder {
    * @schema Responder#Id
    */
   readonly id: string;
-
 }
 
 /**
  * Converts an object of type 'Responder' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Responder(obj: Responder | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -203,7 +200,7 @@ export function toJson_Responder(obj: Responder | undefined): Record<string, any
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * String representing how this response play is allowed to be run. Valid options are:

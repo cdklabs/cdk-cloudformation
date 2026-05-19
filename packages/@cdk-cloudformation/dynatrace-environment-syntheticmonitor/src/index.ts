@@ -89,13 +89,12 @@ export interface CfnSyntheticMonitorProps {
    * @schema CfnSyntheticMonitorProps#AutomaticallyAssignedApps
    */
   readonly automaticallyAssignedApps?: string[];
-
 }
 
 /**
  * Converts an object of type 'CfnSyntheticMonitorProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnSyntheticMonitorProps(obj: CfnSyntheticMonitorProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -114,7 +113,7 @@ export function toJson_CfnSyntheticMonitorProps(obj: CfnSyntheticMonitorProps | 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * The frequency of the monitor, in minutes.
@@ -151,13 +150,12 @@ export interface AnomalyDetectionPolicy {
    * @schema AnomalyDetectionPolicy#LoadingTimeThresholds
    */
   readonly loadingTimeThresholds: LoadingTimeThresholdsPolicy;
-
 }
 
 /**
  * Converts an object of type 'AnomalyDetectionPolicy' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_AnomalyDetectionPolicy(obj: AnomalyDetectionPolicy | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -167,7 +165,7 @@ export function toJson_AnomalyDetectionPolicy(obj: AnomalyDetectionPolicy | unde
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Defines the actual set of fields depending on the value. See one of the following objects:
@@ -199,13 +197,12 @@ export interface CfnSyntheticMonitorPropsScript {
    * @schema CfnSyntheticMonitorPropsScript#Requests
    */
   readonly requests?: RequestsInput[];
-
 }
 
 /**
  * Converts an object of type 'CfnSyntheticMonitorPropsScript' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnSyntheticMonitorPropsScript(obj: CfnSyntheticMonitorPropsScript | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -215,7 +212,7 @@ export function toJson_CfnSyntheticMonitorPropsScript(obj: CfnSyntheticMonitorPr
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Tag with source of a Dynatrace entity.
@@ -256,13 +253,12 @@ export interface Tag {
    * @schema Tag#Value
    */
   readonly value?: string;
-
 }
 
 /**
  * Converts an object of type 'Tag' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Tag(obj: Tag | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -274,7 +270,7 @@ export function toJson_Tag(obj: Tag | undefined): Record<string, any> | undefine
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Outage handling configuration.
@@ -312,13 +308,12 @@ export interface OutageHandlingPolicy {
    * @schema OutageHandlingPolicy#RetryOnError
    */
   readonly retryOnError?: boolean;
-
 }
 
 /**
  * Converts an object of type 'OutageHandlingPolicy' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_OutageHandlingPolicy(obj: OutageHandlingPolicy | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -331,7 +326,7 @@ export function toJson_OutageHandlingPolicy(obj: OutageHandlingPolicy | undefine
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Performance thresholds configuration.
@@ -352,13 +347,12 @@ export interface LoadingTimeThresholdsPolicy {
    * @schema LoadingTimeThresholdsPolicy#Thresholds
    */
   readonly thresholds: LoadingTimeThreshold[];
-
 }
 
 /**
  * Converts an object of type 'LoadingTimeThresholdsPolicy' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_LoadingTimeThresholdsPolicy(obj: LoadingTimeThresholdsPolicy | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -368,7 +362,7 @@ export function toJson_LoadingTimeThresholdsPolicy(obj: LoadingTimeThresholdsPol
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema RequestsInput
@@ -398,13 +392,12 @@ export interface RequestsInput {
    * @schema RequestsInput#Validation
    */
   readonly validation?: RequestsInputValidation;
-
 }
 
 /**
  * Converts an object of type 'RequestsInput' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_RequestsInput(obj: RequestsInput | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -417,7 +410,7 @@ export function toJson_RequestsInput(obj: RequestsInput | undefined): Record<str
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * The source of the tag, such as USER, RULE_BASED or AUTO
@@ -471,13 +464,12 @@ export interface GlobalOutagePolicy {
    * @schema GlobalOutagePolicy#ConsecutiveRuns
    */
   readonly consecutiveRuns: number;
-
 }
 
 /**
  * Converts an object of type 'GlobalOutagePolicy' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_GlobalOutagePolicy(obj: GlobalOutagePolicy | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -486,7 +478,7 @@ export function toJson_GlobalOutagePolicy(obj: GlobalOutagePolicy | undefined): 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Local outage handling configuration.
@@ -509,13 +501,12 @@ export interface LocalOutagePolicy {
    * @schema LocalOutagePolicy#ConsecutiveRuns
    */
   readonly consecutiveRuns: number;
-
 }
 
 /**
  * Converts an object of type 'LocalOutagePolicy' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_LocalOutagePolicy(obj: LocalOutagePolicy | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -525,7 +516,7 @@ export function toJson_LocalOutagePolicy(obj: LocalOutagePolicy | undefined): Re
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * The performance threshold rule.
@@ -546,13 +537,12 @@ export interface LoadingTimeThreshold {
    * @schema LoadingTimeThreshold#ValueMs
    */
   readonly valueMs: number;
-
 }
 
 /**
  * Converts an object of type 'LoadingTimeThreshold' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_LoadingTimeThreshold(obj: LoadingTimeThreshold | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -562,7 +552,7 @@ export function toJson_LoadingTimeThreshold(obj: LoadingTimeThreshold | undefine
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema RequestsInputConfiguration
@@ -582,13 +572,12 @@ export interface RequestsInputConfiguration {
    * @schema RequestsInputConfiguration#ShouldNotPersistSensitiveData
    */
   readonly shouldNotPersistSensitiveData?: boolean;
-
 }
 
 /**
  * Converts an object of type 'RequestsInputConfiguration' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_RequestsInputConfiguration(obj: RequestsInputConfiguration | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -599,7 +588,7 @@ export function toJson_RequestsInputConfiguration(obj: RequestsInputConfiguratio
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema RequestsInputValidation
@@ -609,13 +598,12 @@ export interface RequestsInputValidation {
    * @schema RequestsInputValidation#Rules
    */
   readonly rules?: RequestsRules[];
-
 }
 
 /**
  * Converts an object of type 'RequestsInputValidation' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_RequestsInputValidation(obj: RequestsInputValidation | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -624,7 +612,7 @@ export function toJson_RequestsInputValidation(obj: RequestsInputValidation | un
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * The type of the threshold: total loading time or action loading time.
@@ -656,13 +644,12 @@ export interface RequestsRules {
    * @schema RequestsRules#Type
    */
   readonly type?: string;
-
 }
 
 /**
  * Converts an object of type 'RequestsRules' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_RequestsRules(obj: RequestsRules | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -673,7 +660,7 @@ export function toJson_RequestsRules(obj: RequestsRules | undefined): Record<str
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 
 /**

@@ -84,13 +84,12 @@ export interface CfnAgentProps {
    * @schema CfnAgentProps#VPCConfiguration
    */
   readonly vpcConfiguration?: CfnAgentPropsVpcConfiguration;
-
 }
 
 /**
  * Converts an object of type 'CfnAgentProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnAgentProps(obj: CfnAgentProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -109,7 +108,7 @@ export function toJson_CfnAgentProps(obj: CfnAgentProps | undefined): Record<str
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * For network connectivity to Cluster inside VPC
@@ -130,13 +129,12 @@ export interface CfnAgentPropsVpcConfiguration {
    * @schema CfnAgentPropsVpcConfiguration#SubnetIds
    */
   readonly subnetIds?: string[];
-
 }
 
 /**
  * Converts an object of type 'CfnAgentPropsVpcConfiguration' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnAgentPropsVpcConfiguration(obj: CfnAgentPropsVpcConfiguration | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -146,7 +144,7 @@ export function toJson_CfnAgentPropsVpcConfiguration(obj: CfnAgentPropsVpcConfig
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 
 /**

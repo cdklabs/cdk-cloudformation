@@ -122,13 +122,12 @@ export interface CfnStorageBucketProps {
    * @schema CfnStorageBucketProps#Website
    */
   readonly website?: WebsiteDefinition[];
-
 }
 
 /**
  * Converts an object of type 'CfnStorageBucketProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnStorageBucketProps(obj: CfnStorageBucketProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -153,7 +152,7 @@ export function toJson_CfnStorageBucketProps(obj: CfnStorageBucketProps | undefi
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema LabelsDefinition
@@ -168,13 +167,12 @@ export interface LabelsDefinition {
    * @schema LabelsDefinition#MapValue
    */
   readonly mapValue: string;
-
 }
 
 /**
  * Converts an object of type 'LabelsDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_LabelsDefinition(obj: LabelsDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -184,7 +182,7 @@ export function toJson_LabelsDefinition(obj: LabelsDefinition | undefined): Reco
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CorsDefinition
@@ -217,13 +215,12 @@ export interface CorsDefinition {
    * @schema CorsDefinition#ResponseHeader
    */
   readonly responseHeader?: string[];
-
 }
 
 /**
  * Converts an object of type 'CorsDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CorsDefinition(obj: CorsDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -235,7 +232,7 @@ export function toJson_CorsDefinition(obj: CorsDefinition | undefined): Record<s
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema EncryptionDefinition
@@ -245,13 +242,12 @@ export interface EncryptionDefinition {
    * @schema EncryptionDefinition#DefaultKmsKeyName
    */
   readonly defaultKmsKeyName: string;
-
 }
 
 /**
  * Converts an object of type 'EncryptionDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_EncryptionDefinition(obj: EncryptionDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -260,7 +256,7 @@ export function toJson_EncryptionDefinition(obj: EncryptionDefinition | undefine
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema LifecycleRuleDefinition
@@ -275,13 +271,12 @@ export interface LifecycleRuleDefinition {
    * @schema LifecycleRuleDefinition#Condition
    */
   readonly condition?: ConditionDefinition[];
-
 }
 
 /**
  * Converts an object of type 'LifecycleRuleDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_LifecycleRuleDefinition(obj: LifecycleRuleDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -291,7 +286,7 @@ export function toJson_LifecycleRuleDefinition(obj: LifecycleRuleDefinition | un
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema LoggingDefinition
@@ -311,13 +306,12 @@ export interface LoggingDefinition {
    * @schema LoggingDefinition#LogObjectPrefix
    */
   readonly logObjectPrefix?: string;
-
 }
 
 /**
  * Converts an object of type 'LoggingDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_LoggingDefinition(obj: LoggingDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -327,7 +321,7 @@ export function toJson_LoggingDefinition(obj: LoggingDefinition | undefined): Re
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema RetentionPolicyDefinition
@@ -346,13 +340,12 @@ export interface RetentionPolicyDefinition {
    * @schema RetentionPolicyDefinition#RetentionPeriod
    */
   readonly retentionPeriod: number;
-
 }
 
 /**
  * Converts an object of type 'RetentionPolicyDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_RetentionPolicyDefinition(obj: RetentionPolicyDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -362,7 +355,7 @@ export function toJson_RetentionPolicyDefinition(obj: RetentionPolicyDefinition 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema VersioningDefinition
@@ -374,13 +367,12 @@ export interface VersioningDefinition {
    * @schema VersioningDefinition#Enabled
    */
   readonly enabled: boolean;
-
 }
 
 /**
  * Converts an object of type 'VersioningDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_VersioningDefinition(obj: VersioningDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -389,7 +381,7 @@ export function toJson_VersioningDefinition(obj: VersioningDefinition | undefine
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema WebsiteDefinition
@@ -410,13 +402,12 @@ export interface WebsiteDefinition {
    * @schema WebsiteDefinition#NotFoundPage
    */
   readonly notFoundPage?: string;
-
 }
 
 /**
  * Converts an object of type 'WebsiteDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_WebsiteDefinition(obj: WebsiteDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -426,7 +417,7 @@ export function toJson_WebsiteDefinition(obj: WebsiteDefinition | undefined): Re
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema ActionDefinition
@@ -445,13 +436,12 @@ export interface ActionDefinition {
    * @schema ActionDefinition#Type
    */
   readonly type: string;
-
 }
 
 /**
  * Converts an object of type 'ActionDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ActionDefinition(obj: ActionDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -461,7 +451,7 @@ export function toJson_ActionDefinition(obj: ActionDefinition | undefined): Reco
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema ConditionDefinition
@@ -529,13 +519,12 @@ export interface ConditionDefinition {
    * @schema ConditionDefinition#WithState
    */
   readonly withState?: string;
-
 }
 
 /**
  * Converts an object of type 'ConditionDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ConditionDefinition(obj: ConditionDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -552,7 +541,7 @@ export function toJson_ConditionDefinition(obj: ConditionDefinition | undefined)
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 
 /**

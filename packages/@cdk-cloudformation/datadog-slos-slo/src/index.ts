@@ -64,13 +64,12 @@ export interface CfnSloProps {
    * @schema CfnSloProps#Type
    */
   readonly type: CfnSloPropsType;
-
 }
 
 /**
  * Converts an object of type 'CfnSloProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnSloProps(obj: CfnSloProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -87,7 +86,7 @@ export function toJson_CfnSloProps(obj: CfnSloProps | undefined): Record<string,
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Creator
@@ -113,13 +112,12 @@ export interface Creator {
    * @schema Creator#Email
    */
   readonly email?: string;
-
 }
 
 /**
  * Converts an object of type 'Creator' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Creator(obj: Creator | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -130,7 +128,7 @@ export function toJson_Creator(obj: Creator | undefined): Record<string, any> | 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Query
@@ -149,13 +147,12 @@ export interface Query {
    * @schema Query#Denominator
    */
   readonly denominator?: string;
-
 }
 
 /**
  * Converts an object of type 'Query' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Query(obj: Query | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -165,7 +162,7 @@ export function toJson_Query(obj: Query | undefined): Record<string, any> | unde
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Threshold
@@ -205,13 +202,12 @@ export interface Threshold {
    * @schema Threshold#WarningDisplay
    */
   readonly warningDisplay?: string;
-
 }
 
 /**
  * Converts an object of type 'Threshold' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Threshold(obj: Threshold | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -224,7 +220,7 @@ export function toJson_Threshold(obj: Threshold | undefined): Record<string, any
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * The type of the slo

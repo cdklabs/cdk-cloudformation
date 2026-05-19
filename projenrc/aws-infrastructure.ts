@@ -20,7 +20,7 @@ export class AwsInfrastructure extends Component {
     super(project);
 
     if (!/^[a-z][a-z\-0-9]*$/.test(options.name)) {
-      throw new Error(`"name" can only contain lowercase alphanumerica characters and hyphens: ${options.name}`);
+      throw new Error(`"name" can only contain lowercase alphanumeric characters and hyphens: ${options.name}`);
     }
 
     const cdkoutRoot = '.awscdk';

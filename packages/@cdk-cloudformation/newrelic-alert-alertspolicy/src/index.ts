@@ -19,13 +19,12 @@ export interface CfnAlertsPolicyProps {
    * @schema CfnAlertsPolicyProps#AlertsPolicy
    */
   readonly alertsPolicy: AlertsPolicyInput;
-
 }
 
 /**
  * Converts an object of type 'CfnAlertsPolicyProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnAlertsPolicyProps(obj: CfnAlertsPolicyProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -35,7 +34,7 @@ export function toJson_CfnAlertsPolicyProps(obj: CfnAlertsPolicyProps | undefine
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema AlertsPolicyInput
@@ -52,13 +51,12 @@ export interface AlertsPolicyInput {
    * @schema AlertsPolicyInput#IncidentPreference
    */
   readonly incidentPreference?: AlertsPolicyInputIncidentPreference;
-
 }
 
 /**
  * Converts an object of type 'AlertsPolicyInput' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_AlertsPolicyInput(obj: AlertsPolicyInput | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -68,7 +66,7 @@ export function toJson_AlertsPolicyInput(obj: AlertsPolicyInput | undefined): Re
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema AlertsPolicyInputIncidentPreference

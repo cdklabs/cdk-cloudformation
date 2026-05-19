@@ -79,13 +79,12 @@ export interface CfnScheduleProps {
    * @schema CfnScheduleProps#Teams
    */
   readonly teams?: Team[];
-
 }
 
 /**
  * Converts an object of type 'CfnScheduleProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnScheduleProps(obj: CfnScheduleProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -105,7 +104,7 @@ export function toJson_CfnScheduleProps(obj: CfnScheduleProps | undefined): Reco
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema ScheduleLayer
@@ -164,13 +163,12 @@ export interface ScheduleLayer {
    * @schema ScheduleLayer#Name
    */
   readonly name?: string;
-
 }
 
 /**
  * Converts an object of type 'ScheduleLayer' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ScheduleLayer(obj: ScheduleLayer | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -186,7 +184,7 @@ export function toJson_ScheduleLayer(obj: ScheduleLayer | undefined): Record<str
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema SubSchedule
@@ -210,13 +208,12 @@ export interface SubSchedule {
    * @schema SubSchedule#RenderedCoveragePercentage
    */
   readonly renderedCoveragePercentage?: number;
-
 }
 
 /**
  * Converts an object of type 'SubSchedule' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_SubSchedule(obj: SubSchedule | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -227,7 +224,7 @@ export function toJson_SubSchedule(obj: SubSchedule | undefined): Record<string,
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema User
@@ -259,13 +256,12 @@ export interface User {
    * @schema User#Self
    */
   readonly self?: string;
-
 }
 
 /**
  * Converts an object of type 'User' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_User(obj: User | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -278,7 +274,7 @@ export function toJson_User(obj: User | undefined): Record<string, any> | undefi
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Team
@@ -310,13 +306,12 @@ export interface Team {
    * @schema Team#Self
    */
   readonly self?: string;
-
 }
 
 /**
  * Converts an object of type 'Team' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Team(obj: Team | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -329,7 +324,7 @@ export function toJson_Team(obj: Team | undefined): Record<string, any> | undefi
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema UserWrapper
@@ -339,13 +334,12 @@ export interface UserWrapper {
    * @schema UserWrapper#User
    */
   readonly user: User;
-
 }
 
 /**
  * Converts an object of type 'UserWrapper' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_UserWrapper(obj: UserWrapper | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -354,7 +348,7 @@ export function toJson_UserWrapper(obj: UserWrapper | undefined): Record<string,
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Restriction
@@ -387,13 +381,12 @@ export interface Restriction {
    * @schema Restriction#StartDayOfWeek
    */
   readonly startDayOfWeek?: number;
-
 }
 
 /**
  * Converts an object of type 'Restriction' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Restriction(obj: Restriction | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -405,7 +398,7 @@ export function toJson_Restriction(obj: Restriction | undefined): Record<string,
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * The name of the subschedule
@@ -441,13 +434,12 @@ export interface RenderedScheduleEntries {
    * @schema RenderedScheduleEntries#End
    */
   readonly end: Date;
-
 }
 
 /**
  * Converts an object of type 'RenderedScheduleEntries' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_RenderedScheduleEntries(obj: RenderedScheduleEntries | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -458,7 +450,7 @@ export function toJson_RenderedScheduleEntries(obj: RenderedScheduleEntries | un
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * A string that determines the schema of the object. This must be the standard name for the entity, suffixed by _reference if the object is a reference./, =, +, and -.

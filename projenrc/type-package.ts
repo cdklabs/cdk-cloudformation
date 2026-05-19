@@ -327,12 +327,22 @@ export class CloudFormationTypeProject extends Component {
       changelogFile,
       releaseTagFile,
     });
-    publisher.publishToNpm();
-    publisher.publishToMaven({
-      mavenEndpoint: 'https://s01.oss.sonatype.org', // cdklabs endpoint
+    publisher.publishToNpm({
+      githubEnvironment: 'release',
+      npmTokenSecret: 'CDK_CLOUDFORMATION_NPM_TOKEN',
     });
-    publisher.publishToNuget();
-    publisher.publishToPyPi();
+    publisher.publishToMaven({
+      githubEnvironment: 'release',
+    });
+    publisher.publishToNuget({
+      githubEnvironment: 'release',
+      nugetApiKeySecret: 'CDK_CLOUDFORMATION_NUGET_API_KEY',
+    });
+    publisher.publishToPyPi({
+      githubEnvironment: 'release',
+      twineUsernameSecret: 'CDK_CLOUDFORMATION_TWINE_USERNAME',
+      twinePasswordSecret: 'CDK_CLOUDFORMATION_TWINE_PASSWORD',
+    });
     // publisher.publishToGo();
 
     releaseWorkflow.addJobs(publisher._renderJobsForBranch('main', { }));

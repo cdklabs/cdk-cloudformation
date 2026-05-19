@@ -100,13 +100,12 @@ export interface CfnServiceProps {
    * @schema CfnServiceProps#SupportHours
    */
   readonly supportHours?: SupportHoursDefinition[];
-
 }
 
 /**
  * Converts an object of type 'CfnServiceProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnServiceProps(obj: CfnServiceProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -125,7 +124,7 @@ export function toJson_CfnServiceProps(obj: CfnServiceProps | undefined): Record
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema IncidentUrgencyRuleDefinition
@@ -150,13 +149,12 @@ export interface IncidentUrgencyRuleDefinition {
    * @schema IncidentUrgencyRuleDefinition#OutsideSupportHours
    */
   readonly outsideSupportHours?: OutsideSupportHoursDefinition[];
-
 }
 
 /**
  * Converts an object of type 'IncidentUrgencyRuleDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_IncidentUrgencyRuleDefinition(obj: IncidentUrgencyRuleDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -168,7 +166,7 @@ export function toJson_IncidentUrgencyRuleDefinition(obj: IncidentUrgencyRuleDef
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema ScheduledActionsDefinition
@@ -188,13 +186,12 @@ export interface ScheduledActionsDefinition {
    * @schema ScheduledActionsDefinition#At
    */
   readonly at?: AtDefinition[];
-
 }
 
 /**
  * Converts an object of type 'ScheduledActionsDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ScheduledActionsDefinition(obj: ScheduledActionsDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -205,7 +202,7 @@ export function toJson_ScheduledActionsDefinition(obj: ScheduledActionsDefinitio
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema SupportHoursDefinition
@@ -235,13 +232,12 @@ export interface SupportHoursDefinition {
    * @schema SupportHoursDefinition#Type
    */
   readonly type?: string;
-
 }
 
 /**
  * Converts an object of type 'SupportHoursDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_SupportHoursDefinition(obj: SupportHoursDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -254,7 +250,7 @@ export function toJson_SupportHoursDefinition(obj: SupportHoursDefinition | unde
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema DuringSupportHoursDefinition
@@ -269,13 +265,12 @@ export interface DuringSupportHoursDefinition {
    * @schema DuringSupportHoursDefinition#Urgency
    */
   readonly urgency?: string;
-
 }
 
 /**
  * Converts an object of type 'DuringSupportHoursDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_DuringSupportHoursDefinition(obj: DuringSupportHoursDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -285,7 +280,7 @@ export function toJson_DuringSupportHoursDefinition(obj: DuringSupportHoursDefin
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema OutsideSupportHoursDefinition
@@ -300,13 +295,12 @@ export interface OutsideSupportHoursDefinition {
    * @schema OutsideSupportHoursDefinition#Urgency
    */
   readonly urgency?: string;
-
 }
 
 /**
  * Converts an object of type 'OutsideSupportHoursDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_OutsideSupportHoursDefinition(obj: OutsideSupportHoursDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -316,7 +310,7 @@ export function toJson_OutsideSupportHoursDefinition(obj: OutsideSupportHoursDef
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema AtDefinition
@@ -331,13 +325,12 @@ export interface AtDefinition {
    * @schema AtDefinition#Type
    */
   readonly type?: string;
-
 }
 
 /**
  * Converts an object of type 'AtDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_AtDefinition(obj: AtDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -347,7 +340,7 @@ export function toJson_AtDefinition(obj: AtDefinition | undefined): Record<strin
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 
 /**

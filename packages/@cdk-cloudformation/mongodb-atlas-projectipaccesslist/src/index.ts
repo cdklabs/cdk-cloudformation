@@ -24,13 +24,12 @@ export interface CfnProjectIpAccessListProps {
    * @schema CfnProjectIpAccessListProps#ProjectId
    */
   readonly projectId: string;
-
 }
 
 /**
  * Converts an object of type 'CfnProjectIpAccessListProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnProjectIpAccessListProps(obj: CfnProjectIpAccessListProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -41,7 +40,7 @@ export function toJson_CfnProjectIpAccessListProps(obj: CfnProjectIpAccessListPr
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema accessListDefinition
@@ -81,13 +80,12 @@ export interface AccessListDefinition {
    * @schema accessListDefinition#ProjectId
    */
   readonly projectId?: string;
-
 }
 
 /**
  * Converts an object of type 'AccessListDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_AccessListDefinition(obj: AccessListDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -100,7 +98,7 @@ export function toJson_AccessListDefinition(obj: AccessListDefinition | undefine
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema apiKeyDefinition
@@ -115,13 +113,12 @@ export interface ApiKeyDefinition {
    * @schema apiKeyDefinition#PublicKey
    */
   readonly publicKey?: string;
-
 }
 
 /**
  * Converts an object of type 'ApiKeyDefinition' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ApiKeyDefinition(obj: ApiKeyDefinition | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -131,7 +128,7 @@ export function toJson_ApiKeyDefinition(obj: ApiKeyDefinition | undefined): Reco
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 
 /**

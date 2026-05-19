@@ -70,13 +70,12 @@ export interface CfnUserProps {
    * @schema CfnUserProps#NotificationRules
    */
   readonly notificationRules?: NotificationRule[];
-
 }
 
 /**
  * Converts an object of type 'CfnUserProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnUserProps(obj: CfnUserProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -93,7 +92,7 @@ export function toJson_CfnUserProps(obj: CfnUserProps | undefined): Record<strin
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * The user role. Account must have the read_only_users ability to set a user as a read_only_user or a read_only_limited_user, and must have advanced permissions abilities to set a user as observer or restricted_access.
@@ -141,13 +140,12 @@ export interface ContactMethod {
    * @schema ContactMethod#Summary
    */
   readonly summary?: string;
-
 }
 
 /**
  * Converts an object of type 'ContactMethod' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_ContactMethod(obj: ContactMethod | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -158,7 +156,7 @@ export function toJson_ContactMethod(obj: ContactMethod | undefined): Record<str
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema NotificationRule
@@ -182,13 +180,12 @@ export interface NotificationRule {
    * @schema NotificationRule#Summary
    */
   readonly summary?: string;
-
 }
 
 /**
  * Converts an object of type 'NotificationRule' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_NotificationRule(obj: NotificationRule | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -199,7 +196,7 @@ export function toJson_NotificationRule(obj: NotificationRule | undefined): Reco
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * A string that determines the schema of the object. This must be the standard name for the entity, suffixed by _reference if the object is a reference.

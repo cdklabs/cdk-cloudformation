@@ -129,13 +129,12 @@ export interface CfnLoadBalancerProps {
    * @schema CfnLoadBalancerProps#Rules
    */
   readonly rules?: any[];
-
 }
 
 /**
  * Converts an object of type 'CfnLoadBalancerProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnLoadBalancerProps(obj: CfnLoadBalancerProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -160,7 +159,7 @@ export function toJson_CfnLoadBalancerProps(obj: CfnLoadBalancerProps | undefine
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Configures pool weights for random steering. When steering_policy is 'random', a random pool is selected with probability proportional to these pool weights
@@ -172,13 +171,12 @@ export interface CfnLoadBalancerPropsRandomSteering {
    * @schema CfnLoadBalancerPropsRandomSteering#DefaultWeight
    */
   readonly defaultWeight?: number;
-
 }
 
 /**
  * Converts an object of type 'CfnLoadBalancerPropsRandomSteering' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnLoadBalancerPropsRandomSteering(obj: CfnLoadBalancerPropsRandomSteering | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -187,7 +185,7 @@ export function toJson_CfnLoadBalancerPropsRandomSteering(obj: CfnLoadBalancerPr
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 
 /**

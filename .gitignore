@@ -46,7 +46,8 @@ junit.xml
 /lib
 /dist/
 !/.eslintrc.json
-!/.github/workflows/auto-merge.yml
+!/.github/workflows/retry-automerge.yml
+!/.github/workflows/auto-queue.yml
 !/.github/workflows/upgrade-cdklabs-projen-project-types-main.yml
 !/.github/workflows/upgrade-main.yml
 !/.github/workflows/upgrade-dev-deps-main.yml
@@ -143,6 +144,9 @@ junit.xml
 /packages/@cdk-cloudformation/datadog-integrations-aws/dist/
 /packages/@cdk-cloudformation/datadog-integrations-aws/lib/
 !/.github/workflows/release-datadog-integrations-aws.yml
+/packages/@cdk-cloudformation/datadog-integrations-awsaccount/dist/
+/packages/@cdk-cloudformation/datadog-integrations-awsaccount/lib/
+!/.github/workflows/release-datadog-integrations-awsaccount.yml
 /packages/@cdk-cloudformation/datadog-monitors-downtime/dist/
 /packages/@cdk-cloudformation/datadog-monitors-downtime/lib/
 !/.github/workflows/release-datadog-monitors-downtime.yml
@@ -155,6 +159,9 @@ junit.xml
 /packages/@cdk-cloudformation/datadog-slos-slo/dist/
 /packages/@cdk-cloudformation/datadog-slos-slo/lib/
 !/.github/workflows/release-datadog-slos-slo.yml
+/packages/@cdk-cloudformation/dev-fsx-storagevirtualmachine/dist/
+/packages/@cdk-cloudformation/dev-fsx-storagevirtualmachine/lib/
+!/.github/workflows/release-dev-fsx-storagevirtualmachine.yml
 /packages/@cdk-cloudformation/dynatrace-automation-sitereliabilityguardian/dist/
 /packages/@cdk-cloudformation/dynatrace-automation-sitereliabilityguardian/lib/
 !/.github/workflows/release-dynatrace-automation-sitereliabilityguardian.yml

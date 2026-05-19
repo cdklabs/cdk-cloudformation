@@ -75,13 +75,12 @@ export interface CfnClusterProps {
    * @schema CfnClusterProps#Tags
    */
   readonly tags?: CfnClusterPropsTags[];
-
 }
 
 /**
  * Converts an object of type 'CfnClusterProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnClusterProps(obj: CfnClusterProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -99,7 +98,7 @@ export function toJson_CfnClusterProps(obj: CfnClusterProps | undefined): Record
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Network configuration for Amazon EKS cluster.
@@ -115,13 +114,12 @@ export interface CfnClusterPropsKubernetesNetworkConfig {
    * @schema CfnClusterPropsKubernetesNetworkConfig#ServiceIpv4Cidr
    */
   readonly serviceIpv4Cidr?: string;
-
 }
 
 /**
  * Converts an object of type 'CfnClusterPropsKubernetesNetworkConfig' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnClusterPropsKubernetesNetworkConfig(obj: CfnClusterPropsKubernetesNetworkConfig | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -130,7 +128,7 @@ export function toJson_CfnClusterPropsKubernetesNetworkConfig(obj: CfnClusterPro
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * An object that represents the virtual private cloud (VPC) configuration to use for an Amazon EKS cluster.
@@ -172,13 +170,12 @@ export interface CfnClusterPropsResourcesVpcConfig {
    * @schema CfnClusterPropsResourcesVpcConfig#PublicAccessCidrs
    */
   readonly publicAccessCidrs?: string[];
-
 }
 
 /**
  * Converts an object of type 'CfnClusterPropsResourcesVpcConfig' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnClusterPropsResourcesVpcConfig(obj: CfnClusterPropsResourcesVpcConfig | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -191,7 +188,7 @@ export function toJson_CfnClusterPropsResourcesVpcConfig(obj: CfnClusterPropsRes
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * The encryption configuration for the cluster.
@@ -210,13 +207,12 @@ export interface EncryptionConfigEntry {
    * @schema EncryptionConfigEntry#Provider
    */
   readonly provider?: Provider;
-
 }
 
 /**
  * Converts an object of type 'EncryptionConfigEntry' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_EncryptionConfigEntry(obj: EncryptionConfigEntry | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -226,7 +222,7 @@ export function toJson_EncryptionConfigEntry(obj: EncryptionConfigEntry | undefi
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnClusterPropsKubernetesApiAccess
@@ -241,13 +237,12 @@ export interface CfnClusterPropsKubernetesApiAccess {
    * @schema CfnClusterPropsKubernetesApiAccess#Users
    */
   readonly users?: KubernetesApiAccessEntry[];
-
 }
 
 /**
  * Converts an object of type 'CfnClusterPropsKubernetesApiAccess' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnClusterPropsKubernetesApiAccess(obj: CfnClusterPropsKubernetesApiAccess | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -257,7 +252,7 @@ export function toJson_CfnClusterPropsKubernetesApiAccess(obj: CfnClusterPropsKu
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema CfnClusterPropsTags
@@ -272,13 +267,12 @@ export interface CfnClusterPropsTags {
    * @schema CfnClusterPropsTags#Key
    */
   readonly key: string;
-
 }
 
 /**
  * Converts an object of type 'CfnClusterPropsTags' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnClusterPropsTags(obj: CfnClusterPropsTags | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -288,7 +282,7 @@ export function toJson_CfnClusterPropsTags(obj: CfnClusterPropsTags | undefined)
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * AWS Key Management Service (AWS KMS) customer master key (CMK). Either the ARN or the alias can be used.
@@ -302,13 +296,12 @@ export interface Provider {
    * @schema Provider#KeyArn
    */
   readonly keyArn?: string;
-
 }
 
 /**
  * Converts an object of type 'Provider' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Provider(obj: Provider | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -317,7 +310,7 @@ export function toJson_Provider(obj: Provider | undefined): Record<string, any> 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema KubernetesApiAccessEntry
@@ -337,13 +330,12 @@ export interface KubernetesApiAccessEntry {
    * @schema KubernetesApiAccessEntry#Groups
    */
   readonly groups?: string[];
-
 }
 
 /**
  * Converts an object of type 'KubernetesApiAccessEntry' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_KubernetesApiAccessEntry(obj: KubernetesApiAccessEntry | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -354,7 +346,7 @@ export function toJson_KubernetesApiAccessEntry(obj: KubernetesApiAccessEntry | 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 
 /**

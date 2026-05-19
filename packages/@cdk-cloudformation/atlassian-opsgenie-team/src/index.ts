@@ -42,13 +42,12 @@ export interface CfnTeamProps {
    * @schema CfnTeamProps#OpsgenieApiEndpoint
    */
   readonly opsgenieApiEndpoint?: string;
-
 }
 
 /**
  * Converts an object of type 'CfnTeamProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnTeamProps(obj: CfnTeamProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -61,7 +60,7 @@ export function toJson_CfnTeamProps(obj: CfnTeamProps | undefined): Record<strin
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Member
@@ -76,13 +75,12 @@ export interface Member {
    * @schema Member#Role
    */
   readonly role?: string;
-
 }
 
 /**
  * Converts an object of type 'Member' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Member(obj: Member | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -92,7 +90,7 @@ export function toJson_Member(obj: Member | undefined): Record<string, any> | un
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 
 /**

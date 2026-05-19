@@ -99,13 +99,12 @@ export interface CfnJobProps {
    * @schema CfnJobProps#CreatorUserName
    */
   readonly creatorUserName?: string;
-
 }
 
 /**
  * Converts an object of type 'CfnJobProps' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_CfnJobProps(obj: CfnJobProps | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -127,7 +126,7 @@ export function toJson_CfnJobProps(obj: CfnJobProps | undefined): Record<string,
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Task
@@ -230,13 +229,12 @@ export interface Task {
    * @schema Task#RetryOnTimeout
    */
   readonly retryOnTimeout?: boolean;
-
 }
 
 /**
  * Converts an object of type 'Task' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Task(obj: Task | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -260,7 +258,7 @@ export function toJson_Task(obj: Task | undefined): Record<string, any> | undefi
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema EmailNotifications
@@ -293,13 +291,12 @@ export interface EmailNotifications {
    * @schema EmailNotifications#NoAlertForSkippedRuns
    */
   readonly noAlertForSkippedRuns?: boolean;
-
 }
 
 /**
  * Converts an object of type 'EmailNotifications' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_EmailNotifications(obj: EmailNotifications | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -311,7 +308,7 @@ export function toJson_EmailNotifications(obj: EmailNotifications | undefined): 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema Schedule
@@ -341,13 +338,12 @@ export interface Schedule {
    * @schema Schedule#PauseStatus
    */
   readonly pauseStatus?: SchedulePauseStatus;
-
 }
 
 /**
  * Converts an object of type 'Schedule' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_Schedule(obj: Schedule | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -358,7 +354,7 @@ export function toJson_Schedule(obj: Schedule | undefined): Record<string, any> 
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Used to tell what is the format of the job. This field is ignored in Create/Update/Reset calls. When using the Jobs API 2.1 this value is always set to "MULTI_TASK".
@@ -385,13 +381,12 @@ export interface AccessUser {
    * @schema AccessUser#PermissionLevel
    */
   readonly permissionLevel?: string;
-
 }
 
 /**
  * Converts an object of type 'AccessUser' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_AccessUser(obj: AccessUser | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -401,7 +396,7 @@ export function toJson_AccessUser(obj: AccessUser | undefined): Record<string, a
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema TaskNotebookTask
@@ -424,13 +419,12 @@ export interface TaskNotebookTask {
    * @schema TaskNotebookTask#BaseParameters
    */
   readonly baseParameters?: any;
-
 }
 
 /**
  * Converts an object of type 'TaskNotebookTask' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_TaskNotebookTask(obj: TaskNotebookTask | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -440,7 +434,7 @@ export function toJson_TaskNotebookTask(obj: TaskNotebookTask | undefined): Reco
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema TaskSparkJarTask
@@ -461,13 +455,12 @@ export interface TaskSparkJarTask {
    * @schema TaskSparkJarTask#Parameters
    */
   readonly parameters?: any;
-
 }
 
 /**
  * Converts an object of type 'TaskSparkJarTask' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_TaskSparkJarTask(obj: TaskSparkJarTask | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -477,7 +470,7 @@ export function toJson_TaskSparkJarTask(obj: TaskSparkJarTask | undefined): Reco
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema TaskSparkPythonTask
@@ -498,13 +491,12 @@ export interface TaskSparkPythonTask {
    * @schema TaskSparkPythonTask#Parameters
    */
   readonly parameters?: any;
-
 }
 
 /**
  * Converts an object of type 'TaskSparkPythonTask' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_TaskSparkPythonTask(obj: TaskSparkPythonTask | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -514,7 +506,7 @@ export function toJson_TaskSparkPythonTask(obj: TaskSparkPythonTask | undefined)
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema TaskSparkSubmitTask
@@ -528,13 +520,12 @@ export interface TaskSparkSubmitTask {
    * @schema TaskSparkSubmitTask#Parameters
    */
   readonly parameters?: any;
-
 }
 
 /**
  * Converts an object of type 'TaskSparkSubmitTask' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_TaskSparkSubmitTask(obj: TaskSparkSubmitTask | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -543,7 +534,7 @@ export function toJson_TaskSparkSubmitTask(obj: TaskSparkSubmitTask | undefined)
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema TaskPipelineTask
@@ -562,13 +553,12 @@ export interface TaskPipelineTask {
    * @schema TaskPipelineTask#FullRefresh
    */
   readonly fullRefresh?: boolean;
-
 }
 
 /**
  * Converts an object of type 'TaskPipelineTask' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_TaskPipelineTask(obj: TaskPipelineTask | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -578,7 +568,7 @@ export function toJson_TaskPipelineTask(obj: TaskPipelineTask | undefined): Reco
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * @schema TaskPythonWheelTask
@@ -611,13 +601,12 @@ export interface TaskPythonWheelTask {
    * @schema TaskPythonWheelTask#NamedParameters
    */
   readonly namedParameters?: any;
-
 }
 
 /**
  * Converts an object of type 'TaskPythonWheelTask' to JSON representation.
  */
-/* eslint-disable max-len, quote-props */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 export function toJson_TaskPythonWheelTask(obj: TaskPythonWheelTask | undefined): Record<string, any> | undefined {
   if (obj === undefined) { return undefined; }
   const result = {
@@ -629,7 +618,7 @@ export function toJson_TaskPythonWheelTask(obj: TaskPythonWheelTask | undefined)
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
 }
-/* eslint-enable max-len, quote-props */
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
 
 /**
  * Indicate whether this schedule is paused or not.

@@ -18,7 +18,7 @@ jobs:
       - run: npx projen build
         working-directory: packages/@cdk-cloudformation/${{ matrix.project }}
     strategy:
-      max-parallel: 50
+      max-parallel: 30
       fail-fast: false
       matrix:
         project:

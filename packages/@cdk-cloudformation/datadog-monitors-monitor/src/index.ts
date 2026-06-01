@@ -3,7 +3,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as constructs from 'constructs';
 
 /**
- * Datadog Monitor 4.10.0
+ * Datadog Monitor 4.11.0
  *
  * @schema CfnMonitorProps
  */
@@ -473,6 +473,12 @@ export enum MonitorNotificationPresetName {
   HIDE_UNDERSCORE_HANDLES = "hide_handles",
   /** hide_all */
   HIDE_UNDERSCORE_ALL = "hide_all",
+  /** hide_query_and_handles */
+  HIDE_UNDERSCORE_QUERY_UNDERSCORE_AND_UNDERSCORE_HANDLES = "hide_query_and_handles",
+  /** show_only_snapshot */
+  SHOW_UNDERSCORE_ONLY_UNDERSCORE_SNAPSHOT = "show_only_snapshot",
+  /** hide_handles_and_footer */
+  HIDE_UNDERSCORE_HANDLES_UNDERSCORE_AND_UNDERSCORE_FOOTER = "hide_handles_and_footer",
 }
 
 /**

@@ -3,7 +3,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as constructs from 'constructs';
 
 /**
- * An export policy defines a set of access rules for NFS clients, specifying which clients or networks can access a volume and with what permissions. Each volume is tied to an export policy which enforces these rules to control client access and provide security and management over FSx for ONTAP volumes. Once activated, you will need a preview key to consume this resource. Please reach out to Ng-fsx-cloudformation@netapp.com to get the key. To use this resource, you would need to first create the Link module.
+ * An export policy defines a set of access rules for NFS clients, specifying which clients or networks can access a volume and with what permissions. Each volume is tied to an export policy which enforces these rules to control client access and provide security and management over FSx for ONTAP volumes. Once activated, you need a preview key to consume this resource. Please reach out to Ng-fsx-cloudformation@netapp.com to get the key. To use this resource, you must first create the Link module.
  *
  * @schema CfnExportPolicyProps
  */

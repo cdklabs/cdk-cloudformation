@@ -3,7 +3,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as constructs from 'constructs';
 
 /**
- * A storage VM (SVM) peer is a relationship established between two SVMs from different FSX for ONTAP file systems, enabling the sharing of resources and data across file systems. Once activated, you will need a preview key to consume this resource. Please reach out to Ng-fsx-cloudformation@netapp.com to get the key. To use this resource, you would need to first create the Link module.
+ * A storage VM (SVM) peer is a relationship established between two SVMs from different FSX for ONTAP file systems, enabling the sharing of resources and data across file systems. Once activated, you need a preview key to consume this resource. Please reach out to Ng-fsx-cloudformation@netapp.com to get the key. To use this resource, you must first create the Link module.
  *
  * @schema CfnSvmPeerProps
  */

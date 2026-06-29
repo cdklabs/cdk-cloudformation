@@ -3,7 +3,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as constructs from 'constructs';
 
 /**
- * A volume is a logical storage unit which provides flexible space for data files, snapshots, and block devices. The NetApp:FSxN custom resource allows you to configure and manage FSX for ONTAP volumes by specifying parameters such as volume name, size, storage efficiency, export policies, and other attributes. To use this resource, you must create the Link module. Once activated, you will need a preview key to consume this resource. Please reach out to Ng-fsx-cloudformation@netapp.com to get the key.
+ * A volume is a logical storage unit which provides flexible space for data files, snapshots, and block devices. The NetApp:FSxN custom resource allows you to configure and manage FSX for ONTAP volumes by specifying parameters such as volume name, size, storage efficiency, export policies, and other attributes. Once activated, you need a preview key to consume this resource. Please reach out to Ng-fsx-cloudformation@netapp.com to get the key. To use this resource, you must first create the Link module.
  *
  * @schema CfnVolumeProps
  */

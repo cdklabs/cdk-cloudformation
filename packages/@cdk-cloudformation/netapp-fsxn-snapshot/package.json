@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/netapp-fsxn-snapshot",
   "description": "A snapshot creates a read-only copy of a volume or LUN at a specific time. It allows users to restore files or volumes if data is deleted, corrupted, or changed. Snapshots efficiently store only the changes made after the snapshot, making them ideal for data protection and recovery. Once activated, you need a preview key to consume this resource. Please reach out to Ng-fsx-cloudformation@netapp.com to get the key. To use this resource, you must first create the Link module.",
-  "version": "1.1.0-alpha.7",
+  "version": "1.2.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

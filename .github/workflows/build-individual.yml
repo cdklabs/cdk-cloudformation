@@ -185,7 +185,7 @@ jobs:
           - tf-random-uuid
           - trendmicro-cloudonecontainer-helm
     container:
-      image: jsii/superchain:1-bullseye-slim-node20
+      image: jsii/superchain:1-bookworm-slim-node20
   build-okay:
     name: Build Individual
     needs: build-all

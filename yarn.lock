@@ -2,11 +2,6 @@
 # yarn lockfile v1
 
 
-"@aws-cdk/asset-awscli-v1@2.2.282":
-  version "2.2.282"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.282.tgz#3d25c0fe14ae9db8dfe2d1214cec6b7e3f8880b3"
-  integrity sha512-7hKMi5tTxDcKGIMIOq14PnY0GBcugW33Uh/2YHDZiEwSxLeFOCYBwhR+BFXONb/EJeVI3RETFgailNZbkcKF6g==
-
 "@aws-cdk/asset-awscli-v1@2.2.292":
   version "2.2.292"
   resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.292.tgz#caa029bbe15199606f39877c68bf5880b1f59869"
@@ -33,11 +28,6 @@
   dependencies:
     jsonschema "^1.5.0"
     semver "^7.8.5"
-
-"@aws/cloudformation-validate@1.6.0-beta":
-  version "1.6.0-beta"
-  resolved "https://registry.yarnpkg.com/@aws/cloudformation-validate/-/cloudformation-validate-1.6.0-beta.tgz#f1760f823462bd04f9810479e287d8bb62b2570a"
-  integrity sha512-criDxL/FP0Te5HIH6p+TvENftgUztOMKw7LMLhAIDuq/N/kkMsYfxlG7XeyHlq0lEpQwUUek3tgPdSjhLTK3jQ==
 
 "@aws/cloudformation-validate@1.8.0-beta":
   version "1.8.0-beta"
@@ -1271,28 +1261,7 @@ aws-cdk-github-oidc@^2.2.0:
   resolved "https://registry.yarnpkg.com/aws-cdk-github-oidc/-/aws-cdk-github-oidc-2.4.1.tgz#8fcb134401f3a15d74260e5bcc58ed05dabac2a0"
   integrity sha512-zKQYPGyf5f6APG76OpOxW6P7KGY/fC6VhN1ZullxySSu6RroUH9VtVl+cJ8hYes5XvEE/ZDpx2h2fPtNwZrcVQ==
 
-aws-cdk-lib@2.263.0:
-  version "2.263.0"
-  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.263.0.tgz#a7f8c9094197784ae63a72cd7b3b8b3e94694634"
-  integrity sha512-cXC9wnOr+LknMee9x0kYwofgVs8aN8eBKsbzcE90sDUtpLTgWG2Bd+9koqxBKPeIU8kig/GGBFwJ69Wr+hLKDg==
-  dependencies:
-    "@aws-cdk/asset-awscli-v1" "2.2.282"
-    "@aws-cdk/asset-node-proxy-agent-v6" "^2.1.2"
-    "@aws-cdk/cloud-assembly-api" "^2.2.6"
-    "@aws-cdk/cloud-assembly-schema" "^54.11.0"
-    "@aws/cloudformation-validate" "1.6.0-beta"
-    "@balena/dockerignore" "^1.0.2"
-    case "1.6.3"
-    fs-extra "^11.3.6"
-    ignore "^5.3.2"
-    jsonschema "^1.5.0"
-    mime-types "^2.1.35"
-    minimatch "^10.2.5"
-    punycode "^2.3.1"
-    semver "^7.8.5"
-    yaml "1.10.3"
-
-aws-cdk-lib@^2.268.0:
+aws-cdk-lib@2.268.0, aws-cdk-lib@^2.268.0:
   version "2.268.0"
   resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.268.0.tgz#a7834b5afa7819213a64e04bd50abab39cb2649c"
   integrity sha512-bm0mWG0xxIJtV0vhkmnFy6TFgwqBowvXeRKudhAsjM0TMOEcyFPBbwjUNlAA6S1+AjUwEt5yaMrT0A/P97lUqg==

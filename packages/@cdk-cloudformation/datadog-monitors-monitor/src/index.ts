@@ -3,7 +3,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as constructs from 'constructs';
 
 /**
- * Datadog Monitor 4.11.1
+ * Datadog Monitor 4.12.0
  *
  * @schema CfnMonitorProps
  */
@@ -77,6 +77,13 @@ export interface CfnMonitorProps {
   readonly restrictedRoles?: string[];
 
   /**
+   * List of monitor assets (for example, runbooks) tied to this monitor.
+   *
+   * @schema CfnMonitorProps#Assets
+   */
+  readonly assets?: MonitorAsset[];
+
+  /**
    * Cloudformation specific options. This is only used by the Cloudformation resource.
    *
    * @schema CfnMonitorProps#CloudformationOptions
@@ -101,6 +108,7 @@ export function toJson_CfnMonitorProps(obj: CfnMonitorProps | undefined): Record
     'Type': obj.type,
     'Multi': obj.multi,
     'RestrictedRoles': obj.restrictedRoles?.map(y => y),
+    'Assets': obj.assets?.map(y => toJson_MonitorAsset(y)),
     'CloudformationOptions': toJson_CloudformationOptions(obj.cloudformationOptions),
   };
   // filter undefined values
@@ -434,6 +442,66 @@ export enum CfnMonitorPropsType {
 }
 
 /**
+ * A monitor asset (for example, a runbook) tied to a monitor to help users take action on alerts.
+ *
+ * @schema MonitorAsset
+ */
+export interface MonitorAsset {
+  /**
+   * Indicates the type of asset this entity represents on a monitor.
+   *
+   * @schema MonitorAsset#Category
+   */
+  readonly category: MonitorAssetCategory;
+
+  /**
+   * Name for the monitor asset.
+   *
+   * @schema MonitorAsset#Name
+   */
+  readonly name: string;
+
+  /**
+   * URL link for the asset. For internal resource types (notebooks), provide a relative path. For external links, provide the full URL.
+   *
+   * @schema MonitorAsset#Url
+   */
+  readonly url: string;
+
+  /**
+   * Identifier of the internal Datadog resource that this asset represents (for example, a notebook ID). IDs should be passed as strings.
+   *
+   * @schema MonitorAsset#ResourceKey
+   */
+  readonly resourceKey?: string;
+
+  /**
+   * Type of internal Datadog resource associated with a monitor asset.
+   *
+   * @schema MonitorAsset#ResourceType
+   */
+  readonly resourceType?: MonitorAssetResourceType;
+}
+
+/**
+ * Converts an object of type 'MonitorAsset' to JSON representation.
+ */
+/* eslint-disable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
+export function toJson_MonitorAsset(obj: MonitorAsset | undefined): Record<string, any> | undefined {
+  if (obj === undefined) { return undefined; }
+  const result = {
+    'Category': obj.category,
+    'Name': obj.name,
+    'Url': obj.url,
+    'ResourceKey': obj.resourceKey,
+    'ResourceType': obj.resourceType,
+  };
+  // filter undefined values
+  return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});
+}
+/* eslint-enable max-len, @stylistic/max-len, quote-props, @stylistic/quote-props */
+
+/**
  * @schema CloudformationOptions
  */
 export interface CloudformationOptions {
@@ -632,6 +700,26 @@ export enum MonitorOptionsRenotifyStatuses {
 }
 
 /**
+ * Indicates the type of asset this entity represents on a monitor.
+ *
+ * @schema MonitorAssetCategory
+ */
+export enum MonitorAssetCategory {
+  /** runbook */
+  RUNBOOK = "runbook",
+}
+
+/**
+ * Type of internal Datadog resource associated with a monitor asset.
+ *
+ * @schema MonitorAssetResourceType
+ */
+export enum MonitorAssetResourceType {
+  /** notebook */
+  NOTEBOOK = "notebook",
+}
+
+/**
  * Configuration options for the evaluation window. If `hour_starts` is set, no other fields may be set. Otherwise, `day_starts` and `month_starts` must be set together.
  *
  * @schema MonitorSchedulingOptionsEvaluationWindow
@@ -657,6 +745,13 @@ export interface MonitorSchedulingOptionsEvaluationWindow {
    * @schema MonitorSchedulingOptionsEvaluationWindow#HourStarts
    */
   readonly hourStarts?: number;
+
+  /**
+   * The timezone for the cumulative evaluation window start time.
+   *
+   * @schema MonitorSchedulingOptionsEvaluationWindow#Timezone
+   */
+  readonly timezone?: string;
 }
 
 /**
@@ -669,6 +764,7 @@ export function toJson_MonitorSchedulingOptionsEvaluationWindow(obj: MonitorSche
     'DayStarts': obj.dayStarts,
     'MonthStarts': obj.monthStarts,
     'HourStarts': obj.hourStarts,
+    'Timezone': obj.timezone,
   };
   // filter undefined values
   return Object.entries(result).reduce((r, i) => (i[1] === undefined) ? r : ({ ...r, [i[0]]: i[1] }), {});

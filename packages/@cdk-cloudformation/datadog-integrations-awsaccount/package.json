@@ -1,7 +1,7 @@
 {
   "name": "@cdk-cloudformation/datadog-integrations-awsaccount",
-  "description": "Datadog AWS Account Integration 1.0.0",
-  "version": "1.0.0-alpha.7",
+  "description": "Datadog AWS Account Integration 1.1.0",
+  "version": "1.1.0-alpha.7",
   "author": {
     "name": "Amazon Web Services",
     "url": "https://aws.amazon.com",

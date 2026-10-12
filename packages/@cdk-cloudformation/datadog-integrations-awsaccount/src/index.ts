@@ -3,7 +3,7 @@ import * as cdk from 'aws-cdk-lib';
 import * as constructs from 'constructs';
 
 /**
- * Datadog AWS Account Integration 1.0.0
+ * Datadog AWS Account Integration 1.1.0
  *
  * @schema CfnAwsAccountProps
  */

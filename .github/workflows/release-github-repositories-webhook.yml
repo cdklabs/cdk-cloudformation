@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Checkout
         id: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           fetch-depth: 0
       - name: Set git identity
@@ -25,8 +25,15 @@ jobs:
         run: |-
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-      - id: auto_5169ecce
-        run: yarn install
+      - name: Setup Node.js
+        id: setup_node_js
+        uses: actions/setup-node@v7.1.0
+        with:
+          node-version: lts/*
+          package-manager-cache: false
+      - name: Install dependencies
+        id: install_dependencies
+        run: npm ci
       - name: build
         id: build
         run: npx projen build
@@ -66,7 +73,7 @@ jobs:
           path: dist
           overwrite: true
     container:
-      image: jsii/superchain:1-bookworm-slim-node20
+      image: jsii/superchain:1-trixie-slim-node26
   release_github:
     name: Publish to GitHub Releases
     needs:

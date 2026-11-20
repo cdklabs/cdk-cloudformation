@@ -13,10 +13,18 @@ jobs:
     permissions:
       contents: read
     steps:
-      - id: auto_c3fe249f
-        uses: actions/checkout@v4
-      - id: auto_5169ecce
-        run: yarn install
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - name: Setup Node.js
+        id: setup_node_js
+        uses: actions/setup-node@v7.1.0
+        with:
+          node-version: lts/*
+          package-manager-cache: false
+      - name: Install dependencies
+        id: install_dependencies
+        run: npm ci
       - id: auto_6f3f6e71
         run: npx projen build
         working-directory: packages/@cdk-cloudformation/${{ matrix.project }}
@@ -188,7 +196,7 @@ jobs:
           - tf-random-uuid
           - trendmicro-cloudonecontainer-helm
     container:
-      image: jsii/superchain:1-bookworm-slim-node20
+      image: jsii/superchain:1-trixie-slim-node26
   build-okay:
     name: Build Individual
     needs: build-all

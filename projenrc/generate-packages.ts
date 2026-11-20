@@ -1,11 +1,11 @@
 import { readdirSync, readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
 import type { CloudFormation } from 'aws-sdk';
-import { typescript } from 'projen';
+import { github, typescript } from 'projen';
 import { JobPermission } from 'projen/lib/github/workflows-model';
 import { CloudFormationTypeProject } from './type-package';
 
-const JSII_VERSION = '1-bookworm-slim-node20';
+const JSII_VERSION = '1-trixie-slim-node26';
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const deprecations = require('../deprecated-types.json');
@@ -97,8 +97,8 @@ export function generatePackages(root: typescript.TypeScriptProject, options: Ge
       },
     },
     steps: [
-      { uses: 'actions/checkout@v4' },
-      { run: 'yarn install' },
+      github.WorkflowSteps.checkout(),
+      ...root.renderWorkflowSetup(),
       {
         workingDirectory: 'packages/@cdk-cloudformation/${{ matrix.project }}',
         run: `${root.projenCommand} ${root.buildTask.name}`,

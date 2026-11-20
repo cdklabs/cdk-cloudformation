@@ -24,7 +24,7 @@ jobs:
         uses: actions/setup-node@v7.1.0
       - name: Install dependencies
         id: install_dependencies
-        run: yarn install --check-files --frozen-lockfile
+        run: npm ci
       - name: Upgrade dependencies
         id: upgrade_dependencies
         run: npx projen upgrade-cdklabs-projen-project-types

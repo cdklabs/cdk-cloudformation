@@ -45,7 +45,7 @@ jobs:
           package-manager-cache: false
       - name: Install dependencies
         id: install_dependencies
-        run: yarn install --check-files --frozen-lockfile
+        run: npm ci
       - name: release
         id: release
         run: npx projen release

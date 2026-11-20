@@ -148,8 +148,17 @@
       "steps": [
         {
           "execArgs": [
-            "ts-node",
-            "--project",
+            "tsc",
+            "--noEmit",
+            "-p",
+            "projenrc/tsconfig.json"
+          ],
+          "name": "typecheck"
+        },
+        {
+          "execArgs": [
+            "tsx",
+            "--tsconfig",
             "projenrc/tsconfig.json",
             ".projenrc.ts"
           ]
@@ -184,7 +193,6 @@
             "--fix",
             "--no-error-on-unmatched-pattern",
             "$@",
-            "src",
             "test",
             "build-tools",
             "projenrc",
@@ -199,7 +207,7 @@
       "description": "Install project dependencies and update lockfile (non-frozen)",
       "steps": [
         {
-          "exec": "yarn install --check-files"
+          "exec": "npm install"
         }
       ]
     },
@@ -208,7 +216,7 @@
       "description": "Install project dependencies using frozen lockfile",
       "steps": [
         {
-          "exec": "yarn install --check-files --frozen-lockfile"
+          "exec": "npm ci"
         }
       ]
     },
@@ -276,7 +284,10 @@
             "--passWithNoTests",
             "--updateSnapshot"
           ],
-          "receiveArgs": true
+          "receiveArgs": true,
+          "env": {
+            "NODE_OPTIONS": "--experimental-vm-modules"
+          }
         },
         {
           "spawn": "eslint"
@@ -291,7 +302,10 @@
           "execArgs": [
             "jest",
             "--watch"
-          ]
+          ],
+          "env": {
+            "NODE_OPTIONS": "--experimental-vm-modules"
+          }
         }
       ]
     },
@@ -324,7 +338,8 @@
       "name": "upgrade",
       "description": "upgrade dependencies",
       "env": {
-        "CI": "0"
+        "CI": "0",
+        "NPM_CONFIG_BEFORE": "$(node -p \"new Date(Date.now()-259200000).toISOString()\")"
       },
       "steps": [
         {
@@ -355,12 +370,12 @@
           ]
         },
         {
-          "exec": "yarn install --check-files"
+          "exec": "npm install"
         },
         {
           "execArgs": [
-            "yarn",
-            "upgrade",
+            "npm",
+            "update",
             "cdklabs-projen-project-types",
             "projen"
           ]
@@ -377,7 +392,8 @@
       "name": "upgrade-dev-deps",
       "description": "upgrade dev dependencies",
       "env": {
-        "CI": "0"
+        "CI": "0",
+        "NPM_CONFIG_BEFORE": "$(node -p \"new Date(Date.now()-259200000).toISOString()\")"
       },
       "steps": [
         {
@@ -386,19 +402,20 @@
             "npm-check-updates@20",
             "--upgrade",
             "--target=minor",
+            "--cooldown=3",
             "--peer",
             "--no-deprecated",
             "--dep=dev",
-            "--filter=@types/jest,aws-cdk-lib,aws-sdk,case,eslint-import-resolver-typescript,eslint-plugin-import,jest,jsii,jsii-pacmak,jsii-rosetta,ts-jest,typescript"
+            "--filter=aws-cdk-lib,aws-sdk,case,eslint-import-resolver-typescript,eslint-plugin-import,jsii,jsii-pacmak,jsii-rosetta,tsx"
           ]
         },
         {
-          "exec": "yarn install --check-files"
+          "exec": "npm install"
         },
         {
           "execArgs": [
-            "yarn",
-            "upgrade",
+            "npm",
+            "update",
             "@stylistic/eslint-plugin",
             "@types/jest",
             "@types/node",
@@ -414,13 +431,13 @@
             "eslint-import-resolver-typescript",
             "eslint-plugin-import",
             "eslint",
-            "jest",
             "jest-junit",
+            "jest",
             "jsii",
             "jsii-pacmak",
             "jsii-rosetta",
             "ts-jest",
-            "ts-node",
+            "tsx",
             "typescript"
           ]
         },

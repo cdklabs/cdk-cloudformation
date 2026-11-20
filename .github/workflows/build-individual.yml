@@ -13,9 +13,12 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v4
-      - run: yarn install
-      - run: npx projen build
+      - id: auto_c3fe249f
+        uses: actions/checkout@v4
+      - id: auto_5169ecce
+        run: yarn install
+      - id: auto_6f3f6e71
+        run: npx projen build
         working-directory: packages/@cdk-cloudformation/${{ matrix.project }}
     strategy:
       max-parallel: 30
@@ -194,7 +197,9 @@ jobs:
     if: always()
     steps:
       - name: Show Matrix Build Result
+        id: show_matrix_build_result
         run: echo ${{ needs.build-all.result }}
       - name: Set Status
+        id: set_status
         if: ${{ needs.build-all.result != 'success' }}
         run: exit 1

@@ -5,10 +5,10 @@ import * as caseutil from 'case';
 import { CfnResourceGenerator } from 'cdk-import/lib/cfn-resource-generator';
 import { Component, IgnoreFile, JsonFile, License, Project, ReleasableCommits, github, typescript } from 'projen';
 import { DEFAULT_GITHUB_ACTIONS_USER } from 'projen/lib/github/constants';
-import { WorkflowActions } from 'projen/lib/github/workflow-actions';
 import { JobPermission } from 'projen/lib/github/workflows-model';
 import { Publisher } from 'projen/lib/release';
 import { Readme } from './readme';
+import { WorkflowSteps } from 'projen/lib/github';
 
 const JSII_VERSION = '1-bookworm-slim-node20';
 
@@ -266,7 +266,7 @@ export class CloudFormationTypeProject extends Component {
         },
 
         // sets git identity so we can push later
-        ...WorkflowActions.setupGitIdentity(DEFAULT_GITHUB_ACTIONS_USER),
+        WorkflowSteps.setupGitIdentity({ gitIdentity: DEFAULT_GITHUB_ACTIONS_USER }),
 
         { run: 'yarn install' },
 

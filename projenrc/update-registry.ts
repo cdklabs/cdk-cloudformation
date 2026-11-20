@@ -44,21 +44,21 @@ export class UpdateRegistry extends Component {
     workflow?.addJobs({
       update: {
         permissions: {
-          'id-token': JobPermission.WRITE,
-          'contents': JobPermission.WRITE,
-        } as any,
+          idToken: JobPermission.WRITE,
+          contents: JobPermission.WRITE,
+        },
         runsOn: ['ubuntu-latest'],
         steps: [
-          { uses: 'actions/checkout@v3' },
+          github.WorkflowSteps.checkout(),
           {
-            uses: 'aws-actions/configure-aws-credentials@v1-node16',
+            uses: github.ActionRefs.AWS_ACTIONS_CONFIGURE_AWS_CREDENTIALS,
             with: {
               'role-to-assume': `arn:aws:iam::${infra.stack.account}:role/${roleName}`,
               'aws-region': infra.stack.region,
               'role-session-name': 'github-automation',
             },
           },
-          { run: 'yarn install' },
+          ...project.renderWorkflowSetup(),
           { run: this.project.runTaskCommand(task) },
 
           // create a pull request

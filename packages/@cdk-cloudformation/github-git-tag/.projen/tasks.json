@@ -1,4 +1,5 @@
 {
+  "manifestVersion": 3,
   "tasks": {
     "build": {
       "name": "build",

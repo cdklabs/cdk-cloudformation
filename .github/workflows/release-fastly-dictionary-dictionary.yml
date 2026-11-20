@@ -16,18 +16,30 @@ jobs:
       tag_exists: ${{ steps.check-tag.outputs.exists }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        id: checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           fetch-depth: 0
       - name: Set git identity
+        id: set_git_identity
         run: |-
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-      - run: yarn install
+      - name: Setup Node.js
+        id: setup_node_js
+        uses: actions/setup-node@v7.1.0
+        with:
+          node-version: lts/*
+          package-manager-cache: false
+      - name: Install dependencies
+        id: install_dependencies
+        run: npm ci
       - name: build
+        id: build
         run: npx projen build
         working-directory: packages/@cdk-cloudformation/fastly-dictionary-dictionary
       - name: Create version files
+        id: create_version_files
         run: |-
           echo $(node -p "require('./package.json').version") > dist/version.txt
           echo "@cdk-cloudformation/fastly-dictionary-dictionary@v$(cat dist/version.txt)" > dist/releasetag.txt
@@ -38,7 +50,7 @@ jobs:
         run: |-
           LATEST_TAG=$(git -c "versionsort.suffix=-" tag --sort="-version:refname" --list "@cdk-cloudformation/fastly-dictionary-dictionary@v*" | head -n 1)
           echo ${LATEST_TAG:=$(git rev-list HEAD -- . | tail -1)^}
-          COUNT=$(git log --no-merges --oneline $LATEST_TAG..HEAD -E --grep "^(feat|fix){1}(\([^()[:space:]]+\))?(!)?:[[:blank:]]+.+" -- . | wc -l | xargs)
+          COUNT=$(git log --no-merges --oneline $LATEST_TAG..HEAD -E --grep '^(feat|fix){1}(\([^()[:space:]]+\))?(!)?:[[:blank:]]+.+' -- . | wc -l | xargs)
           echo "releasable_count=$COUNT" >> $GITHUB_OUTPUT
           cat $GITHUB_OUTPUT
         working-directory: packages/@cdk-cloudformation/fastly-dictionary-dictionary
@@ -49,17 +61,19 @@ jobs:
           ([ ! -z "$TAG" ] && git ls-remote -q --exit-code --tags origin $TAG && (echo "exists=true" >> $GITHUB_OUTPUT)) || (echo "exists=false" >> $GITHUB_OUTPUT)
           cat $GITHUB_OUTPUT
         working-directory: packages/@cdk-cloudformation/fastly-dictionary-dictionary
-      - if: always()
+      - id: auto_a078a44e
+        if: always()
         run: mv packages/@cdk-cloudformation/fastly-dictionary-dictionary/dist .
       - name: Upload artifact
+        id: upload_artifact
         if: always()
-        uses: actions/upload-artifact@v4.6.2
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: build-artifact
           path: dist
           overwrite: true
     container:
-      image: jsii/superchain:1-bookworm-slim-node20
+      image: jsii/superchain:1-trixie-slim-node26
   release_github:
     name: Publish to GitHub Releases
     needs:
@@ -73,21 +87,31 @@ jobs:
       contents: write
     if: (needs.build.outputs.tag_exists != 'true') && (needs.build.outputs.releasable_commits > 0)
     steps:
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v7.1.0
         with:
           node-version: lts/*
+          package-manager-cache: false
       - name: Download build artifacts
-        uses: actions/download-artifact@v5
+        id: download_build_artifacts
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
         with:
-          name: build-artifact
+          artifact-ids: ${{ needs.build.outputs.artifact_id }}
           path: dist
       - name: Restore build artifact permissions
+        id: restore_build_artifact_permissions
         run: cd dist && setfacl --restore=permissions-backup.acl
         continue-on-error: true
       - name: Release
+        id: release
+        if: ${{ !inputs.dry_run }}
         env:
+          RELEASE_TAG_FILE: dist/releasetag.txt
+          CHANGELOG_FILE: dist/changelog.txt
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: errout=$(mktemp); gh release create $(cat dist/releasetag.txt) -R $GITHUB_REPOSITORY -F dist/changelog.txt -t $(cat dist/releasetag.txt) --target $GITHUB_SHA 2> $errout && true; exitcode=$?; if [ $exitcode -ne 0 ] && ! grep -q "Release.tag_name already exists" $errout; then cat $errout; exit $exitcode; fi
+        run: |-
+          tag=$(cat "$RELEASE_TAG_FILE") &&
+          gh release view "$tag" -R "$GITHUB_REPOSITORY" 2>/dev/null ||
+          gh release create "$tag" -R "$GITHUB_REPOSITORY" -F "$CHANGELOG_FILE" -t "$tag" --target "$GITHUB_SHA"
   release_npm:
     name: Publish to npm
     needs: build
@@ -97,22 +121,27 @@ jobs:
     environment: release
     if: (needs.build.outputs.tag_exists != 'true') && (needs.build.outputs.releasable_commits > 0)
     steps:
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v7.1.0
         with:
           node-version: lts/*
+          package-manager-cache: false
       - name: Download build artifacts
-        uses: actions/download-artifact@v5
+        id: download_build_artifacts
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
         with:
-          name: build-artifact
+          artifact-ids: ${{ needs.build.outputs.artifact_id }}
           path: dist
       - name: Restore build artifact permissions
+        id: restore_build_artifact_permissions
         run: cd dist && setfacl --restore=permissions-backup.acl
         continue-on-error: true
       - name: Release
+        id: release
         env:
           NPM_DIST_TAG: latest
           NPM_TOKEN: ${{ secrets.CDK_CLOUDFORMATION_NPM_TOKEN }}
-        run: npx -p publib@latest publib-npm
+          PUBLIB_DRYRUN: ${{ inputs.dry_run }}
+        run: npx '-p' 'publib@latest' 'publib-npm'
   release_maven:
     name: Publish to Maven Central
     needs: build
@@ -122,22 +151,26 @@ jobs:
     environment: release
     if: (needs.build.outputs.tag_exists != 'true') && (needs.build.outputs.releasable_commits > 0)
     steps:
-      - uses: actions/setup-java@v5
+      - uses: actions/setup-java@v6.2.0
         with:
           distribution: corretto
           java-version: "11"
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v7.1.0
         with:
           node-version: lts/*
+          package-manager-cache: false
       - name: Download build artifacts
-        uses: actions/download-artifact@v5
+        id: download_build_artifacts
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
         with:
-          name: build-artifact
+          artifact-ids: ${{ needs.build.outputs.artifact_id }}
           path: dist
       - name: Restore build artifact permissions
+        id: restore_build_artifact_permissions
         run: cd dist && setfacl --restore=permissions-backup.acl
         continue-on-error: true
       - name: Release
+        id: release
         env:
           MAVEN_SERVER_ID: central-ossrh
           MAVEN_GPG_PRIVATE_KEY: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
@@ -145,7 +178,8 @@ jobs:
           MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_STAGING_PROFILE_ID: ${{ secrets.MAVEN_STAGING_PROFILE_ID }}
-        run: npx -p publib@latest publib-maven
+          PUBLIB_DRYRUN: ${{ inputs.dry_run }}
+        run: npx '-p' 'publib@latest' 'publib-maven'
   release_nuget:
     name: Publish to NuGet Gallery
     needs: build
@@ -155,24 +189,30 @@ jobs:
     environment: release
     if: (needs.build.outputs.tag_exists != 'true') && (needs.build.outputs.releasable_commits > 0)
     steps:
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v7.1.0
         with:
           node-version: lts/*
-      - uses: actions/setup-dotnet@v5
+          package-manager-cache: false
+      - uses: actions/setup-dotnet@v6.1.0
         with:
           dotnet-version: 6.x
+          cache: false
       - name: Download build artifacts
-        uses: actions/download-artifact@v5
+        id: download_build_artifacts
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
         with:
-          name: build-artifact
+          artifact-ids: ${{ needs.build.outputs.artifact_id }}
           path: dist
       - name: Restore build artifact permissions
+        id: restore_build_artifact_permissions
         run: cd dist && setfacl --restore=permissions-backup.acl
         continue-on-error: true
       - name: Release
+        id: release
         env:
           NUGET_API_KEY: ${{ secrets.CDK_CLOUDFORMATION_NUGET_API_KEY }}
-        run: npx -p publib@latest publib-nuget
+          PUBLIB_DRYRUN: ${{ inputs.dry_run }}
+        run: npx '-p' 'publib@latest' 'publib-nuget'
   release_pypi:
     name: Publish to PyPI
     needs: build
@@ -182,22 +222,27 @@ jobs:
     environment: release
     if: (needs.build.outputs.tag_exists != 'true') && (needs.build.outputs.releasable_commits > 0)
     steps:
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v7.1.0
         with:
           node-version: lts/*
-      - uses: actions/setup-python@v6
+          package-manager-cache: false
+      - uses: actions/setup-python@v7.1.0
         with:
           python-version: 3.x
       - name: Download build artifacts
-        uses: actions/download-artifact@v5
+        id: download_build_artifacts
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
         with:
-          name: build-artifact
+          artifact-ids: ${{ needs.build.outputs.artifact_id }}
           path: dist
       - name: Restore build artifact permissions
+        id: restore_build_artifact_permissions
         run: cd dist && setfacl --restore=permissions-backup.acl
         continue-on-error: true
       - name: Release
+        id: release
         env:
           TWINE_USERNAME: ${{ secrets.CDK_CLOUDFORMATION_TWINE_USERNAME }}
           TWINE_PASSWORD: ${{ secrets.CDK_CLOUDFORMATION_TWINE_PASSWORD }}
-        run: npx -p publib@latest publib-pypi
+          PUBLIB_DRYRUN: ${{ inputs.dry_run }}
+        run: npx '-p' 'publib@latest' 'publib-pypi'

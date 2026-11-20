@@ -1,5 +1,5 @@
 import { CdklabsTypeScriptProject } from 'cdklabs-projen-project-types';
-import { NpmAccess } from 'projen/lib/javascript';
+import { javascript, typescript } from 'projen';
 import { DeprecatedTypes } from './projenrc/deprecated-types';
 import { generatePackages, updateReadme } from './projenrc/generate-packages';
 import { UpdateRegistry } from './projenrc/update-registry';
@@ -10,7 +10,20 @@ const project = new CdklabsTypeScriptProject({
   name: 'cdk-cloudformation',
   projenrcTs: true,
   sampleCode: false,
-  npmAccess: NpmAccess.PUBLIC,
+  npmAccess: javascript.NpmAccess.PUBLIC,
+  packageManager: javascript.NodePackageManager.NPM,
+  typescriptVersion: '~6.0',
+  jestOptions: {
+    jestVersion: '^30',
+    // projen depends on ESM-only packages (dax) that jest can only require() with vm modules enabled
+    experimentalVmModules: true,
+  },
+  runner: typescript.TypeScriptRunner.tsx(),
+  eslintOptions: {
+    dirs: [],
+    // the root tsconfig has no inputs (there is no src/), use the projenrc one as the default project
+    tsconfigPath: './projenrc/tsconfig.json',
+  },
 });
 
 project.addDevDeps('cdk-import@^0.2.112');
@@ -22,7 +35,6 @@ project.addDevDeps('jsii');
 project.addDevDeps('jsii-pacmak');
 project.addDevDeps('jsii-rosetta');
 project.addDevDeps('aws-cdk-github-oidc@^2.2.0');
-project.addDevDeps('ts-node@^10');
 
 // the root is not really a library
 project.compileTask.reset();
@@ -49,10 +61,6 @@ project.addTask('build-pkg', {
 
 project.package.addField('workspaces', {
   packages: [`${packagesDir}/${scope}/*`],
-});
-project.package.addField('resolutions', {
-  // Newer @types package doesn't work with old TypeScript
-  '@types/prettier': '2.4.4',
 });
 
 project.addExcludeFromCleanup('packages/**');

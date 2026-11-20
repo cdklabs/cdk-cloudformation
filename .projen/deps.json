@@ -7,6 +7,7 @@
     },
     {
       "name": "@types/jest",
+      "version": "^30",
       "type": "build"
     },
     {
@@ -52,7 +53,7 @@
     },
     {
       "name": "commit-and-tag-version",
-      "version": "^12",
+      "version": "^13",
       "type": "build"
     },
     {
@@ -74,12 +75,13 @@
       "type": "build"
     },
     {
-      "name": "jest",
+      "name": "jest-junit",
+      "version": "^17",
       "type": "build"
     },
     {
-      "name": "jest-junit",
-      "version": "^16",
+      "name": "jest",
+      "version": "^30",
       "type": "build"
     },
     {
@@ -100,15 +102,16 @@
     },
     {
       "name": "ts-jest",
+      "version": "^29",
       "type": "build"
     },
     {
-      "name": "ts-node",
-      "version": "^10",
+      "name": "tsx",
       "type": "build"
     },
     {
       "name": "typescript",
+      "version": "~6.0",
       "type": "build"
     }
   ],

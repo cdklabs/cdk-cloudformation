@@ -4,13 +4,13 @@ import type { CloudFormation } from 'aws-sdk';
 import * as caseutil from 'case';
 import { CfnResourceGenerator } from 'cdk-import/lib/cfn-resource-generator';
 import { Component, IgnoreFile, JsonFile, License, Project, ReleasableCommits, github, typescript } from 'projen';
+import { WorkflowSteps } from 'projen/lib/github';
 import { DEFAULT_GITHUB_ACTIONS_USER } from 'projen/lib/github/constants';
-import { WorkflowActions } from 'projen/lib/github/workflow-actions';
 import { JobPermission } from 'projen/lib/github/workflows-model';
 import { Publisher } from 'projen/lib/release';
 import { Readme } from './readme';
 
-const JSII_VERSION = '1-bookworm-slim-node20';
+const JSII_VERSION = '1-trixie-slim-node26';
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const CDK_VERSION = require('aws-cdk-lib/package.json').version;
@@ -257,18 +257,12 @@ export class CloudFormationTypeProject extends Component {
       },
       steps: [
         // check out sources.
-        {
-          name: 'Checkout',
-          uses: 'actions/checkout@v4',
-          with: {
-            'fetch-depth': 0,
-          },
-        },
+        WorkflowSteps.checkout({ with: { fetchDepth: 0 } }),
 
         // sets git identity so we can push later
-        ...WorkflowActions.setupGitIdentity(DEFAULT_GITHUB_ACTIONS_USER),
+        WorkflowSteps.setupGitIdentity({ gitIdentity: DEFAULT_GITHUB_ACTIONS_USER }),
 
-        { run: 'yarn install' },
+        ...parent.renderWorkflowSetup(),
 
         // run the main build task
         {

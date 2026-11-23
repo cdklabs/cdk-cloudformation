@@ -44,7 +44,7 @@
     "@typescript-eslint/eslint-plugin": "^8",
     "@typescript-eslint/parser": "^8",
     "aws-cdk-github-oidc": "^2.2.0",
-    "aws-cdk-lib": "^2.277.0",
+    "aws-cdk-lib": "^2.278.0",
     "aws-sdk": "^2.1693.0",
     "case": "^1.6.3",
     "cdk-import": "^0.2.112",
